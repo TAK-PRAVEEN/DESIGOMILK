@@ -1,0 +1,24 @@
+# --- dependencies & builds ---
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+next-env.d.ts
+*.log
+
+# --- local env / secrets ---
+.env*
+!.env.example
+
+# --- CONFIDENTIAL: internal only, never in the public repo ---
+docs/DESIGO_MASTER_PROJECT_BOOK.pdf
+docs/book/
+docs/desigo-master/
+
+# --- working files ---
+_asset_src/
+.DS_Store
+Thumbs.db
+
+# raw screen recordings (encoded versions are committed)
+docs/media/raw-*.webm
