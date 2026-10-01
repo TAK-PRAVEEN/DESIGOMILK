@@ -62,7 +62,7 @@ export default function DesigoNav() {
       <div ref={progress} aria-hidden style={{ position: "absolute", left: 0, right: 0, top: 0, height: 2, background: "currentColor", opacity: 0.55, transformOrigin: "0 50%", transform: "scaleX(0)" }} />
       <nav aria-label="Primary" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 24 }}>
         <a href="#top" aria-label="DESIGO home" style={{ display: "block", width: condensed ? 108 : 132, transition: "width .6s var(--ease-out)" }}>
-          <DesigoLogo animate stayGreen={!(dark || open)} />
+          <DesigoLogo loop style={{ color: dark || open ? "var(--milk)" : "var(--charcoal)" }} />
         </a>
         <ul className="hidden lg:flex" style={{ gap: 34, listStyle: "none", margin: 0, padding: 0 }}>
           {links.map((l) => (

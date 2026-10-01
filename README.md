@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/media/logo-intro.gif" alt="DESIGO® logo stroke-draw animation" width="520" />
+  <img src="docs/media/logo-intro.gif" alt="DESIGO® logo write / un-write loop" width="520" />
 </p>
 
 <h1 align="center">DESIGO® — desigomilk.com</h1>
@@ -48,7 +48,7 @@ Every effect is caused by the user (scroll, pointer, click), is slow and physica
 ### Brand
 | Effect | Where | How |
 |---|---|---|
-| **Logo stroke-draw, then fill green** | Top-left logo | Vector DESIGO® wordmark. D · three waves · S · I · G · O write themselves (480 ms each, 95 ms stagger); the arrowhead and ® fade in at 900 ms, then the mark turns DESIGO® green with a 1.07× pop at 1150 ms. No ring, no sound. Replays on hover. `src/components/DesigoLogo.tsx` |
+| **Logo write / un-write loop** | Top-left logo | Vector DESIGO® wordmark in one colour (charcoal on light chapters, white on dark). D · three waves · S · I · G · O draw themselves in order (480 ms each, 95 ms stagger), the arrowhead and ® fade in, the mark holds, then it un-draws in reverse (O first, D last) and starts again: an endless 4.6 s loop like a GIF. No ring, no colour change, no hover trigger. `src/components/DesigoLogo.tsx` |
 | Nav tone switching | Header | The header reads the chapter underneath it (`data-tone`) and flips between forest and milk ink. It condenses after the hero, and a hairline scroll-progress bar runs along the top. |
 
 ### Typography

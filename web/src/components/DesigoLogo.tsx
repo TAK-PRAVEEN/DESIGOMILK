@@ -1,15 +1,15 @@
-"use client";
-
-import { useEffect, useRef, useState } from "react";
-
 /**
- * DESIGO® wordmark as vector SVG (paths from the approved "stop page" animation sheet, idea #4).
+ * DESIGO® wordmark as vector SVG (paths from the approved animation sheet, idea #4).
  *
- * animate=true → "Stroke-draw, then fill green":
- *   D · three waves · S · I · G · O write themselves (480 ms each, 95 ms stagger),
- *   the arrowhead and ® fade in at 900 ms, then the mark turns DESIGO® green with a small pop at 1150 ms.
- *   No ring, no sound. Replays on hover. Static for reduced-motion users.
- * After the intro: DESIGO® green when `stayGreen` (light chapters), otherwise it follows `color` (milk on dark chapters).
+ * loop=true → an endless "write, then un-write" cycle, like a looping GIF:
+ *   0.0–1.2 s  D · three waves · S · I · G · O draw themselves in order (480 ms each, 95 ms stagger)
+ *   0.9 s      arrowhead + ® fade in
+ *   1.2–3.0 s  hold — the full wordmark rests
+ *   2.9 s      arrowhead + ® fade out
+ *   3.0–4.2 s  the same strokes un-draw in reverse order (O first, D last)
+ *   4.2–4.6 s  brief empty pause, then it starts again
+ * Single colour (follows `color`: charcoal on light chapters, milk on dark ones). No ring, no green,
+ * no pop, no hover trigger. Reduced-motion users see the static wordmark.
  */
 const wave = (y: number) =>
   `M398 ${y}C455 ${y} 490 ${y - 42} 548 ${y - 42}C606 ${y - 42} 632 ${y} 690 ${y}C712 ${y} 728 ${y - 6} 742 ${y - 18}`;
@@ -27,82 +27,65 @@ const STROKES: { d: string; w: number; order: number; cap?: "round" }[] = [
   { d: "M1874 249A138 138 0 1 1 1768 200", w: 50, order: 7 },
 ];
 
+const CYCLE = 4600; // ms
+const STEP = 95;
+const DRAW = 480;
+const UNDRAW_AT = 3000;
+const LAST = 7;
+const pct = (ms: number) => `${((ms / CYCLE) * 100).toFixed(2)}%`;
+
+// One keyframe track per stroke position: draw forward, hold, un-draw in reverse order, rest.
+const keyframes = Array.from({ length: LAST + 1 }, (_, i) => {
+  const a = i * STEP;
+  const b = UNDRAW_AT + (LAST - i) * STEP;
+  return `@keyframes dlogoLoop${i} {
+    0%, ${pct(a)} { stroke-dashoffset: 1.02; }
+    ${pct(a + DRAW)}, ${pct(b)} { stroke-dashoffset: 0; }
+    ${pct(b + DRAW)}, 100% { stroke-dashoffset: 1.02; }
+  }`;
+}).join("\n");
+
+const css = `
+  .dlogo-loop .dlogo-s { stroke-dasharray: 1 2; stroke-dashoffset: 1.02; animation-duration: ${CYCLE}ms; animation-iteration-count: infinite; animation-timing-function: ease-in-out; }
+  ${Array.from({ length: LAST + 1 }, (_, i) => `.dlogo-loop .dlogo-s[data-o="${i}"] { animation-name: dlogoLoop${i}; }`).join("\n")}
+  .dlogo-loop .dlogo-f { animation: dlogoFill ${CYCLE}ms ease-in-out infinite; }
+  @keyframes dlogoFill { 0%, ${pct(900)} { opacity: 0; } ${pct(1100)}, ${pct(2800)} { opacity: 1; } ${pct(2950)}, 100% { opacity: 0; } }
+  ${keyframes}
+  @media (prefers-reduced-motion: reduce) {
+    .dlogo-loop .dlogo-s, .dlogo-loop .dlogo-f { animation: none !important; stroke-dashoffset: 0 !important; opacity: 1 !important; }
+  }
+`;
+
 export default function DesigoLogo({
-  animate = false,
-  stayGreen = false,
+  loop = false,
   title = "DESIGO®",
   className,
   style,
 }: {
-  animate?: boolean;
-  stayGreen?: boolean;
+  loop?: boolean;
   title?: string;
   className?: string;
   style?: React.CSSProperties;
 }) {
-  const [run, setRun] = useState(0);
-  const [phase, setPhase] = useState<"idle" | "draw" | "done">(animate ? "idle" : "done");
-  const timer = useRef<number[]>([]);
-
-  useEffect(() => {
-    if (!animate) return;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) { const t = window.setTimeout(() => setPhase("done"), 0); return () => clearTimeout(t); }
-    timer.current.forEach(clearTimeout);
-    let cancelled = false;
-    // start only once the page is painted and fonts are ready, so the draw is actually seen
-    const start = () => {
-      if (cancelled) return;
-      setPhase("draw");
-      timer.current = [window.setTimeout(() => setPhase("done"), 2600)];
-    };
-    if (run > 0) start();
-    else (document.fonts?.ready ?? Promise.resolve()).then(() => { timer.current = [window.setTimeout(start, 350)]; });
-    return () => { cancelled = true; timer.current.forEach(clearTimeout); };
-  }, [animate, run]);
-
-  const replay = () => { if (animate && phase === "done") setRun((r) => r + 1); };
-
   return (
     <svg
-      key={run}
-      className={`dlogo ${animate && phase === "draw" ? "dlogo-draw" : ""} ${phase === "idle" ? "dlogo-idle" : ""} ${stayGreen && phase === "done" ? "dlogo-green" : ""} ${className ?? ""}`}
+      className={`dlogo ${loop ? "dlogo-loop" : ""} ${className ?? ""}`}
       viewBox="40 100 1950 425"
       role="img"
       aria-label={title}
-      onMouseEnter={replay}
-      style={{ display: "block", width: "100%", height: "auto", overflow: "visible", ...style }}
+      style={{ display: "block", width: "100%", height: "auto", overflow: "visible", transition: "color .5s ease", ...style }}
     >
       <g fill="none" stroke="currentColor">
         {STROKES.map((s, i) => (
-          <path
-            key={i}
-            className="dlogo-s"
-            pathLength={1}
-            d={s.d}
-            strokeWidth={s.w}
-            strokeLinecap={s.cap}
-            style={{ ["--i" as string]: s.order }}
-          />
+          <path key={i} className="dlogo-s" data-o={s.order} pathLength={1} d={s.d} strokeWidth={s.w} strokeLinecap={s.cap} />
         ))}
-        <polygon className="dlogo-f" fill="currentColor" stroke="none" points="1768,114 1862,184 1768,254" style={{ opacity: animate && phase !== "done" ? 0 : 1 }} />
-        <g className="dlogo-f" style={{ opacity: animate && phase !== "done" ? 0 : 1 }}>
+        <polygon className="dlogo-f" fill="currentColor" stroke="none" points="1768,114 1862,184 1768,254" />
+        <g className="dlogo-f">
           <circle cx="1928" cy="478" r="29" strokeWidth="6" />
           <text x="1928" y="491" textAnchor="middle" fontFamily="Archivo, Arial, sans-serif" fontWeight={800} fontSize={38} fill="currentColor" stroke="none">R</text>
         </g>
       </g>
-      <style>{`
-        .dlogo { transform-origin: center; transition: color .5s ease; }
-        .dlogo-green { color: #1E7A68; }
-        .dlogo-idle .dlogo-s { stroke-dasharray: 1 2; stroke-dashoffset: 1.02; }
-        .dlogo-draw .dlogo-s { stroke-dasharray: 1 2; stroke-dashoffset: 1.02; animation: dlogoDraw 480ms ease-in-out forwards; animation-delay: calc(var(--i) * 95ms); }
-        .dlogo-draw .dlogo-f { opacity: 0; animation: dlogoFade 200ms ease-out 900ms forwards; }
-        .dlogo-draw { animation: dlogoGreen 2600ms linear forwards, dlogoPop 420ms cubic-bezier(.16,1,.3,1) 1150ms; }
-        @keyframes dlogoDraw { to { stroke-dashoffset: 0; } }
-        @keyframes dlogoFade { to { opacity: 1; } }
-        @keyframes dlogoGreen { 44% { color: currentColor; } 50%, 100% { color: #1E7A68; } }
-        @keyframes dlogoPop { 50% { transform: scale(1.07); } }
-        @media (prefers-reduced-motion: reduce) { .dlogo-idle .dlogo-s, .dlogo-draw, .dlogo-draw * { animation: none !important; stroke-dashoffset: 0 !important; opacity: 1 !important; } }
-      `}</style>
+      {loop && <style>{css}</style>}
     </svg>
   );
 }
