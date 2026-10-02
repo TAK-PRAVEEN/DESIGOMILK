@@ -110,7 +110,7 @@ web/
   scripts/capture-media.js records the README screenshots and video
 docs/
   website/                 information architecture · design system · wireframe · asset requests · image prompts
-  design-styles/           36 design styles × a 20-phase build plan each + recommendation
+  design-styles/           55 design styles (20 priority) × a 20-phase build plan each + recommendation
   media/                   screenshots, video, GIFs used in this README
 ```
 

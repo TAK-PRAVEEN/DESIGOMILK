@@ -1,4 +1,4 @@
-# DESIGO® — Design Style Library (36 styles × 20-phase build plans)
+# DESIGO® — Design Style Library (55 styles × 20-phase build plans)
 
 Status: documents first (2026-10-01). Build starts only after a style direction is approved.
 
@@ -36,7 +36,35 @@ same information architecture, same verified content, same Bottle360Viewer, diff
 | 9 | Quality / lab | | 19 | Accessibility + reduced motion |
 | 10 | Four product worlds + 360 viewer | | 20 | Performance, QA, polish & handover |
 
-## Style catalogue
+## ★ PRIORITY styles (client request, 2026-10-03)
+Source: the client's third reference list ("20 design styles you should try"). Wabi-sabi was already #29 and moves into this group;
+the other 19 are new (#37–55). Clay render, Frosted glass and 2000 web are close cousins of #11, #10 and #17, and each gets its own plan.
+These are planned and prototyped **before** the original 36.
+
+| # | Style | File | Fit for DESIGO® | Best used for |
+|---|---|---|---|---|
+| 29 | Wabi-Sabi ★ | [29_wabi-sabi.md](29_wabi-sabi.md) | 4.5 | Calm luxury-craft direction: Breeds, Heritage, Ghee, /about |
+| 37 | Cloud cut | [37_cloud-cut.md](37_cloud-cut.md) | 3.5 | Paper-cloud layer transitions (ch. 02, 08, 09, 15), ESSENTIAL world, inner-page hero openings |
+| 38 | Xpiritualism | [38_xpiritualism.md](38_xpiritualism.md) | 2.5 | Technology chapter, cold-chain dawn moment, launch films — never Breeds/Ghee/About |
+| 39 | Asian store → Indian kirana / dairy shop | [39_asian-store.md](39_asian-store.md) | 3 | /milk as a shelf, /reserve as dairy counter, bottle-return loop, neighbourhood launch |
+| 40 | Cutaway world | [40_cutaway-world.md](40_cutaway-world.md) | 4 | Explaining backbone: journey, traceability, trace-your-milk, /technology, /trace |
+| 41 | New liquid | [41_new-liquid.md](41_new-liquid.md) | 4 | Sitewide interaction layer (cursor, buttons, pour transitions), Milk as material, final CTA |
+| 42 | Clay render | [42_clay-render.md](42_clay-render.md) | 3.5 | Illustration system: journey, /origin farm model, bilona process, /milk still lifes |
+| 43 | Envelope reveal | [43_envelope-reveal.md](43_envelope-reveal.md) | 3.5 (4.5 as layer) | Trace result as sealed letter, founder letter, /reserve confirmation |
+| 44 | Stitch & wire | [44_stitch-and-wire.md](44_stitch-and-wire.md) | 3.5 | Traceability as one running-stitch thread; Ghee in gota patti; wireframe→render hero |
+| 45 | Liquid chrome | [45_liquid-chrome.md](45_liquid-chrome.md) | 2 | Chrome variant numerals, Technology chapter, one launch key visual |
+| 46 | Gzhel → Jaipur blue pottery | [46_gzhel.md](46_gzhel.md) | 3 | Ghee, Heritage, festive/gifting, artisan limited edition (Jaipur blue pottery) |
+| 47 | Camera interface | [47_camera-interface.md](47_camera-interface.md) | 3.5 (4.5 as layer) | Trace-your-milk as a real QR scanner; farm documentary; /trace, /origin |
+| 48 | Frosted glass | [48_frosted-glass.md](48_frosted-glass.md) | 4 | The CHILL story (ch. 02, 06, 11), the four product worlds, hero and final CTA |
+| 49 | Shape design | [49_shape-design.md](49_shape-design.md) | 3.5 (4 for /milk) | /milk line-up of arches & cap circles, cow→bottle shape morph, posters |
+| 50 | 2000 web | [50_2000-web.md](50_2000-web.md) | 1.5 | Campaign only: a time-boxed /2003 microsite about returnable glass |
+| 51 | Fairy tale | [51_fairy-tale.md](51_fairy-tale.md) | 3 (4 as commissioned layer) | 'The Journey of a Bottle of Milk' scroll by credited Phad/Pichwai artists |
+| 52 | Cozy blanket | [52_cozy-blanket.md](52_cozy-blanket.md) | 3 (4 as seasonal layer) | Nov–Feb winter skin: 'cold milk, warm home', ghee, delivery |
+| 53 | Electro biomorph | [53_electro-biomorph.md](53_electro-biomorph.md) | 2.5 (3.5 in 3 chapters) | Trace network glow, Milk as material, Technology, launch films |
+| 54 | Scientism | [54_scientism.md](54_scientism.md) | 4 | Evidence voice: Quality data sheet, breed plates, trace schematics |
+| 55 | Kawaii | [55_kawaii.md](55_kawaii.md) | 1.5 (3 for /kids) | Separate /kids explainer only — never the main site |
+
+## Original style catalogue (01–36)
 | # | Style | File | Fit for DESIGO® | Best used for |
 |---|---|---|---|---|
 | 01 | Minimalism | [01_minimalism.md](01_minimalism.md) | 5 | Whole-site base system: hero, product worlds, final CTA, inner-page shells |

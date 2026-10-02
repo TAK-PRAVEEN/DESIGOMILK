@@ -46,3 +46,30 @@ Mixed Media (once real archive material exists).
 - Pick up to two campaign styles for the launch.
 - Answer the content questions in `docs/desigo-master/19_OPEN_QUESTIONS.md`, especially naming, prices, pack size,
   herb counts and the breed list.
+
+## 6. Update 2026-10-03: priority styles (#29 + #37–55)
+The client marked 20 styles as priority. Wabi-Sabi was already planned as #29; the other 19 are new. **The library now has 55 styles.**
+
+**Strongest priority picks (fit 4+):**
+| Style | Fit | Role in the DESIGO® system |
+|---|---|---|
+| 29 Wabi-Sabi | 4.5 | Alternative whole-site direction: calm luxury craft |
+| 40 Cutaway world | 4 | The explaining backbone: farm → chiller → plant → home in section |
+| 41 New liquid | 4 | Sitewide interaction layer: milk as interface material |
+| 48 Frosted glass | 4 | The CHILL story + product worlds (echoes the chilled glass bottle) |
+| 54 Scientism | 4 | Evidence voice for Quality and Trace |
+| 47 Camera interface | 4.5 as layer | "Trace your milk" as a real QR scanner |
+| 43 Envelope reveal | 4.5 as layer | Trace result and founder letter as a sealed letter |
+
+**Good as layers or seasonal skins:** 37 Cloud cut, 42 Clay render, 44 Stitch & wire, 49 Shape design, 51 Fairy tale
+(commissioned Phad/Pichwai artists), 52 Cozy blanket (winter skin), 39 Indian kirana shop, 46 Jaipur blue pottery.
+
+**Campaign-only / careful:** 38 Xpiritualism, 53 Electro biomorph, 45 Liquid chrome (numerals only), 50 2000 web (/2003 microsite),
+55 Kawaii (/kids only, never the main site).
+
+**Revised prototype order:**
+1. Cutaway world: the cow-to-bottle journey + trace chapters
+2. New liquid + Frosted glass: interaction layer and the four product worlds
+3. Camera interface + Envelope reveal: "Trace your milk"
+4. Wabi-Sabi: home page variant
+5. Scientism: Quality chapter
