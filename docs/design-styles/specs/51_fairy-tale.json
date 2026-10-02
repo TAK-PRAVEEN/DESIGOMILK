@@ -1,0 +1,245 @@
+{
+  "id": 51,
+  "slug": "fairy-tale",
+  "name": "Fairy Tale",
+  "priority": true,
+  "fit": 3,
+  "colors": {
+    "primary": "#2F4F7F",
+    "onPrimary": "#F7F4EC",
+    "secondary": "#E2B13C",
+    "accent": "#1E7A68",
+    "bg": "#F7F4EC",
+    "surface": "#EFE3C8",
+    "text": "#1E211F",
+    "textMuted": "#5D5042",
+    "line": "#C8A96B",
+    "ok": "#1E7A68",
+    "pending": "#7A5B37",
+    "demo": "#171918"
+  },
+  "colorsExtra": {
+    "phad-orange": "#D9782D",
+    "phad-red": "#B3202A",
+    "phad-green": "#1F5C45",
+    "lamp-black": "#171918",
+    "pichwai-night": "#0B3B32",
+    "lotus": "#D98C8C",
+    "gold": "#C8A96B",
+    "lamp": "rgba(232,154,28,.18)"
+  },
+  "variants": {
+    "master-26": {
+      "base": "#1F5C45",
+      "deep": "#0A2A20",
+      "light": "#D9E8DF"
+    },
+    "root-14": {
+      "base": "#B3202A",
+      "deep": "#4A0A0F",
+      "light": "#F3D9D6"
+    },
+    "base-3": {
+      "base": "#E89A1C",
+      "deep": "#5A3304",
+      "light": "#F8E4C2"
+    },
+    "essential": {
+      "base": "#CDB89A",
+      "deep": "#4D4130",
+      "light": "#F4EDE2"
+    }
+  },
+  "fonts": {
+    "display": {
+      "family": "Rozha One",
+      "package": "@fontsource/rozha-one",
+      "weights": [
+        400
+      ]
+    },
+    "body": {
+      "family": "Inter Tight",
+      "package": "@fontsource-variable/inter-tight",
+      "weights": [
+        400,
+        500
+      ]
+    },
+    "label": {
+      "family": "Inter Tight",
+      "package": "@fontsource-variable/inter-tight",
+      "weights": [
+        500
+      ]
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "package": "@fontsource-variable/jetbrains-mono",
+      "weights": [
+        400
+      ]
+    },
+    "devanagari": {
+      "family": "Tiro Devanagari Hindi",
+      "package": "@fontsource/tiro-devanagari-hindi",
+      "weights": [
+        400
+      ]
+    },
+    "narration": {
+      "family": "Fraunces",
+      "package": "@fontsource-variable/fraunces",
+      "weights": [
+        400
+      ]
+    }
+  },
+  "type": {
+    "display": "clamp(2.4rem, 6vw, 6rem)",
+    "h1": "clamp(1.5rem, 2.6vw, 2.4rem) (narration)",
+    "h2": "clamp(1.4rem, 2.2vw, 2rem)",
+    "body": "1.0625rem/1.7",
+    "label": ".72rem/+0.18em uppercase"
+  },
+  "radius": {
+    "sm": "0",
+    "md": "0",
+    "lg": "0"
+  },
+  "shadow": {
+    "bottle": "ellipse 8px blur 30% + 0 60px 60px -30px rgba(23,25,24,.08)",
+    "panel": "none (art flat); roller shadow 24px gradient on scroll edge"
+  },
+  "motion": {
+    "easeOut": "cubic-bezier(.16,1,.3,1)",
+    "easeInOut": "cubic-bezier(.65,0,.35,1)",
+    "durMicro": 240,
+    "durReveal": 600,
+    "durScene": 1200,
+    "durDraw": 400
+  },
+  "button": {
+    "primary": {
+      "bg": "#2F4F7F",
+      "fg": "#F7F4EC",
+      "radius": "0",
+      "padding": "0 28px (52px high)",
+      "hover": "1px gold frame draws 600ms, arrow +6px"
+    },
+    "secondary": {
+      "bg": "transparent",
+      "fg": "#1E211F",
+      "underline": "hand-drawn gold SVG",
+      "radius": "0",
+      "padding": "0",
+      "hover": "underline draws 400ms"
+    },
+    "link": {
+      "fg": "#1E7A68",
+      "underline": "hand-drawn gold",
+      "hover": "draws 400ms, arrow +6px"
+    }
+  },
+  "images": [
+    {
+      "id": "FT-H1",
+      "file": "web/public/desigo/styles/fairy-tale/_storyboard/hero-vignette.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Storyboard sketch of an Indian zebu cow with hump and dewlap resting calmly under a khejri tree on a small Rajasthani farm at dawn, wide empty sky, storyboard placeholder in a flat folk storybook grammar, flat colour, bold dark outlines, side view, no perspective, natural pigment palette of cloth cream #EFE3C8, yellow #E2B13C, red #B3202A, green #1F5C45 and indigo #2F4F7F, respectful, secular, no deities, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, numbers, logo, watermark, signature, label, product bottle, glass bottle, jar, packaging, Holstein or Jersey cattle, cartoon mascot, deity or religious icon, distorted anatomy, oversaturated, HDR, low resolution, deities, temple, halo, sacred symbols, named artist style, cow with human expression",
+      "usedIn": "Ch. 01 hero vignette (storyboard only; replaced by commission)"
+    },
+    {
+      "id": "FT-H2",
+      "file": "web/public/desigo/styles/fairy-tale/_storyboard/hero-vignette-portrait.png",
+      "size": "1400×2400 (7:12)",
+      "transparent": false,
+      "prompt": "Vertical storyboard sketch of a zebu cow under a khejri tree with a small herder figure in profile, dawn sky above, calm, storyboard placeholder in a flat folk storybook grammar, flat colour, bold dark outlines, side view, no perspective, natural pigment palette of cloth cream #EFE3C8, yellow #E2B13C, red #B3202A, green #1F5C45 and indigo #2F4F7F, respectful, secular, no deities, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, numbers, logo, watermark, signature, label, product bottle, glass bottle, jar, packaging, Holstein or Jersey cattle, cartoon mascot, deity or religious icon, distorted anatomy, oversaturated, HDR, low resolution, deities, temple, halo, named artist style",
+      "usedIn": "Ch. 01 mobile (storyboard only)"
+    },
+    {
+      "id": "FT-V1",
+      "file": "web/public/desigo/styles/fairy-tale/_storyboard/world-master-grove.png",
+      "size": "3200×2000 + 1400×2400 portrait",
+      "transparent": false,
+      "prompt": "Storyboard sketch of a deep green #1F5C45 grove with a lotus pond and birds, zebu cows grazing at the edge, no counted herbs, storyboard placeholder in a flat folk storybook grammar, flat colour, bold dark outlines, side view, no perspective, natural pigment palette of cloth cream #EFE3C8, yellow #E2B13C, red #B3202A, green #1F5C45 and indigo #2F4F7F, respectful, secular, no deities, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, numbers, logo, watermark, signature, label, product bottle, glass bottle, jar, packaging, Holstein or Jersey cattle, cartoon mascot, deity or religious icon, distorted anatomy, oversaturated, HDR, low resolution, deities, Krishna, temple, numbered plants",
+      "usedIn": "MASTER 26 panel brief"
+    },
+    {
+      "id": "FT-V2",
+      "file": "web/public/desigo/styles/fairy-tale/_storyboard/world-root-stepwell.png",
+      "size": "3200×2000 + 1400×2400 portrait",
+      "transparent": false,
+      "prompt": "Storyboard sketch of red earth #B3202A and ochre land with a stepwell and grazing land under a pale sky, storyboard placeholder in a flat folk storybook grammar, flat colour, bold dark outlines, side view, no perspective, natural pigment palette of cloth cream #EFE3C8, yellow #E2B13C, red #B3202A, green #1F5C45 and indigo #2F4F7F, respectful, secular, no deities, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, numbers, logo, watermark, signature, label, product bottle, glass bottle, jar, packaging, Holstein or Jersey cattle, cartoon mascot, deity or religious icon, distorted anatomy, oversaturated, HDR, low resolution, deities, shrine, people bathing",
+      "usedIn": "ROOT 14 panel brief"
+    },
+    {
+      "id": "FT-V3",
+      "file": "web/public/desigo/styles/fairy-tale/_storyboard/world-base-field.png",
+      "size": "3200×2000 + 1400×2400 portrait",
+      "transparent": false,
+      "prompt": "Storyboard sketch of a golden amber #E89A1C field at evening under a large plain sun disc, a few zebu cows walking home, storyboard placeholder in a flat folk storybook grammar, flat colour, bold dark outlines, side view, no perspective, natural pigment palette of cloth cream #EFE3C8, yellow #E2B13C, red #B3202A, green #1F5C45 and indigo #2F4F7F, respectful, secular, no deities, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, numbers, logo, watermark, signature, label, product bottle, glass bottle, jar, packaging, Holstein or Jersey cattle, cartoon mascot, deity or religious icon, distorted anatomy, oversaturated, HDR, low resolution, sun face, sun deity, rays with faces",
+      "usedIn": "BASE 3 panel brief"
+    },
+    {
+      "id": "FT-V4",
+      "file": "web/public/desigo/styles/fairy-tale/_storyboard/world-essential-courtyard.png",
+      "size": "3200×2000 + 1400×2400 portrait",
+      "transparent": false,
+      "prompt": "Storyboard sketch of a quiet courtyard with one tree painted on mostly bare cream cloth, sand #CDB89A walls, very little detail, storyboard placeholder in a flat folk storybook grammar, flat colour, bold dark outlines, side view, no perspective, natural pigment palette of cloth cream #EFE3C8, yellow #E2B13C, red #B3202A, green #1F5C45 and indigo #2F4F7F, respectful, secular, no deities, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, numbers, logo, watermark, signature, label, product bottle, glass bottle, jar, packaging, Holstein or Jersey cattle, cartoon mascot, deity or religious icon, distorted anatomy, oversaturated, HDR, low resolution, shrine, idols, crowds",
+      "usedIn": "ESSENTIAL panel brief"
+    },
+    {
+      "id": "FT-J1",
+      "file": "web/public/desigo/styles/fairy-tale/_storyboard/episode-01-dawn.png",
+      "size": "3200×1200 (8:3)",
+      "transparent": false,
+      "prompt": "Storyboard sketch for an illustrated folk tale: dawn at a small Rajasthani farm, Indian zebu cows with humps grazing calmly under a khejri tree, a herder standing nearby, storyboard placeholder in a flat folk storybook grammar, flat colour, bold dark outlines, side view, no perspective, natural pigment palette of cloth cream #EFE3C8, yellow #E2B13C, red #B3202A, green #1F5C45 and indigo #2F4F7F, respectful, secular, no deities, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, numbers, logo, watermark, signature, label, product bottle, glass bottle, jar, packaging, Holstein or Jersey cattle, cartoon mascot, deity or religious icon, distorted anatomy, oversaturated, HDR, low resolution, deities, temple, named artist style",
+      "usedIn": "Ch. 03 scroll episode 1 (storyboard)"
+    },
+    {
+      "id": "FT-J2",
+      "file": "web/public/desigo/styles/fairy-tale/_storyboard/episode-07-doorstep.png",
+      "size": "3200×1200 (8:3)",
+      "transparent": false,
+      "prompt": "Storyboard sketch: early morning in a blue-painted old town lane, a delivery person placing a milk bottle at a doorstep, calm, storyboard placeholder in a flat folk storybook grammar, flat colour, bold dark outlines, side view, no perspective, natural pigment palette of cloth cream #EFE3C8, yellow #E2B13C, red #B3202A, green #1F5C45 and indigo #2F4F7F, respectful, secular, no deities, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, numbers, logo, watermark, signature, label, product bottle, glass bottle, jar, packaging, Holstein or Jersey cattle, cartoon mascot, deity or religious icon, distorted anatomy, oversaturated, HDR, low resolution, detailed bottle label, brand marks, deities",
+      "usedIn": "Ch. 03 episode 7 / ch. 15 (storyboard)"
+    },
+    {
+      "id": "FT-J3",
+      "file": "web/public/desigo/styles/fairy-tale/_storyboard/milk-river.png",
+      "size": "3200×1200 (8:3)",
+      "transparent": false,
+      "prompt": "Storyboard sketch of a stylised river of milk drawn with repeated wave patterns in cream and indigo, flat, decorative, storyboard placeholder in a flat folk storybook grammar, flat colour, bold dark outlines, side view, no perspective, natural pigment palette of cloth cream #EFE3C8, yellow #E2B13C, red #B3202A, green #1F5C45 and indigo #2F4F7F, respectful, secular, no deities, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, numbers, logo, watermark, signature, label, product bottle, glass bottle, jar, packaging, Holstein or Jersey cattle, cartoon mascot, deity or religious icon, distorted anatomy, oversaturated, HDR, low resolution, deities, sacred river iconography",
+      "usedIn": "Ch. 09 `MilkRiver` brief"
+    },
+    {
+      "id": "FT-T1",
+      "file": "web/public/desigo/styles/fairy-tale/textures/cotton-cloth.png",
+      "size": "2400×2400, seamless",
+      "transparent": false,
+      "prompt": "Seamless texture of hand-woven cotton cloth primed for painting, warm cream #EFE3C8, visible weave, flat even scan lighting, storyboard placeholder in a flat folk storybook grammar, flat colour, bold dark outlines, side view, no perspective, natural pigment palette of cloth cream #EFE3C8, yellow #E2B13C, red #B3202A, green #1F5C45 and indigo #2F4F7F, respectful, secular, no deities, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, numbers, logo, watermark, signature, label, product bottle, glass bottle, jar, packaging, Holstein or Jersey cattle, cartoon mascot, deity or religious icon, distorted anatomy, oversaturated, HDR, low resolution, painted figures, stains, folds",
+      "usedIn": "Narration bands, panels (may ship)"
+    },
+    {
+      "id": "FT-T2",
+      "file": "web/public/desigo/styles/fairy-tale/textures/pigment-wash.png",
+      "size": "2400×2400, seamless",
+      "transparent": false,
+      "prompt": "Seamless subtle natural-pigment wash on cotton, faint ochre and cream variation, flat scan, no shapes, storyboard placeholder in a flat folk storybook grammar, flat colour, bold dark outlines, side view, no perspective, natural pigment palette of cloth cream #EFE3C8, yellow #E2B13C, red #B3202A, green #1F5C45 and indigo #2F4F7F, respectful, secular, no deities, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, numbers, logo, watermark, signature, label, product bottle, glass bottle, jar, packaging, Holstein or Jersey cattle, cartoon mascot, deity or religious icon, distorted anatomy, oversaturated, HDR, low resolution, figures, motifs, stains",
+      "usedIn": "Ground behind text panels (may ship)"
+    }
+  ]
+}

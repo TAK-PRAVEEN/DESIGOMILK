@@ -1,0 +1,230 @@
+{
+  "id": 53,
+  "slug": "electro-biomorph",
+  "name": "Electro-Biomorph",
+  "priority": true,
+  "fit": 2.5,
+  "colors": {
+    "primary": "#7FE0B8",
+    "onPrimary": "#07211C",
+    "secondary": "#D9E8DF",
+    "accent": "#C8A96B",
+    "bg": "#0B3B32",
+    "surface": "#0F4A3F",
+    "text": "#F7F4EC",
+    "textMuted": "#B5C7BF",
+    "line": "rgba(217,232,223,.22)",
+    "ok": "#D9E8DF",
+    "pending": "#C8A96B",
+    "demo": "#F7F4EC"
+  },
+  "colorsExtra": {
+    "abyss": "#07211C",
+    "charcoal": "#171918",
+    "pearl": "#F7F4EC",
+    "membrane": "rgba(217,232,223,.22)",
+    "iris": "linear-gradient(120deg, #7FE0B8, #D9E8DF 45%, #C8A96B)",
+    "glow-root / --glow-base / --glow-essential": "#E0463A / #F2B84B / #E6DCCB",
+    "green": "#1E7A68"
+  },
+  "variants": {
+    "master-26": {
+      "base": "#1F5C45",
+      "deep": "#0A2A20",
+      "light": "#D9E8DF"
+    },
+    "root-14": {
+      "base": "#B3202A",
+      "deep": "#4A0A0F",
+      "light": "#F3D9D6"
+    },
+    "base-3": {
+      "base": "#E89A1C",
+      "deep": "#5A3304",
+      "light": "#F8E4C2"
+    },
+    "essential": {
+      "base": "#CDB89A",
+      "deep": "#4D4130",
+      "light": "#F4EDE2"
+    }
+  },
+  "fonts": {
+    "display": {
+      "family": "Instrument Sans",
+      "package": "@fontsource-variable/instrument-sans",
+      "weights": [
+        300,
+        400
+      ]
+    },
+    "body": {
+      "family": "Instrument Sans",
+      "package": "@fontsource-variable/instrument-sans",
+      "weights": [
+        400
+      ]
+    },
+    "label": {
+      "family": "Instrument Sans",
+      "package": "@fontsource-variable/instrument-sans",
+      "weights": [
+        500
+      ]
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "package": "@fontsource-variable/jetbrains-mono",
+      "weights": [
+        400
+      ]
+    },
+    "devanagari": {
+      "family": "Noto Sans Devanagari",
+      "package": "@fontsource-variable/noto-sans-devanagari",
+      "weights": [
+        300,
+        400,
+        500
+      ]
+    },
+    "accent": {
+      "family": "Fraunces",
+      "package": "@fontsource-variable/fraunces",
+      "weights": [
+        "300 italic"
+      ]
+    }
+  },
+  "type": {
+    "display": "clamp(3rem, 8vw, 9rem)",
+    "h1": "clamp(2.4rem, 5vw, 5rem)",
+    "h2": "clamp(1.6rem, 2.8vw, 2.8rem)",
+    "body": "1rem/1.65",
+    "label": ".72rem/+0.16em uppercase"
+  },
+  "radius": {
+    "sm": "4px",
+    "md": "12px",
+    "lg": "999px"
+  },
+  "shadow": {
+    "bottle": "pearl metaball halo 40% behind + rim-light gradient mask; contact ellipse on light chapters",
+    "panel": "none (solid, never glowing)"
+  },
+  "motion": {
+    "easeOut": "cubic-bezier(.16,1,.3,1)",
+    "easeInOut": "cubic-bezier(.65,0,.35,1)",
+    "durMicro": 240,
+    "durReveal": 1200,
+    "durScene": 700,
+    "durPulse": 1600,
+    "durBreathe": 5000
+  },
+  "button": {
+    "primary": {
+      "bg": "transparent",
+      "fg": "#F7F4EC",
+      "border": "1px #7FE0B8",
+      "radius": "0",
+      "padding": "0 28px (52px high)",
+      "hover": "frame draws 600ms with faint 4px glow; active fills #7FE0B8 / label #07211C"
+    },
+    "secondary": {
+      "bg": "transparent",
+      "fg": "#F7F4EC",
+      "underline": "1px #7FE0B8",
+      "radius": "0",
+      "padding": "0",
+      "hover": "underline draws 240ms"
+    },
+    "link": {
+      "fg": "#F7F4EC",
+      "underline": "#7FE0B8 (dark) / #1E7A68 (light)",
+      "hover": "240ms, arrow +6px"
+    }
+  },
+  "images": [
+    {
+      "id": "BM-H1",
+      "file": "web/public/desigo/styles/electro-biomorph/hero-pearl-halo.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": true,
+      "prompt": "Very soft pale pearl halo of light, a smooth luminous rounded form with a faint mint-gold rim, diffuse, centred, mostly transparent edges, made for a milk-white page, abstract, not biological, deep forest green #0B3B32 and milk-white light #F7F4EC with soft mint #7FE0B8 rim, restrained, premium, calm, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, numbers, logo, watermark, signature, label, product bottle, glass bottle, jar, packaging, Holstein or Jersey cattle, cartoon mascot, deity or religious icon, distorted anatomy, oversaturated, HDR, low resolution, cells, bacteria, microscope, molecules, DNA, eyes, rainbow, neon pink, sci-fi HUD",
+      "usedIn": "Ch. 01 hero halo behind the bottle (25%)"
+    },
+    {
+      "id": "BM-H2",
+      "file": "web/public/desigo/styles/electro-biomorph/hero-pearl-halo-portrait.png",
+      "size": "1400×2400 (7:12)",
+      "transparent": true,
+      "prompt": "Vertical soft pearl halo of light, tall rounded luminous form with faint mint rim, diffuse, transparent background, abstract, not biological, deep forest green #0B3B32 and milk-white light #F7F4EC with soft mint #7FE0B8 rim, restrained, premium, calm, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, numbers, logo, watermark, signature, label, product bottle, glass bottle, jar, packaging, Holstein or Jersey cattle, cartoon mascot, deity or religious icon, distorted anatomy, oversaturated, HDR, low resolution, cells, bacteria, microscope, molecules, eyes, rainbow",
+      "usedIn": "Ch. 01 hero (mobile)"
+    },
+    {
+      "id": "BM-V1",
+      "file": "web/public/desigo/styles/electro-biomorph/frond-glow.png",
+      "size": "3000×3000 + 1400×2400 portrait",
+      "transparent": true,
+      "prompt": "Abstract branching frond-like glowing form in pale green #D9E8DF light with soft mint #7FE0B8 edges, symmetrical, Haeckel-inspired, transparent background, abstract, not biological, deep forest green #0B3B32 and milk-white light #F7F4EC with soft mint #7FE0B8 rim, restrained, premium, calm, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, numbers, logo, watermark, signature, label, product bottle, glass bottle, jar, packaging, Holstein or Jersey cattle, cartoon mascot, deity or religious icon, distorted anatomy, oversaturated, HDR, low resolution, cells, plankton species, countable parts, neurons, rainbow",
+      "usedIn": "MASTER 26 world still / fallback"
+    },
+    {
+      "id": "BM-V2",
+      "file": "web/public/desigo/styles/electro-biomorph/root-tendrils.png",
+      "size": "3000×3000 + 1400×2400 portrait",
+      "transparent": true,
+      "prompt": "Abstract rooted glowing form with soft tendrils reaching downward, blush #F3D9D6 core and warm ember #E0463A edge glow, slow and calm, transparent background, abstract, not biological, deep forest green #0B3B32 and milk-white light #F7F4EC with soft mint #7FE0B8 rim, restrained, premium, calm, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, numbers, logo, watermark, signature, label, product bottle, glass bottle, jar, packaging, Holstein or Jersey cattle, cartoon mascot, deity or religious icon, distorted anatomy, oversaturated, HDR, low resolution, blood vessels, veins, roots with soil, horror, cells",
+      "usedIn": "ROOT 14 world still / fallback"
+    },
+    {
+      "id": "BM-V3",
+      "file": "web/public/desigo/styles/electro-biomorph/amber-body.png",
+      "size": "3000×3000 + 1400×2400 portrait",
+      "transparent": true,
+      "prompt": "Single round abstract glowing body in warm amber #F2B84B light with a soft membrane, like a low sun made of light, transparent background, abstract, not biological, deep forest green #0B3B32 and milk-white light #F7F4EC with soft mint #7FE0B8 rim, restrained, premium, calm, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, numbers, logo, watermark, signature, label, product bottle, glass bottle, jar, packaging, Holstein or Jersey cattle, cartoon mascot, deity or religious icon, distorted anatomy, oversaturated, HDR, low resolution, egg yolk, cell nucleus, sun face, lens flare",
+      "usedIn": "BASE 3 world still / fallback"
+    },
+    {
+      "id": "BM-V4",
+      "file": "web/public/desigo/styles/electro-biomorph/pearl-organism.png",
+      "size": "3000×3000 + 1400×2400 portrait",
+      "transparent": true,
+      "prompt": "Abstract soft still pearl of light with a translucent ivory #F4EDE2 membrane and almost no glow, smooth, calm, not a cell, not a microbe, transparent background, abstract, not biological, deep forest green #0B3B32 and milk-white light #F7F4EC with soft mint #7FE0B8 rim, restrained, premium, calm, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, numbers, logo, watermark, signature, label, product bottle, glass bottle, jar, packaging, Holstein or Jersey cattle, cartoon mascot, deity or religious icon, distorted anatomy, oversaturated, HDR, low resolution, cells, microbes, eyes, rainbow sheen",
+      "usedIn": "ESSENTIAL world still / fallback"
+    },
+    {
+      "id": "BM-J1",
+      "file": "web/public/desigo/styles/electro-biomorph/mycelium-network.png",
+      "size": "3600×2000 (9:5)",
+      "transparent": false,
+      "prompt": "Abstract network of fine glowing mint filaments branching organically across a deep forest-green #07211C void, a few brighter junctions, sparse, elegant, abstract, not biological, deep forest green #0B3B32 and milk-white light #F7F4EC with soft mint #7FE0B8 rim, restrained, premium, calm, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, numbers, logo, watermark, signature, label, product bottle, glass bottle, jar, packaging, Holstein or Jersey cattle, cartoon mascot, deity or religious icon, distorted anatomy, oversaturated, HDR, low resolution, neurons, brain, map labels, circuit boards, numbers",
+      "usedIn": "Ch. 06 / /trace mycelium fallback still"
+    },
+    {
+      "id": "BM-M1",
+      "file": "web/public/desigo/styles/electro-biomorph/milk-metaballs.png",
+      "size": "3600×2000 (9:5)",
+      "transparent": false,
+      "prompt": "Abstract milk-white liquid blobs merging and separating on deep forest green, soft inner glow, glossy, minimal, abstract, not biological, deep forest green #0B3B32 and milk-white light #F7F4EC with soft mint #7FE0B8 rim, restrained, premium, calm, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, numbers, logo, watermark, signature, label, product bottle, glass bottle, jar, packaging, Holstein or Jersey cattle, cartoon mascot, deity or religious icon, distorted anatomy, oversaturated, HDR, low resolution, fat globules diagram, cells, microscope view, splashes with text",
+      "usedIn": "Ch. 09 `MetaballMilk` still"
+    },
+    {
+      "id": "BM-T1",
+      "file": "web/public/desigo/styles/electro-biomorph/abyss-grain.png",
+      "size": "2048×2048, seamless",
+      "transparent": false,
+      "prompt": "Seamless very fine dark grain texture on deep forest-green #07211C, almost invisible, even, abstract, not biological, deep forest green #0B3B32 and milk-white light #F7F4EC with soft mint #7FE0B8 rim, restrained, premium, calm, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, numbers, logo, watermark, signature, label, product bottle, glass bottle, jar, packaging, Holstein or Jersey cattle, cartoon mascot, deity or religious icon, distorted anatomy, oversaturated, HDR, low resolution, stars, sparkles, patterns",
+      "usedIn": "2% overlay on dark grounds"
+    }
+  ]
+}

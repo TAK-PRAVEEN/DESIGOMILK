@@ -1,0 +1,245 @@
+{
+  "id": 25,
+  "slug": "synthwave",
+  "name": "Synthwave",
+  "priority": false,
+  "fit": 1.5,
+  "colors": {
+    "primary": "#7FE0B8",
+    "onPrimary": "#06110F",
+    "secondary": "#E89A1C",
+    "accent": "#F3D9A0",
+    "bg": "#06110F",
+    "surface": "#0B3B32",
+    "text": "#F7F4EC",
+    "textMuted": "#8FA8A0",
+    "line": "rgba(127,224,184,.30)",
+    "ok": "#7FE0B8",
+    "pending": "#F3D9A0",
+    "demo": "#E89A1C"
+  },
+  "variants": {
+    "master-26": {
+      "base": "#1F5C45",
+      "deep": "#0A2A20",
+      "light": "#D9E8DF",
+      "world": "sky #0A2A20, sun rim #1F5C45 to #D9E8DF, grid 32px #7FE0B8"
+    },
+    "root-14": {
+      "base": "#B3202A",
+      "deep": "#4A0A0F",
+      "light": "#F3D9D6",
+      "world": "sky #4A0A0F to #06110F, disc #B3202A, grid #F3D9D6 40%"
+    },
+    "base-3": {
+      "base": "#E89A1C",
+      "deep": "#5A3304",
+      "light": "#F8E4C2",
+      "world": "sky #5A3304, disc #E89A1C, grid 96px #F8E4C2 35%"
+    },
+    "essential": {
+      "base": "#CDB89A",
+      "deep": "#4D4130",
+      "light": "#F4EDE2",
+      "world": "sky #4D4130 to #F4EDE2, no disc, grid #CDB89A 25%"
+    }
+  },
+  "fonts": {
+    "display": {
+      "family": "Syne",
+      "package": "@fontsource-variable/syne",
+      "weights": [
+        700,
+        800
+      ]
+    },
+    "body": {
+      "family": "Inter Tight",
+      "package": "@fontsource-variable/inter-tight",
+      "weights": [
+        400,
+        500,
+        600,
+        700
+      ]
+    },
+    "label": {
+      "family": "Inter Tight",
+      "package": "@fontsource-variable/inter-tight",
+      "weights": [
+        500
+      ]
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "package": "@fontsource-variable/jetbrains-mono",
+      "weights": [
+        400,
+        500
+      ]
+    },
+    "editorial": {
+      "family": "Fraunces",
+      "package": "@fontsource-variable/fraunces",
+      "weights": [
+        300
+      ]
+    },
+    "devanagari": {
+      "family": "Noto Sans Devanagari",
+      "package": "@fontsource-variable/noto-sans-devanagari",
+      "weights": [
+        400,
+        500,
+        600
+      ]
+    }
+  },
+  "type": {
+    "display": "clamp(3.5rem, 2rem + 7vw, 9rem)",
+    "h1": "clamp(2.6rem, 1.6rem + 4vw, 5rem)",
+    "h2": "clamp(1.8rem, 1.3rem + 2vw, 3rem)",
+    "body": "clamp(1rem, .95rem + .25vw, 1.125rem)",
+    "label": ".75rem"
+  },
+  "radius": {
+    "sm": "0",
+    "md": "2px",
+    "lg": "4px",
+    "pill": "999px"
+  },
+  "shadow": {
+    "bottle": "0 40px 60px -30px rgba(0,0,0,.6); reflection 25% flipped + gradient mask; rim light #E89A1C",
+    "panel": "0 0 0 1px rgba(127,224,184,.3), 0 0 24px rgba(127,224,184,.12)"
+  },
+  "motion": {
+    "easeOut": "cubic-bezier(.16,1,.3,1)",
+    "easeInOut": "cubic-bezier(.65,0,.35,1)",
+    "easeMilk": "cubic-bezier(.22,.9,.24,1)",
+    "durMicro": 240,
+    "durReveal": 600,
+    "durScene": 1200,
+    "scanWipe": 900,
+    "chromaticSplit": 120,
+    "pulsePerHop": 1600
+  },
+  "button": {
+    "primary": {
+      "bg": "transparent",
+      "fg": "#F7F4EC",
+      "border": "1px solid #7FE0B8",
+      "radius": "0",
+      "padding": "14px 22px",
+      "hover": "frame draws 400ms + glow 0 to 8px",
+      "active": "bg #7FE0B8, fg #06110F"
+    },
+    "secondary": {
+      "bg": "transparent",
+      "fg": "#F7F4EC",
+      "border": "none; underline 1px rgba(247,244,236,.4)",
+      "radius": "0",
+      "padding": "12px 0",
+      "hover": "mint underline draws 240ms"
+    },
+    "link": {
+      "fg": "#F7F4EC",
+      "underline": "1px rgba(247,244,236,.4)",
+      "hover": "#7FE0B8 underline left to right 240ms, arrow +4px"
+    }
+  },
+  "logo": {
+    "loop": "write/un-write infinite",
+    "onLight": "#171918",
+    "onDark": "#FFFFFF",
+    "colourChange": false,
+    "cycleMs": 4600,
+    "drawMs": "0-1200 (480 each, 95 stagger)",
+    "holdUntilMs": 3000,
+    "unwriteMs": "3000-4200 (reverse order)",
+    "colorLight": "#171918",
+    "colorDark": "#F7F4EC"
+  },
+  "tailPrompt": "re-tuned synthwave, Thar night palette of forest-black #06110F, deep forest #0B3B32, teal haze #123F4A, mint grid glow #7FE0B8, dawn gold #F3D9A0 and amber #E89A1C, subtle film grain, restrained, cinematic, premium, no magenta, no purple, no text, no watermark, no logo, no letters",
+  "images": [
+    {
+      "file": "web/public/desigo/styles/synthwave/hero-landscape.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Wide night horizon over the Thar desert edge before dawn, a faint luminous mint perspective grid floor receding to a horizon line at 58% height, low dune and khejri tree silhouettes in near-black green, a striped sun disc glowing gold to amber to deep red just below the horizon, deep forest-black sky, large empty calm centre, re-tuned synthwave, Thar night palette of forest-black #06110F, deep forest #0B3B32, teal haze #123F4A, mint grid glow #7FE0B8, dawn gold #F3D9A0 and amber #E89A1C, subtle film grain, restrained, cinematic, premium, no magenta, no purple, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, magenta, purple, pink neon, palm trees, cars, sunglasses, cassette, chrome lettering, city skyline, glitch",
+      "usedIn": "Hero (ch. 01), /before-the-sun"
+    },
+    {
+      "file": "web/public/desigo/styles/synthwave/hero-portrait.png",
+      "size": "1400×2400 (7:12)",
+      "transparent": false,
+      "prompt": "Tall portrait version: night sky over a Thar dune horizon at 52% height, mint perspective grid floor in the lower half, half-risen striped gold-to-amber sun disc behind the centre, empty centre column for a product, re-tuned synthwave, Thar night palette of forest-black #06110F, deep forest #0B3B32, teal haze #123F4A, mint grid glow #7FE0B8, dawn gold #F3D9A0 and amber #E89A1C, subtle film grain, restrained, cinematic, premium, no magenta, no purple, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, magenta, purple, palm trees, cars, city skyline, glitch",
+      "usedIn": "Hero mobile"
+    },
+    {
+      "file": "web/public/desigo/styles/synthwave/world-master-26.png",
+      "size": "3200×2000 + 1400×2400 crop",
+      "transparent": false,
+      "prompt": "Deep night at 04:30 over a desert horizon, sky deep green #0A2A20, a barely risen sun rim in bottle green #1F5C45 with a pale green #D9E8DF edge, a dense fine mint grid floor, faint khejri silhouettes, empty centre, re-tuned synthwave, Thar night palette of forest-black #06110F, deep forest #0B3B32, teal haze #123F4A, mint grid glow #7FE0B8, dawn gold #F3D9A0 and amber #E89A1C, subtle film grain, restrained, cinematic, premium, no magenta, no purple, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, magenta, purple, bright sun, palm trees",
+      "usedIn": "Four milks ch. 08, /milk/master-26"
+    },
+    {
+      "file": "web/public/desigo/styles/synthwave/world-root-14.png",
+      "size": "3200×2000 + 1400×2400 crop",
+      "transparent": false,
+      "prompt": "Red first light at 05:15 over red sandstone dunes, sky graded oxblood #4A0A0F to forest-black, a deep crimson #B3202A sun disc with horizontal cut stripes, grid floor in pale rose #F3D9D6 at low opacity, empty centre, re-tuned synthwave, Thar night palette of forest-black #06110F, deep forest #0B3B32, teal haze #123F4A, mint grid glow #7FE0B8, dawn gold #F3D9A0 and amber #E89A1C, subtle film grain, restrained, cinematic, premium, no magenta, no purple, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, magenta, purple, pink neon, blood, palm trees",
+      "usedIn": "Four milks ch. 08, /milk/root-14"
+    },
+    {
+      "file": "web/public/desigo/styles/synthwave/world-base-3.png",
+      "size": "3200×2000 + 1400×2400 crop",
+      "transparent": false,
+      "prompt": "Amber dawn at 06:00, sky deep brown #5A3304, a full amber #E89A1C striped sun disc on the horizon, a wide sparse grid floor in pale wheat #F8E4C2, low dunes, warm haze, empty centre, re-tuned synthwave, Thar night palette of forest-black #06110F, deep forest #0B3B32, teal haze #123F4A, mint grid glow #7FE0B8, dawn gold #F3D9A0 and amber #E89A1C, subtle film grain, restrained, cinematic, premium, no magenta, no purple, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, magenta, purple, palm trees, harsh lens flare",
+      "usedIn": "Four milks ch. 08, /milk/base-3"
+    },
+    {
+      "file": "web/public/desigo/styles/synthwave/world-essential.png",
+      "size": "3200×2000 + 1400×2400 crop",
+      "transparent": false,
+      "prompt": "Ivory morning at 06:45, sky graded from warm taupe #4D4130 to ivory #F4EDE2, soft haze with no visible sun disc, a fading grid floor in pale sand #CDB89A, calm daylight winning, empty centre, re-tuned synthwave, Thar night palette of forest-black #06110F, deep forest #0B3B32, teal haze #123F4A, mint grid glow #7FE0B8, dawn gold #F3D9A0 and amber #E89A1C, subtle film grain, restrained, cinematic, premium, no magenta, no purple, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, magenta, purple, neon glow, palm trees",
+      "usedIn": "Four milks ch. 08, /milk/essential"
+    },
+    {
+      "file": "web/public/desigo/styles/synthwave/trace-grid-map.png",
+      "size": "3000×2000",
+      "transparent": true,
+      "prompt": "Abstract perspective grid seen from a low aerial angle, scattered glowing mint intersections as farm nodes joined by one continuous luminous path into a single hub, isolated on transparent background, re-tuned synthwave, Thar night palette of forest-black #06110F, deep forest #0B3B32, teal haze #123F4A, mint grid glow #7FE0B8, dawn gold #F3D9A0 and amber #E89A1C, subtle film grain, restrained, cinematic, premium, no magenta, no purple, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, map labels, country borders, magenta, purple, satellite photo",
+      "usedIn": "Traceability ch. 06, /trace"
+    },
+    {
+      "file": "web/public/desigo/styles/synthwave/journey-night-road.png",
+      "size": "3600×1200 (3:1)",
+      "transparent": false,
+      "prompt": "Long horizontal night road across flat desert towards a faint dawn horizon, a thin glowing milk-white line along the road edge, seven evenly spaced small roadside marker posts as plain silhouettes, deep green-black ground, re-tuned synthwave, Thar night palette of forest-black #06110F, deep forest #0B3B32, teal haze #123F4A, mint grid glow #7FE0B8, dawn gold #F3D9A0 and amber #E89A1C, subtle film grain, restrained, cinematic, premium, no magenta, no purple, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, vehicles, headlights, people, magenta, purple, signboards",
+      "usedIn": "Cow → bottle ch. 03 (NightRoad)"
+    },
+    {
+      "file": "web/public/desigo/styles/synthwave/texture-scanline-grain.png",
+      "size": "1024×1024, seamless",
+      "transparent": false,
+      "prompt": "Seamless tileable texture of very fine horizontal scanlines and monochrome film grain on neutral mid-grey, perfectly even, subtle, flat, re-tuned synthwave, Thar night palette of forest-black #06110F, deep forest #0B3B32, teal haze #123F4A, mint grid glow #7FE0B8, dawn gold #F3D9A0 and amber #E89A1C, subtle film grain, restrained, cinematic, premium, no magenta, no purple, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, colour, vignette, banding, moire, scratches",
+      "usedIn": "Scanline overlay (2%) sitewide"
+    },
+    {
+      "file": "web/public/desigo/styles/synthwave/ghee-dusk.png",
+      "size": "3200×2000",
+      "transparent": false,
+      "prompt": "Amber dusk over soft dunes, a large soft gold sun disc low behind the centre, a faint warm gold grid floor, slow and calm atmosphere, empty foreground centre, re-tuned synthwave, Thar night palette of forest-black #06110F, deep forest #0B3B32, teal haze #123F4A, mint grid glow #7FE0B8, dawn gold #F3D9A0 and amber #E89A1C, subtle film grain, restrained, cinematic, premium, no magenta, no purple, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, magenta, purple, fire, candles, palm trees",
+      "usedIn": "Ghee ch. 12, /ghee"
+    }
+  ]
+}

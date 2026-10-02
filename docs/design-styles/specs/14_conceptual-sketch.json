@@ -1,0 +1,235 @@
+{
+  "id": 14,
+  "slug": "conceptual-sketch",
+  "name": "Conceptual Sketch",
+  "priority": false,
+  "fit": 4,
+  "colors": {
+    "primary": "#0B3B32",
+    "onPrimary": "#F4EFE3",
+    "secondary": "#1E7A68",
+    "accent": "#C8A96B",
+    "bg": "#F4EFE3",
+    "surface": "#EAE2D0",
+    "text": "#1E211F",
+    "textMuted": "#3A3D3B",
+    "line": "#C9BFA8",
+    "ok": "#1E7A68",
+    "pending": "#8C6A43",
+    "demo": "#B3202A"
+  },
+  "variants": {
+    "master-26": {
+      "base": "#1F5C45",
+      "deep": "#0A2A20",
+      "light": "#D9E8DF"
+    },
+    "root-14": {
+      "base": "#B3202A",
+      "deep": "#4A0A0F",
+      "light": "#F3D9D6"
+    },
+    "base-3": {
+      "base": "#E89A1C",
+      "deep": "#5A3304",
+      "light": "#F8E4C2"
+    },
+    "essential": {
+      "base": "#CDB89A",
+      "deep": "#4D4130",
+      "light": "#F4EDE2"
+    }
+  },
+  "fonts": {
+    "display": {
+      "family": "Fraunces",
+      "package": "@fontsource-variable/fraunces",
+      "weights": [
+        350
+      ]
+    },
+    "headline": {
+      "family": "Fraunces",
+      "package": "@fontsource-variable/fraunces",
+      "weights": [
+        350,
+        400
+      ]
+    },
+    "body": {
+      "family": "Inter Tight",
+      "package": "@fontsource-variable/inter-tight",
+      "weights": [
+        400,
+        500
+      ]
+    },
+    "label": {
+      "family": "Inter Tight",
+      "package": "@fontsource-variable/inter-tight",
+      "weights": [
+        600
+      ]
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "package": "@fontsource-variable/jetbrains-mono",
+      "weights": [
+        400,
+        500
+      ]
+    },
+    "devanagari": {
+      "family": "Kalam",
+      "package": "@fontsource/kalam",
+      "weights": [
+        400
+      ]
+    },
+    "annotation": {
+      "family": "Kalam",
+      "package": "@fontsource/kalam",
+      "weights": [
+        400,
+        700
+      ]
+    }
+  },
+  "type": {
+    "display": "clamp(4rem, 9vw, 9rem)",
+    "h1": "clamp(2.6rem, 5vw, 5rem)",
+    "h2": "clamp(1.8rem, 3vw, 3rem)",
+    "body": "clamp(1rem, 0.95rem + 0.2vw, 1.0625rem)",
+    "label": "0.72rem",
+    "annotation": "clamp(1.125rem, 1rem + 0.4vw, 1.375rem)"
+  },
+  "radius": {
+    "sm": "0",
+    "md": "2px",
+    "lg": "2px"
+  },
+  "shadow": {
+    "bottle": "contact ellipse 60% x 8% blur 14px rgba(30,33,31,.28) + 0 24px 48px -28px rgba(30,33,31,.25)",
+    "panel": "none"
+  },
+  "motion": {
+    "easeOut": "cubic-bezier(.16,1,.3,1)",
+    "easeInOut": "cubic-bezier(.65,0,.35,1)",
+    "durMicro": 240,
+    "durReveal": 600,
+    "durScene": 1200
+  },
+  "button": {
+    "primary": {
+      "bg": "transparent → #0B3B32 on hover",
+      "fg": "#0B3B32 → #F4EFE3 on hover",
+      "radius": "0 (SVG sketched frame 1.75px)",
+      "padding": "12px 20px",
+      "hover": "frame redraws 600ms, fill forest, arrow +8px"
+    },
+    "secondary": {
+      "bg": "transparent",
+      "fg": "#0B3B32",
+      "radius": "0",
+      "padding": "12px 0",
+      "hover": "sketched rectangle draws around label 600ms"
+    },
+    "link": {
+      "bg": "transparent",
+      "fg": "#1E7A68",
+      "radius": "0",
+      "padding": "0",
+      "hover": "hand-drawn underline redraws 240ms, arrow +6px"
+    }
+  },
+  "images": [
+    {
+      "file": "web/public/desigo/styles/conceptual-sketch/hero-landscape.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Warm notebook paper with a faint 8 mm dot grid, a light graphite horizon sketch of the Thar desert edge with two khejri trees along the bottom edge, a few loose construction lines and ellipses, the centre left completely empty, single-weight hand-drawn ink and graphite line drawing on warm notebook paper #F4EFE3, faint light-graphite construction lines, sparing DESIGO green #1E7A68 fountain-pen accents, light hatching only, engineer's sketchbook and patent-drawing clarity, generous white space, no text, no watermark, no logo, no letters",
+      "negative": "numbers, dimension figures, handwriting, tape, coffee stains, crumpled paper, colour fill, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Ch. 01 hero backdrop"
+    },
+    {
+      "file": "web/public/desigo/styles/conceptual-sketch/hero-portrait.png",
+      "size": "1400×2400 (7:12)",
+      "transparent": false,
+      "prompt": "Same notebook-paper hero as a tall portrait: horizon sketch in the lowest fifth, one khejri tree, faint dot grid, empty centre, single-weight hand-drawn ink and graphite line drawing on warm notebook paper #F4EFE3, faint light-graphite construction lines, sparing DESIGO green #1E7A68 fountain-pen accents, light hatching only, engineer's sketchbook and patent-drawing clarity, generous white space, no text, no watermark, no logo, no letters",
+      "negative": "numbers, handwriting, tape, stains, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Mobile hero"
+    },
+    {
+      "file": "web/public/desigo/styles/conceptual-sketch/worlds/master-26.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Botanical study page in forest-green ink #1F5C45: generic leaf and stem sketches and a forest-canopy cross-section drawing arranged around a large empty centre, single-weight hand-drawn ink and graphite line drawing on warm notebook paper #F4EFE3, faint light-graphite construction lines, sparing DESIGO green #1E7A68 fountain-pen accents, light hatching only, engineer's sketchbook and patent-drawing clarity, generous white space, no text, no watermark, no logo, no letters",
+      "negative": "named herb labels, botanical captions, colour wash, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Ch. 08 / /milk/master-26"
+    },
+    {
+      "file": "web/public/desigo/styles/conceptual-sketch/worlds/root-14.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Soil-section study in red ink #B3202A: topsoil layers, fine root lines and a dotted looping grazing route on a field plan, empty centre, single-weight hand-drawn ink and graphite line drawing on warm notebook paper #F4EFE3, faint light-graphite construction lines, sparing DESIGO green #1E7A68 fountain-pen accents, light hatching only, engineer's sketchbook and patent-drawing clarity, generous white space, no text, no watermark, no logo, no letters",
+      "negative": "map labels, colour wash, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Ch. 08 / /milk/root-14"
+    },
+    {
+      "file": "web/public/desigo/styles/conceptual-sketch/worlds/base-3.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Village street elevation at golden hour drawn in amber ink #C77F0F: mud-plastered houses, a neem tree, long hatched shadows, empty centre, single-weight hand-drawn ink and graphite line drawing on warm notebook paper #F4EFE3, faint light-graphite construction lines, sparing DESIGO green #1E7A68 fountain-pen accents, light hatching only, engineer's sketchbook and patent-drawing clarity, generous white space, no text, no watermark, no logo, no letters",
+      "negative": "people's faces, shop signs, colour wash, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Ch. 08 / /milk/base-3"
+    },
+    {
+      "file": "web/public/desigo/styles/conceptual-sketch/worlds/essential.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Almost blank technical drawing sheet in warm-grey ink #8E7A5C: a thin border frame, centre lines and a few empty dimension arrows, enormous empty centre, single-weight hand-drawn ink and graphite line drawing on warm notebook paper #F4EFE3, faint light-graphite construction lines, sparing DESIGO green #1E7A68 fountain-pen accents, light hatching only, engineer's sketchbook and patent-drawing clarity, generous white space, no text, no watermark, no logo, no letters",
+      "negative": "numbers, dimension figures, title block text, bottle outline, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Ch. 08 / /milk/essential"
+    },
+    {
+      "file": "web/public/desigo/styles/conceptual-sketch/journey/sketchbook-spread.png",
+      "size": "4800×1600 (3:1)",
+      "transparent": true,
+      "prompt": "Long sketchbook spread of seven stations drawn in sequence: a zebu cow with hump and dewlap grazing, a small farm shed with a khejri tree, a steel milk can, a round test card with sixteen dots, a stainless-steel chiller, a small dairy plant, a doorstep at dawn, linked by one continuous flowing line, on transparent background, single-weight hand-drawn ink and graphite line drawing on warm notebook paper #F4EFE3, faint light-graphite construction lines, sparing DESIGO green #1E7A68 fountain-pen accents, light hatching only, engineer's sketchbook and patent-drawing clarity, generous white space, no text, no watermark, no logo, no letters",
+      "negative": "FIG numbers, captions, arrows with text, shading, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Ch. 03 cow → bottle, /trace"
+    },
+    {
+      "file": "web/public/desigo/styles/conceptual-sketch/trace/chalk-flowchart.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Chalk line drawing on a deep forest green blackboard #0B3B32: eight hand-drawn empty boxes connected by one chalk line in a gentle zigzag, a few construction ticks, lots of space, single-weight hand-drawn ink and graphite line drawing on warm notebook paper #F4EFE3, faint light-graphite construction lines, sparing DESIGO green #1E7A68 fountain-pen accents, light hatching only, engineer's sketchbook and patent-drawing clarity, generous white space, no text, no watermark, no logo, no letters",
+      "negative": "writing in boxes, chalk text, equations, smudged clutter, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Ch. 06 traceability backdrop"
+    },
+    {
+      "file": "web/public/desigo/styles/conceptual-sketch/textures/notebook-paper.png",
+      "size": "2400×2400 seamless",
+      "transparent": false,
+      "prompt": "Seamless tileable warm notebook paper #F4EFE3 with a very faint 8 mm dot grid and subtle paper fibre, flat scan lighting, single-weight hand-drawn ink and graphite line drawing on warm notebook paper #F4EFE3, faint light-graphite construction lines, sparing DESIGO green #1E7A68 fountain-pen accents, light hatching only, engineer's sketchbook and patent-drawing clarity, generous white space, no text, no watermark, no logo, no letters",
+      "negative": "lines of handwriting, stains, folds, shadows, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Global paper texture (baked to 256 px tile)"
+    },
+    {
+      "file": "web/public/desigo/styles/conceptual-sketch/ghee/bilona-exploded.png",
+      "size": "1600×2000 (4:5)",
+      "transparent": true,
+      "prompt": "Exploded-view line drawing of a traditional wooden bilona churn: earthen pot, churning staff and rope separated along a vertical axis with thin leader lines, respectful and precise, on transparent background, single-weight hand-drawn ink and graphite line drawing on warm notebook paper #F4EFE3, faint light-graphite construction lines, sparing DESIGO green #1E7A68 fountain-pen accents, light hatching only, engineer's sketchbook and patent-drawing clarity, generous white space, no text, no watermark, no logo, no letters",
+      "negative": "callout text, numbers, people, ghee jar, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Ch. 12 ghee, /ghee"
+    },
+    {
+      "file": "web/public/desigo/styles/conceptual-sketch/heritage/cow-study.png",
+      "size": "1600×2000 (4:5)",
+      "transparent": true,
+      "prompt": "Life-drawing study of a Tharparkar zebu cow, white-grey coat suggested by sparse hatching, hump, dewlap and lyre-shaped horns accurate, three-quarter view facing left, calm and dignified, on transparent background, single-weight hand-drawn ink and graphite line drawing on warm notebook paper #F4EFE3, faint light-graphite construction lines, sparing DESIGO green #1E7A68 fountain-pen accents, light hatching only, engineer's sketchbook and patent-drawing clarity, generous white space, no text, no watermark, no logo, no letters",
+      "negative": "cartoon, exaggerated features, adornment, religious marks, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Ch. 10 heritage"
+    }
+  ]
+}

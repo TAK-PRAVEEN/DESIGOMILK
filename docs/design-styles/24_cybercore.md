@@ -26,7 +26,7 @@ Three reference points:
 **Fits (very narrowly)**
 - **Radical transparency.** "Open the hood" is on-message: DESIGO® records collection, batch, chiller, barrel, plant
   and bottle. A playful "view source" of a demo journey makes the claim *every hand-off is recorded* feel concrete.
-- The QR-per-bottle and RTCOM apps give the brand genuine digital substance to celebrate.
+- The QR identity on every bottle and the recorded hand-offs give the brand genuine digital substance to celebrate.
 - It works as youth social content ("POV: your milk has a log file").
 
 **Fights (almost everywhere)**
@@ -188,7 +188,7 @@ about 30 days.
   must not leak real internal data or formats.
 - The real bottle ID *format* approval (currently "DSG-BTL-000001-3 (sample format)").
 - 360 sequences (the viewer window is the centrepiece) and the wordmark vector.
-- Optional: real (anonymised) screenshots of the RTCOM apps, only if DESIGO® wants them public.
+- Optional: real (anonymised) screenshots of the internal tracking apps, only if DESIGO® explicitly approves them for public use.
 
 ## 10. Performance, accessibility and mobile
 
@@ -213,3 +213,123 @@ is public; trivialising food safety ("System Check" looking like a joke).
 6. The quality "System Check" stays serious: no jokes about adulterants, only the list and pending status.
 7. Brand colours replace the Windows teal/navy, so the nostalgia is quoted, not copied (no Microsoft trade dress).
 8. The style dissolves back into milk-white DESIGO® at the end of every experience.
+
+## 12. Build-ready spec sheet
+
+> Audit 2026-10-03: Section 12 was missing. Added System Milk tokens (muted text and contrast notes newly defined), Pixelify/VT323/Space Mono packages, all 14 components, motion tokens, 10 image prompts. Body: two RTCOM app references reworded to public vocabulary. Fonts already OFL.
+
+### 12.1 Colour system
+| Role | Token | Hex | Use | Contrast note |
+|---|---|---|---|---|
+| Primary | --c-primary | `#1E7A68` | active title bar (DESIGO green instead of navy), default button | 4.3:1 vs bg. Fill only on window body (4.3:1 as text there, so never used as small text); milk on green 4.7:1. |
+| Primary ink | --c-on-primary | `#F7F4EC` | milk title text and labels on green | 4.7:1 on primary. |
+| Secondary | --c-secondary | `#0B3B32` | "desktop" canvas behind windows (brand forest instead of teal #008080) | 10.3:1 vs bg. Desktop icon labels on forest use milk `#F7F4EC` (11.3:1). |
+| Accent | --c-accent | `#7FE0B8` | phosphor: terminal text on `#0E100F`, title-bar gradient end, focus on dark | 1.3:1 vs bg. Phosphor on terminal `#0E100F` 12:1; not used on light. |
+| Background | --c-bg | `#EFE9DC` | window body (brand milk-2): where all reading happens |  |
+| Surface | --c-surface | `#E3DCCB` | button face |  |
+| Text | --c-text | `#171918` | charcoal: text and outer bevel | 14.6:1 on bg · 12.9:1 on surface (≥ 7:1 met) |
+| Muted text | --c-text-muted | `#55584F` | secondary window text, status-bar text (added in audit) | 6.0:1 on bg · 5.3:1 on surface (≥ 4.5:1 met) |
+| Line | --c-line | `#8E8778` | bevel shadow; bevel highlight is milk `#F7F4EC` | Bevel shadow 3:1, structural only. |
+| Success / Pending / Demo | --c-ok / --c-pending / --c-demo | `#1E7A68` / `#E89A1C` / `#E89A1C` | green tick = recorded; amber = pending ("Status: pending approval") and `[DEMO]` prefixes; selection = gold `#C8A96B` | Amber is a fill with charcoal text (7.6:1), never amber text on milk. |
+
+**Variant worlds in this style** (base / deep / light are the brand variant tokens; the right-hand column is how this style stages them):
+
+| Variant | Base | Deep | Light | World in this style |
+|---|---|---|---|---|
+| MASTER 26 (V1+, green cap) | `#1F5C45` | `#0A2A20` | `#D9E8DF` | `MASTER_26.bottle`: forest title bar, Properties tab with code V1+ and descriptors as pending chips; 32×32 file icon with green cap |
+| ROOT 14 (V1, red cap) | `#B3202A` | `#4A0A0F` | `#F3D9D6` | `ROOT_14.bottle`: red title bar; file icon with red cap |
+| BASE 3 (V2, amber cap) | `#E89A1C` | `#5A3304` | `#F8E4C2` | `BASE_3.bottle`: amber title bar (charcoal title text); file icon with amber cap |
+| ESSENTIAL (V3, ivory cap) | `#CDB89A` | `#4D4130` | `#F4EDE2` | `ESSENTIAL.bottle`: ivory title bar, almost-empty properties: "Simple, balanced, honest." |
+
+**Dark-chapter inversion:** Terminal and technology windows: bg → `#0E100F`, text → phosphor `#7FE0B8`, muted → `#8A867C`, line → `#1F2220`, `[DEMO]` prefix in amber. The experience ends by closing every window into milk-white base DESIGO® (`#F7F4EC`, ink `#1E211F`). Mobile drops the desktop: stacked full-width window cards on milk.
+
+### 12.2 Typography
+| Role | Font family | Source (npm @fontsource… / Google Fonts) | Weights / axes | Size (clamp) | Line-height | Tracking | Case |
+|---|---|---|---|---|---|---|---|
+| Display / hero | Major Mono Display | `@fontsource/major-mono-display` (Google Fonts: Major Mono Display) | 400 | clamp(2.5rem, 7vw, 7rem) | 1.0 | 0.04em | lower/upper mix as designed; single words ("SOURCE") only |
+| Headline H1–H2 | Inter Tight (variable) | `@fontsource-variable/inter-tight` (Google Fonts: Inter Tight) | wght 600–700 | H1 clamp(2rem, 4vw, 3.5rem) · H2 clamp(1.4rem, 2.4vw, 2rem) | 1.1 / 1.2 | -0.01em | Sentence |
+| Body | Inter Tight (variable) | `@fontsource-variable/inter-tight` (Google Fonts: Inter Tight) | wght 400–500 | 0.9375rem (15 px) | 1.6 (24 px) | 0 | Sentence |
+| Label / UI | Pixelify Sans (variable) | `@fontsource-variable/pixelify-sans` (Google Fonts: Pixelify Sans) | wght 400–700 (use 500) | 16 px (integer, title bars and icon labels) | 1.0 | 0 | File_Names.bottle / Title Case |
+| Data / mono | Space Mono | `@fontsource/space-mono` (Google Fonts: Space Mono) | 400, 700 static | 0.8125rem | 1.45 | 0 | hex, IDs, JSON-like views |
+| Devanagari (optional) | Mukta | `@fontsource/mukta` (Google Fonts: Mukta) | 200–800 static (use 400, 600) | matches body | 1.6 | 0 | n/a |
+| Terminal log (style-specific) | VT323 | `@fontsource/vt323` (Google Fonts: VT323) | 400 | 20 px (integer) | 1.2 | 0 | log lines, `[DEMO]` prefix |
+
+Licence: Major Mono Display, Inter Tight, Pixelify Sans, Space Mono, VT323 and Mukta are SIL OFL 1.1. W95FA-style bitmap fonts are excluded (not licensed for commercial web).
+Pairing: Pixelify Sans and VT323 quote the 1998 desktop only in title bars and logs; Inter Tight carries every readable sentence; Space Mono shows the data.
+
+### 12.3 Layout & surfaces
+- **Grid:** Desktop canvas (forest) with windows snapped to a 12-column grid at 8 px increments; windows draggable on desktop; max-width 1440 px; mobile = stacked full-width cards. Bounded scope: `/trace/source` + optional ch. 13.
+- **Spacing:** 8-px base: 8 · 16 · 24 · 32 · 48 · 64.
+- **Radius:** 0 everywhere (sm 0 · md 0 · lg 0).
+- **Border:** 2 px CSS bevels: outset = top/left `#F7F4EC`, bottom/right `#171918` + inner `#8E8778`; inset (pressed / fields) reversed.
+- **Shadow / elevation:** No soft shadows; z-order by window focus (active title bar green → `#7FE0B8` gradient, inactive `#8E8778`).
+- **Texture / overlay:** Data rain of public verbs and demo IDs at 20% (background only, paused off-screen); no glitter, no holographic stickers, no scan-lines on the bottle.
+
+### 12.4 Components
+All interactive components: `focus-visible` = 1 px dotted charcoal focus rectangle inside the control (Win98 idiom) + 2 px forest `#0B3B32` outer outline; disabled = 40% opacity, `cursor: not-allowed`, `aria-disabled`; loading = label kept, `aria-busy="true"`.
+- **Primary button**: Default push button: button face `#E3DCCB` with outset bevel, charcoal Pixelify 16 px label; the default action carries a 1 px charcoal outer rim and a green `#1E7A68` left marker. 32 px tall, min 96 px wide. Hover: face lightens to `#EFE9DC`. Active: inset bevel, label shifts 1 px down-right. Disabled: embossed grey label (`#8E8778` + milk 1 px offset). Loading: label kept + a real progress segment bar beside it (never fake).
+- **Secondary button**: Same push button without the default rim; Hover / active / disabled identical.
+- **Text / arrow link**: Inter Tight 500 forest with 1 px underline; hover: gold `#C8A96B` selection background behind the text; disabled muted.
+- **Icon button** (incl. menu): Title-bar controls 22×20 px (minimise, close) and 32×32 desktop icons; outset bevel; pressed = inset. Menu = "Start" button in the taskbar opening a Start menu of nav links. `aria-label` always.
+- **Navigation bar** (desktop + mobile menu) + how the DESIGO® black write/un-write logo loop sits in it: The taskbar: 40 px bar at the bottom of the desktop (top on mobile cards view), Start button with nav as menu items, open windows as buttons, sound toggle (off by default). On base-style pages the normal DESIGO® bar is used. Mobile: Start menu becomes a full-width list. Logo: the DESIGO® wordmark (approved vector, never redrawn or recoloured) sits at the left of the bar, 112 px wide desktop / 92 px mobile, running the black write / un-write infinite loop of `DesigoLogo` (strokes draw 0–1.2 s, hold to 3.0 s, un-draw 3.0–4.2 s, pause to 4.6 s). Single colour: charcoal `#171918` on light chapters, milk-white `#F7F4EC` on dark chapters; the colour switches with the chapter theme and never animates. No ring, glow, hover trigger or style effect is applied to it. Reduced motion: static, fully written wordmark.
+- **Cursor** (states: default · hover · ROTATE · EXPLORE · ENTER · VIEW · TRACE); touch fallback: Pixel sprites (2× scaled): default = classic arrow · hover = pointing hand · ROTATE = four-way move cursor over the 360 viewer · EXPLORE = arrow with a small folder · ENTER = pointing hand with ↵ · VIEW = magnifier · TRACE = arrow with a dotted path. Busy (only during real loading) = hourglass drawn as a milk bottle filling up. Touch: native, no sprites.
+- **Card / panel / info block**: Window: title bar (Pixelify 16 px, green active / grey inactive), 2 px outset bevel, milk-2 body with Inter Tight 15/24, status bar at the bottom in muted text. Real `<dialog>`/`role="dialog"`, focus trap, Esc closes, arrow keys move while the title bar is focused. Opens 120 ms scale .96 → 1 with outline zoom.
+- **Badge / tag** (incl. "pending verification" and "DEMO · not live data"): Inset-bevel field label. Verified: green ✓ in a checkbox. Pending verification: Properties field "Status: pending approval" on an amber fill with charcoal text + earth dotted underline on the claim. DEMO: amber `[DEMO]` prefix on every log line and an amber title-bar badge "DEMO · NOT LIVE DATA"; address bar reads `C:\DEMO\illustrative-journey`. Static.
+- **Input + form field** (Trace-your-milk bottle ID): Terminal window: prompt `trace ` then an inset-bevel field (VT323 20 px phosphor on `#0E100F`), placeholder `DSG-BTL-000001-3 (sample format)`, Enter runs. Focus: dotted focus rectangle + forest outline. Error: `Error: ID not recognised (demo only).` line (no alarming dialogs). Loading: real progress; output `role="log"` `aria-live="polite"`, lines ≥ 300 ms apart.
+- **Divider / ornament**: Etched separator (1 px `#8E8778` + 1 px `#F7F4EC` below) inside windows; between chapters the windows minimise into the taskbar.
+- **Section header** (chapter number + title pattern): Window title "03_cow-to-bottle.txt"-style file name in Pixelify + Inter Tight H2 inside the window body; on base-style chapters the base header is used.
+- **Product info block** (variant name, code, price-pending, size, descriptors): `Properties` dialog for `MASTER_26.bottle`: tabs General / Descriptors; fields Name (Inter Tight), Code (Space Mono), Size and Price with "Status: pending approval", descriptors as a checklist each with its status. Commerce actions link out to the clean base /reserve page (never in a dialog).
+- **Bottle stage** (how Bottle / Bottle360Viewer is framed: plinth, glow, shadow, background): "Bottle Viewer.exe" window: milk body, untouched render with contact shadow, float ±10 px / 6 s, tilt ±8°; real frame-loading progress bar, slider "Rotate: 0°–355°", ◀ ▶ buttons (5° = 1 of 72 frames) and an "Auto-rotate" checkbox mapped to Bottle360Viewer props. Before 360 frames ±25° + sheen.
+- **Trace node / timeline step**: File Explorer tree: Farm.dir → Collection.log → Batch.log → Chiller.tmp → Barrel.dat → Plant.sys → Bottle.qr → You.home; selected node = gold selection; detail pane shows `traceNodes[]` public text; tree is a real `role="tree"` with arrow-key navigation.
+
+### 12.5 Iconography & illustration
+- **Icons:** 32×32 pixel desktop icons (2× for retina), 1 px charcoal outline, palette-only fills: Farm.dir, Batch.log, Chiller.tmp, Bottle.qr (bottle glyph with variant cap colour), You.home.
+- **Illustration:** Wireframe visuals in phosphor on forest; the India / Rajasthan outline must come from Survey-of-India-compliant vector data, never generated.
+- **Photo treatment:** Photos appear inside window bodies unfiltered (no dithering, no CRT effects); the bottle and milk are never retro-filtered.
+
+### 12.6 Motion tokens
+| Token | Value | Use |
+|---|---|---|
+| `--ease-out` | `cubic-bezier(.16,1,.3,1)` | window open |
+| `--ease-inout` | `cubic-bezier(.65,0,.35,1)` | minimise into taskbar |
+| `--dur-micro` | `120ms` | window open (scale .96 → 1), button press |
+| `--dur-reveal` | `300ms` | terminal line interval (minimum) |
+| `--dur-scene` | `400ms` | minimise trail, closing sequence per window |
+| `--float` | `translateY ±10px / 6000ms` | bottle float inside the viewer window |
+
+- **Signature:** windows opening one per trace node with scroll; terminal boot sequence `> ORIGIN ... ok`; windows closing one by one into milk-white DESIGO® at the final CTA.
+- **Rules:** no fake progress bars, no auto pop-ups, no fake warnings; one user-triggered pop-up at a time.
+- **Reduced motion:** windows appear open without zoom trails, data rain off, terminal prints all lines at once, logo static.
+
+### 12.7 AI image generation prompts
+House rules: no text/letters/logos/watermarks in images; generated images are illustration, texture or backdrop only; never generate the bottle or ghee jar; zebu cows only, shown with respect; append the style's tail prompt to every prompt.
+
+**Tail prompt (append to every prompt below):** *late-1990s screen-culture aesthetic quoted with restraint, clean vector wireframes and flat computer-desktop colour, deep forest green #0B3B32 desktop, phosphor mint #7FE0B8 lines, milk #EFE9DC and charcoal #171918, crisp, calm, no glitter, no holographic stickers, no malware tropes, no text, no watermark, no logo, no letters*
+
+**Base negative prompt (append to every negative below):** *text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces*
+
+| # | File path (web/public/desigo/styles/cybercore/...) | Size / ratio | Transparent? | Prompt | Negative prompt | Used in |
+|---|---|---|---|---|---|---|
+| 1 | `desktop-landscape.png` | 3200×2000 (16:10) | no | Calm desktop wallpaper: a slowly curving phosphor-mint wireframe terrain mesh of low dunes on deep forest green, horizon in the lower third, large empty upper area for windows | windows, icons, cursor, maps of countries, Matrix katakana, glitch (+ base negative) | `/trace/source` desktop, ch. 01 bounded hero |
+| 2 | `desktop-portrait.png` | 1400×2400 (7:12) | no | Same wireframe dune terrain wallpaper as a tall portrait, mesh in the lowest quarter, empty above | windows, icons, map outlines (+ base negative) | Mobile backdrop |
+| 3 | `wallpapers/master-26.png` | 2400×1500 (16:10) | no | Wireframe mesh of a forest canopy in green #1F5C45 lines on deep green #0A2A20, minimal, empty centre | windows, text, neon (+ base negative) | MASTER_26.bottle window background |
+| 4 | `wallpapers/root-14.png` | 2400×1500 (16:10) | no | Wireframe mesh of layered earth strata in crimson #B3202A lines on oxblood #4A0A0F, minimal, empty centre | windows, text, glitch (+ base negative) | ROOT_14.bottle window background |
+| 5 | `wallpapers/base-3.png` | 2400×1500 (16:10) | no | Wireframe mesh of dunes at sunset in amber #E89A1C lines on umber #5A3304, a low wireframe sun disc behind the centre | windows, text, glitch (+ base negative) | BASE_3.bottle window background |
+| 6 | `wallpapers/essential.png` | 2400×1500 (16:10) | no | Almost empty ivory #F4EDE2 surface with a very faint warm-grey #4D4130 square grid, calm | mesh clutter, text (+ base negative) | ESSENTIAL.bottle window background |
+| 7 | `trace/node-network.png` | 3000×2000 (3:2) | yes | Abstract wireframe network of eight small nodes connected in a single chain on a faint isometric grid, phosphor mint lines, transparent background | country outlines, map labels, file names (+ base negative) | Ch. 06 Explorer side panel, ch. 13 |
+| 8 | `screensaver/milk-ribbons.png` | 3000×2000 (3:2) | yes | Several slow elegant milk-white ribbons looping in space like a classic screensaver, smooth and glossy, isolated on transparent background | rainbow trails, neon, polygons with colour cycling (+ base negative) | Ch. 09 screensaver (MilkFlow) |
+| 9 | `textures/desktop-dither.png` | 512×512 seamless | no | Seamless tileable very subtle two-tone ordered dither pattern in deep forest green #0B3B32 and #0F4A3F | noise, glitter, objects (+ base negative) | Desktop pattern |
+| 10 | `technology/wireframe-globe.png` | 2400×2400 (1:1) | yes | A clean rotating-style wireframe sphere of latitude and longitude lines in phosphor mint, no continents drawn, transparent background | continents, country borders, text (+ base negative) | Ch. 11 terminal boot backdrop |
+
+The India / Rajasthan wireframe map (breed homelands) is built from Survey-of-India-compliant vector boundaries in code; never generate maps. Desktop icons and cursors are hand-drawn pixel sprites.
+
+### 12.8 Prototype acceptance checklist
+- [ ] Tokens from `specs/24_cybercore.json` applied; no off-palette colours
+- [ ] Fonts self-hosted; correct weights load
+- [ ] All 12.4 components built with all states
+- [ ] Hero + bottle-story + one product world + trace chapter built in this style (the comparison set)
+- [ ] Mobile 360 px pass; reduced-motion pass; contrast checked
+- [ ] Claims rules respected (pending underline, no blocked claims, DEMO labels)
+- [ ] Screenshots: desktop 1440×900 ×4 + mobile 390×844 ×2 saved to docs/media/styles/cybercore/
+- [ ] Bounded to `/trace/source` (+ optional ch. 13); never on /reserve, farm, breeds, heritage or ghee
+- [ ] No fake warnings, pop-ups or progress; every data surface shows DEMO and public vocabulary only

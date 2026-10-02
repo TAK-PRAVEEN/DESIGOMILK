@@ -24,7 +24,7 @@ Three reference points:
 
 **Fits (narrowly)**
 - DESIGO® runs a **real night operation**: chilling, plant processing and pre-dawn delivery, plus a technology
-  layer (RTCOM: QR identities, apps, temperature logs). A "night shift" story can be told in neon light.
+  layer (QR bottle identities and recorded cold-chain temperatures, in public vocabulary only). A "night shift" story can be told in neon light.
 - Glowing data paths are already scripted in chapters 06 and 11. Cyberpunk is the extreme end of that.
 - It can make a youth campaign memorable.
 
@@ -203,3 +203,124 @@ milk; gamer-ad look; photosensitive-seizure risk.
 6. Glitch never touches data, IDs, prices or the DEMO label, since broken-looking data destroys trust.
 7. No dystopian copy: no "megacorp", "system override" or "hack".
 8. Time-box any campaign use. Night-shift imagery must be real DESIGO® operations, not CGI cities presented as real.
+
+## 12. Build-ready spec sheet
+
+> Audit 2026-10-03: Section 12 was missing. Added Sodium & Signal tokens, Chakra Petch/Rajdhani/Share Tech Mono packages, all 14 components (soft dot replaces crosshair cursor), motion tokens, 10 image prompts. Body: RTCOM internals reference reworded to public vocabulary. Fonts already OFL.
+
+### 12.1 Colour system
+| Role | Token | Hex | Use | Contrast note |
+|---|---|---|---|---|
+| Primary | --c-primary | `#7FE0B8` | brand signal as the primary neon: CTAs, active data, trace streams | 12.6:1 vs bg. AAA; neon glow only on display type. |
+| Primary ink | --c-on-primary | `#07090A` | night label on signal | 12.6:1 on primary. AAA. |
+| Secondary | --c-secondary | `#F2A93A` | sodium-lamp amber: warm light, DEMO stamp, pending | 10.0:1 vs bg. AAA. |
+| Accent | --c-accent | `#B8FFE3` | neon core highlight: focus ring core, neon text-shadow inner stop | 17.5:1 vs bg. Focus ring 2 px `#B8FFE3` + 6 px `#7FE0B8` glow. |
+| Background | --c-bg | `#07090A` | base night |  |
+| Surface | --c-surface | `#121615` | asphalt: panels, chamfered tiles |  |
+| Text | --c-text | `#F1EDE3` | milk text (and the milk itself) | 17.1:1 on bg · 15.6:1 on surface (≥ 7:1 met) |
+| Muted text | --c-text-muted | `#8C938F` | dim secondary text | 6.4:1 on bg · 5.8:1 on surface (≥ 4.5:1 met) |
+| Line | --c-line | `#1B2A4A` | Jodhpur indigo hairlines, HUD brackets, haze edges | Decorative (1.4:1); HUD hairlines never carry meaning. |
+| Success / Pending / Demo | --c-ok / --c-pending / --c-demo | `#7FE0B8` / `#F2A93A` / `#F2A93A` | signal = recorded; sodium outline chip + dotted underline = pending; sodium filled stamp = DEMO; rose `#D8424B` reserved for errors | DEMO stamp text `#07090A` on sodium is high contrast; glitch never touches these. |
+
+**Variant worlds in this style** (base / deep / light are the brand variant tokens; the right-hand column is how this style stages them):
+
+| Variant | Base | Deep | Light | World in this style |
+|---|---|---|---|---|
+| MASTER 26 (V1+, green cap) | `#1F5C45` | `#0A2A20` | `#D9E8DF` | forest-green neon canopy: green signage light through haze, bottle on a wet reflective floor |
+| ROOT 14 (V1, red cap) | `#B3202A` | `#4A0A0F` | `#F3D9D6` | red sodium rim from a street sign (a sliver of `#D8424B` only), deep indigo `#1B2A4A` haze |
+| BASE 3 (V2, amber cap) | `#E89A1C` | `#5A3304` | `#F8E4C2` | full sodium-amber `#F2A93A` street-lamp pool: "Indian street at 4 a.m." |
+| ESSENTIAL (V3, ivory cap) | `#CDB89A` | `#4D4130` | `#F4EDE2` | dawn breaking: neon fades into a pale sky, the bottle in natural light ("after the night") |
+
+**Dark-chapter inversion:** Dark-first. The narrative inverts to **dawn** at the end of every use: bg `#07090A` → `#F7F4EC`, surface → `#EFE9DC`, text → `#1E211F`, muted → `#55584F`, primary → `#1E7A68`, neon glows switch off (600 ms fade). Farm, breeds, heritage and ghee chapters always use the base brand light tokens.
+
+### 12.2 Typography
+| Role | Font family | Source (npm @fontsource… / Google Fonts) | Weights / axes | Size (clamp) | Line-height | Tracking | Case |
+|---|---|---|---|---|---|---|---|
+| Display / hero | Chakra Petch | `@fontsource/chakra-petch` (Google Fonts: Chakra Petch) | 300–700 static (use 500, 600) | clamp(3rem, 8vw, 8rem) | 0.95 | 0.01em | UPPER for neon lines, sentence for statements |
+| Headline H1–H2 | Chakra Petch | `@fontsource/chakra-petch` (Google Fonts: Chakra Petch) | 500 | H1 clamp(2.4rem, 4.6vw, 4.5rem) · H2 clamp(1.6rem, 2.8vw, 2.6rem) | 1.05 / 1.15 | 0 | Sentence |
+| Body | Inter (variable) | `@fontsource-variable/inter` (Google Fonts: Inter) | opsz auto, wght 420 on night | 1rem | 1.625 (26 px) | +0.005em | Sentence |
+| Label / UI | Rajdhani | `@fontsource/rajdhani` (Google Fonts: Rajdhani) | 300–700 static (use 600) | 0.8125rem | 1.2 | +0.12em | UPPER |
+| Data / mono | Share Tech Mono | `@fontsource/share-tech-mono` (Google Fonts: Share Tech Mono) | 400 | 0.8125rem | 1.4 | 0.02em | UPPER HUD labels, IDs as issued |
+| Devanagari (optional) | Rajdhani | `@fontsource/rajdhani` (Google Fonts: Rajdhani) | Latin + Devanagari, static | ambient neon signage only (e.g. "दूध"), clamp(2rem, 5vw, 5rem) | 1.0 | 0 | n/a |
+
+Licence: Chakra Petch (Cadson Demak), Rajdhani (Indian Type Foundry), Inter and Share Tech Mono are all SIL OFL 1.1.
+Pairing: Chakra Petch is a squared but refined techno face; Rajdhani gives condensed labels with a native Devanagari partner for ambient signage; Inter keeps body legible on night.
+
+### 12.3 Layout & surfaces
+- **Grid:** 12 columns, 16 px gutter, 5vw margin, max-width 1440 px, plus HUD overlay grid (corner brackets, edge ticks every 64 px). Recommended scope: ch. 11 "4:00 AM" + `/4am` campaign + /technology.
+- **Spacing:** 8 px vertical rhythm: 8 · 16 · 24 · 32 · 48 · 64 · 96 · 128.
+- **Radius:** 0 (sm 0 · md 0 · lg 0); panels use chamfered corners via `clip-path` (8 px small, 12 px large).
+- **Border:** 1 px `#1B2A4A` hairlines; active panels 1 px signal at 60% with outer glow.
+- **Shadow / elevation:** Glow instead of shadow: `0 0 24px rgba(127,224,184,.25)` on active elements; neon text-shadow `0 0 2px #B8FFE3, 0 0 8px #7FE0B8, 0 0 24px rgba(127,224,184,.45)` on display type only.
+- **Texture / overlay:** Indigo haze gradients, two rain-streak WebM loops (≤ 600 KB, desktop only), 2 px scan-lines at 4% on HUD panels only (never over the bottle or photos).
+
+### 12.4 Components
+All interactive components: `focus-visible` = 2 px `#B8FFE3` ring, offset 2 px, with a 6 px `#7FE0B8` glow; disabled = 40% opacity, `cursor: not-allowed`, `aria-disabled`; loading = label kept, `aria-busy="true"`.
+- **Primary button**: Chamfered (8 px) signal `#7FE0B8` fill, `#07090A` Rajdhani 600 caps label + arrow, 48 px, padding 14×24. Hover: outer glow appears, arrow +6 px (200 ms). Active: fill `#6BCCA4`. Disabled: asphalt fill, dim label, no glow. Loading: a data-stream dash runs along the bottom edge (900 ms loop).
+- **Secondary button**: Chamfered outline: 1 px signal border, signal label on transparent; hover fills signal at 12% with glowing border; active 20%; disabled dim border.
+- **Text / arrow link**: Inter 500 signal with a 1 px neon underline; hover underline glows (200 ms), arrow +6 px; disabled dim.
+- **Icon button** (incl. menu): 44 px chamfered square, 20 px 1.5 px neon line icon; menu = three lines collapsing to × via signal cut (300 ms). Hover: glow. `aria-label` always.
+- **Navigation bar** (desktop + mobile menu) + how the DESIGO® black write/un-write logo loop sits in it: 56 px night bar with a 1 px indigo bottom line and corner brackets at both ends, Rajdhani caps links in `#8C938F`, active in milk with a signal underline. Mobile: full-screen night sheet, Chakra Petch 32 px links, opens with a 6-band signal-cut wipe (300 ms; fade in reduced motion). Logo: the DESIGO® wordmark (approved vector, never redrawn or recoloured) sits at the left of the bar, 112 px wide desktop / 92 px mobile, running the black write / un-write infinite loop of `DesigoLogo` (strokes draw 0–1.2 s, hold to 3.0 s, un-draw 3.0–4.2 s, pause to 4.6 s). Single colour: charcoal `#171918` on light chapters, milk-white `#F7F4EC` on dark chapters; the colour switches with the chapter theme and never animates. No ring, glow, hover trigger or style effect is applied to it. Reduced motion: static, fully written wordmark.
+- **Cursor** (states: default · hover · ROTATE · EXPLORE · ENTER · VIEW · TRACE); touch fallback: Recommended (non-targeting) set: default = 10 px soft signal dot · hover = 32 px soft ring · ROTATE = bracket ring rotating slowly · EXPLORE = ring with → · ENTER = ring with "ENTER" (mono 9 px) · VIEW = bracket frame with "VIEW" · TRACE = ring with a data-stream arc. No crosshairs or "SCAN" in production (surveillance semantics, guardrail 5). Touch: native.
+- **Card / panel / info block**: Chamfered asphalt panel (12 px cut), 1 px indigo border, HUD corner brackets, 24 px padding, scan-lines at 4%. Hover (clickable): border signal 60% + glow (200 ms).
+- **Badge / tag** (incl. "pending verification" and "DEMO · not live data"): Rajdhani 600 caps 12 px in chamfered chips, 22 px. Verified: signal outline. Pending verification: sodium `#F2A93A` outline chip "PENDING VERIFICATION" + sodium dotted underline on the claim. DEMO: filled sodium stamp "DEMO · NOT LIVE DATA" in night text; HUD label variant "ILLUSTRATIVE JOURNEY — NOT LIVE DATA". Never glitched; static.
+- **Input + form field** (Trace-your-milk bottle ID): Terminal input: prompt glyph "BOTTLE ID ▸", chamfered asphalt field 56 px, Share Tech Mono 18 px, placeholder `DSG-BTL-000001-3 (sample format)`. Focus: ring token. Error: rose `#D8424B` border + message text. Loading: step-by-step reveal lines (≥ 300 ms apart) each prefixed DEMO.
+- **Divider / ornament**: HUD edge ticks / corner brackets, or a thin data-stream line; `aria-hidden`.
+- **Section header** (chapter number + title pattern): Mono chapter code "11 // 4:00 AM" + Chakra Petch title with one-time neon flicker-on (0 → .6 → .2 → 1 over 420 ms, never looping).
+- **Product info block** (variant name, code, price-pending, size, descriptors): Chamfered panel: Chakra Petch variant name, mono code, size and price in Inter with sodium dotted pending underline + chip, descriptors as chips with status. No glitch, no neon on prices.
+- **Bottle stage** (how Bottle / Bottle360Viewer is framed: plinth, glow, shadow, background): White-key-lit render (the milk stays milk-white) on a wet reflective floor; neon only reflects as a thin signal rim on one glass edge and amber on the other (masked to alpha). Float ±10 px / 6 s, tilt ±8°; before 360 frames ±25° + sheen; with frames, HUD brackets, frame counter and angle readout in Share Tech Mono.
+- **Trace node / timeline step**: Chamfered node on an indigo city map; data particles stream along the path with scroll; active node = signal border + "current" label; demo values in mono with DEMO stamp; ordered-list equivalent.
+
+### 12.5 Iconography & illustration
+- **Icons:** 1.5 px neon line icons, 20 px, square caps; the seven verbs as modules in chamfered (8 px) or hexagonal frames.
+- **Illustration:** Abstract night city layers (haze, signage blocks without legible text), data streams; never neon on cows, milk or the bottle.
+- **Photo treatment:** Real night / pre-dawn DESIGO® operations only (consented, no customer faces), graded sodium amber + indigo, faces never neon-tinted.
+
+### 12.6 Motion tokens
+| Token | Value | Use |
+|---|---|---|
+| `--ease-out` | `cubic-bezier(.16,1,.3,1)` | UI 160–300 ms |
+| `--ease-inout` | `cubic-bezier(.65,0,.35,1)` | scenes |
+| `--dur-micro` | `200ms` | hover glow |
+| `--dur-reveal` | `420ms` | neon flicker-on (once) |
+| `--dur-scene` | `900ms` | scene transitions |
+| `--dur-cut` | `300ms` | 6-band signal-cut wipe |
+| `--glitch` | `120ms, max 1 per chapter` | RGB split on chapter entry only |
+| `--float` | `translateY ±10px / 6000ms` | bottle float |
+
+- **Signature:** "4:00 AM" delivery route lighting the seven verb modules, resolving into sunrise (`DawnTransition`).
+- **Scroll:** parallax city layers (haze 0.2×, signage 0.5×, rain 1.1×); data streams follow scroll.
+- **Reduced motion / photosensitivity:** no flicker, no glitch, no rain video (poster image), static haze; no repeating flicker ever; logo static.
+
+### 12.7 AI image generation prompts
+House rules: no text/letters/logos/watermarks in images; generated images are illustration, texture or backdrop only; never generate the bottle or ghee jar; zebu cows only, shown with respect; append the style's tail prompt to every prompt.
+
+**Tail prompt (append to every prompt below):** *restrained cinematic night in the spirit of Blade Runner 2049, sodium-lamp amber #F2A93A and Jodhpur indigo #1B2A4A haze, sparing mint signal green #7FE0B8, deep night #07090A, light rain and mist, wet reflections, calm not dystopian, no magenta, no cyan, no readable signage, no text, no watermark, no logo, no letters*
+
+**Base negative prompt (append to every negative below):** *text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces*
+
+| # | File path (web/public/desigo/styles/cyberpunk/...) | Size / ratio | Transparent? | Prompt | Negative prompt | Used in |
+|---|---|---|---|---|---|---|
+| 1 | `hero-landscape.png` | 3200×2000 (16:10) | no | The blue-washed old city of Jodhpur at 4 a.m. under sodium street lamps, narrow lane, indigo haze and light rain, wet stone reflections, blank glowing sign shapes without letters, empty lane centre | magenta, cyan, readable signs, people, cars, weapons, drones, dystopian ruins (+ base negative) | Ch. 11 / `/4am` hero |
+| 2 | `hero-portrait.png` | 1400×2400 (7:12) | no | Same Jodhpur 4 a.m. lane as a tall portrait, sodium lamp at top, wet stone, empty centre | magenta, readable signs, people (+ base negative) | Mobile hero |
+| 3 | `worlds/master-26.png` | 3200×2000 (16:10) | no | Forest-green signage light glowing through night haze above a wet reflective floor, abstract canopy-like light shapes, empty centre | neon green overload, text, plants (+ base negative) | Night world MASTER 26 |
+| 4 | `worlds/root-14.png` | 3200×2000 (16:10) | no | Deep indigo haze with a single thin red sodium rim of light from a blank sign at the right edge, wet floor, empty centre | red flood light, text, blood-like tones (+ base negative) | Night world ROOT 14 |
+| 5 | `worlds/base-3.png` | 3200×2000 (16:10) | no | A warm sodium-amber street-lamp pool on a quiet wet lane at 4 a.m., soft mist, empty centre of the pool | people, vehicles, text (+ base negative) | Night world BASE 3 |
+| 6 | `worlds/essential.png` | 3200×2000 (16:10) | no | Dawn breaking over Jodhpur rooftops, the last city lights fading into a pale ivory sky #F4EDE2, calm, empty centre | neon, text, fort landmark close-up (+ base negative) | Night world ESSENTIAL, DawnTransition |
+| 7 | `technology/route-4am.png` | 4000×1600 (5:2) | no | Abstract top-down night map of old-city lanes in indigo with one thin glowing signal-green route connecting seven soft nodes from the edge of town to a doorstep | real map labels, street names, HUD text, targeting reticles (+ base negative) | Ch. 11 "4:00 AM", /technology, trace city map |
+| 8 | `textures/rain-streaks.png` | 2048×2048 (1:1) | yes | Fine diagonal light rain streaks catching amber light, isolated on transparent background, sparse | drops on lens, heavy storm (+ base negative) | Poster frame for RainLoop, reduced-motion fallback |
+| 9 | `textures/indigo-haze.png` | 3000×1500 (2:1) | yes | Soft band of deep indigo #1B2A4A night haze with faint amber glow at the bottom edge, isolated on transparent background | shapes, clouds with faces (+ base negative) | HazeLayers |
+| 10 | `milk/ribbon-through-haze.png` | 3000×1500 (2:1) | yes | A single clean white milk ribbon curving through dark space lit by neutral white light, a faint amber reflection on one edge, isolated on transparent background | coloured milk, neon-tinted milk, glass (+ base negative) | Ch. 09 milk as material |
+
+Night-shift imagery of the plant, cold room and riders must be real DESIGO® photographs; generated city plates are abstract environment only. Devanagari neon signage is set in code (Rajdhani), never generated.
+
+### 12.8 Prototype acceptance checklist
+- [ ] Tokens from `specs/21_cyberpunk.json` applied; no off-palette colours
+- [ ] Fonts self-hosted; correct weights load
+- [ ] All 12.4 components built with all states
+- [ ] Hero + bottle-story + one product world + trace chapter built in this style (the comparison set)
+- [ ] Mobile 360 px pass; reduced-motion pass; contrast checked
+- [ ] Claims rules respected (pending underline, no blocked claims, DEMO labels)
+- [ ] Screenshots: desktop 1440×900 ×4 + mobile 390×844 ×2 saved to docs/media/styles/cyberpunk/
+- [ ] Milk, bottle and cows lit with natural white light; no cyberpunk on farm, breeds, heritage or ghee
+- [ ] Photosensitivity: no repeating flicker; glitch ≤ 1 per chapter, ≤ 120 ms, never on data, IDs, prices or DEMO; every use ends at dawn

@@ -1,0 +1,237 @@
+{
+  "id": 15,
+  "slug": "luxury-typography",
+  "name": "Luxury Typography",
+  "priority": false,
+  "fit": 5,
+  "colors": {
+    "primary": "#171918",
+    "onPrimary": "#F7F4EC",
+    "secondary": "#0B3B32",
+    "accent": "#1E7A68",
+    "bg": "#F7F4EC",
+    "surface": "#EFE9DC",
+    "text": "#1E211F",
+    "textMuted": "#5E625C",
+    "line": "rgba(23,25,24,.14)",
+    "ok": "#1E7A68",
+    "pending": "#7A5B37",
+    "demo": "#171918"
+  },
+  "colorsExtra": {
+    "gold": "#C8A96B",
+    "signal": "#7FE0B8"
+  },
+  "variants": {
+    "master-26": {
+      "base": "#1F5C45",
+      "deep": "#0A2A20",
+      "light": "#D9E8DF"
+    },
+    "root-14": {
+      "base": "#B3202A",
+      "deep": "#4A0A0F",
+      "light": "#F3D9D6"
+    },
+    "base-3": {
+      "base": "#E89A1C",
+      "deep": "#5A3304",
+      "light": "#F8E4C2"
+    },
+    "essential": {
+      "base": "#CDB89A",
+      "deep": "#4D4130",
+      "light": "#F4EDE2"
+    }
+  },
+  "fonts": {
+    "display": {
+      "family": "Bodoni Moda",
+      "package": "@fontsource-variable/bodoni-moda",
+      "weights": [
+        400,
+        500,
+        700
+      ]
+    },
+    "body": {
+      "family": "Inter Tight",
+      "package": "@fontsource-variable/inter-tight",
+      "weights": [
+        400
+      ]
+    },
+    "label": {
+      "family": "Inter Tight",
+      "package": "@fontsource-variable/inter-tight",
+      "weights": [
+        200,
+        500
+      ]
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "package": "@fontsource-variable/jetbrains-mono",
+      "weights": [
+        400
+      ]
+    },
+    "devanagari": {
+      "family": "Tiro Devanagari Hindi",
+      "package": "@fontsource/tiro-devanagari-hindi",
+      "weights": [
+        400
+      ]
+    },
+    "editorial": {
+      "family": "Fraunces",
+      "package": "@fontsource-variable/fraunces",
+      "weights": [
+        300,
+        400,
+        "300 italic"
+      ]
+    }
+  },
+  "type": {
+    "numeral": "clamp(12rem, 38vw, 34rem)",
+    "display": "clamp(3rem, 8vw, 9rem)",
+    "hero": "clamp(9rem, 14vw, 17rem)",
+    "h1": "clamp(1.8rem, 3.4vw, 3.6rem)",
+    "h2": "clamp(1.5rem, 2.4vw, 2.4rem)",
+    "body": "1rem/1.65",
+    "label": ".72rem/+0.22em uppercase"
+  },
+  "radius": {
+    "sm": "0",
+    "md": "0",
+    "lg": "999px (cursor only)"
+  },
+  "shadow": {
+    "bottle": "blurred ellipse rgba(23,25,24,.18)",
+    "panel": "none"
+  },
+  "motion": {
+    "easeOut": "cubic-bezier(.16,1,.3,1)",
+    "easeInOut": "cubic-bezier(.65,0,.35,1)",
+    "durMicro": 240,
+    "durReveal": 1200,
+    "durScene": 600,
+    "durNumeral": 1600
+  },
+  "button": {
+    "primary": {
+      "bg": "transparent",
+      "fg": "#171918",
+      "border": "1px #171918 (draws clockwise)",
+      "radius": "0",
+      "padding": "0 32px (52px high)",
+      "hover": "frame draws 600ms, underline 0→100% 240ms, arrow +6px"
+    },
+    "secondary": {
+      "bg": "transparent",
+      "fg": "#171918",
+      "underline": "1px",
+      "radius": "0",
+      "padding": "0",
+      "hover": "underline grows, arrow +6px"
+    },
+    "link": {
+      "fg": "#1E211F",
+      "underline": "1px",
+      "hover": "underline 0→100% 240ms"
+    }
+  },
+  "images": [
+    {
+      "id": "LT-H1",
+      "file": "web/public/desigo/styles/luxury-typography/hero-paper-light.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Warm milk-white #F7F4EC fine cotton paper surface with a soft diagonal band of window light falling across it, extremely subtle, vast empty space, warm natural light, restrained premium palette of milk white #F7F4EC, deep forest green #0B3B32, earth brown #8C6A43 and warm gold #C8A96B, subtle film grain, editorial, calm, high-end, no text, no watermark, no logo, no letters, luxurious restraint, vast negative space",
+      "negative": "text, letters, numbers, logo, watermark, signature, label, product bottle, glass bottle, jar, packaging, Holstein or Jersey cattle, cartoon mascot, deity or religious icon, distorted anatomy, oversaturated, HDR, low resolution, window frame, objects, shadows of plants",
+      "usedIn": "Ch. 01 hero optional ground"
+    },
+    {
+      "id": "LT-H2",
+      "file": "web/public/desigo/styles/luxury-typography/hero-paper-light-portrait.png",
+      "size": "1400×2400 (7:12)",
+      "transparent": false,
+      "prompt": "Vertical warm milk-white cotton paper surface with a soft diagonal band of morning light near the top, extremely subtle, empty, warm natural light, restrained premium palette of milk white #F7F4EC, deep forest green #0B3B32, earth brown #8C6A43 and warm gold #C8A96B, subtle film grain, editorial, calm, high-end, no text, no watermark, no logo, no letters, luxurious restraint, vast negative space",
+      "negative": "text, letters, numbers, logo, watermark, signature, label, product bottle, glass bottle, jar, packaging, Holstein or Jersey cattle, cartoon mascot, deity or religious icon, distorted anatomy, oversaturated, HDR, low resolution, window frame, objects",
+      "usedIn": "Ch. 01 hero (mobile)"
+    },
+    {
+      "id": "LT-V1",
+      "file": "web/public/desigo/styles/luxury-typography/scene-forest-velvet.png",
+      "size": "3200×2000 + 1400×2400 portrait",
+      "transparent": false,
+      "prompt": "Deep forest green #0A2A20 matte velvet-like backdrop with a very soft pool of light at center, no folds, seamless studio ground, warm natural light, restrained premium palette of milk white #F7F4EC, deep forest green #0B3B32, earth brown #8C6A43 and warm gold #C8A96B, subtle film grain, editorial, calm, high-end, no text, no watermark, no logo, no letters, luxurious restraint, vast negative space",
+      "negative": "text, letters, numbers, logo, watermark, signature, label, product bottle, glass bottle, jar, packaging, Holstein or Jersey cattle, cartoon mascot, deity or religious icon, distorted anatomy, oversaturated, HDR, low resolution, fabric folds, sparkles, objects",
+      "usedIn": "MASTER 26 scene ground (optional, under flat colour)"
+    },
+    {
+      "id": "LT-V2",
+      "file": "web/public/desigo/styles/luxury-typography/scene-oxblood-lacquer.png",
+      "size": "3200×2000 + 1400×2400 portrait",
+      "transparent": false,
+      "prompt": "Deep oxblood #4A0A0F matte lacquer backdrop with a faint warm sheen toward the center, seamless, empty, warm natural light, restrained premium palette of milk white #F7F4EC, deep forest green #0B3B32, earth brown #8C6A43 and warm gold #C8A96B, subtle film grain, editorial, calm, high-end, no text, no watermark, no logo, no letters, luxurious restraint, vast negative space",
+      "negative": "text, letters, numbers, logo, watermark, signature, label, product bottle, glass bottle, jar, packaging, Holstein or Jersey cattle, cartoon mascot, deity or religious icon, distorted anatomy, oversaturated, HDR, low resolution, reflections of objects, gloss highlights, objects",
+      "usedIn": "ROOT 14 scene ground"
+    },
+    {
+      "id": "LT-V3",
+      "file": "web/public/desigo/styles/luxury-typography/scene-amber-paper.png",
+      "size": "3200×2000 + 1400×2400 portrait",
+      "transparent": false,
+      "prompt": "Pale amber #F8E4C2 heavyweight paper backdrop with a soft golden light from upper left, seamless, empty, warm natural light, restrained premium palette of milk white #F7F4EC, deep forest green #0B3B32, earth brown #8C6A43 and warm gold #C8A96B, subtle film grain, editorial, calm, high-end, no text, no watermark, no logo, no letters, luxurious restraint, vast negative space",
+      "negative": "text, letters, numbers, logo, watermark, signature, label, product bottle, glass bottle, jar, packaging, Holstein or Jersey cattle, cartoon mascot, deity or religious icon, distorted anatomy, oversaturated, HDR, low resolution, sun disc, objects, texture patterns",
+      "usedIn": "BASE 3 scene ground"
+    },
+    {
+      "id": "LT-V4",
+      "file": "web/public/desigo/styles/luxury-typography/scene-ivory-paper.png",
+      "size": "3200×2000 + 1400×2400 portrait",
+      "transparent": false,
+      "prompt": "Warm ivory #F4EDE2 cotton paper backdrop, perfectly even soft light, seamless, empty, warm natural light, restrained premium palette of milk white #F7F4EC, deep forest green #0B3B32, earth brown #8C6A43 and warm gold #C8A96B, subtle film grain, editorial, calm, high-end, no text, no watermark, no logo, no letters, luxurious restraint, vast negative space",
+      "negative": "text, letters, numbers, logo, watermark, signature, label, product bottle, glass bottle, jar, packaging, Holstein or Jersey cattle, cartoon mascot, deity or religious icon, distorted anatomy, oversaturated, HDR, low resolution, objects, vignetting",
+      "usedIn": "ESSENTIAL scene ground"
+    },
+    {
+      "id": "LT-J1",
+      "file": "web/public/desigo/styles/luxury-typography/colophon-cow.png",
+      "size": "1600×1200 (4:3)",
+      "transparent": true,
+      "prompt": "Small elegant engraved-line colophon of a resting Indian zebu cow in profile, hump and dewlap visible, fine sepia-brown #5A4630 line on transparent background, centred, refined, warm natural light, restrained premium palette of milk white #F7F4EC, deep forest green #0B3B32, earth brown #8C6A43 and warm gold #C8A96B, subtle film grain, editorial, calm, high-end, no text, no watermark, no logo, no letters, luxurious restraint, vast negative space",
+      "negative": "text, letters, numbers, logo, watermark, signature, label, product bottle, glass bottle, jar, packaging, Holstein or Jersey cattle, cartoon mascot, deity or religious icon, distorted anatomy, oversaturated, HDR, low resolution, ornate frame, text banner, shading blobs, cartoon",
+      "usedIn": "Ch. 10 Heritage colophon, /about"
+    },
+    {
+      "id": "LT-J2",
+      "file": "web/public/desigo/styles/luxury-typography/thar-dawn-band.png",
+      "size": "3600×1200 (3:1)",
+      "transparent": false,
+      "prompt": "Ultra-wide calm band of the Thar desert edge at dawn, low khejri silhouettes far away, muted gold and sage, mostly sky, warm natural light, restrained premium palette of milk white #F7F4EC, deep forest green #0B3B32, earth brown #8C6A43 and warm gold #C8A96B, subtle film grain, editorial, calm, high-end, no text, no watermark, no logo, no letters, luxurious restraint, vast negative space",
+      "negative": "text, letters, numbers, logo, watermark, signature, label, product bottle, glass bottle, jar, packaging, Holstein or Jersey cattle, cartoon mascot, deity or religious icon, distorted anatomy, oversaturated, HDR, low resolution, people, buildings, dramatic clouds",
+      "usedIn": "Ch. 04 placeholder band until real photography (labelled illustration)"
+    },
+    {
+      "id": "LT-T1",
+      "file": "web/public/desigo/styles/luxury-typography/grain-overlay.png",
+      "size": "1024×1024, seamless",
+      "transparent": false,
+      "prompt": "Seamless monochrome photographic film grain on mid-grey, fine, even, warm natural light, restrained premium palette of milk white #F7F4EC, deep forest green #0B3B32, earth brown #8C6A43 and warm gold #C8A96B, subtle film grain, editorial, calm, high-end, no text, no watermark, no logo, no letters, luxurious restraint, vast negative space",
+      "negative": "text, letters, numbers, logo, watermark, signature, label, product bottle, glass bottle, jar, packaging, Holstein or Jersey cattle, cartoon mascot, deity or religious icon, distorted anatomy, oversaturated, HDR, low resolution, scratches, dust, colour noise",
+      "usedIn": "2% grain on milk"
+    },
+    {
+      "id": "LT-T2",
+      "file": "web/public/desigo/styles/luxury-typography/paper-archival.png",
+      "size": "2400×2400, seamless",
+      "transparent": false,
+      "prompt": "Seamless tileable texture of aged cotton rag paper, warm ivory #EDE4D0, very subtle fibres, flat even lighting, warm natural light, restrained premium palette of milk white #F7F4EC, deep forest green #0B3B32, earth brown #8C6A43 and warm gold #C8A96B, subtle film grain, editorial, calm, high-end, no text, no watermark, no logo, no letters, luxurious restraint, vast negative space",
+      "negative": "text, letters, numbers, logo, watermark, signature, label, product bottle, glass bottle, jar, packaging, Holstein or Jersey cattle, cartoon mascot, deity or religious icon, distorted anatomy, oversaturated, HDR, low resolution, foxing spots, folds, stains",
+      "usedIn": "Ch. 10 Heritage paper"
+    }
+  ]
+}

@@ -18,7 +18,7 @@ Reference points:
 
 ## 2. Fit for DESIGO® — score 3.5 / 5
 
-**Why it fits.** DESIGO® has literally brought back **returnable glass bottles with colour-coded caps delivered at dawn**. That is the most authentic retro story any Indian dairy can tell. Retro creates instant warmth, trust and memory ("the milk my grandparents had") and gives the **returnable glass** and **delivery** story its emotional reason.
+**Why it fits.** DESIGO® has brought back **returnable glass bottles with colour-coded caps, delivered to the door early in the morning** (delivery timing *pending ops confirmation*). Few Indian dairies have a more authentic retro story to tell. Retro creates instant warmth, trust and memory ("the milk my grandparents had") and gives the **returnable glass** and **delivery** story its emotional reason.
 
 **Where it fights.** The brief also asks for "Apple product launch" and "interactive 3D exhibition". Pure retro feels backward-looking and can make the **technology and traceability** promise look quaint. Overused, it becomes a theme-restaurant look.
 
@@ -168,3 +168,125 @@ Total ≈ 61 days.
 **Risks**: kitsch, looking backward, inventing heritage. Mitigation: retro-modern rules, verified dates only, deliberate time-jump chapter.
 
 **Best used for:** the returnable-glass and doorstep-delivery story (Heritage, Story, /reserve, /about), as a "retro-modern" dairy look.
+
+---
+
+## 12. Build-ready spec sheet
+
+> Audit 2026-10-03: Rich art direction; missing were colour roles and state colours, font packages and sizes, component states, motion tokens, image prompts and acceptance list. All added. Fonts already OFL (Fraunces, Bricolage Grotesque, Inter Tight, Rozha One). Body fix: "delivered at dawn" now marked pending ops confirmation and the "most authentic" superlative softened.
+
+### 12.1 Colour system
+| Role | Token | Hex | Use | Contrast note |
+|---|---|---|---|---|
+| Primary | --c-primary | `#1E6B57` | enamel-sign green: primary CTA plates, key accents | 5.3:1 vs bg (text-safe) |
+| Primary ink | --c-on-primary | `#F3EAD3` | cream label on enamel green | 5.3:1 on primary |
+| Secondary | --c-secondary | `#0B3B32` | deep type, footer, secondary plates | 10.4:1 vs bg (body-safe) |
+| Accent | --c-accent | `#C2412D` | vintage tomato: focus ring, badges, ROOT tie (UI / ≥ 24 px text only) | 4.3:1 vs bg (large text / UI only) |
+| Background | --c-bg | `#F3EAD3` | printed cream paper ground | 13.1:1 with text |
+| Surface | --c-surface | `#F7F4EC` | clean milk sections, price cards | text on surface 14.2:1 |
+| Text | --c-text | `#2A221A` | letterpress body text on cream | 13.1:1 vs bg (body-safe) |
+| Muted text | --c-text-muted | `#5B4330` | letterpress brown: captions, small print | 7.6:1 vs bg (body-safe) |
+| Line | --c-line | `rgba(91,67,48,.30)` | rules, perforations, card borders | decorative; 2 px brown at 100% for plate borders (7.6:1) |
+| Success / Pending / Demo | --c-ok / --c-pending / --c-demo | `#1E6B57` / `#D99A2B` / `#C2412D` | ok = enamel-green stamped tick; pending = 1px dotted mustard underline + small "PENDING" ticket; DEMO = tomato rubber-stamp roundel with cream text, rotated −6° | DEMO stamp cream `#F3EAD3` on `#C2412D` = 4.3:1 at ≥ 14 px bold; pending ticket text stays --c-text |
+
+Variant worlds in this style: MASTER 26 · ROOT 14 · BASE 3 · ESSENTIAL (base / deep / light hex for each).
+
+| Variant | Base | Deep | Light | World in this style |
+|---|---|---|---|---|
+| MASTER 26 (V1+, green cap) | `#1F5C45` | `#0A2A20` | `#D9E8DF` | botanical seed-packet poster: `#1F5C45`, cream, gold, herb garland (26 *pending*) |
+| ROOT 14 (V1, red cap) | `#B3202A` | `#4A0A0F` | `#F3D9D6` | railway-era travel poster of red earth and grazing: `#B3202A` toned to `#C2412D`, cream, `#4A0A0F` |
+| BASE 3 (V2, amber cap) | `#E89A1C` | `#5A3304` | `#F8E4C2` | kitchen enamel sign at golden hour: `#E89A1C` / `#D99A2B`, forest |
+| ESSENTIAL (V3, ivory cap) | `#CDB89A` | `#4D4130` | `#F4EDE2` | plain letterpress card: `#CDB89A`, `#4D4130` on cream, type only, one rule |
+
+Dark-chapter inversion: Technology (ch. 11) and /technology are a deliberate time-jump to the present: the cream page "tears" to a dark modern grid: `--c-bg` → `#171918`, `--c-surface` → `#0B3B32`, `--c-text` → `#F7F4EC`, `--c-primary` → `#7FE0B8`, line → `rgba(247,244,236,.14)`, logo → white. Footer is an enamel sign in `#0B3B32` with cream type.
+
+Additional style tokens (kept from §3): `--rt-mustard` `#D99A2B`, `--rt-teal` `#3E7C80` (sparingly), `--rt-gold` `#C8A96B` (foil cap). Max four print colours per screen. Photo grade: blacks lifted to `#1E1A16`, highlights `#FFF6E5`.
+
+### 12.2 Typography
+| Role | Font family | Source (npm @fontsource… / Google Fonts) | Weights / axes | Size (clamp) | Line-height | Tracking | Case |
+|---|---|---|---|---|---|---|---|
+| Display / hero | Fraunces | `@fontsource-variable/fraunces` | wght 900, SOFT 100, WONK 1, opsz 144 | `clamp(3.25rem, 2rem + 6vw, 8.5rem)` | 0.95 | −0.015em | Sentence |
+| Headline H1–H2 | Fraunces | `@fontsource-variable/fraunces` | wght 700, SOFT 100, opsz 72–144 | H1 `clamp(2.5rem, 1.6rem + 3.8vw, 4.75rem)` · H2 `clamp(1.75rem, 1.3rem + 1.8vw, 2.75rem)` | 1.05 · 1.15 | −0.01em | Sentence |
+| Body | Inter Tight | `@fontsource-variable/inter-tight` | 400 / 500 | `clamp(1rem, .95rem + .25vw, 1.125rem)` | 1.6 | 0 | Sentence |
+| Label / UI | Bricolage Grotesque (badges, seals, plates) | `@fontsource-variable/bricolage-grotesque` | wght 700, wdth 75 (condensed) | `clamp(.75rem, .72rem + .15vw, .85rem)` | 1.1 | +0.1em | Upper |
+| Data / mono | JetBrains Mono (ticket style) | `@fontsource-variable/jetbrains-mono` | 500, tabular | `.875rem` | 1.4 | +0.06em | Upper |
+| Devanagari (optional) | Rozha One ("दूध वाला", "बोतल लौटाएँ") | `@fontsource/rozha-one` | 400 | display sizes only | 1.25 | 0 | — |
+
+Licence: all fonts must be open-licence (OFL/Apache). Fraunces, Bricolage Grotesque, Inter Tight, JetBrains Mono and Rozha One are OFL 1.1; Lobster, Pacifico and Cooper Black clones stay out. Pairing: soft wonky Fraunces is the 1970s serif, condensed Bricolage is the enamel badge, Inter Tight keeps the site current.
+
+### 12.3 Layout & surfaces
+- Grid: 12 columns, centred symmetric compositions (headline · bottle/illustration · copy · badge), content max-width 1200 px, gutters 24 px / 16 px mobile.
+- Spacing (4 px base): 4 · 8 · 12 · 16 · 24 · 32 · 48 · 64 · 96 · 128 · 160; section padding 120–160 px desktop, 72 px mobile.
+- Radius: `sm 2px` · `md 6px` (enamel plates, price cards) · `lg 12px` (poster frames); badges are circles; pill for cursor only.
+- Border: 2 px brown/forest on plates; price cards have a perforated edge (SVG mask, 6 px holes).
+- Shadow: crisp offset `3px 3px 0 #0B3B32` on lifted plates; bottle gets a crisp low-sun morning shadow (long, 20° angle, 0.3 opacity) plus contact shadow.
+- Texture: one paper-fibre tile + 1–2% halftone speckle on cream panels; 1 px misregistration on badges only; no fake scratches or sepia filters.
+
+### 12.4 Components
+For each: anatomy, sizes, states (default · hover · focus-visible · active · disabled · loading), motion, a11y.
+- **Primary button**: EnamelButton: enamel-green plate `#1E6B57`, cream Bricolage label + arrow, 2 px forest border, radius 6 px, 52 px, padding 16 px 26 px. States: default · hover plate lifts 2 px with `3px 3px 0 #0B3B32` shadow (240 ms) · focus-visible 3 px `#C2412D` ring offset 3 px · active pressed flat · disabled 40%, no shadow · loading arrow replaced by a turning foil-cap disc. 44 px target.
+- **Secondary button**: cream plate with 2 px forest border and forest label + arrow; same lift on hover; focus tomato ring; active flat; disabled 40%; loading foil-cap disc.
+- **Text / arrow link**: Inter Tight with 1.5 px forest underline offset 3 px; arrow travels 4 px; hover underline turns enamel green; focus tomato ring.
+- **Icon button (incl. menu)**: 44 px two-colour badge circle (cream on enamel green) with 2 px outline and slight print texture. Menu = three letterpress bars → X. Hover lift 2 px · focus ring · active pressed · disabled 40%. `aria-label`, `aria-expanded`.
+- **Navigation bar (desktop + mobile menu) + DESIGO® logo loop**: cream bar 76 px (60 px mobile) with a 2 px brown rule, logo left, links Bricolage upper, RESERVE as enamel plate. Must read modern (no kitsch ornaments). Mobile: menu as a full-height printed card sliding up with links 30 px Fraunces, focus trapped, Esc closes. Logo loop: DESIGO® wordmark (vector SVG, never redrawn) runs the house black write / un-write loop: D · waves · S · I · G · O draw on (0–1.2 s, 480 ms each, 95 ms stagger) → hold to 3.0 s → un-write in reverse 3.0–4.2 s → rest to 4.6 s → repeat, infinite. Charcoal `#171918` on light grounds, white `#FFFFFF` on dark grounds, swapped by section theme only; never a colour change inside the loop. Reduced motion: static full wordmark. `aria-label="DESIGO® home"`; the animation is `aria-hidden`.
+- **Cursor (default · hover · ROTATE · EXPLORE · ENTER · VIEW · TRACE; touch fallback)**: default 14 px foil-cap circle (`#C8A96B`, 1 px highlight) · hover press-down scale 0.9 · ROTATE `TURN` over the bottle · EXPLORE `LOOK` cap 44 px over posters · ENTER `ENTER →` over variant posters · VIEW `VIEW` over photos · TRACE cap shrinks to a ring with dotted crosshair over route stations; badges rotate +8° under the cursor. Touch / coarse pointer: custom cursor not rendered; native behaviour, and the ROTATE / EXPLORE hint appears once as a static chip beside the bottle and fades after the first drag.
+- **Card / panel / info block**: printed card: milk surface, 2 px brown border at 30%, radius 6 px, padding 28 px; price-card variant with perforated edge; CollectibleCard flips by button (`aria-pressed`). Hover lift 2 px; focus tomato ring.
+- **Badge / tag (incl. "pending verification" and "DEMO · not live data")**: BadgeSeal circles (facts only, e.g. "RETURNABLE GLASS", "SINCE 2019"), Bricolage 700 condensed, 88–120 px. Pending verification: dotted mustard underline + "PENDING" ticket; "JODHPUR, RAJASTHAN" badge carries it. DEMO · not live data: tomato rubber-stamp roundel (−6°), cream text. Never "100% PURE", never invented "SINCE" dates.
+- **Input + form field (Trace-your-milk bottle ID)**: TicketLookup: a printed milk-token ticket with a real input: 56 px, 2 px forest border, radius 6 px, mono 16 px, placeholder `DSG-BTL-000001-3 (sample format)`, perforated left edge. States: hover lift · focus-visible tomato ring · error `#B3202A` border + note · disabled 40% · loading foil disc. Visible `<label>`, DEMO stamp beside.
+- **Divider / ornament**: letterpress double rule (2 px + 1 px) with a small foil-cap circle at centre; sections can end with a perforation line.
+- **Section header (chapter number + title pattern)**: badge-style chapter number (`No. 08` in a circle) + Fraunces 900 soft title + one Inter Tight lead line; centred.
+- **Product info block (variant name, code, price-pending, size, descriptors)**: price-card panel with perforated edge: V-CODE ticket (mono), name Fraunces 700, size `1 L glass · 900 g` and price from `desigo.ts` with dotted pending underline, descriptors pending-marked, CTA enamel plate `Trace this bottle →`.
+- **Bottle stage (Bottle / Bottle360Viewer framing)**: the bottle stands on a doorstep (real photo or drawn step) with a crisp low-sun shadow; no float, a 2 px "settle" on arrival; sometimes a wire crate of the four caps beside it (real photo only). Tilt ±6°. Bottle360Viewer inside a cream showcase card with badge "Turn the bottle".
+- **Trace node / timeline step**: RouteMapPoster: dotted route, stations as numbered enamel discs (20 px), pulse along the route; timeline step = letterpress line with badge date (verified 2019 only). States idle · hover disc lifts · focus tomato ring · active panel as printed card · pending dashed disc.
+
+### 12.5 Iconography & illustration
+- Icons: two-colour badge style, 2 px outline, round joins, 24 px glyph inside 44 px circles, slight print texture.
+- Illustration: commissioned mid-century two-colour gouache (milkman on a bicycle, cow, doorstep with crate), consistent and credited; two-plate print-in.
+- Photography: real, warm grade (lifted blacks, warm highlights), cream border + small caption label; no fake ageing.
+
+### 12.6 Motion tokens
+| Token | Value | Use |
+|---|---|---|
+| `--ease-out` | `cubic-bezier(.25,.8,.25,1)` | friendly reveals (no bounce) |
+| `--ease-inout` | `cubic-bezier(.65,0,.35,1)` | page-turn transitions |
+| `--ease-milk` | `cubic-bezier(.22,.9,.24,1)` | bottle settle |
+| `--dur-micro / reveal / scene` | 240 / 700 / 900 ms | hover · reveal · page turn |
+| `--rt-print` | plate 2 at +180 ms, 1 px offset | two-plate print-in |
+| `--rt-stamp` | 300 ms scale 1.1 → 1 | badge stamp-in |
+| `--rt-badge-turn` | 600 ms, +8° | badge rotate on hover |
+
+- Retro is in the visuals, not in cartoon motion: unhurried, no bounce.
+- Signature: the printed-card page turn (next section slides up with a 4 px paper edge shadow).
+- Reduced motion (`prefers-reduced-motion: reduce`): all scroll-scrubbed motion off, content becomes a normal readable page, logo shows static, 360 auto-rotation stops, transitions become ≤ 200 ms opacity fades. Here also: no print-in, no page turn, no badge spin; collectible cards show both sides.
+
+### 12.7 AI image generation prompts
+House rules: no text/letters/logos/watermarks in images; generated images are illustration, texture or backdrop only; never
+generate the bottle or ghee jar; zebu cows only, shown with respect; append the style's tail prompt to every prompt.
+
+Style tail prompt (append to every prompt below): *retro-modern Indian dairy print aesthetic 1955–1980, mid-century two-colour gouache, cream paper #F3EAD3, enamel green #1E6B57, deep forest #0B3B32, tomato #C2412D, mustard #D99A2B, gold foil #C8A96B, warm morning light, subtle paper texture, no fake scratches, calm, premium, no text, no watermark, no logo, no letters*
+
+Base negative prompt (prefix to every negative below): *text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated*
+
+| # | File path (web/public/desigo/styles/<slug>/...) | Size / ratio | Transparent? | Prompt | Negative prompt | Used in |
+|---|---|---|---|---|---|---|
+| 1 | `web/public/desigo/styles/retro/hero-landscape.png` | 3200×2000 (16:10) | no | Mid-century two-colour gouache illustration of a quiet Indian home doorstep in early morning light, a clean stone step and a painted wooden door, long crisp low-sun shadows, cream and enamel-green tones, empty space on the step at the centre | bottles, crates with bottles, people, signboards, sepia filter, scratches | Hero (ch. 01) |
+| 2 | `web/public/desigo/styles/retro/hero-portrait.png` | 1400×2400 (7:12) | no | Tall mid-century gouache illustration of a doorstep and door in morning light, step centred and empty, cream and enamel green | bottles, people, text | Hero mobile |
+| 3 | `web/public/desigo/styles/retro/world-master-26.png` | 3200×2000 + 1400×2400 crop | no | Mid-century botanical seed-packet style poster illustration, a garland of Indian herb sprigs around an empty oval centre, flat gouache in bottle green #1F5C45, cream and gold, subtle print texture | lettering, seed names, numbers, photos | Four milks ch. 08, /milk/master-26 |
+| 4 | `web/public/desigo/styles/retro/world-root-14.png` | 3200×2000 + 1400×2400 crop | no | 1960s Indian railway-era travel poster illustration of red earth fields with grazing zebu cows and broad sun rays, flat gouache in tomato #C2412D, cream and oxblood #4A0A0F, empty space at the centre | trains, lettering, Holstein cows, people | Four milks ch. 08, /milk/root-14 |
+| 5 | `web/public/desigo/styles/retro/world-base-3.png` | 3200×2000 + 1400×2400 crop | no | Mid-century kitchen enamel-sign style illustration of a simple kitchen shelf and window in golden morning light, flat two-colour print in amber #E89A1C, mustard #D99A2B and forest, empty shelf centre | bottles, jars with labels, lettering | Four milks ch. 08, /milk/base-3 |
+| 6 | `web/public/desigo/styles/retro/world-essential.png` | 3200×2000 + 1400×2400 crop | no | Plain cream letterpress card with one thin taupe rule and a subtle deep impression texture, sand #CDB89A and taupe #4D4130 on cream, almost empty | letters, numbers, ornaments | Four milks ch. 08, /milk/essential |
+| 7 | `web/public/desigo/styles/retro/journey-route-poster.png` | 3600×1200 (3:1) | no | Mid-century illustrated route-map poster: a dotted route winding across a flat two-colour Rajasthan landscape through seven empty round frames, a small zebu cow, a farm hut, khejri trees and a dairy building along the way | place names, numbers, bottles, people | Cow → bottle ch. 03, /trace |
+| 8 | `web/public/desigo/styles/retro/heritage-milkman.png` | 2400×2400 | yes (real alpha) | Mid-century two-colour gouache illustration of an Indian milkman on a bicycle carrying steel milk cans on a quiet lane at dawn, respectful, flat shapes, enamel green and cream, isolated on transparent background | bottles, caricature, text, brand marks | Heritage ch. 10 |
+| 9 | `web/public/desigo/styles/retro/texture-print-paper.png` | 2048×2048, seamless | no | Seamless tileable cream printed-paper texture #F3EAD3 with faint fibres and very light halftone speckle, flat even light | stains, scratches, folds, text, vignette | Cream panels |
+| 10 | `web/public/desigo/styles/retro/ghee-tin-label.png` | 3200×2000 | no | Vintage Indian tin-label style ornamental panel with a folk border of leaves and dots in mustard, tomato and cream, an empty plain centre panel, flat print texture | lettering, numbers, jars, brand names | Ghee ch. 12, /ghee |
+
+### 12.8 Prototype acceptance checklist
+- [ ] Tokens from `specs/31_retro.json` applied; no off-palette colours
+- [ ] Fonts self-hosted; correct weights load
+- [ ] All 12.4 components built with all states
+- [ ] Hero + bottle-story + one product world + trace chapter built in this style (the comparison set)
+- [ ] Mobile 360 px pass; reduced-motion pass; contrast checked
+- [ ] Claims rules respected (pending underline, no blocked claims, DEMO labels)
+- [ ] Screenshots: desktop 1440×900 ×4 + mobile 390×844 ×2 saved to docs/media/styles/retro/
+- [ ] Badges state verified facts only ("SINCE 2019" allowed, never "100% PURE")
+- [ ] Technology chapter reads clearly contemporary (time-jump verified)

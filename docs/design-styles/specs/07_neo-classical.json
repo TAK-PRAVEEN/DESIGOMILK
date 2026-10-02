@@ -1,0 +1,249 @@
+{
+  "id": 7,
+  "slug": "neo-classical",
+  "name": "Neo-classical (Indian)",
+  "priority": false,
+  "fit": 3,
+  "colors": {
+    "primary": "#7A5C24",
+    "onPrimary": "#F4F0E6",
+    "secondary": "#0B3B32",
+    "accent": "#3E5F8A",
+    "bg": "#F4F0E6",
+    "surface": "#D9B48F",
+    "text": "#1E211F",
+    "textMuted": "#5A4A3C",
+    "line": "#C8A96B",
+    "ok": "#1F5C45",
+    "pending": "#8A5A1F",
+    "demo": "#171918"
+  },
+  "variants": {
+    "master-26": {
+      "base": "#1F5C45",
+      "deep": "#0A2A20",
+      "light": "#D9E8DF"
+    },
+    "root-14": {
+      "base": "#B3202A",
+      "deep": "#4A0A0F",
+      "light": "#F3D9D6"
+    },
+    "base-3": {
+      "base": "#E89A1C",
+      "deep": "#5A3304",
+      "light": "#F8E4C2"
+    },
+    "essential": {
+      "base": "#CDB89A",
+      "deep": "#4D4130",
+      "light": "#F4EDE2"
+    }
+  },
+  "fonts": {
+    "display": {
+      "family": "Cormorant SC",
+      "package": "@fontsource/cormorant-sc",
+      "weights": [
+        500
+      ]
+    },
+    "displayItalic": {
+      "family": "Cormorant",
+      "package": "@fontsource-variable/cormorant",
+      "weights": [
+        300,
+        500
+      ],
+      "style": "italic"
+    },
+    "body": {
+      "family": "EB Garamond",
+      "package": "@fontsource-variable/eb-garamond",
+      "weights": [
+        400
+      ]
+    },
+    "ui": {
+      "family": "Inter Tight",
+      "package": "@fontsource-variable/inter-tight",
+      "weights": [
+        400,
+        500
+      ]
+    },
+    "label": {
+      "family": "Cinzel",
+      "package": "@fontsource-variable/cinzel",
+      "weights": [
+        500
+      ]
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "package": "@fontsource-variable/jetbrains-mono",
+      "weights": [
+        400
+      ]
+    },
+    "devanagari": {
+      "family": "Tiro Devanagari Hindi",
+      "package": "@fontsource/tiro-devanagari-hindi",
+      "weights": [
+        400
+      ]
+    }
+  },
+  "type": {
+    "display": "clamp(3rem, 7.5vw, 8rem)",
+    "h1": "clamp(2.4rem, 4.8vw, 4.75rem)",
+    "h2": "clamp(1.75rem, 3vw, 2.75rem)",
+    "body": "clamp(1.0625rem, 1rem + 0.25vw, 1.25rem)",
+    "label": "0.75rem"
+  },
+  "radius": {
+    "sm": "0",
+    "md": "0",
+    "lg": "50% 50% 0 0 / 25% 25% 0 0 (arch)",
+    "pill": "999px"
+  },
+  "shadow": {
+    "bottle": "contact ellipse rgba(58,46,37,.30) + jaali light mask on the niche wall",
+    "panel": "inset 0 2px 0 rgba(255,255,255,.35), inset 0 -2px 0 rgba(58,46,37,.25)"
+  },
+  "motion": {
+    "easeOut": "cubic-bezier(.16,1,.3,1)",
+    "easeInOut": "cubic-bezier(.65,0,.35,1)",
+    "durMicro": 300,
+    "durReveal": 900,
+    "durScene": 1400
+  },
+  "button": {
+    "primary": {
+      "bg": "transparent",
+      "fg": "#7A5C24",
+      "underline": "1px #C8A96B",
+      "radius": "0",
+      "padding": "0 8px; height 48px",
+      "hover": "gilded rule draws from centre (600ms), arrow +6px",
+      "filledVariant": {
+        "bg": "#7A5C24",
+        "fg": "#F4F0E6"
+      }
+    },
+    "secondary": {
+      "bg": "transparent",
+      "fg": "#3A2E25",
+      "border": "1px #C8A96B arch-top",
+      "radius": "arch top",
+      "padding": "0 24px; height 48px",
+      "hover": "sandstone 20% fill"
+    },
+    "link": {
+      "fg": "#1E211F",
+      "underline": "1px #C8A96B",
+      "hover": "underline 2px, arrow +8px"
+    }
+  },
+  "images": [
+    {
+      "file": "web/public/desigo/styles/neo-classical/hero.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Symmetrical carved sandstone façade with a tall central jharokha niche, empty, a small marble plinth inside it, two smaller niches either side, soft jaali lattice shadows on the walls, warm morning light from the upper left, Indian neo-classical architecture inspired by Jodhpur Chittar sandstone, jharokha arches and jaali lattices, symmetrical, warm low sun, marble #F4F0E6, sandstone #D9B48F and #A9784F, matte gold #C8A96B, forest #0B3B32 in deep shadows, photographic realism, calm, dignified, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, people, flags, named palace, temple, idols, signage",
+      "usedIn": "01 Hero, 15 Final CTA"
+    },
+    {
+      "file": "web/public/desigo/styles/neo-classical/hero-portrait.png",
+      "size": "1400×2400 (7:12)",
+      "transparent": false,
+      "prompt": "Vertical view of a single tall carved sandstone arch niche, empty marble plinth, jaali shadow pattern on the side wall, warm light, Indian neo-classical architecture inspired by Jodhpur Chittar sandstone, jharokha arches and jaali lattices, symmetrical, warm low sun, marble #F4F0E6, sandstone #D9B48F and #A9784F, matte gold #C8A96B, forest #0B3B32 in deep shadows, photographic realism, calm, dignified, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, people, idols",
+      "usedIn": "01 Hero mobile"
+    },
+    {
+      "file": "web/public/desigo/styles/neo-classical/worlds/master-26.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "Empty carved sandstone niche whose inner walls are deep green #1F5C45 lime plaster deepening to #0A2A20 in the vault, a carved leaf frieze around the arch, marble plinth, soft lattice light, Indian neo-classical architecture inspired by Jodhpur Chittar sandstone, jharokha arches and jaali lattices, symmetrical, warm low sun, marble #F4F0E6, sandstone #D9B48F and #A9784F, matte gold #C8A96B, forest #0B3B32 in deep shadows, photographic realism, calm, dignified, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, idols, counted leaves, people",
+      "usedIn": "08 Four milks · /milk/master-26"
+    },
+    {
+      "file": "web/public/desigo/styles/neo-classical/worlds/root-14.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "Empty carved sandstone niche with deep red #B3202A lime plaster inner walls and an oxblood #4A0A0F vault, a carved frieze of roots and earth layers around the arch, marble plinth, Indian neo-classical architecture inspired by Jodhpur Chittar sandstone, jharokha arches and jaali lattices, symmetrical, warm low sun, marble #F4F0E6, sandstone #D9B48F and #A9784F, matte gold #C8A96B, forest #0B3B32 in deep shadows, photographic realism, calm, dignified, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, idols, blood, people",
+      "usedIn": "08 Four milks · /milk/root-14"
+    },
+    {
+      "file": "web/public/desigo/styles/neo-classical/worlds/base-3.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "Empty carved sandstone niche with warm amber #E89A1C lime plaster inner walls, sun-ray carving above the arch, golden late-afternoon light, marble plinth, Indian neo-classical architecture inspired by Jodhpur Chittar sandstone, jharokha arches and jaali lattices, symmetrical, warm low sun, marble #F4F0E6, sandstone #D9B48F and #A9784F, matte gold #C8A96B, forest #0B3B32 in deep shadows, photographic realism, calm, dignified, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, sun with face, idols",
+      "usedIn": "08 Four milks · /milk/base-3"
+    },
+    {
+      "file": "web/public/desigo/styles/neo-classical/worlds/essential.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "Empty ivory marble niche #F4EDE2 with fine grey veining and plain moulding, soft skylight, marble plinth, very restrained, Indian neo-classical architecture inspired by Jodhpur Chittar sandstone, jharokha arches and jaali lattices, symmetrical, warm low sun, marble #F4F0E6, sandstone #D9B48F and #A9784F, matte gold #C8A96B, forest #0B3B32 in deep shadows, photographic realism, calm, dignified, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, ornament overload, idols",
+      "usedIn": "08 Four milks · /milk/essential"
+    },
+    {
+      "file": "web/public/desigo/styles/neo-classical/journey/frieze.png",
+      "size": "6000×1200 (horizontal)",
+      "transparent": false,
+      "prompt": "Long horizontal carved sandstone relief frieze in seven framed panels: an Indian zebu cow with hump and dewlap, a farm with khejri tree, a milk can, a round test card with sixteen dots, a chiller, a small dairy building, and a final empty panel; a gilded channel runs through all panels, Indian neo-classical architecture inspired by Jodhpur Chittar sandstone, jharokha arches and jaali lattices, symmetrical, warm low sun, marble #F4F0E6, sandstone #D9B48F and #A9784F, matte gold #C8A96B, forest #0B3B32 in deep shadows, photographic realism, calm, dignified, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, bottle, people's faces, deities, inscriptions",
+      "usedIn": "03 Cow to bottle"
+    },
+    {
+      "file": "web/public/desigo/styles/neo-classical/textures/sandstone.png",
+      "size": "2048×2048, seamless",
+      "transparent": false,
+      "prompt": "Seamless tileable Jodhpur Chittar sandstone surface, fine grain, faint chisel marks, warm pink-buff, flat light, Indian neo-classical architecture inspired by Jodhpur Chittar sandstone, jharokha arches and jaali lattices, symmetrical, warm low sun, marble #F4F0E6, sandstone #D9B48F and #A9784F, matte gold #C8A96B, forest #0B3B32 in deep shadows, photographic realism, calm, dignified, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, cracks, stains, seams",
+      "usedIn": "façades, nav band (12%)"
+    },
+    {
+      "file": "web/public/desigo/styles/neo-classical/textures/jaali-shadow.png",
+      "size": "2400×2400",
+      "transparent": true,
+      "prompt": "Soft geometric jaali lattice shadow pattern of interlocking stars and hexagons, as cast by sunlight through a carved stone screen, isolated on transparent background, Indian neo-classical architecture inspired by Jodhpur Chittar sandstone, jharokha arches and jaali lattices, symmetrical, warm low sun, marble #F4F0E6, sandstone #D9B48F and #A9784F, matte gold #C8A96B, forest #0B3B32 in deep shadows, photographic realism, calm, dignified, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, hard edges, text",
+      "usedIn": "JaaliLight mask, hero niche wall"
+    },
+    {
+      "file": "web/public/desigo/styles/neo-classical/material/stepwell.png",
+      "size": "3200×2000",
+      "transparent": false,
+      "prompt": "Symmetrical sandstone stepwell (baori) seen from above at an angle, descending stepped tiers, warm light, the lowest pool empty and still, calm, Indian neo-classical architecture inspired by Jodhpur Chittar sandstone, jharokha arches and jaali lattices, symmetrical, warm low sun, marble #F4F0E6, sandstone #D9B48F and #A9784F, matte gold #C8A96B, forest #0B3B32 in deep shadows, photographic realism, calm, dignified, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, people, litter, named landmark",
+      "usedIn": "09 Milk as material"
+    },
+    {
+      "file": "web/public/desigo/styles/neo-classical/ghee/gilded-triad.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "Three empty carved sandstone niches side by side with gilded inner edges and warm gold light, a folk-pattern carved frieze above, marble shelves, Indian neo-classical architecture inspired by Jodhpur Chittar sandstone, jharokha arches and jaali lattices, symmetrical, warm low sun, marble #F4F0E6, sandstone #D9B48F and #A9784F, matte gold #C8A96B, forest #0B3B32 in deep shadows, photographic realism, calm, dignified, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, jars, idols, diyas",
+      "usedIn": "12 Ghee · /ghee"
+    }
+  ],
+  "colorsDark": {
+    "bg": "#0B3B32",
+    "text": "#F4F0E6",
+    "textMuted": "#CFC6B4",
+    "primary": "#C8A96B"
+  },
+  "extraTokens": {
+    "stoneInk": "#3A2E25",
+    "goldLeaf": "#94742F",
+    "sandstoneDeep": "#A9784F"
+  }
+}

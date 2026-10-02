@@ -1,0 +1,222 @@
+{
+  "id": 46,
+  "slug": "gzhel",
+  "name": "Gzhel → Jaipur Blue Pottery",
+  "priority": true,
+  "fit": 3,
+  "colors": {
+    "primary": "#1F3F8F",
+    "onPrimary": "#FBFAF6",
+    "secondary": "#0B3B32",
+    "accent": "#2F9AA8",
+    "bg": "#F7F4EC",
+    "surface": "#FBFAF6",
+    "text": "#171918",
+    "textMuted": "#5C5A52",
+    "line": "rgba(31,63,143,.25)",
+    "ok": "#1F5C45",
+    "pending": "#6B4C2A",
+    "demo": "#0B3B32",
+    "focus": "#1F3F8F"
+  },
+  "variants": {
+    "master-26": {
+      "base": "#1F5C45",
+      "deep": "#0A2A20",
+      "light": "#D9E8DF"
+    },
+    "root-14": {
+      "base": "#B3202A",
+      "deep": "#4A0A0F",
+      "light": "#F3D9D6"
+    },
+    "base-3": {
+      "base": "#B8863B",
+      "deep": "#5A3304",
+      "light": "#F8E4C2"
+    },
+    "essential": {
+      "base": "#CDB89A",
+      "deep": "#4D4130",
+      "light": "#FBFAF6"
+    }
+  },
+  "fonts": {
+    "display": {
+      "family": "Cormorant Garamond",
+      "package": "@fontsource/cormorant-garamond",
+      "weights": [
+        500,
+        600
+      ],
+      "styles": [
+        "normal",
+        "italic"
+      ]
+    },
+    "body": {
+      "family": "Inter Tight",
+      "package": "@fontsource-variable/inter-tight",
+      "weights": [
+        400,
+        500
+      ]
+    },
+    "label": {
+      "family": "Inter Tight",
+      "package": "@fontsource-variable/inter-tight",
+      "weights": [
+        500,
+        600
+      ]
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "package": "@fontsource-variable/jetbrains-mono",
+      "weights": [
+        400
+      ]
+    },
+    "devanagari": {
+      "family": "Tiro Devanagari Hindi",
+      "package": "@fontsource/tiro-devanagari-hindi",
+      "weights": [
+        400
+      ]
+    }
+  },
+  "type": {
+    "display": "clamp(3rem, 1.6rem + 6vw, 7.5rem)",
+    "h1": "clamp(2.4rem, 1.6rem + 3vw, 4.5rem)",
+    "h2": "clamp(1.75rem, 1.3rem + 1.6vw, 2.75rem)",
+    "body": "clamp(1rem, 0.96rem + 0.2vw, 1.0625rem)",
+    "label": "0.75rem"
+  },
+  "radius": {
+    "sm": "2px",
+    "md": "8px",
+    "lg": "999px"
+  },
+  "shadow": {
+    "bottle": "0 28px 28px -20px rgba(23,25,24,.24) + glossy reflection at 10%",
+    "panel": "inset 0 1px 0 #FFFFFF, 0 6px 16px -8px rgba(31,63,143,.18)"
+  },
+  "motion": {
+    "easeOut": "cubic-bezier(.16,1,.3,1)",
+    "easeInOut": "cubic-bezier(.65,0,.35,1)",
+    "easeSignature": "cubic-bezier(.33,0,.2,1)",
+    "durMicro": 200,
+    "durReveal": 500,
+    "durScene": 900,
+    "borderPaintMaxMs": 1600,
+    "sheenMs": 800,
+    "plateRotateDeg": 20,
+    "floatPx": 6,
+    "floatMs": 6000,
+    "hopMs": 1500
+  },
+  "button": {
+    "primary": {
+      "bg": "transparent",
+      "fg": "#1F3F8F",
+      "radius": "0",
+      "padding": "14px 0",
+      "underline": "1.5px brushed #1F3F8F",
+      "hover": "1px frame draws 400ms; leaf arrow +6px"
+    },
+    "secondary": {
+      "bg": "transparent",
+      "fg": "#0B3B32",
+      "radius": "0",
+      "padding": "14px 0",
+      "hover": "underline repaints as cobalt brush stroke"
+    },
+    "link": {
+      "fg": "#0B3B32",
+      "underline": "1px",
+      "hover": "brushed cobalt underline 300ms"
+    }
+  },
+  "images": [
+    {
+      "file": "web/public/desigo/styles/gzhel/hero.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Top-down view of a large glossy white glazed surface with a circular hand-painted border of cobalt vines, five-petal flowers and turquoise buds, the large centre completely plain white, soft glaze highlight, milk-white surround, Jaipur blue pottery style, hand-painted cobalt blue #1F3F8F and turquoise #2F9AA8 as the only painted colours on glossy white glaze #FBFAF6, soft glaze highlights, restrained composition with a large plain white centre, warm natural light, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, deities, figures, cows, all-over pattern, cracks",
+      "usedIn": "Hero desktop"
+    },
+    {
+      "file": "web/public/desigo/styles/gzhel/hero-portrait.png",
+      "size": "1400×2400 (7:12)",
+      "transparent": false,
+      "prompt": "Portrait composition of the same painted circular border, centred in the middle third, plain white centre, milk-white surround above and below, Jaipur blue pottery style, hand-painted cobalt blue #1F3F8F and turquoise #2F9AA8 as the only painted colours on glossy white glaze #FBFAF6, soft glaze highlights, restrained composition with a large plain white centre, warm natural light, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, figures, all-over pattern",
+      "usedIn": "Hero mobile"
+    },
+    {
+      "file": "web/public/desigo/styles/gzhel/plate-master-26.png",
+      "size": "3000×3000",
+      "transparent": false,
+      "prompt": "Circular blue-pottery plate border of dense cobalt leaves and vines with copper-green #1F5C45 leaf accents, plain white centre, Jaipur blue pottery style, hand-painted cobalt blue #1F3F8F and turquoise #2F9AA8 as the only painted colours on glossy white glaze #FBFAF6, soft glaze highlights, restrained composition with a large plain white centre, warm natural light, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, counted herbs, figures",
+      "usedIn": "MASTER 26 world"
+    },
+    {
+      "file": "web/public/desigo/styles/gzhel/plate-root-14.png",
+      "size": "3000×3000",
+      "transparent": false,
+      "prompt": "Circular blue-pottery plate border of cobalt rosettes and stepped geometric bands with a few tiny madder-red #B3202A dots, plain white centre, Jaipur blue pottery style, hand-painted cobalt blue #1F3F8F and turquoise #2F9AA8 as the only painted colours on glossy white glaze #FBFAF6, soft glaze highlights, restrained composition with a large plain white centre, warm natural light, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, large red areas, figures",
+      "usedIn": "ROOT 14 world"
+    },
+    {
+      "file": "web/public/desigo/styles/gzhel/plate-base-3.png",
+      "size": "3000×3000",
+      "transparent": false,
+      "prompt": "Circular blue-pottery plate border of cobalt wheat-ear sprays and a small sun rosette with ochre #B8863B accents, plain white centre, Jaipur blue pottery style, hand-painted cobalt blue #1F3F8F and turquoise #2F9AA8 as the only painted colours on glossy white glaze #FBFAF6, soft glaze highlights, restrained composition with a large plain white centre, warm natural light, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, sun face, figures",
+      "usedIn": "BASE 3 world"
+    },
+    {
+      "file": "web/public/desigo/styles/gzhel/plate-essential.png",
+      "size": "3000×3000",
+      "transparent": false,
+      "prompt": "A single thin cobalt ring with two small painted leaves on glossy white glaze, extremely restrained, plain white centre, Jaipur blue pottery style, hand-painted cobalt blue #1F3F8F and turquoise #2F9AA8 as the only painted colours on glossy white glaze #FBFAF6, soft glaze highlights, restrained composition with a large plain white centre, warm natural light, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, extra ornament",
+      "usedIn": "ESSENTIAL world"
+    },
+    {
+      "file": "web/public/desigo/styles/gzhel/vine-route.png",
+      "size": "3600×2000, transparent",
+      "transparent": true,
+      "prompt": "A single hand-painted cobalt vine meandering across the frame with eight small painted rosettes along it as stops, turquoise buds, on transparent background, Jaipur blue pottery style, hand-painted cobalt blue #1F3F8F and turquoise #2F9AA8 as the only painted colours on glossy white glaze #FBFAF6, soft glaze highlights, restrained composition with a large plain white centre, warm natural light, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, map labels, numbers, birds crowding",
+      "usedIn": "Traceability (ch. 06), Trace-your-milk"
+    },
+    {
+      "file": "web/public/desigo/styles/gzhel/glaze-tile.png",
+      "size": "2048×2048, seamless",
+      "transparent": false,
+      "prompt": "Seamless glossy white ceramic glaze surface with very subtle soft reflections and tiny natural variations, flat light, Jaipur blue pottery style, hand-painted cobalt blue #1F3F8F and turquoise #2F9AA8 as the only painted colours on glossy white glaze #FBFAF6, soft glaze highlights, restrained composition with a large plain white centre, warm natural light, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, crackle, stains, pattern",
+      "usedIn": "TileFrame texture"
+    },
+    {
+      "file": "web/public/desigo/styles/gzhel/border-strip.png",
+      "size": "3600×400, transparent, tileable horizontally",
+      "transparent": true,
+      "prompt": "Horizontal hand-painted border of cobalt vines with small turquoise leaves and a fine dotted line above and below, Jaipur blue-pottery style, on glossy white, Jaipur blue pottery style, hand-painted cobalt blue #1F3F8F and turquoise #2F9AA8 as the only painted colours on glossy white glaze #FBFAF6, soft glaze highlights, restrained composition with a large plain white centre, warm natural light, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, figures, text",
+      "usedIn": "Dividers, BorderTransition"
+    },
+    {
+      "file": "web/public/desigo/styles/gzhel/ghee-cradle.png",
+      "size": "3200×2000",
+      "transparent": false,
+      "prompt": "A glossy white Jaipur blue-pottery shallow dish with a cobalt and turquoise floral rim and a fine gold edge, empty, on a milk-white linen surface, warm light, empty centre for a jar, Jaipur blue pottery style, hand-painted cobalt blue #1F3F8F and turquoise #2F9AA8 as the only painted colours on glossy white glaze #FBFAF6, soft glaze highlights, restrained composition with a large plain white centre, warm natural light, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, jar, ghee, festival lamps, deities",
+      "usedIn": "Ghee (ch. 12)"
+    }
+  ]
+}

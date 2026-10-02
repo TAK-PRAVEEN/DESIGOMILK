@@ -1,0 +1,226 @@
+{
+  "id": 3,
+  "slug": "swiss-design",
+  "name": "Swiss Design",
+  "priority": false,
+  "fit": 4,
+  "colors": {
+    "primary": "#1E7A68",
+    "onPrimary": "#F7F4EC",
+    "secondary": "#0B3B32",
+    "accent": "#7FE0B8",
+    "bg": "#F7F4EC",
+    "surface": "#EFE9DC",
+    "text": "#171918",
+    "textMuted": "#6B6F6C",
+    "line": "#171918",
+    "ok": "#1F5C45",
+    "pending": "#7A5A12",
+    "demo": "#171918"
+  },
+  "variants": {
+    "master-26": {
+      "base": "#1F5C45",
+      "deep": "#0A2A20",
+      "light": "#D9E8DF"
+    },
+    "root-14": {
+      "base": "#B3202A",
+      "deep": "#4A0A0F",
+      "light": "#F3D9D6"
+    },
+    "base-3": {
+      "base": "#E89A1C",
+      "deep": "#5A3304",
+      "light": "#F8E4C2"
+    },
+    "essential": {
+      "base": "#CDB89A",
+      "deep": "#4D4130",
+      "light": "#F4EDE2"
+    }
+  },
+  "fonts": {
+    "display": {
+      "family": "Inter Tight",
+      "package": "@fontsource-variable/inter-tight",
+      "weights": [
+        600,
+        700
+      ]
+    },
+    "body": {
+      "family": "Inter Tight",
+      "package": "@fontsource-variable/inter-tight",
+      "weights": [
+        400,
+        500
+      ]
+    },
+    "label": {
+      "family": "IBM Plex Mono",
+      "package": "@fontsource/ibm-plex-mono",
+      "weights": [
+        500
+      ]
+    },
+    "mono": {
+      "family": "IBM Plex Mono",
+      "package": "@fontsource/ibm-plex-mono",
+      "weights": [
+        400,
+        500
+      ]
+    },
+    "devanagari": {
+      "family": "Noto Sans Devanagari",
+      "package": "@fontsource-variable/noto-sans-devanagari",
+      "weights": [
+        400,
+        600
+      ]
+    },
+    "accent": {
+      "family": "Fraunces",
+      "package": "@fontsource-variable/fraunces",
+      "weights": [
+        300
+      ],
+      "style": "italic"
+    }
+  },
+  "type": {
+    "display": "clamp(4rem, 12vw, 14rem)",
+    "h1": "clamp(2.6rem, 5vw, 5rem)",
+    "h2": "clamp(1.75rem, 2.6vw, 2.4rem)",
+    "body": "clamp(1rem, 0.95rem + 0.2vw, 1.125rem)",
+    "label": "0.72rem"
+  },
+  "radius": {
+    "sm": "0",
+    "md": "0",
+    "lg": "0",
+    "pill": "999px (cursor and status dots only)"
+  },
+  "shadow": {
+    "bottle": "contact ellipse blur 4px rgba(23,25,24,.30)",
+    "panel": "none"
+  },
+  "motion": {
+    "easeOut": "cubic-bezier(.16,1,.3,1)",
+    "easeInOut": "cubic-bezier(.65,0,.35,1)",
+    "durMicro": 160,
+    "durReveal": 480,
+    "durScene": 800
+  },
+  "button": {
+    "primary": {
+      "bg": "#1E7A68",
+      "fg": "#F7F4EC",
+      "radius": "0",
+      "padding": "0 24px; height 48px",
+      "hover": "bg #0B3B32, arrow +6px"
+    },
+    "secondary": {
+      "bg": "transparent",
+      "fg": "#171918",
+      "border": "1px #171918",
+      "radius": "0",
+      "padding": "0 24px; height 48px",
+      "hover": "border 2px + 4% green tint"
+    },
+    "link": {
+      "fg": "#171918",
+      "underline": "1px",
+      "hover": "4px rule above, arrow +8px"
+    }
+  },
+  "images": [
+    {
+      "file": "web/public/desigo/styles/swiss-design/hero.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Seamless milk-white paper sweep photographed straight on, one soft diagonal band of morning light crossing from upper left, a single thin hard shadow line on the floor plane, vast empty space right of centre, Swiss International Typographic Style restraint, flat even light, milk white #F7F4EC, ink black #171918, brand green #1E7A68 and forest #0B3B32, precise orthogonal geometry, generous negative space, subtle offset-print paper texture, calm, objective, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, objects, props, gradients in colour, vignette",
+      "usedIn": "01 Hero, 15 Final CTA"
+    },
+    {
+      "file": "web/public/desigo/styles/swiss-design/hero-portrait.png",
+      "size": "1400×2400 (7:12)",
+      "transparent": false,
+      "prompt": "Vertical milk-white paper sweep with a soft diagonal band of light and a thin horizon line at 62% height, empty centre, Swiss International Typographic Style restraint, flat even light, milk white #F7F4EC, ink black #171918, brand green #1E7A68 and forest #0B3B32, precise orthogonal geometry, generous negative space, subtle offset-print paper texture, calm, objective, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, objects, props",
+      "usedIn": "01 Hero mobile"
+    },
+    {
+      "file": "web/public/desigo/styles/swiss-design/worlds/master-26.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "Flat matte colour field of pale green #D9E8DF paper with one crisp 4 percent darker vertical band and a single deep green #1F5C45 straight line crossing horizontally at the lower third, Swiss poster restraint, Swiss International Typographic Style restraint, flat even light, milk white #F7F4EC, ink black #171918, brand green #1E7A68 and forest #0B3B32, precise orthogonal geometry, generous negative space, subtle offset-print paper texture, calm, objective, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, leaves, texture noise, gradients",
+      "usedIn": "08 Four milks · /milk/master-26"
+    },
+    {
+      "file": "web/public/desigo/styles/swiss-design/worlds/root-14.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "Flat matte colour field of pale rose #F3D9D6 paper with a single red #B3202A straight line crossing at the lower third, exact geometry, Swiss poster restraint, Swiss International Typographic Style restraint, flat even light, milk white #F7F4EC, ink black #171918, brand green #1E7A68 and forest #0B3B32, precise orthogonal geometry, generous negative space, subtle offset-print paper texture, calm, objective, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, earth, texture noise, gradients",
+      "usedIn": "08 Four milks · /milk/root-14"
+    },
+    {
+      "file": "web/public/desigo/styles/swiss-design/worlds/base-3.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "Flat matte colour field of pale amber #F8E4C2 paper with a single amber #E89A1C straight line crossing at the lower third and one large faint circle outline, Swiss poster restraint, Swiss International Typographic Style restraint, flat even light, milk white #F7F4EC, ink black #171918, brand green #1E7A68 and forest #0B3B32, precise orthogonal geometry, generous negative space, subtle offset-print paper texture, calm, objective, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, sun rays, texture noise",
+      "usedIn": "08 Four milks · /milk/base-3"
+    },
+    {
+      "file": "web/public/desigo/styles/swiss-design/worlds/essential.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "Flat matte colour field of ivory #F4EDE2 paper with a single ivory-beige #CDB89A line outlined in thin dark brown #4D4130 crossing at the lower third, Swiss poster restraint, Swiss International Typographic Style restraint, flat even light, milk white #F7F4EC, ink black #171918, brand green #1E7A68 and forest #0B3B32, precise orthogonal geometry, generous negative space, subtle offset-print paper texture, calm, objective, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, texture noise, ornaments",
+      "usedIn": "08 Four milks · /milk/essential"
+    },
+    {
+      "file": "web/public/desigo/styles/swiss-design/trace/transit-ground.png",
+      "size": "3600×2000",
+      "transparent": false,
+      "prompt": "Abstract transit-map ground in deep forest green #0B3B32 with a faint 24 px square grid in 4 percent milk lines and a few thin straight lines meeting at 45 and 90 degree angles, no nodes, no labels, Swiss International Typographic Style restraint, flat even light, milk white #F7F4EC, ink black #171918, brand green #1E7A68 and forest #0B3B32, precise orthogonal geometry, generous negative space, subtle offset-print paper texture, calm, objective, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, glow, neon, curves, city map",
+      "usedIn": "06 Traceability, /trace"
+    },
+    {
+      "file": "web/public/desigo/styles/swiss-design/journey/station-line.png",
+      "size": "4800×800, transparent",
+      "transparent": true,
+      "prompt": "Single horizontal transit line 4 px thick in ink black with seven evenly spaced white circular stations outlined in black, perfectly flat vector look, isolated on transparent background, Swiss International Typographic Style restraint, flat even light, milk white #F7F4EC, ink black #171918, brand green #1E7A68 and forest #0B3B32, precise orthogonal geometry, generous negative space, subtle offset-print paper texture, calm, objective, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, labels, icons, perspective",
+      "usedIn": "03 Cow to bottle"
+    },
+    {
+      "file": "web/public/desigo/styles/swiss-design/textures/offset-paper.png",
+      "size": "2048×2048, seamless",
+      "transparent": false,
+      "prompt": "Seamless tileable texture of uncoated offset printing paper in milk white #F7F4EC, extremely fine fibres, flat scan lighting, Swiss International Typographic Style restraint, flat even light, milk white #F7F4EC, ink black #171918, brand green #1E7A68 and forest #0B3B32, precise orthogonal geometry, generous negative space, subtle offset-print paper texture, calm, objective, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, folds, stains, shadows",
+      "usedIn": "10 Heritage module, print-like grounds"
+    },
+    {
+      "file": "web/public/desigo/styles/swiss-design/technology/grid-plane.png",
+      "size": "3600×2000",
+      "transparent": false,
+      "prompt": "Charcoal #171918 plane with a precise thin milk-white 12-column grid and baseline lines at 6 percent opacity, one signal mint #7FE0B8 square highlighting a single module, Swiss International Typographic Style restraint, flat even light, milk white #F7F4EC, ink black #171918, brand green #1E7A68 and forest #0B3B32, precise orthogonal geometry, generous negative space, subtle offset-print paper texture, calm, objective, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, perspective, glow, neon",
+      "usedIn": "11 Technology"
+    }
+  ],
+  "colorsDark": {
+    "bg": "#0B3B32",
+    "text": "#F7F4EC",
+    "textMuted": "#A9B8B2",
+    "accent": "#7FE0B8"
+  }
+}

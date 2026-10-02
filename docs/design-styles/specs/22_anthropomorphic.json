@@ -1,0 +1,221 @@
+{
+  "id": 22,
+  "slug": "anthropomorphic",
+  "name": "Anthropomorphic (bottle personality)",
+  "priority": false,
+  "fit": 2,
+  "colors": {
+    "primary": "#0B3B32",
+    "onPrimary": "#F7F4EC",
+    "secondary": "#1E7A68",
+    "accent": "#C8A96B",
+    "bg": "#F7F4EC",
+    "surface": "#EDE4D0",
+    "text": "#1E211F",
+    "textMuted": "#55584F",
+    "line": "#CFC5AF",
+    "ok": "#1E7A68",
+    "pending": "#8C6A43",
+    "demo": "#0B3B32"
+  },
+  "variants": {
+    "master-26": {
+      "base": "#1F5C45",
+      "deep": "#0A2A20",
+      "light": "#D9E8DF"
+    },
+    "root-14": {
+      "base": "#B3202A",
+      "deep": "#4A0A0F",
+      "light": "#F3D9D6"
+    },
+    "base-3": {
+      "base": "#E89A1C",
+      "deep": "#5A3304",
+      "light": "#F8E4C2"
+    },
+    "essential": {
+      "base": "#CDB89A",
+      "deep": "#4D4130",
+      "light": "#F4EDE2"
+    }
+  },
+  "fonts": {
+    "display": {
+      "family": "Fraunces",
+      "package": "@fontsource-variable/fraunces",
+      "weights": [
+        500
+      ]
+    },
+    "headline": {
+      "family": "Fraunces",
+      "package": "@fontsource-variable/fraunces",
+      "weights": [
+        400,
+        500
+      ]
+    },
+    "body": {
+      "family": "Inter Tight",
+      "package": "@fontsource-variable/inter-tight",
+      "weights": [
+        400,
+        500
+      ]
+    },
+    "label": {
+      "family": "Inter Tight",
+      "package": "@fontsource-variable/inter-tight",
+      "weights": [
+        600
+      ]
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "package": "@fontsource-variable/jetbrains-mono",
+      "weights": [
+        400,
+        500
+      ]
+    },
+    "devanagari": {
+      "family": "Baloo 2",
+      "package": "@fontsource-variable/baloo-2",
+      "weights": [
+        400,
+        600
+      ]
+    }
+  },
+  "type": {
+    "display": "clamp(3.5rem, 8vw, 8rem)",
+    "h1": "clamp(2.6rem, 5vw, 5rem)",
+    "h2": "clamp(1.8rem, 3vw, 3rem)",
+    "body": "clamp(1.0625rem, 1rem + 0.2vw, 1.125rem)",
+    "label": "0.72rem",
+    "voice": "clamp(1.25rem, 2vw, 1.75rem)"
+  },
+  "radius": {
+    "sm": "2px",
+    "md": "4px",
+    "lg": "999px"
+  },
+  "shadow": {
+    "bottle": "contact ellipse 60% x 8% blur 14px rgba(30,33,31,.28) + 0 30px 60px -30px rgba(30,33,31,.22)",
+    "panel": "0 12px 24px -16px rgba(11,59,50,.25)"
+  },
+  "motion": {
+    "easeOut": "cubic-bezier(.16,1,.3,1)",
+    "easeInOut": "cubic-bezier(.65,0,.35,1)",
+    "easeMilk": "cubic-bezier(.22,.9,.24,1)",
+    "durMicro": 240,
+    "durReveal": 600,
+    "durScene": 900
+  },
+  "button": {
+    "primary": {
+      "bg": "transparent",
+      "fg": "#0B3B32",
+      "radius": "0",
+      "padding": "14px 0 10px",
+      "hover": "1px frame draws 600ms, arrow +8px, bottle tilts toward it"
+    },
+    "secondary": {
+      "bg": "transparent",
+      "fg": "#1E211F",
+      "radius": "0",
+      "padding": "14px 0 10px",
+      "hover": "underline 1→2px, arrow travels"
+    },
+    "link": {
+      "bg": "transparent",
+      "fg": "#1E7A68",
+      "radius": "0",
+      "padding": "0",
+      "hover": "underline 2px, arrow +6px"
+    }
+  },
+  "images": [
+    {
+      "file": "web/public/desigo/styles/anthropomorphic/hero-landscape.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Calm dawn pasture at the edge of a Rajasthan village, low mist, a khejri tree, two zebu cows grazing far left seen side-on at eye level, an empty sunlit path leading to an empty centre, gentle storybook line-and-wash illustration inspired by Indian miniature painting, observed and respectful, warm morning light, milk white #F7F4EC, paper #EDE4D0, forest #0B3B32, earth #8C6A43, gold #C8A96B, blush #F3D9D6 and morning sky #DCE7E6, calm, adult and dignified, no text, no watermark, no logo, no letters",
+      "negative": "cartoon, mascot, cow faces looking at viewer, smiling animals, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Ch. 01 hero"
+    },
+    {
+      "file": "web/public/desigo/styles/anthropomorphic/hero-portrait.png",
+      "size": "1400×2400 (7:12)",
+      "transparent": false,
+      "prompt": "Same dawn pasture as a tall portrait, path rising into the empty centre, one zebu cow small at lower left, gentle storybook line-and-wash illustration inspired by Indian miniature painting, observed and respectful, warm morning light, milk white #F7F4EC, paper #EDE4D0, forest #0B3B32, earth #8C6A43, gold #C8A96B, blush #F3D9D6 and morning sky #DCE7E6, calm, adult and dignified, no text, no watermark, no logo, no letters",
+      "negative": "cartoon, mascot, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Mobile hero"
+    },
+    {
+      "file": "web/public/desigo/styles/anthropomorphic/worlds/master-26.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Forest morning in soft line-and-wash, deep greens #1F5C45 and #0A2A20, dappled light, an empty clearing in the centre, gentle storybook line-and-wash illustration inspired by Indian miniature painting, observed and respectful, warm morning light, milk white #F7F4EC, paper #EDE4D0, forest #0B3B32, earth #8C6A43, gold #C8A96B, blush #F3D9D6 and morning sky #DCE7E6, calm, adult and dignified, no text, no watermark, no logo, no letters",
+      "negative": "named herbs, characters, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Ch. 08 / /milk/master-26"
+    },
+    {
+      "file": "web/public/desigo/styles/anthropomorphic/worlds/root-14.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Red-earth fields in line-and-wash, crimson #B3202A to oxblood #4A0A0F soil bands, a lone khejri, empty centre, gentle storybook line-and-wash illustration inspired by Indian miniature painting, observed and respectful, warm morning light, milk white #F7F4EC, paper #EDE4D0, forest #0B3B32, earth #8C6A43, gold #C8A96B, blush #F3D9D6 and morning sky #DCE7E6, calm, adult and dignified, no text, no watermark, no logo, no letters",
+      "negative": "characters, people, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Ch. 08 / /milk/root-14"
+    },
+    {
+      "file": "web/public/desigo/styles/anthropomorphic/worlds/base-3.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Golden-hour village lane in line-and-wash, amber #E89A1C light, long shadows, an empty doorstep in the centre, gentle storybook line-and-wash illustration inspired by Indian miniature painting, observed and respectful, warm morning light, milk white #F7F4EC, paper #EDE4D0, forest #0B3B32, earth #8C6A43, gold #C8A96B, blush #F3D9D6 and morning sky #DCE7E6, calm, adult and dignified, no text, no watermark, no logo, no letters",
+      "negative": "characters, people's faces, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Ch. 08 / /milk/base-3"
+    },
+    {
+      "file": "web/public/desigo/styles/anthropomorphic/worlds/essential.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Ivory gallery room in line-and-wash, warm ivory #F4EDE2 walls, soft skylight, a pale stone plinth in the centre, gentle storybook line-and-wash illustration inspired by Indian miniature painting, observed and respectful, warm morning light, milk white #F7F4EC, paper #EDE4D0, forest #0B3B32, earth #8C6A43, gold #C8A96B, blush #F3D9D6 and morning sky #DCE7E6, calm, adult and dignified, no text, no watermark, no logo, no letters",
+      "negative": "objects on plinth, characters, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Ch. 08 / /milk/essential"
+    },
+    {
+      "file": "web/public/desigo/styles/anthropomorphic/journey/path-home.png",
+      "size": "4800×1600 (3:1)",
+      "transparent": false,
+      "prompt": "A long storybook panorama: a farm with zebu cows at left, a dirt path past a collection hut and a small dairy plant, ending at a town doorstep at dawn on the right, the path itself left clear, gentle storybook line-and-wash illustration inspired by Indian miniature painting, observed and respectful, warm morning light, milk white #F7F4EC, paper #EDE4D0, forest #0B3B32, earth #8C6A43, gold #C8A96B, blush #F3D9D6 and morning sky #DCE7E6, calm, adult and dignified, no text, no watermark, no logo, no letters",
+      "negative": "vehicles with branding, cartoon faces, speech bubbles, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Ch. 03 reverse journey, /learn storybook"
+    },
+    {
+      "file": "web/public/desigo/styles/anthropomorphic/return/empty-crate.png",
+      "size": "2400×1600 (3:2)",
+      "transparent": true,
+      "prompt": "An empty wooden milk crate with empty slots on a doorstep step, soft morning light, isolated on transparent background, gentle storybook line-and-wash illustration inspired by Indian miniature painting, observed and respectful, warm morning light, milk white #F7F4EC, paper #EDE4D0, forest #0B3B32, earth #8C6A43, gold #C8A96B, blush #F3D9D6 and morning sky #DCE7E6, calm, adult and dignified, no text, no watermark, no logo, no letters",
+      "negative": "bottles, jars, objects in crate, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Ch. 15 homecoming, /reserve return loop"
+    },
+    {
+      "file": "web/public/desigo/styles/anthropomorphic/heritage/pichwai-cow-reference.png",
+      "size": "1600×2000 (4:5)",
+      "transparent": true,
+      "prompt": "Miniature-painting inspired study of a Kankrej zebu cow, silver-grey coat, large lyre-shaped horns, simple gold ornament on the neck band, calm side profile, on transparent background, gentle storybook line-and-wash illustration inspired by Indian miniature painting, observed and respectful, warm morning light, milk white #F7F4EC, paper #EDE4D0, forest #0B3B32, earth #8C6A43, gold #C8A96B, blush #F3D9D6 and morning sky #DCE7E6, calm, adult and dignified, no text, no watermark, no logo, no letters",
+      "negative": "deities, Krishna, Kamadhenu, tilak, human expressions, cartoon, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Ch. 10 mood reference for the commissioned illustrator"
+    },
+    {
+      "file": "web/public/desigo/styles/anthropomorphic/textures/storybook-paper.png",
+      "size": "2400×2400 seamless",
+      "transparent": false,
+      "prompt": "Seamless tileable soft handmade paper #EDE4D0 with faint fibres, flat light, gentle storybook line-and-wash illustration inspired by Indian miniature painting, observed and respectful, warm morning light, milk white #F7F4EC, paper #EDE4D0, forest #0B3B32, earth #8C6A43, gold #C8A96B, blush #F3D9D6 and morning sky #DCE7E6, calm, adult and dignified, no text, no watermark, no logo, no letters",
+      "negative": "stains, text, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Storybook pages, passport card"
+    }
+  ]
+}

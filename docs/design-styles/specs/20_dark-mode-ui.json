@@ -1,0 +1,226 @@
+{
+  "id": 20,
+  "slug": "dark-mode-ui",
+  "name": "Dark Mode UI",
+  "priority": false,
+  "fit": 4,
+  "colors": {
+    "primary": "#3FA58C",
+    "onPrimary": "#0E100F",
+    "secondary": "#D4B97F",
+    "accent": "#7FE0B8",
+    "bg": "#0E100F",
+    "surface": "#171918",
+    "text": "#F1EDE3",
+    "textMuted": "#B8B3A7",
+    "line": "rgba(247,244,236,.09)",
+    "ok": "#7FE0B8",
+    "pending": "#E8B04A",
+    "demo": "#E8B04A"
+  },
+  "variants": {
+    "master-26": {
+      "base": "#1F5C45",
+      "deep": "#0A2A20",
+      "light": "#D9E8DF"
+    },
+    "root-14": {
+      "base": "#B3202A",
+      "deep": "#4A0A0F",
+      "light": "#F3D9D6"
+    },
+    "base-3": {
+      "base": "#E89A1C",
+      "deep": "#5A3304",
+      "light": "#F8E4C2"
+    },
+    "essential": {
+      "base": "#CDB89A",
+      "deep": "#4D4130",
+      "light": "#F4EDE2"
+    }
+  },
+  "fonts": {
+    "display": {
+      "family": "Inter Tight",
+      "package": "@fontsource-variable/inter-tight",
+      "weights": [
+        300,
+        600
+      ]
+    },
+    "headline": {
+      "family": "Inter Tight",
+      "package": "@fontsource-variable/inter-tight",
+      "weights": [
+        400,
+        500
+      ]
+    },
+    "body": {
+      "family": "Inter",
+      "package": "@fontsource-variable/inter",
+      "weights": [
+        420
+      ]
+    },
+    "label": {
+      "family": "Inter Tight",
+      "package": "@fontsource-variable/inter-tight",
+      "weights": [
+        600
+      ]
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "package": "@fontsource-variable/jetbrains-mono",
+      "weights": [
+        400,
+        500
+      ]
+    },
+    "devanagari": {
+      "family": "Hind",
+      "package": "@fontsource/hind",
+      "weights": [
+        400,
+        500
+      ]
+    },
+    "emotional": {
+      "family": "Fraunces",
+      "package": "@fontsource-variable/fraunces",
+      "weights": [
+        300
+      ]
+    }
+  },
+  "type": {
+    "display": "clamp(3.5rem, 8vw, 8rem)",
+    "h1": "clamp(2.4rem, 4.6vw, 4.5rem)",
+    "h2": "clamp(1.6rem, 2.8vw, 2.6rem)",
+    "body": "1rem",
+    "label": "0.72rem"
+  },
+  "radius": {
+    "sm": "2px",
+    "md": "2px",
+    "lg": "999px"
+  },
+  "shadow": {
+    "bottle": "contact ellipse 60% x 8% blur 18px rgba(0,0,0,.6) + reflection 20% flipped, gradient mask + stage pool radial-gradient(#1F2220,#0E100F)",
+    "panel": "none (elevation by surface colour)"
+  },
+  "motion": {
+    "easeOut": "cubic-bezier(.16,1,.3,1)",
+    "easeInOut": "cubic-bezier(.65,0,.35,1)",
+    "durMicro": 160,
+    "durReveal": 600,
+    "durScene": 900
+  },
+  "button": {
+    "primary": {
+      "bg": "#3FA58C",
+      "fg": "#0E100F",
+      "radius": "2px",
+      "padding": "14px 22px",
+      "hover": "bg #4DB59B, arrow +6px, 160ms"
+    },
+    "secondary": {
+      "bg": "#171918",
+      "fg": "#F1EDE3",
+      "radius": "2px",
+      "padding": "14px 22px",
+      "hover": "bg #1F2220, border rgba(247,244,236,.16)"
+    },
+    "link": {
+      "bg": "transparent",
+      "fg": "#3FA58C",
+      "radius": "0",
+      "padding": "0",
+      "hover": "underline 2px, arrow +6px"
+    }
+  },
+  "images": [
+    {
+      "file": "web/public/desigo/styles/dark-mode-ui/hero-landscape.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "An empty dark product stage: warm charcoal backdrop, a faint glossy reflective floor, a soft circular pool of light in the centre where an object would stand, gentle falloff to the edges, dark premium product-launch stage, warm near-black charcoal #0E100F and #171918, one soft key light from upper left, subtle rim light, restrained accents of forest #0B3B32 and signal mint #7FE0B8 used sparingly, shadows lifted not crushed, calm and precise, no text, no watermark, no logo, no letters",
+      "negative": "objects on stage, spotlights fixtures, neon, smoke, blue tint, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Ch. 01 black stage, ch. 15"
+    },
+    {
+      "file": "web/public/desigo/styles/dark-mode-ui/hero-portrait.png",
+      "size": "1400×2400 (7:12)",
+      "transparent": false,
+      "prompt": "Same empty dark stage as a tall portrait, pool of light in the lower-centre, faint reflective floor, dark premium product-launch stage, warm near-black charcoal #0E100F and #171918, one soft key light from upper left, subtle rim light, restrained accents of forest #0B3B32 and signal mint #7FE0B8 used sparingly, shadows lifted not crushed, calm and precise, no text, no watermark, no logo, no letters",
+      "negative": "objects, neon, blue tint, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Mobile hero"
+    },
+    {
+      "file": "web/public/desigo/styles/dark-mode-ui/worlds/master-26.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Deep green-black #0A2A20 stage with a faint leaf-canopy shadow gobo cast across the back wall, soft pool of light in the centre, dark premium product-launch stage, warm near-black charcoal #0E100F and #171918, one soft key light from upper left, subtle rim light, restrained accents of forest #0B3B32 and signal mint #7FE0B8 used sparingly, shadows lifted not crushed, calm and precise, no text, no watermark, no logo, no letters",
+      "negative": "visible leaves, objects, neon green, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Ch. 08 / /milk/master-26"
+    },
+    {
+      "file": "web/public/desigo/styles/dark-mode-ui/worlds/root-14.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Oxblood-black #2A0609 stage with a warm red rim light grazing in from the right, soft central pool, dark premium product-launch stage, warm near-black charcoal #0E100F and #171918, one soft key light from upper left, subtle rim light, restrained accents of forest #0B3B32 and signal mint #7FE0B8 used sparingly, shadows lifted not crushed, calm and precise, no text, no watermark, no logo, no letters",
+      "negative": "objects, red haze, fire, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Ch. 08 / /milk/root-14"
+    },
+    {
+      "file": "web/public/desigo/styles/dark-mode-ui/worlds/base-3.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Umber-black #2B1802 stage with a warm amber pool of light on the floor in the centre, faint dust in the beam, dark premium product-launch stage, warm near-black charcoal #0E100F and #171918, one soft key light from upper left, subtle rim light, restrained accents of forest #0B3B32 and signal mint #7FE0B8 used sparingly, shadows lifted not crushed, calm and precise, no text, no watermark, no logo, no letters",
+      "negative": "objects, flames, orange smoke, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Ch. 08 / /milk/base-3"
+    },
+    {
+      "file": "web/public/desigo/styles/dark-mode-ui/worlds/essential.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Neutral warm-dark #24201A stage lit only by a clean white key light, minimal, the most restrained composition, dark premium product-launch stage, warm near-black charcoal #0E100F and #171918, one soft key light from upper left, subtle rim light, restrained accents of forest #0B3B32 and signal mint #7FE0B8 used sparingly, shadows lifted not crushed, calm and precise, no text, no watermark, no logo, no letters",
+      "negative": "objects, coloured light, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Ch. 08 / /milk/essential"
+    },
+    {
+      "file": "web/public/desigo/styles/dark-mode-ui/trace/grid-horizon.png",
+      "size": "3600×2000 (9:5)",
+      "transparent": false,
+      "prompt": "Dark forest-green #07211C void with a faint mint #7FE0B8 perspective grid receding to a horizon and one thin luminous path curving through eight small glowing nodes, dark premium product-launch stage, warm near-black charcoal #0E100F and #171918, one soft key light from upper left, subtle rim light, restrained accents of forest #0B3B32 and signal mint #7FE0B8 used sparingly, shadows lifted not crushed, calm and precise, no text, no watermark, no logo, no letters",
+      "negative": "sci-fi city, HUD text, numbers, neon magenta, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Ch. 06 / ch. 11, /trace stage"
+    },
+    {
+      "file": "web/public/desigo/styles/dark-mode-ui/textures/noise-dark.png",
+      "size": "1024×1024 seamless",
+      "transparent": false,
+      "prompt": "Seamless tileable very fine monochrome noise on #0E100F, barely visible, even, dark premium product-launch stage, warm near-black charcoal #0E100F and #171918, one soft key light from upper left, subtle rim light, restrained accents of forest #0B3B32 and signal mint #7FE0B8 used sparingly, shadows lifted not crushed, calm and precise, no text, no watermark, no logo, no letters",
+      "negative": "patterns, scratches, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "1% anti-banding noise"
+    },
+    {
+      "file": "web/public/desigo/styles/dark-mode-ui/heritage/warm-dark-paper.png",
+      "size": "2400×2400 seamless",
+      "transparent": false,
+      "prompt": "Seamless tileable warm dark paper texture #1E1B16 with very soft cotton fibres, flat light, dark premium product-launch stage, warm near-black charcoal #0E100F and #171918, one soft key light from upper left, subtle rim light, restrained accents of forest #0B3B32 and signal mint #7FE0B8 used sparingly, shadows lifted not crushed, calm and precise, no text, no watermark, no logo, no letters",
+      "negative": "stains, text, folds, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Ch. 10 heritage in dark mode"
+    },
+    {
+      "file": "web/public/desigo/styles/dark-mode-ui/ghee/gold-lit.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Warm dark #1C160C stage with a honey-gold key light from above-left and a soft gold pool in the centre, dark premium product-launch stage, warm near-black charcoal #0E100F and #171918, one soft key light from upper left, subtle rim light, restrained accents of forest #0B3B32 and signal mint #7FE0B8 used sparingly, shadows lifted not crushed, calm and precise, no text, no watermark, no logo, no letters",
+      "negative": "jar, objects, flames, lamps, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Ch. 12 ghee"
+    }
+  ]
+}

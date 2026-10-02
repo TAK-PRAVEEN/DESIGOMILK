@@ -16,9 +16,9 @@ Reference points:
 
 ## 2. Fit for DESIGO® — score 4 / 5 (Technology, Trace and product launch) · 3.5 / 5 (whole site)
 
-**Why it fits.** The brief literally says "Apple product launch × interactive 3D exhibition". DESIGO®'s differentiator is a **traceability system** (RTCOM: ORIGIN · TRACE · TEST · CHILL · PROCESS · FILL · DELIVER) and a QR identity on every bottle. A futuristic, instrument-like language makes that system feel credible and premium. The glass bottle with its clean cap is a beautiful object for spotlit, keynote-style presentation, and the 360 sequences make it a true exhibition object.
+**Why it fits.** The brief literally says "Apple product launch × interactive 3D exhibition". DESIGO®'s differentiator is a **traceability system**, told publicly as seven verbs (ORIGIN · TRACE · TEST · CHILL · PROCESS · FILL · DELIVER), and a QR identity for each returnable bottle (*pending*; in pilot). A futuristic, instrument-like language makes that system feel credible and premium. The glass bottle with its clean cap is a beautiful object for spotlit, keynote-style presentation, and the 360 sequences make it a true exhibition object.
 
-**Where it fights.** Milk is natural, rural and heritage-rich. A fully futuristic site would feel cold, industrial or "lab milk", the opposite of indigenous cows on free-grazing land. Over-claiming technology is also a risk (no "world's first", no RFID; current system is QR, and the RTCOM apps are in pilot).
+**Where it fights.** Milk is natural, rural and heritage-rich. A fully futuristic site would feel cold, industrial or "lab milk", the opposite of indigenous cows on free-grazing land. Over-claiming technology is also a risk (no "world's first", no RFID; the current system is QR, and the farm, plant and delivery apps are in pilot).
 
 **Recommendation.** Use Futuristic as the language for the **bottle hero / product launch moments, Chapter 06 Trace, 07 Quality, 11 Technology, 13 Trace your milk, /trace and /technology**, and pair it with a warm heritage style (Wabi-Sabi, Editorial, Mixed Media) for farm, breeds, heritage and ghee. The idea: "Tradition is the source. Technology protects the journey." becomes the literal style switch.
 
@@ -165,3 +165,127 @@ Total ≈ 64 days (plus paired-style chapters from the chosen heritage style).
 **Risks**: a cold "lab milk" impression, technology overclaim, heavy pages. Mitigation: paired heritage style, claim rules, progressive loading.
 
 **Best used for:** the bottle launch moments and the Trace / Quality / Technology / Trace-your-milk chapters, paired with a warm heritage style.
+
+---
+
+## 12. Build-ready spec sheet
+
+> Audit 2026-10-03: Strong keynote direction; missing were colour roles and state colours, font packages and sizes, component states, motion token table, image prompts and acceptance list. All added. Fonts already OFL (Inter Tight, Geist, Doto, JetBrains Mono, Fraunces). Body fix: internal system name removed from §2 (seven public verbs only) and the per-bottle QR identity marked pending / in pilot.
+
+### 12.1 Colour system
+| Role | Token | Hex | Use | Contrast note |
+|---|---|---|---|---|
+| Primary | --c-primary | `#7FE0B8` | signal: live/active state, primary CTA brackets, data glow | 12.4:1 vs bg (body-safe) |
+| Primary ink | --c-on-primary | `#0A0C0B` | label on a signal-filled (active) control | 12.4:1 on primary |
+| Secondary | --c-secondary | `#1E7A68` | brand green: links on light lab, secondary emphasis (UI only on void) | 3.8:1 vs bg (large text / UI only) |
+| Accent | --c-accent | `#C8A96B` | heritage cross-reference only (gold tag linking ghee/heritage) | 8.7:1 vs bg (body-safe) |
+| Background | --c-bg | `#0A0C0B` | dark lab void (never pure #000) | 16.7:1 with text |
+| Surface | --c-surface | `#171918` | raised instrument cards on dark (brand charcoal) | text on surface 15.0:1 |
+| Text | --c-text | `#ECEDEA` | text on void | 16.7:1 vs bg (body-safe) |
+| Muted text | --c-text-muted | `#9BA19E` | secondary text, mono labels, PENDING tags | 7.5:1 vs bg (body-safe) |
+| Line | --c-line | `#2A2F2D` | hairlines, construction lines at 4% | structural hairline, 1.4:1, never text |
+| Success / Pending / Demo | --c-ok / --c-pending / --c-demo | `#7FE0B8` / `#9BA19E` / `#7FE0B8` | ok = filled signal tick; pending = dotted underline + "PENDING" mono tag in muted; DEMO = large signal-outlined badge "DEMO · not live data" with signal text, sample IDs say "sample format" | signal on void 12.4:1; muted on void 7.5:1 |
+
+Variant worlds in this style: MASTER 26 · ROOT 14 · BASE 3 · ESSENTIAL (base / deep / light hex for each).
+
+| Variant | Base | Deep | Light | World in this style |
+|---|---|---|---|---|
+| MASTER 26 (V1+, green cap) | `#1F5C45` | `#0A2A20` | `#D9E8DF` | dark green void `#06140F`, cool overhead + `#1F5C45` rim, floor reflection tinted `#D9E8DF` 8%; readout `V1+ · 26 HERBS (pending) · EXTENDED COLD CHAIN (pending)` |
+| ROOT 14 (V1, red cap) | `#B3202A` | `#4A0A0F` | `#F3D9D6` | deep red-black `#140405`, warm side light, `#B3202A` rim; `V1 · 14 HERBS (pending) · FREE GRAZED (pending)` |
+| BASE 3 (V2, amber cap) | `#E89A1C` | `#5A3304` | `#F8E4C2` | amber-black `#140C02`, low golden key `#E89A1C`; `V2 · 3 HERBS (pending; conflict logged)` |
+| ESSENTIAL (V3, ivory cap) | `#CDB89A` | `#4D4130` | `#F4EDE2` | **white lab** `#FAFAF7`, soft daylight, ivory rim `#CDB89A`; `V3 · BALANCED DIET (pending)` |
+
+Dark-chapter inversion: two labs. Dark lab is the default (hero, trace, technology, chambers). **White lab** (Quality, ESSENTIAL, /reserve, milk-as-material) swaps: `--c-bg` → `#FAFAF7`, `--c-surface` → `#F7F4EC`, `--c-text` → `#171918`, muted → `#5E6360`, `--c-primary` → `#1E7A68`, line → `#D9DAD5`, logo → charcoal. Transition = the scan-line expand (900 ms). Paired heritage chapters use their own style tokens.
+
+Additional style tokens (kept from §3): `--fu-white` `#FAFAF7`, `--fu-milk` `#F7F4EC` (the milk itself, never blue-white), `--fu-forest` `#0B3B32` (footer), `--fu-line-light` `#D9DAD5`.
+
+### 12.2 Typography
+| Role | Font family | Source (npm @fontsource… / Google Fonts) | Weights / axes | Size (clamp) | Line-height | Tracking | Case |
+|---|---|---|---|---|---|---|---|
+| Display / hero | Inter Tight (alt. Geist) | `@fontsource-variable/inter-tight` (alt. `@fontsource-variable/geist`) | wght 200–300 | `clamp(4rem, 2rem + 9vw, 16rem)` | 0.9 | −0.04em | Sentence / upper for statements |
+| Headline H1–H2 | Inter Tight · Fraunces Italic (one heritage line per chapter) | `@fontsource-variable/inter-tight` · `@fontsource-variable/fraunces` | 300 · italic 300 | H1 `clamp(2.6rem, 1.4rem + 5vw, 6rem)` · H2 `clamp(1.8rem, 1.3rem + 2vw, 3rem)` | 1.0 · 1.15 | −0.03em · 0 | Sentence |
+| Body | Inter Tight | `@fontsource-variable/inter-tight` | 400 (never lighter for body) | `clamp(1rem, .95rem + .25vw, 1.125rem)` | 1.6 | 0 | Sentence, 52ch |
+| Label / UI | JetBrains Mono (technical labels) | `@fontsource-variable/jetbrains-mono` | 400 | `.6875rem` (11 px) | 1.3 | +0.12em | Upper |
+| Data / mono | Doto (instrument numerals only) · JetBrains Mono (values) | `@fontsource-variable/doto` · `@fontsource-variable/jetbrains-mono` | Doto 700 · Mono 400 tabular | readout `clamp(4rem, 2rem + 10vw, 20rem)` · values `.875rem` | 1.0 · 1.4 | 0 · +0.02em | Numerals |
+| Devanagari (optional) | Noto Sans Devanagari | `@fontsource-variable/noto-sans-devanagari` | 300 / 400 | matches body | 1.65 | 0 | — |
+
+Licence: all fonts must be open-licence (OFL/Apache). Inter Tight, Geist, Doto, JetBrains Mono, Fraunces, Noto Sans Devanagari: all OFL 1.1, no replacement needed. Pairing: one grotesk family from hairline display to UI keeps the system unified; mono and dot-matrix are the instruments; one Fraunces line is the bridge to heritage.
+
+### 12.3 Layout & surfaces
+- Grid: 12 columns (4 on mobile), 24 px gutters, 5vw margins, max-width 1440 px; visible construction lines at 4% on dark sections (hidden on mobile); text measure 52ch.
+- Keynote pacing: one idea per screen; section heights in multiples of 100svh; pins 150–300vh.
+- Spacing (4 px base): 4 · 8 · 12 · 16 · 24 · 32 · 48 · 64 · 96 · 128 · 192.
+- Radius: `sm 0` · `md 2px` · `lg 4px` (instrument cards); corner brackets (┌ ┐ 12 px, 1 px) instead of rounded frames; pill only for cursor ring.
+- Border: 1 px `#2A2F2D` on dark, `#D9DAD5` on light.
+- Shadow: no UI shadows. Bottle: spotlight from above, rim light both sides, glossy floor with 30% reflection and caustics on dark; soft shadow + faint cool reflection on white.
+- Texture: none (no grain). Light is the texture: spotlights, light sweeps, reflections.
+
+### 12.4 Components
+For each: anatomy, sizes, states (default · hover · focus-visible · active · disabled · loading), motion, a11y.
+- **Primary button**: label (Inter Tight 500 upper +0.12em) + arrow framed by four 12 px signal corner brackets, 48 px, padding 14 px 24 px. States: default brackets 60% · hover brackets animate in to the label edge (200 ms), label shifts 2 px, arrow travels · focus-visible 2 px `#7FE0B8` ring offset 3 px + brackets 100% · active fill `#7FE0B8`, `#0A0C0B` label · disabled 30%, brackets static · loading "power-on" readout `···` (160 ms steps). 44 px target.
+- **Secondary button**: label + arrow with 1 px `#ECEDEA` underline at 40%; hover underline to signal and arrow travels; focus signal ring; active signal label; disabled 30%; loading scanning underline.
+- **Text / arrow link**: Inter Tight with 1 px underline at 40%; hover signal underline (240 ms) and 2 px arrow shift; focus signal ring. On white lab: green `#1E7A68`.
+- **Icon button (incl. menu)**: 40 px square with corner brackets on hover; 1.25 px monoline glyph, square terminals, 20 px grid; idle outline, active signal fill. Menu = two hairlines → X. Focus signal ring; disabled 30%. `aria-label`, `aria-expanded`.
+- **Navigation bar (desktop + mobile menu) + DESIGO® logo loop**: void bar 64 px (56 px mobile), 1 px `#2A2F2D` rule, logo left, links in mono labels, RESERVE bracketed primary. Mobile: menu opens a full-screen dark lab with links 40 px Inter Tight 200 and mono index numbers, focus trapped, Esc closes. Logo loop: DESIGO® wordmark (vector SVG, never redrawn) runs the house black write / un-write loop: D · waves · S · I · G · O draw on (0–1.2 s, 480 ms each, 95 ms stagger) → hold to 3.0 s → un-write in reverse 3.0–4.2 s → rest to 4.6 s → repeat, infinite. Charcoal `#171918` on light grounds, white `#FFFFFF` on dark grounds, swapped by section theme only; never a colour change inside the loop. Reduced motion: static full wordmark. `aria-label="DESIGO® home"`; the animation is `aria-hidden`.
+- **Cursor (default · hover · ROTATE · EXPLORE · ENTER · VIEW · TRACE; touch fallback)**: default: 20 px 1 px crosshair with centre dot on dark / 10 px ring on light · hover corner brackets snap around the target (magnetic ≤ 6 px) · ROTATE `DRAG · 360°` mono over the bottle · EXPLORE brackets + `EXPLORE` · ENTER `ENTER →` over chambers · VIEW `VIEW` over process photos · TRACE crosshair locks to map nodes with node code. Touch / coarse pointer: custom cursor not rendered; native behaviour, and the ROTATE / EXPLORE hint appears once as a static chip beside the bottle and fades after the first drag.
+- **Card / panel / info block**: InstrumentCard: `#171918`, 1 px `#2A2F2D`, radius 4 px, corner brackets, padding 24 px, mono labels + Inter Tight values. Hover (interactive) brackets to signal; focus signal ring; readouts power on (0 → .6 → 1 in 160 ms).
+- **Badge / tag (incl. "pending verification" and "DEMO · not live data")**: mono 11 px upper, 22 px, 1 px border. Pending verification: dotted underline + `PENDING` tag in `#9BA19E`. DEMO · not live data: large signal-outlined badge with signal text, always visible on the spatial map and the lookup terminal; sample IDs carry "sample format".
+- **Input + form field (Trace-your-milk bottle ID)**: LookupTerminal: 56 px, `#0A0C0B` field, 1 px `#2A2F2D` border with corner brackets, mono 16 px, placeholder `DSG-BTL-000001-3 (sample format)` and a format hint line. States: hover border `#9BA19E` · focus-visible signal ring + brackets · error `#B3202A` border + mono message · disabled 30% · loading step-by-step reveal with timestamps (DEMO). Visible `<label>`.
+- **Divider / ornament**: 1 px hairline with tick marks every 8 px for 64 px at the left (a ruler), or the horizontal scan line on section change.
+- **Section header (chapter number + title pattern)**: mono index `06 — TRACE` + Inter Tight 200 headline at display size + one Fraunces italic line tying to heritage.
+- **Product info block (variant name, code, price-pending, size, descriptors)**: instrument card: V-CODE (mono), name (Inter Tight 300), size `1 L glass · 900 g` and price from `desigo.ts` with dotted pending underline + PENDING tags, readout line of descriptors (pending), CTA `Trace this bottle →`. Callouts available as a list.
+- **Bottle stage (Bottle / Bottle360Viewer framing)**: SpotlitStage: bottle spotlit from above, rim light both sides, glossy black floor with 30% reflection and animated caustics (dark) / soft shadow + faint reflection (white lab). Keynote rotation: frames scrubbed across 300vh with leader-line callouts (cap, glass, label, QR) by angle. Before frames arrive: ±25° turn + light sweep, never a fake spin; later the GLB `model` slot enables true orbit.
+- **Trace node / timeline step**: SpatialTraceMap node: luminous 10 px point with 1 px ring; path = signal line in slight 3D perspective; camera glides node to node. States idle 50% · hover ring expands · focus-visible signal ring · active instrument card opens · pending hollow dashed ring. DOM/SVG fallback; keyboard order follows the route.
+
+### 12.5 Iconography & illustration
+- Icons: 1.25 px monoline, square terminals, 20 px grid; outline idle, signal fill active; no glow on icons.
+- Illustration: none decorative; hairline instrumentation (ticks, coordinates, brackets, leader lines) is the graphic language.
+- Photography: real process photos (lab test, chiller, filling) graded cool-neutral in precise frames with mono captions; farm and cows never rendered as sci-fi (paired heritage style).
+
+### 12.6 Motion tokens
+| Token | Value | Use |
+|---|---|---|
+| `--ease-out` | `cubic-bezier(.16,1,.3,1)` | reveals, UI entrances |
+| `--ease-inout` | `cubic-bezier(.65,0,.35,1)` | scene / chapter transitions |
+| `--ease-milk` | `cubic-bezier(.22,.9,.24,1)` | bottle travel, float settle |
+| `--dur-micro / reveal / scene` | 200 / 600 / 1200 ms | brackets · reveals · scene |
+| `--fu-sweep` | 1600 ms diagonal specular band | light sweep on chapter entry |
+| `--fu-power-on` | 160 ms (0 → .6 → 1) | readouts appear |
+| `--fu-scan` | 900 ms | white lab ↔ dark lab line expand |
+| `--fu-keynote` | `scrub: 1` over 150–300vh | pinned rotations / camera moves |
+
+- Keynote discipline: one object, one light, one idea per screen. Numbers count up with tabular figures; no glitch.
+- 360 frames preload progressively (first 12, then the rest), decoded with `createImageBitmap`.
+- Reduced motion (`prefers-reduced-motion: reduce`): all scroll-scrubbed motion off, content becomes a normal readable page, logo shows static, 360 auto-rotation stops, transitions become ≤ 200 ms opacity fades. Here also: static bottle at its best angle, callouts as a list, no sweeps or scrubs.
+
+### 12.7 AI image generation prompts
+House rules: no text/letters/logos/watermarks in images; generated images are illustration, texture or backdrop only; never
+generate the bottle or ghee jar; zebu cows only, shown with respect; append the style's tail prompt to every prompt.
+
+Style tail prompt (append to every prompt below): *clean optimistic near-future product exhibition, dark lab void #0A0C0B and graphite #171918 or white lab #FAFAF7, signal mint #7FE0B8 used sparingly, brand green #1E7A68, spotlight and soft reflections, precise, calm, keynote style, premium, no neon purple, no glitch, no text, no watermark, no logo, no letters*
+
+Base negative prompt (prefix to every negative below): *text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated*
+
+| # | File path (web/public/desigo/styles/<slug>/...) | Size / ratio | Transparent? | Prompt | Negative prompt | Used in |
+|---|---|---|---|---|---|---|
+| 1 | `web/public/desigo/styles/futuristic/hero-landscape.png` | 3200×2000 (16:10) | no | Dark void exhibition stage, glossy black reflective floor, a single soft overhead spotlight pool at the centre, faint caustic light ripples on the floor, subtle cool rim light at the edges, empty centre for an object | neon purple, cyberpunk city, HUD clutter, code rain, lens flare, objects on stage | Hero (ch. 01), /milk/[variant] launch |
+| 2 | `web/public/desigo/styles/futuristic/hero-portrait.png` | 1400×2400 (7:12) | no | Tall dark void with a glossy floor in the lower third and a soft spotlight pool, empty centre | neon purple, HUD, objects | Hero mobile |
+| 3 | `web/public/desigo/styles/futuristic/world-master-26.png` | 3200×2000 + 1400×2400 crop | no | Dark green void #06140F specimen chamber, cool overhead light and a bottle-green #1F5C45 rim glow, glossy floor with a faint pale-green #D9E8DF reflection, empty centre | plants, sci-fi props, neon purple, HUD | Four milks ch. 08, /milk/master-26 |
+| 4 | `web/public/desigo/styles/futuristic/world-root-14.png` | 3200×2000 + 1400×2400 crop | no | Deep red-black #140405 specimen chamber, warm side light and a crimson #B3202A rim glow, glossy floor, empty centre | alarm red lights, neon, HUD | Four milks ch. 08, /milk/root-14 |
+| 5 | `web/public/desigo/styles/futuristic/world-base-3.png` | 3200×2000 + 1400×2400 crop | no | Amber-black #140C02 specimen chamber lit by a low golden key light #E89A1C, glossy floor with warm reflection, empty centre | fire, neon, HUD | Four milks ch. 08, /milk/base-3 |
+| 6 | `web/public/desigo/styles/futuristic/world-essential.png` | 3200×2000 + 1400×2400 crop | no | White lab #FAFAF7 cyclorama with soft daylight, a faint ivory #CDB89A rim glow, a subtle cool reflection on a white floor, empty centre | lab equipment, people, blue-white cast | Four milks ch. 08, /milk/essential, Quality |
+| 7 | `web/public/desigo/styles/futuristic/trace-spatial-network.png` | 3600×2000 | no | Dark spatial network of small luminous mint points connected by thin signal lines in slight 3D perspective, scattered points converging into one hub, deep void background, minimal | map labels, country borders, HUD text, neon purple | Traceability ch. 06, /trace (WebGL fallback still) |
+| 8 | `web/public/desigo/styles/futuristic/texture-caustics.png` | 2048×2048, seamless | no | Seamless tileable caustic light pattern, soft white light ripples on pure black, for an animated floor caustic offset | colour, objects, vignette | SpotlitStage floor caustics |
+| 9 | `web/public/desigo/styles/futuristic/milk-ribbon-highkey.png` | 3000×1500 | yes (real alpha) | A single glossy ribbon of pouring milk curling in mid-air with a crisp specular highlight, isolated on transparent background, soft high-key studio light | splashes everywhere, glass, bottle, blue-white tint | Milk as material ch. 09 |
+| 10 | `web/public/desigo/styles/futuristic/technology-modules.png` | 3200×2000 | no | Seven minimal instrument modules in a row on a dark graphite surface, each a small rounded block with a single soft signal-mint indicator light, precise hairline gaps, calm | screens with text, buttons with labels, neon purple, cables mess | Technology ch. 11, /technology |
+
+### 12.8 Prototype acceptance checklist
+- [ ] Tokens from `specs/34_futuristic.json` applied; no off-palette colours
+- [ ] Fonts self-hosted; correct weights load
+- [ ] All 12.4 components built with all states
+- [ ] Hero + bottle-story + one product world + trace chapter built in this style (the comparison set)
+- [ ] Mobile 360 px pass; reduced-motion pass; contrast checked
+- [ ] Claims rules respected (pending underline, no blocked claims, DEMO labels)
+- [ ] Screenshots: desktop 1440×900 ×4 + mobile 390×844 ×2 saved to docs/media/styles/futuristic/
+- [ ] No blocked technology claims (RFID, "world's first"); internal system names never shown
+- [ ] Paired heritage style used for farm, breeds, heritage and ghee

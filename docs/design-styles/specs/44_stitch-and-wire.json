@@ -1,0 +1,224 @@
+{
+  "id": 44,
+  "slug": "stitch-and-wire",
+  "name": "Stitch and Wire",
+  "priority": true,
+  "fit": 3.5,
+  "colors": {
+    "primary": "#0B3B32",
+    "onPrimary": "#F7F4EC",
+    "secondary": "#1E7A68",
+    "accent": "#C8A96B",
+    "bg": "#F7F4EC",
+    "surface": "#F4EFE3",
+    "text": "#171918",
+    "textMuted": "#5C5A52",
+    "line": "rgba(30,122,104,.6)",
+    "ok": "#1F5C45",
+    "pending": "#6B4C2A",
+    "demo": "#9E2B25",
+    "focus": "#1E7A68"
+  },
+  "variants": {
+    "master-26": {
+      "base": "#1F5C45",
+      "deep": "#0A2A20",
+      "light": "#E4ECE6"
+    },
+    "root-14": {
+      "base": "#B3202A",
+      "deep": "#4A0A0F",
+      "light": "#F1E2DE"
+    },
+    "base-3": {
+      "base": "#E89A1C",
+      "deep": "#5A3304",
+      "light": "#F5EAD6"
+    },
+    "essential": {
+      "base": "#CDB89A",
+      "deep": "#4D4130",
+      "light": "#F4EDE2"
+    }
+  },
+  "fonts": {
+    "display": {
+      "family": "Fraunces",
+      "package": "@fontsource-variable/fraunces",
+      "weights": [
+        400
+      ],
+      "axes": {
+        "opsz": 144
+      }
+    },
+    "body": {
+      "family": "Inter Tight",
+      "package": "@fontsource-variable/inter-tight",
+      "weights": [
+        400,
+        500
+      ]
+    },
+    "label": {
+      "family": "Inter Tight",
+      "package": "@fontsource-variable/inter-tight",
+      "weights": [
+        500
+      ]
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "package": "@fontsource-variable/jetbrains-mono",
+      "weights": [
+        400
+      ]
+    },
+    "devanagari": {
+      "family": "Noto Sans Devanagari",
+      "package": "@fontsource-variable/noto-sans-devanagari",
+      "weights": [
+        400,
+        500
+      ]
+    }
+  },
+  "type": {
+    "display": "clamp(3rem, 1.5rem + 6.5vw, 8.5rem)",
+    "h1": "clamp(2.4rem, 1.5rem + 3.2vw, 4.75rem)",
+    "h2": "clamp(1.75rem, 1.3rem + 1.6vw, 2.75rem)",
+    "body": "clamp(1rem, 0.96rem + 0.2vw, 1.0625rem)",
+    "label": "0.75rem",
+    "annotation": "0.6875rem"
+  },
+  "radius": {
+    "sm": "2px",
+    "md": "4px",
+    "lg": "999px"
+  },
+  "shadow": {
+    "bottle": "0 28px 26px -20px rgba(23,25,24,.26)",
+    "panel": "0 1px 2px rgba(23,25,24,.12)"
+  },
+  "motion": {
+    "easeOut": "cubic-bezier(.16,1,.3,1)",
+    "easeInOut": "cubic-bezier(.65,0,.35,1)",
+    "durMicro": 300,
+    "durReveal": 900,
+    "durScene": 700,
+    "stitchDashesPerSec": [
+      24,
+      36
+    ],
+    "wireRevealMs": 1900,
+    "floatPx": 6,
+    "floatMs": 6000,
+    "hopMs": 1500,
+    "wire": "rgba(30,122,104,.6)",
+    "wireDark": "rgba(127,224,184,.5)"
+  },
+  "button": {
+    "primary": {
+      "bg": "transparent",
+      "fg": "#0B3B32",
+      "radius": "0",
+      "padding": "14px 0",
+      "underline": "running stitch 7/5, 2px, round caps",
+      "hover": "stitches pull tight to solid 300ms; arrow +6px"
+    },
+    "secondary": {
+      "bg": "transparent",
+      "fg": "#171918",
+      "radius": "0",
+      "padding": "14px 0",
+      "hover": "plain underline stitches in"
+    },
+    "link": {
+      "fg": "#0B3B32",
+      "underline": "1px",
+      "hover": "running-stitch underline 300ms"
+    }
+  },
+  "images": [
+    {
+      "file": "web/public/desigo/styles/stitch-and-wire/hero-cloth.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "A square of unbleached cotton cloth on a milk-white surface with a fine border of hand running stitches in deep forest-green thread, macro detail on the stitches, empty centre, unbleached handwoven cotton #F4EFE3 on a milk-white #F7F4EC surface, hand running stitches in deep forest-green #0B3B32 thread, soft daylight, crisp macro detail, clean pressed fabric, restrained, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, fraying, stains, wedding motifs, all-over embroidery",
+      "usedIn": "Hero desktop"
+    },
+    {
+      "file": "web/public/desigo/styles/stitch-and-wire/hero-cloth-portrait.png",
+      "size": "1400×2400 (7:12)",
+      "transparent": false,
+      "prompt": "Portrait view of the same cloth square, kantha running-stitch border visible at top and bottom, large empty centre, unbleached handwoven cotton #F4EFE3 on a milk-white #F7F4EC surface, hand running stitches in deep forest-green #0B3B32 thread, soft daylight, crisp macro detail, clean pressed fabric, restrained, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, fraying, stains, all-over embroidery",
+      "usedIn": "Hero mobile"
+    },
+    {
+      "file": "web/public/desigo/styles/stitch-and-wire/cloth-master-26.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "Pale green-tinted cotton #E4ECE6 with a border of satin-stitched leaves in deep green #1F5C45 thread, empty centre, unbleached handwoven cotton #F4EFE3 on a milk-white #F7F4EC surface, hand running stitches in deep forest-green #0B3B32 thread, soft daylight, crisp macro detail, clean pressed fabric, restrained, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, counted herbs, flowers, gold",
+      "usedIn": "MASTER 26 world"
+    },
+    {
+      "file": "web/public/desigo/styles/stitch-and-wire/cloth-root-14.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "Pale rose cotton #F1E2DE with horizontal chain-stitch lines in madder red #B3202A like layered earth strata, empty centre, unbleached handwoven cotton #F4EFE3 on a milk-white #F7F4EC surface, hand running stitches in deep forest-green #0B3B32 thread, soft daylight, crisp macro detail, clean pressed fabric, restrained, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, bridal red, sequins",
+      "usedIn": "ROOT 14 world"
+    },
+    {
+      "file": "web/public/desigo/styles/stitch-and-wire/cloth-base-3.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "Cream cotton #F5EAD6 with rows of running stitch in turmeric amber #C98A1E like wheat rows and one round shisha mirror as a sun, empty centre, unbleached handwoven cotton #F4EFE3 on a milk-white #F7F4EC surface, hand running stitches in deep forest-green #0B3B32 thread, soft daylight, crisp macro detail, clean pressed fabric, restrained, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, many mirrors, sequins",
+      "usedIn": "BASE 3 world"
+    },
+    {
+      "file": "web/public/desigo/styles/stitch-and-wire/cloth-essential.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "Plain ivory cotton #F4EDE2 with a single line of white-on-white kantha running stitch across the lower third, extremely restrained, empty centre, unbleached handwoven cotton #F4EFE3 on a milk-white #F7F4EC surface, hand running stitches in deep forest-green #0B3B32 thread, soft daylight, crisp macro detail, clean pressed fabric, restrained, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, colour thread, pattern",
+      "usedIn": "ESSENTIAL world"
+    },
+    {
+      "file": "web/public/desigo/styles/stitch-and-wire/running-stitch-route.png",
+      "size": "3600×1200",
+      "transparent": false,
+      "prompt": "One long continuous line of hand running stitch in forest-green thread crossing layered cream cotton cloth panels, kantha style, top-down, soft light, unbleached handwoven cotton #F4EFE3 on a milk-white #F7F4EC surface, hand running stitches in deep forest-green #0B3B32 thread, soft daylight, crisp macro detail, clean pressed fabric, restrained, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, knots, loose threads, labels",
+      "usedIn": "Cow → bottle thread (ch. 03), trace route"
+    },
+    {
+      "file": "web/public/desigo/styles/stitch-and-wire/cloth-tile.png",
+      "size": "1024×1024, seamless",
+      "transparent": false,
+      "prompt": "Seamless macro texture of unbleached handwoven cotton mulmul, soft, flat light, unbleached handwoven cotton #F4EFE3 on a milk-white #F7F4EC surface, hand running stitches in deep forest-green #0B3B32 thread, soft daylight, crisp macro detail, clean pressed fabric, restrained, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, seams, stains, wrinkles",
+      "usedIn": "Cloth texture (4%) on stitched chapters"
+    },
+    {
+      "file": "web/public/desigo/styles/stitch-and-wire/mirror-node.png",
+      "size": "1200×1200, transparent",
+      "transparent": true,
+      "prompt": "A single small round embroidery mirror held by a ring of buttonhole stitches in forest-green thread on cream cloth, macro, crisp, transparent background around the cloth circle, unbleached handwoven cotton #F4EFE3 on a milk-white #F7F4EC surface, hand running stitches in deep forest-green #0B3B32 thread, soft daylight, crisp macro detail, clean pressed fabric, restrained, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, reflections of people, sequins",
+      "usedIn": "MirrorNode reference"
+    },
+    {
+      "file": "web/public/desigo/styles/stitch-and-wire/gota-border.png",
+      "size": "3600×600, transparent, tileable horizontally",
+      "transparent": true,
+      "prompt": "Rajasthani gota patti border of woven gold ribbon cut into small leaves appliquéd on cream cloth, warm gold #C8A96B, macro, transparent background, unbleached handwoven cotton #F4EFE3 on a milk-white #F7F4EC surface, hand running stitches in deep forest-green #0B3B32 thread, soft daylight, crisp macro detail, clean pressed fabric, restrained, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, deities, kalash, bridal motifs, glitter",
+      "usedIn": "Ghee (ch. 12) GotaBorder"
+    }
+  ]
+}

@@ -45,6 +45,7 @@ Reference points:
 | `--ks-stamp-blue` | `#2C3E73` | Ledger stamp blue |
 | `--ks-gold` | `#C8A96B` | Board pin-stripe, ghee shelf |
 | `--ks-ink` | `#171918` | Text |
+| `--ks-ink-muted` | `#5C5A52` | Muted text (6.3:1 on milk, 5.1:1 on tag) |
 
 Variant cap colours appear on shelf-edge strips: `#1F5C45`, `#B3202A`, `#E89A1C`, `#CDB89A`.
 
@@ -159,7 +160,7 @@ Total ≈ 60 days.
 - Photographs of real steel cans, ladles and shelves, and of DESIGO®'s own delivery or counter point if one exists (with consent).
 - Approved prices before any price is shown publicly.
 
-### Images to generate (illustration only; save under `web/public/desigo/styles/kirana/`)
+### Images to generate (illustration only; save under `web/public/desigo/styles/asian-store/`)
 Append the house-style tail. No text, no letters, no logos, no real brand packaging, no bottles.
 
 | # | File | Size | Prompt |
@@ -195,3 +196,129 @@ Append the house-style tail. No text, no letters, no logos, no real brand packag
 **Risks**: a cheap or mass-market read, premature prices and cultural cliché. Mitigation: a commissioned sign painter, forest-and-gold boards, strict whitespace, and the style limited to shop moments.
 
 **Best used for:** /milk as a shelf, /reserve as a dairy counter, the bottle-return loop, and a neighbourhood launch campaign.
+
+---
+
+## 12. Build-ready spec sheet
+
+> Audit 2026-10-03: direction, palette and type were complete. Missing: muted, pending and DEMO tokens, radius/shadow scale, component states, a portrait hero, four shelf-world prompts, a trace prompt and negatives. All added. Image folder renamed `styles/kirana/` → `styles/asian-store/` to match the slug. Fonts (Yatra One, Alfa Slab One, Anek, Courier Prime, Kalam) confirmed OFL. Prices already render only with a PRICE PENDING stamp: kept.
+
+### 12.1 Colour system
+| Role | Token | Hex | Use | Contrast note |
+|---|---|---|---|---|
+| Primary | --c-primary | `#0B3B32` | Painted board green: boards, primary chip button, footer | 11.3:1 on bg; painted shop-board green |
+| Primary ink | --c-on-primary | `#F3E7C9` | Sign-cream lettering on boards | 10.1:1 on primary |
+| Secondary | --c-secondary | `#1E7A68` | Board border and second sign colour; links hover; focus ring | 4.7:1 on bg |
+| Accent | --c-accent | `#9E2B25` | Rubber-stamp red: DEMO stamp, display numerals ≥ 24 px | 6.8:1 on bg; rubber-stamp red: stamps and display ≥ 24 px only |
+| Background | --c-bg | `#F7F4EC` | Shop wall milk (`--ks-milk`) | — |
+| Surface | --c-surface | `#E9DCC0` | Cardboard tag (`--ks-tag`): cards, secondary button, label rail | text on surface 13.0:1 |
+| Text | --c-text | `#171918` | Ink (`--ks-ink`) | 16.1:1 on bg |
+| Muted text | --c-text-muted | `#5C5A52` | Captions, label-rail details (new token `--ks-ink-muted`) | 6.3:1 on bg, 5.1:1 on surface |
+| Line | --c-line | `#C9B48C` | Tag edge and string (`--ks-tag-edge`), decorative | decorative (non-text) |
+| Success / Pending / Demo | --c-ok / --c-pending / --c-demo | `#1F5C45` / `#2C3E73` / `#9E2B25` | Verified enamel badge / ledger-blue PENDING stamp / red DEMO stamp | 7.1 / 9.3 / 6.8 :1 on `#F7F4EC` |
+
+Focus ring: `--c-focus` `#1E7A68` (4.7:1 on bg), 2 px solid, 3 px offset.
+
+Variant worlds in this style: MASTER 26 · ROOT 14 · BASE 3 · ESSENTIAL (base / deep / light hex for each).
+
+| Variant | Base | Deep | Light | Treatment in this style |
+|---|---|---|---|---|
+| MASTER 26 (V1+, green cap) | `#1F5C45` | `#0A2A20` | `#D9E8DF` | Shelf-edge strip `#1F5C45`; forest board with gold pin-stripe; herb dish photo (count *pending*) |
+| ROOT 14 (V1, red cap) | `#B3202A` | `#4A0A0F` | `#F3D9D6` | Shelf edge `#B3202A`; cream board with red lettering; red-earth bowl photo |
+| BASE 3 (V2, amber cap) | `#E89A1C` | `#5A3304` | `#F8E4C2` | Shelf edge `#E89A1C`; amber board with `#5A3304` lettering; wheat stalks photo, herb count *to be confirmed* |
+| ESSENTIAL (V3, ivory cap) | `#CDB89A` | `#4D4130` | `#F4EDE2` | Shelf edge `#CDB89A`; plain milk board, charcoal lettering; nothing else on the shelf |
+
+Dark-chapter inversion: painted-board chapters (nav, section headers, footer, Technology back-room signs) use forest `#0B3B32` as ground with sign-cream text `#F3E7C9` (10.1:1), muted steel `#C9CDCB`, gold pin-stripe lines `#C8A96B`; stamps stay red/blue on cream tags only; the logo loop renders white on the board.
+
+### 12.2 Typography
+| Role | Font family | Source (npm @fontsource… / Google Fonts) | Weights / axes | Size (clamp) | Line-height | Tracking | Case |
+|---|---|---|---|---|---|---|---|
+| Display / hero | Yatra One | `@fontsource/yatra-one` (Google Fonts) | 400 (bilingual boards) | clamp(2.75rem, 1.4rem + 5.6vw, 7rem) | 1.05 | +0.01em | Title case / Devanagari |
+| Headline H1–H2 | Alfa Slab One | `@fontsource/alfa-slab-one` (Google Fonts) | 400 + painted drop shadow 3px 3px `#1E7A68` on boards | H1 clamp(2.2rem, 1.4rem + 3vw, 4.25rem) · H2 clamp(1.6rem, 1.2rem + 1.6vw, 2.5rem) | 1.05 | +0.01em | UPPERCASE on boards |
+| Body | Inter Tight | `@fontsource-variable/inter-tight` (Google Fonts) | 400 / 500 | 1rem (16 px) | 1.65 | 0 | Sentence |
+| Label / UI | Anek Latin | `@fontsource-variable/anek-latin` (Google Fonts) | 600 / 700, wdth 75–100 | 0.8125rem (13 px) | 1.3 | +0.08em | UPPERCASE |
+| Data / mono | JetBrains Mono | `@fontsource-variable/jetbrains-mono` (Google Fonts) | 400 (bottle IDs); bill and khata in Courier Prime 400/700 (`@fontsource/courier-prime`) | 0.875rem | 1.5 | 0 | As data |
+| Devanagari (optional) | Anek Devanagari | `@fontsource-variable/anek-devanagari` (Google Fonts) | 500–700 (labels); boards in Yatra One; hand tags in Kalam 400 (`@fontsource/kalam`) | matches the Latin role | 1.4 | 0 | — |
+
+Licence: all fonts are SIL Open Font License 1.1 (OFL), self-hosted via Fontsource; subset Latin + Latin-ext (Devanagari subset only where used). Real sign-painter lettering (scanned) is preferred over Kalam for price tags; every Devanagari word is proofread. Pairing rationale: a brush sign-painter display and a slab for boards give the shop voice; condensed Anek keeps shelf labels compact in both scripts; Inter Tight carries reading text.
+
+### 12.3 Layout & surfaces
+- **Grid:** shelf grid: 12 columns (gutter 24 px, 16 px mobile), margins 5vw, max-width 1440 px; horizontal shelves every 40vh on desktop, each with a 6 px steel edge and a 28 px label rail; products always stand on a shelf line; boards span columns 1–12; mobile: one product per shelf, label rail below
+- **Spacing scale:** 4 px base: 4 · 8 · 12 · 16 · 24 · 32 · 48 · 64 · 96 · 128; generous wall space around hero shelves (premium kirana)
+- **Radius scale:** sm 2 px (tags, inputs) · md 6 px (painted boards, chips) · lg 999 px (round stamps, enamel discs, cursor)
+- **Border style:** boards: 1 px gold pin-stripe inset 3–6 px; tags: 1 px `#C9B48C` edge; shelves: 6 px `#C9CDCB` strip with 1 px `#7F8784` underside
+- **Shadow / elevation:** products: real contact shadow + 12% blurred steel reflection; tags `0 4px 8px rgba(23,25,24,.15)`; boards flat
+- **Texture / overlay:** one scanned enamel brush tile on boards; scanned cardboard on tags; brushed-steel photo on shelves; scanned rubber stamps (WebP alpha, set ≤ 300 KB)
+
+### 12.4 Components
+All interactive components share: focus ring `--c-focus` 2 px / 3 px offset · touch targets ≥ 44 px · disabled = 40% opacity, no motion, `aria-disabled` (unless stated) · hover effects only on `(hover:hover)` devices · motion from §12.6.
+
+- **Primary button** — Painted board chip: forest with a 1 px gold pin-stripe inset 3 px, sign-cream label (Anek Latin 700, 14 px, +0.08em, uppercase) with an underline and travelling arrow; 48 px tall, padding 14 px 20 px, radius 6 px. **States:** default forest chip · hover arrow travels 6 px, pin-stripe goes full gold · focus-visible 2 px `#1E7A68` ring, 3 px offset · active chip presses 1 px · disabled 40% opacity, no hover motion, `aria-disabled="true"` · loading three steel dots fill in turn, `aria-busy`. **Motion:** 180 ms `--ease-out`. **A11y:** native `<a>`/`<button>`, hit area ≥ 44 px, label ≥ 4.5:1.
+- **Secondary button** — Cardboard tag button `#E9DCC0` with a punched-hole dot at the left, ink label, underline + arrow; 48 px tall, radius 2 px. **States:** default tag · hover tag swings 2° and settles · focus-visible 2 px `#1E7A68` ring, 3 px offset · active presses 1 px · disabled 40% opacity, no hover motion, `aria-disabled="true"` · loading steel-dot loader. **Motion:** swing 450 ms, no overshoot. **A11y:** native `<a>`/`<button>`, hit area ≥ 44 px, label ≥ 4.5:1.
+- **Text / arrow link** — Forest body link with 1 px underline; on product pages the hover underline uses the variant cap colour. **States:** default forest + hairline · hover underline thickens to 2 px (green, or the cap colour) · focus-visible 2 px `#1E7A68` ring, 3 px offset · active colour green · disabled 40% opacity, no hover motion, `aria-disabled="true"` · loading n/a (static element). **Motion:** 180 ms. **A11y:** underline always present (never colour alone); arrow is `aria-hidden`.
+- **Icon button (incl. menu)** — 44 px enamel badge: forest disc with a 20 px cream pictogram; menu icon = three shelf lines. **States:** default enamel disc · hover lifts 2 px · focus-visible 2 px `#1E7A68` ring, 3 px offset · active presses flat · disabled 40% opacity, no hover motion, `aria-disabled="true"` · loading n/a (static element). **Motion:** 180 ms. **A11y:** `aria-label` required; 44×44 px hit area; menu button carries `aria-expanded` + `aria-controls`; Esc closes the menu and returns focus.
+- **Navigation bar** (desktop + mobile menu) — 64 px painted forest board with a gold pin-stripe along its bottom; links Anek Latin 600 13 px uppercase in sign-cream; RESERVE as a cream tag chip. Mobile: the board shrinks to one line; the menu rolls a shutter down (600 ms) revealing links stacked on steel shelves. **States:** default cream links on board · hover 1 px cream underline · focus-visible 2 px `#1E7A68` ring, 3 px offset · active current page: small enamel dot beneath · disabled n/a · loading n/a. **Motion:** shutter 600 ms `--ease-inout`. **A11y:** `<nav>` landmark after a skip link; logo is a link to `/` with `aria-label="DESIGO® home"`; the animated SVG is `aria-hidden`. **Logo:** The DESIGO® wordmark sits top-left (cap height 22 px desktop, 18 px mobile) and runs the brand's **black write / un-write loop** (charcoal `#171918` on light grounds, white `#FFFFFF` on dark grounds; the colour never changes during the loop). The loop pauses while the menu is open, when the tab is hidden, and under reduced motion (the full wordmark is shown static). On the board the logo renders white (dark ground rule).
+- **Cursor** — 14 px charcoal dot; labels Anek Latin 600 11 px uppercase on a small cardboard tag. **States:** default 14 px dot · hover 24 px ring (over stamps, tags, links) · ROTATE tag reading "drag · turn" over the bottle · EXPLORE tag reading "explore" over shelves and the route board · ENTER small steel ladle pictogram over RESERVE, arrow → elsewhere · VIEW cardboard tag reading "VIEW" over products · TRACE scooter pictogram reading "trace". **Touch fallback:** no cursor; tags shown statically under each product; tap lifts the bottle off the shelf; shelf carousel uses scroll-snap with "1 of 4" + buttons. **A11y:** decorative (`aria-hidden`, `pointer-events:none`); off for coarse pointers and reduced motion, where the system cursor returns; never the only cue.
+- **Card / panel / info block** — Shelf section: milk wall, steel edge strip, 28 px label rail; info cards are cardboard `#E9DCC0` with radius 2 px, a punched hole, padding 24 px. **States:** default product standing on shelf · hover product lifts 6 px, contact shadow widens, label rail tints to the cap colour · focus-visible 2 px `#1E7A68` ring, 3 px offset · active returns 450 ms · disabled 40% opacity, no hover motion, `aria-disabled="true"` · loading empty shelf space with a tag `AssetSlot` naming the missing asset. **Motion:** 450 ms `--ease-out`. **A11y:** real heading inside; one primary action per card; text never sits on texture below 4.5:1.
+- **Badge / tag** — Scanned rubber stamp with live-text label (Anek Latin 700 uppercase in a double-rule rectangle, rotated ±2°). **Pending verification** / PRICE PENDING / PENDING APPROVAL in ledger blue `#2C3E73`. **DEMO · not live data** ("DEMO · ILLUSTRATIVE") in stamp red `#9E2B25`, large on trace pages. Enamel badges for descriptors and RETURNABLE GLASS. Never stamp claims. **States:** default stamp · hover none · focus-visible 2 px `#1E7A68` ring, 3 px offset · active n/a · disabled n/a · loading n/a (static element). **Motion:** thunk: scale 1.15 → 1, opacity 0 → .92 in 160 ms, once per session. **A11y:** status is real text ("Pending verification", "DEMO · not live data"); colour and shape are never the only signal.
+- **Input + form field (Trace-your-milk bottle ID)** — Bill-book form: carbon-copy paper with faint blue rules, 56 px field, Courier Prime label, bottle ID in JetBrains Mono 18 px over a 1 px ink underline; demo ID prefilled; errors in ledger-blue text + icon; clearly not a tax invoice. **States:** default ruled field · hover underline darkens · focus-visible 2 px `#1E7A68` ring, 3 px offset · active 2 px forest underline · disabled 40% opacity, no hover motion, `aria-disabled="true"` · loading the journey prints line by line (120 ms per line) and is stamped DEMO · ILLUSTRATIVE. **Motion:** print 120 ms/line. **A11y:** visible `<label>`, hint and error linked with `aria-describedby`, error shown as text + icon, `autocomplete=off`, `spellcheck=false`.
+- **Divider / ornament** — steel shelf edge (6 px `#C9CDCB` + 1 px `#7F8784` underside) or a gold double pin-stripe on boards. **States:** default static · hover none · focus-visible 2 px `#1E7A68` ring, 3 px offset · active n/a · disabled n/a · loading n/a (static element). **Motion:** none. **A11y:** `aria-hidden` (decorative) or `role=separator` between landmark sections.
+- **Section header** — Painted board header across 12 columns: chapter number in a cream enamel circle (Anek 700), title in Yatra One / Alfa Slab One cream with 3 px drop shadow, Devanagari subtitle where approved. **States:** default static · hover none · focus-visible 2 px `#1E7A68` ring, 3 px offset · active n/a · disabled n/a · loading n/a (static element). **Motion:** shutter reveal between major chapters only. **A11y:** real `<h2>`; the chapter number is read as "Chapter 03"; decorative glyphs `aria-hidden`.
+- **Product info block** — Label rail + tag: V-code as a ledger-blue stamp, name in Alfa Slab One, the `desigo.ts` line, price on a hand-lettered tag with the PRICE PENDING stamp (hidden in production), size, descriptors as small enamel badges with dotted pending underline; on /milk the comparison is a real `<table>`. **States:** default static · hover tag swings −6° → 4° → 0 (700 ms) when the shelf enters view · focus-visible 2 px `#1E7A68` ring, 3 px offset · active n/a · disabled 40% opacity, no hover motion, `aria-disabled="true"` · loading tag `AssetSlot`. **Motion:** swing 700 ms damped. **A11y:** facts in a `<dl>`; pending values carry visually-hidden "(pending verification)"; price hidden in production until approved.
+- **Bottle stage** — One bottle on a single brushed-steel shelf under a painted board, lit like a 6 a.m. shop window; a 12% blurred reflection in the steel; no idle float (it stands still). **States:** default standing · hover pointer tilt ±4° · focus-visible 2 px `#1E7A68` ring, 3 px offset · active drag lifts it −24 px (shadow grows) and turns it; release settles in 450 ms · disabled n/a · loading single render turns ±20° with a sheen sweep until 360 frames exist. **Motion:** lift/settle 450 ms `--ease-out`. **A11y:** Bottle360Viewer is `role=img` with an `aria-label`; ←/→ rotate 5°, Home resets; reduced motion stops idle float and auto-turn.
+- **Trace node / timeline step** — Route-board stop: 20 px enamel disc (cream with a forest ring) on a painted map; label Anek 600 13 px + mono ID. **States:** default cream disc · hover disc lifts 2 px · focus-visible 2 px `#1E7A68` ring, 3 px offset · active a scooter pictogram moves 1500 ms per hop; the stop fills forest · disabled 40% opacity, no hover motion, `aria-disabled="true"` · loading stops appear one by one. **Motion:** hop 1500 ms `--ease-inout`. **A11y:** route is an ordered list `<ol>`; each node a `<button>` opening its panel; `aria-current="step"` on the active node.
+
+### 12.5 Iconography & illustration
+- **Icon style:** sign-painter pictograms: filled shapes with a 1.5 px cream outline (bottle, can, scooter, return arrow, cow head in respectful profile) on small enamel badges
+- **Illustration technique:** boards and the seven station signs painted by a commissioned sign painter and scanned; stamps made as real rubber stamps and scanned
+- **Photo treatment:** clean product and steel photography on milk walls, neutral-warm grade, spotless steel; real shop photos only with consent and accurate captions; farm photos in clean steel frames
+
+### 12.6 Motion tokens
+| Token | Value | Use |
+|---|---|---|
+| `--ease-out` | `cubic-bezier(.16,1,.3,1)` | reveals, lifts |
+| `--ease-inout` | `cubic-bezier(.65,0,.35,1)` | shutter, scenes |
+| `--dur-micro` | 180 ms | hover, press |
+| `--dur-reveal` | 450 ms | reveals, bottle settle |
+| `--dur-scene` | 900 ms | shutter (incl. 60 ms hold) |
+| `--stamp` | 160 ms, scale 1.15 → 1 | rubber-stamp thunk |
+| `--swing` | 700 ms, −6° → 4° → 0 | price tags |
+| `--hop` | 1500 ms | scooter per stop |
+| `--scrub` | 1 | shelf scroll |
+
+- **Signature transition:** the rolling shop shutter: a ribbed steel panel rolls down over the old chapter and up over the new one (900 ms), only between major chapters
+- **Scroll behaviour:** brisk and tactile; in chapter 08 the shelf scrolls horizontally, one variant per 120vh, each bottle lifting forward at centre
+- **Reduced-motion fallback:** no shutter (200 ms cross-fade), no tag swing, stamps simply appear
+
+### 12.7 AI image generation prompts
+House rules: no text/letters/logos/watermarks in images; generated images are illustration, texture or backdrop only; never
+generate the bottle or ghee jar; zebu cows only, shown with respect; append the style's tail prompt to every prompt.
+
+**Tail prompt (append to every prompt below):** _clean premium Indian dairy shop aesthetic, spotless brushed stainless steel, milk-white walls #F7F4EC, deep forest-green #0B3B32 painted enamel with thin gold #C8A96B pin-stripes, soft early-morning window light, ordered and calm, editorial, no text, no watermark, no logo, no letters_
+
+**Base negative prompt (add to every row's negative):** _text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look_
+
+| # | File path (web/public/desigo/styles/<slug>/...) | Size / ratio | Transparent? | Prompt | Negative prompt | Used in |
+|---|---|---|---|---|---|---|
+| AS1 | `web/public/desigo/styles/asian-store/hero.png` | 3200×2000 (16:10) | No | Clean minimalist Indian dairy shop interior at early morning, a single empty brushed stainless-steel shelf at centre, milk-white wall, a blank deep forest-green painted signboard with a thin gold border at the top, soft window light, no products | brand packaging, signage lettering, clutter, grime, rust | Hero desktop |
+| AS2 | `web/public/desigo/styles/asian-store/hero-portrait.png` | 1400×2400 (7:12) | No | Vertical view of the same clean dairy-shop wall: blank forest-green signboard at the top, one empty steel shelf in the lower middle, milk-white wall, soft morning light | products, lettering, clutter | Hero mobile |
+| AS3 | `web/public/desigo/styles/asian-store/shelf-master-26.png` | 3200×2000 + 1400×2400 | No | Empty brushed-steel shelf with a deep green #1F5C45 edge strip under a blank forest-green enamel board with gold pin-stripe, milk-white wall, empty centre | products, herbs, lettering | MASTER 26 world |
+| AS4 | `web/public/desigo/styles/asian-store/shelf-root-14.png` | 3200×2000 + 1400×2400 | No | Empty steel shelf with a crimson #B3202A edge strip under a blank cream enamel board with a thin red border, milk-white wall, empty centre | products, lettering, rust | ROOT 14 world |
+| AS5 | `web/public/desigo/styles/asian-store/shelf-base-3.png` | 3200×2000 + 1400×2400 | No | Empty steel shelf with an amber #E89A1C edge strip under a blank amber enamel board with a dark brown #5A3304 border, warm morning light, empty centre | products, lettering, neon | BASE 3 world |
+| AS6 | `web/public/desigo/styles/asian-store/shelf-essential.png` | 3200×2000 + 1400×2400 | No | Empty steel shelf with a pale ivory #CDB89A edge strip under a plain milk-white blank board, very minimal, empty centre | products, decoration | ESSENTIAL world |
+| AS7 | `web/public/desigo/styles/asian-store/route-board.png` | 3600×2000 | No | Hand-painted enamel signboard showing a simple neighbourhood route map as a flat painted line with eight round blank cream stops, forest-green ground, gold pin-stripe border, sign-painter style | street names, numbers, letters, real city map | Traceability (ch. 06), /trace |
+| AS8 | `web/public/desigo/styles/asian-store/shutter.png` | 2400×2400, seamless vertically | No | Ribbed rolling metal shop shutter, painted milk white, flat front light, seamless vertical repeat | graffiti, rust, dents, padlock | Shutter transition texture |
+| AS9 | `web/public/desigo/styles/asian-store/price-tag.png` | 800×1000, transparent | Yes (real alpha) | Blank brown cardboard price tag with a punched hole and cotton string, slightly worn edges, top-down, transparent background, no writing | writing, price numbers | PriceTag component |
+| AS10 | `web/public/desigo/styles/asian-store/khata-ledger.png` | 3000×2000 | No | Open blank Indian account ledger book with red ruled lines and cloth binding, top-down on a teak wood counter, no writing | handwriting, numbers | Bottle → story khata (ch. 02) |
+
+### 12.8 Prototype acceptance checklist
+- [ ] Tokens from `specs/39_asian-store.json` applied; no off-palette colours
+- [ ] Fonts self-hosted; correct weights load
+- [ ] All 12.4 components built with all states
+- [ ] Hero + bottle-story + one product world + trace chapter built in this style (the comparison set)
+- [ ] Mobile 360 px pass; reduced-motion pass; contrast checked
+- [ ] Claims rules respected (pending underline, no blocked claims, DEMO labels)
+- [ ] Screenshots: desktop 1440×900 ×4 + mobile 390×844 ×2 saved to docs/media/styles/asian-store/
+- [ ] No imitation of any real dairy co-operative's colours, signage or booth
+- [ ] Order slip labelled "order summary, not an invoice"; trace bill stamped DEMO
+- [ ] Prices hidden in production until approved; PRICE PENDING in previews

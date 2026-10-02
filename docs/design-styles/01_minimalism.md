@@ -44,7 +44,7 @@ Rule: **one accent per viewport.** If a variant colour is present, `--green` ste
 ### Typography
 - Display: **Fraunces** variable, opsz 144, weight 300, SOFT 50, tracking −0.035em. Italic 300 for single emphasis words ("*source*").
 - Text/UI: **Inter Tight** 400/500; labels 500 uppercase at 0.72rem, +0.18em.
-- Data: **JetBrains Mono** 400 for bottle IDs, batch IDs, temperatures.
+- Data: **JetBrains Mono** 400 for bottle IDs, batch IDs and (only once confirmed) temperatures.
 - Future Hindi: **Noto Serif Devanagari** (display) + **Noto Sans Devanagari** (UI), sized +6% to match x-height.
 - Scale: only five sizes per page — mega (9–17rem), display, h2, lead, body/label. No h3–h6 styling.
 
@@ -111,7 +111,7 @@ The information panel on the right: V-code label, name in display type, the edit
 - **/origin** — photo essay: alternating full-bleed images and single paragraphs.
 - **/trace** — the trace map at full height, then the demo lookup.
 - **/technology** — the seven verbs as seven full-viewport statements.
-- **/about** — timeline + supporters (pending markers) in plain text.
+- **/about** — timeline of verified milestones in plain text. Supporters are omitted until written evidence is on file (they are blocked in `desigo.ts`, KB Q34).
 - **/reserve** — a one-column form: variant, size, frequency, address, at 48px input height.
 
 ## 7. Component variants
@@ -176,3 +176,123 @@ Risks: looking empty rather than intentional; looking like a generic tech templa
 8. Typography does the luxury: tight tracking on display, generous leading (1.55) on body.
 9. Pending claims are visibly pending — honesty is part of the aesthetic.
 10. Test the page in grayscale: if hierarchy collapses, the layout relies on colour and must be fixed.
+
+---
+
+## 12. Build-ready spec sheet
+
+> Audit 2026-10-03: solid base system; missing explicit colour roles, ok/pending/demo tokens, radius/shadow tokens, per-component states, a motion-token table and all AI image prompts (had none). Added all (11 prompts with negatives). Fixed: /about "supporters (pending markers)" → supporters omitted until written evidence exists (they are blocked in `desigo.ts`); temperatures in mono only when confirmed. Fonts OFL.
+
+### 12.1 Colour system
+| Role | Token | Hex | Use | Contrast note |
+|---|---|---|---|---|
+| Primary | `--c-primary` | `#171918` | charcoal: display type, framed primary CTA, RESERVE in nav, Trace-your-milk ground | 16.1:1 on bg |
+| Primary ink | `--c-on-primary` | `#F7F4EC` | milk on charcoal (pressed CTA, trace chapter) | 16.1:1 on primary |
+| Secondary | `--c-secondary` | `#0B3B32` | forest: deep transitions, footer, chapter 06 | 11.3:1 on bg |
+| Accent | `--c-accent` | `#1E7A68` | the single accent: links, focus rings, progress; steps back to ink when a variant colour is present | 4.7:1 on bg |
+| Background | `--c-bg` | `#F7F4EC` | milk ground (90% of light surfaces), never `#FFFFFF` |  |
+| Surface | `--c-surface` | `#EFE9DC` | the only raised plane: inputs, active nav underlay | text on surface 13.4:1 |
+| Text | `--c-text` | `#1E211F` | body text | 14.8:1 on bg |
+| Muted text | `--c-text-muted` | `#5E625C` | labels, captions (no low-contrast 'elegant grey') | 5.7:1 on bg |
+| Line | `--c-line` | `rgba(30,33,31,.12)` | 1 px hairlines (decorative only) | decorative only |
+| Success / Pending / Demo | `--c-ok` / `--c-pending` / `--c-demo` | `#1E7A68` / `#7A5B37` / `#171918` | verified tick · dotted underline + "awaiting confirmation" tooltip text · DEMO label at label size, 1 px frame | ok 4.7:1 · pending 5.7:1 · demo 16.1:1 on bg; state is never colour-only (text + dotted underline / badge label) |
+| Style extra | `--paper` | `#EDE4D0` | heritage chapters 05, 10, 14 | |
+| Style extra | `--gold` | `#C8A96B` | ghee chapter only | |
+| Style extra | `--ghee-field` | `#F3E6C8` | ghee chapter ground | |
+
+Variant worlds in this style: MASTER 26 · ROOT 14 · BASE 3 · ESSENTIAL (base / deep / light hex for each).
+
+| Variant | Code | Base | Deep | Light | How the world uses them |
+|---|---|---|---|---|---|
+| MASTER 26 | V1+ | `#1F5C45` | `#0A2A20` | `#D9E8DF` | field = light `#D9E8DF`; ghost numeral "26" (Fraunces 200, 40vw) in base at 8%; deep cap is the only saturated element |
+| ROOT 14 | V1 | `#B3202A` | `#4A0A0F` | `#F3D9D6` | field = light; "14" in base at 7%; one hairline horizon at 62% height |
+| BASE 3 | V2 | `#E89A1C` | `#5A3304` | `#F8E4C2` | field = light; "3" in base at 9%; soft radial from upper left at 4% (golden hour) |
+| ESSENTIAL | V3 | `#CDB89A` | `#4D4130` | `#F4EDE2` | field = light (almost milk); "E" in deep `#4D4130` at 6%; the quietest world |
+
+**Dark-chapter inversion:** chapters 02 (end), 06, 11, 13 and the footer: `--c-bg` → `#0B3B32` (06, footer) or `#171918` (11, 13), text → `#F7F4EC`, muted → `#B5C7BF` on forest / `#A7ABA5` on charcoal, line → `rgba(247,244,236,.16)`, primary ↔ on-primary (milk frame + label), accent → `#7FE0B8` for focus and progress; logo turns white. Background interpolates milk → forest in ch. 02.
+
+### 12.2 Typography
+| Role | Font family | Source (npm @fontsource… / Google Fonts) | Weights / axes | Size (clamp) | Line-height | Tracking | Case |
+|---|---|---|---|---|---|---|---|
+| Display / hero | Fraunces | `@fontsource-variable/fraunces` | 300 (200 for ghost numerals) · opsz 144 · SOFT 50; italic 300 for one emphasis word | mega clamp(9rem, 14vw, 17rem) · display clamp(4rem, 8vw, 9rem) | 0.92 | −0.035em | sentence |
+| Headline H1–H2 | Fraunces | `@fontsource-variable/fraunces` | 300 · opsz 144 | H2 clamp(1.8rem, 3vw, 3rem); lead clamp(1.15rem, 1.6vw, 1.45rem) (no h3–h6 styling) | 1.1 | −0.02em | sentence |
+| Body | Inter Tight | `@fontsource-variable/inter-tight` | 400 / 500 | 1rem, measure ≤ 62ch | 1.55 | 0 | sentence |
+| Label / UI | Inter Tight | `@fontsource-variable/inter-tight` | 500 | .72rem | 1.2 | +0.18em | UPPERCASE |
+| Data / mono | JetBrains Mono | `@fontsource-variable/jetbrains-mono` | 400 · `tnum` | .85rem; 2rem trace input | 1.3 | 0 | as data |
+| Devanagari (optional) | Noto Serif Devanagari (display) · Noto Sans Devanagari (UI) | `@fontsource-variable/noto-serif-devanagari` · `@fontsource-variable/noto-sans-devanagari` | 300–500 | +6% to match x-height | 1.4 | 0 | — |
+
+Licence: Fraunces, Inter Tight, JetBrains Mono, Noto Serif Devanagari and Noto Sans Devanagari are SIL OFL 1.1 via @fontsource, subset to ≤ 120 KB total. Pairing: one warm editorial serif and one neutral grotesk; only five sizes per page.
+
+### 12.3 Layout & surfaces
+- **Grid:** 12 columns, 5vw outer margin, 24 px gutters, max 1440 px; 4 columns, 16 px margin on mobile; text ≤ 62ch; the bottle sits on the column 6–7 axis or a golden-section vertical (38.2% / 61.8%)
+- **Spacing scale:** 4 px base, 8 px baseline: 4 · 8 · 12 · 16 · 24 · 32 · 48 · 64 · 96 · 128; section padding 24vh top / 16vh bottom
+- **Radius scale:** sm 0 (editorial default) · md 2 px · lg 999 px only for cursor and tags; no cards
+- **Border style:** 1 px hairlines `--c-line`; primary CTA 1 px frame that draws on hover; AssetSlot 1 px dashed
+- **Shadow / elevation:** UI flat; the only shadow belongs to the bottle: two-layer contact shadow (8 px blur ellipse at 35% + 60 px blur ambient at 8%) that stretches opposite the tilt
+- **Texture / overlay:** one 2% monochrome grain layer (z 100, pointer-events none) on milk and paper only; no gradients except the milk → forest interpolation
+
+### 12.4 Components
+For each: anatomy, sizes, states (default · hover · focus-visible · active · disabled · loading), motion, a11y.
+
+- **Primary button**: underlined label with a travelling arrow inside a 1 px charcoal frame: `EXPLORE THE SOURCE ———→`, Inter Tight 500 caps .72rem +0.18em, 48 px high, padding 0 24 px, radius 0. Hover: frame draws clockwise (600 ms), arrow travels 12 px (240 ms), magnetic ≤ 6 px · focus-visible: 2 px `--c-accent` ring offset 3 px · active: fills charcoal, milk label · disabled: 40%, dotted frame · loading: arrow line extends and retracts (1200 ms). A11y: real `<button>`/`<a>` semantics, 44 px minimum target, visible focus independent of colour.
+- **Secondary button**: the same underline + arrow without the frame. Hover: arrow 12 px, underline 2 px · focus-visible: accent ring · active: ink → accent · disabled: 40%, no arrow · loading: underline sweeps.
+- **Text / arrow link**: Inter Tight 400 with 1 px underline (offset 4 px) and optional `→`; hover: underline grows 0 → 100% (240 ms), arrow 12 px · focus-visible: accent ring · active: accent colour · disabled: muted · loading: n/a.
+- **Icon button** (incl. menu): 40 px (44 px hit) transparent, 1.25 px monoline icon on a 24 px grid (play, close, arrow, drag-to-rotate glyph, menu = two hairlines). Hover: 36 px hairline ring · focus-visible: accent ring · active: 0.96 · disabled: 30% · loading: ring draws. `aria-label` required.
+- **Navigation bar** (desktop + mobile menu) + how the DESIGO® black write/un-write logo loop sits in it: transparent `DesigoNav`, 72 px: the DESIGO® wordmark is the black write/un-write infinite loop (charcoal `#171918` on light grounds, white `#FFFFFF`/milk on dark; it never changes colour, never takes a variant hue and is never re-drawn in the style); logo left, six links, RESERVE as a framed underline; hides on scroll down, returns on up (240 ms). Mobile: 56 px; menu opens a full-screen milk sheet with Fraunces 300 links at 2.4rem, focus trapped, Esc closes, `aria-expanded` on the toggle.
+- **Cursor** (states: default · hover · ROTATE · EXPLORE · ENTER · VIEW · TRACE); touch fallback: default: 10 px ink dot, `mix-blend-mode: difference` · hover: 36 px ring, 1 px stroke · ROTATE: 64 px ring `DRAG` (360 frames present) or `TILT` (single render) on the bottle · EXPLORE: ring `EXPLORE` on the orbit words and breed index · ENTER: ring `ENTER` on /milk bottles (shared-element transition) · VIEW: ring `PLAY` / `VIEW` on media · TRACE: ring `TRACE` on trace nodes · disabled/pending: dotted ring. Hidden on touch.
+- **Card / panel / info block**: no cards: information is a definition list or side sheet on milk; side sheet (trace) = `--c-surface`, width 420 px, 1 px left hairline, padding 32 px, slides 24 px (600 ms). Focus-visible on close: accent ring; Esc closes; loading: AssetSlot (1 px dashed frame, mono label naming the missing file).
+- **Badge / tag** (incl. "pending verification" and "DEMO · not live data"): no badges by default; text tags only. Pending verification: `ClaimText` dotted underline (1 px `--c-pending`) + tooltip "awaiting confirmation"; DEMO · not live data: label-size `DEMO · NOT LIVE DATA` in charcoal with a 1 px frame, always visible on demo content; pill radius allowed only here.
+- **Input + form field** (Trace-your-milk bottle ID): single input line on charcoal: JetBrains Mono 2rem, 1 px milk bottom rule, 64 px high, label above in caps, prefilled `DSG-BTL-000001-3 (sample format)`. Default · hover: rule 2 px · focus-visible: 2 px `#7FE0B8` ring · active: caret · disabled: 40% · loading: rule draws left → right · result: lines reveal (`aria-live=polite`), `isDemo` always shown · error: text "No record for this ID". /reserve inputs: 48 px on `--c-surface`.
+- **Divider / ornament**: a single 1 px hairline; a gold 0.5 px rule only in Heritage and Ghee; the wave-"E" from the wordmark is the only brand glyph.
+- **Section header** (chapter number + title pattern): label `06 — TRACEABILITY` (Inter Tight caps, muted) above a Fraunces 300 line; mega headlines use a mask reveal; one subject per viewport.
+- **Product info block** (variant name, code, price-pending, size, descriptors): right column definition list: V-code label in mono, name in display type, editorial line, descriptors as a plain list; code `DESIGO® V1+` / `V1` / `V2` / `V3`; price from `desigo.ts` rendered as pending (e.g. ₹94 with dotted underline + tooltip "pending approval · pack size not stated"); size "1 L glass · 900 g" pending; descriptors list with pending items dotted-underlined; price shown only when approved, else `₹— · awaiting confirmation`; `RESERVE ———→`.
+- **Bottle stage** (how Bottle / Bottle360Viewer is framed: plinth, glow, shadow, background): the bottle alone at ~62vh on `--milk` (48vh mobile), two-layer contact shadow, idle float ±8 px / 6 s, pointer tilt ±6° (perspective 1200 px) with a soft sheen following the pointer. Single render: ±20° skew-and-sheen, never a fake spin. 360 frames: scroll (ch. 02) or drag (ch. 08, /milk/[variant]) maps to frame index, inertia 0.92/frame, a hairline 0°–360° scale beneath that fills as it turns.
+- **Trace node / timeline step**: eight 10 px dots joined by a 1 px line on forest; one pulse travels. Default: milk dot · hover: 36 px ring · focus-visible: accent ring · active: filled `#7FE0B8`, side sheet opens · disabled/not reached: 40% · loading: pulse. Nodes are buttons, Esc closes the sheet; "Illustrative journey — not live data" always visible.
+
+### 12.5 Iconography & illustration
+Icons: 1.25 px monoline, round caps, 24 px grid, only where a label cannot do the job (play, close, arrow, drag-to-rotate). Illustration: seven 1.25 px line drawings for the journey (E1–E7 style) and one cow line drawing for Heritage. Photo treatment: real DESIGO® photographs only, full-bleed or one large size, never collaged; grade: lifted blacks, warm whites (+4 warmth), greens −10; products as transparent renders with contact shadow.
+
+### 12.6 Motion tokens
+| Token | Value | Use |
+|---|---|---|
+| `--ease-out` | `cubic-bezier(.16,1,.3,1)` | reveals (lines rise 24 px, 80 ms stagger) |
+| `--ease-inout` | `cubic-bezier(.65,0,.35,1)` | scene changes, milk veil page transition |
+| `--ease-milk` | `cubic-bezier(.22,.9,.24,1)` | bottle travel |
+| `--dur-micro` | `240ms` | arrow travel, underline |
+| `--dur-reveal` | `600ms` | text reveal, frame draw |
+| `--dur-scene` | `1200ms` | scene change |
+| `--dur-veil` | `700ms` | milk veil wipe between pages |
+| `--lerp` | `0.09` | Lenis smooth scroll |
+
+One primary motion per viewport; ScrollTrigger `scrub: 1`; nothing loops except the 6 s idle float; View Transitions carry the bottle from /milk to /milk/[variant] (fade fallback). Reduced motion: no pinning or scrub, chapters stack as a document, bottle static at 0°, reveals instant.
+
+### 12.7 AI image generation prompts
+House rules: no text/letters/logos/watermarks in images; generated images are illustration, texture or backdrop only; never
+generate the bottle or ghee jar; zebu cows only, shown with respect; append the style's tail prompt to every prompt.
+
+**Tail prompt (append to every prompt below):** *warm natural light, restrained premium palette of milk white #F7F4EC, deep forest green #0B3B32, earth brown #8C6A43 and warm gold #C8A96B, subtle film grain, editorial, calm, high-end, no text, no watermark, no logo, no letters, minimal, generous negative space*
+
+| # | File path (web/public/desigo/styles/minimalism/...) | Size / ratio | Transparent? | Prompt | Negative prompt | Used in |
+|---|---|---|---|---|---|---|
+| MIN-H1 | `web/public/desigo/styles/minimalism/hero-milk-surface.png` | 3200×2000 (16:10) | no | Top-down macro of a still surface of fresh whole milk with a single slow ripple at the far edge, soft overcast light, creamy white, almost empty | base negatives + splashes, bubbles, cups, hands | Ch. 01 hero optional ground (behind the bottle at 30%), ch. 09 breath |
+| MIN-H2 | `web/public/desigo/styles/minimalism/hero-milk-surface-portrait.png` | 1400×2400 (7:12) | no | Vertical top-down macro of a still milk surface with one faint ripple near the top, soft overcast light, creamy white, empty | base negatives + splashes, bubbles, cups, hands | Ch. 01 hero (mobile) |
+| MIN-V1 | `web/public/desigo/styles/minimalism/sweep-sage.png` | 3200×2000 + 1400×2400 portrait | no | Seamless studio paper sweep in soft sage #D9E8DF, gentle light from upper left, no objects, no horizon line, completely empty | base negatives + props, plants, shadows of objects | MASTER 26 field (optional texture under the flat colour) |
+| MIN-V2 | `web/public/desigo/styles/minimalism/sweep-blush.png` | 3200×2000 + 1400×2400 portrait | no | Seamless studio paper sweep in pale blush #F3D9D6 with one faint warm horizon tone at 62% height, soft even light, completely empty | base negatives + props, shadows of objects | ROOT 14 field |
+| MIN-V3 | `web/public/desigo/styles/minimalism/sweep-butter.png` | 3200×2000 + 1400×2400 portrait | no | Seamless studio paper sweep in pale amber #F8E4C2 with a very soft golden-hour light falling from the upper left, completely empty | base negatives + sun disc, props, flares | BASE 3 field |
+| MIN-V4 | `web/public/desigo/styles/minimalism/sweep-ivory.png` | 3200×2000 + 1400×2400 portrait | no | Seamless studio paper sweep in warm ivory #F4EDE2, almost milk white, perfectly even soft light, completely empty | base negatives + props, shadows, vignetting | ESSENTIAL field |
+| MIN-J1 | `web/public/desigo/styles/minimalism/line-journey-cow.png` | 1600×1600 (1:1) | yes (real alpha) | Single-weight 1.25 px hand-drawn ink line drawing of an Indian zebu cow grazing, hump and dewlap visible, no shading, forest-green #0B3B32 line on transparent background, generous white space | base negatives + shading, hatching, colour fills, cartoon face | Ch. 03 station 1 (set matches house brief E1–E7) |
+| MIN-J2 | `web/public/desigo/styles/minimalism/line-heritage-cow.png` | 1600×1200 (4:3) | yes (real alpha) | Single continuous fine line drawing of a resting zebu cow in profile, calm, minimal, forest-green line on transparent background | base negatives + shading, colour, decorative border | Ch. 10 Heritage |
+| MIN-J3 | `web/public/desigo/styles/minimalism/thar-dawn-minimal.png` | 3600×2000 (9:5) | no | Very minimal wide view of the Thar desert edge at dawn, low khejri trees as small silhouettes on the horizon, vast pale sky occupying 80% of the frame, muted gold and sage | base negatives + people, vehicles, buildings, dramatic clouds | Ch. 04 placeholder only until the real farm landscape (B1) arrives; labelled as illustration |
+| MIN-T1 | `web/public/desigo/styles/minimalism/grain-overlay.png` | 1024×1024, seamless | no | Seamless monochrome photographic film grain on mid-grey, fine, even | base negatives + scratches, dust, colour noise | 2% grain layer (z 100) |
+| MIN-T2 | `web/public/desigo/styles/minimalism/linen-milk.png` | 2048×2048, seamless | no | Seamless tileable fine linen cloth texture in milk white #F7F4EC, extremely subtle weave, flat lighting | base negatives + folds, stains, colour | /reserve and /about ground (optional) |
+
+Base negatives (apply to every prompt): *text, letters, numbers, logo, watermark, signature, label, product bottle, glass bottle, jar, packaging, Holstein or Jersey cattle, cartoon mascot, deity or religious icon, distorted anatomy, oversaturated, HDR, low resolution*. Minimalism prefers one real exceptional photograph to many generated ones: an `AssetSlot` is more premium than a fake. Variant fields remain flat CSS colour; the sweeps are optional micro-texture.
+
+### 12.8 Prototype acceptance checklist
+- [ ] Tokens from `specs/01_minimalism.json` applied; no off-palette colours
+- [ ] Fonts self-hosted; correct weights load
+- [ ] All 12.4 components built with all states
+- [ ] Hero + bottle-story + one product world + trace chapter built in this style (the comparison set)
+- [ ] Mobile 360 px pass; reduced-motion pass; contrast checked
+- [ ] Claims rules respected (pending underline, no blocked claims, DEMO labels)
+- [ ] Screenshots: desktop 1440×900 ×4 + mobile 390×844 ×2 saved to docs/media/styles/minimalism/

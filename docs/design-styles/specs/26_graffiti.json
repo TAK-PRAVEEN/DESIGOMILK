@@ -1,0 +1,254 @@
+{
+  "id": 26,
+  "slug": "graffiti",
+  "name": "Graffiti",
+  "priority": false,
+  "fit": 2,
+  "colors": {
+    "primary": "#0B3B32",
+    "onPrimary": "#F7F4EC",
+    "secondary": "#1E7A68",
+    "accent": "#C2412D",
+    "bg": "#F7F4EC",
+    "surface": "#DCE6EE",
+    "text": "#171918",
+    "textMuted": "#2F5A88",
+    "line": "#C8A96B",
+    "ok": "#1E7A68",
+    "pending": "#C8A96B",
+    "demo": "#C2412D"
+  },
+  "variants": {
+    "master-26": {
+      "base": "#1F5C45",
+      "deep": "#0A2A20",
+      "light": "#D9E8DF",
+      "world": "green door #1F5C45 in blue wall, milk lettering, gold pinstripe"
+    },
+    "root-14": {
+      "base": "#B3202A",
+      "deep": "#4A0A0F",
+      "light": "#F3D9D6",
+      "world": "red-oxide shutter #B3202A, milk lettering, #4A0A0F shadow"
+    },
+    "base-3": {
+      "base": "#E89A1C",
+      "deep": "#5A3304",
+      "light": "#F8E4C2",
+      "world": "haldi wall #E89A1C, forest lettering"
+    },
+    "essential": {
+      "base": "#CDB89A",
+      "deep": "#4D4130",
+      "light": "#F4EDE2",
+      "world": "ivory lime wash #F4EDE2, charcoal lettering"
+    }
+  },
+  "fonts": {
+    "display": {
+      "family": "Big Shoulders Stencil Display",
+      "package": "@fontsource/big-shoulders-stencil-display",
+      "weights": [
+        800
+      ]
+    },
+    "body": {
+      "family": "Inter Tight",
+      "package": "@fontsource-variable/inter-tight",
+      "weights": [
+        400,
+        500,
+        600,
+        700
+      ]
+    },
+    "label": {
+      "family": "Big Shoulders Stencil Text",
+      "package": "@fontsource/big-shoulders-stencil-text",
+      "weights": [
+        600
+      ]
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "package": "@fontsource-variable/jetbrains-mono",
+      "weights": [
+        400,
+        500
+      ]
+    },
+    "editorial": {
+      "family": "Fraunces",
+      "package": "@fontsource-variable/fraunces",
+      "weights": [
+        400
+      ]
+    },
+    "devanagari": {
+      "family": "Tiro Devanagari Hindi",
+      "package": "@fontsource/tiro-devanagari-hindi",
+      "weights": [
+        400
+      ]
+    }
+  },
+  "type": {
+    "display": "clamp(3.5rem, 2.2rem + 6vw, 8.5rem)",
+    "h1": "clamp(2.6rem, 1.6rem + 4vw, 5rem)",
+    "h2": "clamp(1.6rem, 1.2rem + 1.8vw, 2.6rem)",
+    "body": "clamp(1rem, .95rem + .25vw, 1.125rem)",
+    "label": "clamp(.8rem, .76rem + .2vw, .9rem)"
+  },
+  "radius": {
+    "sm": "0",
+    "md": "2px",
+    "lg": "4px",
+    "pill": "999px"
+  },
+  "shadow": {
+    "bottle": "contact ellipse rgba(23,25,24,.35) blur 20px + wall shadow cast up-left + stencil echo #2F5A88 offset 24px",
+    "panel": "0 2px 0 rgba(23,25,24,.08), 0 12px 24px -12px rgba(23,25,24,.25)"
+  },
+  "motion": {
+    "easeOut": "cubic-bezier(.16,1,.3,1)",
+    "easeInOut": "cubic-bezier(.65,0,.35,1)",
+    "easeMilk": "cubic-bezier(.22,.9,.24,1)",
+    "durMicro": 240,
+    "durReveal": 600,
+    "durScene": 1200,
+    "paintStroke": 700,
+    "paintEase": "cubic-bezier(.33,0,.15,1)",
+    "paste": 500,
+    "coat": 300,
+    "roller": 900
+  },
+  "button": {
+    "primary": {
+      "bg": "#0B3B32",
+      "fg": "#F7F4EC",
+      "radius": "2px",
+      "padding": "16px 24px",
+      "hover": "second coat 8% darker sweeps 300ms, arrow +6px"
+    },
+    "secondary": {
+      "bg": "#F7F4EC",
+      "fg": "#0B3B32",
+      "border": "2px solid #0B3B32",
+      "radius": "2px",
+      "padding": "14px 22px",
+      "hover": "outline repaint 300ms"
+    },
+    "link": {
+      "fg": "#1E7A68",
+      "underline": "hand-painted SVG 2px",
+      "hover": "underline repaints 240ms"
+    }
+  },
+  "logo": {
+    "loop": "write/un-write infinite",
+    "onLight": "#171918",
+    "onDark": "#FFFFFF",
+    "colourChange": false,
+    "cycleMs": 4600,
+    "drawMs": "0-1200 (480 each, 95 stagger)",
+    "holdUntilMs": 3000,
+    "unwriteMs": "3000-4200 (reverse order)",
+    "colorLight": "#171918",
+    "colorDark": "#F7F4EC"
+  },
+  "tailPrompt": "Jodhpur Blue City street-wall aesthetic, indigo lime wash #5B86B5 and #2F5A88, milk white #F7F4EC, deep forest #0B3B32, gold pin-stripe #C8A96B, late-afternoon sun from the upper right, clean and hygienic, hand-crafted sign-painting tradition, calm, premium, no text, no watermark, no logo, no letters",
+  "images": [
+    {
+      "file": "web/public/desigo/styles/graffiti/hero-landscape.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Sunlit indigo-blue lime-washed wall in an old Jodhpur lane, soft late-afternoon light from the upper right, layered lime-wash texture, a stone doorstep and a strip of lane at the bottom, large empty clean wall in the centre, Jodhpur Blue City street-wall aesthetic, indigo lime wash #5B86B5 and #2F5A88, milk white #F7F4EC, deep forest #0B3B32, gold pin-stripe #C8A96B, late-afternoon sun from the upper right, clean and hygienic, hand-crafted sign-painting tradition, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, graffiti tags, spray cans, drips, posters with writing, rubbish, people, vandalism",
+      "usedIn": "Hero (ch. 01), /jodhpur"
+    },
+    {
+      "file": "web/public/desigo/styles/graffiti/hero-portrait.png",
+      "size": "1400×2400 (7:12)",
+      "transparent": false,
+      "prompt": "Tall view of an indigo-blue lime-washed Jodhpur wall with a stone step at the bottom, soft side light, empty clean centre, Jodhpur Blue City street-wall aesthetic, indigo lime wash #5B86B5 and #2F5A88, milk white #F7F4EC, deep forest #0B3B32, gold pin-stripe #C8A96B, late-afternoon sun from the upper right, clean and hygienic, hand-crafted sign-painting tradition, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, graffiti tags, spray cans, drips, people",
+      "usedIn": "Hero mobile"
+    },
+    {
+      "file": "web/public/desigo/styles/graffiti/world-master-26.png",
+      "size": "3200×2000 + 1400×2400 crop",
+      "transparent": false,
+      "prompt": "Deep bottle-green #1F5C45 painted wooden door set in an indigo-blue lime-washed wall, a thin hand-painted gold pin-stripe border around the frame, a stencilled herb-leaf border pattern, soft light, empty space in front of the door, Jodhpur Blue City street-wall aesthetic, indigo lime wash #5B86B5 and #2F5A88, milk white #F7F4EC, deep forest #0B3B32, gold pin-stripe #C8A96B, late-afternoon sun from the upper right, clean and hygienic, hand-crafted sign-painting tradition, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, graffiti tags, drips, padlocks, rust",
+      "usedIn": "Four milks ch. 08, /milk/master-26"
+    },
+    {
+      "file": "web/public/desigo/styles/graffiti/world-root-14.png",
+      "size": "3200×2000 + 1400×2400 crop",
+      "transparent": false,
+      "prompt": "Red-oxide #B3202A painted shop shutter in a blue lime-washed wall, a milk-white scalloped truck-art style border painted along the top, warm side light, clean, Jodhpur Blue City street-wall aesthetic, indigo lime wash #5B86B5 and #2F5A88, milk white #F7F4EC, deep forest #0B3B32, gold pin-stripe #C8A96B, late-afternoon sun from the upper right, clean and hygienic, hand-crafted sign-painting tradition, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, graffiti tags, rust stains, drips, blood-like streaks",
+      "usedIn": "Four milks ch. 08, /milk/root-14"
+    },
+    {
+      "file": "web/public/desigo/styles/graffiti/world-base-3.png",
+      "size": "3200×2000 + 1400×2400 crop",
+      "transparent": false,
+      "prompt": "Wall freshly washed in haldi amber #E89A1C lime wash, a simple empty painted circle like a house-number plate, warm morning light, clean plaster, Jodhpur Blue City street-wall aesthetic, indigo lime wash #5B86B5 and #2F5A88, milk white #F7F4EC, deep forest #0B3B32, gold pin-stripe #C8A96B, late-afternoon sun from the upper right, clean and hygienic, hand-crafted sign-painting tradition, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, numbers, graffiti tags, drips, stains",
+      "usedIn": "Four milks ch. 08, /milk/base-3"
+    },
+    {
+      "file": "web/public/desigo/styles/graffiti/world-essential.png",
+      "size": "3200×2000 + 1400×2400 crop",
+      "transparent": false,
+      "prompt": "Fresh ivory #F4EDE2 lime-washed wall, perfectly clean, soft diffuse daylight, a small stone step at the base, minimal and calm, Jodhpur Blue City street-wall aesthetic, indigo lime wash #5B86B5 and #2F5A88, milk white #F7F4EC, deep forest #0B3B32, gold pin-stripe #C8A96B, late-afternoon sun from the upper right, clean and hygienic, hand-crafted sign-painting tradition, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, graffiti, stains, cracks, drips",
+      "usedIn": "Four milks ch. 08, /milk/essential"
+    },
+    {
+      "file": "web/public/desigo/styles/graffiti/trace-route.png",
+      "size": "3000×2000",
+      "transparent": true,
+      "prompt": "Hand-painted route diagram of chalk-white brush lines connecting small stencil-cut circles from scattered points into one hub, painterly but tidy, isolated on transparent background, Jodhpur Blue City street-wall aesthetic, indigo lime wash #5B86B5 and #2F5A88, milk white #F7F4EC, deep forest #0B3B32, gold pin-stripe #C8A96B, late-afternoon sun from the upper right, clean and hygienic, hand-crafted sign-painting tradition, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, labels, arrows with words, map borders, drips",
+      "usedIn": "Traceability ch. 06, /trace (PaintedRouteMap)"
+    },
+    {
+      "file": "web/public/desigo/styles/graffiti/journey-lane.png",
+      "size": "3600×1200 (3:1)",
+      "transparent": false,
+      "prompt": "Long horizontal sunlit lane wall in Jodhpur blue with seven evenly spaced blank pale painted panels like empty shop signboards, a single thin milk-white painted line along the base of the wall, Jodhpur Blue City street-wall aesthetic, indigo lime wash #5B86B5 and #2F5A88, milk white #F7F4EC, deep forest #0B3B32, gold pin-stripe #C8A96B, late-afternoon sun from the upper right, clean and hygienic, hand-crafted sign-painting tradition, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, writing on panels, graffiti tags, people, vehicles",
+      "usedIn": "Cow → bottle ch. 03 (LaneTrack)"
+    },
+    {
+      "file": "web/public/desigo/styles/graffiti/texture-limewash.png",
+      "size": "2400×2400, seamless",
+      "transparent": false,
+      "prompt": "Seamless tileable texture of indigo-blue lime wash on old plaster, subtle brush marks, faint chalky patches, flat even light, top-down, Jodhpur Blue City street-wall aesthetic, indigo lime wash #5B86B5 and #2F5A88, milk white #F7F4EC, deep forest #0B3B32, gold pin-stripe #C8A96B, late-afternoon sun from the upper right, clean and hygienic, hand-crafted sign-painting tradition, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, graffiti, cracks, stains, vignette, shadows",
+      "usedIn": "WallScene background"
+    },
+    {
+      "file": "web/public/desigo/styles/graffiti/heritage-mandana.png",
+      "size": "3200×2000",
+      "transparent": false,
+      "prompt": "Rajasthani folk wall painting in the mandana tradition, white lime geometric patterns on a red-ochre earth wall, a respectful zebu cow motif with hump and curved horns at the centre, symmetrical, hand-made (prototype placeholder for the commissioned, credited mural), Jodhpur Blue City street-wall aesthetic, indigo lime wash #5B86B5 and #2F5A88, milk white #F7F4EC, deep forest #0B3B32, gold pin-stripe #C8A96B, late-afternoon sun from the upper right, clean and hygienic, hand-crafted sign-painting tradition, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, cartoon cow, religious idols, graffiti, modern objects",
+      "usedIn": "Heritage ch. 10 (placeholder)"
+    },
+    {
+      "file": "web/public/desigo/styles/graffiti/ghee-haldi-wall.png",
+      "size": "3200×2000",
+      "transparent": false,
+      "prompt": "Warm haldi-yellow lime-washed wall with a simple painted wooden shelf, soft dusk light, empty shelf centre, clean, Jodhpur Blue City street-wall aesthetic, indigo lime wash #5B86B5 and #2F5A88, milk white #F7F4EC, deep forest #0B3B32, gold pin-stripe #C8A96B, late-afternoon sun from the upper right, clean and hygienic, hand-crafted sign-painting tradition, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, jars, pots on shelf, graffiti, drips",
+      "usedIn": "Ghee ch. 12, /ghee"
+    }
+  ],
+  "scene": {
+    "wall": "#5B86B5",
+    "wallDeep": "#2F5A88"
+  }
+}

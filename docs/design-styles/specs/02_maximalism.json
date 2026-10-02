@@ -1,0 +1,227 @@
+{
+  "id": 2,
+  "slug": "maximalism",
+  "name": "Maximalism",
+  "priority": false,
+  "fit": 2,
+  "colors": {
+    "primary": "#9E2B25",
+    "onPrimary": "#F7F4EC",
+    "secondary": "#1F2E5C",
+    "accent": "#E0A526",
+    "bg": "#F2E6CC",
+    "surface": "#F7F4EC",
+    "text": "#1E211F",
+    "textMuted": "#5C4A2A",
+    "line": "#C8A96B",
+    "ok": "#1F5C45",
+    "pending": "#7A5A12",
+    "demo": "#1F2E5C"
+  },
+  "variants": {
+    "master-26": {
+      "base": "#1F5C45",
+      "deep": "#0A2A20",
+      "light": "#D9E8DF"
+    },
+    "root-14": {
+      "base": "#B3202A",
+      "deep": "#4A0A0F",
+      "light": "#F3D9D6"
+    },
+    "base-3": {
+      "base": "#E89A1C",
+      "deep": "#5A3304",
+      "light": "#F8E4C2"
+    },
+    "essential": {
+      "base": "#CDB89A",
+      "deep": "#4D4130",
+      "light": "#F4EDE2"
+    }
+  },
+  "fonts": {
+    "display": {
+      "family": "Fraunces",
+      "package": "@fontsource-variable/fraunces",
+      "weights": [
+        600,
+        700,
+        900
+      ],
+      "axes": "wght,opsz,SOFT,WONK"
+    },
+    "body": {
+      "family": "Inter Tight",
+      "package": "@fontsource-variable/inter-tight",
+      "weights": [
+        400,
+        500
+      ]
+    },
+    "label": {
+      "family": "Inter Tight",
+      "package": "@fontsource-variable/inter-tight",
+      "weights": [
+        600
+      ]
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "package": "@fontsource-variable/jetbrains-mono",
+      "weights": [
+        400,
+        500
+      ]
+    },
+    "devanagari": {
+      "family": "Rozha One",
+      "package": "@fontsource/rozha-one",
+      "weights": [
+        400
+      ]
+    }
+  },
+  "type": {
+    "display": "clamp(3.5rem, 9vw, 9rem)",
+    "h1": "clamp(2.6rem, 5vw, 5rem)",
+    "h2": "clamp(1.8rem, 3vw, 3rem)",
+    "body": "clamp(1rem, 0.95rem + 0.2vw, 1.125rem)",
+    "label": "0.75rem"
+  },
+  "radius": {
+    "sm": "0",
+    "md": "0",
+    "lg": "50% 50% 0 0 (arch mask)",
+    "pill": "999px"
+  },
+  "shadow": {
+    "bottle": "contact ellipse 0 0 24px rgba(30,33,31,.28) scaleY(.18) + ambient 0 30px 60px rgba(30,33,31,.12)",
+    "panel": "none; hover 4px 4px 0 rgba(143,111,46,.30)"
+  },
+  "motion": {
+    "easeOut": "cubic-bezier(.16,1,.3,1)",
+    "easeInOut": "cubic-bezier(.65,0,.35,1)",
+    "durMicro": 240,
+    "durReveal": 900,
+    "durScene": 1200
+  },
+  "button": {
+    "primary": {
+      "bg": "#9E2B25",
+      "fg": "#F7F4EC",
+      "radius": "0",
+      "padding": "14px 24px",
+      "hover": "gold keyline draws + 4px printed shadow, arrow +6px"
+    },
+    "secondary": {
+      "bg": "transparent",
+      "fg": "#1F2E5C",
+      "border": "1px #1F2E5C + inner gold rule",
+      "radius": "0",
+      "padding": "14px 24px",
+      "hover": "indigo 8% tint"
+    },
+    "link": {
+      "fg": "#1E211F",
+      "underline": "1px #9E2B25",
+      "hover": "underline 2px, arrow travels 8px"
+    }
+  },
+  "images": [
+    {
+      "file": "web/public/desigo/styles/maximalism/hero.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Dense layered field of hand-carved wood-block prints on sandstone cotton, buti flowers and paisley in indigo, madder and turmeric, framed by printed borders within borders, a large empty arch-shaped plain milk-white clearing in the centre, flat frontal view, even daylight, Rajasthani block-print and phad-painting craft, curated maximal palette of sandstone #F2E6CC, block-print indigo #1F2E5C, madder red #9E2B25, turmeric #E0A526, leaf green #1F5C45 and matte gold #C8A96B, slight print mis-registration, hand-dyed cotton texture, rich but orderly, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, mandala, elephants, tourist souvenir, glossy gold, busy centre, people",
+      "usedIn": "01 Hero, 15 Final CTA"
+    },
+    {
+      "file": "web/public/desigo/styles/maximalism/hero-portrait.png",
+      "size": "1400×2400 (7:12)",
+      "transparent": false,
+      "prompt": "Vertical composition of layered Rajasthani block-print textiles on sandstone cotton, borders within borders at top and bottom, a tall empty arch-shaped milk-white clearing in the centre, flat frontal view, Rajasthani block-print and phad-painting craft, curated maximal palette of sandstone #F2E6CC, block-print indigo #1F2E5C, madder red #9E2B25, turmeric #E0A526, leaf green #1F5C45 and matte gold #C8A96B, slight print mis-registration, hand-dyed cotton texture, rich but orderly, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, mandala, elephants, busy centre",
+      "usedIn": "01 Hero mobile"
+    },
+    {
+      "file": "web/public/desigo/styles/maximalism/worlds/master-26.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "Dabu mud-resist block-print textile in leaf green #1F5C45 and indigo with a border of small repeated herb-leaf motifs, gold zari stripe, deep forest green #0A2A20 accents, an empty plain arch clearing in the centre, Rajasthani block-print and phad-painting craft, curated maximal palette of sandstone #F2E6CC, block-print indigo #1F2E5C, madder red #9E2B25, turmeric #E0A526, leaf green #1F5C45 and matte gold #C8A96B, slight print mis-registration, hand-dyed cotton texture, rich but orderly, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, counted herbs, botanical labels, red, orange",
+      "usedIn": "08 Four milks · /milk/master-26"
+    },
+    {
+      "file": "web/public/desigo/styles/maximalism/worlds/root-14.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "Ajrakh geometric block-print textile in madder red #B3202A and oxblood #4A0A0F with indigo outlines, a band of red earth texture along the bottom, an empty plain arch clearing in the centre, Rajasthani block-print and phad-painting craft, curated maximal palette of sandstone #F2E6CC, block-print indigo #1F2E5C, madder red #9E2B25, turmeric #E0A526, leaf green #1F5C45 and matte gold #C8A96B, slight print mis-registration, hand-dyed cotton texture, rich but orderly, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, green, neon pink, blood, gore",
+      "usedIn": "08 Four milks · /milk/root-14"
+    },
+    {
+      "file": "web/public/desigo/styles/maximalism/worlds/base-3.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "Bagru block-print textile in turmeric amber #E89A1C and deep brown #5A3304 with repeating small sun motifs, warm golden-hour light across the cloth, an empty plain arch clearing in the centre, Rajasthani block-print and phad-painting craft, curated maximal palette of sandstone #F2E6CC, block-print indigo #1F2E5C, madder red #9E2B25, turmeric #E0A526, leaf green #1F5C45 and matte gold #C8A96B, slight print mis-registration, hand-dyed cotton texture, rich but orderly, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, neon yellow, green, sun with face",
+      "usedIn": "08 Four milks · /milk/base-3"
+    },
+    {
+      "file": "web/public/desigo/styles/maximalism/worlds/essential.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "Tone-on-tone ivory chikankari-style white embroidery on ivory cotton #F4EDE2 with fine #CDB89A threads, very restrained, soft skylight, an empty plain arch clearing in the centre, Rajasthani block-print and phad-painting craft, curated maximal palette of sandstone #F2E6CC, block-print indigo #1F2E5C, madder red #9E2B25, turmeric #E0A526, leaf green #1F5C45 and matte gold #C8A96B, slight print mis-registration, hand-dyed cotton texture, rich but orderly, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, bright colours, heavy pattern in centre",
+      "usedIn": "08 Four milks · /milk/essential"
+    },
+    {
+      "file": "web/public/desigo/styles/maximalism/journey/phad-scroll.png",
+      "size": "6000×1400 (horizontal scroll strip)",
+      "transparent": false,
+      "prompt": "Long horizontal phad scroll painting in seven narrative panels separated by painted borders: an Indian zebu cow with hump and dewlap grazing, a small Rajasthani farm with thatched shed and khejri tree, a steel milk can, a round paper test card with sixteen dots, a stainless-steel chiller, a small clean dairy building, and a final empty panel; a milk-white river runs through all panels, flat folk-painting colours, Rajasthani block-print and phad-painting craft, curated maximal palette of sandstone #F2E6CC, block-print indigo #1F2E5C, madder red #9E2B25, turmeric #E0A526, leaf green #1F5C45 and matte gold #C8A96B, slight print mis-registration, hand-dyed cotton texture, rich but orderly, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, glass bottle, people's faces, deities, text banners",
+      "usedIn": "03 Cow to bottle"
+    },
+    {
+      "file": "web/public/desigo/styles/maximalism/textures/block-print-tile.png",
+      "size": "2048×2048, seamless",
+      "transparent": false,
+      "prompt": "Seamless tileable hand block-printed cotton pattern of small buti flowers and paisleys in indigo, madder and turmeric on sandstone ground, visible wood-grain print texture, flat scan lighting, Rajasthani block-print and phad-painting craft, curated maximal palette of sandstone #F2E6CC, block-print indigo #1F2E5C, madder red #9E2B25, turmeric #E0A526, leaf green #1F5C45 and matte gold #C8A96B, slight print mis-registration, hand-dyed cotton texture, rich but orderly, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, seams, shadows, folds",
+      "usedIn": "PatternField, nav border, footer"
+    },
+    {
+      "file": "web/public/desigo/styles/maximalism/textures/border-band.png",
+      "size": "3000×240, horizontally tileable",
+      "transparent": true,
+      "prompt": "Horizontal block-print border band of dots, triangles, leaves and a small walking zebu cow-and-calf motif, indigo, madder and gold, isolated on transparent background, Rajasthani block-print and phad-painting craft, curated maximal palette of sandstone #F2E6CC, block-print indigo #1F2E5C, madder red #9E2B25, turmeric #E0A526, leaf green #1F5C45 and matte gold #C8A96B, slight print mis-registration, hand-dyed cotton texture, rich but orderly, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, text, cartoon cow face",
+      "usedIn": "Divider / ornament band"
+    },
+    {
+      "file": "web/public/desigo/styles/maximalism/ghee/festive-world.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "Festive Rajasthani still-life setting without products: brass thalis, marigold garlands and folded block-printed textiles around three empty arch-shaped niches, warm marigold and brass light, abundant edges, calm empty centre, Rajasthani block-print and phad-painting craft, curated maximal palette of sandstone #F2E6CC, block-print indigo #1F2E5C, madder red #9E2B25, turmeric #E0A526, leaf green #1F5C45 and matte gold #C8A96B, slight print mis-registration, hand-dyed cotton texture, rich but orderly, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, jars, bottles, diyas with fire hazard, deities, people",
+      "usedIn": "12 Ghee · /ghee/festive"
+    },
+    {
+      "file": "web/public/desigo/styles/maximalism/heritage/cartouche-field.png",
+      "size": "3200×2000",
+      "transparent": false,
+      "prompt": "Layered block-print panels of cows, leaves and sun motifs on sandstone cotton with an empty plain cartouche in the centre, gold double rules, deep indigo frame, Rajasthani block-print and phad-painting craft, curated maximal palette of sandstone #F2E6CC, block-print indigo #1F2E5C, madder red #9E2B25, turmeric #E0A526, leaf green #1F5C45 and matte gold #C8A96B, slight print mis-registration, hand-dyed cotton texture, rich but orderly, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, text in cartouche, mandala",
+      "usedIn": "10 Heritage"
+    }
+  ],
+  "colorsDark": {
+    "bg": "#1F2E5C",
+    "surface": "#162246",
+    "text": "#F7F4EC",
+    "textMuted": "#D9CDB4"
+  }
+}

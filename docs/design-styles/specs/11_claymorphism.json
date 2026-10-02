@@ -1,0 +1,230 @@
+{
+  "id": 11,
+  "slug": "claymorphism",
+  "name": "Claymorphism / Clay style",
+  "priority": false,
+  "fit": 2,
+  "colors": {
+    "primary": "#1E7A68",
+    "onPrimary": "#F7F4EC",
+    "secondary": "#C4704A",
+    "accent": "#D9B877",
+    "bg": "#F7F4EC",
+    "surface": "#F1E7D3",
+    "text": "#1E211F",
+    "textMuted": "#5A4D44",
+    "line": "rgba(138,74,46,0.25)",
+    "ok": "#1F5C45",
+    "pending": "#8A4A2E",
+    "demo": "#171918"
+  },
+  "variants": {
+    "master-26": {
+      "base": "#3F7D62",
+      "deep": "#1F5C45",
+      "light": "#D9E8DF"
+    },
+    "root-14": {
+      "base": "#C9454B",
+      "deep": "#8A4A2E",
+      "light": "#F3D9D6"
+    },
+    "base-3": {
+      "base": "#EDAA45",
+      "deep": "#5A3304",
+      "light": "#F8E4C2"
+    },
+    "essential": {
+      "base": "#DCCBB0",
+      "deep": "#4D4130",
+      "light": "#F4EDE2"
+    }
+  },
+  "fonts": {
+    "display": {
+      "family": "Bricolage Grotesque",
+      "package": "@fontsource-variable/bricolage-grotesque",
+      "weights": [
+        600,
+        700
+      ],
+      "axes": "wght,opsz,wdth"
+    },
+    "body": {
+      "family": "Inter Tight",
+      "package": "@fontsource-variable/inter-tight",
+      "weights": [
+        400,
+        500
+      ]
+    },
+    "label": {
+      "family": "Inter Tight",
+      "package": "@fontsource-variable/inter-tight",
+      "weights": [
+        600
+      ]
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "package": "@fontsource-variable/jetbrains-mono",
+      "weights": [
+        400
+      ]
+    },
+    "devanagari": {
+      "family": "Baloo 2",
+      "package": "@fontsource-variable/baloo-2",
+      "weights": [
+        500,
+        700
+      ]
+    },
+    "softDisplay": {
+      "family": "Fraunces",
+      "package": "@fontsource-variable/fraunces",
+      "weights": [
+        600
+      ],
+      "axes": "SOFT 100"
+    }
+  },
+  "type": {
+    "display": "clamp(3rem, 8vw, 8rem)",
+    "h1": "clamp(2.3rem, 4.4vw, 4.25rem)",
+    "h2": "clamp(1.6rem, 2.6vw, 2.5rem)",
+    "body": "clamp(1rem, 0.95rem + 0.2vw, 1.125rem)",
+    "label": "0.75rem"
+  },
+  "radius": {
+    "sm": "16px",
+    "md": "32px",
+    "lg": "50%"
+  },
+  "shadow": {
+    "bottle": "design-system contact ellipse on the terracotta plinth",
+    "panel": "inset 6px 6px 12px rgba(255,255,255,.55), inset -8px -8px 16px rgba(138,74,46,.18), 0 18px 36px rgba(30,33,31,.12)"
+  },
+  "motion": {
+    "easeOut": "cubic-bezier(.16,1,.3,1)",
+    "easeInOut": "cubic-bezier(.65,0,.35,1)",
+    "durMicro": 120,
+    "durReveal": 280,
+    "durScene": 700,
+    "easeMilk": "cubic-bezier(.22,.9,.24,1)",
+    "stopMotionFps": 12
+  },
+  "button": {
+    "primary": {
+      "bg": "#1E7A68",
+      "fg": "#F7F4EC",
+      "radius": "24px",
+      "padding": "0 32px; height 56px",
+      "shadow": "clay recipe",
+      "hover": "lift 4px; active squash scale(1.03,.96) 120ms"
+    },
+    "secondary": {
+      "bg": "#F1E7D3",
+      "fg": "#1E211F",
+      "radius": "24px",
+      "padding": "0 32px; height 56px",
+      "shadow": "clay recipe",
+      "hover": "as primary"
+    },
+    "link": {
+      "fg": "#1E211F",
+      "underline": "2px #1E7A68 round caps",
+      "hover": "arrow +8px"
+    }
+  },
+  "images": [
+    {
+      "file": "web/public/desigo/styles/claymorphism/hero.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Soft matte clay diorama of rolling pastures and a tiny farm with a thatched shed, a round terracotta plinth empty in the centre, studio light, handmade matte clay diorama, plasticine and terracotta with subtle fingerprints and tool marks, soft global illumination, isometric 30 degree camera, earthy palette of milk #F7F4EC, cream clay #F1E7D3, terracotta #C4704A, sand #E3C9A0, leaf #5E9C7E, sky #CFE3E6 and gold #D9B877, Aardman and Molela craft feeling, warm, calm, premium, no gloss, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, candy colours, glossy plastic, cartoon faces",
+      "usedIn": "01 Hero, 15 Final CTA"
+    },
+    {
+      "file": "web/public/desigo/styles/claymorphism/hero-portrait.png",
+      "size": "1400×2400 (7:12)",
+      "transparent": false,
+      "prompt": "Vertical clay diorama with pastures at the bottom, soft sky above, an empty terracotta plinth in the centre, handmade matte clay diorama, plasticine and terracotta with subtle fingerprints and tool marks, soft global illumination, isometric 30 degree camera, earthy palette of milk #F7F4EC, cream clay #F1E7D3, terracotta #C4704A, sand #E3C9A0, leaf #5E9C7E, sky #CFE3E6 and gold #D9B877, Aardman and Molela craft feeling, warm, calm, premium, no gloss, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, glossy plastic, faces",
+      "usedIn": "01 Hero mobile"
+    },
+    {
+      "file": "web/public/desigo/styles/claymorphism/worlds/master-26.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "Small clay landscape on a round turntable: lush green clay meadow #3F7D62 with generic herb plants, soft green hills, an empty mossy clay plinth in the centre, handmade matte clay diorama, plasticine and terracotta with subtle fingerprints and tool marks, soft global illumination, isometric 30 degree camera, earthy palette of milk #F7F4EC, cream clay #F1E7D3, terracotta #C4704A, sand #E3C9A0, leaf #5E9C7E, sky #CFE3E6 and gold #D9B877, Aardman and Molela craft feeling, warm, calm, premium, no gloss, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, counted plants in rows, labels",
+      "usedIn": "08 Four milks · /milk/master-26"
+    },
+    {
+      "file": "web/public/desigo/styles/claymorphism/worlds/root-14.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "Small clay landscape on a round turntable: terracotta-red earth #C9454B with exposed clay roots and layered soil, an empty plinth in the centre, handmade matte clay diorama, plasticine and terracotta with subtle fingerprints and tool marks, soft global illumination, isometric 30 degree camera, earthy palette of milk #F7F4EC, cream clay #F1E7D3, terracotta #C4704A, sand #E3C9A0, leaf #5E9C7E, sky #CFE3E6 and gold #D9B877, Aardman and Molela craft feeling, warm, calm, premium, no gloss, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, blood, faces",
+      "usedIn": "08 Four milks · /milk/root-14"
+    },
+    {
+      "file": "web/public/desigo/styles/claymorphism/worlds/base-3.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "Small clay landscape on a round turntable: amber clay dunes #EDAA45 at golden hour, a round clay sun, an empty plinth in the centre, handmade matte clay diorama, plasticine and terracotta with subtle fingerprints and tool marks, soft global illumination, isometric 30 degree camera, earthy palette of milk #F7F4EC, cream clay #F1E7D3, terracotta #C4704A, sand #E3C9A0, leaf #5E9C7E, sky #CFE3E6 and gold #D9B877, Aardman and Molela craft feeling, warm, calm, premium, no gloss, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, sun with face",
+      "usedIn": "08 Four milks · /milk/base-3"
+    },
+    {
+      "file": "web/public/desigo/styles/claymorphism/worlds/essential.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "Small clay landscape on a round turntable: minimal ivory clay courtyard #DCCBB0 with one small tree, an empty plinth in the centre, handmade matte clay diorama, plasticine and terracotta with subtle fingerprints and tool marks, soft global illumination, isometric 30 degree camera, earthy palette of milk #F7F4EC, cream clay #F1E7D3, terracotta #C4704A, sand #E3C9A0, leaf #5E9C7E, sky #CFE3E6 and gold #D9B877, Aardman and Molela craft feeling, warm, calm, premium, no gloss, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, clutter",
+      "usedIn": "08 Four milks · /milk/essential"
+    },
+    {
+      "file": "web/public/desigo/styles/claymorphism/journey/diorama-strip.png",
+      "size": "7200×1600 (horizontal)",
+      "transparent": false,
+      "prompt": "Continuous horizontal clay diorama: a respectful Indian zebu cow with hump and dewlap grazing, a small farm, a milk can on a cart, a round test card with sixteen dots, a steel chiller, a small dairy building, and an empty doorstep at the end; a milk-white clay river runs through, handmade matte clay diorama, plasticine and terracotta with subtle fingerprints and tool marks, soft global illumination, isometric 30 degree camera, earthy palette of milk #F7F4EC, cream clay #F1E7D3, terracotta #C4704A, sand #E3C9A0, leaf #5E9C7E, sky #CFE3E6 and gold #D9B877, Aardman and Molela craft feeling, warm, calm, premium, no gloss, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, glass bottle, cartoon faces, anthropomorphic cows, people's faces",
+      "usedIn": "03 Cow to bottle, /how-it-works"
+    },
+    {
+      "file": "web/public/desigo/styles/claymorphism/trace/clay-board.png",
+      "size": "3600×2000",
+      "transparent": false,
+      "prompt": "Top-down terracotta clay board with eight small cream clay pins connected by a thread in a winding path, soft studio light, handmade matte clay diorama, plasticine and terracotta with subtle fingerprints and tool marks, soft global illumination, isometric 30 degree camera, earthy palette of milk #F7F4EC, cream clay #F1E7D3, terracotta #C4704A, sand #E3C9A0, leaf #5E9C7E, sky #CFE3E6 and gold #D9B877, Aardman and Molela craft feeling, warm, calm, premium, no gloss, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, labels, numbers",
+      "usedIn": "06 Traceability, /trace"
+    },
+    {
+      "file": "web/public/desigo/styles/claymorphism/textures/terracotta.png",
+      "size": "2048×2048, seamless",
+      "transparent": false,
+      "prompt": "Seamless tileable unglazed terracotta clay surface like a kulhad cup, fine tool marks, warm earth tones, flat light, handmade matte clay diorama, plasticine and terracotta with subtle fingerprints and tool marks, soft global illumination, isometric 30 degree camera, earthy palette of milk #F7F4EC, cream clay #F1E7D3, terracotta #C4704A, sand #E3C9A0, leaf #5E9C7E, sky #CFE3E6 and gold #D9B877, Aardman and Molela craft feeling, warm, calm, premium, no gloss, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, cracks, glaze, seams",
+      "usedIn": "plinths, clay curtain"
+    },
+    {
+      "file": "web/public/desigo/styles/claymorphism/ghee/bilona-diorama.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "Clay diorama of a traditional earthen bilona pot with a wooden churning stick (madhani) and rope in a warm kitchen corner, golden light, empty space on the right, handmade matte clay diorama, plasticine and terracotta with subtle fingerprints and tool marks, soft global illumination, isometric 30 degree camera, earthy palette of milk #F7F4EC, cream clay #F1E7D3, terracotta #C4704A, sand #E3C9A0, leaf #5E9C7E, sky #CFE3E6 and gold #D9B877, Aardman and Molela craft feeling, warm, calm, premium, no gloss, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, jars, people's faces, deities",
+      "usedIn": "12 Ghee · /ghee"
+    },
+    {
+      "file": "web/public/desigo/styles/claymorphism/heritage/molela-tiles.png",
+      "size": "3200×2000",
+      "transparent": false,
+      "prompt": "Row of Molela-inspired terracotta relief tiles showing zebu cows, grass and farmers' tools in simple folk forms, warm side light, handmade matte clay diorama, plasticine and terracotta with subtle fingerprints and tool marks, soft global illumination, isometric 30 degree camera, earthy palette of milk #F7F4EC, cream clay #F1E7D3, terracotta #C4704A, sand #E3C9A0, leaf #5E9C7E, sky #CFE3E6 and gold #D9B877, Aardman and Molela craft feeling, warm, calm, premium, no gloss, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, deities, religious figures, text",
+      "usedIn": "10 Heritage"
+    }
+  ]
+}

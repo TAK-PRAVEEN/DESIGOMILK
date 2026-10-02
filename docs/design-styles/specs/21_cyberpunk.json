@@ -1,0 +1,217 @@
+{
+  "id": 21,
+  "slug": "cyberpunk",
+  "name": "Cyberpunk (night shift)",
+  "priority": false,
+  "fit": 1,
+  "colors": {
+    "primary": "#7FE0B8",
+    "onPrimary": "#07090A",
+    "secondary": "#F2A93A",
+    "accent": "#B8FFE3",
+    "bg": "#07090A",
+    "surface": "#121615",
+    "text": "#F1EDE3",
+    "textMuted": "#8C938F",
+    "line": "#1B2A4A",
+    "ok": "#7FE0B8",
+    "pending": "#F2A93A",
+    "demo": "#F2A93A"
+  },
+  "variants": {
+    "master-26": {
+      "base": "#1F5C45",
+      "deep": "#0A2A20",
+      "light": "#D9E8DF"
+    },
+    "root-14": {
+      "base": "#B3202A",
+      "deep": "#4A0A0F",
+      "light": "#F3D9D6"
+    },
+    "base-3": {
+      "base": "#E89A1C",
+      "deep": "#5A3304",
+      "light": "#F8E4C2"
+    },
+    "essential": {
+      "base": "#CDB89A",
+      "deep": "#4D4130",
+      "light": "#F4EDE2"
+    }
+  },
+  "fonts": {
+    "display": {
+      "family": "Chakra Petch",
+      "package": "@fontsource/chakra-petch",
+      "weights": [
+        500,
+        600
+      ]
+    },
+    "headline": {
+      "family": "Chakra Petch",
+      "package": "@fontsource/chakra-petch",
+      "weights": [
+        500
+      ]
+    },
+    "body": {
+      "family": "Inter",
+      "package": "@fontsource-variable/inter",
+      "weights": [
+        420
+      ]
+    },
+    "label": {
+      "family": "Rajdhani",
+      "package": "@fontsource/rajdhani",
+      "weights": [
+        600
+      ]
+    },
+    "mono": {
+      "family": "Share Tech Mono",
+      "package": "@fontsource/share-tech-mono",
+      "weights": [
+        400
+      ]
+    },
+    "devanagari": {
+      "family": "Rajdhani",
+      "package": "@fontsource/rajdhani",
+      "weights": [
+        500,
+        600
+      ]
+    }
+  },
+  "type": {
+    "display": "clamp(3rem, 8vw, 8rem)",
+    "h1": "clamp(2.4rem, 4.6vw, 4.5rem)",
+    "h2": "clamp(1.6rem, 2.8vw, 2.6rem)",
+    "body": "1rem",
+    "label": "0.8125rem"
+  },
+  "radius": {
+    "sm": "0 (chamfer 8px)",
+    "md": "0 (chamfer 12px)",
+    "lg": "0"
+  },
+  "shadow": {
+    "bottle": "contact ellipse on wet floor blur 16px rgba(0,0,0,.7) + reflection 25% + signal/amber rim masked to alpha",
+    "panel": "0 0 24px rgba(127,224,184,.25) (active only)"
+  },
+  "motion": {
+    "easeOut": "cubic-bezier(.16,1,.3,1)",
+    "easeInOut": "cubic-bezier(.65,0,.35,1)",
+    "durMicro": 200,
+    "durReveal": 420,
+    "durScene": 900
+  },
+  "button": {
+    "primary": {
+      "bg": "#7FE0B8",
+      "fg": "#07090A",
+      "radius": "0; clip-path chamfer 8px",
+      "padding": "14px 24px",
+      "hover": "glow 0 0 24px rgba(127,224,184,.45), arrow +6px"
+    },
+    "secondary": {
+      "bg": "transparent",
+      "fg": "#7FE0B8",
+      "radius": "0; chamfer 8px",
+      "padding": "14px 24px",
+      "hover": "bg rgba(127,224,184,.12), border glow"
+    },
+    "link": {
+      "bg": "transparent",
+      "fg": "#7FE0B8",
+      "radius": "0",
+      "padding": "0",
+      "hover": "underline glow, arrow +6px"
+    }
+  },
+  "images": [
+    {
+      "file": "web/public/desigo/styles/cyberpunk/hero-landscape.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "The blue-washed old city of Jodhpur at 4 a.m. under sodium street lamps, narrow lane, indigo haze and light rain, wet stone reflections, blank glowing sign shapes without letters, empty lane centre, restrained cinematic night in the spirit of Blade Runner 2049, sodium-lamp amber #F2A93A and Jodhpur indigo #1B2A4A haze, sparing mint signal green #7FE0B8, deep night #07090A, light rain and mist, wet reflections, calm not dystopian, no magenta, no cyan, no readable signage, no text, no watermark, no logo, no letters",
+      "negative": "magenta, cyan, readable signs, people, cars, weapons, drones, dystopian ruins, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Ch. 11 / `/4am` hero"
+    },
+    {
+      "file": "web/public/desigo/styles/cyberpunk/hero-portrait.png",
+      "size": "1400×2400 (7:12)",
+      "transparent": false,
+      "prompt": "Same Jodhpur 4 a.m. lane as a tall portrait, sodium lamp at top, wet stone, empty centre, restrained cinematic night in the spirit of Blade Runner 2049, sodium-lamp amber #F2A93A and Jodhpur indigo #1B2A4A haze, sparing mint signal green #7FE0B8, deep night #07090A, light rain and mist, wet reflections, calm not dystopian, no magenta, no cyan, no readable signage, no text, no watermark, no logo, no letters",
+      "negative": "magenta, readable signs, people, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Mobile hero"
+    },
+    {
+      "file": "web/public/desigo/styles/cyberpunk/worlds/master-26.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Forest-green signage light glowing through night haze above a wet reflective floor, abstract canopy-like light shapes, empty centre, restrained cinematic night in the spirit of Blade Runner 2049, sodium-lamp amber #F2A93A and Jodhpur indigo #1B2A4A haze, sparing mint signal green #7FE0B8, deep night #07090A, light rain and mist, wet reflections, calm not dystopian, no magenta, no cyan, no readable signage, no text, no watermark, no logo, no letters",
+      "negative": "neon green overload, text, plants, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Night world MASTER 26"
+    },
+    {
+      "file": "web/public/desigo/styles/cyberpunk/worlds/root-14.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Deep indigo haze with a single thin red sodium rim of light from a blank sign at the right edge, wet floor, empty centre, restrained cinematic night in the spirit of Blade Runner 2049, sodium-lamp amber #F2A93A and Jodhpur indigo #1B2A4A haze, sparing mint signal green #7FE0B8, deep night #07090A, light rain and mist, wet reflections, calm not dystopian, no magenta, no cyan, no readable signage, no text, no watermark, no logo, no letters",
+      "negative": "red flood light, text, blood-like tones, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Night world ROOT 14"
+    },
+    {
+      "file": "web/public/desigo/styles/cyberpunk/worlds/base-3.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "A warm sodium-amber street-lamp pool on a quiet wet lane at 4 a.m., soft mist, empty centre of the pool, restrained cinematic night in the spirit of Blade Runner 2049, sodium-lamp amber #F2A93A and Jodhpur indigo #1B2A4A haze, sparing mint signal green #7FE0B8, deep night #07090A, light rain and mist, wet reflections, calm not dystopian, no magenta, no cyan, no readable signage, no text, no watermark, no logo, no letters",
+      "negative": "people, vehicles, text, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Night world BASE 3"
+    },
+    {
+      "file": "web/public/desigo/styles/cyberpunk/worlds/essential.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Dawn breaking over Jodhpur rooftops, the last city lights fading into a pale ivory sky #F4EDE2, calm, empty centre, restrained cinematic night in the spirit of Blade Runner 2049, sodium-lamp amber #F2A93A and Jodhpur indigo #1B2A4A haze, sparing mint signal green #7FE0B8, deep night #07090A, light rain and mist, wet reflections, calm not dystopian, no magenta, no cyan, no readable signage, no text, no watermark, no logo, no letters",
+      "negative": "neon, text, fort landmark close-up, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Night world ESSENTIAL, DawnTransition"
+    },
+    {
+      "file": "web/public/desigo/styles/cyberpunk/technology/route-4am.png",
+      "size": "4000×1600 (5:2)",
+      "transparent": false,
+      "prompt": "Abstract top-down night map of old-city lanes in indigo with one thin glowing signal-green route connecting seven soft nodes from the edge of town to a doorstep, restrained cinematic night in the spirit of Blade Runner 2049, sodium-lamp amber #F2A93A and Jodhpur indigo #1B2A4A haze, sparing mint signal green #7FE0B8, deep night #07090A, light rain and mist, wet reflections, calm not dystopian, no magenta, no cyan, no readable signage, no text, no watermark, no logo, no letters",
+      "negative": "real map labels, street names, HUD text, targeting reticles, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Ch. 11 \"4:00 AM\", /technology, trace city map"
+    },
+    {
+      "file": "web/public/desigo/styles/cyberpunk/textures/rain-streaks.png",
+      "size": "2048×2048 (1:1)",
+      "transparent": true,
+      "prompt": "Fine diagonal light rain streaks catching amber light, isolated on transparent background, sparse, restrained cinematic night in the spirit of Blade Runner 2049, sodium-lamp amber #F2A93A and Jodhpur indigo #1B2A4A haze, sparing mint signal green #7FE0B8, deep night #07090A, light rain and mist, wet reflections, calm not dystopian, no magenta, no cyan, no readable signage, no text, no watermark, no logo, no letters",
+      "negative": "drops on lens, heavy storm, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Poster frame for RainLoop, reduced-motion fallback"
+    },
+    {
+      "file": "web/public/desigo/styles/cyberpunk/textures/indigo-haze.png",
+      "size": "3000×1500 (2:1)",
+      "transparent": true,
+      "prompt": "Soft band of deep indigo #1B2A4A night haze with faint amber glow at the bottom edge, isolated on transparent background, restrained cinematic night in the spirit of Blade Runner 2049, sodium-lamp amber #F2A93A and Jodhpur indigo #1B2A4A haze, sparing mint signal green #7FE0B8, deep night #07090A, light rain and mist, wet reflections, calm not dystopian, no magenta, no cyan, no readable signage, no text, no watermark, no logo, no letters",
+      "negative": "shapes, clouds with faces, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "HazeLayers"
+    },
+    {
+      "file": "web/public/desigo/styles/cyberpunk/milk/ribbon-through-haze.png",
+      "size": "3000×1500 (2:1)",
+      "transparent": true,
+      "prompt": "A single clean white milk ribbon curving through dark space lit by neutral white light, a faint amber reflection on one edge, isolated on transparent background, restrained cinematic night in the spirit of Blade Runner 2049, sodium-lamp amber #F2A93A and Jodhpur indigo #1B2A4A haze, sparing mint signal green #7FE0B8, deep night #07090A, light rain and mist, wet reflections, calm not dystopian, no magenta, no cyan, no readable signage, no text, no watermark, no logo, no letters",
+      "negative": "coloured milk, neon-tinted milk, glass, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Ch. 09 milk as material"
+    }
+  ]
+}

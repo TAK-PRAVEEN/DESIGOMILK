@@ -192,7 +192,7 @@ and node panels, no glow) · `PendingValue`.
 **Real, from DESIGO®:** 360 frames (transparent, for the halo to sit behind); approval of the trace vocabulary;
 nothing biological. This style needs no real photographs of its own, which is part of why it must stay small.
 
-**Images to generate** (backdrops and fallback stills only; `web/public/desigo/styles/biomorph/`; replace the
+**Images to generate** (backdrops and fallback stills only; `web/public/desigo/styles/electro-biomorph/`; full spec in section 12.7; replace the
 house-style tail with "deep forest green and milk-white light, restrained, premium, no text, no watermark, no logo,
 no letters"):
 | # | File | Size | Prompt |
@@ -229,3 +229,126 @@ Prompts must never ask for "cells", "bacteria", "microscope" or "molecules".
 6. Motion is slow and critically damped: breathe, lean and merge, never wobble, jiggle or explode.
 7. Cows, people and the farm are never turned into biomorphs.
 8. If a mid-range phone stutters, the style drops a tier. Smoothness is worth more than the effect.
+
+---
+
+## 12. Build-ready spec sheet
+
+> Audit 2026-10-03: glow palette, type, motion and claim guardrails present; missing colour roles, surface/muted/ok/pending/demo, Devanagari, radius/shadow, component states, motion tokens, negatives and hero, ROOT-world and texture prompts. Added all (Noto Sans Devanagari); ok tick set to non-glowing pale green so glow never means 'pass'; folder aligned to `styles/electro-biomorph/`. Fonts OFL; no biological claims found.
+
+### 12.1 Colour system
+| Role | Token | Hex | Use | Contrast note |
+|---|---|---|---|---|
+| Primary | `--c-primary` | `#7FE0B8` | signal: CTA frame + faint 4 px glow, filaments, pulses, focus ring on dark | 7.9:1 on bg |
+| Primary ink | `--c-on-primary` | `#07211C` | abyss label on a filled signal button | 10.7:1 on primary |
+| Secondary | `--c-secondary` | `#D9E8DF` | pale-green organism core / membrane tone (decorative) | 9.8:1 on bg |
+| Accent | `--c-accent` | `#C8A96B` | warm rims, ghee glow, the gold end of the only iridescence | 5.5:1 on bg |
+| Background | `--c-bg` | `#0B3B32` | forest: main dark ground of the three biomorph chapters |  |
+| Surface | `--c-surface` | `#0F4A3F` | solid, never-glowing info and node panels | text on surface 9.2:1 |
+| Text | `--c-text` | `#F7F4EC` | solid milk text, never glowing | 11.3:1 on bg |
+| Muted text | `--c-text-muted` | `#B5C7BF` | captions, labels on dark | 7.1:1 on bg |
+| Line | `--c-line` | `rgba(217,232,223,.22)` | membrane hairlines, dividers | decorative only |
+| Success / Pending / Demo | `--c-ok` / `--c-pending` / `--c-demo` | `#D9E8DF` / `#C8A96B` / `#F7F4EC` | verified-source tick (pale, never glowing; glow never means pass) · pending text + dotted underline on dark · DEMO badge fill, abyss label 15:1 | ok 9.8:1 · pending 5.5:1 · demo 11.3:1 on bg; state is never colour-only (text + dotted underline / badge label) |
+| Style extra | `--abyss` | `#07211C` | deepest ground (Technology plate F1), transition fade colour | |
+| Style extra | `--charcoal` | `#171918` | Technology ground | |
+| Style extra | `--pearl` | `#F7F4EC` | organism core light | |
+| Style extra | `--membrane` | `rgba(217,232,223,.22)` | soft outer skin of organisms | |
+| Style extra | `--iris` | `linear-gradient(120deg, #7FE0B8, #D9E8DF 45%, #C8A96B)` | the only iridescence; never rainbow | |
+| Style extra | `--glow-root / --glow-base / --glow-essential` | `#E0463A / #F2B84B / #E6DCCB` | variant edge glows (organisms only, never text) | |
+| Style extra | `--green` | `#1E7A68` | links and focus ring on light pages | |
+
+Variant worlds in this style: MASTER 26 · ROOT 14 · BASE 3 · ESSENTIAL (base / deep / light hex for each).
+
+| Variant | Code | Base | Deep | Light | How the world uses them |
+|---|---|---|---|---|---|
+| MASTER 26 | V1+ | `#1F5C45` | `#0A2A20` | `#D9E8DF` | ground = deep; core = light; edge glow `#7FE0B8`; frond-like branching organism (never 26 visible parts) |
+| ROOT 14 | V1 | `#B3202A` | `#4A0A0F` | `#F3D9D6` | ground = deep; core = light; edge glow `#E0463A` (ember); rooted form with downward tendrils |
+| BASE 3 | V2 | `#E89A1C` | `#5A3304` | `#F8E4C2` | ground = deep; core = light; edge glow `#F2B84B`; one round warm body like a low sun |
+| ESSENTIAL | V3 | `#CDB89A` | `#4D4130` | `#F4EDE2` | ground = deep `#4D4130`; core = light; edge `#E6DCCB` (almost no glow); a single still pearl |
+
+**Dark-chapter inversion:** light chapters (01 hero, 03, 04, 05, 07, 10, 14, /origin, /about) invert to the system light set: `--c-bg` → `#F7F4EC`, `--c-surface` → `#EFE9DC`, text → `#1E211F`, muted → `#5E625C`, primary → `#1E7A68` (links, focus, 1 px button frame, no glow), pending → `#7A5B37`, demo → `#171918`; organisms are absent there except the 25% pearl halo behind the hero bottle. Logo: white on dark chapters, charcoal on light; it never glows.
+
+### 12.2 Typography
+| Role | Font family | Source (npm @fontsource… / Google Fonts) | Weights / axes | Size (clamp) | Line-height | Tracking | Case |
+|---|---|---|---|---|---|---|---|
+| Display / hero | Instrument Sans | `@fontsource-variable/instrument-sans` | 300 · width 85 | clamp(3rem, 8vw, 9rem) | 0.95 | −0.02em | UPPERCASE hero, sentence elsewhere |
+| Headline H1–H2 | Instrument Sans · Fraunces 300 italic (one poetic line per scene) | `@fontsource-variable/instrument-sans` · `@fontsource-variable/fraunces` | Instrument 400 · Fraunces 300i opsz 144 | H1 clamp(2.4rem, 5vw, 5rem) · H2 clamp(1.6rem, 2.8vw, 2.8rem) | 1.05 | −0.01em | sentence |
+| Body | Instrument Sans | `@fontsource-variable/instrument-sans` | 400 · width 100 | 1rem, measure 56ch | 1.65 | 0 | sentence |
+| Label / UI | Instrument Sans | `@fontsource-variable/instrument-sans` | 500 · width 90 | .72rem | 1.2 | +0.16em | UPPERCASE |
+| Data / mono | JetBrains Mono | `@fontsource-variable/jetbrains-mono` | 400 · `tnum` | .8rem node IDs; 1.75rem trace input | 1.3 | +0.02em | as data |
+| Devanagari (optional) | Noto Sans Devanagari | `@fontsource-variable/noto-sans-devanagari` | 300–500 | display +6% | 1.3 | 0 | — |
+
+Licence: Instrument Sans, Fraunces, JetBrains Mono and Noto Sans Devanagari are SIL OFL 1.1 via @fontsource. Pairing: Instrument Sans' soft, slightly condensed geometry sits beside organic forms without reading as sci-fi; Fraunces italic keeps the brand voice. Text never glows.
+
+### 12.3 Layout & surfaces
+- **Grid:** 12 columns, 5vw margins, 24 px gutters, max 1440 px; one organism per viewport placed on a thirds intersection, text in the opposite third on solid ground, never over the glow core
+- **Spacing scale:** 4 px base: 4 · 8 · 12 · 16 · 24 · 32 · 48 · 64 · 96 · 128
+- **Radius scale:** sm 4 px (inputs, badges) · md 12 px (solid panels, a soft echo of the forms) · lg 999 px (cursor, DEMO pill)
+- **Border style:** 1 px `--c-line` membrane hairline on panels; buttons 1 px signal frame
+- **Shadow / elevation:** no drop shadows on UI; glow only on organisms and a faint `0 0 4px rgba(127,224,184,.35)` on dark button frames; bottle: pearl metaball halo at 40% behind + glass rim-light mask, contact ellipse on light chapters
+- **Texture / overlay:** one WebGL organism canvas per page (0.5× DPR, 30 fps cap mobile) or AV1/H.264 loop or still; 2% abyss grain on dark grounds
+
+### 12.4 Components
+For each: anatomy, sizes, states (default · hover · focus-visible · active · disabled · loading), motion, a11y.
+
+- **Primary button**: 1 px signal frame + milk label (Instrument Sans 500 caps) + arrow, radius 0, transparent fill on dark, 52 px high (44 px sm), padding 0 28 px. Hover: frame draws itself (600 ms) with a faint 4 px glow, arrow +6 px, magnetic ≤ 6 px · focus-visible: 2 px signal ring offset 3 px · active: fills signal with abyss label (120 ms) · disabled: 30%, no glow · loading: a pulse travels round the frame (1.6 s per lap, slower than 1 Hz). On light chapters the frame is `#1E7A68`, no glow. A11y: real `<button>`/`<a>` semantics, 44 px minimum target, visible focus independent of colour.
+- **Secondary button**: underline button: milk label + arrow, 1 px underline in signal on dark / green on light (240 ms). Focus-visible: ring · active: underline 2 px · disabled: muted · loading: underline pulse.
+- **Text / arrow link**: milk text with signal underline on dark (`#1E7A68` on light) drawing in 240 ms, arrow +6 px · focus-visible: ring · active: underline 2 px · disabled: muted · loading: n/a. No text-shadow glow ever.
+- **Icon button** (incl. menu): 44 px circle, 1.5 px round-cap line icon; on dark a 6 px soft glow at 25% on the icon only. Hover: membrane circle appears · focus-visible: ring · active: 0.94 · disabled: 30% · loading: slow pulse. `aria-label` required.
+- **Navigation bar** (desktop + mobile menu) + how the DESIGO® black write/un-write logo loop sits in it: 72 px bar, transparent over light chapters, `rgba(11,59,50,.92)` over dark; the DESIGO® wordmark is the black write/un-write infinite loop (charcoal `#171918` on light grounds, white `#FFFFFF`/milk on dark; it never changes colour, never takes a variant hue and is never re-drawn in the style); it never glows. Six links + RESERVE primary. Mobile: 56 px bar; menu opens a solid abyss sheet with large Instrument Sans links (no organism behind text); Esc closes.
+- **Cursor** (states: default · hover · ROTATE · EXPLORE · ENTER · VIEW · TRACE); touch fallback: default: 8 px pearl dot with a 24 px soft mint halo (dark) / 6 px ink dot (light) · hover: halo condenses into a 36 px ring · ROTATE: ring with `DRAG` on the synced-halo viewer · EXPLORE: halo grows to 80 px and the organism leans toward it (critically damped) · ENTER: ring with `ENTER` on chapter links · VIEW: ring with `VIEW` on photographs (no glow on photo chapters) · TRACE: ring with a travelling pulse dot over mycelium nodes. Disabled: 30% dot. Touch: tap creates one slow ripple in the organism; no cursor.
+- **Card / panel / info block**: `SolidPanel`: `#0F4A3F` fill (or `#EFE9DC` on light), radius 12 px, 1 px membrane line, padding 32 px; never glowing, never translucent over a glow core. Hover (if linked): line brightens to 40% · focus-visible: ring · loading: skeleton lines at 20% milk.
+- **Badge / tag** (incl. "pending verification" and "DEMO · not live data"): radius 4 px (DEMO pill 999 px), Instrument Sans 500 .66rem caps. Pending verification: gold `--c-pending` text + dotted underline `PENDING APPROVAL`; DEMO · not live data: milk fill, abyss label `DEMO · NOT LIVE DATA`, always visible on the trace demo; `SIMULATION` on ch. 09; `ILLUSTRATIVE` on the mycelium map. Badges never glow.
+- **Input + form field** (Trace-your-milk bottle ID): charcoal ground, JetBrains Mono 1.75rem, 64 px high, radius 4 px, 1 px membrane frame, label above, prefilled `DSG-BTL-000001-3 (sample format)`. Default · hover: frame 40% · focus-visible: 2 px signal ring · active: caret · disabled: 30% · loading: a pulse travels a filament through the demo nodes; each result line appears in solid text (`aria-live=polite`) · error: gold text "No record for this ID".
+- **Divider / ornament**: a 1 px membrane hairline, or a single mint filament with one slow pulse on dark chapters; none on light chapters.
+- **Section header** (chapter number + title pattern): chapter number in mono + label caps + Instrument Sans 300 title; one Fraunces italic word per biomorph scene ("*Material.*").
+- **Product info block** (variant name, code, price-pending, size, descriptors): solid panel, never glowing: code line in mono, name in Instrument Sans 400, Fraunces italic line; code `DESIGO® V1+` / `V1` / `V2` / `V3`; price from `desigo.ts` rendered as pending (e.g. ₹94 with dotted underline + tooltip "pending approval · pack size not stated"); size "1 L glass · 900 g" pending; descriptors list with pending items dotted-underlined; `RESERVE ———→`.
+- **Bottle stage** (how Bottle / Bottle360Viewer is framed: plinth, glow, shadow, background): the bottle stands in front of a slow pearl metaball halo (40%) that works as its light source; glow catches the glass via a CSS gradient rim mask on the render. Float ±8 px / 6 s, tilt ±8°, halo leans against the tilt. Hero on milk uses the halo at 25%. Before 360 frames: ±25° turn with sheen, halo highlight follows; after: drag, halo lobes rotate in sync with frame index, counter `036 / 072` mono.
+- **Trace node / timeline step**: mycelium map: glowing filaments link eight nodes; node = 14 px pearl core with a 1 px signal ring (44 px hit). Default: dim core · hover: halo 24 px · focus-visible: signal ring · active: pulse arrives, solid panel opens · disabled/not reached: 30%, filament unlit · loading: pulse 1.6 s per segment. "Illustrative journey — not live data" in solid text; glow encodes progress only, never results.
+
+### 12.5 Iconography & illustration
+Icons: 1.5 px round-cap line icons on a 24 px grid; on dark a 6 px soft glow at 25% on icons only. Illustration: abstract organisms (one WebGL shader with signed-distance metaballs + fresnel rim, or pre-rendered loops); never labelled as cells, globules, bacteria, nutrients or molecules; never near cows, people or data values. Photo treatment: no photographs inside biomorph chapters; photos elsewhere stay unglowed, warm natural grade.
+
+### 12.6 Motion tokens
+| Token | Value | Use |
+|---|---|---|
+| `--ease-out` | `cubic-bezier(.16,1,.3,1)` | glow-in (0 → 1) |
+| `--ease-inout` | `cubic-bezier(.65,0,.35,1)` | filament pulse, chapter fade through abyss |
+| `--ease-breathe` | `ease-in-out (sine)` | organism scale 1 ± .03 |
+| `--dur-micro` | `240ms` | link underline, ring condense |
+| `--dur-reveal` | `1200ms` | glow-in on scene entry |
+| `--dur-scene` | `700ms` | light → dark fade through `--abyss` |
+| `--pulse` | `1600ms / segment` | pulse along filaments (fades in last 20%) |
+| `--breathe` | `5000ms` | organism breathing cycle |
+| `--spring` | `stiffness 60, damping 2√k` | pointer lean (critically damped, no overshoot) |
+
+Merge/split scrubbed with `scrub: 1` (smooth-union radius 0.35 → 0.05); organisms dissolve into 2 px particles on exit (400 ms). Never wobble, jiggle or explode. Reduced motion: organism stills, no pointer lean, no pulses; pulses are always slower than 1 Hz; quality tier drops if a mid-range phone stutters.
+
+### 12.7 AI image generation prompts
+House rules: no text/letters/logos/watermarks in images; generated images are illustration, texture or backdrop only; never
+generate the bottle or ghee jar; zebu cows only, shown with respect; append the style's tail prompt to every prompt.
+
+**Tail prompt (append to every prompt below):** *abstract, not biological, deep forest green #0B3B32 and milk-white light #F7F4EC with soft mint #7FE0B8 rim, restrained, premium, calm, no text, no watermark, no logo, no letters*
+
+| # | File path (web/public/desigo/styles/electro-biomorph/...) | Size / ratio | Transparent? | Prompt | Negative prompt | Used in |
+|---|---|---|---|---|---|---|
+| BM-H1 | `web/public/desigo/styles/electro-biomorph/hero-pearl-halo.png` | 3200×2000 (16:10) | yes (real alpha) | Very soft pale pearl halo of light, a smooth luminous rounded form with a faint mint-gold rim, diffuse, centred, mostly transparent edges, made for a milk-white page | base negatives + cells, bacteria, microscope, molecules, DNA, eyes, rainbow, neon pink, sci-fi HUD | Ch. 01 hero halo behind the bottle (25%) |
+| BM-H2 | `web/public/desigo/styles/electro-biomorph/hero-pearl-halo-portrait.png` | 1400×2400 (7:12) | yes (real alpha) | Vertical soft pearl halo of light, tall rounded luminous form with faint mint rim, diffuse, transparent background | base negatives + cells, bacteria, microscope, molecules, eyes, rainbow | Ch. 01 hero (mobile) |
+| BM-V1 | `web/public/desigo/styles/electro-biomorph/frond-glow.png` | 3000×3000 + 1400×2400 portrait | yes (real alpha) | Abstract branching frond-like glowing form in pale green #D9E8DF light with soft mint #7FE0B8 edges, symmetrical, Haeckel-inspired, transparent background | base negatives + cells, plankton species, countable parts, neurons, rainbow | MASTER 26 world still / fallback |
+| BM-V2 | `web/public/desigo/styles/electro-biomorph/root-tendrils.png` | 3000×3000 + 1400×2400 portrait | yes (real alpha) | Abstract rooted glowing form with soft tendrils reaching downward, blush #F3D9D6 core and warm ember #E0463A edge glow, slow and calm, transparent background | base negatives + blood vessels, veins, roots with soil, horror, cells | ROOT 14 world still / fallback |
+| BM-V3 | `web/public/desigo/styles/electro-biomorph/amber-body.png` | 3000×3000 + 1400×2400 portrait | yes (real alpha) | Single round abstract glowing body in warm amber #F2B84B light with a soft membrane, like a low sun made of light, transparent background | base negatives + egg yolk, cell nucleus, sun face, lens flare | BASE 3 world still / fallback |
+| BM-V4 | `web/public/desigo/styles/electro-biomorph/pearl-organism.png` | 3000×3000 + 1400×2400 portrait | yes (real alpha) | Abstract soft still pearl of light with a translucent ivory #F4EDE2 membrane and almost no glow, smooth, calm, not a cell, not a microbe, transparent background | base negatives + cells, microbes, eyes, rainbow sheen | ESSENTIAL world still / fallback |
+| BM-J1 | `web/public/desigo/styles/electro-biomorph/mycelium-network.png` | 3600×2000 (9:5) | no | Abstract network of fine glowing mint filaments branching organically across a deep forest-green #07211C void, a few brighter junctions, sparse, elegant | base negatives + neurons, brain, map labels, circuit boards, numbers | Ch. 06 / /trace mycelium fallback still |
+| BM-M1 | `web/public/desigo/styles/electro-biomorph/milk-metaballs.png` | 3600×2000 (9:5) | no | Abstract milk-white liquid blobs merging and separating on deep forest green, soft inner glow, glossy, minimal | base negatives + fat globules diagram, cells, microscope view, splashes with text | Ch. 09 `MetaballMilk` still |
+| BM-T1 | `web/public/desigo/styles/electro-biomorph/abyss-grain.png` | 2048×2048, seamless | no | Seamless very fine dark grain texture on deep forest-green #07211C, almost invisible, even | base negatives + stars, sparkles, patterns | 2% overlay on dark grounds |
+
+Base negatives (apply to every prompt): *text, letters, numbers, logo, watermark, signature, label, product bottle, glass bottle, jar, packaging, Holstein or Jersey cattle, cartoon mascot, deity or religious icon, distorted anatomy, oversaturated, HDR, low resolution*. Prompts must never ask for "cells", "bacteria", "microscope" or "molecules"; organisms are never captioned as anything biological.
+
+### 12.8 Prototype acceptance checklist
+- [ ] Tokens from `specs/53_electro-biomorph.json` applied; no off-palette colours
+- [ ] Fonts self-hosted; correct weights load
+- [ ] All 12.4 components built with all states
+- [ ] Hero + bottle-story + one product world + trace chapter built in this style (the comparison set)
+- [ ] Mobile 360 px pass; reduced-motion pass; contrast checked
+- [ ] Claims rules respected (pending underline, no blocked claims, DEMO labels)
+- [ ] Screenshots: desktop 1440×900 ×4 + mobile 390×844 ×2 saved to docs/media/styles/electro-biomorph/

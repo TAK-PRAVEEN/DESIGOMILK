@@ -1,0 +1,235 @@
+{
+  "id": 5,
+  "slug": "surrealism",
+  "name": "Surrealism",
+  "priority": false,
+  "fit": 3,
+  "colors": {
+    "primary": "#0B3B32",
+    "onPrimary": "#F7F4EC",
+    "secondary": "#C98E5F",
+    "accent": "#C8A96B",
+    "bg": "#F7F4EC",
+    "surface": "#E8D6B8",
+    "text": "#1E211F",
+    "textMuted": "#5E5048",
+    "line": "rgba(110,90,75,0.35)",
+    "ok": "#1F5C45",
+    "pending": "#8A5A1F",
+    "demo": "#171918"
+  },
+  "variants": {
+    "master-26": {
+      "base": "#1F5C45",
+      "deep": "#0A2A20",
+      "light": "#D9E8DF"
+    },
+    "root-14": {
+      "base": "#B3202A",
+      "deep": "#4A0A0F",
+      "light": "#F3D9D6"
+    },
+    "base-3": {
+      "base": "#E89A1C",
+      "deep": "#5A3304",
+      "light": "#F8E4C2"
+    },
+    "essential": {
+      "base": "#CDB89A",
+      "deep": "#4D4130",
+      "light": "#F4EDE2"
+    }
+  },
+  "fonts": {
+    "display": {
+      "family": "Fraunces",
+      "package": "@fontsource-variable/fraunces",
+      "weights": [
+        250,
+        300,
+        350
+      ],
+      "axes": "wght,opsz,SOFT"
+    },
+    "body": {
+      "family": "Inter Tight",
+      "package": "@fontsource-variable/inter-tight",
+      "weights": [
+        400
+      ]
+    },
+    "label": {
+      "family": "Inter Tight",
+      "package": "@fontsource-variable/inter-tight",
+      "weights": [
+        500
+      ]
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "package": "@fontsource-variable/jetbrains-mono",
+      "weights": [
+        400
+      ]
+    },
+    "devanagari": {
+      "family": "Noto Serif Devanagari",
+      "package": "@fontsource-variable/noto-serif-devanagari",
+      "weights": [
+        300,
+        400
+      ]
+    },
+    "campaign": {
+      "family": "Italiana",
+      "package": "@fontsource/italiana",
+      "weights": [
+        400
+      ]
+    }
+  },
+  "type": {
+    "display": "clamp(3.25rem, 8vw, 8.5rem)",
+    "h1": "clamp(2.4rem, 4.6vw, 4.5rem)",
+    "h2": "clamp(1.7rem, 2.8vw, 2.75rem)",
+    "body": "clamp(1rem, 0.95rem + 0.2vw, 1.125rem)",
+    "label": "0.72rem"
+  },
+  "radius": {
+    "sm": "0",
+    "md": "0",
+    "lg": "0",
+    "pill": "999px"
+  },
+  "shadow": {
+    "bottle": "long cast shadow 3x height rgba(110,90,75,.35) blur 24px + milk-pool reflection 18% opacity",
+    "panel": "none (floating text); evidence window 0 24px 48px rgba(110,90,75,.20)"
+  },
+  "motion": {
+    "easeOut": "cubic-bezier(.16,1,.3,1)",
+    "easeInOut": "cubic-bezier(.65,0,.35,1)",
+    "durMicro": 240,
+    "durReveal": 900,
+    "durScene": 1400,
+    "easeSine": "cubic-bezier(.37,0,.63,1)",
+    "floatCycle": 8000
+  },
+  "button": {
+    "primary": {
+      "bg": "#0B3B32",
+      "fg": "#F7F4EC",
+      "radius": "0",
+      "padding": "0 28px; height 52px",
+      "hover": "float up 8px over 900ms, shadow shortens"
+    },
+    "secondary": {
+      "bg": "transparent",
+      "fg": "#0B3B32",
+      "border": "1px #0B3B32",
+      "radius": "0",
+      "padding": "0 28px; height 52px",
+      "hover": "float 8px + 6% fill"
+    },
+    "link": {
+      "fg": "#1E211F",
+      "underline": "1px #0B3B32",
+      "hover": "underline drips 2px, arrow +8px"
+    }
+  },
+  "images": [
+    {
+      "file": "web/public/desigo/styles/surrealism/hero.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Endless calm sea of milk meeting a pale sand desert at dawn, horizon at 62 percent height, pale lilac sky, a single distant khejri tree standing in the milk, long soft shadows, empty centre on the horizon, calm Magritte and de Chirico inspired surreal stage, soft volumetric dawn light over the Thar, milk white #F7F4EC, lilac sky #E9E4F0, sand #E8D6B8, sandstone #C98E5F long soft shadows, forest #0B3B32 and gold #C8A96B, 3 percent film grain, serene, dreamlike but clean, premium CGI look, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, boats, people, buildings, dramatic storm",
+      "usedIn": "01 Hero, 15 Final CTA"
+    },
+    {
+      "file": "web/public/desigo/styles/surrealism/hero-portrait.png",
+      "size": "1400×2400 (7:12)",
+      "transparent": false,
+      "prompt": "Vertical dawn scene: milk sea meeting pale sand at 58 percent height, lilac sky, one distant khejri tree, empty centre on the horizon, calm Magritte and de Chirico inspired surreal stage, soft volumetric dawn light over the Thar, milk white #F7F4EC, lilac sky #E9E4F0, sand #E8D6B8, sandstone #C98E5F long soft shadows, forest #0B3B32 and gold #C8A96B, 3 percent film grain, serene, dreamlike but clean, premium CGI look, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, people, buildings",
+      "usedIn": "01 Hero mobile"
+    },
+    {
+      "file": "web/public/desigo/styles/surrealism/worlds/master-26.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "A lush forest canopy growing inside a vast milk-white room with no ceiling, leaves drifting upward, sky deepening from #1F5C45 to #0A2A20 above, a small moss-covered round plinth empty in the centre, calm Magritte and de Chirico inspired surreal stage, soft volumetric dawn light over the Thar, milk white #F7F4EC, lilac sky #E9E4F0, sand #E8D6B8, sandstone #C98E5F long soft shadows, forest #0B3B32 and gold #C8A96B, 3 percent film grain, serene, dreamlike but clean, premium CGI look, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, animals, mushrooms, fantasy creatures",
+      "usedIn": "08 Four milks · /milk/master-26"
+    },
+    {
+      "file": "web/public/desigo/styles/surrealism/worlds/root-14.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "Red earth desert at dusk with clods of soil and fine roots floating weightlessly in the air, crimson #B3202A sky fading to oxblood #4A0A0F, an empty patch of ground in the centre, calm Magritte and de Chirico inspired surreal stage, soft volumetric dawn light over the Thar, milk white #F7F4EC, lilac sky #E9E4F0, sand #E8D6B8, sandstone #C98E5F long soft shadows, forest #0B3B32 and gold #C8A96B, 3 percent film grain, serene, dreamlike but clean, premium CGI look, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, blood, violence, horror, skulls",
+      "usedIn": "08 Four milks · /milk/root-14"
+    },
+    {
+      "file": "web/public/desigo/styles/surrealism/worlds/base-3.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "Eternal golden hour with three low suns in an amber #E89A1C sky, smooth sand dunes shaped like poured milk, very long shadows, empty centre, calm Magritte and de Chirico inspired surreal stage, soft volumetric dawn light over the Thar, milk white #F7F4EC, lilac sky #E9E4F0, sand #E8D6B8, sandstone #C98E5F long soft shadows, forest #0B3B32 and gold #C8A96B, 3 percent film grain, serene, dreamlike but clean, premium CGI look, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, faces in suns, neon",
+      "usedIn": "08 Four milks · /milk/base-3"
+    },
+    {
+      "file": "web/public/desigo/styles/surrealism/worlds/essential.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "Minimal ivory #F4EDE2 gallery room with an open doorway in the back wall leading straight onto soft clouds, soft skylight, empty floor in the centre, calm Magritte and de Chirico inspired surreal stage, soft volumetric dawn light over the Thar, milk white #F7F4EC, lilac sky #E9E4F0, sand #E8D6B8, sandstone #C98E5F long soft shadows, forest #0B3B32 and gold #C8A96B, 3 percent film grain, serene, dreamlike but clean, premium CGI look, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, furniture, art on walls",
+      "usedIn": "08 Four milks · /milk/essential"
+    },
+    {
+      "file": "web/public/desigo/styles/surrealism/journey/milk-river.png",
+      "size": "6000×2000 (horizontal)",
+      "transparent": false,
+      "prompt": "Wide desert panorama with a calm milk-white river winding across pale sand toward the horizon, seven small empty rectangular picture frames standing upright on the sand along its bank, dawn light, long shadows, calm Magritte and de Chirico inspired surreal stage, soft volumetric dawn light over the Thar, milk white #F7F4EC, lilac sky #E9E4F0, sand #E8D6B8, sandstone #C98E5F long soft shadows, forest #0B3B32 and gold #C8A96B, 3 percent film grain, serene, dreamlike but clean, premium CGI look, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, pictures inside the frames, people, bottles",
+      "usedIn": "03 Cow to bottle"
+    },
+    {
+      "file": "web/public/desigo/styles/surrealism/trace/lantern-road.png",
+      "size": "3600×2000",
+      "transparent": false,
+      "prompt": "Night desert under a deep forest-green sky, a faint road of soft warm light winding across the dunes toward the horizon, scattered small warm glows along it, stars, calm, calm Magritte and de Chirico inspired surreal stage, soft volumetric dawn light over the Thar, milk white #F7F4EC, lilac sky #E9E4F0, sand #E8D6B8, sandstone #C98E5F long soft shadows, forest #0B3B32 and gold #C8A96B, 3 percent film grain, serene, dreamlike but clean, premium CGI look, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, cars, people, neon, city",
+      "usedIn": "06 Traceability, /trace"
+    },
+    {
+      "file": "web/public/desigo/styles/surrealism/heritage/constellation.png",
+      "size": "3200×2000",
+      "transparent": false,
+      "prompt": "Night sky over a quiet dune horizon where faint stars form the gentle outline of a standing Indian zebu cow with hump and dewlap, respectful, natural, subtle, calm Magritte and de Chirico inspired surreal stage, soft volumetric dawn light over the Thar, milk white #F7F4EC, lilac sky #E9E4F0, sand #E8D6B8, sandstone #C98E5F long soft shadows, forest #0B3B32 and gold #C8A96B, 3 percent film grain, serene, dreamlike but clean, premium CGI look, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, halo, glowing deity, ornaments, mythological figures",
+      "usedIn": "10 Heritage"
+    },
+    {
+      "file": "web/public/desigo/styles/surrealism/ghee/sunrise.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "A large soft golden sun rising over three gentle dunes, honey-gold light, three empty flat-topped dune crests waiting for objects, thin threads of light connecting them to the horizon, calm Magritte and de Chirico inspired surreal stage, soft volumetric dawn light over the Thar, milk white #F7F4EC, lilac sky #E9E4F0, sand #E8D6B8, sandstone #C98E5F long soft shadows, forest #0B3B32 and gold #C8A96B, 3 percent film grain, serene, dreamlike but clean, premium CGI look, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, jars, bottles, faces",
+      "usedIn": "12 Ghee · /ghee"
+    },
+    {
+      "file": "web/public/desigo/styles/surrealism/textures/haze-grain.png",
+      "size": "2048×2048, seamless",
+      "transparent": false,
+      "prompt": "Seamless tileable soft atmospheric haze texture with very fine film grain on neutral warm grey, even, subtle, calm Magritte and de Chirico inspired surreal stage, soft volumetric dawn light over the Thar, milk white #F7F4EC, lilac sky #E9E4F0, sand #E8D6B8, sandstone #C98E5F long soft shadows, forest #0B3B32 and gold #C8A96B, 3 percent film grain, serene, dreamlike but clean, premium CGI look, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, clouds with shapes, banding",
+      "usedIn": "global grain + horizon fog overlay"
+    }
+  ],
+  "colorsDark": {
+    "bg": "#0B3B32",
+    "text": "#F7F4EC",
+    "textMuted": "#C9D3CE",
+    "accent": "#C8A96B"
+  }
+}

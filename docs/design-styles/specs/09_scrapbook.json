@@ -1,0 +1,234 @@
+{
+  "id": 9,
+  "slug": "scrapbook",
+  "name": "Scrapbook",
+  "priority": false,
+  "fit": 3,
+  "colors": {
+    "primary": "#17614F",
+    "onPrimary": "#F7F4EC",
+    "secondary": "#8E1F24",
+    "accent": "#1E2A3A",
+    "bg": "#E9E0CC",
+    "surface": "#F7F4EC",
+    "text": "#1E211F",
+    "textMuted": "#5B5A55",
+    "line": "rgba(30,42,58,0.22)",
+    "ok": "#1F5C45",
+    "pending": "#17614F",
+    "demo": "#8E1F24"
+  },
+  "variants": {
+    "master-26": {
+      "base": "#1F5C45",
+      "deep": "#0A2A20",
+      "light": "#D9E8DF"
+    },
+    "root-14": {
+      "base": "#B3202A",
+      "deep": "#4A0A0F",
+      "light": "#F3D9D6"
+    },
+    "base-3": {
+      "base": "#E89A1C",
+      "deep": "#5A3304",
+      "light": "#F8E4C2"
+    },
+    "essential": {
+      "base": "#CDB89A",
+      "deep": "#4D4130",
+      "light": "#F4EDE2"
+    }
+  },
+  "fonts": {
+    "display": {
+      "family": "Fraunces",
+      "package": "@fontsource-variable/fraunces",
+      "weights": [
+        400,
+        500
+      ],
+      "axes": "wght,opsz,SOFT,WONK"
+    },
+    "body": {
+      "family": "Inter Tight",
+      "package": "@fontsource-variable/inter-tight",
+      "weights": [
+        400
+      ]
+    },
+    "label": {
+      "family": "Courier Prime",
+      "package": "@fontsource/courier-prime",
+      "weights": [
+        400,
+        700
+      ]
+    },
+    "mono": {
+      "family": "Courier Prime",
+      "package": "@fontsource/courier-prime",
+      "weights": [
+        400
+      ]
+    },
+    "devanagari": {
+      "family": "Kalam",
+      "package": "@fontsource/kalam",
+      "weights": [
+        400,
+        700
+      ]
+    },
+    "handwriting": {
+      "family": "Caveat",
+      "package": "@fontsource-variable/caveat",
+      "weights": [
+        500
+      ]
+    },
+    "stamp": {
+      "family": "Special Elite",
+      "package": "@fontsource/special-elite",
+      "weights": [
+        400
+      ],
+      "licence": "Apache-2.0"
+    }
+  },
+  "type": {
+    "display": "clamp(3rem, 7.5vw, 7.5rem)",
+    "h1": "clamp(2.3rem, 4.4vw, 4.25rem)",
+    "h2": "clamp(1.6rem, 2.6vw, 2.5rem)",
+    "body": "clamp(1rem, 0.95rem + 0.2vw, 1.125rem)",
+    "label": "0.8125rem"
+  },
+  "radius": {
+    "sm": "0",
+    "md": "2px (photo prints)",
+    "lg": "6px (tab outer corners)"
+  },
+  "shadow": {
+    "bottle": "design-system contact ellipse on the milk page",
+    "panel": "0 2px 8px rgba(30,33,31,.15); hover 0 10px 24px rgba(30,33,31,.18)"
+  },
+  "motion": {
+    "easeOut": "cubic-bezier(.16,1,.3,1)",
+    "easeInOut": "cubic-bezier(.65,0,.35,1)",
+    "durMicro": 200,
+    "durReveal": 500,
+    "durScene": 1000
+  },
+  "button": {
+    "primary": {
+      "bg": "#17614F",
+      "fg": "#F7F4EC",
+      "radius": "0 (notched tag)",
+      "padding": "0 24px; height 48px",
+      "hover": "pencil circle draws (600ms), lift 2px"
+    },
+    "secondary": {
+      "bg": "#F7F4EC",
+      "fg": "#1E211F",
+      "border": "1px #1E211F + tape strip",
+      "radius": "0",
+      "padding": "0 24px; height 48px",
+      "hover": "pencil underline draws"
+    },
+    "link": {
+      "fg": "#1E211F",
+      "underline": "hand-drawn SVG #1E2A3A",
+      "hover": "pencil circles the link"
+    }
+  },
+  "images": [
+    {
+      "file": "web/public/desigo/styles/scrapbook/hero.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Top-down flat-lay of an open notebook on a kraft board, torn handmade papers at the edges, a strip of washi tape, pressed grass blade, string and a blank kraft tag, the right-hand page clean and empty in the centre, crafted field-journal scrapbook flat-lay in the precise style of Annie Atkins prop design, real paper textures, kraft #C9A87A, board #E9E0CC, milk page #F7F4EC, ledger red #8E1F24, blue-black ink #1E2A3A and stamp green #17614F, soft daylight from the upper left, subtle paper shadows, warm, tactile, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, writing, stamps with words, photos of people, bottles",
+      "usedIn": "01 Hero, 15 Final CTA"
+    },
+    {
+      "file": "web/public/desigo/styles/scrapbook/hero-portrait.png",
+      "size": "1400×2400 (7:12)",
+      "transparent": false,
+      "prompt": "Vertical top-down flat-lay of a single open notebook page on kraft board with tape strips at the corners and a blank tag, page centre empty, crafted field-journal scrapbook flat-lay in the precise style of Annie Atkins prop design, real paper textures, kraft #C9A87A, board #E9E0CC, milk page #F7F4EC, ledger red #8E1F24, blue-black ink #1E2A3A and stamp green #17614F, soft daylight from the upper left, subtle paper shadows, warm, tactile, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, writing, bottles",
+      "usedIn": "01 Hero mobile"
+    },
+    {
+      "file": "web/public/desigo/styles/scrapbook/spreads/master-26.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "Open notebook spread on kraft board with a deep green cloth page tab, a faint meadow-green watercolour wash in one corner, blank ruled pages, empty photo corners, crafted field-journal scrapbook flat-lay in the precise style of Annie Atkins prop design, real paper textures, kraft #C9A87A, board #E9E0CC, milk page #F7F4EC, ledger red #8E1F24, blue-black ink #1E2A3A and stamp green #17614F, soft daylight from the upper left, subtle paper shadows, warm, tactile, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, herb specimens, leaves in a row, writing",
+      "usedIn": "08 Four milks · /milk/master-26"
+    },
+    {
+      "file": "web/public/desigo/styles/scrapbook/spreads/root-14.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "Open notebook spread with a red cloth page tab, a red-earth watercolour wash, a small empty kraft paper bag sketch in pencil, blank pages, crafted field-journal scrapbook flat-lay in the precise style of Annie Atkins prop design, real paper textures, kraft #C9A87A, board #E9E0CC, milk page #F7F4EC, ledger red #8E1F24, blue-black ink #1E2A3A and stamp green #17614F, soft daylight from the upper left, subtle paper shadows, warm, tactile, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, writing, blood",
+      "usedIn": "08 Four milks · /milk/root-14"
+    },
+    {
+      "file": "web/public/desigo/styles/scrapbook/spreads/base-3.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "Open notebook spread with an amber cloth page tab, tea-stained pages, a soft golden-hour watercolour wash, blank pages, empty photo corners, crafted field-journal scrapbook flat-lay in the precise style of Annie Atkins prop design, real paper textures, kraft #C9A87A, board #E9E0CC, milk page #F7F4EC, ledger red #8E1F24, blue-black ink #1E2A3A and stamp green #17614F, soft daylight from the upper left, subtle paper shadows, warm, tactile, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, writing",
+      "usedIn": "08 Four milks · /milk/base-3"
+    },
+    {
+      "file": "web/public/desigo/styles/scrapbook/spreads/essential.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "Open notebook spread with an ivory cloth page tab, almost empty clean pages, one empty photo corner set, very sparse, crafted field-journal scrapbook flat-lay in the precise style of Annie Atkins prop design, real paper textures, kraft #C9A87A, board #E9E0CC, milk page #F7F4EC, ledger red #8E1F24, blue-black ink #1E2A3A and stamp green #17614F, soft daylight from the upper left, subtle paper shadows, warm, tactile, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, clutter, writing",
+      "usedIn": "08 Four milks · /milk/essential"
+    },
+    {
+      "file": "web/public/desigo/styles/scrapbook/journey/concertina.png",
+      "size": "6000×1400 (horizontal)",
+      "transparent": false,
+      "prompt": "Long fold-out concertina strip of milk paper lying on kraft board, seven empty white-bordered photo frames taped along it, a hand-inked blue-black line connecting them, crafted field-journal scrapbook flat-lay in the precise style of Annie Atkins prop design, real paper textures, kraft #C9A87A, board #E9E0CC, milk page #F7F4EC, ledger red #8E1F24, blue-black ink #1E2A3A and stamp green #17614F, soft daylight from the upper left, subtle paper shadows, warm, tactile, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, photos inside frames, writing",
+      "usedIn": "03 Cow to bottle"
+    },
+    {
+      "file": "web/public/desigo/styles/scrapbook/textures/kraft.png",
+      "size": "2048×2048, seamless",
+      "transparent": false,
+      "prompt": "Seamless tileable kraft board texture, warm beige #E9E0CC, visible recycled fibres, flat scan lighting, crafted field-journal scrapbook flat-lay in the precise style of Annie Atkins prop design, real paper textures, kraft #C9A87A, board #E9E0CC, milk page #F7F4EC, ledger red #8E1F24, blue-black ink #1E2A3A and stamp green #17614F, soft daylight from the upper left, subtle paper shadows, warm, tactile, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, stains, folds, seams",
+      "usedIn": "board ground"
+    },
+    {
+      "file": "web/public/desigo/styles/scrapbook/textures/graph-paper.png",
+      "size": "2048×2048, seamless",
+      "transparent": false,
+      "prompt": "Seamless tileable milk-white graph paper with fine pale blue-grey 5 mm grid and darker 25 mm lines, flat scan, crafted field-journal scrapbook flat-lay in the precise style of Annie Atkins prop design, real paper textures, kraft #C9A87A, board #E9E0CC, milk page #F7F4EC, ledger red #8E1F24, blue-black ink #1E2A3A and stamp green #17614F, soft daylight from the upper left, subtle paper shadows, warm, tactile, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, writing, stains",
+      "usedIn": "06 Traceability, 11 Technology, /trace"
+    },
+    {
+      "file": "web/public/desigo/styles/scrapbook/textures/washi-tape.png",
+      "size": "2400×600 (strip set)",
+      "transparent": true,
+      "prompt": "Set of six torn strips of semi-translucent washi masking tape in cream, kraft and pale green, slight wrinkles, isolated on transparent background, crafted field-journal scrapbook flat-lay in the precise style of Annie Atkins prop design, real paper textures, kraft #C9A87A, board #E9E0CC, milk page #F7F4EC, ledger red #8E1F24, blue-black ink #1E2A3A and stamp green #17614F, soft daylight from the upper left, subtle paper shadows, warm, tactile, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, patterns with letters, text",
+      "usedIn": "tape atlas"
+    },
+    {
+      "file": "web/public/desigo/styles/scrapbook/material/milk-wash.png",
+      "size": "3200×2000",
+      "transparent": true,
+      "prompt": "A spreading milk-white watercolour wash with soft blooming edges on transparent background, painted look, crafted field-journal scrapbook flat-lay in the precise style of Annie Atkins prop design, real paper textures, kraft #C9A87A, board #E9E0CC, milk page #F7F4EC, ledger red #8E1F24, blue-black ink #1E2A3A and stamp green #17614F, soft daylight from the upper left, subtle paper shadows, warm, tactile, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, containers, spills on floor",
+      "usedIn": "09 Milk as material (reveal mask)"
+    }
+  ]
+}

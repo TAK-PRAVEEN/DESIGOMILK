@@ -1,0 +1,227 @@
+{
+  "id": 37,
+  "slug": "cloud-cut",
+  "name": "Cloud Cut",
+  "priority": true,
+  "fit": 3.5,
+  "colors": {
+    "primary": "#0B3B32",
+    "onPrimary": "#F7F4EC",
+    "secondary": "#1E7A68",
+    "accent": "#C8A96B",
+    "bg": "#F7F4EC",
+    "surface": "#FBF9F4",
+    "text": "#171918",
+    "textMuted": "#5C5A52",
+    "line": "rgba(23,25,24,.12)",
+    "ok": "#1F5C45",
+    "pending": "#6B4C2A",
+    "demo": "#171918",
+    "focus": "#1E7A68"
+  },
+  "variants": {
+    "master-26": {
+      "base": "#1F5C45",
+      "deep": "#0A2A20",
+      "light": "#D9E8DF"
+    },
+    "root-14": {
+      "base": "#B3202A",
+      "deep": "#4A0A0F",
+      "light": "#F3D9D6"
+    },
+    "base-3": {
+      "base": "#E89A1C",
+      "deep": "#5A3304",
+      "light": "#F8E4C2"
+    },
+    "essential": {
+      "base": "#CDB89A",
+      "deep": "#4D4130",
+      "light": "#F4EDE2"
+    }
+  },
+  "fonts": {
+    "display": {
+      "family": "Fraunces",
+      "package": "@fontsource-variable/fraunces",
+      "weights": [
+        360,
+        400
+      ],
+      "axes": {
+        "opsz": 144,
+        "SOFT": 100
+      }
+    },
+    "body": {
+      "family": "Inter Tight",
+      "package": "@fontsource-variable/inter-tight",
+      "weights": [
+        400,
+        500
+      ]
+    },
+    "label": {
+      "family": "Inter Tight",
+      "package": "@fontsource-variable/inter-tight",
+      "weights": [
+        500,
+        600
+      ]
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "package": "@fontsource-variable/jetbrains-mono",
+      "weights": [
+        400
+      ]
+    },
+    "devanagari": {
+      "family": "Noto Sans Devanagari",
+      "package": "@fontsource-variable/noto-sans-devanagari",
+      "weights": [
+        400,
+        500
+      ]
+    }
+  },
+  "type": {
+    "display": "clamp(3.25rem, 1.5rem + 7vw, 9rem)",
+    "h1": "clamp(2.5rem, 1.6rem + 3.2vw, 5rem)",
+    "h2": "clamp(1.8rem, 1.3rem + 1.8vw, 3rem)",
+    "body": "clamp(1rem, 0.96rem + 0.2vw, 1.0625rem)",
+    "label": "0.75rem"
+  },
+  "radius": {
+    "sm": "4px",
+    "md": "16px",
+    "lg": "999px"
+  },
+  "shadow": {
+    "bottle": "0 44px 40px -26px rgba(23,25,24,.14)",
+    "panel": "0 6px 14px rgba(23,25,24,.10), 0 1px 0 rgba(23,25,24,.06)"
+  },
+  "motion": {
+    "easeOut": "cubic-bezier(.16,1,.3,1)",
+    "easeInOut": "cubic-bezier(.65,0,.35,1)",
+    "durMicro": 240,
+    "durReveal": 700,
+    "durScene": 1100,
+    "parallax": [
+      0,
+      0.15,
+      0.35,
+      1,
+      1.25,
+      1.6
+    ],
+    "floatPx": 8,
+    "floatMs": 6000,
+    "hopMs": 1400
+  },
+  "button": {
+    "primary": {
+      "bg": "transparent",
+      "fg": "#0B3B32",
+      "radius": "0 (arrow disc 999px)",
+      "padding": "14px 0",
+      "arrowDisc": "#FBF9F4 + panel shadow",
+      "hover": "1px frame draws 400ms; disc +6px"
+    },
+    "secondary": {
+      "bg": "transparent",
+      "fg": "#171918",
+      "radius": "0",
+      "padding": "14px 0",
+      "hover": "scallop underline 300ms"
+    },
+    "link": {
+      "fg": "#1E7A68",
+      "underline": "1px",
+      "hover": "scallop underline 300ms"
+    }
+  },
+  "images": [
+    {
+      "file": "web/public/desigo/styles/cloud-cut/hero.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Layered cut-paper sky diorama, five stacked planes of matte milk-white paper clouds with crisp hand-cut edges and soft shadows between layers, faint peach dawn band #EBD8C2 behind, large empty gap at the centre, matte cut-paper diorama, crisp hand-cut edges, soft even shadows between layers, milk-white paper palette #F7F4EC, #F1ECE0 and #E6DFCF with warm gold #C8A96B edge light, gentle paper fibre, shallow depth of field, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, faces on clouds, rainbows, birds, sun characters, blue sky",
+      "usedIn": "Hero desktop"
+    },
+    {
+      "file": "web/public/desigo/styles/cloud-cut/hero-portrait.png",
+      "size": "1400×2400 (7:12)",
+      "transparent": false,
+      "prompt": "Vertical cut-paper sky diorama, cloud planes stacked top and bottom with a tall empty gap in the middle third, faint dawn band, crisp paper edges, matte cut-paper diorama, crisp hand-cut edges, soft even shadows between layers, milk-white paper palette #F7F4EC, #F1ECE0 and #E6DFCF with warm gold #C8A96B edge light, gentle paper fibre, shallow depth of field, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, faces on clouds, rainbows, birds, blue sky",
+      "usedIn": "Hero mobile"
+    },
+    {
+      "file": "web/public/desigo/styles/cloud-cut/sky-master-26.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "Cut-paper forest canopy layers in deep bottle green #1F5C45 and #0A2A20 under pale green paper clouds #E9F1EC, tiny gold pollen dots, empty centre, matte cut-paper diorama, crisp hand-cut edges, soft even shadows between layers, milk-white paper palette #F7F4EC, #F1ECE0 and #E6DFCF with warm gold #C8A96B edge light, gentle paper fibre, shallow depth of field, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, cartoon trees, bright lime green",
+      "usedIn": "MASTER 26 world"
+    },
+    {
+      "file": "web/public/desigo/styles/cloud-cut/sky-root-14.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "Stepped cut-paper red-earth cliff strata in crimson #B3202A, #7E1A20 and oxblood #4A0A0F under warm white paper clouds at dusk, empty centre, matte cut-paper diorama, crisp hand-cut edges, soft even shadows between layers, milk-white paper palette #F7F4EC, #F1ECE0 and #E6DFCF with warm gold #C8A96B edge light, gentle paper fibre, shallow depth of field, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, lava, fire, blood red, cartoon",
+      "usedIn": "ROOT 14 world"
+    },
+    {
+      "file": "web/public/desigo/styles/cloud-cut/sky-base-3.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "Cut-paper wheat-field strips in amber #E89A1C, #B8741A and brown #5A3304, a large flat paper sun disc low behind the centre, cream paper clouds, empty centre, matte cut-paper diorama, crisp hand-cut edges, soft even shadows between layers, milk-white paper palette #F7F4EC, #F1ECE0 and #E6DFCF with warm gold #C8A96B edge light, gentle paper fibre, shallow depth of field, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, sun face, neon orange",
+      "usedIn": "BASE 3 world"
+    },
+    {
+      "file": "web/public/desigo/styles/cloud-cut/sky-essential.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "Only ivory paper clouds in four close tones of #F4EDE2 and a pale sandstone paper plinth #CDB89A at the centre, minimal, gallery calm, matte cut-paper diorama, crisp hand-cut edges, soft even shadows between layers, milk-white paper palette #F7F4EC, #F1ECE0 and #E6DFCF with warm gold #C8A96B edge light, gentle paper fibre, shallow depth of field, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, colour accents, objects",
+      "usedIn": "ESSENTIAL world"
+    },
+    {
+      "file": "web/public/desigo/styles/cloud-cut/journey-stations.png",
+      "size": "6000×1600, transparent",
+      "transparent": true,
+      "prompt": "Long horizontal strip of seven small layered cut-paper vignettes in milk white, sand and earth #8C6A43: an Indian zebu cow grazing (hump and dewlap visible), a small farm shed with a khejri tree, a steel milk can, a round paper test card with sixteen dots, a steel chiller, a small clean dairy plant, a doorstep with a cloth bag, joined by a thin white paper ribbon, isolated on transparent background, matte cut-paper diorama, crisp hand-cut edges, soft even shadows between layers, milk-white paper palette #F7F4EC, #F1ECE0 and #E6DFCF with warm gold #C8A96B edge light, gentle paper fibre, shallow depth of field, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, Holstein, cartoon cow, bottle, people",
+      "usedIn": "Cow → bottle (ch. 03)"
+    },
+    {
+      "file": "web/public/desigo/styles/cloud-cut/clouds-set.png",
+      "size": "4000×2000, transparent",
+      "transparent": true,
+      "prompt": "Six separate cut-paper cloud shapes laid out flat with space between them (cumulus bank, long stratus, small puff, crown, low mist strip, round droplet cloud), matte white handmade paper, crisp edges, soft contact shadows, transparent background, matte cut-paper diorama, crisp hand-cut edges, soft even shadows between layers, milk-white paper palette #F7F4EC, #F1ECE0 and #E6DFCF with warm gold #C8A96B edge light, gentle paper fibre, shallow depth of field, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, faces, outlines, blue",
+      "usedIn": "Master cloud set (trace to SVG)"
+    },
+    {
+      "file": "web/public/desigo/styles/cloud-cut/thar-ground.png",
+      "size": "3600×1200, transparent",
+      "transparent": true,
+      "prompt": "Cut-paper layers of low Thar desert dunes and two khejri tree silhouettes, three tones of sand and earth #8C6A43, crisp edges, soft shadow between layers, transparent background, matte cut-paper diorama, crisp hand-cut edges, soft even shadows between layers, milk-white paper palette #F7F4EC, #F1ECE0 and #E6DFCF with warm gold #C8A96B edge light, gentle paper fibre, shallow depth of field, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, camels, people, cacti",
+      "usedIn": "Origin (ch. 04), /origin"
+    },
+    {
+      "file": "web/public/desigo/styles/cloud-cut/paper-fibre.png",
+      "size": "1024×1024, seamless",
+      "transparent": false,
+      "prompt": "Seamless macro texture of white handmade cotton paper fibre, flat light, very subtle, matte cut-paper diorama, crisp hand-cut edges, soft even shadows between layers, milk-white paper palette #F7F4EC, #F1ECE0 and #E6DFCF with warm gold #C8A96B edge light, gentle paper fibre, shallow depth of field, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, seams, vignette, folds",
+      "usedIn": "Cloud fill texture (2% multiply)"
+    }
+  ]
+}

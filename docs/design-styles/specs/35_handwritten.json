@@ -1,0 +1,262 @@
+{
+  "id": 35,
+  "slug": "handwritten",
+  "name": "Handwritten",
+  "priority": false,
+  "fit": 3,
+  "colors": {
+    "primary": "#0B3B32",
+    "onPrimary": "#F4EFE3",
+    "secondary": "#22427A",
+    "accent": "#1E7A68",
+    "bg": "#F4EFE3",
+    "surface": "#F7F4EC",
+    "text": "#1E211F",
+    "textMuted": "#6B6A66",
+    "line": "#C9D6D1",
+    "ok": "#1E7A68",
+    "pending": "#6B6A66",
+    "demo": "#0B3B32"
+  },
+  "variants": {
+    "master-26": {
+      "base": "#1F5C45",
+      "deep": "#0A2A20",
+      "light": "#D9E8DF",
+      "world": "herbarium page, ink #1F5C45 on #D9E8DF"
+    },
+    "root-14": {
+      "base": "#B3202A",
+      "deep": "#4A0A0F",
+      "light": "#F3D9D6",
+      "world": "field notes, ink #7A1A20 on #F3D9D6"
+    },
+    "base-3": {
+      "base": "#E89A1C",
+      "deep": "#5A3304",
+      "light": "#F8E4C2",
+      "world": "kitchen diary, ink #5A3304 on #F8E4C2"
+    },
+    "essential": {
+      "base": "#CDB89A",
+      "deep": "#4D4130",
+      "light": "#F4EDE2",
+      "world": "index card, charcoal ink on #F4EDE2"
+    }
+  },
+  "fonts": {
+    "display": {
+      "family": "Fraunces",
+      "package": "@fontsource-variable/fraunces",
+      "weights": [
+        400,
+        600
+      ]
+    },
+    "body": {
+      "family": "Inter Tight",
+      "package": "@fontsource-variable/inter-tight",
+      "weights": [
+        400,
+        500,
+        600,
+        700
+      ]
+    },
+    "label": {
+      "family": "Inter Tight",
+      "package": "@fontsource-variable/inter-tight",
+      "weights": [
+        600
+      ]
+    },
+    "hand": {
+      "family": "Kalam",
+      "package": "@fontsource/kalam",
+      "weights": [
+        300,
+        400,
+        700
+      ]
+    },
+    "handAlt": {
+      "family": "Caveat",
+      "package": "@fontsource-variable/caveat",
+      "weights": [
+        500
+      ]
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "package": "@fontsource-variable/jetbrains-mono",
+      "weights": [
+        400,
+        500
+      ]
+    },
+    "devanagari": {
+      "family": "Kalam",
+      "package": "@fontsource/kalam",
+      "weights": [
+        400,
+        700
+      ]
+    }
+  },
+  "type": {
+    "display": "clamp(3rem, 1.9rem + 5.5vw, 7.5rem)",
+    "h1": "clamp(2.4rem, 1.6rem + 3.6vw, 4.5rem)",
+    "h2": "clamp(1.7rem, 1.3rem + 1.8vw, 2.75rem)",
+    "body": "1.125rem",
+    "label": ".75rem",
+    "hand": "clamp(1.25rem, 1.1rem + .7vw, 1.75rem)"
+  },
+  "radius": {
+    "sm": "2px",
+    "md": "4px",
+    "lg": "6px",
+    "pill": "999px"
+  },
+  "shadow": {
+    "bottle": "contact ellipse rgba(30,33,31,.28) blur 18px + ambient 0 30px 60px -30px rgba(30,33,31,.22)",
+    "panel": "0 1px 2px rgba(30,33,31,.08), 0 8px 20px -12px rgba(30,33,31,.2)"
+  },
+  "motion": {
+    "easeOut": "cubic-bezier(.16,1,.3,1)",
+    "easeInOut": "cubic-bezier(.65,0,.35,1)",
+    "easeMilk": "cubic-bezier(.22,.9,.24,1)",
+    "durMicro": 240,
+    "durReveal": 600,
+    "durScene": 800,
+    "writeCharsPerSec": 12,
+    "penLift": 60,
+    "tick": 280,
+    "handCircle": 450,
+    "pageFlip": 800
+  },
+  "button": {
+    "primary": {
+      "bg": "#0B3B32",
+      "fg": "#F4EFE3",
+      "radius": "2px",
+      "padding": "14px 24px",
+      "hover": "hand-drawn circle loops 450ms, arrow +4px"
+    },
+    "secondary": {
+      "bg": "transparent",
+      "fg": "#0B3B32",
+      "border": "none",
+      "radius": "0",
+      "padding": "12px 0",
+      "hover": "hand-drawn underline writes on 300ms"
+    },
+    "link": {
+      "fg": "#1E211F",
+      "underline": "1px rgba(30,33,31,.4)",
+      "hover": "hand-drawn green underline 240ms"
+    }
+  },
+  "logo": {
+    "loop": "write/un-write infinite",
+    "onLight": "#171918",
+    "onDark": "#FFFFFF",
+    "colourChange": false,
+    "cycleMs": 4600,
+    "drawMs": "0-1200 (480 each, 95 stagger)",
+    "holdUntilMs": 3000,
+    "unwriteMs": "3000-4200 (reverse order)",
+    "colorLight": "#171918",
+    "colorDark": "#F7F4EC"
+  },
+  "tailPrompt": "quiet notebook and fountain-pen aesthetic, warm notebook paper #F4EFE3, faint green-grey rules #C9D6D1, fountain-pen blue #22427A, DESIGO green #1E7A68, deep forest #0B3B32, soft natural daylight, tactile, intimate, calm, premium, no handwriting, no text, no watermark, no logo, no letters",
+  "images": [
+    {
+      "file": "web/public/desigo/styles/handwritten/hero-landscape.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Warm notebook paper page lying flat, faint green-grey ruled lines and a soft red margin line, a fountain pen resting at the lower right with a tiny ink pool at the nib, soft daylight, large empty page centre, quiet notebook and fountain-pen aesthetic, warm notebook paper #F4EFE3, faint green-grey rules #C9D6D1, fountain-pen blue #22427A, DESIGO green #1E7A68, deep forest #0B3B32, soft natural daylight, tactile, intimate, calm, premium, no handwriting, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, handwriting, scribbles, doodles, hearts, coffee stains, pencils clutter",
+      "usedIn": "Hero (ch. 01) backdrop"
+    },
+    {
+      "file": "web/public/desigo/styles/handwritten/hero-portrait.png",
+      "size": "1400×2400 (7:12)",
+      "transparent": false,
+      "prompt": "Tall notebook page with faint rules and margin line, fountain pen at the bottom edge, empty centre, quiet notebook and fountain-pen aesthetic, warm notebook paper #F4EFE3, faint green-grey rules #C9D6D1, fountain-pen blue #22427A, DESIGO green #1E7A68, deep forest #0B3B32, soft natural daylight, tactile, intimate, calm, premium, no handwriting, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, handwriting, doodles, stains",
+      "usedIn": "Hero mobile"
+    },
+    {
+      "file": "web/public/desigo/styles/handwritten/world-master-26.png",
+      "size": "3200×2000 + 1400×2400 crop",
+      "transparent": false,
+      "prompt": "Herbarium-style page: a few pressed Indian herb sprigs fixed with small paper hinges on pale green tinted paper #D9E8DF, soft daylight, empty centre, quiet notebook and fountain-pen aesthetic, warm notebook paper #F4EFE3, faint green-grey rules #C9D6D1, fountain-pen blue #22427A, DESIGO green #1E7A68, deep forest #0B3B32, soft natural daylight, tactile, intimate, calm, premium, no handwriting, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, labels, handwriting, Latin names, tape",
+      "usedIn": "Four milks ch. 08, /milk/master-26"
+    },
+    {
+      "file": "web/public/desigo/styles/handwritten/world-root-14.png",
+      "size": "3200×2000 + 1400×2400 crop",
+      "transparent": false,
+      "prompt": "Field-notes page on pale rose #F3D9D6 paper with a faint red-earth soil smudge in one corner and a single pressed grass blade, soft light, empty centre, quiet notebook and fountain-pen aesthetic, warm notebook paper #F4EFE3, faint green-grey rules #C9D6D1, fountain-pen blue #22427A, DESIGO green #1E7A68, deep forest #0B3B32, soft natural daylight, tactile, intimate, calm, premium, no handwriting, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, handwriting, blood-like stains, tape",
+      "usedIn": "Four milks ch. 08, /milk/root-14"
+    },
+    {
+      "file": "web/public/desigo/styles/handwritten/world-base-3.png",
+      "size": "3200×2000 + 1400×2400 crop",
+      "transparent": false,
+      "prompt": "Kitchen diary page on warm wheat #F8E4C2 paper with a folded corner and a short pencil resting at the edge, warm morning window light, empty centre, quiet notebook and fountain-pen aesthetic, warm notebook paper #F4EFE3, faint green-grey rules #C9D6D1, fountain-pen blue #22427A, DESIGO green #1E7A68, deep forest #0B3B32, soft natural daylight, tactile, intimate, calm, premium, no handwriting, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, handwriting, food stains, recipes",
+      "usedIn": "Four milks ch. 08, /milk/base-3"
+    },
+    {
+      "file": "web/public/desigo/styles/handwritten/world-essential.png",
+      "size": "3200×2000 + 1400×2400 crop",
+      "transparent": false,
+      "prompt": "A single clean ivory #F4EDE2 index card resting on milk-white paper, soft shadow, calm, empty, quiet notebook and fountain-pen aesthetic, warm notebook paper #F4EFE3, faint green-grey rules #C9D6D1, fountain-pen blue #22427A, DESIGO green #1E7A68, deep forest #0B3B32, soft natural daylight, tactile, intimate, calm, premium, no handwriting, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, handwriting, print, stains",
+      "usedIn": "Four milks ch. 08, /milk/essential"
+    },
+    {
+      "file": "web/public/desigo/styles/handwritten/journey-notebook-spread.png",
+      "size": "3600×1200 (3:1)",
+      "transparent": false,
+      "prompt": "Open notebook spread lying flat, two ruled pages with seven empty printed rectangular photo frames evenly spaced and seven small empty tick boxes, soft daylight, quiet notebook and fountain-pen aesthetic, warm notebook paper #F4EFE3, faint green-grey rules #C9D6D1, fountain-pen blue #22427A, DESIGO green #1E7A68, deep forest #0B3B32, soft natural daylight, tactile, intimate, calm, premium, no handwriting, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, handwriting, photos inside frames, doodles, tape",
+      "usedIn": "Cow → bottle ch. 03 (notebook spread)"
+    },
+    {
+      "file": "web/public/desigo/styles/handwritten/texture-notebook-paper.png",
+      "size": "2048×2048, seamless",
+      "transparent": false,
+      "prompt": "Seamless tileable texture of warm smooth notebook paper #F4EFE3, very fine fibres, flat even light, no lines, quiet notebook and fountain-pen aesthetic, warm notebook paper #F4EFE3, faint green-grey rules #C9D6D1, fountain-pen blue #22427A, DESIGO green #1E7A68, deep forest #0B3B32, soft natural daylight, tactile, intimate, calm, premium, no handwriting, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, rules, writing, stains, vignette",
+      "usedIn": "Notebook sections (rules drawn in CSS)"
+    },
+    {
+      "file": "web/public/desigo/styles/handwritten/hand-marks-set.png",
+      "size": "2400×1600",
+      "transparent": true,
+      "prompt": "Set of hand-drawn fountain-pen marks in blue ink: ticks, open circles, underlines, curved arrows and brackets, arranged in a loose grid, isolated on transparent background (prototype only; production marks come from real pens), quiet notebook and fountain-pen aesthetic, warm notebook paper #F4EFE3, faint green-grey rules #C9D6D1, fountain-pen blue #22427A, DESIGO green #1E7A68, deep forest #0B3B32, soft natural daylight, tactile, intimate, calm, premium, no handwriting, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, letters, numbers, words, hearts, smileys, doodles",
+      "usedIn": "HandArrow / TickList prototypes"
+    },
+    {
+      "file": "web/public/desigo/styles/handwritten/heritage-milk-diary.png",
+      "size": "3200×2000",
+      "transparent": false,
+      "prompt": "An old household notebook lying open on a worn wooden table beside a small steel milk vessel, pages blank with faint ruled lines and gentle age, soft morning light (placeholder until the real archival diary page arrives), quiet notebook and fountain-pen aesthetic, warm notebook paper #F4EFE3, faint green-grey rules #C9D6D1, fountain-pen blue #22427A, DESIGO green #1E7A68, deep forest #0B3B32, soft natural daylight, tactile, intimate, calm, premium, no handwriting, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, legible writing, numbers, brand marks, bottles",
+      "usedIn": "Heritage ch. 10 (placeholder for B11)"
+    },
+    {
+      "file": "web/public/desigo/styles/handwritten/ghee-recipe-card.png",
+      "size": "3200×2000",
+      "transparent": false,
+      "prompt": "A blank cream recipe card propped beside a small wooden bilona churn in an earthen pot, warm golden light, calm kitchen corner, card left blank, quiet notebook and fountain-pen aesthetic, warm notebook paper #F4EFE3, faint green-grey rules #C9D6D1, fountain-pen blue #22427A, DESIGO green #1E7A68, deep forest #0B3B32, soft natural daylight, tactile, intimate, calm, premium, no handwriting, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, writing on the card, jars, ghee jar, labels",
+      "usedIn": "Ghee ch. 12, /ghee"
+    }
+  ]
+}

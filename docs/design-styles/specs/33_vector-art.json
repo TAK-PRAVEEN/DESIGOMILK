@@ -1,0 +1,255 @@
+{
+  "id": 33,
+  "slug": "vector-art",
+  "name": "Vector Art",
+  "priority": false,
+  "fit": 4,
+  "colors": {
+    "primary": "#1E7A68",
+    "onPrimary": "#F7F4EC",
+    "secondary": "#0B3B32",
+    "accent": "#C8A96B",
+    "bg": "#F7F4EC",
+    "surface": "#EFE9DC",
+    "text": "#171918",
+    "textMuted": "#3F645B",
+    "line": "rgba(11,59,50,.18)",
+    "ok": "#1E7A68",
+    "pending": "#C8A96B",
+    "demo": "#0B3B32"
+  },
+  "variants": {
+    "master-26": {
+      "base": "#1F5C45",
+      "deep": "#0A2A20",
+      "light": "#D9E8DF",
+      "world": "forest hills #0A2A20/#1F5C45, leaf ring, gold sun"
+    },
+    "root-14": {
+      "base": "#B3202A",
+      "deep": "#4A0A0F",
+      "light": "#F3D9D6",
+      "world": "red strata #4A0A0F/#B3202A/#F3D9D6, roots"
+    },
+    "base-3": {
+      "base": "#E89A1C",
+      "deep": "#5A3304",
+      "light": "#F8E4C2",
+      "world": "large sun #E89A1C over #5A3304, sky #F8E4C2"
+    },
+    "essential": {
+      "base": "#CDB89A",
+      "deep": "#4D4130",
+      "light": "#F4EDE2",
+      "world": "one line, one circle; #4D4130/#CDB89A/#F4EDE2"
+    }
+  },
+  "fonts": {
+    "display": {
+      "family": "Fraunces",
+      "package": "@fontsource-variable/fraunces",
+      "weights": [
+        500
+      ]
+    },
+    "displayAlt": {
+      "family": "Manrope",
+      "package": "@fontsource-variable/manrope",
+      "weights": [
+        700
+      ]
+    },
+    "body": {
+      "family": "Inter Tight",
+      "package": "@fontsource-variable/inter-tight",
+      "weights": [
+        400,
+        500,
+        600,
+        700
+      ]
+    },
+    "label": {
+      "family": "Inter Tight",
+      "package": "@fontsource-variable/inter-tight",
+      "weights": [
+        600
+      ]
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "package": "@fontsource-variable/jetbrains-mono",
+      "weights": [
+        400,
+        500
+      ]
+    },
+    "devanagari": {
+      "family": "Noto Sans Devanagari",
+      "package": "@fontsource-variable/noto-sans-devanagari",
+      "weights": [
+        400,
+        500,
+        600
+      ]
+    }
+  },
+  "type": {
+    "display": "clamp(3.25rem, 2rem + 6vw, 8rem)",
+    "h1": "clamp(2.6rem, 1.6rem + 4vw, 5rem)",
+    "h2": "clamp(1.8rem, 1.3rem + 2vw, 3rem)",
+    "body": "clamp(1rem, .95rem + .25vw, 1.125rem)",
+    "label": "clamp(.6875rem, .66rem + .12vw, .75rem)"
+  },
+  "radius": {
+    "sm": "2px",
+    "md": "8px",
+    "lg": "8px",
+    "pill": "999px"
+  },
+  "shadow": {
+    "bottle": "vector contact ellipse, two-stop radial rgba(11,59,50,.28) to transparent",
+    "panel": "none (flat); illustration shadows are offset darker fills"
+  },
+  "motion": {
+    "easeOut": "cubic-bezier(.16,1,.3,1)",
+    "easeInOut": "cubic-bezier(.65,0,.35,1)",
+    "easeMilk": "cubic-bezier(.22,.9,.24,1)",
+    "durMicro": 240,
+    "durReveal": 800,
+    "durScene": 1200,
+    "draw": 800,
+    "fillDelay": 200,
+    "morph": 1200,
+    "idleMax": 6000,
+    "orbit": 40000,
+    "shapeWipe": 1000
+  },
+  "button": {
+    "primary": {
+      "bg": "transparent",
+      "fg": "#0B3B32",
+      "border": "1.5px solid #1E7A68",
+      "radius": "2px",
+      "padding": "14px 22px",
+      "hover": "frame draws 400ms, arrow +6px",
+      "active": "bg #1E7A68, fg #F7F4EC"
+    },
+    "secondary": {
+      "bg": "transparent",
+      "fg": "#0B3B32",
+      "border": "none; 1.5px forest underline",
+      "radius": "0",
+      "padding": "12px 0",
+      "hover": "underline draws 240ms"
+    },
+    "link": {
+      "fg": "#171918",
+      "underline": "1px #1E7A68",
+      "hover": "arrow +4px"
+    }
+  },
+  "logo": {
+    "loop": "write/un-write infinite",
+    "onLight": "#171918",
+    "onDark": "#FFFFFF",
+    "colourChange": false,
+    "cycleMs": 4600,
+    "drawMs": "0-1200 (480 each, 95 stagger)",
+    "holdUntilMs": 3000,
+    "unwriteMs": "3000-4200 (reverse order)",
+    "colorLight": "#171918",
+    "colorDark": "#F7F4EC"
+  },
+  "tailPrompt": "precise flat geometric vector illustration, limited palette of milk white #F7F4EC, deep forest #0B3B32, green #1E7A68, mint #9FD3C2, earth #8C6A43, sand #D9C3A0 and gold #C8A96B, 1.5 px consistent strokes, flat light from upper left, two-stop gradients only, editorial and calm, premium, no text, no watermark, no logo, no letters",
+  "images": [
+    {
+      "file": "web/public/desigo/styles/vector-art/hero-landscape.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Quiet flat vector horizon: a single Thar dune line, a gold sun disc, milk-white sky, subtle two-stop gradients, geometric construction, large empty centre (concept; production art redrawn as SVG), precise flat geometric vector illustration, limited palette of milk white #F7F4EC, deep forest #0B3B32, green #1E7A68, mint #9FD3C2, earth #8C6A43, sand #D9C3A0 and gold #C8A96B, 1.5 px consistent strokes, flat light from upper left, two-stop gradients only, editorial and calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, 3D render, gradients mesh, people, clip art, isometric clutter",
+      "usedIn": "Hero (ch. 01)"
+    },
+    {
+      "file": "web/public/desigo/styles/vector-art/hero-portrait.png",
+      "size": "1400×2400 (7:12)",
+      "transparent": false,
+      "prompt": "Tall flat vector composition: gold sun disc high, dune line low, milk-white sky, empty centre, precise flat geometric vector illustration, limited palette of milk white #F7F4EC, deep forest #0B3B32, green #1E7A68, mint #9FD3C2, earth #8C6A43, sand #D9C3A0 and gold #C8A96B, 1.5 px consistent strokes, flat light from upper left, two-stop gradients only, editorial and calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, 3D, people, clip art",
+      "usedIn": "Hero mobile"
+    },
+    {
+      "file": "web/public/desigo/styles/vector-art/world-master-26.png",
+      "size": "3200×2000 + 1400×2400 crop",
+      "transparent": false,
+      "prompt": "Flat geometric vector landscape of layered forest hills in #0A2A20 and #1F5C45 under a pale #D9E8DF sky, a ring of small leaf shapes around an empty centre and a small gold sun, precise flat geometric vector illustration, limited palette of milk white #F7F4EC, deep forest #0B3B32, green #1E7A68, mint #9FD3C2, earth #8C6A43, sand #D9C3A0 and gold #C8A96B, 1.5 px consistent strokes, flat light from upper left, two-stop gradients only, editorial and calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, counted labels, 3D, gradients mesh, people",
+      "usedIn": "Four milks ch. 08, /milk/master-26"
+    },
+    {
+      "file": "web/public/desigo/styles/vector-art/world-root-14.png",
+      "size": "3200×2000 + 1400×2400 crop",
+      "transparent": false,
+      "prompt": "Flat vector red earth strata in horizontal bands #4A0A0F, #B3202A and #F3D9D6 with thin root lines descending, a small geometric zebu cow silhouette with hump grazing at one side, empty centre, precise flat geometric vector illustration, limited palette of milk white #F7F4EC, deep forest #0B3B32, green #1E7A68, mint #9FD3C2, earth #8C6A43, sand #D9C3A0 and gold #C8A96B, 1.5 px consistent strokes, flat light from upper left, two-stop gradients only, editorial and calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, cartoon face, Holstein, 3D, text",
+      "usedIn": "Four milks ch. 08, /milk/root-14"
+    },
+    {
+      "file": "web/public/desigo/styles/vector-art/world-base-3.png",
+      "size": "3200×2000 + 1400×2400 crop",
+      "transparent": false,
+      "prompt": "Flat vector scene: a large low amber #E89A1C sun disc over a flat #5A3304 horizon, pale #F8E4C2 sky, three simple leaf shapes, empty centre, precise flat geometric vector illustration, limited palette of milk white #F7F4EC, deep forest #0B3B32, green #1E7A68, mint #9FD3C2, earth #8C6A43, sand #D9C3A0 and gold #C8A96B, 1.5 px consistent strokes, flat light from upper left, two-stop gradients only, editorial and calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, 3D, lens flare, text",
+      "usedIn": "Four milks ch. 08, /milk/base-3"
+    },
+    {
+      "file": "web/public/desigo/styles/vector-art/world-essential.png",
+      "size": "3200×2000 + 1400×2400 crop",
+      "transparent": false,
+      "prompt": "Minimal flat vector composition: one horizon line in #4D4130 and one circle in #CDB89A on a #F4EDE2 ground, minimum geometry, precise flat geometric vector illustration, limited palette of milk white #F7F4EC, deep forest #0B3B32, green #1E7A68, mint #9FD3C2, earth #8C6A43, sand #D9C3A0 and gold #C8A96B, 1.5 px consistent strokes, flat light from upper left, two-stop gradients only, editorial and calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, extra shapes, texture, text",
+      "usedIn": "Four milks ch. 08, /milk/essential"
+    },
+    {
+      "file": "web/public/desigo/styles/vector-art/journey-vector-scene.png",
+      "size": "3600×1200 (3:1)",
+      "transparent": true,
+      "prompt": "One continuous flat vector scene in a row: a breed-accurate zebu cow with hump and dewlap, a farm shed with a khejri tree, a steel milk can, a paper test card with sixteen cells, a milk chiller, a small dairy plant, a delivery bicycle with an empty crate, joined by a single milk-white path, isolated on transparent background, precise flat geometric vector illustration, limited palette of milk white #F7F4EC, deep forest #0B3B32, green #1E7A68, mint #9FD3C2, earth #8C6A43, sand #D9C3A0 and gold #C8A96B, 1.5 px consistent strokes, flat light from upper left, two-stop gradients only, editorial and calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, bottles, jars, Corporate Memphis people, cartoon faces, labels",
+      "usedIn": "Cow → bottle ch. 03 (concept for MorphSequence)"
+    },
+    {
+      "file": "web/public/desigo/styles/vector-art/technology-iso-pipeline.png",
+      "size": "3200×2000",
+      "transparent": false,
+      "prompt": "Isometric flat vector pipeline of seven abstract modules on a charcoal #171918 ground connected by thin mint #7FE0B8 lines, precise, minimal, precise flat geometric vector illustration, limited palette of milk white #F7F4EC, deep forest #0B3B32, green #1E7A68, mint #9FD3C2, earth #8C6A43, sand #D9C3A0 and gold #C8A96B, 1.5 px consistent strokes, flat light from upper left, two-stop gradients only, editorial and calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, labels, screens with text, robots, neon purple",
+      "usedIn": "Technology ch. 11, /technology"
+    },
+    {
+      "file": "web/public/desigo/styles/vector-art/texture-jali.png",
+      "size": "2048×2048, seamless",
+      "transparent": true,
+      "prompt": "Seamless tileable Rajasthani jali lattice geometry, thin forest-green lines on transparent background, very regular, low visual weight, precise flat geometric vector illustration, limited palette of milk white #F7F4EC, deep forest #0B3B32, green #1E7A68, mint #9FD3C2, earth #8C6A43, sand #D9C3A0 and gold #C8A96B, 1.5 px consistent strokes, flat light from upper left, two-stop gradients only, editorial and calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, ornament clutter, text, shading",
+      "usedIn": "Background structure at ≤ 6%"
+    },
+    {
+      "file": "web/public/desigo/styles/vector-art/heritage-stepwell.png",
+      "size": "3200×2000",
+      "transparent": false,
+      "prompt": "Flat geometric vector illustration of a Rajasthani step-well seen front-on, stepped triangles and landings in earth and gold, a simple bilona churn silhouette at the base, calm, precise flat geometric vector illustration, limited palette of milk white #F7F4EC, deep forest #0B3B32, green #1E7A68, mint #9FD3C2, earth #8C6A43, sand #D9C3A0 and gold #C8A96B, 1.5 px consistent strokes, flat light from upper left, two-stop gradients only, editorial and calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, people, text, 3D",
+      "usedIn": "Heritage ch. 10"
+    }
+  ],
+  "vectorGrammar": {
+    "grid": 4,
+    "module": 24,
+    "stroke": 1.5,
+    "strokeHero": 2,
+    "strokeMobile": 1.75,
+    "maxFills": 5
+  }
+}

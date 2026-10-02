@@ -1,0 +1,256 @@
+{
+  "id": 28,
+  "slug": "mixed-media",
+  "name": "Mixed Media",
+  "priority": false,
+  "fit": 4,
+  "colors": {
+    "primary": "#0B3B32",
+    "onPrimary": "#F7F4EC",
+    "secondary": "#8C6A43",
+    "accent": "#1E7A68",
+    "bg": "#F7F4EC",
+    "surface": "#EDE4D0",
+    "text": "#1E211F",
+    "textMuted": "#4B4E4C",
+    "line": "rgba(75,78,76,.28)",
+    "ok": "#1E7A68",
+    "pending": "#8C6A43",
+    "demo": "#0B3B32"
+  },
+  "variants": {
+    "master-26": {
+      "base": "#1F5C45",
+      "deep": "#0A2A20",
+      "light": "#D9E8DF",
+      "world": "botanical drawing on #D9E8DF, #1F5C45 callout"
+    },
+    "root-14": {
+      "base": "#B3202A",
+      "deep": "#4A0A0F",
+      "light": "#F3D9D6",
+      "world": "photograph full-bleed, #F3D9D6 panel, #B3202A echo"
+    },
+    "base-3": {
+      "base": "#E89A1C",
+      "deep": "#5A3304",
+      "light": "#F8E4C2",
+      "world": "data diagram on #F8E4C2, lines #5A3304"
+    },
+    "essential": {
+      "base": "#CDB89A",
+      "deep": "#4D4130",
+      "light": "#F4EDE2",
+      "world": "type and paper on #F4EDE2"
+    }
+  },
+  "fonts": {
+    "display": {
+      "family": "Fraunces",
+      "package": "@fontsource-variable/fraunces",
+      "weights": [
+        400,
+        500
+      ]
+    },
+    "body": {
+      "family": "Inter Tight",
+      "package": "@fontsource-variable/inter-tight",
+      "weights": [
+        400,
+        500,
+        600,
+        700
+      ]
+    },
+    "label": {
+      "family": "Inter Tight",
+      "package": "@fontsource-variable/inter-tight",
+      "weights": [
+        600
+      ]
+    },
+    "annotation": {
+      "family": "Caveat",
+      "package": "@fontsource-variable/caveat",
+      "weights": [
+        500
+      ]
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "package": "@fontsource-variable/jetbrains-mono",
+      "weights": [
+        400,
+        500
+      ]
+    },
+    "devanagari": {
+      "family": "Noto Serif Devanagari",
+      "package": "@fontsource-variable/noto-serif-devanagari",
+      "weights": [
+        400,
+        600
+      ]
+    }
+  },
+  "type": {
+    "display": "clamp(3.25rem, 2rem + 6vw, 8rem)",
+    "h1": "clamp(2.6rem, 1.6rem + 4vw, 5rem)",
+    "h2": "clamp(1.8rem, 1.3rem + 2vw, 3rem)",
+    "body": "clamp(1rem, .95rem + .25vw, 1.125rem)",
+    "label": ".75rem",
+    "note": "clamp(1.25rem, 1.1rem + .6vw, 1.6rem)"
+  },
+  "radius": {
+    "sm": "0",
+    "md": "2px",
+    "lg": "4px",
+    "pill": "999px"
+  },
+  "shadow": {
+    "bottle": "contact ellipse rgba(23,25,24,.28) blur 18px + ambient 0 30px 60px -30px rgba(23,25,24,.25)",
+    "panel": "0 1px 0 rgba(30,33,31,.06)"
+  },
+  "motion": {
+    "easeOut": "cubic-bezier(.16,1,.3,1)",
+    "easeInOut": "cubic-bezier(.65,0,.35,1)",
+    "easeMilk": "cubic-bezier(.22,.9,.24,1)",
+    "durMicro": 240,
+    "durReveal": 600,
+    "durScene": 1200,
+    "draw": 900,
+    "drawEase": "cubic-bezier(.33,0,.15,1)",
+    "count": 600,
+    "traceCrossfade": 1200,
+    "float": 6000,
+    "stagger": 40
+  },
+  "button": {
+    "primary": {
+      "bg": "transparent",
+      "fg": "#0B3B32",
+      "border": "1px solid #0B3B32",
+      "radius": "0",
+      "padding": "14px 22px",
+      "hover": "frame draws 400ms, magnetic 6px",
+      "active": "bg #0B3B32, fg #F7F4EC"
+    },
+    "secondary": {
+      "bg": "transparent",
+      "fg": "#0B3B32",
+      "border": "none; graphite underline",
+      "radius": "0",
+      "padding": "12px 0",
+      "hover": "sepia hand-wobble underline 300ms"
+    },
+    "link": {
+      "fg": "#1E211F",
+      "underline": "1px #1E7A68",
+      "hover": "arrow +4px"
+    }
+  },
+  "logo": {
+    "loop": "write/un-write infinite",
+    "onLight": "#171918",
+    "onDark": "#FFFFFF",
+    "colourChange": false,
+    "cycleMs": 4600,
+    "drawMs": "0-1200 (480 each, 95 stagger)",
+    "holdUntilMs": 3000,
+    "unwriteMs": "3000-4200 (reverse order)",
+    "colorLight": "#171918",
+    "colorDark": "#F7F4EC"
+  },
+  "tailPrompt": "mixed-media field-notebook aesthetic, milk white #F7F4EC and cotton paper #EDE4D0, graphite #4B4E4C linework, sepia #8C6A43 ink, deep forest #0B3B32 and data green #1E7A68, warm natural light, generous empty space, editorial, calm, premium, no text, no watermark, no logo, no letters",
+  "images": [
+    {
+      "file": "web/public/desigo/styles/mixed-media/hero-landscape.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Soft milk-white cotton paper ground with very faint graphite construction lines (a centre axis and concentric circles) and a faint sepia field sketch of a distant Thar landscape with a khejri tree along the lower edge, vast empty centre, mixed-media field-notebook aesthetic, milk white #F7F4EC and cotton paper #EDE4D0, graphite #4B4E4C linework, sepia #8C6A43 ink, deep forest #0B3B32 and data green #1E7A68, warm natural light, generous empty space, editorial, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, handwriting, numbers, rulers with markings, coffee stains, tape",
+      "usedIn": "Hero (ch. 01)"
+    },
+    {
+      "file": "web/public/desigo/styles/mixed-media/hero-portrait.png",
+      "size": "1400×2400 (7:12)",
+      "transparent": false,
+      "prompt": "Tall milk-white paper ground, faint graphite centre axis, a small sepia sketch of dunes and one khejri tree at the bottom, empty centre, mixed-media field-notebook aesthetic, milk white #F7F4EC and cotton paper #EDE4D0, graphite #4B4E4C linework, sepia #8C6A43 ink, deep forest #0B3B32 and data green #1E7A68, warm natural light, generous empty space, editorial, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, handwriting, numbers, tape",
+      "usedIn": "Hero mobile"
+    },
+    {
+      "file": "web/public/desigo/styles/mixed-media/world-master-26.png",
+      "size": "3200×2000 + 1400×2400 crop",
+      "transparent": false,
+      "prompt": "Botanical graphite pencil sketches of Indian medicinal herb sprigs (tulsi, ashwagandha, shatavari leaves) arranged as a loose open wreath on pale green paper #D9E8DF, bottle-green #1F5C45 accents, empty centre, mixed-media field-notebook aesthetic, milk white #F7F4EC and cotton paper #EDE4D0, graphite #4B4E4C linework, sepia #8C6A43 ink, deep forest #0B3B32 and data green #1E7A68, warm natural light, generous empty space, editorial, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, labels, botanical names, coloured photos, counting grids",
+      "usedIn": "Four milks ch. 08, /milk/master-26"
+    },
+    {
+      "file": "web/public/desigo/styles/mixed-media/world-root-14.png",
+      "size": "3200×2000 + 1400×2400 crop",
+      "transparent": false,
+      "prompt": "Atmospheric painterly backdrop of red earth grazing land in Rajasthan at morning, low khejri trees, soft dust, crimson #B3202A earth tones toned toward pale rose #F3D9D6 haze, wide empty centre (backdrop only until the real grazing photograph arrives), mixed-media field-notebook aesthetic, milk white #F7F4EC and cotton paper #EDE4D0, graphite #4B4E4C linework, sepia #8C6A43 ink, deep forest #0B3B32 and data green #1E7A68, warm natural light, generous empty space, editorial, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, farm buildings, people, Holstein cows, fences with signs",
+      "usedIn": "Four milks ch. 08 (backdrop placeholder for B2)"
+    },
+    {
+      "file": "web/public/desigo/styles/mixed-media/world-base-3.png",
+      "size": "3200×2000 + 1400×2400 crop",
+      "transparent": false,
+      "prompt": "Pale wheat paper #F8E4C2 with a faint hairline graph grid and a few calm deep-brown #5A3304 hairline curves and tick marks, like a scientific diagram without any labels, empty centre, mixed-media field-notebook aesthetic, milk white #F7F4EC and cotton paper #EDE4D0, graphite #4B4E4C linework, sepia #8C6A43 ink, deep forest #0B3B32 and data green #1E7A68, warm natural light, generous empty space, editorial, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, numbers, axis labels, charts with text",
+      "usedIn": "Four milks ch. 08, /milk/base-3"
+    },
+    {
+      "file": "web/public/desigo/styles/mixed-media/world-essential.png",
+      "size": "3200×2000 + 1400×2400 crop",
+      "transparent": false,
+      "prompt": "A single sheet of warm ivory #F4EDE2 cotton paper in soft daylight, one faint graphite horizontal rule, almost empty, calm, mixed-media field-notebook aesthetic, milk white #F7F4EC and cotton paper #EDE4D0, graphite #4B4E4C linework, sepia #8C6A43 ink, deep forest #0B3B32 and data green #1E7A68, warm natural light, generous empty space, editorial, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, writing, folds, stains",
+      "usedIn": "Four milks ch. 08, /milk/essential"
+    },
+    {
+      "file": "web/public/desigo/styles/mixed-media/journey-graphite-set.png",
+      "size": "3600×1200 (3:1)",
+      "transparent": true,
+      "prompt": "Row of seven consistent graphite pencil line drawings evenly spaced: a zebu cow with hump and dewlap, a small Rajasthani farm shed with a khejri tree, a steel milk can, a round paper test card with sixteen dots, a stainless-steel milk chiller, a small clean dairy building, a delivery bicycle with an empty wire crate, single line weight, isolated on transparent background, mixed-media field-notebook aesthetic, milk white #F7F4EC and cotton paper #EDE4D0, graphite #4B4E4C linework, sepia #8C6A43 ink, deep forest #0B3B32 and data green #1E7A68, warm natural light, generous empty space, editorial, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, bottles, jars, shading blobs, labels, Holstein cow",
+      "usedIn": "Cow → bottle ch. 03 (MediaJourney)"
+    },
+    {
+      "file": "web/public/desigo/styles/mixed-media/trace-field-map.png",
+      "size": "3000×2000",
+      "transparent": false,
+      "prompt": "Hand-drawn terrain field map on cotton paper, graphite contour lines, sepia dunes and dry riverbeds, a few small empty circles where nodes go, no labels, faint and calm, mixed-media field-notebook aesthetic, milk white #F7F4EC and cotton paper #EDE4D0, graphite #4B4E4C linework, sepia #8C6A43 ink, deep forest #0B3B32 and data green #1E7A68, warm natural light, generous empty space, editorial, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, place names, roads with numbers, compass text, satellite imagery",
+      "usedIn": "Traceability ch. 06, /trace (FieldMap)"
+    },
+    {
+      "file": "web/public/desigo/styles/mixed-media/texture-cotton-paper.png",
+      "size": "2400×2400, seamless",
+      "transparent": false,
+      "prompt": "Seamless tileable texture of warm cotton rag paper #EDE4D0, fine fibres, flat even scan lighting, no shadows, mixed-media field-notebook aesthetic, milk white #F7F4EC and cotton paper #EDE4D0, graphite #4B4E4C linework, sepia #8C6A43 ink, deep forest #0B3B32 and data green #1E7A68, warm natural light, generous empty space, editorial, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, stains, folds, foxing heavy, vignette",
+      "usedIn": "PaperPanel texture"
+    },
+    {
+      "file": "web/public/desigo/styles/mixed-media/breed-gir-graphite.png",
+      "size": "1600×2000 (4:5)",
+      "transparent": true,
+      "prompt": "Precise graphite profile drawing of a Gir cow, an Indian zebu breed with domed forehead, long curled ears and back-curving horns, full body side view facing left, respectful natural-history study, isolated on transparent background, mixed-media field-notebook aesthetic, milk white #F7F4EC and cotton paper #EDE4D0, graphite #4B4E4C linework, sepia #8C6A43 ink, deep forest #0B3B32 and data green #1E7A68, warm natural light, generous empty space, editorial, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, cartoon, Holstein, labels, coloured fill",
+      "usedIn": "Breeds ch. 05 (BreedPlate, one of six)"
+    },
+    {
+      "file": "web/public/desigo/styles/mixed-media/ghee-churn-drawing.png",
+      "size": "1600×2000 (4:5)",
+      "transparent": true,
+      "prompt": "Graphite and sepia drawing of a traditional wooden bilona churn in an earthen pot with its rope, with two curved motion arrows showing the back-and-forth churning, isolated on transparent background, mixed-media field-notebook aesthetic, milk white #F7F4EC and cotton paper #EDE4D0, graphite #4B4E4C linework, sepia #8C6A43 ink, deep forest #0B3B32 and data green #1E7A68, warm natural light, generous empty space, editorial, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, ghee jar, labels, people, text in arrows",
+      "usedIn": "Ghee ch. 12, /ghee"
+    }
+  ]
+}

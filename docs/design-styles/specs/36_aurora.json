@@ -1,0 +1,259 @@
+{
+  "id": 36,
+  "slug": "aurora",
+  "name": "Aurora",
+  "priority": false,
+  "fit": 3,
+  "colors": {
+    "primary": "#0B3B32",
+    "onPrimary": "#F7F4EC",
+    "secondary": "#1E7A68",
+    "accent": "#E9C98A",
+    "bg": "#F7F4EC",
+    "surface": "#FFF8E8",
+    "text": "#1E211F",
+    "textMuted": "#5B5C58",
+    "line": "rgba(11,59,50,.14)",
+    "ok": "#1E7A68",
+    "pending": "#E9C98A",
+    "demo": "#0B3B32"
+  },
+  "variants": {
+    "master-26": {
+      "base": "#1F5C45",
+      "deep": "#0A2A20",
+      "light": "#D9E8DF",
+      "world": "ground #0A2A20; blobs #1F5C45, #BFE6D4, #E9C98A"
+    },
+    "root-14": {
+      "base": "#B3202A",
+      "deep": "#4A0A0F",
+      "light": "#F3D9D6",
+      "world": "ground #2A0A0D; blobs #B3202A 50%, #F2C7A5, #E9C98A"
+    },
+    "base-3": {
+      "base": "#E89A1C",
+      "deep": "#5A3304",
+      "light": "#F8E4C2",
+      "world": "ground #F8E4C2; blobs #E89A1C 45%, #FFF8E8, #F2C7A5"
+    },
+    "essential": {
+      "base": "#CDB89A",
+      "deep": "#4D4130",
+      "light": "#F4EDE2",
+      "world": "ground #F4EDE2; blobs #CDB89A 40%, #FFF8E8"
+    }
+  },
+  "fonts": {
+    "display": {
+      "family": "Fraunces",
+      "package": "@fontsource-variable/fraunces",
+      "weights": [
+        300,
+        400
+      ]
+    },
+    "body": {
+      "family": "Inter Tight",
+      "package": "@fontsource-variable/inter-tight",
+      "weights": [
+        400,
+        500
+      ]
+    },
+    "label": {
+      "family": "Inter Tight",
+      "package": "@fontsource-variable/inter-tight",
+      "weights": [
+        500
+      ]
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "package": "@fontsource-variable/jetbrains-mono",
+      "weights": [
+        400,
+        500
+      ]
+    },
+    "devanagari": {
+      "family": "Noto Serif Devanagari",
+      "package": "@fontsource-variable/noto-serif-devanagari",
+      "weights": [
+        400,
+        600
+      ]
+    }
+  },
+  "type": {
+    "display": "clamp(3.5rem, 2rem + 7vw, 9rem)",
+    "h1": "clamp(2.6rem, 1.6rem + 4vw, 5rem)",
+    "h2": "clamp(1.8rem, 1.3rem + 2vw, 3rem)",
+    "body": "clamp(1rem, .95rem + .25vw, 1.125rem)",
+    "label": ".75rem"
+  },
+  "radius": {
+    "sm": "2px",
+    "md": "12px",
+    "lg": "20px",
+    "pill": "999px"
+  },
+  "shadow": {
+    "bottle": "variant halo (2 blobs, 60%) + cream radial behind glass; contact ellipse rgba(30,33,31,.22) blur 20px on light / reflected glow on dark",
+    "panel": "none; veil rgba(255,248,232,.72) + blur 24px + 1px rgba(11,59,50,.14)"
+  },
+  "motion": {
+    "easeOut": "cubic-bezier(.16,1,.3,1)",
+    "easeInOut": "cubic-bezier(.65,0,.35,1)",
+    "easeMilk": "cubic-bezier(.22,.9,.24,1)",
+    "durMicro": 240,
+    "durReveal": 600,
+    "durScene": 1200,
+    "driftMinMs": 18000,
+    "driftMaxMs": 40000,
+    "paletteMinScrollMs": 1200,
+    "cursorLerp": 0.08,
+    "float": 6000
+  },
+  "button": {
+    "primary": {
+      "bg": "transparent",
+      "fg": "#0B3B32",
+      "border": "1px solid #0B3B32 (mint #BFE6D4 on dark)",
+      "radius": "2px",
+      "padding": "14px 22px",
+      "hover": "frame draws 400ms, nearest blob +6%",
+      "active": "bg #0B3B32, fg #F7F4EC"
+    },
+    "secondary": {
+      "bg": "transparent",
+      "fg": "#0B3B32",
+      "border": "none; 1px underline",
+      "radius": "0",
+      "padding": "12px 0",
+      "hover": "underline draws 240ms"
+    },
+    "link": {
+      "fg": "#1E211F",
+      "underline": "1px #1E7A68",
+      "hover": "arrow +4px"
+    }
+  },
+  "logo": {
+    "loop": "write/un-write infinite",
+    "onLight": "#171918",
+    "onDark": "#FFFFFF",
+    "colourChange": false,
+    "cycleMs": 4600,
+    "drawMs": "0-1200 (480 each, 95 stagger)",
+    "holdUntilMs": 3000,
+    "unwriteMs": "3000-4200 (reverse order)",
+    "colorLight": "#171918",
+    "colorDark": "#F7F4EC"
+  },
+  "tailPrompt": "Thar dawn aurora light, soft blurred veils of dawn gold #E9C98A, peach #F2C7A5, cream #FFF8E8, mint #BFE6D4, green-grey #A9C9C6 and DESIGO green #1E7A68 over milk white #F7F4EC or pre-dawn forest #08201B, very soft focus, static fine film grain, calm, premium, no purple, no pink, no magenta, no electric blue, no text, no watermark, no logo, no letters",
+  "images": [
+    {
+      "file": "web/public/desigo/styles/aurora/hero-landscape.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Pre-dawn sky over a flat desert horizon, soft gold and mint aurora-like light veils low on the horizon, deep forest-night #08201B above, heavy soft blur, fine static grain, large empty centre, Thar dawn aurora light, soft blurred veils of dawn gold #E9C98A, peach #F2C7A5, cream #FFF8E8, mint #BFE6D4, green-grey #A9C9C6 and DESIGO green #1E7A68 over milk white #F7F4EC or pre-dawn forest #08201B, very soft focus, static fine film grain, calm, premium, no purple, no pink, no magenta, no electric blue, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, purple, pink, magenta, electric blue, stars, northern lights green-purple, mountains, people",
+      "usedIn": "Hero (ch. 01) static fallback"
+    },
+    {
+      "file": "web/public/desigo/styles/aurora/hero-portrait.png",
+      "size": "1400×2400 (7:12)",
+      "transparent": false,
+      "prompt": "Tall pre-dawn gradient: forest-night at the top, soft gold and mint light low, very blurred, grain, empty centre, Thar dawn aurora light, soft blurred veils of dawn gold #E9C98A, peach #F2C7A5, cream #FFF8E8, mint #BFE6D4, green-grey #A9C9C6 and DESIGO green #1E7A68 over milk white #F7F4EC or pre-dawn forest #08201B, very soft focus, static fine film grain, calm, premium, no purple, no pink, no magenta, no electric blue, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, purple, pink, stars, landscape detail",
+      "usedIn": "Hero mobile"
+    },
+    {
+      "file": "web/public/desigo/styles/aurora/world-master-26.png",
+      "size": "3200×2000 + 1400×2400 crop",
+      "transparent": false,
+      "prompt": "Soft blurred light fields of bottle green #1F5C45, mint #BFE6D4 and a small dawn-gold #E9C98A glow on deep forest #0A2A20, aurora-like veils, fine grain, empty centre, Thar dawn aurora light, soft blurred veils of dawn gold #E9C98A, peach #F2C7A5, cream #FFF8E8, mint #BFE6D4, green-grey #A9C9C6 and DESIGO green #1E7A68 over milk white #F7F4EC or pre-dawn forest #08201B, very soft focus, static fine film grain, calm, premium, no purple, no pink, no magenta, no electric blue, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, purple, pink, blue, hard edges, objects",
+      "usedIn": "Four milks ch. 08, /milk/master-26"
+    },
+    {
+      "file": "web/public/desigo/styles/aurora/world-root-14.png",
+      "size": "3200×2000 + 1400×2400 crop",
+      "transparent": false,
+      "prompt": "Soft blurred light fields on a deep red-black #2A0A0D ground: crimson #B3202A at half strength, peach #F2C7A5 and dawn gold #E9C98A, red-earth dawn mood, fine grain, empty centre, Thar dawn aurora light, soft blurred veils of dawn gold #E9C98A, peach #F2C7A5, cream #FFF8E8, mint #BFE6D4, green-grey #A9C9C6 and DESIGO green #1E7A68 over milk white #F7F4EC or pre-dawn forest #08201B, very soft focus, static fine film grain, calm, premium, no purple, no pink, no magenta, no electric blue, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, pink, magenta, purple, fire, hard edges",
+      "usedIn": "Four milks ch. 08, /milk/root-14"
+    },
+    {
+      "file": "web/public/desigo/styles/aurora/world-base-3.png",
+      "size": "3200×2000 + 1400×2400 crop",
+      "transparent": false,
+      "prompt": "Light golden-hour aurora on a pale wheat #F8E4C2 ground: amber #E89A1C at 45%, cream #FFF8E8 and peach #F2C7A5, very soft, fine grain, empty centre, Thar dawn aurora light, soft blurred veils of dawn gold #E9C98A, peach #F2C7A5, cream #FFF8E8, mint #BFE6D4, green-grey #A9C9C6 and DESIGO green #1E7A68 over milk white #F7F4EC or pre-dawn forest #08201B, very soft focus, static fine film grain, calm, premium, no purple, no pink, no magenta, no electric blue, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, orange neon, purple, lens flare, hard edges",
+      "usedIn": "Four milks ch. 08, /milk/base-3"
+    },
+    {
+      "file": "web/public/desigo/styles/aurora/world-essential.png",
+      "size": "3200×2000 + 1400×2400 crop",
+      "transparent": false,
+      "prompt": "Quietest soft ivory morning light on #F4EDE2: faint sand #CDB89A and cream #FFF8E8 veils, almost uniform, fine grain, Thar dawn aurora light, soft blurred veils of dawn gold #E9C98A, peach #F2C7A5, cream #FFF8E8, mint #BFE6D4, green-grey #A9C9C6 and DESIGO green #1E7A68 over milk white #F7F4EC or pre-dawn forest #08201B, very soft focus, static fine film grain, calm, premium, no purple, no pink, no magenta, no electric blue, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, colour casts, purple, objects",
+      "usedIn": "Four milks ch. 08, /milk/essential"
+    },
+    {
+      "file": "web/public/desigo/styles/aurora/milk-fold.png",
+      "size": "3200×2000",
+      "transparent": false,
+      "prompt": "Cream and white soft forms folding over each other like milk poured slowly into milk, high-key, extremely soft, minimal and hypnotic, milk-white ground, Thar dawn aurora light, soft blurred veils of dawn gold #E9C98A, peach #F2C7A5, cream #FFF8E8, mint #BFE6D4, green-grey #A9C9C6 and DESIGO green #1E7A68 over milk white #F7F4EC or pre-dawn forest #08201B, very soft focus, static fine film grain, calm, premium, no purple, no pink, no magenta, no electric blue, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, splashes, glass, bottle, blue-white tint, hard edges",
+      "usedIn": "Milk as material ch. 09 (shader reference / fallback)"
+    },
+    {
+      "file": "web/public/desigo/styles/aurora/trace-mint-pool.png",
+      "size": "3200×2000",
+      "transparent": false,
+      "prompt": "Deep forest #0B3B32 ground with a soft pooled mint #BFE6D4 aurora glow left of centre, very blurred, calm, for behind a crisp map, Thar dawn aurora light, soft blurred veils of dawn gold #E9C98A, peach #F2C7A5, cream #FFF8E8, mint #BFE6D4, green-grey #A9C9C6 and DESIGO green #1E7A68 over milk white #F7F4EC or pre-dawn forest #08201B, very soft focus, static fine film grain, calm, premium, no purple, no pink, no magenta, no electric blue, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, lines, nodes, map shapes, purple, blue",
+      "usedIn": "Traceability ch. 06, /trace backdrop"
+    },
+    {
+      "file": "web/public/desigo/styles/aurora/texture-grain.png",
+      "size": "1024×1024, seamless",
+      "transparent": false,
+      "prompt": "Seamless tileable monochrome photographic film grain on neutral mid-grey, fine and even, Thar dawn aurora light, soft blurred veils of dawn gold #E9C98A, peach #F2C7A5, cream #FFF8E8, mint #BFE6D4, green-grey #A9C9C6 and DESIGO green #1E7A68 over milk white #F7F4EC or pre-dawn forest #08201B, very soft focus, static fine film grain, calm, premium, no purple, no pink, no magenta, no electric blue, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, colour noise, scratches, banding, vignette",
+      "usedIn": "Static grain overlay (3–4%)"
+    },
+    {
+      "file": "web/public/desigo/styles/aurora/sunrise-strip.png",
+      "size": "2000×4000 (1:2)",
+      "transparent": false,
+      "prompt": "Tall vertical sunrise gradient from pre-dawn forest-night at the top through blue-hour green-grey and dawn gold to milk white at the bottom, extremely soft, fine grain, Thar dawn aurora light, soft blurred veils of dawn gold #E9C98A, peach #F2C7A5, cream #FFF8E8, mint #BFE6D4, green-grey #A9C9C6 and DESIGO green #1E7A68 over milk white #F7F4EC or pre-dawn forest #08201B, very soft focus, static fine film grain, calm, premium, no purple, no pink, no magenta, no electric blue, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, sun disc, landscape, purple, pink",
+      "usedIn": "Final CTA ch. 15 (full sunrise)"
+    },
+    {
+      "file": "web/public/desigo/styles/aurora/ghee-gold-light.png",
+      "size": "3200×2000",
+      "transparent": false,
+      "prompt": "Warm gold aurora light (#E9C98A, #C8A96B, #F2C7A5) as if from a low sun, soft veils on a warm cream ground, empty centre, Thar dawn aurora light, soft blurred veils of dawn gold #E9C98A, peach #F2C7A5, cream #FFF8E8, mint #BFE6D4, green-grey #A9C9C6 and DESIGO green #1E7A68 over milk white #F7F4EC or pre-dawn forest #08201B, very soft focus, static fine film grain, calm, premium, no purple, no pink, no magenta, no electric blue, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, fire, candles, jars, purple",
+      "usedIn": "Ghee ch. 12, /ghee"
+    }
+  ],
+  "dark": {
+    "bg": "#08201B",
+    "text": "#F7F4EC",
+    "textMuted": "#A9C9C6",
+    "primary": "#BFE6D4",
+    "surface": "rgba(8,32,27,.64)"
+  },
+  "lights": {
+    "dawnGold": "#E9C98A",
+    "peach": "#F2C7A5",
+    "mint": "#BFE6D4",
+    "sky": "#A9C9C6",
+    "cream": "#FFF8E8"
+  }
+}

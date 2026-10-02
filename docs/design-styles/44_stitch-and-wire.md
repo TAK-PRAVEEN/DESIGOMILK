@@ -50,6 +50,7 @@ Reference points:
 | `--sw-wire` | `#1E7A68` at 60% | Wireframe lines on light |
 | `--sw-wire-dark` | `#7FE0B8` at 50% | Wireframe on forest (Technology only) |
 | `--sw-ink` | `#171918` | Body text |
+| `--sw-ink-muted` | `#5C5A52` | Muted text (6.0:1 on cloth) |
 
 ### Typography
 - Display: **Fraunces** 400, opsz 144. On selected titles, a **stitched outline variant**: the title's outline traced as an SVG running stitch (dash 7px, gap 5px, round caps) in forest thread, drawn in as you scroll. Use it once per page.
@@ -158,7 +159,7 @@ Total ≈ 63 days.
 - Macro photography of the pieces, plus real shisha mirrors and gota ribbon.
 - A scanned unbleached cotton tile.
 
-### Images to generate (texture and concept only; real embroidery is commissioned; save under `web/public/desigo/styles/stitch-wire/`)
+### Images to generate (texture and concept only; real embroidery is commissioned; save under `web/public/desigo/styles/stitch-and-wire/`)
 Append the house-style tail. No text, no letters, no logos, no bottles.
 
 | # | File | Size | Prompt |
@@ -194,3 +195,131 @@ Append the house-style tail. No text, no letters, no logos, no bottles.
 **Risks**: craft cliché, appropriation and visual busyness. Mitigation: commissioned and credited artisans, stitches as structural lines only, and stitch-free evidence pages.
 
 **Best used for:** the traceability thread (chapters 03, 06, 13 and /trace), Ghee in gota patti, Heritage with commissioned embroidery, and the wire-to-render hero reveal.
+
+---
+
+## 12. Build-ready spec sheet
+
+> Audit 2026-10-03: craft sourcing, palette, stitch library and wire reveal were complete. Missing: muted, pending and DEMO tokens, radius/shadow scale, component states, a portrait hero, an ESSENTIAL cloth prompt and negatives. Added. `--sw-wire` / `--sw-wire-dark` alpha values written as rgba in the JSON; image folder `styles/stitch-wire/` → `styles/stitch-and-wire/`. No claim or font-licence issues found.
+
+### 12.1 Colour system
+| Role | Token | Hex | Use | Contrast note |
+|---|---|---|---|---|
+| Primary | --c-primary | `#0B3B32` | Forest thread: the trace line, primary CTA, nav | 11.3:1 on bg; the forest trace thread; primary CTA |
+| Primary ink | --c-on-primary | `#F7F4EC` | Milk on forest | 11.3:1 on primary |
+| Secondary | --c-secondary | `#1E7A68` | Second thread, active stitches, links hover, focus ring | 4.7:1 on bg |
+| Accent | --c-accent | `#C8A96B` | Gota gold ribbon (ghee, heritage only) | 2.0:1 on bg; gota gold, reserved for ghee and heritage; decorative only |
+| Background | --c-bg | `#F7F4EC` | Smooth milk for UI pages (`--sw-milk`) | — |
+| Surface | --c-surface | `#F4EFE3` | Unbleached cotton (`--sw-cloth`) for stitched panels | text on surface 15.4:1 |
+| Text | --c-text | `#171918` | Ink (`--sw-ink`) | 16.1:1 on bg |
+| Muted text | --c-text-muted | `#5C5A52` | Captions, artisan credits detail (new token `--sw-ink-muted`) | 6.3:1 on bg, 6.0:1 on surface |
+| Line | --c-line | `rgba(30,122,104,.6)` | Wireframe lines on light (`--sw-wire`) | decorative (non-text) |
+| Success / Pending / Demo | --c-ok / --c-pending / --c-demo | `#1F5C45` / `#6B4C2A` / `#9E2B25` | Verified cross-stitch / pending dotted underline / madder-red stitched DEMO outline + text | 7.1 / 7.1 / 6.8 :1 on `#F7F4EC` |
+
+Focus ring: `--c-focus` `#1E7A68` (4.7:1 on bg), 2 px solid, 3 px offset.
+
+Variant worlds in this style: MASTER 26 · ROOT 14 · BASE 3 · ESSENTIAL (base / deep / light hex for each).
+
+| Variant | Base | Deep | Light | Treatment in this style |
+|---|---|---|---|---|
+| MASTER 26 (V1+, green cap) | `#1F5C45` | `#0A2A20` | `#E4ECE6` | Forest thread, cloth `#E4ECE6`, satin-stitched leaf border (herb count *pending*), mesh `#1F5C45` 50% |
+| ROOT 14 (V1, red cap) | `#B3202A` | `#4A0A0F` | `#F1E2DE` | Madder thread, cloth `#F1E2DE`, chain-stitch strata, mesh at 45% |
+| BASE 3 (V2, amber cap) | `#E89A1C` | `#5A3304` | `#F5EAD6` | Thread toned to `#C98A1E` for contrast, cloth `#F5EAD6`, running-stitch wheat rows + one mirror sun |
+| ESSENTIAL (V3, ivory cap) | `#CDB89A` | `#4D4130` | `#F4EDE2` | Ivory thread on ivory cloth, a single line of white-on-white kantha, mesh taupe `#4D4130` 35% |
+
+Dark-chapter inversion: Technology (the wire chapter) and the traceability cloth use forest `#0B3B32` (trace cloth is indigo-forest `#13302E`); text milk `#F7F4EC` (11.3:1), muted `#B9C4BE`, wire `rgba(127,224,184,.5)` (`--sw-wire-dark`), thread on dark is cloth-white `#F4EFE3`, focus `#7FE0B8`; the logo loop renders white.
+
+### 12.2 Typography
+| Role | Font family | Source (npm @fontsource… / Google Fonts) | Weights / axes | Size (clamp) | Line-height | Tracking | Case |
+|---|---|---|---|---|---|---|---|
+| Display / hero | Fraunces | `@fontsource-variable/fraunces` (Google Fonts) | wght 400, opsz 144 (stitched-outline variant once per page) | clamp(3rem, 1.5rem + 6.5vw, 8.5rem) | 0.95 | −0.01em | UPPERCASE (hero), sentence elsewhere |
+| Headline H1–H2 | Fraunces | `@fontsource-variable/fraunces` (Google Fonts) | wght 400, opsz 72 | H1 clamp(2.4rem, 1.5rem + 3.2vw, 4.75rem) · H2 clamp(1.75rem, 1.3rem + 1.6vw, 2.75rem) | 1.05 | 0 | Sentence |
+| Body | Inter Tight | `@fontsource-variable/inter-tight` (Google Fonts) | 400 / 500 | clamp(1rem, 0.96rem + 0.2vw, 1.0625rem) | 1.65 | 0 | Sentence |
+| Label / UI | Inter Tight | `@fontsource-variable/inter-tight` (Google Fonts) | 500 | 0.75rem | 1.4 | +0.18em | UPPERCASE |
+| Data / mono | JetBrains Mono | `@fontsource-variable/jetbrains-mono` (Google Fonts) | 400 | 0.6875–0.75rem (11–12 px) in `#1E7A68` | 1.5 | +0.02em | As data / wire annotations |
+| Devanagari (optional) | Noto Sans Devanagari | `@fontsource-variable/noto-sans-devanagari` (Google Fonts) | 400 / 500 | matches body | 1.7 | 0 | — |
+
+Licence: all fonts are SIL Open Font License 1.1 (OFL), self-hosted via Fontsource; subset Latin + Latin-ext (Devanagari subset only where used). Pairing rationale: Fraunces' sharp-and-soft serif takes a stitched outline well; Inter Tight and small mono annotations play the precise 'wire' half of the pair.
+
+### 12.3 Layout & surfaces
+- **Grid:** 12 columns (gutter 24 px, 16 px mobile), margins 6vw, max-width 1440 px; a thread grid of 8 px: every stitch path snaps to it so dashes align on routes and borders; wireframes snap to the bottle's real proportions
+- **Spacing scale:** 8 px rhythm on a 4 px base: 4 · 8 · 16 · 24 · 32 · 48 · 64 · 96 · 128
+- **Radius scale:** sm 2 px (badges, inputs) · md 4 px (cloth panels) · lg 999 px (mirror nodes, cursor)
+- **Border style:** running stitch: SVG dash 7 / gap 5, 2–3 px, round caps, 0.5 px darker centre line; chain stitch for panel borders; icons dash 4 / gap 3 at 1.75 px
+- **Shadow / elevation:** cloth squares `0 1px 2px rgba(23,25,24,.12)`; bottle contact shadow falls on the cloth; mirrors get a pointer-driven radial highlight
+- **Texture / overlay:** scanned unbleached cotton tile (512 px, 4%) on stitched chapters only; UI and fact pages stay smooth milk; off below 400 px
+
+### 12.4 Components
+All interactive components share: focus ring `--c-focus` 2 px / 3 px offset · touch targets ≥ 44 px · disabled = 40% opacity, no motion, `aria-disabled` (unless stated) · hover effects only on `(hover:hover)` devices · motion from §12.6.
+
+- **Primary button** — Forest label (Inter Tight 600, 13 px, +0.16em, uppercase) on a running-stitch underline (dash 7 / gap 5, 2 px, round caps) with a travelling arrow; 48 px tall, padding 14 px 0. **States:** default stitched underline · hover the stitches pull tight into a solid 2 px thread (300 ms), arrow +6 px · focus-visible 2 px `#1E7A68` ring, 3 px offset · active label sinks 1 px · disabled 40% opacity, no hover motion, `aria-disabled="true"` · loading dashes appear one by one along the underline (30 dashes/s loop), `aria-busy`. **Motion:** 300 ms `--ease-out`. **A11y:** native `<a>`/`<button>`, hit area ≥ 44 px, label ≥ 4.5:1.
+- **Secondary button** — Ink label, plain 1 px underline + arrow. **States:** default plain underline · hover underline becomes a running stitch stitched in (300 ms) · focus-visible 2 px `#1E7A68` ring, 3 px offset · active label sinks 1 px · disabled 40% opacity, no hover motion, `aria-disabled="true"` · loading stitch loop. **Motion:** 300 ms. **A11y:** native `<a>`/`<button>`, hit area ≥ 44 px, label ≥ 4.5:1.
+- **Text / arrow link** — Forest link with 1 px underline. **States:** default hairline · hover running-stitch underline stitches in (300 ms) · focus-visible 2 px `#1E7A68` ring, 3 px offset · active green · disabled 40% opacity, no hover motion, `aria-disabled="true"` · loading n/a (static element). **Motion:** 300 ms. **A11y:** underline always present (never colour alone); arrow is `aria-hidden`.
+- **Icon button (incl. menu)** — 44 px hit area; running-stitch outline icon on cloth chapters, plain 1.5 px line on UI pages; menu icon = two stitched lines that cross into a cross-stitch ×. **States:** default icon · hover dashes fill to solid · focus-visible 2 px `#1E7A68` ring, 3 px offset · active scale 0.96 · disabled 40% opacity, no hover motion, `aria-disabled="true"` · loading n/a (static element). **Motion:** 200 ms. **A11y:** `aria-label` required; 44×44 px hit area; menu button carries `aria-expanded` + `aria-controls`; Esc closes the menu and returns focus.
+- **Navigation bar** (desktop + mobile menu) — 64 px milk bar with a chain-stitch line beneath after scroll; links Inter Tight 500 13 px uppercase forest; RESERVE as a forest text button. Mobile: a seam closes across the screen (700 ms) and opens onto a cloth sheet with Fraunces links. **States:** default forest links · hover stitched underline · focus-visible 2 px `#1E7A68` ring, 3 px offset · active current page: single cross-stitch beneath · disabled n/a · loading n/a. **Motion:** seam 700 ms `--ease-inout`. **A11y:** `<nav>` landmark after a skip link; logo is a link to `/` with `aria-label="DESIGO® home"`; the animated SVG is `aria-hidden`. **Logo:** The DESIGO® wordmark sits top-left (cap height 22 px desktop, 18 px mobile) and runs the brand's **black write / un-write loop** (charcoal `#171918` on light grounds, white `#FFFFFF` on dark grounds; the colour never changes during the loop). The loop pauses while the menu is open, when the tab is hidden, and under reduced motion (the full wordmark is shown static).
+- **Cursor** — 12 px forest dot with a 3 px 'needle eye' gap; labels Inter Tight 500 11 px uppercase. **States:** default needle-eye dot · hover a short thread of four dashes trails behind (120 ms lag) · ROTATE the wireframe appears at 20% over the bottle + "drag · turn" · EXPLORE dot with a short thread reading "explore" · ENTER needle-eye dot with an arrow → · VIEW ring reading "view" over tacked photos · TRACE over mirror nodes: the mirror brightens and reflects a highlight toward the cursor; label "trace". **Touch fallback:** no cursor; mirror reflections off; stitches still draw with scroll; gota shimmer off. **A11y:** decorative (`aria-hidden`, `pointer-events:none`); off for coarse pointers and reduced motion, where the system cursor returns; never the only cue.
+- **Card / panel / info block** — Cloth panel `#F4EFE3` with a chain-stitch border, radius 4 px, padding 32 px (24 px mobile); facts always on smooth milk, not cloth. **States:** default stitched border · hover border stitches tighten (gap 5 → 3 px) · focus-visible 2 px `#1E7A68` ring, 3 px offset · active returns · disabled 40% opacity, no hover motion, `aria-disabled="true"` · loading border stitches in progressively. **Motion:** stitch 24–36 dashes/s. **A11y:** real heading inside; one primary action per card; text never sits on texture below 4.5:1.
+- **Badge / tag** — Inter Tight 600 11 px uppercase label with a running-stitch outline. **Pending verification**: earth-ink + dotted underline on the claim. **DEMO · not live data**: madder-red `#9E2B25` stitched outline with the words as real text, always visible on trace and Trace-your-milk. **States:** default stitched label · hover none · focus-visible 2 px `#1E7A68` ring, 3 px offset · active n/a · disabled n/a · loading n/a (static element). **Motion:** outline stitches in once (400 ms). **A11y:** status is real text ("Pending verification", "DEMO · not live data"); colour and shape are never the only signal.
+- **Input + form field (Trace-your-milk bottle ID)** — Field 56 px on milk with a running-stitch frame, radius 2 px; bottle ID in JetBrains Mono 18 px; label above; demo ID prefilled; error earth-ink + icon. **States:** default stitched frame · hover frame darkens · focus-visible 2 px `#1E7A68` ring, 3 px offset · active frame pulls tight into a solid 2 px forest line · disabled 40% opacity, no hover motion, `aria-disabled="true"` · loading the result stitches itself node by node on a cloth card, mirrors lighting. **Motion:** 1500 ms per node. **A11y:** visible `<label>`, hint and error linked with `aria-describedby`, error shown as text + icon, `autocomplete=off`, `spellcheck=false`.
+- **Divider / ornament** — the seam: a horizontal chain-stitch line, or a single row of running stitch; one per section break. **States:** default static · hover none · focus-visible 2 px `#1E7A68` ring, 3 px offset · active n/a · disabled n/a · loading n/a (static element). **Motion:** closes across in 700 ms. **A11y:** `aria-hidden` (decorative) or `role=separator` between landmark sections.
+- **Section header** — Mono chapter number in thread-green, Fraunces title (stitched-outline variant once per page, drawn in on scroll), one-line intro. **States:** default static · hover none · focus-visible 2 px `#1E7A68` ring, 3 px offset · active n/a · disabled n/a · loading n/a (static element). **Motion:** stitch dash 7 / gap 5 at 30 dashes/s. **A11y:** real `<h2>`; the chapter number is read as "Chapter 03"; decorative glyphs `aria-hidden`.
+- **Product info block** — Info panel on milk: V-code (mono), name in Fraunces H2, the `desigo.ts` line, price *pending* (hidden in production), size, descriptors *pending*, each bulleted with a single cross-stitch. **States:** default static · hover descriptor shows its source note · focus-visible 2 px `#1E7A68` ring, 3 px offset · active n/a · disabled 40% opacity, no hover motion, `aria-disabled="true"` · loading skeleton. **Motion:** rows 60 ms stagger. **A11y:** facts in a `<dl>`; pending values carry visually-hidden "(pending verification)"; price hidden in production until approved.
+- **Bottle stage** — Bottle floating over a square of unbleached cloth with a fine kantha border; contact shadow on the cloth; a faint wire mesh rotates with the tilt; the wire-to-render reveal plays once per session (≤ 1.9 s, skippable); the mesh never fakes a 360 turn from one image. **States:** default idle float ±6 px over 6 s · hover pointer tilt ±6°, mesh in sync · focus-visible 2 px `#1E7A68` ring, 3 px offset · active drag turns the viewer; the mesh shows briefly and settles into the render · disabled n/a · loading wire mesh only + empty tacked-frame `AssetSlot`. **Motion:** wire 900 + render 600 + mesh fade 400 ms. **A11y:** Bottle360Viewer is `role=img` with an `aria-label`; ←/→ rotate 5°, Home resets; reduced motion stops idle float and auto-turn.
+- **Trace node / timeline step** — MirrorNode: 18 px mirror disc (`#C9CED1` with radial highlight) held by a ring of buttonhole stitches; the route is a forest running stitch; label Inter Tight 13 px + mono ID. **States:** default dull mirror · hover mirror catches the cursor light · focus-visible 2 px `#1E7A68` ring, 3 px offset · active a gleam travels the thread 1500 ms per hop and lights the mirror; stitched-edge panel opens · disabled 40% opacity, no hover motion, `aria-disabled="true"` · loading thread stitches forward with scroll (scroll back unpicks). **Motion:** hop 1500 ms. **A11y:** route is an ordered list `<ol>`; each node a `<button>` opening its panel; `aria-current="step"` on the active node.
+
+### 12.5 Iconography & illustration
+- **Icon style:** running-stitch outline icons (dash 4 / gap 3, 1.75 px) in forest thread on cloth chapters; plain 1.5 px line icons on UI pages
+- **Illustration technique:** SVG stitches (running, chain, cross, satin) from one library; commissioned embroidery by named artisans (kantha credited to Bengal and Odisha, gota patti and mirror work to Rajasthan and Gujarat) photographed in macro; bottle wireframe as 0.75 px latitude/longitude mesh
+- **Photo treatment:** real farm photos 'tacked' onto cloth with four corner stitches, natural warm grade; textiles always clean and pressed
+
+### 12.6 Motion tokens
+| Token | Value | Use |
+|---|---|---|
+| `--ease-out` | `cubic-bezier(.16,1,.3,1)` | wire draw, reveals |
+| `--ease-inout` | `cubic-bezier(.65,0,.35,1)` | seam transition |
+| `--stitch-rate` | 24–36 dashes/s, each dash 0.6 → 1 over 120 ms | stitching (signature: a needle, not a pen) |
+| `--dur-micro` | 300 ms | hover stitch-in |
+| `--dur-reveal` | 900 ms | wire lines draw |
+| `--dur-scene` | 700 ms | seam closes across |
+| `--wire-reveal` | 900 + 600 + 400 ms ≈ 1.9 s | wire → render → mesh fade, once per session |
+| `--shimmer` | 600 ms | gota sheen on hover |
+| `--float` | ±6 px / 6000 ms | bottle idle |
+| `--hop` | 1500 ms | gleam per mirror node |
+| `--scrub` | 1 | thread stitches with scroll |
+
+- **Signature transition:** the seam: a chain-stitch line closes across the screen (700 ms) and the next chapter opens below it; plus the wire-to-render bottle reveal
+- **Scroll behaviour:** in journey and trace chapters the thread stitches forward exactly with scroll; scrolling back unpicks it
+- **Reduced-motion fallback:** stitches and wires appear complete; no reveal sequence, no shimmer, no seam (200 ms fade)
+
+### 12.7 AI image generation prompts
+House rules: no text/letters/logos/watermarks in images; generated images are illustration, texture or backdrop only; never
+generate the bottle or ghee jar; zebu cows only, shown with respect; append the style's tail prompt to every prompt.
+
+**Tail prompt (append to every prompt below):** _unbleached handwoven cotton #F4EFE3 on a milk-white #F7F4EC surface, hand running stitches in deep forest-green #0B3B32 thread, soft daylight, crisp macro detail, clean pressed fabric, restrained, premium, no text, no watermark, no logo, no letters_
+
+**Base negative prompt (add to every row's negative):** _text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look_
+
+| # | File path (web/public/desigo/styles/<slug>/...) | Size / ratio | Transparent? | Prompt | Negative prompt | Used in |
+|---|---|---|---|---|---|---|
+| SW1 | `web/public/desigo/styles/stitch-and-wire/hero-cloth.png` | 3200×2000 (16:10) | No | A square of unbleached cotton cloth on a milk-white surface with a fine border of hand running stitches in deep forest-green thread, macro detail on the stitches, empty centre | fraying, stains, wedding motifs, all-over embroidery | Hero desktop |
+| SW2 | `web/public/desigo/styles/stitch-and-wire/hero-cloth-portrait.png` | 1400×2400 (7:12) | No | Portrait view of the same cloth square, kantha running-stitch border visible at top and bottom, large empty centre | fraying, stains, all-over embroidery | Hero mobile |
+| SW3 | `web/public/desigo/styles/stitch-and-wire/cloth-master-26.png` | 3200×2000 + 1400×2400 | No | Pale green-tinted cotton #E4ECE6 with a border of satin-stitched leaves in deep green #1F5C45 thread, empty centre | counted herbs, flowers, gold | MASTER 26 world |
+| SW4 | `web/public/desigo/styles/stitch-and-wire/cloth-root-14.png` | 3200×2000 + 1400×2400 | No | Pale rose cotton #F1E2DE with horizontal chain-stitch lines in madder red #B3202A like layered earth strata, empty centre | bridal red, sequins | ROOT 14 world |
+| SW5 | `web/public/desigo/styles/stitch-and-wire/cloth-base-3.png` | 3200×2000 + 1400×2400 | No | Cream cotton #F5EAD6 with rows of running stitch in turmeric amber #C98A1E like wheat rows and one round shisha mirror as a sun, empty centre | many mirrors, sequins | BASE 3 world |
+| SW6 | `web/public/desigo/styles/stitch-and-wire/cloth-essential.png` | 3200×2000 + 1400×2400 | No | Plain ivory cotton #F4EDE2 with a single line of white-on-white kantha running stitch across the lower third, extremely restrained, empty centre | colour thread, pattern | ESSENTIAL world |
+| SW7 | `web/public/desigo/styles/stitch-and-wire/running-stitch-route.png` | 3600×1200 | No | One long continuous line of hand running stitch in forest-green thread crossing layered cream cotton cloth panels, kantha style, top-down, soft light | knots, loose threads, labels | Cow → bottle thread (ch. 03), trace route |
+| SW8 | `web/public/desigo/styles/stitch-and-wire/cloth-tile.png` | 1024×1024, seamless | No | Seamless macro texture of unbleached handwoven cotton mulmul, soft, flat light | seams, stains, wrinkles | Cloth texture (4%) on stitched chapters |
+| SW9 | `web/public/desigo/styles/stitch-and-wire/mirror-node.png` | 1200×1200, transparent | Yes (real alpha) | A single small round embroidery mirror held by a ring of buttonhole stitches in forest-green thread on cream cloth, macro, crisp, transparent background around the cloth circle | reflections of people, sequins | MirrorNode reference |
+| SW10 | `web/public/desigo/styles/stitch-and-wire/gota-border.png` | 3600×600, transparent, tileable horizontally | Yes (real alpha) | Rajasthani gota patti border of woven gold ribbon cut into small leaves appliquéd on cream cloth, warm gold #C8A96B, macro, transparent background | deities, kalash, bridal motifs, glitter | Ghee (ch. 12) GotaBorder |
+
+### 12.8 Prototype acceptance checklist
+- [ ] Tokens from `specs/44_stitch-and-wire.json` applied; no off-palette colours
+- [ ] Fonts self-hosted; correct weights load
+- [ ] All 12.4 components built with all states
+- [ ] Hero + bottle-story + one product world + trace chapter built in this style (the comparison set)
+- [ ] Mobile 360 px pass; reduced-motion pass; contrast checked
+- [ ] Claims rules respected (pending underline, no blocked claims, DEMO labels)
+- [ ] Screenshots: desktop 1440×900 ×4 + mobile 390×844 ×2 saved to docs/media/styles/stitch-and-wire/
+- [ ] Every commissioned piece names its artisan(s) and tradition, with fair pay and written consent
+- [ ] Stitches are lines and borders only, never all-over wallpaper; fact pages on smooth milk
+- [ ] Wire mesh never fakes a 360 turn from a single image; SVG stitch set ≤ 80 KB

@@ -1,0 +1,222 @@
+{
+  "id": 4,
+  "slug": "brutalism",
+  "name": "Brutalism",
+  "priority": false,
+  "fit": 1,
+  "colors": {
+    "primary": "#171918",
+    "onPrimary": "#F7F4EC",
+    "secondary": "#1E7A68",
+    "accent": "#9B4A2E",
+    "bg": "#F7F4EC",
+    "surface": "#C9C6BD",
+    "text": "#171918",
+    "textMuted": "#4F4D48",
+    "line": "#171918",
+    "ok": "#1F5C45",
+    "pending": "#B3202A",
+    "demo": "#B3202A"
+  },
+  "variants": {
+    "master-26": {
+      "base": "#1F5C45",
+      "deep": "#0A2A20",
+      "light": "#D9E8DF"
+    },
+    "root-14": {
+      "base": "#B3202A",
+      "deep": "#4A0A0F",
+      "light": "#F3D9D6"
+    },
+    "base-3": {
+      "base": "#E89A1C",
+      "deep": "#5A3304",
+      "light": "#F8E4C2"
+    },
+    "essential": {
+      "base": "#CDB89A",
+      "deep": "#4D4130",
+      "light": "#F4EDE2"
+    }
+  },
+  "fonts": {
+    "display": {
+      "family": "Archivo",
+      "package": "@fontsource-variable/archivo",
+      "weights": [
+        700,
+        800,
+        900
+      ],
+      "axes": "wght,wdth"
+    },
+    "body": {
+      "family": "IBM Plex Mono",
+      "package": "@fontsource/ibm-plex-mono",
+      "weights": [
+        400,
+        700
+      ]
+    },
+    "label": {
+      "family": "IBM Plex Mono",
+      "package": "@fontsource/ibm-plex-mono",
+      "weights": [
+        700
+      ]
+    },
+    "mono": {
+      "family": "IBM Plex Mono",
+      "package": "@fontsource/ibm-plex-mono",
+      "weights": [
+        400,
+        700
+      ]
+    },
+    "devanagari": {
+      "family": "Noto Sans Devanagari",
+      "package": "@fontsource-variable/noto-sans-devanagari",
+      "weights": [
+        400,
+        700
+      ]
+    },
+    "quote": {
+      "family": "Tinos",
+      "package": "@fontsource/tinos",
+      "weights": [
+        400
+      ]
+    }
+  },
+  "type": {
+    "display": "clamp(3rem, 14vw, 22vw)",
+    "h1": "clamp(2.2rem, 6vw, 5rem)",
+    "h2": "clamp(1.5rem, 3vw, 2.5rem)",
+    "body": "0.875rem",
+    "label": "0.6875rem"
+  },
+  "radius": {
+    "sm": "0",
+    "md": "0",
+    "lg": "0"
+  },
+  "shadow": {
+    "bottle": "none",
+    "panel": "none"
+  },
+  "motion": {
+    "easeOut": "steps(1, end)",
+    "easeInOut": "steps(4, end)",
+    "durMicro": 0,
+    "durReveal": 18,
+    "durScene": 0
+  },
+  "button": {
+    "primary": {
+      "bg": "#F7F4EC",
+      "fg": "#171918",
+      "border": "2px #171918",
+      "radius": "0",
+      "padding": "0 16px; height 48px",
+      "hover": "instant invert: bg #171918, fg #F7F4EC"
+    },
+    "secondary": {
+      "bg": "#C9C6BD",
+      "fg": "#171918",
+      "border": "2px #8E8B83",
+      "radius": "0",
+      "padding": "0 16px; height 48px",
+      "hover": "instant invert"
+    },
+    "link": {
+      "fg": "#1E7A68",
+      "underline": "always",
+      "hover": "invert ink/milk",
+      "visited": "#0B3B32"
+    }
+  },
+  "images": [
+    {
+      "file": "web/public/desigo/styles/brutalism/hero.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Frontal photograph of a raw board-marked concrete wall in soft overcast light, faint formwork lines, a lower band of exposed red brick, large empty flat area in the centre, raw Indian béton brut material study, honest exposed concrete and brick in the spirit of Doshi and Kahn, flat documentary light, milk white #F7F4EC, concrete grey #C9C6BD, ink #171918 and brick #9B4A2E, no styling, no gloss, precise, calm, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, graffiti, cracks with damage, people, signage",
+      "usedIn": "01 Hero, The Raw Record header"
+    },
+    {
+      "file": "web/public/desigo/styles/brutalism/hero-portrait.png",
+      "size": "1400×2400 (7:12)",
+      "transparent": false,
+      "prompt": "Vertical frontal photograph of a raw board-marked concrete wall with a brick plinth course at the bottom, flat light, empty centre, raw Indian béton brut material study, honest exposed concrete and brick in the spirit of Doshi and Kahn, flat documentary light, milk white #F7F4EC, concrete grey #C9C6BD, ink #171918 and brick #9B4A2E, no styling, no gloss, precise, calm, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, graffiti, signage",
+      "usedIn": "01 Hero mobile"
+    },
+    {
+      "file": "web/public/desigo/styles/brutalism/blocks/master-26.png",
+      "size": "3200×1200 (8:3)",
+      "transparent": false,
+      "prompt": "Flat frontal photo of pigmented lime plaster wall in deep green #1F5C45, matte, faint trowel marks, even light, raw Indian béton brut material study, honest exposed concrete and brick in the spirit of Doshi and Kahn, flat documentary light, milk white #F7F4EC, concrete grey #C9C6BD, ink #171918 and brick #9B4A2E, no styling, no gloss, precise, calm, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, leaves, gradients",
+      "usedIn": "08 Four milks row · /milk/master-26"
+    },
+    {
+      "file": "web/public/desigo/styles/brutalism/blocks/root-14.png",
+      "size": "3200×1200 (8:3)",
+      "transparent": false,
+      "prompt": "Flat frontal photo of pigmented lime plaster wall in red #B3202A, matte, faint trowel marks, even light, raw Indian béton brut material study, honest exposed concrete and brick in the spirit of Doshi and Kahn, flat documentary light, milk white #F7F4EC, concrete grey #C9C6BD, ink #171918 and brick #9B4A2E, no styling, no gloss, precise, calm, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, blood, gradients",
+      "usedIn": "08 Four milks row · /milk/root-14"
+    },
+    {
+      "file": "web/public/desigo/styles/brutalism/blocks/base-3.png",
+      "size": "3200×1200 (8:3)",
+      "transparent": false,
+      "prompt": "Flat frontal photo of pigmented lime plaster wall in amber #E89A1C, matte, faint trowel marks, even light, raw Indian béton brut material study, honest exposed concrete and brick in the spirit of Doshi and Kahn, flat documentary light, milk white #F7F4EC, concrete grey #C9C6BD, ink #171918 and brick #9B4A2E, no styling, no gloss, precise, calm, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, sun, gradients",
+      "usedIn": "08 Four milks row · /milk/base-3"
+    },
+    {
+      "file": "web/public/desigo/styles/brutalism/blocks/essential.png",
+      "size": "3200×1200 (8:3)",
+      "transparent": false,
+      "prompt": "Flat frontal photo of pigmented lime plaster wall in ivory beige #CDB89A, matte, faint trowel marks, even light, raw Indian béton brut material study, honest exposed concrete and brick in the spirit of Doshi and Kahn, flat documentary light, milk white #F7F4EC, concrete grey #C9C6BD, ink #171918 and brick #9B4A2E, no styling, no gloss, precise, calm, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, ornaments, gradients",
+      "usedIn": "08 Four milks row · /milk/essential"
+    },
+    {
+      "file": "web/public/desigo/styles/brutalism/textures/concrete.png",
+      "size": "2048×2048, seamless",
+      "transparent": false,
+      "prompt": "Seamless tileable raw concrete surface, fine aggregate and tiny air pockets, flat top-down scan lighting, raw Indian béton brut material study, honest exposed concrete and brick in the spirit of Doshi and Kahn, flat documentary light, milk white #F7F4EC, concrete grey #C9C6BD, ink #171918 and brick #9B4A2E, no styling, no gloss, precise, calm, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, cracks, stains, seams",
+      "usedIn": "RawCell header background (10%)"
+    },
+    {
+      "file": "web/public/desigo/styles/brutalism/textures/brick.png",
+      "size": "2048×2048, seamless",
+      "transparent": false,
+      "prompt": "Seamless tileable exposed handmade red brick wall with recessed lime mortar joints, warm brick #9B4A2E, flat frontal light, raw Indian béton brut material study, honest exposed concrete and brick in the spirit of Doshi and Kahn, flat documentary light, milk white #F7F4EC, concrete grey #C9C6BD, ink #171918 and brick #9B4A2E, no styling, no gloss, precise, calm, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, graffiti, moss, damage",
+      "usedIn": "10 Heritage block"
+    },
+    {
+      "file": "web/public/desigo/styles/brutalism/trace/log-paper.png",
+      "size": "2400×3200",
+      "transparent": false,
+      "prompt": "Top-down photo of a blank continuous-feed dot-matrix printer paper sheet with tractor-feed holes and faint pale green bands, flat light, raw Indian béton brut material study, honest exposed concrete and brick in the spirit of Doshi and Kahn, flat documentary light, milk white #F7F4EC, concrete grey #C9C6BD, ink #171918 and brick #9B4A2E, no styling, no gloss, precise, calm, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, printed characters, text, numbers",
+      "usedIn": "13 Trace your milk / The Raw Record backdrop"
+    },
+    {
+      "file": "web/public/desigo/styles/brutalism/journey/raw-flow.png",
+      "size": "4000×1200, transparent",
+      "transparent": true,
+      "prompt": "Eight empty square boxes drawn with 2 px black lines connected left to right by straight black arrows, flat, isolated on transparent background, raw Indian béton brut material study, honest exposed concrete and brick in the spirit of Doshi and Kahn, flat documentary light, milk white #F7F4EC, concrete grey #C9C6BD, ink #171918 and brick #9B4A2E, no styling, no gloss, precise, calm, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, labels, icons, shading",
+      "usedIn": "06 Traceability ASCII diagram companion"
+    }
+  ]
+}

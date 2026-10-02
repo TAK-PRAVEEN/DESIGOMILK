@@ -1,0 +1,238 @@
+{
+  "id": 42,
+  "slug": "clay-render",
+  "name": "Clay Render",
+  "priority": true,
+  "fit": 3.5,
+  "colors": {
+    "primary": "#7E4530",
+    "onPrimary": "#F7F4EC",
+    "secondary": "#0B3B32",
+    "accent": "#B8704C",
+    "bg": "#F7F4EC",
+    "surface": "#EFE9DE",
+    "text": "#171918",
+    "textMuted": "#5C5A52",
+    "line": "rgba(23,25,24,.14)",
+    "ok": "#1F5C45",
+    "pending": "#6B4C2A",
+    "demo": "#0B3B32",
+    "focus": "#0B3B32"
+  },
+  "variants": {
+    "master-26": {
+      "base": "#1F5C45",
+      "deep": "#0A2A20",
+      "light": "#A9BCA8"
+    },
+    "root-14": {
+      "base": "#B3202A",
+      "deep": "#7E4530",
+      "light": "#E8D3C4"
+    },
+    "base-3": {
+      "base": "#E89A1C",
+      "deep": "#C99E5E",
+      "light": "#F8E4C2"
+    },
+    "essential": {
+      "base": "#D9CFBF",
+      "deep": "#4D4130",
+      "light": "#F4EDE2"
+    }
+  },
+  "fonts": {
+    "display": {
+      "family": "Fraunces",
+      "package": "@fontsource-variable/fraunces",
+      "weights": [
+        300,
+        400
+      ],
+      "axes": {
+        "opsz": 144,
+        "SOFT": 50
+      }
+    },
+    "body": {
+      "family": "Inter Tight",
+      "package": "@fontsource-variable/inter-tight",
+      "weights": [
+        400,
+        500
+      ]
+    },
+    "label": {
+      "family": "Inter Tight",
+      "package": "@fontsource-variable/inter-tight",
+      "weights": [
+        500
+      ]
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "package": "@fontsource-variable/jetbrains-mono",
+      "weights": [
+        400
+      ]
+    },
+    "devanagari": {
+      "family": "Noto Sans Devanagari",
+      "package": "@fontsource-variable/noto-sans-devanagari",
+      "weights": [
+        400,
+        500
+      ]
+    }
+  },
+  "type": {
+    "display": "clamp(3rem, 1.5rem + 6.5vw, 8.5rem)",
+    "h1": "clamp(2.4rem, 1.5rem + 3.2vw, 4.75rem)",
+    "h2": "clamp(1.75rem, 1.3rem + 1.6vw, 2.75rem)",
+    "body": "clamp(1rem, 0.96rem + 0.2vw, 1.0625rem)",
+    "label": "0.75rem"
+  },
+  "radius": {
+    "sm": "0px",
+    "md": "2px",
+    "lg": "999px"
+  },
+  "shadow": {
+    "bottle": "rendered shadow-catcher pass on the clay plinth (CSS fallback 0 26px 26px -18px rgba(126,69,48,.28))",
+    "panel": "none"
+  },
+  "motion": {
+    "easeOut": "cubic-bezier(.16,1,.3,1)",
+    "easeInOut": "cubic-bezier(.65,0,.35,1)",
+    "easeSignature": "cubic-bezier(.22,.9,.24,1)",
+    "durMicro": 300,
+    "durReveal": 650,
+    "durScene": 1200,
+    "buildMs": 500,
+    "buildStaggerMs": 80,
+    "turntableMs": 16000,
+    "floatPx": 5,
+    "floatMs": 6000,
+    "hopMs": 1500
+  },
+  "button": {
+    "primary": {
+      "bg": "transparent",
+      "fg": "#7E4530",
+      "radius": "0",
+      "padding": "14px 0",
+      "underline": "1px #7E4530",
+      "hover": "1px frame draws 400ms; arrow +6px"
+    },
+    "secondary": {
+      "bg": "transparent",
+      "fg": "#0B3B32",
+      "radius": "0",
+      "padding": "14px 0",
+      "hover": "hairline redraws 300ms"
+    },
+    "link": {
+      "fg": "#0B3B32",
+      "underline": "1px",
+      "hover": "underline redraws left to right 300ms"
+    }
+  },
+  "images": [
+    {
+      "file": "web/public/desigo/styles/clay-render/hero-maquette.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Small architectural clay maquette of a Rajasthani farm landscape with low dunes, a khejri tree and a simple shed, unglazed milk-white clay with subtle finger marks, a clay plinth empty at centre front, soft matte clay render, unglazed milk-white clay #EFE9DE with terracotta #B8704C and sand #DCC6A0, one warm soft key light from top-left with a cool fill, gentle ambient occlusion, architectural maquette restraint, shallow depth of field, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, toy look, pastel candy, cows with faces, glossy plastic",
+      "usedIn": "Hero desktop"
+    },
+    {
+      "file": "web/public/desigo/styles/clay-render/hero-maquette-portrait.png",
+      "size": "1400×2400 (7:12)",
+      "transparent": false,
+      "prompt": "Vertical crop of the same clay farm maquette, dunes and khejri tree in the upper half, an empty milk-white clay plinth in the lower middle, soft matte clay render, unglazed milk-white clay #EFE9DE with terracotta #B8704C and sand #DCC6A0, one warm soft key light from top-left with a cool fill, gentle ambient occlusion, architectural maquette restraint, shallow depth of field, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, toy look, pastel candy, glossy plastic",
+      "usedIn": "Hero mobile"
+    },
+    {
+      "file": "web/public/desigo/styles/clay-render/world-master-26.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "Matte clay forest-floor grove with rounded sage-green clay trees #A9BCA8 and scattered clay leaves, deep green #1F5C45 background light, empty clearing at centre, soft matte clay render, unglazed milk-white clay #EFE9DE with terracotta #B8704C and sand #DCC6A0, one warm soft key light from top-left with a cool fill, gentle ambient occlusion, architectural maquette restraint, shallow depth of field, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, cartoon trees, bright green, counted herbs",
+      "usedIn": "MASTER 26 world"
+    },
+    {
+      "file": "web/public/desigo/styles/clay-render/world-root-14.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "Matte clay render of stepped terracotta earth strata #B8704C and #7E4530 cut in section with clay grass on top, crimson #B3202A background glow, empty top step at centre, soft matte clay render, unglazed milk-white clay #EFE9DE with terracotta #B8704C and sand #DCC6A0, one warm soft key light from top-left with a cool fill, gentle ambient occlusion, architectural maquette restraint, shallow depth of field, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, lava, glossy, toy",
+      "usedIn": "ROOT 14 world"
+    },
+    {
+      "file": "web/public/desigo/styles/clay-render/world-base-3.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "Matte sand-clay field #DCC6A0 with rows of simple clay wheat and a large flat clay sun disc behind the centre, amber #E89A1C to cream background, empty centre, soft matte clay render, unglazed milk-white clay #EFE9DE with terracotta #B8704C and sand #DCC6A0, one warm soft key light from top-left with a cool fill, gentle ambient occlusion, architectural maquette restraint, shallow depth of field, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, sun face, neon, toy",
+      "usedIn": "BASE 3 world"
+    },
+    {
+      "file": "web/public/desigo/styles/clay-render/world-essential.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "A single milk-white clay plinth on a white clay floor in a soft ivory #F4EDE2 room, gallery calm, nothing else, soft matte clay render, unglazed milk-white clay #EFE9DE with terracotta #B8704C and sand #DCC6A0, one warm soft key light from top-left with a cool fill, gentle ambient occlusion, architectural maquette restraint, shallow depth of field, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, objects, colour",
+      "usedIn": "ESSENTIAL world"
+    },
+    {
+      "file": "web/public/desigo/styles/clay-render/maquette-table.png",
+      "size": "6000×1600",
+      "transparent": false,
+      "prompt": "Long clay maquette table with seven small stations in a row: a calm faceless clay zebu cow with hump and dewlap, a farm shed, a milk can, a round test card with sixteen pressed dots, a chiller, a small dairy plant, a doorstep, joined by an empty white channel for a milk line, soft matte clay render, unglazed milk-white clay #EFE9DE with terracotta #B8704C and sand #DCC6A0, one warm soft key light from top-left with a cool fill, gentle ambient occlusion, architectural maquette restraint, shallow depth of field, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, faces, eyes, smiles, bottle, people in comic poses",
+      "usedIn": "Cow → bottle (ch. 03) look-dev"
+    },
+    {
+      "file": "web/public/desigo/styles/clay-render/relief-map.png",
+      "size": "3200×2000, transparent",
+      "transparent": true,
+      "prompt": "Top-down terracotta and white clay relief map with a pressed groove route and eight small round clay buttons along it, soft top-left light, isolated on transparent background, soft matte clay render, unglazed milk-white clay #EFE9DE with terracotta #B8704C and sand #DCC6A0, one warm soft key light from top-left with a cool fill, gentle ambient occlusion, architectural maquette restraint, shallow depth of field, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, labels, numbers, real map borders",
+      "usedIn": "Traceability (ch. 06), Trace-your-milk"
+    },
+    {
+      "file": "web/public/desigo/styles/clay-render/clay-surface.png",
+      "size": "2048×2048, seamless",
+      "transparent": false,
+      "prompt": "Seamless macro texture of smooth unglazed milk-white clay with fine micro-noise, flat even light, soft matte clay render, unglazed milk-white clay #EFE9DE with terracotta #B8704C and sand #DCC6A0, one warm soft key light from top-left with a cool fill, gentle ambient occlusion, architectural maquette restraint, shallow depth of field, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, fingerprints pattern, cracks, dirt",
+      "usedIn": "Look-dev material reference"
+    },
+    {
+      "file": "web/public/desigo/styles/clay-render/plinth.png",
+      "size": "2000×1400, transparent",
+      "transparent": true,
+      "prompt": "Hand-pressed rectangular milk-white clay plinth with soft finger marks on its edges, matte, soft top-left light, transparent background, soft matte clay render, unglazed milk-white clay #EFE9DE with terracotta #B8704C and sand #DCC6A0, one warm soft key light from top-left with a cool fill, gentle ambient occlusion, architectural maquette restraint, shallow depth of field, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, bottle, objects on top",
+      "usedIn": "Bottle stage plinth"
+    },
+    {
+      "file": "web/public/desigo/styles/clay-render/zebu-figure.png",
+      "size": "1600×1600, transparent",
+      "transparent": true,
+      "prompt": "Maquette-scale matte clay figure of an Indian zebu cow standing calmly, accurate hump, dewlap and long ears, no facial features, milk-white clay, transparent background, soft matte clay render, unglazed milk-white clay #EFE9DE with terracotta #B8704C and sand #DCC6A0, one warm soft key light from top-left with a cool fill, gentle ambient occlusion, architectural maquette restraint, shallow depth of field, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, eyes, smile, cartoon proportions, Holstein spots",
+      "usedIn": "Chapter 02 BREED object (after approval)"
+    },
+    {
+      "file": "web/public/desigo/styles/clay-render/bilona-clay.png",
+      "size": "3200×2000",
+      "transparent": false,
+      "prompt": "Matte clay still life of an earthen pot with a wooden churning stick and rope, terracotta and milk-white clay, warm light, respectful, no people, soft matte clay render, unglazed milk-white clay #EFE9DE with terracotta #B8704C and sand #DCC6A0, one warm soft key light from top-left with a cool fill, gentle ambient occlusion, architectural maquette restraint, shallow depth of field, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, jar, people, deities",
+      "usedIn": "Ghee (ch. 12)"
+    }
+  ]
+}

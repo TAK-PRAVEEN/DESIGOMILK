@@ -34,7 +34,8 @@ Where it fights: classicism is static and formal; DESIGO®'s story is also about
 | `--nc-stone-ink` | `#3A2E25` | Engraved text on sandstone (≥ 7:1 on marble) |
 | `--forest` | `#0B3B32` | Deep niches, night chapters |
 | `--gold` | `#C8A96B` | Gilding, rules, inscriptions |
-| `--gold-leaf` | `#B08D45` | Gold text at large sizes |
+| `--gold-leaf` | `#94742F` | Gold text at ≥ 24px only (3.9:1 on marble; was `#B08D45`, which measured 2.7:1) |
+| `--nc-gold-ink` | `#7A5C24` | Engraved-gold text at any size (5.5:1 on marble) — the CTA colour, added in the 2026-10-03 audit |
 | `--nc-blue` | `#3E5F8A` | Jodhpur "Blue City" accent — used once per page at most |
 | `--ink` | `#1E211F` | Body text |
 | Variant niches | MASTER 26 `#1F5C45` · ROOT 14 `#B3202A` · BASE 3 `#E89A1C` · ESSENTIAL `#CDB89A` | Inner niche colour (deep values `#0A2A20`, `#4A0A0F`, `#5A3304`, `#4D4130` for shadows) |
@@ -78,7 +79,7 @@ Symmetrical 12-column grid with a strong central axis; compositions in triads (l
 - **MASTER 26** — deep green inner niche `#1F5C45`, gold-leaf inscription "MASTER · XXVI" (with Arabic "26" in the info panel for clarity), carved leaf frieze.
 - **ROOT 14** — red inner niche `#B3202A` with darker `#4A0A0F` vault, carved root/earth frieze, "ROOT · XIV".
 - **BASE 3** — amber niche `#E89A1C`, sun-ray carving above the arch, "BASE · III".
-- **ESSENTIAL** — ivory marble niche `#F4EDE2` with fine veining, plain moulding — the purest classical form.
+- **ESSENTIAL** — ivory marble niche `#F4EDE2` with fine veining, plain moulding — the plainest classical form.
 Info panel: an engraved stone tablet beside the niche — V-code in Cinzel, name, line in EB Garamond italic, descriptors with pending markers (a small hollow gold diamond + dotted underline).
 
 ## 6. Page-by-page treatment
@@ -107,7 +108,7 @@ Info panel: an engraved stone tablet beside the niche — V-code in Cinzel, name
 - **/ghee** — gilded triad, bilona process as a five-panel frieze with real photographs.
 - **/origin** — colonnade photo essay; breed portrait gallery.
 - **/trace** — restrained gilded map + console. **/technology** — blueprint façade.
-- **/about** — inscription wall timeline; supporters on a plain tablet (pending).
+- **/about** — inscription wall timeline; no supporters tablet until written evidence is on file (KB Q34).
 - **/reserve** — form on a marble panel, centred, single column.
 
 ## 7. Component variants
@@ -171,3 +172,123 @@ Risks: pompous or hotel-like; culturally confused (Greek columns in Rajasthan); 
 8. Real materials: photographed sandstone and marble, not procedural textures.
 9. Copy stays modern and plain inside a classical frame: "Traceable milk from indigenous Indian cows."
 10. Test with Jodhpur customers for cultural tone — proud, not touristy.
+
+## 12. Build-ready spec sheet
+
+> Audit 2026-10-03: section 12 was missing and has been added. Fixed in the body: `--gold-leaf #B08D45` measured 2.7:1 on marble (fails even large text) → `#94742F` (3.9:1, ≥ 24 px only) and a new engraved-gold text token `#7A5C24` (5.5:1) is the primary; 'the purest classical form' → 'the plainest' (no 'pure' superlatives near the product); /about no longer shows supporters (KB Q34). Fonts already OFL. Added states, cursor map, motion tokens and 11 image prompts.
+
+### 12.1 Colour system
+| Role | Token | Hex | Use | Contrast note |
+|---|---|---|---|---|
+| Primary | `--c-primary` | `#7A5C24` | engraved gold (new token `--nc-gold-ink`): gilded-underline CTA label, filled CTA, V-codes, key inscriptions | 5.5:1 on bg |
+| Primary ink | `--c-on-primary` | `#F4F0E6` | marble text on engraved-gold fill | 5.5:1 on primary |
+| Secondary | `--c-secondary` | `#0B3B32` | forest (`--forest`): deep niches, night chapters, trace map ground | 10.9:1 on bg |
+| Accent | `--c-accent` | `#3E5F8A` | Jodhpur blue (`--nc-blue`): focus ring and one accent per page at most | 5.8:1 on bg |
+| Background | `--c-bg` | `#F4F0E6` | marble / milk ground (`--nc-marble`) | text 14.3:1 |
+| Surface | `--c-surface` | `#D9B48F` | Chittar sandstone (`--nc-sandstone`): façades, tablets, nav band — small text on it is stone-ink `#3A2E25` (6.8:1) | text on surface 8.4:1 |
+| Text | `--c-text` | `#1E211F` | ink body (`--ink`); inscriptions in stone-ink `#3A2E25` (11.6:1) | 14.3:1 on bg |
+| Muted text | `--c-text-muted` | `#5A4A3C` | captions, region labels on marble | 7.4:1 on bg; 4.4:1 on sandstone → use stone-ink there |
+| Line | `--c-line` | `#C8A96B` | matte gold (`--gold`) rules, keylines, medallion rings; carved edges `#A9784F` | 2.0:1 on bg; decorative; controls also carry a stone-ink edge |
+| Success / Pending / Demo | `--c-ok` / `--c-pending` / `--c-demo` | `#1F5C45` / `#8A5A1F` / `#171918` | ok = leaf green (verified only); pending = hollow gold diamond ◇ + dotted underline + 'Awaiting confirmation' in sienna; DEMO = plain charcoal console plate, no carving | ok 6.9:1 · pending 5.2:1 · demo 15.5:1 on bg |
+
+Variant worlds in this style: MASTER 26 · ROOT 14 · BASE 3 · ESSENTIAL (base / deep / light hex for each).
+
+| Variant | Code | Base | Deep | Light | How the world uses it |
+|---|---|---|---|---|---|
+| MASTER 26 | V1+ · green cap | `#1F5C45` | `#0A2A20` | `#D9E8DF` | green inner niche, `#0A2A20` vault shadow, carved leaf frieze, inscription 'MASTER · XXVI' (Arabic 26 in the tablet) |
+| ROOT 14 | V1 · red cap | `#B3202A` | `#4A0A0F` | `#F3D9D6` | red inner niche, `#4A0A0F` vault, root/earth frieze, 'ROOT · XIV' |
+| BASE 3 | V2 · amber cap | `#E89A1C` | `#5A3304` | `#F8E4C2` | amber niche, sun-ray carving above the arch, 'BASE · III' in deep |
+| ESSENTIAL | V3 · ivory cap | `#CDB89A` | `#4D4130` | `#F4EDE2` | ivory marble niche with fine veining and plain moulding — the plainest form |
+
+Dark-chapter inversion: night chapters (02 end, 06 Traceability, 15 Final CTA at dusk) swap `--c-bg` → `#0B3B32`, `--c-text` → `#F4F0E6`, `--c-text-muted` → `#CFC6B4`, `--c-primary` → gold `#C8A96B` (5.5:1 on forest), `--c-line` stays gold; sandstone darkens to `#A9784F` for architecture only, and text panels become forest-2 `#0F4A3F` with marble text.
+
+### 12.2 Typography
+| Role | Font family | Source (npm @fontsource… / Google Fonts) | Weights / axes | Size (clamp) | Line-height | Tracking | Case |
+|---|---|---|---|---|---|---|---|
+| Display / hero | Cormorant (variable) + Cormorant SC | `@fontsource-variable/cormorant` · `@fontsource/cormorant-sc` · Google Fonts | SC 500 for inscriptions; Cormorant 300 italic for the heritage line | clamp(3rem, 7.5vw, 8rem) | 1.0 | +0.12em (SC) / -0.01em (italic) | SMALL CAPS / Sentence |
+| Headline H1–H2 | Cormorant (variable) | `@fontsource-variable/cormorant` | H1 500 / H2 500 italic | H1 clamp(2.4rem, 4.8vw, 4.75rem) · H2 clamp(1.75rem, 3vw, 2.75rem) | 1.05 / 1.15 | +0.02em | Title / Sentence |
+| Body | EB Garamond (variable) — heritage reading; Inter Tight — UI/data contexts | `@fontsource-variable/eb-garamond` · `@fontsource-variable/inter-tight` | 400, oldstyle figures (`onum`) | clamp(1.0625rem, 1rem + 0.25vw, 1.25rem) | 1.6 | 0 | Sentence, left-aligned |
+| Label / UI | Cinzel (variable) | `@fontsource-variable/cinzel` · Google Fonts | 500 | 0.75rem (V-codes, chapter numerals I–XV) | 1.3 | +0.14em | UPPERCASE |
+| Data / mono | JetBrains Mono (variable) | `@fontsource-variable/jetbrains-mono` | 400 | 0.875rem | 1.5 | 0 | As data (trace console only) |
+| Devanagari (optional) | Tiro Devanagari Hindi | `@fontsource/tiro-devanagari-hindi` · Google Fonts | 400 / 400 italic | matches display (inscriptions) or body | 1.3 / 1.6 | 0 | — |
+
+Licence: Cormorant, Cormorant SC, Cinzel, EB Garamond, Inter Tight, JetBrains Mono and Tiro Devanagari Hindi are SIL OFL 1.1. Pairing: carved Roman capitals and a Garamond reading face give permanence; Tiro Devanagari Hindi matches their calligraphic contrast for bilingual inscriptions.
+
+### 12.3 Layout & surfaces
+- **Grid:** symmetrical 12 columns with a strong central axis; triads (left niche · centre arch · right niche); 6vw outer margins, 32 px gutters, max-width 1520 px; arches 1:2 (mobile 1:2.4); golden-ratio vertical rhythm. Mobile: single central axis, 4 columns.
+- **Spacing scale:** 4 · 8 · 16 · 24 · 40 · 64 · 104 · 168 px (Fibonacci-leaning for classical rhythm).
+- **Radius:** 0 for tablets and panels; arches use `border-radius: 50% 50% 0 0 / 25% 25% 0 0` masks; `--r-pill` for tags and medallions.
+- **Borders:** 1 px gold rule with 1 px `#A9784F` inner carved line 2 px apart; medallions 1 px gold keyline.
+- **Elevation:** carved relief via layered inset shadows (`inset 0 2px 0 rgba(255,255,255,.35), inset 0 -2px 0 rgba(58,46,37,.25)`); the bottle sits on a marble plinth with contact shadow and a soft jaali-lattice light pattern on the niche wall (never over the label).
+- **Texture/overlay:** photographed sandstone at 12% on architecture; marble veining at 5% on milk grounds. One carved element per viewport.
+
+### 12.4 Components
+States are listed as default · hover · focus-visible · active · disabled · loading. Focus-visible is never removed.
+
+- **Primary button** — gilded-underline button: label Cinzel 500 uppercase in engraved gold `#7A5C24` on marble, 1 px gold rule beneath and a travelling arrow; 48 px tall, padding 0 8 px; a filled variant (`#7A5C24` fill, marble label) for Reserve · hover the gilded rule draws from the centre outward (600 ms), arrow travels 6 px · focus-visible 2 px Jodhpur-blue `#3E5F8A` ring, 3 px offset · active rule 2 px · disabled label `#A9A08F`, no rule animation · loading a small medallion keyline rotates 30° steps.
+- **Secondary button** — outline arch-top button: 1 px gold frame with a shallow arched top, stone-ink label; same sizes · hover frame fills sandstone 20% · focus-visible blue ring · active 30% · disabled 40% · loading as primary.
+- **Text / arrow link** — EB Garamond italic or Cinzel label with 1 px gold underline and a fine arrow; hover underline thickens and arrow travels 8 px; focus-visible blue outline.
+- **Icon button (incl. menu)** — 48 px medallion: circle with gold keyline, engraved line icon (serif terminals); menu = three engraved rules; hover keyline rotates 30°; focus-visible blue ring; active fill sandstone 20%; disabled 40%; `aria-label` / `aria-expanded`.
+- **Navigation bar** — sandstone band `#D9B48F` (72 px) with a 1 px gold rule and carved inner line beneath; symmetrical: links split left and right of the centred logo, Reserve at far right; Cinzel 500 labels in stone-ink. Mobile: logo centred, medallion menu right; menu = a marble panel opening like carved doors (reduced motion: fade). Logo: the DESIGO® header logo is the black wordmark drawn as SVG strokes that write and un-write in an infinite loop (4.6 s cycle: write 0–1.2 s · hold to 3.0 s · un-write 3.0–4.2 s · rest to 4.6 s, as built in `DesigoLogo.tsx`); charcoal `#171918` on light grounds, white (milk `#F7F4EC`) on dark grounds; one colour only — never gilded, tinted, outlined, patterned or recoloured by this style; no hover trigger; reduced motion shows the static wordmark; the logo is a link to / with `aria-label="DESIGO® home"`.
+- **Cursor** — default 12 px gold-ringed dot · hover (link): ring expands into a small arch outline · ROTATE (bottle): arch-shaped frame + `ROTATE` in Cinzel · EXPLORE (façade/colonnade): ring + `EXPLORE` · ENTER (niche/door): doorway outline + `ENTER` · VIEW (arched photo frame): arch + `VIEW` · TRACE (medallion node): medallion + `TRACE`. Touch: off; tap hints as Cinzel captions.
+- **Card / panel / info block** — `StoneTablet`: marble or sandstone tablet, radius 0, 1 px gold rule + carved inner line, padding 32 px, heading Cormorant SC, body EB Garamond · hover (if interactive) gold glint travels across the rule (1200 ms) · focus-visible blue ring · active · disabled n/a · loading engraved placeholder lines in `#E7DFCF`.
+- **Badge / tag** — Cinzel 500 0.68rem uppercase, pill, 26 px: neutral marble with gold keyline; variant = light fill + deep text; **pending verification** = hollow gold diamond ◇ + 'Awaiting confirmation' in sienna `#8A5A1F` + dotted underline on the claim + popover; **DEMO · not live data** = plain charcoal `#171918` plate with marble text, never carved or gilded.
+- **Input + form field** — a plain charcoal console set into a stone frame: label Cinzel above, 56 px input, 1 px marble edge, JetBrains Mono, placeholder `DSG-BTL-000001-3 (sample format)` · hover edge 2 px · focus-visible 2 px gold ring · invalid `#E36B6B` edge + message · disabled 40% · loading medallion rotate; reserve forms on a marble panel, centred single column, same field rules in ink.
+- **Divider / ornament** — gold hairline; double rule (gold + carved line); one small carved lotus/leaf rosette at the centre (max one per viewport, `aria-hidden`).
+- **Section header** — Roman numeral chapter (`VIII`) in Cinzel with `aria-label="Chapter 8"`, centred above a short gold rule, title in Cormorant SC, optional Tiro Devanagari line beneath.
+- **Product info block** — engraved tablet beside the niche: V-code Cinzel (`DESIGO® V1+`), name Cormorant SC, inscription numeral (XXVI) + Arabic 26, line in EB Garamond italic, size `1 L glass · 900 g` with pending ◇, price 'Price pending confirmation' until approved, descriptors each with pending marker.
+- **Bottle stage** — carved sandstone jharokha niche at the centre of a symmetrical façade; marble plinth; contact shadow; jaali light from upper-left across the niche wall (scroll-linked mask), never over the label; float ±6 px / 7 s, tilt ±5°; with 360 frames a gilded compass ring engraved in the plinth (Roman numerals every 90°) turns with the bottle; arrows step 5°.
+- **Trace node / timeline step** — gold medallion 28 px (keyline + engraved verb icon) on a forest ground, joined by a 1.5 px gilded line; states upcoming (keyline only) · active (gold fill, plain text panel) · visited (gold 60%) · hover keyline rotates 30° · focus-visible blue ring. 'Illustrative journey — not live data' plate first.
+
+### 12.5 Iconography & illustration
+- **Icons:** engraved line icons, 1.5 px stroke with small serif terminals, 24 px grid, set inside 28–48 px gold-keyline medallions for the seven verbs.
+- **Illustration:** carved-relief frieze panels and jaali patterns (SVG for UI, AI plates below for prototype backdrops; final relief art commissioned or photographed in Jodhpur).
+- **Photo treatment:** real photographs in arched frames, warm golden-hour grade; architectural photography is atmosphere only, never a claim about DESIGO® premises.
+
+### 12.6 Motion tokens
+| Token | Value | Use |
+|---|---|---|
+| `--ease-out` | `cubic-bezier(.16,1,.3,1)` | reveals (900 ms) |
+| `--ease-inout` | `cubic-bezier(.65,0,.35,1)` | scene transitions, doors |
+| `--dur-micro` | `300ms` | hover, medallion rotation |
+| `--dur-reveal` | `900ms` | content reveals |
+| `--dur-scene` | `1400ms` | scene transitions |
+| `--carve` | `1200ms` | inscription top-down mask + gold glint |
+| `--doors` | `1200ms` | carved doors / jaali slide apart, arch curtain transition |
+| `--rule-draw` | `600ms` | gilded rule draws from centre |
+
+Light is the animation: a slow sun-shaft moves through jaali screens with scroll (CSS mask, scroll-linked). Stately and slow; no bounce. Reduced motion: doors and curtains become 200 ms fades, light static, inscriptions appear complete, logo static.
+
+### 12.7 AI image generation prompts
+House rules: no text/letters/logos/watermarks in images; generated images are illustration, texture or backdrop only; never generate the bottle or ghee jar; zebu cows only, shown with respect; append the style's tail prompt to every prompt.
+
+Architecture is setting, not a claim: prompts say 'inspired by Jodhpur sandstone architecture' and never reproduce a named palace. Niches stay empty for the composited bottle/jars.
+
+**Tail prompt (append to every prompt):** *Indian neo-classical architecture inspired by Jodhpur Chittar sandstone, jharokha arches and jaali lattices, symmetrical, warm low sun, marble #F4F0E6, sandstone #D9B48F and #A9784F, matte gold #C8A96B, forest #0B3B32 in deep shadows, photographic realism, calm, dignified, premium, no text, no watermark, no logo, no letters*
+
+**Base negative prompt (prepend to every negative prompt):** text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background
+
+| # | File path (web/public/desigo/styles/neo-classical/...) | Size / ratio | Transparent? | Prompt | Negative prompt (+ base) | Used in |
+|---|---|---|---|---|---|---|
+| 1 | `hero.png` | 3200×2000 (16:10) | no | Symmetrical carved sandstone façade with a tall central jharokha niche, empty, a small marble plinth inside it, two smaller niches either side, soft jaali lattice shadows on the walls, warm morning light from the upper left | people, flags, named palace, temple, idols, signage | 01 Hero, 15 Final CTA |
+| 2 | `hero-portrait.png` | 1400×2400 (7:12) | no | Vertical view of a single tall carved sandstone arch niche, empty marble plinth, jaali shadow pattern on the side wall, warm light | people, idols | 01 Hero mobile |
+| 3 | `worlds/master-26.png` | 3200×2000 + 1400×2400 | no | Empty carved sandstone niche whose inner walls are deep green #1F5C45 lime plaster deepening to #0A2A20 in the vault, a carved leaf frieze around the arch, marble plinth, soft lattice light | idols, counted leaves, people | 08 Four milks · /milk/master-26 |
+| 4 | `worlds/root-14.png` | 3200×2000 + 1400×2400 | no | Empty carved sandstone niche with deep red #B3202A lime plaster inner walls and an oxblood #4A0A0F vault, a carved frieze of roots and earth layers around the arch, marble plinth | idols, blood, people | 08 Four milks · /milk/root-14 |
+| 5 | `worlds/base-3.png` | 3200×2000 + 1400×2400 | no | Empty carved sandstone niche with warm amber #E89A1C lime plaster inner walls, sun-ray carving above the arch, golden late-afternoon light, marble plinth | sun with face, idols | 08 Four milks · /milk/base-3 |
+| 6 | `worlds/essential.png` | 3200×2000 + 1400×2400 | no | Empty ivory marble niche #F4EDE2 with fine grey veining and plain moulding, soft skylight, marble plinth, very restrained | ornament overload, idols | 08 Four milks · /milk/essential |
+| 7 | `journey/frieze.png` | 6000×1200 (horizontal) | no | Long horizontal carved sandstone relief frieze in seven framed panels: an Indian zebu cow with hump and dewlap, a farm with khejri tree, a milk can, a round test card with sixteen dots, a chiller, a small dairy building, and a final empty panel; a gilded channel runs through all panels | bottle, people's faces, deities, inscriptions | 03 Cow to bottle |
+| 8 | `textures/sandstone.png` | 2048×2048, seamless | no | Seamless tileable Jodhpur Chittar sandstone surface, fine grain, faint chisel marks, warm pink-buff, flat light | cracks, stains, seams | façades, nav band (12%) |
+| 9 | `textures/jaali-shadow.png` | 2400×2400 | yes (real alpha) | Soft geometric jaali lattice shadow pattern of interlocking stars and hexagons, as cast by sunlight through a carved stone screen, isolated on transparent background | hard edges, text | JaaliLight mask, hero niche wall |
+| 10 | `material/stepwell.png` | 3200×2000 | no | Symmetrical sandstone stepwell (baori) seen from above at an angle, descending stepped tiers, warm light, the lowest pool empty and still, calm | people, litter, named landmark | 09 Milk as material |
+| 11 | `ghee/gilded-triad.png` | 3200×2000 + 1400×2400 | no | Three empty carved sandstone niches side by side with gilded inner edges and warm gold light, a folk-pattern carved frieze above, marble shelves | jars, idols, diyas | 12 Ghee · /ghee |
+
+### 12.8 Prototype acceptance checklist
+- [ ] Tokens from `specs/07_neo-classical.json` applied; no off-palette colours
+- [ ] Fonts self-hosted; correct weights load
+- [ ] All 12.4 components built with all states
+- [ ] Hero + bottle-story + one product world + trace chapter built in this style (the comparison set)
+- [ ] Mobile 360 px pass; reduced-motion pass; contrast checked
+- [ ] Claims rules respected (pending underline, no blocked claims, DEMO labels)
+- [ ] Screenshots: desktop 1440×900 ×4 + mobile 390×844 ×2 saved to docs/media/styles/neo-classical/
+- [ ] Roman numerals always carry an Arabic `aria-label`; centred text limited to short lines
+- [ ] Gold text only ≥ 24 px (`#94742F`) or engraved gold `#7A5C24` for small text

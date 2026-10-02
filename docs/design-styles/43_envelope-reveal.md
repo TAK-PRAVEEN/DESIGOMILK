@@ -38,10 +38,11 @@ Reference points:
 | `--ev-envelope-shade` | `#CDBB98` | Flap underside and fold shadow |
 | `--ev-inland` | `#A9C3D6` | Inland-letter blue (used for the "letter from the source" format only) |
 | `--ev-inland-deep` | `#5B7E99` | Inland-letter rule lines |
-| `--ev-lac` | `#8E2A2A` | Lac seal red (display only) |
+| `--ev-lac` | `#8E2A2A` | Lac seal red (seals, display and CTA labels ≥ 14px; 7.6:1 on milk) |
 | `--ev-gold` | `#C8A96B` | Seal impression highlight, foil line |
 | `--ev-forest` | `#0B3B32` | Ink, nav, footer |
-| `--ev-ink` | `#1E211F` | Body text (≥ 10:1 on paper) |
+| `--ev-ink` | `#1E211F` | Body text (12.9:1 on paper) |
+| `--ev-ink-muted` | `#5C5A52` | Muted text (5.5:1 on paper) |
 
 ### Typography
 - Display: **Fraunces** 400 italic for letter titles and salutations, opsz 72.
@@ -152,7 +153,7 @@ Total ≈ 62 days.
 - Scanned Sanganer paper (600 dpi) and a kraft-cream envelope stock.
 - Approval of every letter text, since letters can easily drift into claims.
 
-### Images to generate (illustration and texture only; save under `web/public/desigo/styles/envelope/`)
+### Images to generate (illustration and texture only; save under `web/public/desigo/styles/envelope-reveal/`)
 Append the house-style tail. No text, no handwriting, no letters or numerals, no postal logos, no stamps of real postal services.
 
 | # | File | Size | Prompt |
@@ -187,3 +188,132 @@ Append the house-style tail. No text, no handwriting, no letters or numerals, no
 **Risks**: fake-testimonial perception, slow interactions and a wedding-invitation feel. Mitigation: consent and labels, a 1.8s reveal cap with skip controls, and a restrained forest-and-gold palette.
 
 **Best used for:** the Trace-your-milk result, the founder letter on /about, the Story chapter, the /reserve confirmation and a "letter from the source" block on each variant page.
+
+---
+
+## 12. Build-ready spec sheet
+
+> Audit 2026-10-03: interaction, palette and honesty rules were complete. Missing: muted, pending and DEMO tokens, radius/shadow scale, component states, a portrait hero, one prompt per variant lining and negatives. Added. Changed: lac `#8E2A2A` now also serves CTA labels ≥ 14 px (7.6:1 on milk), §3 updated; image folder `styles/envelope/` → `styles/envelope-reveal/`. Newsreader, Caveat and Courier Prime confirmed OFL; no claim issues found.
+
+### 12.1 Colour system
+| Role | Token | Hex | Use | Contrast note |
+|---|---|---|---|---|
+| Primary | --c-primary | `#8E2A2A` | Lac red: seal, primary CTA label, DEMO mark in the letterhead | 7.6:1 on bg; lac: seals, letter titles, CTA labels ≥ 14 px |
+| Primary ink | --c-on-primary | `#F7F4EC` | Milk on a lac fill (active CTA) | 7.6:1 on primary |
+| Secondary | --c-secondary | `#0B3B32` | Forest ink: nav, links, line icons, footer | 11.3:1 on bg |
+| Accent | --c-accent | `#C8A96B` | Gold seal impression highlight, foil rule | 2.0:1 on bg; gold seal highlight and foil rule; decorative only |
+| Background | --c-bg | `#F7F4EC` | Milk page ground (`--ev-milk`) | — |
+| Surface | --c-surface | `#EDE4D0` | Archival letter paper (`--ev-paper`); inner sheet `#F3EBDA` | text on surface 12.9:1 |
+| Text | --c-text | `#1E211F` | Ink (`--ev-ink`) | 14.8:1 on bg |
+| Muted text | --c-text-muted | `#5C5A52` | Captions, dates, enclosure notes (new token `--ev-ink-muted`) | 6.3:1 on bg, 5.5:1 on surface |
+| Line | --c-line | `rgba(30,33,31,.14)` | Fold shadows and rules | decorative (non-text) |
+| Success / Pending / Demo | --c-ok / --c-pending / --c-demo | `#1F5C45` / `#6B4C2A` / `#8E2A2A` | Verified / pending dotted underline / lac DEMO mark + plain-text disclaimer | 7.1 / 7.1 / 7.6 :1 on `#F7F4EC` |
+
+Focus ring: `--c-focus` `#0B3B32` (11.3:1 on bg), 2 px solid, 3 px offset.
+
+Variant worlds in this style: MASTER 26 · ROOT 14 · BASE 3 · ESSENTIAL (base / deep / light hex for each).
+
+| Variant | Base | Deep | Light | Treatment in this style |
+|---|---|---|---|---|
+| MASTER 26 (V1+, green cap) | `#1F5C45` | `#0A2A20` | `#D9E8DF` | Forest lining with fine leaf pattern, lac seal with gold highlight; pressed-leaf print; herb note (26 *pending*) |
+| ROOT 14 (V1, red cap) | `#B3202A` | `#4A0A0F` | `#F3D9D6` | Red lining; red-earth sample card print; world `#4A0A0F` → `#F3D9D6` |
+| BASE 3 (V2, amber cap) | `#E89A1C` | `#5A3304` | `#F8E4C2` | Amber lining; wheat-stalk print, herb count *to be confirmed* |
+| ESSENTIAL (V3, ivory cap) | `#CDB89A` | `#4D4130` | `#F4EDE2` | Ivory lining, blind emboss (no colour), a single folded sheet |
+
+Dark-chapter inversion: footer and the Technology envelope journey use forest `#0B3B32`; text milk `#F7F4EC` (11.3:1), muted `#B9C4BE`, primary CTA labels switch to paper `#EDE4D0`, seals keep lac on a paper disc; the inland-blue format is never used on dark; the logo loop renders white.
+
+### 12.2 Typography
+| Role | Font family | Source (npm @fontsource… / Google Fonts) | Weights / axes | Size (clamp) | Line-height | Tracking | Case |
+|---|---|---|---|---|---|---|---|
+| Display / hero | Fraunces | `@fontsource-variable/fraunces` (Google Fonts) | wght 400, italic, opsz 72 | clamp(2.75rem, 1.4rem + 5.5vw, 7rem) | 1.0 | −0.01em | UPPERCASE (hero), salutation case in letters |
+| Headline H1–H2 | Fraunces | `@fontsource-variable/fraunces` (Google Fonts) | wght 400 (italic for letter titles) | H1 clamp(2.25rem, 1.5rem + 3vw, 4.25rem) · H2 clamp(1.6rem, 1.2rem + 1.6vw, 2.5rem) | 1.05 | 0 | Sentence |
+| Body | Newsreader | `@fontsource-variable/newsreader` (Google Fonts) | 400 / 500, italic; opsz auto (UI text in Inter Tight 400/500) | letters clamp(1.125rem, 1.08rem + 0.2vw, 1.1875rem); UI 1rem | 1.7 | 0 | Sentence |
+| Label / UI | Inter Tight | `@fontsource-variable/inter-tight` (Google Fonts) | 500 / 600 | 0.75rem | 1.4 | +0.16em | UPPERCASE |
+| Data / mono | IBM Plex Mono | `@fontsource/ibm-plex-mono` (Google Fonts) | 400 (IDs, dates); addresses and dispatch marks in Courier Prime 400 (`@fontsource/courier-prime`) | 0.8125rem | 1.5 | 0 | As data |
+| Devanagari (optional) | Noto Serif Devanagari | `@fontsource-variable/noto-serif-devanagari` (Google Fonts) | 400 / 500 | matches letter body | 1.7 | 0 | — |
+
+Licence: all fonts are SIL Open Font License 1.1 (OFL), self-hosted via Fontsource; subset Latin + Latin-ext (Devanagari subset only where used). Real scanned handwriting is used for signatures; Caveat (`@fontsource-variable/caveat`, OFL) only for small UI notes, never to fake a signature. Pairing rationale: a bookish Newsreader makes letters read like printed correspondence; Fraunces italic gives salutations warmth; Courier Prime and Plex Mono carry postal and ID detail.
+
+### 12.3 Layout & surfaces
+- **Grid:** 12 columns (gutter 24 px, 16 px mobile), margins 7vw, max-width 1440 px; letters on a narrow 60–64ch measure at columns 4–9; closed envelopes centred or at columns 3–10; mobile letters full-width with 20 px margins
+- **Spacing scale:** 4 px base: 4 · 8 · 12 · 16 · 24 · 32 · 48 · 64 · 96 · 128; letter padding 56 px desktop / 24 px mobile
+- **Radius scale:** sm 2 px (envelopes, cards, inputs) · md 4 px (photo prints) · lg 999 px (lac seal, dispatch mark, cursor)
+- **Border style:** fold lines = 1 px light ridge `rgba(255,255,255,.6)` + 1 px shadow `rgba(30,33,31,.12)`; photo prints have an 8 px white border; one gold foil rule per page at most
+- **Shadow / elevation:** envelope `0 10px 24px -10px rgba(30,33,31,.25)`; letter sheet `0 2px 6px rgba(30,33,31,.10)`; slight shading gradient across fold panels; contact shadows under bottle and envelope
+- **Texture / overlay:** scanned Sanganer paper for letters, smooth kraft-cream for envelopes, inland-blue sheet only for the 'letter from the source'; tiled WebP ≤ 250 KB total
+
+### 12.4 Components
+All interactive components share: focus ring `--c-focus` 2 px / 3 px offset · touch targets ≥ 44 px · disabled = 40% opacity, no motion, `aria-disabled` (unless stated) · hover effects only on `(hover:hover)` devices · motion from §12.6.
+
+- **Primary button** — Lac label (Inter Tight 600, 13 px, +0.16em, uppercase) with a 1 px underline and travelling arrow; 48 px tall, padding 14 px 0. **States:** default lac label + underline · hover a 1 px frame draws itself around the label (400 ms), arrow +6 px · focus-visible 2 px `#0B3B32` ring, 3 px offset · active frame fills lac, label milk · disabled 40% opacity, no hover motion, `aria-disabled="true"` · loading arrow replaced by a softly pulsing seal dot, `aria-busy`. **Motion:** 280 ms `--ease-out`. **A11y:** native `<a>`/`<button>`, hit area ≥ 44 px, label ≥ 4.5:1.
+- **Secondary button** — Forest label, hand-drawn ink underline (SVG), arrow. **States:** default ink underline · hover underline redraws (280 ms), arrow +6 px · focus-visible 2 px `#0B3B32` ring, 3 px offset · active label sinks 1 px · disabled 40% opacity, no hover motion, `aria-disabled="true"` · loading seal-dot pulse. **Motion:** 280 ms. **A11y:** native `<a>`/`<button>`, hit area ≥ 44 px, label ≥ 4.5:1.
+- **Text / arrow link** — Forest link inside letters with 1 px underline. **States:** default hairline · hover hand-drawn ink underline draws (280 ms) · focus-visible 2 px `#0B3B32` ring, 3 px offset · active lac · disabled 40% opacity, no hover motion, `aria-disabled="true"` · loading n/a (static element). **Motion:** 280 ms. **A11y:** underline always present (never colour alone); arrow is `aria-hidden`.
+- **Icon button (incl. menu)** — 44 px hit area, 1.25 px forest pen-mark icon; menu icon = a folded sheet that unfolds into ×. **States:** default pen icon · hover ink-blot dot spreads behind (4 px) · focus-visible 2 px `#0B3B32` ring, 3 px offset · active scale 0.96 · disabled 40% opacity, no hover motion, `aria-disabled="true"` · loading n/a (static element). **Motion:** fold morph 300 ms. **A11y:** `aria-label` required; 44×44 px hit area; menu button carries `aria-expanded` + `aria-controls`; Esc closes the menu and returns focus.
+- **Navigation bar** (desktop + mobile menu) — 64 px milk bar; links Inter Tight 500 13 px uppercase forest; RESERVE as a lac text button; a fold line appears beneath after scroll. Mobile: the menu opens as a single sheet unfolding downward (600 ms) with Fraunces italic links at 2.25rem. **States:** default forest links · hover ink underline · focus-visible 2 px `#0B3B32` ring, 3 px offset · active current page: lac dot beneath · disabled n/a · loading n/a. **Motion:** unfold 600 ms `--ease-inout`. **A11y:** `<nav>` landmark after a skip link; logo is a link to `/` with `aria-label="DESIGO® home"`; the animated SVG is `aria-hidden`. **Logo:** The DESIGO® wordmark sits top-left (cap height 22 px desktop, 18 px mobile) and runs the brand's **black write / un-write loop** (charcoal `#171918` on light grounds, white `#FFFFFF` on dark grounds; the colour never changes during the loop). The loop pauses while the menu is open, when the tab is hidden, and under reduced motion (the full wordmark is shown static).
+- **Cursor** — 14 px forest dot; labels Inter Tight 500 11 px uppercase. **States:** default 14 px dot · hover an ink-blot dot that spreads 4 px over links in letters · ROTATE "drag · turn" over the bottle · EXPLORE small folded-map icon reading "explore" over the folded map · ENTER paper-knife icon reading "open" over a closed envelope · VIEW ring reading "read" over letters and photo prints · TRACE 36 px ring around the seal reading "break seal" on the trace result. **Touch fallback:** no cursor; envelopes open on tap; every envelope shows a visible "Read now" control; no scroll-scrubbed 3D on low-memory devices. **A11y:** decorative (`aria-hidden`, `pointer-events:none`); off for coarse pointers and reduced motion, where the system cursor returns; never the only cue.
+- **Card / panel / info block** — LetterSheet: paper `#EDE4D0`, 60–64ch measure, Newsreader 18–19 px, fold lines, radius 2 px, padding 56/24 px; EnclosureCard: printed inner card `#F3EBDA` for facts. All letter text is real HTML in the DOM from load. **States:** default open letter or closed envelope · hover envelope lifts 4 px and its flap opens 8° as a hint · focus-visible 2 px `#0B3B32` ring, 3 px offset · active opens: flap 600 ms → slide 700 ms → unfold 500 ms per panel (120 ms stagger), never over 1.8 s, skippable · disabled 40% opacity, no hover motion, `aria-disabled="true"` · loading envelope slides up 24 px into place (500 ms). **Motion:** CSS 3D, perspective 1400 px. **A11y:** real heading inside; one primary action per card; text never sits on texture below 4.5:1.
+- **Badge / tag** — Printed DESIGO® dispatch-style circular mark or a small printed tag (Inter Tight 600 11 px uppercase), never resembling India Post. **Pending verification**: earth-ink + dotted underline on the claim. **DEMO · not live data**: lac mark printed large in the trace letter's letterhead plus the sentence "This is a demonstration with illustrative data.". **States:** default printed mark · hover none · focus-visible 2 px `#0B3B32` ring, 3 px offset · active n/a · disabled n/a · loading n/a (static element). **Motion:** ink-in 280 ms. **A11y:** status is real text ("Pending verification", "DEMO · not live data"); colour and shape are never the only signal.
+- **Input + form field (Trace-your-milk bottle ID)** — Reply-card field: 56 px on `#F3EBDA`, 1 px forest underline, bottle ID in IBM Plex Mono 18 px, label in Courier Prime ("Bottle ID"); demo ID prefilled; error earth-ink + icon. **States:** default ruled field · hover underline darkens · focus-visible 2 px `#0B3B32` ring, 3 px offset · active 2 px forest underline · disabled 40% opacity, no hover motion, `aria-disabled="true"` · loading a sealed envelope arrives addressed to that ID; the LacSeal is a `<button>` labelled "Open letter" (Enter or click cracks it in 120 ms). **Motion:** arrival 500 ms, crack 120 ms, halves part 6 px. **A11y:** visible `<label>`, hint and error linked with `aria-describedby`, error shown as text + icon, `autocomplete=off`, `spellcheck=false`.
+- **Divider / ornament** — a fold line (1 px ridge + 1 px shadow) or a 1 px gold foil rule, once per page. **States:** default static · hover none · focus-visible 2 px `#0B3B32` ring, 3 px offset · active n/a · disabled n/a · loading n/a (static element). **Motion:** none. **A11y:** `aria-hidden` (decorative) or `role=separator` between landmark sections.
+- **Section header** — Courier Prime date-style chapter line ("03 · from cow to bottle"), Fraunces italic title set like a salutation, one-line intro in Newsreader. **States:** default static · hover none · focus-visible 2 px `#0B3B32` ring, 3 px offset · active n/a · disabled n/a · loading n/a (static element). **Motion:** title settles 12 px in 700 ms. **A11y:** real `<h2>`; the chapter number is read as "Chapter 03"; decorative glyphs `aria-hidden`.
+- **Product info block** — EnclosureCard under the variant letter: V-code (Plex Mono), name in Fraunces, the approved `desigo.ts` line, price *pending* (hidden in production), size, descriptors *pending*; always visible without opening anything. **States:** default printed card · hover descriptor shows its source note · focus-visible 2 px `#0B3B32` ring, 3 px offset · active n/a · disabled 40% opacity, no hover motion, `aria-disabled="true"` · loading skeleton rules. **Motion:** slides out of the envelope 700 ms (skippable). **A11y:** facts in a `<dl>`; pending values carry visually-hidden "(pending verification)"; price hidden in production until approved.
+- **Bottle stage** — Bottle beside the letter, never inside an envelope: a closed envelope leans against its base with a corner lifted; contact shadows under both; on variant pages the viewer sits left, the letter right. **States:** default idle float ±6 px over 6 s · hover pointer tilt ±6° · focus-visible 2 px `#0B3B32` ring, 3 px offset · active drag turns the 360 viewer · disabled n/a · loading static render + empty photo-print `AssetSlot`. **Motion:** `--ease-inout` float. **A11y:** Bottle360Viewer is `role=img` with an `aria-label`; ←/→ rotate 5°, Home resets; reduced motion stops idle float and auto-turn.
+- **Trace node / timeline step** — FoldedMap node: 14 px forest ring that takes a lac centre when reached; the route is a 1 px ink line across four unfolding quadrants; in the trace letter each node is also a paragraph. **States:** default ring · hover ring thickens to 2 px · focus-visible 2 px `#0B3B32` ring, 3 px offset · active pulse travels 1500 ms per hop; node panel opens · disabled 40% opacity, no hover motion, `aria-disabled="true"` · loading quadrants unfold (500 ms each). **Motion:** hop 1500 ms. **A11y:** route is an ordered list `<ol>`; each node a `<button>` opening its panel; `aria-current="step"` on the active node.
+
+### 12.5 Iconography & illustration
+- **Icon style:** thin 1.25 px forest line icons drawn like pen marks (envelope, fold, seal, bottle, route), 24 px grid
+- **Illustration technique:** real stationery: scanned papers, a real DESIGO® lac seal photographed in macro (3–4 variants + one cracked), ink drawings on concertina panels; DESIGO® dispatch mark designed for the brand
+- **Photo treatment:** real photographs as small prints with 8 px white borders tucked into letters, warm natural grade; letters are written by real, consenting people or labelled "Illustrative letter: real letters coming soon"
+
+### 12.6 Motion tokens
+| Token | Value | Use |
+|---|---|---|
+| `--ease-out` | `cubic-bezier(.16,1,.3,1)` | letter slide-out |
+| `--ease-inout` | `cubic-bezier(.65,0,.35,1)` | flap open (rotateX 0 → −180°) |
+| `--dur-micro` | 280 ms | hover, ink underline |
+| `--dur-reveal` | 700 ms | letter slide |
+| `--dur-scene` | 1800 ms (hard cap) | complete envelope reveal |
+| `--flap` | 600 ms | flap open |
+| `--unfold` | 500 ms per panel, 120 ms stagger | letter panels |
+| `--seal` | 120 ms crack, halves part 6 px + fade | trace result and reserve confirmation only |
+| `--float` | ±6 px / 6000 ms | bottle idle |
+| `--hop` | 1500 ms | folded-map pulse |
+| `--scrub` | 1 | scroll-scrubbed reveals in chapters |
+
+- **Signature transition:** flap → slide → unfold, scrubbed by scroll in chapters (scroll back to refold); ceremony is rationed: seals only on the trace result and the reserve confirmation
+- **Scroll behaviour:** the visitor controls the pace; nothing important is hidden behind an envelope
+- **Reduced-motion fallback:** all letters presented open and flat; no flaps or seals; 200 ms fades
+
+### 12.7 AI image generation prompts
+House rules: no text/letters/logos/watermarks in images; generated images are illustration, texture or backdrop only; never
+generate the bottle or ghee jar; zebu cows only, shown with respect; append the style's tail prompt to every prompt.
+
+**Tail prompt (append to every prompt below):** _soft morning window light, cream kraft envelope #E3D5B8 and archival paper #EDE4D0 on milk-white #F7F4EC linen, restrained lac-red #8E2A2A and gold #C8A96B accents, gentle paper texture, calm, stationery-grade, premium, no text, no watermark, no logo, no letters_
+
+**Base negative prompt (add to every row's negative):** _text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look_
+
+| # | File path (web/public/desigo/styles/<slug>/...) | Size / ratio | Transparent? | Prompt | Negative prompt | Used in |
+|---|---|---|---|---|---|---|
+| EV1 | `web/public/desigo/styles/envelope-reveal/hero.png` | 3200×2000 (16:10) | No | A closed cream kraft envelope with a lifted corner lying on a milk-white linen surface at lower right, soft morning window light, gentle shadows, lots of empty space at centre | writing, postal stamps, postmarks, wax crest, flowers, ribbons | Hero desktop |
+| EV2 | `web/public/desigo/styles/envelope-reveal/hero-portrait.png` | 1400×2400 (7:12) | No | Portrait view of milk-white linen with a closed cream envelope at the bottom edge, corner lifted, soft morning light, empty upper two-thirds | writing, stamps, postmarks | Hero mobile |
+| EV3 | `web/public/desigo/styles/envelope-reveal/lining-master-26.png` | 2400×1600, seamless | No | Envelope lining paper with a fine delicate leaf pattern in deep green #1F5C45 on dark green #0A2A20, seamless | flowers, gold glitter | MASTER 26 envelope lining |
+| EV4 | `web/public/desigo/styles/envelope-reveal/lining-root-14.png` | 2400×1600, seamless | No | Plain envelope lining paper in crimson #B3202A with a very fine laid-paper texture, seamless | pattern, glitter | ROOT 14 envelope lining |
+| EV5 | `web/public/desigo/styles/envelope-reveal/lining-base-3.png` | 2400×1600, seamless | No | Plain envelope lining paper in amber #E89A1C with a very fine laid-paper texture, seamless | pattern, neon | BASE 3 envelope lining |
+| EV6 | `web/public/desigo/styles/envelope-reveal/lining-essential.png` | 2400×1600, seamless | No | Ivory #CDB89A envelope lining paper with a faint blind-embossed texture, no colour pattern, seamless | pattern, print | ESSENTIAL envelope lining |
+| EV7 | `web/public/desigo/styles/envelope-reveal/folded-map.png` | 3200×2000 | No | A blank folded paper map in four quadrants half-open on a milk-white surface, soft shadows on the folds, no lines or text | roads, labels, compass, real map | Traceability (ch. 06), /trace |
+| EV8 | `web/public/desigo/styles/envelope-reveal/paper-letter.png` | 2400×3200 | No | A blank sheet of cream handmade Indian paper #EDE4D0 with soft deckled edges and two gentle fold lines, top-down flat light | writing, ruled lines, stains | LetterSheet texture |
+| EV9 | `web/public/desigo/styles/envelope-reveal/inland-letter.png` | 3000×2000 | No | A pale blue #A9C3D6 folded aerogramme-style letter sheet, three panels partly unfolded, blank with faint ruled lines, top-down, soft light | printing, India Post marks, stamps, logos | Chapter 02 inland letter |
+| EV10 | `web/public/desigo/styles/envelope-reveal/envelope-open.png` | 2400×2000, transparent | Yes (real alpha) | Front view of an open cream envelope with its triangular flap raised and an empty plain lining, soft light, transparent background | writing, letters inside | Envelope component |
+| EV11 | `web/public/desigo/styles/envelope-reveal/gift-envelope-gold.png` | 3200×2000 | No | A cream envelope with a warm gold foil-lined flap half-open, soft warm light, empty centre | jar, glitter, ribbons, festive symbols | Ghee (ch. 12) |
+
+### 12.8 Prototype acceptance checklist
+- [ ] Tokens from `specs/43_envelope-reveal.json` applied; no off-palette colours
+- [ ] Fonts self-hosted; correct weights load
+- [ ] All 12.4 components built with all states
+- [ ] Hero + bottle-story + one product world + trace chapter built in this style (the comparison set)
+- [ ] Mobile 360 px pass; reduced-motion pass; contrast checked
+- [ ] Claims rules respected (pending underline, no blocked claims, DEMO labels)
+- [ ] Screenshots: desktop 1440×900 ×4 + mobile 390×844 ×2 saved to docs/media/styles/envelope-reveal/
+- [ ] Every letter is real and consented, or labelled "Illustrative letter: real letters coming soon"
+- [ ] Nothing resembles a certificate, invoice, India Post stationery, postmarks or stamps
+- [ ] Whole reveal ≤ 1.8 s with a visible "Read now" skip; all letter text in the DOM from load

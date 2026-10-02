@@ -42,6 +42,7 @@ Reference points:
 | `--cr-forest` | `#0B3B32` | UI text on light, nav, dark sections |
 | `--cr-gold` | `#C8A96B` | Light: warm key light colour, ghee |
 | `--cr-ink` | `#171918` | Body text |
+| `--cr-ink-muted` | `#5C5A52` | Muted text, scene labels (6.3:1 on milk) |
 
 Scenes use at most **three clay tones plus one accent**.
 
@@ -188,3 +189,133 @@ Append the house-style tail. No text, no logos, no bottles, no faces.
 **Risks**: cuteness, cost and the "illustration pack" look. Mitigation: the maquette brief, an experienced 3D artist with one shared rig, and a limited set of about 14 scenes.
 
 **Best used for:** the journey (chapter 03), /origin farm maquette, the Ghee bilona process and the /milk 2×2 still lifes, as the illustration system on an Editorial base.
+
+---
+
+## 12. Build-ready spec sheet
+
+> Audit 2026-10-03: material, light rig, palette and the difference from Claymorphism were complete. Missing: muted, pending and DEMO tokens, radius/shadow scale, component states, a portrait hero, journey and trace prompts, a texture and negatives. All added. Primary set to terracotta-deep `#7E4530` (6.9:1); terracotta `#B8704C` (3.5:1) stays accent/illustration only. No claim or font-licence issues found.
+
+### 12.1 Colour system
+| Role | Token | Hex | Use | Contrast note |
+|---|---|---|---|---|
+| Primary | --c-primary | `#7E4530` | Terracotta-deep: primary CTA, active states, chapter numbers | 6.9:1 on bg; fired-clay shadow `--cr-terracotta-deep`, CTAs and key accents |
+| Primary ink | --c-on-primary | `#F7F4EC` | Milk on terracotta-deep | 6.9:1 on primary |
+| Secondary | --c-secondary | `#0B3B32` | Forest: UI text links, nav, dark sections | 11.3:1 on bg |
+| Accent | --c-accent | `#B8704C` | Terracotta: pots, soil, active marks in diagrams | 3.5:1 on bg; terracotta `--cr-terracotta` for non-text marks and renders only |
+| Background | --c-bg | `#F7F4EC` | Brand milk page ground (`--cr-ground`) | — |
+| Surface | --c-surface | `#EFE9DE` | Unfired milk clay (`--cr-milk-clay`): flat info panels | text on surface 14.6:1 |
+| Text | --c-text | `#171918` | Ink (`--cr-ink`) | 16.1:1 on bg |
+| Muted text | --c-text-muted | `#5C5A52` | Captions, scene labels (new token `--cr-ink-muted`) | 6.3:1 on bg, 5.7:1 on surface |
+| Line | --c-line | `rgba(23,25,24,.14)` | Hairlines and leaders to scene labels | decorative (non-text) |
+| Success / Pending / Demo | --c-ok / --c-pending / --c-demo | `#1F5C45` / `#6B4C2A` / `#0B3B32` | Verified / pending dotted underline / forest DEMO label | 7.1 / 7.1 / 11.3 :1 on `#F7F4EC` |
+
+Focus ring: `--c-focus` `#0B3B32` (11.3:1 on bg), 2 px solid, 3 px offset.
+
+Variant worlds in this style: MASTER 26 · ROOT 14 · BASE 3 · ESSENTIAL (base / deep / light hex for each).
+
+| Variant | Base | Deep | Light | Treatment in this style |
+|---|---|---|---|---|
+| MASTER 26 (V1+, green cap) | `#1F5C45` | `#0A2A20` | `#A9BCA8` | Clay forest-floor grove in `#A9BCA8` / `#7F9A86` / `#EFE9DE`, deep green `#1F5C45` backdrop light |
+| ROOT 14 (V1, red cap) | `#B3202A` | `#7E4530` | `#E8D3C4` | Stepped terracotta strata `#B8704C` / `#7E4530` / `#E8D3C4`, ground light `#B3202A` at 20% |
+| BASE 3 (V2, amber cap) | `#E89A1C` | `#C99E5E` | `#F8E4C2` | Sand-clay field `#DCC6A0` / `#C99E5E` with clay wheat and a clay sun disc; amber backdrop `#E89A1C` → `#F8E4C2` |
+| ESSENTIAL (V3, ivory cap) | `#D9CFBF` | `#4D4130` | `#F4EDE2` | One white clay plinth on a white clay floor `#EFE9DE` / `#D9CFBF`, ivory backdrop; the gallery piece |
+
+Dark-chapter inversion: dark sections (Technology, footer) use forest `#0B3B32`, text milk `#F7F4EC` (11.3:1), muted `#B9C4BE`, line `rgba(247,244,236,.18)`; CTAs switch to milk labels; clay renders keep the same light rig on a forest backdrop; the logo loop renders white.
+
+### 12.2 Typography
+| Role | Font family | Source (npm @fontsource… / Google Fonts) | Weights / axes | Size (clamp) | Line-height | Tracking | Case |
+|---|---|---|---|---|---|---|---|
+| Display / hero | Fraunces | `@fontsource-variable/fraunces` (Google Fonts) | wght 300–400, opsz 144, SOFT 50 | clamp(3rem, 1.5rem + 6.5vw, 8.5rem) | 0.95 | −0.015em | UPPERCASE (hero), sentence elsewhere |
+| Headline H1–H2 | Fraunces | `@fontsource-variable/fraunces` (Google Fonts) | wght 400, opsz 72, SOFT 50 | H1 clamp(2.4rem, 1.5rem + 3.2vw, 4.75rem) · H2 clamp(1.75rem, 1.3rem + 1.6vw, 2.75rem) | 1.0 | −0.01em | Sentence |
+| Body | Inter Tight | `@fontsource-variable/inter-tight` (Google Fonts) | 400 / 500 | clamp(1rem, 0.96rem + 0.2vw, 1.0625rem) | 1.65 | 0 | Sentence |
+| Label / UI | Inter Tight | `@fontsource-variable/inter-tight` (Google Fonts) | 500 | 0.75rem (12 px), set outside renders with hairline leaders | 1.4 | +0.18em | UPPERCASE |
+| Data / mono | JetBrains Mono | `@fontsource-variable/jetbrains-mono` (Google Fonts) | 400 | 0.8125rem | 1.5 | +0.02em | As data |
+| Devanagari (optional) | Noto Sans Devanagari | `@fontsource-variable/noto-sans-devanagari` (Google Fonts) | 400 / 500 | matches body | 1.7 | 0 | — |
+
+Licence: all fonts are SIL Open Font License 1.1 (OFL), self-hosted via Fontsource; subset Latin + Latin-ext (Devanagari subset only where used). Pairing rationale: a soft, tight-leaded Fraunces echoes the sculpted forms while the UI stays flat and editorial in Inter Tight — the key difference from Claymorphism.
+
+### 12.3 Layout & surfaces
+- **Grid:** 12 columns, gutter 24 px (16 px mobile), margins 6vw, max-width 1440 px; clay scenes in fixed frames (16:9 desktop, 4:5 mobile) or as transparent cut-outs with a matched contact shadow; text in columns 1–5 or 8–12, scenes on the opposite side
+- **Spacing scale:** 4 px base: 4 · 8 · 12 · 16 · 24 · 32 · 48 · 64 · 96 · 128
+- **Radius scale:** sm 0 px (frames) · md 2 px (panels, inputs, badges) · lg 999 px (cursor only); softness lives in the renders, never in UI
+- **Border style:** 1 px hairlines `rgba(23,25,24,.14)`; scene labels use 1 px leaders
+- **Shadow / elevation:** UI is flat (no shadows). Renders carry baked ambient occlusion and contact shadows from one rig; the bottle gets a shadow-catcher pass on its clay plinth
+- **Texture / overlay:** no UI texture; clay micro-noise and one fingerprint per hero object live only inside renders
+
+### 12.4 Components
+All interactive components share: focus ring `--c-focus` 2 px / 3 px offset · touch targets ≥ 44 px · disabled = 40% opacity, no motion, `aria-disabled` (unless stated) · hover effects only on `(hover:hover)` devices · motion from §12.6.
+
+- **Primary button** — Terracotta-deep label (Inter Tight 600, 13 px, +0.16em, uppercase) with a 1 px underline and travelling arrow; 48 px tall, padding 14 px 0. **States:** default label + underline · hover a 1 px frame draws itself around the label (400 ms), arrow +6 px · focus-visible 2 px `#0B3B32` ring, 3 px offset · active frame fills terracotta-deep, label milk · disabled 40% opacity, no hover motion, `aria-disabled="true"` · loading underline becomes an indeterminate 1 px bar, `aria-busy`. **Motion:** 300 ms `--ease-out`. **A11y:** native `<a>`/`<button>`, hit area ≥ 44 px, label ≥ 4.5:1.
+- **Secondary button** — Forest label, same type, 1 px hairline + arrow. **States:** default forest label · hover hairline redraws left → right (300 ms), arrow +6 px · focus-visible 2 px `#0B3B32` ring, 3 px offset · active label sinks 1 px · disabled 40% opacity, no hover motion, `aria-disabled="true"` · loading indeterminate bar. **Motion:** 300 ms. **A11y:** native `<a>`/`<button>`, hit area ≥ 44 px, label ≥ 4.5:1.
+- **Text / arrow link** — Forest body link with 1 px underline. **States:** default hairline · hover underline redraws left → right (300 ms) · focus-visible 2 px `#0B3B32` ring, 3 px offset · active terracotta-deep · disabled 40% opacity, no hover motion, `aria-disabled="true"` · loading n/a (static element). **Motion:** 300 ms. **A11y:** underline always present (never colour alone); arrow is `aria-hidden`.
+- **Icon button (incl. menu)** — 44 px hit area, flat 1.5 px forest line icon (never clay); menu icon = two lines → ×. **States:** default flat icon · hover a 10% forest circle fills behind · focus-visible 2 px `#0B3B32` ring, 3 px offset · active scale 0.96 · disabled 40% opacity, no hover motion, `aria-disabled="true"` · loading n/a (static element). **Motion:** 240 ms. **A11y:** `aria-label` required; 44×44 px hit area; menu button carries `aria-expanded` + `aria-controls`; Esc closes the menu and returns focus.
+- **Navigation bar** (desktop + mobile menu) — 64 px flat milk bar with a 1 px hairline after scroll; links Inter Tight 500 13 px uppercase in forest; RESERVE as a terracotta-deep text button. Mobile: flat milk sheet with Fraunces 2.25rem links and one small clay plinth render at the bottom. **States:** default forest links · hover hairline draws · focus-visible 2 px `#0B3B32` ring, 3 px offset · active current page: 2 px terracotta-deep underline · disabled n/a · loading n/a. **Motion:** sheet fades 300 ms. **A11y:** `<nav>` landmark after a skip link; logo is a link to `/` with `aria-label="DESIGO® home"`; the animated SVG is `aria-hidden`. **Logo:** The DESIGO® wordmark sits top-left (cap height 22 px desktop, 18 px mobile) and runs the brand's **black write / un-write loop** (charcoal `#171918` on light grounds, white `#FFFFFF` on dark grounds; the colour never changes during the loop). The loop pauses while the menu is open, when the tab is hidden, and under reduced motion (the full wordmark is shown static).
+- **Cursor** — 14 px forest dot; labels Inter Tight 500 11 px uppercase. **States:** default 14 px dot · hover grows to 28 px with a 10% forest fill over links · ROTATE 40 px ring with a small rotate arc over clay scenes (drag turns the turntable ±12°); "drag · turn" over the bottle · EXPLORE 40 px ring reading "explore" over the maquette table · ENTER ring tightens to 24 px with an arrow → · VIEW ring tightens and shows the hotspot's label · TRACE ring with a groove dot reading "trace" over the relief map. **Touch fallback:** no cursor; turntables respond to swipe; hotspots are tappable buttons; stills on low-power devices. **A11y:** decorative (`aria-hidden`, `pointer-events:none`); off for coarse pointers and reduced motion, where the system cursor returns; never the only cue.
+- **Card / panel / info block** — FlatInfoPanel: milk clay `#EFE9DE`, radius 2 px, 1 px hairline, padding 32 px (24 px mobile); no inflated or double shadows (this is not Claymorphism). **States:** default flat panel · hover border darkens; the linked clay object lifts 6 px (pre-rendered hover frame) · focus-visible 2 px `#0B3B32` ring, 3 px offset · active returns · disabled 40% opacity, no hover motion, `aria-disabled="true"` · loading skeleton bars `#D9CFBF`. **Motion:** 650 ms reveal. **A11y:** real heading inside; one primary action per card; text never sits on texture below 4.5:1.
+- **Badge / tag** — Flat 2 px-radius label, Inter Tight 600 11 px uppercase, 1 px border. **Pending verification**: earth-ink `#6B4C2A` + dotted underline on the claim. **DEMO · not live data**: forest fill with milk text, on the relief map and every Trace-your-milk result. **States:** default flat label · hover none · focus-visible 2 px `#0B3B32` ring, 3 px offset · active n/a · disabled n/a · loading n/a (static element). **Motion:** fade 240 ms. **A11y:** status is real text ("Pending verification", "DEMO · not live data"); colour and shape are never the only signal.
+- **Input + form field (Trace-your-milk bottle ID)** — Flat card field 56 px, 1 px forest 30% border, radius 2 px; bottle ID in JetBrains Mono 18 px; label above; demo ID prefilled; error earth-ink + icon. **States:** default flat field · hover border 60% · focus-visible 2 px `#0B3B32` ring, 3 px offset · active 2 px forest border · disabled 40% opacity, no hover motion, `aria-disabled="true"` · loading the clay relief map lights step by step. **Motion:** step 1500 ms. **A11y:** visible `<label>`, hint and error linked with `aria-describedby`, error shown as text + icon, `autocomplete=off`, `spellcheck=false`.
+- **Divider / ornament** — 1 px hairline, or one small clay pebble render (48 px transparent PNG) centred as an ornament, at most once per page. **States:** default static · hover none · focus-visible 2 px `#0B3B32` ring, 3 px offset · active n/a · disabled n/a · loading n/a (static element). **Motion:** pebble settles 16 px (500 ms). **A11y:** `aria-hidden` (decorative) or `role=separator` between landmark sections.
+- **Section header** — Mono chapter number in terracotta-deep, Fraunces SOFT 50 title, one-line intro; the chapter's clay object settles beside it. **States:** default static · hover none · focus-visible 2 px `#0B3B32` ring, 3 px offset · active n/a · disabled n/a · loading n/a (static element). **Motion:** build-up: object drops 16 px and settles (500 ms). **A11y:** real `<h2>`; the chapter number is read as "Chapter 03"; decorative glyphs `aria-hidden`.
+- **Product info block** — FlatInfoPanel at columns 9–12: V-code (mono), name in Fraunces H2, the `desigo.ts` line, price *pending* (hidden in production), size, descriptors *pending*; herb counts are never sculpted as numbers of objects. **States:** default static · hover descriptor shows its source note · focus-visible 2 px `#0B3B32` ring, 3 px offset · active n/a · disabled 40% opacity, no hover motion, `aria-disabled="true"` · loading skeleton. **Motion:** rows 60 ms stagger. **A11y:** facts in a `<dl>`; pending values carry visually-hidden "(pending verification)"; price hidden in production until approved.
+- **Bottle stage** — Real glass bottle on a hand-pressed milk-white clay plinth with soft finger marks, lit by the same rig, with a shadow-catcher contact shadow per variant. **States:** default idle float ±5 px over 6 s; the shadow breathes in sync · hover pointer tilt ±6° · focus-visible 2 px `#0B3B32` ring, 3 px offset · active drag turns the 360 viewer and the plinth turns with it (matching 72-frame sequence or GLB) · disabled n/a · loading still render + an empty clay plinth `AssetSlot`. **Motion:** `--ease-inout` float. **A11y:** Bottle360Viewer is `role=img` with an `aria-label`; ←/→ rotate 5°, Home resets; reduced motion stops idle float and auto-turn.
+- **Trace node / timeline step** — ClayReliefMap node: a pre-rendered 32 px clay button pressed into a groove route on a terracotta-and-white relief; label Inter Tight 13 px + mono ID. **States:** default clay node · hover node lifts 2 px (hover frame) · focus-visible 2 px `#0B3B32` ring, 3 px offset · active a white light travels the groove 1500 ms per hop and the node glows · disabled 40% opacity, no hover motion, `aria-disabled="true"` · loading nodes appear one by one. **Motion:** hop 1500 ms. **A11y:** route is an ordered list `<ol>`; each node a `<button>` opening its panel; `aria-current="step"` on the active node.
+
+### 12.5 Iconography & illustration
+- **Icon style:** flat 1.5 px forest line icons, rounded caps, 24 px grid — never clay
+- **Illustration technique:** Blender clay renders: one matte clay shader (roughness 0.85–0.95, subsurface 1–2 mm), one light rig (warm 4800 K key top-left, cool 6500 K fill), 50–85 mm camera at 15–25° elevation; maquette-scale zebu figures without faces; glass, milk and ghee are never clay but composited real
+- **Photo treatment:** real farm photography stays separate and natural; clay never imitates a DESIGO® farm photograph
+
+### 12.6 Motion tokens
+| Token | Value | Use |
+|---|---|---|
+| `--ease-out` | `cubic-bezier(.16,1,.3,1)` | reveals |
+| `--ease-inout` | `cubic-bezier(.65,0,.35,1)` | scenes, float |
+| `--ease-settle` | `cubic-bezier(.22,.9,.24,1)` | build-up drop and settle (signature) |
+| `--dur-micro` | 300 ms | hover |
+| `--dur-reveal` | 650 ms | reveals |
+| `--dur-scene` | 1200 ms | scene transitions |
+| `--build` | 500 ms, drop 16 px, stagger 80 ms | objects placed on the model table |
+| `--turntable` | 16 s linear loop, ±12° | hero clay scenes (48 frames desktop / 24 mobile) |
+| `--float` | ±5 px / 6000 ms | bottle idle |
+| `--hop` | 1500 ms | relief-map light |
+| `--scrub` | 1 | turntable scrub in pinned chapters |
+
+- **Signature transition:** build-up: each scene assembles piece by piece as if placed on a model table (drop 16 px, settle, no bounce)
+- **Scroll behaviour:** scroll scrubs the turntable inside pinned chapters; the camera dollies along the maquette table in chapter 03
+- **Reduced-motion fallback:** single still renders; no turntable, no build-up, no float
+
+### 12.7 AI image generation prompts
+House rules: no text/letters/logos/watermarks in images; generated images are illustration, texture or backdrop only; never
+generate the bottle or ghee jar; zebu cows only, shown with respect; append the style's tail prompt to every prompt.
+
+**Tail prompt (append to every prompt below):** _soft matte clay render, unglazed milk-white clay #EFE9DE with terracotta #B8704C and sand #DCC6A0, one warm soft key light from top-left with a cool fill, gentle ambient occlusion, architectural maquette restraint, shallow depth of field, calm, premium, no text, no watermark, no logo, no letters_
+
+**Base negative prompt (add to every row's negative):** _text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look_
+
+| # | File path (web/public/desigo/styles/<slug>/...) | Size / ratio | Transparent? | Prompt | Negative prompt | Used in |
+|---|---|---|---|---|---|---|
+| CR1 | `web/public/desigo/styles/clay-render/hero-maquette.png` | 3200×2000 (16:10) | No | Small architectural clay maquette of a Rajasthani farm landscape with low dunes, a khejri tree and a simple shed, unglazed milk-white clay with subtle finger marks, a clay plinth empty at centre front | toy look, pastel candy, cows with faces, glossy plastic | Hero desktop |
+| CR2 | `web/public/desigo/styles/clay-render/hero-maquette-portrait.png` | 1400×2400 (7:12) | No | Vertical crop of the same clay farm maquette, dunes and khejri tree in the upper half, an empty milk-white clay plinth in the lower middle | toy look, pastel candy, glossy plastic | Hero mobile |
+| CR3 | `web/public/desigo/styles/clay-render/world-master-26.png` | 3200×2000 + 1400×2400 | No | Matte clay forest-floor grove with rounded sage-green clay trees #A9BCA8 and scattered clay leaves, deep green #1F5C45 background light, empty clearing at centre | cartoon trees, bright green, counted herbs | MASTER 26 world |
+| CR4 | `web/public/desigo/styles/clay-render/world-root-14.png` | 3200×2000 + 1400×2400 | No | Matte clay render of stepped terracotta earth strata #B8704C and #7E4530 cut in section with clay grass on top, crimson #B3202A background glow, empty top step at centre | lava, glossy, toy | ROOT 14 world |
+| CR5 | `web/public/desigo/styles/clay-render/world-base-3.png` | 3200×2000 + 1400×2400 | No | Matte sand-clay field #DCC6A0 with rows of simple clay wheat and a large flat clay sun disc behind the centre, amber #E89A1C to cream background, empty centre | sun face, neon, toy | BASE 3 world |
+| CR6 | `web/public/desigo/styles/clay-render/world-essential.png` | 3200×2000 + 1400×2400 | No | A single milk-white clay plinth on a white clay floor in a soft ivory #F4EDE2 room, gallery calm, nothing else | objects, colour | ESSENTIAL world |
+| CR7 | `web/public/desigo/styles/clay-render/maquette-table.png` | 6000×1600 | No | Long clay maquette table with seven small stations in a row: a calm faceless clay zebu cow with hump and dewlap, a farm shed, a milk can, a round test card with sixteen pressed dots, a chiller, a small dairy plant, a doorstep, joined by an empty white channel for a milk line | faces, eyes, smiles, bottle, people in comic poses | Cow → bottle (ch. 03) look-dev |
+| CR8 | `web/public/desigo/styles/clay-render/relief-map.png` | 3200×2000, transparent | Yes (real alpha) | Top-down terracotta and white clay relief map with a pressed groove route and eight small round clay buttons along it, soft top-left light, isolated on transparent background | labels, numbers, real map borders | Traceability (ch. 06), Trace-your-milk |
+| CR9 | `web/public/desigo/styles/clay-render/clay-surface.png` | 2048×2048, seamless | No | Seamless macro texture of smooth unglazed milk-white clay with fine micro-noise, flat even light | fingerprints pattern, cracks, dirt | Look-dev material reference |
+| CR10 | `web/public/desigo/styles/clay-render/plinth.png` | 2000×1400, transparent | Yes (real alpha) | Hand-pressed rectangular milk-white clay plinth with soft finger marks on its edges, matte, soft top-left light, transparent background | bottle, objects on top | Bottle stage plinth |
+| CR11 | `web/public/desigo/styles/clay-render/zebu-figure.png` | 1600×1600, transparent | Yes (real alpha) | Maquette-scale matte clay figure of an Indian zebu cow standing calmly, accurate hump, dewlap and long ears, no facial features, milk-white clay, transparent background | eyes, smile, cartoon proportions, Holstein spots | Chapter 02 BREED object (after approval) |
+| CR12 | `web/public/desigo/styles/clay-render/bilona-clay.png` | 3200×2000 | No | Matte clay still life of an earthen pot with a wooden churning stick and rope, terracotta and milk-white clay, warm light, respectful, no people | jar, people, deities | Ghee (ch. 12) |
+
+### 12.8 Prototype acceptance checklist
+- [ ] Tokens from `specs/42_clay-render.json` applied; no off-palette colours
+- [ ] Fonts self-hosted; correct weights load
+- [ ] All 12.4 components built with all states
+- [ ] Hero + bottle-story + one product world + trace chapter built in this style (the comparison set)
+- [ ] Mobile 360 px pass; reduced-motion pass; contrast checked
+- [ ] Claims rules respected (pending underline, no blocked claims, DEMO labels)
+- [ ] Screenshots: desktop 1440×900 ×4 + mobile 390×844 ×2 saved to docs/media/styles/clay-render/
+- [ ] UI is fully flat (no inflated, double-shadow cards)
+- [ ] Zebu figure design approved by DESIGO® before any cow appears in clay; no faces
+- [ ] Glass, milk and ghee are composited real, never clay; each scene sequence ≤ 1.2 MB

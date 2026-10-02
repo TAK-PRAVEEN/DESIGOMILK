@@ -1,0 +1,220 @@
+{
+  "id": 38,
+  "slug": "xpiritualism",
+  "name": "Xpiritualism",
+  "priority": true,
+  "fit": 2.5,
+  "colors": {
+    "primary": "#C8A96B",
+    "onPrimary": "#081A17",
+    "secondary": "#CFE7E0",
+    "accent": "#7FE0B8",
+    "bg": "#0B3B32",
+    "surface": "#13302E",
+    "text": "#EDEAE2",
+    "textMuted": "#B7BDB5",
+    "line": "rgba(200,169,107,.35)",
+    "ok": "#7FE0B8",
+    "pending": "#E9C9A2",
+    "demo": "#F7F4EC",
+    "focus": "#CFE7E0"
+  },
+  "variants": {
+    "master-26": {
+      "base": "#1F5C45",
+      "deep": "#0A2A20",
+      "light": "#D9E8DF"
+    },
+    "root-14": {
+      "base": "#B3202A",
+      "deep": "#2A0A0E",
+      "light": "#F3D9D6"
+    },
+    "base-3": {
+      "base": "#E89A1C",
+      "deep": "#2A1803",
+      "light": "#F8E4C2"
+    },
+    "essential": {
+      "base": "#4D4130",
+      "deep": "#1E1A14",
+      "light": "#F4EDE2"
+    }
+  },
+  "fonts": {
+    "display": {
+      "family": "Instrument Serif",
+      "package": "@fontsource/instrument-serif",
+      "weights": [
+        400
+      ],
+      "styles": [
+        "normal",
+        "italic"
+      ]
+    },
+    "body": {
+      "family": "Inter Tight",
+      "package": "@fontsource-variable/inter-tight",
+      "weights": [
+        400,
+        500
+      ]
+    },
+    "label": {
+      "family": "Space Grotesk",
+      "package": "@fontsource-variable/space-grotesk",
+      "weights": [
+        400,
+        500
+      ]
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "package": "@fontsource-variable/jetbrains-mono",
+      "weights": [
+        400
+      ]
+    },
+    "devanagari": {
+      "family": "Noto Sans Devanagari",
+      "package": "@fontsource-variable/noto-sans-devanagari",
+      "weights": [
+        400
+      ]
+    }
+  },
+  "type": {
+    "display": "clamp(3rem, 1.4rem + 7vw, 8.5rem)",
+    "h1": "clamp(2.4rem, 1.5rem + 3.4vw, 5rem)",
+    "h2": "clamp(1.75rem, 1.3rem + 1.6vw, 2.75rem)",
+    "body": "clamp(1rem, 0.96rem + 0.2vw, 1.0625rem)",
+    "label": "0.75rem"
+  },
+  "radius": {
+    "sm": "0px",
+    "md": "2px",
+    "lg": "999px"
+  },
+  "shadow": {
+    "bottle": "0 36px 36px -24px rgba(8,26,23,.55), 0 0 120px 20px rgba(207,231,224,.14)",
+    "panel": "0 0 48px rgba(207,231,224,.10)"
+  },
+  "motion": {
+    "easeOut": "cubic-bezier(.16,1,.3,1)",
+    "easeInOut": "cubic-bezier(.65,0,.35,1)",
+    "easeSignature": "cubic-bezier(.45,0,.55,1)",
+    "durMicro": 280,
+    "durReveal": 1200,
+    "durScene": 1400,
+    "pulseMs": 8000,
+    "floatPx": 6,
+    "floatMs": 7000,
+    "hopMs": 1600,
+    "scrub": 1.2
+  },
+  "button": {
+    "primary": {
+      "bg": "transparent",
+      "fg": "#C8A96B",
+      "radius": "0",
+      "padding": "14px 0",
+      "underline": "1px #C8A96B",
+      "hover": "underline from centre 280ms; ring closes round arrow 400ms"
+    },
+    "secondary": {
+      "bg": "transparent",
+      "fg": "#EDEAE2",
+      "radius": "0",
+      "padding": "14px 0",
+      "hover": "hairline turns gold"
+    },
+    "link": {
+      "fg": "#CFE7E0",
+      "underline": "1px",
+      "hover": "gold hairline from centre"
+    }
+  },
+  "images": [
+    {
+      "file": "web/public/desigo/styles/xpiritualism/hero.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Deep forest-green night sky over a faint flat desert horizon, sparse small stars, a soft milk-white glow at the centre like cold light, a thin warm-gold dawn line on the horizon, empty centre, palette of deep forest green #0B3B32, near-black green #081A17, milk white #F7F4EC and warm gold #C8A96B, soft cold light, fine film grain, calm, secular, the precision of an astronomical instrument, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, religious symbols, om, mandala, yantra, halo, rays, violet nebula, magenta, lens flare",
+      "usedIn": "Hero desktop"
+    },
+    {
+      "file": "web/public/desigo/styles/xpiritualism/hero-portrait.png",
+      "size": "1400×2400 (7:12)",
+      "transparent": false,
+      "prompt": "Vertical forest-green night sky, sparse stars, soft milk-white cold glow in the middle third, thin gold dawn line near the bottom edge, palette of deep forest green #0B3B32, near-black green #081A17, milk white #F7F4EC and warm gold #C8A96B, soft cold light, fine film grain, calm, secular, the precision of an astronomical instrument, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, religious symbols, halo, rays, violet, magenta, lens flare",
+      "usedIn": "Hero mobile"
+    },
+    {
+      "file": "web/public/desigo/styles/xpiritualism/aura-master-26.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "Soft luminous milk-white glow fading into deep bottle green #1F5C45 and #0A2A20, subtle grain, empty centre, palette of deep forest green #0B3B32, near-black green #081A17, milk white #F7F4EC and warm gold #C8A96B, soft cold light, fine film grain, calm, secular, the precision of an astronomical instrument, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, rays, sparkles, halo crown, violet",
+      "usedIn": "MASTER 26 world"
+    },
+    {
+      "file": "web/public/desigo/styles/xpiritualism/aura-root-14.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "Soft milk-white glow over oxblood #4A0A0F night with a faint crimson #B3202A horizon, grain, empty centre, palette of deep forest green #0B3B32, near-black green #081A17, milk white #F7F4EC and warm gold #C8A96B, soft cold light, fine film grain, calm, secular, the precision of an astronomical instrument, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, fire, blood, rays, violet",
+      "usedIn": "ROOT 14 world"
+    },
+    {
+      "file": "web/public/desigo/styles/xpiritualism/aura-base-3.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "Soft milk-white glow over dark brown #5A3304 with an amber #E89A1C first-light band, grain, empty centre, palette of deep forest green #0B3B32, near-black green #081A17, milk white #F7F4EC and warm gold #C8A96B, soft cold light, fine film grain, calm, secular, the precision of an astronomical instrument, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, sun rays, flare, orange neon",
+      "usedIn": "BASE 3 world"
+    },
+    {
+      "file": "web/public/desigo/styles/xpiritualism/aura-essential.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "Soft ivory #F4EDE2 glow on warm dark taupe #4D4130 with a single faint hairline ring, grain, empty centre, palette of deep forest green #0B3B32, near-black green #081A17, milk white #F7F4EC and warm gold #C8A96B, soft cold light, fine film grain, calm, secular, the precision of an astronomical instrument, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, multiple rings, symbols, sparkles",
+      "usedIn": "ESSENTIAL world"
+    },
+    {
+      "file": "web/public/desigo/styles/xpiritualism/constellation-route.png",
+      "size": "3600×2000, transparent",
+      "transparent": true,
+      "prompt": "Eight small soft milk-white points of light joined by fine warm-gold hairlines into a gentle route across the frame, like a measured constellation chart, isolated on transparent background, palette of deep forest green #0B3B32, near-black green #081A17, milk white #F7F4EC and warm gold #C8A96B, soft cold light, fine film grain, calm, secular, the precision of an astronomical instrument, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, zodiac figures, symbols, numbers, labels",
+      "usedIn": "Traceability (ch. 06), /trace, Trace-your-milk"
+    },
+    {
+      "file": "web/public/desigo/styles/xpiritualism/starfield.png",
+      "size": "2400×2400, seamless",
+      "transparent": false,
+      "prompt": "Sparse realistic star field on near-black green #081A17, very few stars, no nebula, no colour fringing, palette of deep forest green #0B3B32, near-black green #081A17, milk white #F7F4EC and warm gold #C8A96B, soft cold light, fine film grain, calm, secular, the precision of an astronomical instrument, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, nebula, galaxy, violet, shooting stars",
+      "usedIn": "Night texture sitewide"
+    },
+    {
+      "file": "web/public/desigo/styles/xpiritualism/rings.png",
+      "size": "3000×3000, transparent",
+      "transparent": true,
+      "prompt": "Precise concentric thin gold hairline rings with fine degree tick marks, like an antique astronomical instrument dial, flat front view, transparent background, palette of deep forest green #0B3B32, near-black green #081A17, milk white #F7F4EC and warm gold #C8A96B, soft cold light, fine film grain, calm, secular, the precision of an astronomical instrument, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, numbers, letters, zodiac, yantra, mandala",
+      "usedIn": "RingSystem reference (rebuild as SVG)"
+    },
+    {
+      "file": "web/public/desigo/styles/xpiritualism/instrument-arc.png",
+      "size": "3200×1600, transparent",
+      "transparent": true,
+      "prompt": "Hairline architectural drawing of a large curved stone astronomical instrument arc inspired by Jaipur's 18th-century observatory, gold lines on transparent background, palette of deep forest green #0B3B32, near-black green #081A17, milk white #F7F4EC and warm gold #C8A96B, soft cold light, fine film grain, calm, secular, the precision of an astronomical instrument, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, temples, people, text",
+      "usedIn": "Heritage (ch. 10)"
+    }
+  ]
+}

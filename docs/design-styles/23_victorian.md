@@ -147,7 +147,7 @@ and descriptors as an engraved list.
 **Inner pages:** /milk has four specimen plates · /milk/[variant] is a modern scene with the plate cartouche, the
 engraved-turntable 360 and a specification label · /ghee is the trade-label page · /origin is the breed album
 (plates) plus feed and grazing documentary · /trace and /technology are modern with engraved vignettes · /about has
-the ledger chronology and supporters (pending) in a cartouche list · /reserve is a modern form with a small engraved
+the ledger chronology (no supporters listed until written evidence is on file, KB Q34) · /reserve is a modern form with a small engraved
 header.
 
 ## 7. Component variants
@@ -218,3 +218,126 @@ heavy illustration cost.
 6. Engraved breeds must be accurate and individual, with no generic "cow" drawings.
 7. Period voice is *not* used for claims: no "purest", "finest", "by royal appointment" or medal-style badges unless real and verified.
 8. Medal and seal motifs are only used for verified awards (none currently approved), never decoratively.
+
+## 12. Build-ready spec sheet
+
+> Audit 2026-10-03: Section 12 was missing. Added Engraver's Archive tokens and state colours, Playfair/Cormorant SC/IM Fell/Rozha packages, all 14 components, motion tokens and 11 image prompts (plates, cartouches, ornament). Fonts already OFL. Body: supporters no longer listed as pending on /about (blocked claim, KB Q34).
+
+### 12.1 Colour system
+| Role | Token | Hex | Use | Contrast note |
+|---|---|---|---|---|
+| Primary | --c-primary | `#0B3B32` | forest: headings, cartouche fills, primary button | 9.9:1 vs bg. AAA. |
+| Primary ink | --c-on-primary | `#EDE4D0` | plate paper on forest | 9.9:1 on primary. |
+| Secondary | --c-secondary | `#B3202A` | vermilion rubrication: one initial or rule per page, DEMO | 5.3:1 vs bg. AA for text (rubricated initials are display size). |
+| Accent | --c-accent | `#C8A96B` | gilt: rules, ghee frames, focus halo | 1.8:1 vs bg. Never text; focus ring forest 2 px + 3 px gilt halo. |
+| Background | --c-bg | `#EDE4D0` | plate stock (archival chapters); modern framing pages use milk `#F7F4EC` |  |
+| Surface | --c-surface | `#E3D5B8` | aged plate edges, cartouche panels |  |
+| Text | --c-text | `#1E211F` | engraving ink | 12.9:1 on bg · 11.2:1 on surface (≥ 7:1 met) |
+| Muted text | --c-text-muted | `#5B4631` | sepia captions | 7.0:1 on bg · 6.1:1 on surface (≥ 4.5:1 met) |
+| Line | --c-line | `#A08245` | gilt-deep rules (legible gold on light) | 2.9:1, rules only. |
+| Success / Pending / Demo | --c-ok / --c-pending / --c-demo | `#1F5C45` / `#8C6A43` / `#B3202A` | MASTER green = verified; earth dotted underline = pending; rubricated red = DEMO | Red DEMO text 5.3:1 on plate paper. |
+
+**Variant worlds in this style** (base / deep / light are the brand variant tokens; the right-hand column is how this style stages them):
+
+| Variant | Base | Deep | Light | World in this style |
+|---|---|---|---|---|
+| MASTER 26 (V1+, green cap) | `#1F5C45` | `#0A2A20` | `#D9E8DF` | PLATE I: green chromolith tint, engraved forest-canopy vignette above the cartouche, banner "MASTER 26 · DESIGO® V1+" |
+| ROOT 14 (V1, red cap) | `#B3202A` | `#4A0A0F` | `#F3D9D6` | PLATE II: vermilion rubrication, engraved red-earth field with a khejri tree |
+| BASE 3 (V2, amber cap) | `#E89A1C` | `#5A3304` | `#F8E4C2` | PLATE III: amber tint, engraved village lane at evening |
+| ESSENTIAL (V3, ivory cap) | `#CDB89A` | `#4D4130` | `#F4EDE2` | PLATE IV: almost no ornament, a single thin rule frame on ivory: restraint within the style |
+
+**Dark-chapter inversion:** Modern dark chapters (06, 11, 13): bg → forest `#0B3B32` / charcoal `#171918`, surface → `#0F4A3F`, text → `#EDE4D0`, muted → `#C8B48E`, line → gilt `#C8A96B`, engraved vignettes drawn in plate-paper ink; rubrication stays `#B3202A` only on the DEMO "receipt" stamp (on a paper receipt panel, not on dark).
+
+### 12.2 Typography
+| Role | Font family | Source (npm @fontsource… / Google Fonts) | Weights / axes | Size (clamp) | Line-height | Tracking | Case |
+|---|---|---|---|---|---|---|---|
+| Display / hero | Playfair Display (variable) | `@fontsource-variable/playfair-display` (Google Fonts: Playfair Display) | wght 400–900 (use 900 + Black Italic) | clamp(3.5rem, 8vw, 8rem) | 0.95 | -0.01em | Sentence / UPPER for plate titles |
+| Headline H1–H2 | Playfair Display (variable) | `@fontsource-variable/playfair-display` (Google Fonts: Playfair Display) | wght 700, italic | H1 clamp(2.6rem, 5vw, 5rem) · H2 clamp(1.8rem, 3vw, 3rem) | 1.05 / 1.15 | 0 | Sentence |
+| Body | Fraunces (variable) | `@fontsource-variable/fraunces` (Google Fonts: Fraunces) | opsz 14, wght 400 | clamp(1.0625rem, 1rem + 0.25vw, 1.125rem) (18 px) | 1.67 (30 px) | 0 | Sentence; justified + hyphens in plates only |
+| Label / UI | Cormorant SC | `@fontsource/cormorant-sc` (Google Fonts: Cormorant SC) | 300–700 static (use 600) | 0.9375rem | 1.2 | +0.08em | small caps ("PLATE V · THARPARKAR"), nav |
+| Data / mono | JetBrains Mono (variable) | `@fontsource-variable/jetbrains-mono` (Google Fonts: JetBrains Mono) | wght 400 | 0.8125rem | 1.4 | 0 | modern frames only |
+| Devanagari (optional) | Rozha One | `@fontsource/rozha-one` (Google Fonts: Rozha One) | 400 | cartouche lines clamp(1.6rem, 3vw, 2.6rem) | 1.3 | 0 | n/a (approved Hindi only) |
+| Engraved caption (style-specific) | IM Fell English | `@fontsource/im-fell-english` (Google Fonts: IM Fell English) | 400 + italic | ≥ 1.125rem (18 px) | 1.45 | 0 | Sentence; archival captions ≤ 30 words |
+
+Licence: Playfair Display, Cormorant SC, IM Fell English, Fraunces, JetBrains Mono and Rozha One (Indian Type Foundry) are all SIL OFL 1.1. Bodoni Moda (OFL) is the approved display alternative.
+Pairing: Fat-face Playfair against hairline Cormorant small caps is the type-specimen contrast; Fraunces keeps body readable; Rozha One is the high-contrast Devanagari partner for bilingual cartouches. Max 3 faces per plate.
+
+### 12.3 Layout & surfaces
+- **Grid:** Centred 10-column plate grid inside the 12-column page (5vw margin, max-width 1440 px); plates 4:5 with an inner frame margin of 6% of plate width; symmetry.
+- **Spacing:** 4-px base: 4 · 8 · 12 · 16 · 24 · 32 · 48 · 64 · 96 · 128; 64 px minimum gap between ornament and the bottle.
+- **Radius:** 0 (sm 0 · md 0 · lg 0); cartouches are SVG shapes.
+- **Border:** Thick-thin rules (3 px + 1 px, 3 px apart) in ink or gilt-deep; plate frames 1 px ink with a 6% inner margin.
+- **Shadow / elevation:** Platemark: debossed rectangle via `inset 0 0 0 1px rgba(91,70,49,.12), inset 2px 2px 4px rgba(91,70,49,.06)`; no drop shadows on UI; bottle contact shadow.
+- **Texture / overlay:** Plate stock with platemark only; no foxing, tears, stains or burnt edges; one rubrication per page.
+
+### 12.4 Components
+All interactive components: `focus-visible` = 2 px forest `#0B3B32` outline, offset 3 px, with a 3 px gilt `#C8A96B` halo; disabled = 40% opacity, `cursor: not-allowed`, `aria-disabled`; loading = label kept, `aria-busy="true"`.
+- **Primary button**: Label in a small forest cartouche: Cormorant SC 600 plate-paper text + arrow, 48 px, padding 12×28, ornament ends 6 px. Hover: ornament extends 4 px (240 ms), arrow +6 px. Active: cartouche darkens to `#0A2A20`. Disabled: sepia outline cartouche, muted text. Loading: a thick-thin rule draws under the label (900 ms loop).
+- **Secondary button**: Outline cartouche (1 px ink) with ink label; hover thick-thin underline appears (240 ms); active forest fill; disabled / loading as primary.
+- **Text / arrow link**: Fraunces 400 forest with 1 px underline; hover: thick-thin flourish underline draws (240 ms), arrow ☞ fist glyph slides 4 px. Disabled: sepia.
+- **Icon button** (incl. menu): 44×44 engraved vignette icon in a 1 px ink circle; menu = three thick-thin rules → ×. Hover: circle becomes double rule. `aria-label` always.
+- **Navigation bar** (desktop + mobile menu) + how the DESIGO® black write/un-write logo loop sits in it: 64 px bar on milk (modern pages) or plate paper (archival), Cormorant SC links, a thick-thin rule beneath; active link = vermilion underline (the page's single rubrication when no initial is present). Mobile: full-screen plate-paper sheet with Playfair italic 36 px links inside a thin rule frame; page-turn cross-fade 600 ms. Logo: the DESIGO® wordmark (approved vector, never redrawn or recoloured) sits at the left of the bar, 112 px wide desktop / 92 px mobile, running the black write / un-write infinite loop of `DesigoLogo` (strokes draw 0–1.2 s, hold to 3.0 s, un-draw 3.0–4.2 s, pause to 4.6 s). Single colour: charcoal `#171918` on light chapters, milk-white `#F7F4EC` on dark chapters; the colour switches with the chapter theme and never animates. No ring, glow, hover trigger or style effect is applied to it. Reduced motion: static, fully written wordmark.
+- **Cursor** (states: default · hover · ROTATE · EXPLORE · ENTER · VIEW · TRACE); touch fallback: On archival pages: default = 20 px sepia printer's fist ☞ · hover = fist + underline flourish · ROTATE = engraved circular arrow ⟳ · EXPLORE = fist pointing right with a dotted leader · ENTER = fist with a small cartouche · VIEW = magnifying-glass vignette · TRACE = fist with a dotted path. Disabled = faded fist. Modern pages use the system cursor. Touch: native.
+- **Card / panel / info block**: Specimen plate: plate paper, 1 px ink frame with 6% inner margin, platemark, plate number in Cormorant SC, caption in IM Fell (≤ 30 words). Hover (clickable): frame becomes thick-thin (240 ms).
+- **Badge / tag** (incl. "pending verification" and "DEMO · not live data"): Cormorant SC 600 13 px in a small rule-bordered label (24 px). Verified: MASTER green rule. Pending verification: earth `#8C6A43` dotted underline on the claim + label "pending verification"; prices in the cartouche carry it too. DEMO: rubricated red `#B3202A` label "DEMO · NOT LIVE DATA" (receipt styling in ch. 13). No medal or seal motifs ever. Static.
+- **Input + form field** (Trace-your-milk bottle ID): Modern charcoal demo with a paper "receipt" result panel: label "BOTTLE ID" Cormorant SC, 56 px field, 1 px ink border, JetBrains Mono 18 px, placeholder `DSG-BTL-000001-3 (sample format)`. Focus: ring token. Error: vermilion border + text. Loading: receipt lines print in (300 ms each).
+- **Divider / ornament**: Thick-thin rule, corner flourishes derived from the ghee-label folk border, or a tailpiece ornament to close a page; one ornament family sitewide.
+- **Section header** (chapter number + title pattern): Plate numeral in Cormorant SC ("PLATE V") + Playfair italic title + thick-thin rule; optional single vermilion rubricated initial.
+- **Product info block** (variant name, code, price-pending, size, descriptors): Label cartouche: Playfair variant name, code in Cormorant SC, net content and price (pending, dotted underline + label), descriptors as an engraved list with status.
+- **Bottle stage** (how Bottle / Bottle360Viewer is framed: plinth, glow, shadow, background): Museum specimen case: the untouched render inside an engraved cartouche frame with plinth and label ribbon; frame stays still, bottle floats ±10 px / 6 s, tilt ±8°; ornament ≥ 64 px from the silhouette; contact shadow on the plinth. Before 360 frames ±25° + sheen; with frames an engraved turntable plinth with degree marks every 30° (frame 001 at 0°).
+- **Trace node / timeline step**: Modern forest map with small engraved vignettes as nodes (milk can, bilona, bottle, scale, thermometer, cart); active node gets a gilt ring + label; demo values in mono with rubricated DEMO; ordered-list equivalent.
+
+### 12.5 Iconography & illustration
+- **Icons:** Engraved vignettes, 24–32 px, hatch 0.4–1.2 px in ink; seven verbs: milk can, bilona, glass bottle, scale, thermometer, cart, doorstep.
+- **Illustration:** Commissioned engraving-style line art traced from DESIGO® breed photos (accurate, individual animals); chromolith tints max 2 per plate; ornament kit drawn once as SVG from the ghee-label border.
+- **Photo treatment:** Modern documentary photos with Cormorant SC captions; never sepia-filtered or fake-aged.
+
+### 12.6 Motion tokens
+| Token | Value | Use |
+|---|---|---|
+| `--ease-out` | `cubic-bezier(.16,1,.3,1)` | ink-up mask, tint fade |
+| `--ease-inout` | `cubic-bezier(.65,0,.35,1)` | page-turn cross-fade |
+| `--dur-micro` | `240ms` | cartouche ornament, underline |
+| `--dur-reveal` | `900ms` | ink-up mask along hatch direction |
+| `--dur-tint` | `600ms (+200ms delay)` | chromolith tint pass |
+| `--dur-scene` | `1200ms` | ornament frames drawing from the corners |
+| `--pin-plate` | `60vh` | album scroll: each plate pinned, next rises over it |
+| `--float` | `translateY ±10px / 6000ms` | bottle float |
+
+- **Signature:** ink-up then tint (printed in passes); breed plate album (PLATE V–X); engraved milk can morphing into the QR identity in ch. 11.
+- **Scroll:** plates pinned 60vh like album leaves; ornament frames draw inward.
+- **Reduced motion:** plates appear fully printed, no album pinning, logo static.
+
+### 12.7 AI image generation prompts
+House rules: no text/letters/logos/watermarks in images; generated images are illustration, texture or backdrop only; never generate the bottle or ghee jar; zebu cows only, shown with respect; append the style's tail prompt to every prompt.
+
+**Tail prompt (append to every prompt below):** *19th-century steel engraving and copperplate cross-hatching, natural-history plate and Indian lithographed trade-label craft, ink #1E211F and sepia #5B4631 on plate paper #EDE4D0, at most two flat chromolith tints, symmetrical and precise, respectful, no colonial or British heraldic motifs, no text, no watermark, no logo, no letters*
+
+**Base negative prompt (append to every negative below):** *text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces*
+
+| # | File path (web/public/desigo/styles/victorian/...) | Size / ratio | Transparent? | Prompt | Negative prompt | Used in |
+|---|---|---|---|---|---|---|
+| 1 | `hero-frame-landscape.png` | 3200×2000 (16:10) | yes | Ornate engraved frame of vines, wheat ears and lotus in forest green #0B3B32 and gold #C8A96B around an empty oval centre that is fully transparent, aged plate paper only inside the frame band | crowns, coats of arms, lions, colonial motifs, medals, seals (+ base negative) | Hero ornament (modern hero keeps only a rule; full frame on archival openers) |
+| 2 | `hero-frame-portrait.png` | 1400×2400 (7:12) | yes | Same engraved vine, wheat and lotus frame as a tall portrait, transparent oval centre | crowns, heraldry, medals (+ base negative) | Mobile archival openers |
+| 3 | `plates/master-26.png` | 2000×2500 (4:5) | yes | Engraved vignette of a forest canopy with layered leaves and light shafts, cross-hatched, a flat pale green tint #D9E8DF and green #1F5C45, on transparent background, empty space below for the cartouche | named herb labels, banners with words (+ base negative) | PLATE I, /milk/master-26 |
+| 4 | `plates/root-14.png` | 2000×2500 (4:5) | yes | Engraved vignette of a red-earth field with a single khejri tree and furrows, cross-hatched, flat tints crimson #B3202A and blush #F3D9D6, on transparent background | banners with words, people (+ base negative) | PLATE II, /milk/root-14 |
+| 5 | `plates/base-3.png` | 2000×2500 (4:5) | yes | Engraved vignette of a Rajasthani village lane at evening with mud houses and long hatched shadows, flat tints amber #E89A1C and pale amber #F8E4C2, on transparent background | shop signs, people's faces (+ base negative) | PLATE III, /milk/base-3 |
+| 6 | `plates/essential.png` | 2000×2500 (4:5) | yes | A single thin double-rule rectangular plate frame with tiny corner dots, ivory #F4EDE2 tint inside, almost no ornament, transparent outside the frame | flourishes, vignettes (+ base negative) | PLATE IV, /milk/essential |
+| 7 | `journey/engraved-panorama.png` | 4800×1400 (24:7) | yes | Continuous engraved panorama read left to right: zebu cows grazing, a farm with khejri tree, a steel milk can on a cart, a test card with sixteen dots, a chiller tank, a small dairy plant, a doorstep at dawn, fine cross-hatching, transparent background | factory smokestacks, British architecture, captions (+ base negative) | Ch. 03 cow → bottle |
+| 8 | `textures/plate-paper.png` | 2400×2400 seamless | no | Seamless tileable smooth plate paper #EDE4D0 with very subtle fibre and an even surface, flat scan light | foxing, stains, tears, burnt edges (+ base negative) | Plate stock |
+| 9 | `ghee/label-frame.png` | 2400×3000 (4:5) | yes | Ornate Indian lithographed trade-label frame built from a folk border of dots, triangles and small leaves, gilt and forest green, bilingual cartouche shapes left blank, transparent centre | deities, medals, seals, text in cartouches (+ base negative) | Ch. 12 ghee, /ghee |
+| 10 | `ornament/corners.png` | 1200×1200 (1:1) | yes | Set of four matching engraved corner flourishes and one tailpiece ornament of wheat ears and leaves, ink on transparent background, symmetrical | crowns, heraldry, text (+ base negative) | OrnamentCorner, tailpiece |
+| 11 | `heritage/cow-engraving.png` | 1600×2000 (4:5) | yes | Respectful steel engraving of a Sahiwal zebu cow, reddish-brown coat in hatching, loose skin and large dewlap, short horns, three-quarter view facing left, standing on a small patch of ground, transparent background | cartoon, adornment, religious marks (+ base negative) | Ch. 10 heritage |
+
+Breed plates PLATE V–X reuse brief section D (`breeds/*.png`, sepia engravings); final engravings are redrawn by an illustrator from DESIGO®'s own breed photographs.
+
+### 12.8 Prototype acceptance checklist
+- [ ] Tokens from `specs/23_victorian.json` applied; no off-palette colours
+- [ ] Fonts self-hosted; correct weights load
+- [ ] All 12.4 components built with all states
+- [ ] Hero + bottle-story + one product world + trace chapter built in this style (the comparison set)
+- [ ] Mobile 360 px pass; reduced-motion pass; contrast checked
+- [ ] Claims rules respected (pending underline, no blocked claims, DEMO labels)
+- [ ] Screenshots: desktop 1440×900 ×4 + mobile 390×844 ×2 saved to docs/media/styles/victorian/
+- [ ] No crowns, heraldry, Raj imagery, medals or seals; ornament never within 64 px of the bottle
+- [ ] Hero, lab, trace and commerce stay modern; max 3 typefaces per plate and one rubrication per page

@@ -16,7 +16,7 @@ Reference points:
 
 ## 2. Fit for DESIGO® — score 3 / 5 (whole site) · 4 / 5 (atmosphere layer)
 
-**Why it fits.** DESIGO®'s day starts **before dawn**: collection, chilling and delivery happen in the blue hour, then the sun rises over the Thar. An aurora rebuilt as a **"Thar dawn"** (milk white, soft gold, mint and forest) gives the site a living atmosphere that changes with scroll, like dawn breaking as you follow the milk. It's cheap to render (one shader or CSS layers), it frames the bottle beautifully, and it can carry each **variant's colour** as a soft light around the bottle.
+**Why it fits.** DESIGO®'s day starts **before dawn**: collection, chilling and delivery happen in the blue hour (timings *pending ops confirmation*), then the sun rises over the Thar. An aurora rebuilt as a **"Thar dawn"** (milk white, soft gold, mint and forest) gives the site a living atmosphere that changes with scroll, like dawn breaking as you follow the milk. It's cheap to render (one shader or CSS layers), it frames the bottle beautifully, and it can carry each **variant's colour** as a soft light around the bottle.
 
 **Where it fights.** Aurora gradients are now generic, especially in tech and AI. Purple-blue-pink auroras say "SaaS" or "crypto", not dairy. They carry no heritage, no soil, no craft, and the style alone cannot tell a provenance story. Heavy blur behind text also hurts legibility.
 
@@ -169,3 +169,128 @@ Total ≈ 54 days (plus the paired style's chapters).
 **Risks**: generic SaaS look, legibility, GPU cost, no heritage. Mitigation: Thar-dawn palette, paired structural style, performance budgets, keep-clear text zones.
 
 **Best used for:** an atmosphere layer: the hero pre-dawn light, the four variant halos, the "milk as material" chapter and the sunrise final CTA.
+
+---
+
+## 12. Build-ready spec sheet
+
+> Audit 2026-10-03: Good Thar-dawn palette and performance notes; missing were colour roles (surface, muted text, states), font packages and sizes, component states, motion token table, image prompts and acceptance list. All added. Fonts already OFL (Fraunces, Inter Tight, JetBrains Mono). Body fix: blue-hour collection/chilling/delivery timing in §2 marked pending ops confirmation.
+
+### 12.1 Colour system
+| Role | Token | Hex | Use | Contrast note |
+|---|---|---|---|---|
+| Primary | --c-primary | `#0B3B32` | brand forest: primary CTAs, headlines on light, dark grounds | 11.3:1 vs bg (body-safe) |
+| Primary ink | --c-on-primary | `#F7F4EC` | text on forest | 11.3:1 on primary |
+| Secondary | --c-secondary | `#1E7A68` | DESIGO green light, links | 4.7:1 vs bg (text-safe) |
+| Accent | --c-accent | `#E9C98A` | dawn gold: light fields, highlights, active halo | decorative light only, never text; focus ring uses --c-primary on light / `#BFE6D4` on dark |
+| Background | --c-bg | `#F7F4EC` | milk ground (day); pre-dawn ground `#08201B` in dark chapters | 14.8:1 with text |
+| Surface | --c-surface | `#FFF8E8` | legibility veil: cream at 72% + `backdrop-filter: blur(24px)` + 1 px hairline | text on surface 15.4:1 |
+| Text | --c-text | `#1E211F` | body text on light (only in clearings or on veils) | 14.8:1 vs bg (body-safe) |
+| Muted text | --c-text-muted | `#5B5C58` | captions, labels (ink at 72%) | 6.1:1 vs bg (text-safe) |
+| Line | --c-line | `rgba(11,59,50,.14)` | hairlines on veils and dividers | decorative |
+| Success / Pending / Demo | --c-ok / --c-pending / --c-demo | `#1E7A68` / `#E9C98A` / `#0B3B32` | ok = green filled node; pending = 1px dotted dawn-gold underline + "PENDING" tag (ink text); DEMO = forest badge "DEMO · not live data", milk text, never over aurora without a veil | DEMO badge milk on forest = 11.6:1; gold underline is a marker only |
+
+Variant worlds in this style: MASTER 26 · ROOT 14 · BASE 3 · ESSENTIAL (base / deep / light hex for each).
+
+| Variant | Base | Deep | Light | World in this style |
+|---|---|---|---|---|
+| MASTER 26 (V1+, green cap) | `#1F5C45` | `#0A2A20` | `#D9E8DF` | ground `#0A2A20`, blobs `#1F5C45`, `#BFE6D4`, small `#E9C98A`: forest at first light |
+| ROOT 14 (V1, red cap) | `#B3202A` | `#4A0A0F` | `#F3D9D6` | ground `#2A0A0D`, blobs `#B3202A` 50%, `#F2C7A5`, `#E9C98A`: red earth dawn |
+| BASE 3 (V2, amber cap) | `#E89A1C` | `#5A3304` | `#F8E4C2` | ground `#F8E4C2`, blobs `#E89A1C` 45%, `#FFF8E8`, `#F2C7A5`: golden hour, light ground |
+| ESSENTIAL (V3, ivory cap) | `#CDB89A` | `#4D4130` | `#F4EDE2` | ground `#F4EDE2`, blobs `#CDB89A` 40%, `#FFF8E8`: soft ivory morning, the quietest |
+
+Dark-chapter inversion: hero, ch. 02, Traceability, Technology and Trace-your-milk run pre-dawn: `--c-bg` → `#08201B`, `--c-surface` → night veil `rgba(8,32,27,.64)` + blur 24 px, `--c-text` → `#F7F4EC`, muted → `#A9C9C6`, `--c-primary` → `#BFE6D4` (mint, CTA frame/focus), line → `rgba(247,244,236,.16)`, logo → white. Scroll interpolates night → blue hour → dawn gold → milk day.
+
+Additional style tokens (kept from §3): Light fields (blurred, never text): `--au-dawn-gold` `#E9C98A`, `--au-peach` `#F2C7A5`, `--au-mint` `#BFE6D4`, `--au-sky` `#A9C9C6`, `--au-cream` `#FFF8E8`; grounds `--au-night` `#08201B`, `--au-forest` `#0B3B32`. Banned: purple, magenta, pink, electric blue. Every aurora contains ≥ 1 warm and ≥ 1 green tone.
+
+### 12.2 Typography
+| Role | Font family | Source (npm @fontsource… / Google Fonts) | Weights / axes | Size (clamp) | Line-height | Tracking | Case |
+|---|---|---|---|---|---|---|---|
+| Display / hero | Fraunces | `@fontsource-variable/fraunces` | wght 300, opsz 144, SOFT 100 | `clamp(3.5rem, 2rem + 7vw, 9rem)` | 1.0 | −0.01em | Sentence |
+| Headline H1–H2 | Fraunces | `@fontsource-variable/fraunces` | 300 / 400, SOFT 100 | H1 `clamp(2.6rem, 1.6rem + 4vw, 5rem)` · H2 `clamp(1.8rem, 1.3rem + 2vw, 3rem)` | 1.05 · 1.15 | −0.01em | Sentence |
+| Body | Inter Tight | `@fontsource-variable/inter-tight` | 400 | `clamp(1rem, .95rem + .25vw, 1.125rem)` | 1.65 | 0 | Sentence |
+| Label / UI | Inter Tight | `@fontsource-variable/inter-tight` | 500 | `.75rem` | 1.2 | +0.18em | Upper |
+| Data / mono | JetBrains Mono | `@fontsource-variable/jetbrains-mono` | 400, tabular | `.875rem` | 1.4 | +0.02em | Upper for IDs |
+| Devanagari (optional) | Noto Serif Devanagari | `@fontsource-variable/noto-serif-devanagari` | 300 / 400 | matches H2 / body | 1.6 | 0 | — |
+
+Licence: all fonts must be open-licence (OFL/Apache). Fraunces, Inter Tight, JetBrains Mono, Noto Serif Devanagari: OFL 1.1, no replacement needed. Pairing: soft, light Fraunces matches soft light; Inter Tight on veils keeps text crisp.
+
+### 12.3 Layout & surfaces
+- Grid: 12 columns (4 on mobile), 5vw margins, 24 px gutters, max-width 1440 px; aurora is a fixed full-viewport layer (z: scene) behind content.
+- Clearings: the layout passes a keep-clear rectangle per section to the shader so control points sit away from text columns; otherwise text goes on a veil.
+- Spacing (4 px base): 4 · 8 · 12 · 16 · 24 · 32 · 48 · 64 · 96 · 128 · 160.
+- Radius: `sm 2px` · `md 12px` (veils, inputs) · `lg 20px` (large frosted panels); pill for cursor and tags.
+- Border: 1 px hairline `rgba(11,59,50,.14)` (light) / `rgba(247,244,236,.16)` (dark) on veils.
+- Shadow: none on UI; bottle: contact shadow on light, faint reflected glow on dark; variant halo (two blobs, 60%) behind.
+- Texture: static 3–4% monochrome grain over every aurora (anti-banding); blobs 3–5 per scene (3 on mobile), 40–90vw, blur 80–140 px or a WebGL mesh shader with 4–6 control points.
+
+### 12.4 Components
+For each: anatomy, sizes, states (default · hover · focus-visible · active · disabled · loading), motion, a11y.
+- **Primary button**: master DESIGO® button: underlined label + travelling arrow inside a 1 px forest frame (mint `#BFE6D4` on dark), 48 px, padding 14 px 22 px, radius 2 px. States: default · hover frame draws itself (400 ms), nearest blob brightens 6%, magnetic ≤ 6 px · focus-visible 2 px forest ring (mint on dark) offset 3 px · active fill forest, milk label · disabled 40%, no glow · loading arrow replaced by a slow breathing dot (1.8 s). 44 px target.
+- **Secondary button**: label + arrow with 1 px underline; hover underline draws (240 ms); focus ring; active label green; disabled 40%; loading breathing dot.
+- **Text / arrow link**: Inter Tight with 1 px green underline (milk on dark); arrow travels 4 px; focus ring.
+- **Icon button (incl. menu)**: 44 px round veil button (cream 72% + blur), 1.25 px line glyph in forest (milk on dark), no glow on icons. Menu = two lines → X. Hover veil to 85% · focus ring · active forest fill · disabled 40%. `aria-label`, `aria-expanded`.
+- **Navigation bar (desktop + mobile menu) + DESIGO® logo loop**: transparent over aurora; becomes a veil (cream 72% / night 64%, blur 24 px, hairline) after 80 px scroll; 72 px (56 px mobile); logo left, links label style, RESERVE primary. Mobile: menu opens a full-screen veil over a static dawn gradient, links 32 px Fraunces 300, focus trapped, Esc closes. Logo loop: DESIGO® wordmark (vector SVG, never redrawn) runs the house black write / un-write loop: D · waves · S · I · G · O draw on (0–1.2 s, 480 ms each, 95 ms stagger) → hold to 3.0 s → un-write in reverse 3.0–4.2 s → rest to 4.6 s → repeat, infinite. Charcoal `#171918` on light grounds, white `#FFFFFF` on dark grounds, swapped by section theme only; never a colour change inside the loop. Reduced motion: static full wordmark. `aria-label="DESIGO® home"`; the animation is `aria-hidden`.
+- **Cursor (default · hover · ROTATE · EXPLORE · ENTER · VIEW · TRACE; touch fallback)**: default master 12 px ring plus a soft 160 px light (radial cream 18%, lerp 0.08) that brightens the aurora where you look · hover ring fills milk · ROTATE `DRAG` over the bottle · EXPLORE `EXPLORE` ring 48 px · ENTER `ENTER →` over variant lights · VIEW over photos (light off over photos) · TRACE ring snaps to map nodes. On touch the light follows the last touch and fades after 1.5 s. Touch / coarse pointer: custom cursor not rendered; native behaviour, and the ROTATE / EXPLORE hint appears once as a static chip beside the bottle and fades after the first drag.
+- **Card / panel / info block**: LegibilityVeil panel: cream 72% (night 64%) + blur 24 px, 1 px hairline, radius 20 px, padding 28 px. Hover (interactive) veil 80% + hairline 30%; focus ring. Text never directly on blobs.
+- **Badge / tag (incl. "pending verification" and "DEMO · not live data")**: Inter Tight 500 11 px upper, 24 px pill on a veil. Pending verification: dotted dawn-gold underline + `PENDING` tag (ink text). DEMO · not live data: forest pill, milk text, on the map and the lookup.
+- **Input + form field (Trace-your-milk bottle ID)**: veil input: 56 px, cream 72% + blur, 1 px forest hairline, radius 12 px, mono 16 px, placeholder `DSG-BTL-000001-3 (sample format)`. States: hover hairline 40% · focus-visible ring (forest / mint on charcoal) · error `#B3202A` hairline + message · disabled 40% · loading breathing dot. Visible `<label>`; DEMO pill beside.
+- **Divider / ornament**: a 1 px hairline that fades at both ends (gradient mask), or a thin dawn band (2 px, gold → mint) as chapter progress line.
+- **Section header (chapter number + title pattern)**: mono chapter number + Fraunces 300 title in a clearing + one lead line; the section palette shift starts as the header enters.
+- **Product info block (variant name, code, price-pending, size, descriptors)**: frosted veil: V-CODE (mono), name Fraunces, size `1 L glass · 900 g` and price from `desigo.ts` with dotted pending underline + PENDING tag, descriptors pending-marked, CTA `Trace this bottle →`.
+- **Bottle stage (Bottle / Bottle360Viewer framing)**: LitMilkBottle: variant-coloured aurora halo behind (base + light blobs, 60%), a cream radial behind the glass so milk looks lit from within, contact shadow on light / reflected glow on dark. Float 6 s ±10 px, tilt ±8°, halo parallax 12 px opposite. In Bottle360Viewer the halo stays fixed while the bottle turns.
+- **Trace node / timeline step**: deep forest ground with a mint aurora pooled behind; nodes crisp 12 px rings, path pulse `#7FE0B8` (≥ 1.6 s per hop). States idle · hover ring glow · focus mint ring · active veil panel opens · pending dashed ring. Map never blurred.
+
+### 12.5 Iconography & illustration
+- Icons: thin 1.25 px line, round caps, 24 px grid, forest on light / milk on dark; no glows.
+- Illustration: none; the aurora field is the only graphic and carries meaning (blue hour = collection, gold = sunrise delivery, milk = the product).
+- Photography: real dawn photos graded to the aurora palette (warm highlights, green-grey shadows), shown sharp; aurora never overlays photographs, labels or data.
+
+### 12.6 Motion tokens
+| Token | Value | Use |
+|---|---|---|
+| `--ease-out` | `cubic-bezier(.16,1,.3,1)` | reveals, UI entrances |
+| `--ease-inout` | `cubic-bezier(.65,0,.35,1)` | scene / chapter transitions |
+| `--ease-milk` | `cubic-bezier(.22,.9,.24,1)` | bottle travel, float settle |
+| `--dur-micro / reveal / scene` | 240 / 600 / 1200 ms | hover · content rise · palette crossfade |
+| `--au-drift` | Lissajous periods 18–40 s, amplitude ≤ 6% viewport | blob breathing (only autonomous motion) |
+| `--au-palette` | ≥ 1200 ms of scroll per change, `scrub: 1` | night → blue hour → dawn → milk |
+| `--au-cursor-light` | lerp 0.08, 160 px, fade 1.5 s on touch | cursor light |
+| `--au-float` | 6000 ms, ±10 px | bottle float |
+
+- Nothing pulses or flashes; drift pauses when the tab is hidden or off-screen.
+- One WebGL canvas per page at 0.5× resolution; CSS-blob fallback; static AVIF gradient per section (≤ 30 KB) for low memory / Save-Data.
+- Reduced motion (`prefers-reduced-motion: reduce`): all scroll-scrubbed motion off, content becomes a normal readable page, logo shows static, 360 auto-rotation stops, transitions become ≤ 200 ms opacity fades. Here also: no drift, no cursor light, palette changes as instant section states.
+
+### 12.7 AI image generation prompts
+House rules: no text/letters/logos/watermarks in images; generated images are illustration, texture or backdrop only; never
+generate the bottle or ghee jar; zebu cows only, shown with respect; append the style's tail prompt to every prompt.
+
+Style tail prompt (append to every prompt below): *Thar dawn aurora light, soft blurred veils of dawn gold #E9C98A, peach #F2C7A5, cream #FFF8E8, mint #BFE6D4, green-grey #A9C9C6 and DESIGO green #1E7A68 over milk white #F7F4EC or pre-dawn forest #08201B, very soft focus, static fine film grain, calm, premium, no purple, no pink, no magenta, no electric blue, no text, no watermark, no logo, no letters*
+
+Base negative prompt (prefix to every negative below): *text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated*
+
+| # | File path (web/public/desigo/styles/<slug>/...) | Size / ratio | Transparent? | Prompt | Negative prompt | Used in |
+|---|---|---|---|---|---|---|
+| 1 | `web/public/desigo/styles/aurora/hero-landscape.png` | 3200×2000 (16:10) | no | Pre-dawn sky over a flat desert horizon, soft gold and mint aurora-like light veils low on the horizon, deep forest-night #08201B above, heavy soft blur, fine static grain, large empty centre | purple, pink, magenta, electric blue, stars, northern lights green-purple, mountains, people | Hero (ch. 01) static fallback |
+| 2 | `web/public/desigo/styles/aurora/hero-portrait.png` | 1400×2400 (7:12) | no | Tall pre-dawn gradient: forest-night at the top, soft gold and mint light low, very blurred, grain, empty centre | purple, pink, stars, landscape detail | Hero mobile |
+| 3 | `web/public/desigo/styles/aurora/world-master-26.png` | 3200×2000 + 1400×2400 crop | no | Soft blurred light fields of bottle green #1F5C45, mint #BFE6D4 and a small dawn-gold #E9C98A glow on deep forest #0A2A20, aurora-like veils, fine grain, empty centre | purple, pink, blue, hard edges, objects | Four milks ch. 08, /milk/master-26 |
+| 4 | `web/public/desigo/styles/aurora/world-root-14.png` | 3200×2000 + 1400×2400 crop | no | Soft blurred light fields on a deep red-black #2A0A0D ground: crimson #B3202A at half strength, peach #F2C7A5 and dawn gold #E9C98A, red-earth dawn mood, fine grain, empty centre | pink, magenta, purple, fire, hard edges | Four milks ch. 08, /milk/root-14 |
+| 5 | `web/public/desigo/styles/aurora/world-base-3.png` | 3200×2000 + 1400×2400 crop | no | Light golden-hour aurora on a pale wheat #F8E4C2 ground: amber #E89A1C at 45%, cream #FFF8E8 and peach #F2C7A5, very soft, fine grain, empty centre | orange neon, purple, lens flare, hard edges | Four milks ch. 08, /milk/base-3 |
+| 6 | `web/public/desigo/styles/aurora/world-essential.png` | 3200×2000 + 1400×2400 crop | no | Quietest soft ivory morning light on #F4EDE2: faint sand #CDB89A and cream #FFF8E8 veils, almost uniform, fine grain | colour casts, purple, objects | Four milks ch. 08, /milk/essential |
+| 7 | `web/public/desigo/styles/aurora/milk-fold.png` | 3200×2000 | no | Cream and white soft forms folding over each other like milk poured slowly into milk, high-key, extremely soft, minimal and hypnotic, milk-white ground | splashes, glass, bottle, blue-white tint, hard edges | Milk as material ch. 09 (shader reference / fallback) |
+| 8 | `web/public/desigo/styles/aurora/trace-mint-pool.png` | 3200×2000 | no | Deep forest #0B3B32 ground with a soft pooled mint #BFE6D4 aurora glow left of centre, very blurred, calm, for behind a crisp map | lines, nodes, map shapes, purple, blue | Traceability ch. 06, /trace backdrop |
+| 9 | `web/public/desigo/styles/aurora/texture-grain.png` | 1024×1024, seamless | no | Seamless tileable monochrome photographic film grain on neutral mid-grey, fine and even | colour noise, scratches, banding, vignette | Static grain overlay (3–4%) |
+| 10 | `web/public/desigo/styles/aurora/sunrise-strip.png` | 2000×4000 (1:2) | no | Tall vertical sunrise gradient from pre-dawn forest-night at the top through blue-hour green-grey and dawn gold to milk white at the bottom, extremely soft, fine grain | sun disc, landscape, purple, pink | Final CTA ch. 15 (full sunrise) |
+| 11 | `web/public/desigo/styles/aurora/ghee-gold-light.png` | 3200×2000 | no | Warm gold aurora light (#E9C98A, #C8A96B, #F2C7A5) as if from a low sun, soft veils on a warm cream ground, empty centre | fire, candles, jars, purple | Ghee ch. 12, /ghee |
+
+### 12.8 Prototype acceptance checklist
+- [ ] Tokens from `specs/36_aurora.json` applied; no off-palette colours
+- [ ] Fonts self-hosted; correct weights load
+- [ ] All 12.4 components built with all states
+- [ ] Hero + bottle-story + one product world + trace chapter built in this style (the comparison set)
+- [ ] Mobile 360 px pass; reduced-motion pass; contrast checked
+- [ ] Claims rules respected (pending underline, no blocked claims, DEMO labels)
+- [ ] Screenshots: desktop 1440×900 ×4 + mobile 390×844 ×2 saved to docs/media/styles/aurora/
+- [ ] No purple/pink/magenta/electric blue; every aurora has a warm and a green tone
+- [ ] Contrast checked against the rendered background (sampled), not the token; Quality/Origin/Story run aurora-off

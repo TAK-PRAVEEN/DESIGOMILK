@@ -1,0 +1,251 @@
+{
+  "id": 27,
+  "slug": "gothic",
+  "name": "Gothic",
+  "priority": false,
+  "fit": 1,
+  "colors": {
+    "primary": "#C8A96B",
+    "onPrimary": "#120E0B",
+    "secondary": "#7A4E34",
+    "accent": "#F2B45A",
+    "bg": "#120E0B",
+    "surface": "#2A211A",
+    "text": "#F7F4EC",
+    "textMuted": "#AEAAA4",
+    "line": "rgba(200,169,107,.35)",
+    "ok": "#D9E8DF",
+    "pending": "#E8C77A",
+    "demo": "#4A0A0F"
+  },
+  "variants": {
+    "master-26": {
+      "base": "#1F5C45",
+      "deep": "#0A2A20",
+      "light": "#D9E8DF",
+      "world": "green stone hall #0A2A20/#1F5C45, cool dawn through jali"
+    },
+    "root-14": {
+      "base": "#B3202A",
+      "deep": "#4A0A0F",
+      "light": "#F3D9D6",
+      "world": "red sandstone chamber #4A0A0F/#B3202A, lamp left"
+    },
+    "base-3": {
+      "base": "#E89A1C",
+      "deep": "#5A3304",
+      "light": "#F8E4C2",
+      "world": "amber courtyard #5A3304/#E89A1C, low sun through arches"
+    },
+    "essential": {
+      "base": "#CDB89A",
+      "deep": "#4D4130",
+      "light": "#F4EDE2",
+      "world": "lime-plaster alcove #4D4130/#F4EDE2, daylight"
+    }
+  },
+  "fonts": {
+    "display": {
+      "family": "Cormorant Garamond",
+      "package": "@fontsource-variable/cormorant-garamond",
+      "weights": [
+        300,
+        400,
+        500,
+        600
+      ]
+    },
+    "body": {
+      "family": "Inter Tight",
+      "package": "@fontsource-variable/inter-tight",
+      "weights": [
+        400,
+        500
+      ]
+    },
+    "label": {
+      "family": "Cormorant SC",
+      "package": "@fontsource/cormorant-sc",
+      "weights": [
+        600
+      ]
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "package": "@fontsource-variable/jetbrains-mono",
+      "weights": [
+        400,
+        500
+      ]
+    },
+    "dropCap": {
+      "family": "UnifrakturCook",
+      "package": "@fontsource/unifrakturcook",
+      "weights": [
+        700
+      ]
+    },
+    "devanagari": {
+      "family": "Tiro Devanagari Hindi",
+      "package": "@fontsource/tiro-devanagari-hindi",
+      "weights": [
+        400
+      ]
+    }
+  },
+  "type": {
+    "display": "clamp(3.2rem, 2rem + 6vw, 8rem)",
+    "h1": "clamp(2.4rem, 1.6rem + 3.4vw, 4.5rem)",
+    "h2": "clamp(1.7rem, 1.3rem + 1.6vw, 2.6rem)",
+    "body": "clamp(1.0625rem, 1rem + .3vw, 1.1875rem)",
+    "label": ".85rem"
+  },
+  "radius": {
+    "sm": "0",
+    "md": "2px",
+    "lg": "cusped-arch mask",
+    "pill": "999px"
+  },
+  "shadow": {
+    "bottle": "0 18px 24px -14px rgba(0,0,0,.8) on stone ledge; backlight #F2B45A rim; screen-blend milk glow",
+    "panel": "inset 0 0 60px rgba(242,180,90,.06)"
+  },
+  "motion": {
+    "easeOut": "cubic-bezier(.22,.9,.24,1)",
+    "easeInOut": "cubic-bezier(.65,0,.35,1)",
+    "easeMilk": "cubic-bezier(.22,.9,.24,1)",
+    "durMicro": 240,
+    "durReveal": 900,
+    "durScene": 1200,
+    "portal": 1200,
+    "breathe": 4000,
+    "rule": 400
+  },
+  "button": {
+    "primary": {
+      "bg": "transparent",
+      "fg": "#F7F4EC",
+      "border": "1px solid #C8A96B, arch-topped",
+      "radius": "arch",
+      "padding": "16px 28px",
+      "hover": "frame draws 400ms + flame halo",
+      "active": "bg #C8A96B, fg #120E0B"
+    },
+    "secondary": {
+      "bg": "transparent",
+      "fg": "#F7F4EC",
+      "border": "none; 1px gold rule beneath",
+      "radius": "0",
+      "padding": "12px 0",
+      "hover": "rule 0 to 100% 400ms"
+    },
+    "link": {
+      "fg": "#F7F4EC",
+      "underline": "1px rgba(200,169,107,.5)",
+      "hover": "underline 100%, arrow +4px"
+    }
+  },
+  "logo": {
+    "loop": "write/un-write infinite",
+    "onLight": "#171918",
+    "onDark": "#FFFFFF",
+    "colourChange": false,
+    "cycleMs": 4600,
+    "drawMs": "0-1200 (480 each, 95 stagger)",
+    "holdUntilMs": 3000,
+    "unwriteMs": "3000-4200 (reverse order)",
+    "colorLight": "#171918",
+    "colorDark": "#F7F4EC"
+  },
+  "tailPrompt": "Jodhpur fort at lamplight, Rajput sandstone architecture, cusped jharokha arches and jali screens, warm black #120E0B, carved stone #2A211A, red sandstone #7A4E34, gold #C8A96B, single warm diya light #F2B45A, chiaroscuro, ceremonial, calm, premium, no text, no watermark, no logo, no letters",
+  "images": [
+    {
+      "file": "web/public/desigo/styles/gothic/hero-landscape.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Night interior of a Rajput sandstone palace gallery, one tall cusped jharokha arch at the centre framing soft warm darkness, carved jali screens either side, a single diya glow low at the left, deep chiaroscuro, empty arch centre, Jodhpur fort at lamplight, Rajput sandstone architecture, cusped jharokha arches and jali screens, warm black #120E0B, carved stone #2A211A, red sandstone #7A4E34, gold #C8A96B, single warm diya light #F2B45A, chiaroscuro, ceremonial, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, crosses, skulls, gargoyles, bats, cobwebs, church, European gothic cathedral, blood, horror, smoke, candles on altar",
+      "usedIn": "Hero (ch. 01), \"Bilona by lamplight\""
+    },
+    {
+      "file": "web/public/desigo/styles/gothic/hero-portrait.png",
+      "size": "1400×2400 (7:12)",
+      "transparent": false,
+      "prompt": "Tall narrow cusped sandstone arch in warm darkness, lamp glow from below left, carved stone surround, empty centre, Jodhpur fort at lamplight, Rajput sandstone architecture, cusped jharokha arches and jali screens, warm black #120E0B, carved stone #2A211A, red sandstone #7A4E34, gold #C8A96B, single warm diya light #F2B45A, chiaroscuro, ceremonial, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, crosses, skulls, gargoyles, church, horror",
+      "usedIn": "Hero mobile"
+    },
+    {
+      "file": "web/public/desigo/styles/gothic/world-master-26.png",
+      "size": "3200×2000 + 1400×2400 crop",
+      "transparent": false,
+      "prompt": "Green stone hall with carved leaf tracery, cool dawn light falling through a jali screen, deep green #0A2A20 shadows and bottle-green #1F5C45 stone, gold-lit carved edges, empty central niche, Jodhpur fort at lamplight, Rajput sandstone architecture, cusped jharokha arches and jali screens, warm black #120E0B, carved stone #2A211A, red sandstone #7A4E34, gold #C8A96B, single warm diya light #F2B45A, chiaroscuro, ceremonial, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, crosses, church, moss decay, horror",
+      "usedIn": "Four milks ch. 08, /milk/master-26"
+    },
+    {
+      "file": "web/public/desigo/styles/gothic/world-root-14.png",
+      "size": "3200×2000 + 1400×2400 crop",
+      "transparent": false,
+      "prompt": "Red sandstone chamber with oxblood drapery, a single oil-lamp glow at the left, deep #4A0A0F shadows and crimson #B3202A stone, empty arched niche, calm, Jodhpur fort at lamplight, Rajput sandstone architecture, cusped jharokha arches and jali screens, warm black #120E0B, carved stone #2A211A, red sandstone #7A4E34, gold #C8A96B, single warm diya light #F2B45A, chiaroscuro, ceremonial, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, blood, horror, crosses, skulls",
+      "usedIn": "Four milks ch. 08, /milk/root-14"
+    },
+    {
+      "file": "web/public/desigo/styles/gothic/world-base-3.png",
+      "size": "3200×2000 + 1400×2400 crop",
+      "transparent": false,
+      "prompt": "Amber courtyard at dusk seen through a row of cusped arches, low golden sun #E89A1C raking across sandstone, deep brown #5A3304 shadows, empty foreground, Jodhpur fort at lamplight, Rajput sandstone architecture, cusped jharokha arches and jali screens, warm black #120E0B, carved stone #2A211A, red sandstone #7A4E34, gold #C8A96B, single warm diya light #F2B45A, chiaroscuro, ceremonial, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, people, crosses, church, fire",
+      "usedIn": "Four milks ch. 08, /milk/base-3"
+    },
+    {
+      "file": "web/public/desigo/styles/gothic/world-essential.png",
+      "size": "3200×2000 + 1400×2400 crop",
+      "transparent": false,
+      "prompt": "Plain lime-plaster alcove with a cusped arch, diffuse soft daylight, warm ivory #F4EDE2 walls and taupe #4D4130 shadows, calm, empty, Jodhpur fort at lamplight, Rajput sandstone architecture, cusped jharokha arches and jali screens, warm black #120E0B, carved stone #2A211A, red sandstone #7A4E34, gold #C8A96B, single warm diya light #F2B45A, chiaroscuro, ceremonial, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, candles, crosses, dark horror mood",
+      "usedIn": "Four milks ch. 08, /milk/essential"
+    },
+    {
+      "file": "web/public/desigo/styles/gothic/trace-engraved.png",
+      "size": "3000×2000",
+      "transparent": true,
+      "prompt": "Fine gold engraved line network connecting small circular nodes from scattered points into one central hub, like incised inlay on stone, isolated on transparent background, Jodhpur fort at lamplight, Rajput sandstone architecture, cusped jharokha arches and jali screens, warm black #120E0B, carved stone #2A211A, red sandstone #7A4E34, gold #C8A96B, single warm diya light #F2B45A, chiaroscuro, ceremonial, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, map labels, borders, occult symbols, pentagram",
+      "usedIn": "Traceability ch. 06, /trace (EngravedTraceMap)"
+    },
+    {
+      "file": "web/public/desigo/styles/gothic/journey-arcade.png",
+      "size": "3600×1200 (3:1)",
+      "transparent": false,
+      "prompt": "Long horizontal corridor of seven identical cusped sandstone arches in a row, warm lamp light, a thin gold line inlaid along the stone floor, each arch opening empty, Jodhpur fort at lamplight, Rajput sandstone architecture, cusped jharokha arches and jali screens, warm black #120E0B, carved stone #2A211A, red sandstone #7A4E34, gold #C8A96B, single warm diya light #F2B45A, chiaroscuro, ceremonial, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, people, crosses, church nave, statues",
+      "usedIn": "Cow → bottle ch. 03 (ArcadeTrack)"
+    },
+    {
+      "file": "web/public/desigo/styles/gothic/texture-sandstone.png",
+      "size": "2400×2400, seamless",
+      "transparent": false,
+      "prompt": "Seamless tileable texture of carved Jodhpur red sandstone in deep shadow, fine chisel marks, warm dark brown, flat even light, Jodhpur fort at lamplight, Rajput sandstone architecture, cusped jharokha arches and jali screens, warm black #120E0B, carved stone #2A211A, red sandstone #7A4E34, gold #C8A96B, single warm diya light #F2B45A, chiaroscuro, ceremonial, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, cracks, moss, carvings of figures, vignette",
+      "usedIn": "StoneTablet texture (6–10%)"
+    },
+    {
+      "file": "web/public/desigo/styles/gothic/arch-frame.png",
+      "size": "1600×2560 (5:8)",
+      "transparent": true,
+      "prompt": "Ornamental cusped jharokha arch frame carved in pale sandstone, front view, the arch opening and the surroundings fully transparent, crisp edges, Jodhpur fort at lamplight, Rajput sandstone architecture, cusped jharokha arches and jali screens, warm black #120E0B, carved stone #2A211A, red sandstone #7A4E34, gold #C8A96B, single warm diya light #F2B45A, chiaroscuro, ceremonial, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, church window, stained glass, crosses, figures",
+      "usedIn": "ArchFrame mask / portals"
+    },
+    {
+      "file": "web/public/desigo/styles/gothic/ghee-lamplight.png",
+      "size": "3200×2000",
+      "transparent": false,
+      "prompt": "A wooden bilona churn in an earthen pot beside a row of small clay diyas with warm flames, in a sandstone niche, low-key chiaroscuro, empty space at the right, Jodhpur fort at lamplight, Rajput sandstone architecture, cusped jharokha arches and jali screens, warm black #120E0B, carved stone #2A211A, red sandstone #7A4E34, gold #C8A96B, single warm diya light #F2B45A, chiaroscuro, ceremonial, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, ghee jar, altar, idols, smoke, fire hazard",
+      "usedIn": "Ghee ch. 12, /ghee campaign"
+    }
+  ]
+}

@@ -85,11 +85,13 @@ and save as `breeds/line/<name>.png`.
 | F1 | `technology/grid-horizon.png` | 3600×2000 | Dark forest-green #07211C void with a faint glowing mint #7FE0B8 perspective grid receding to a horizon, thin luminous data lines curving across, very minimal, deep, no text |
 | F2 | `technology/node-map.png` | 3000×2000, transparent | Abstract network of small glowing nodes connected by thin mint lines, loosely shaped like a map of farms feeding into one hub, transparent background, no text |
 
-## G. Per-style hero key art (only for the styles we prototype) — `styles/<style>/hero.png`
+## G. Per-style hero key art (only for the styles we prototype)
+The full prompt sets for all 55 styles are in each style document, section 12.7, and in `docs/design-styles/specs/*.json`.
+ — `styles/<style>/hero.png`
 3200×2000 plus a 1400×2400 portrait. Each one is the empty environment the bottle floats in. Leave the centre empty.
 | Style | Prompt core |
 |---|---|
-| Wabi-Sabi | Grey handmade paper with a large faded Devanagari letter form in pale grey, a cracked terracotta kulhad bowl at lower right, soft side light, one red ink seal mark, vast negative space |
+| Wabi-Sabi | Grey handmade Sanganer paper with soft fibres and a faint torn edge, gentle side light, one small abstract red ink mark, vast negative space (vessels are photographed for real, and Devanagari is set in code, not generated) |
 | Surrealism | Endless calm sea of milk under a pale sky, a single distant khejri tree standing in the milk, soft dreamlike light, Magritte-inspired, empty center |
 | Ethereal / Aurora | Soft drifting veils of pearl, sage and pale-gold light like an aurora over a dawn field, very soft focus, glowing, empty center |
 | Victorian | Ornate Art Nouveau frame of vines, wheat ears and lotus in forest green and gold, aged paper inside, empty oval center (frame only, transparent center) |

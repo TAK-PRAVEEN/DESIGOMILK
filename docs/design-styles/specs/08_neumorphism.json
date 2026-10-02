@@ -1,0 +1,235 @@
+{
+  "id": 8,
+  "slug": "neumorphism",
+  "name": "Neumorphism",
+  "priority": false,
+  "fit": 2,
+  "colors": {
+    "primary": "#1E7A68",
+    "onPrimary": "#F7F4EC",
+    "secondary": "#1F2321",
+    "accent": "#7FE0B8",
+    "bg": "#F7F4EC",
+    "surface": "#EEEAE0",
+    "text": "#1E211F",
+    "textMuted": "#4D504C",
+    "line": "#857D70",
+    "ok": "#1F5C45",
+    "pending": "#7A5A12",
+    "demo": "#171918"
+  },
+  "variants": {
+    "master-26": {
+      "base": "#1F5C45",
+      "deep": "#0A2A20",
+      "light": "#D9E8DF"
+    },
+    "root-14": {
+      "base": "#B3202A",
+      "deep": "#4A0A0F",
+      "light": "#F3D9D6"
+    },
+    "base-3": {
+      "base": "#E89A1C",
+      "deep": "#5A3304",
+      "light": "#F8E4C2"
+    },
+    "essential": {
+      "base": "#CDB89A",
+      "deep": "#4D4130",
+      "light": "#F4EDE2"
+    }
+  },
+  "fonts": {
+    "display": {
+      "family": "Manrope",
+      "package": "@fontsource-variable/manrope",
+      "weights": [
+        300,
+        600
+      ]
+    },
+    "body": {
+      "family": "Manrope",
+      "package": "@fontsource-variable/manrope",
+      "weights": [
+        400,
+        500
+      ]
+    },
+    "label": {
+      "family": "Manrope",
+      "package": "@fontsource-variable/manrope",
+      "weights": [
+        600
+      ]
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "package": "@fontsource-variable/jetbrains-mono",
+      "weights": [
+        500
+      ]
+    },
+    "devanagari": {
+      "family": "Noto Sans Devanagari",
+      "package": "@fontsource-variable/noto-sans-devanagari",
+      "weights": [
+        400,
+        600
+      ]
+    },
+    "accent": {
+      "family": "Fraunces",
+      "package": "@fontsource-variable/fraunces",
+      "weights": [
+        300
+      ],
+      "style": "italic"
+    }
+  },
+  "type": {
+    "display": "clamp(3rem, 8vw, 8rem)",
+    "h1": "clamp(2.4rem, 4.6vw, 4.5rem)",
+    "h2": "clamp(1.6rem, 2.6vw, 2.5rem)",
+    "body": "clamp(1rem, 0.95rem + 0.2vw, 1.125rem)",
+    "label": "0.6875rem"
+  },
+  "radius": {
+    "sm": "18px",
+    "md": "28px",
+    "lg": "999px"
+  },
+  "shadow": {
+    "bottle": "real contact ellipse under glass + pedestal 8px 8px 20px rgba(201,194,178,.70), -8px -8px 20px rgba(255,255,255,.85)",
+    "panel": "raised 8px 8px 20px rgba(201,194,178,.70), -8px -8px 20px rgba(255,255,255,.85); pressed inset 6px 6px 12px rgba(201,194,178,.70), inset -6px -6px 12px rgba(255,255,255,.85)"
+  },
+  "motion": {
+    "easeOut": "cubic-bezier(.16,1,.3,1)",
+    "easeInOut": "cubic-bezier(.65,0,.35,1)",
+    "durMicro": 160,
+    "durReveal": 600,
+    "durScene": 900,
+    "easePress": "cubic-bezier(.2,.8,.2,1)",
+    "durRelease": 240
+  },
+  "button": {
+    "primary": {
+      "bg": "#EEEAE0",
+      "fg": "#1E211F",
+      "border": "1px #857D70",
+      "radius": "18px",
+      "padding": "0 28px; height 52px",
+      "shadow": "raised",
+      "hover": "shadow +2px; active pressed inset",
+      "ctaVariant": {
+        "bg": "#1E7A68",
+        "fg": "#F7F4EC"
+      }
+    },
+    "secondary": {
+      "bg": "#EEEAE0",
+      "fg": "#1E211F",
+      "border": "1px #857D70",
+      "radius": "18px",
+      "padding": "0 24px; height 48px",
+      "hover": "gains raised shadow"
+    },
+    "link": {
+      "fg": "#1E211F",
+      "underline": "1px",
+      "hover": "underline green, arrow +8px"
+    }
+  },
+  "images": [
+    {
+      "file": "web/public/desigo/styles/neumorphism/hero.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Seamless matte milk-coloured moulded surface with a single softly raised circular pedestal in the centre, empty, gentle top-left light and soft paired shadows, vast calm space, soft neumorphic moulded matte surface, single-colour ceramic-like material in chilled milk #EEEAE0, soft top-left key light with paired light and dark soft shadows, velvety 1.5 percent noise, Braun-like restraint, calm, clean, premium product-render quality, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, objects, buttons, devices",
+      "usedIn": "01 Hero, 15 Final CTA"
+    },
+    {
+      "file": "web/public/desigo/styles/neumorphism/hero-portrait.png",
+      "size": "1400×2400 (7:12)",
+      "transparent": false,
+      "prompt": "Vertical matte milk-coloured moulded surface with one softly raised circular pedestal at 60 percent height and a small circular dial shape moulded below it, empty, soft neumorphic moulded matte surface, single-colour ceramic-like material in chilled milk #EEEAE0, soft top-left key light with paired light and dark soft shadows, velvety 1.5 percent noise, Braun-like restraint, calm, clean, premium product-render quality, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, objects, markings",
+      "usedIn": "01 Hero mobile"
+    },
+    {
+      "file": "web/public/desigo/styles/neumorphism/worlds/master-26.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "Matte moulded surface tinted pale green #D9E8DF with a softly raised empty circular pedestal, a tiny deep green #1F5C45 indicator light glowing at its edge, soft neumorphic moulded matte surface, single-colour ceramic-like material in chilled milk #EEEAE0, soft top-left key light with paired light and dark soft shadows, velvety 1.5 percent noise, Braun-like restraint, calm, clean, premium product-render quality, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, objects, text",
+      "usedIn": "08 Four milks · /milk/master-26"
+    },
+    {
+      "file": "web/public/desigo/styles/neumorphism/worlds/root-14.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "Matte moulded surface tinted pale rose #F3D9D6 with a softly raised empty circular pedestal, a tiny red #B3202A indicator light at its edge, soft neumorphic moulded matte surface, single-colour ceramic-like material in chilled milk #EEEAE0, soft top-left key light with paired light and dark soft shadows, velvety 1.5 percent noise, Braun-like restraint, calm, clean, premium product-render quality, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, objects, text",
+      "usedIn": "08 Four milks · /milk/root-14"
+    },
+    {
+      "file": "web/public/desigo/styles/neumorphism/worlds/base-3.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "Matte moulded surface tinted pale amber #F8E4C2 with a softly raised empty circular pedestal, a tiny amber #E89A1C indicator light at its edge, soft neumorphic moulded matte surface, single-colour ceramic-like material in chilled milk #EEEAE0, soft top-left key light with paired light and dark soft shadows, velvety 1.5 percent noise, Braun-like restraint, calm, clean, premium product-render quality, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, objects, text",
+      "usedIn": "08 Four milks · /milk/base-3"
+    },
+    {
+      "file": "web/public/desigo/styles/neumorphism/worlds/essential.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "Matte moulded surface in ivory #F4EDE2 with a softly raised empty circular pedestal, a tiny ivory indicator light with a thin dark ring at its edge, soft neumorphic moulded matte surface, single-colour ceramic-like material in chilled milk #EEEAE0, soft top-left key light with paired light and dark soft shadows, velvety 1.5 percent noise, Braun-like restraint, calm, clean, premium product-render quality, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, objects, text",
+      "usedIn": "08 Four milks · /milk/essential"
+    },
+    {
+      "file": "web/public/desigo/styles/neumorphism/journey/groove.png",
+      "size": "4800×1200 (horizontal)",
+      "transparent": false,
+      "prompt": "Top-down view of a matte milk-coloured surface with one long softly pressed-in groove channel running left to right and seven small raised round buttons along it, soft light, soft neumorphic moulded matte surface, single-colour ceramic-like material in chilled milk #EEEAE0, soft top-left key light with paired light and dark soft shadows, velvety 1.5 percent noise, Braun-like restraint, calm, clean, premium product-render quality, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, icons, labels, objects",
+      "usedIn": "03 Cow to bottle"
+    },
+    {
+      "file": "web/public/desigo/styles/neumorphism/trace/console.png",
+      "size": "3600×2000",
+      "transparent": false,
+      "prompt": "Dark charcoal #1F2321 matte moulded control surface with a pressed-in winding groove path and eight small raised round buttons, one tiny mint #7FE0B8 indicator light, soft paired shadows, soft neumorphic moulded matte surface, single-colour ceramic-like material in chilled milk #EEEAE0, soft top-left key light with paired light and dark soft shadows, velvety 1.5 percent noise, Braun-like restraint, calm, clean, premium product-render quality, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, screens, numbers, labels",
+      "usedIn": "06 Traceability, 13 Trace your milk"
+    },
+    {
+      "file": "web/public/desigo/styles/neumorphism/material/ripple.png",
+      "size": "3200×2000",
+      "transparent": false,
+      "prompt": "Top-down macro of a still milk surface with one slow concentric ripple, matte, soft overcast light, creamy white, soft neumorphic moulded matte surface, single-colour ceramic-like material in chilled milk #EEEAE0, soft top-left key light with paired light and dark soft shadows, velvety 1.5 percent noise, Braun-like restraint, calm, clean, premium product-render quality, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, splash, droplets, containers",
+      "usedIn": "09 Milk as material (ripple surface poster)"
+    },
+    {
+      "file": "web/public/desigo/styles/neumorphism/textures/velvet-noise.png",
+      "size": "1024×1024, seamless",
+      "transparent": false,
+      "prompt": "Seamless tileable extremely fine velvety matte noise on neutral warm light grey, even, soft neumorphic moulded matte surface, single-colour ceramic-like material in chilled milk #EEEAE0, soft top-left key light with paired light and dark soft shadows, velvety 1.5 percent noise, Braun-like restraint, calm, clean, premium product-render quality, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, patterns, banding",
+      "usedIn": "surface noise overlay (1.5%)"
+    }
+  ],
+  "colorsDark": {
+    "surface": "#1F2321",
+    "highlight": "#2A2F2C",
+    "shadow": "#141716",
+    "text": "#F7F4EC",
+    "textMuted": "#B9BFBB",
+    "line": "#6E7671",
+    "focus": "#7FE0B8"
+  }
+}

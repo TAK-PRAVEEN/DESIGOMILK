@@ -1,0 +1,261 @@
+{
+  "id": 43,
+  "slug": "envelope-reveal",
+  "name": "Envelope Reveal",
+  "priority": true,
+  "fit": 3.5,
+  "colors": {
+    "primary": "#8E2A2A",
+    "onPrimary": "#F7F4EC",
+    "secondary": "#0B3B32",
+    "accent": "#C8A96B",
+    "bg": "#F7F4EC",
+    "surface": "#EDE4D0",
+    "text": "#1E211F",
+    "textMuted": "#5C5A52",
+    "line": "rgba(30,33,31,.14)",
+    "ok": "#1F5C45",
+    "pending": "#6B4C2A",
+    "demo": "#8E2A2A",
+    "focus": "#0B3B32"
+  },
+  "variants": {
+    "master-26": {
+      "base": "#1F5C45",
+      "deep": "#0A2A20",
+      "light": "#D9E8DF"
+    },
+    "root-14": {
+      "base": "#B3202A",
+      "deep": "#4A0A0F",
+      "light": "#F3D9D6"
+    },
+    "base-3": {
+      "base": "#E89A1C",
+      "deep": "#5A3304",
+      "light": "#F8E4C2"
+    },
+    "essential": {
+      "base": "#CDB89A",
+      "deep": "#4D4130",
+      "light": "#F4EDE2"
+    }
+  },
+  "fonts": {
+    "display": {
+      "family": "Fraunces",
+      "package": "@fontsource-variable/fraunces",
+      "weights": [
+        400
+      ],
+      "styles": [
+        "normal",
+        "italic"
+      ],
+      "axes": {
+        "opsz": 72
+      }
+    },
+    "body": {
+      "family": "Newsreader",
+      "package": "@fontsource-variable/newsreader",
+      "weights": [
+        400,
+        500
+      ],
+      "styles": [
+        "normal",
+        "italic"
+      ]
+    },
+    "ui": {
+      "family": "Inter Tight",
+      "package": "@fontsource-variable/inter-tight",
+      "weights": [
+        400,
+        500
+      ]
+    },
+    "label": {
+      "family": "Inter Tight",
+      "package": "@fontsource-variable/inter-tight",
+      "weights": [
+        500,
+        600
+      ]
+    },
+    "mono": {
+      "family": "IBM Plex Mono",
+      "package": "@fontsource/ibm-plex-mono",
+      "weights": [
+        400
+      ]
+    },
+    "address": {
+      "family": "Courier Prime",
+      "package": "@fontsource/courier-prime",
+      "weights": [
+        400
+      ]
+    },
+    "devanagari": {
+      "family": "Noto Serif Devanagari",
+      "package": "@fontsource-variable/noto-serif-devanagari",
+      "weights": [
+        400,
+        500
+      ]
+    },
+    "note": {
+      "family": "Caveat",
+      "package": "@fontsource-variable/caveat",
+      "weights": [
+        400
+      ]
+    }
+  },
+  "type": {
+    "display": "clamp(2.75rem, 1.4rem + 5.5vw, 7rem)",
+    "h1": "clamp(2.25rem, 1.5rem + 3vw, 4.25rem)",
+    "h2": "clamp(1.6rem, 1.2rem + 1.6vw, 2.5rem)",
+    "body": "clamp(1.125rem, 1.08rem + 0.2vw, 1.1875rem)",
+    "bodyUi": "1rem",
+    "label": "0.75rem"
+  },
+  "radius": {
+    "sm": "2px",
+    "md": "4px",
+    "lg": "999px"
+  },
+  "shadow": {
+    "bottle": "0 30px 30px -20px rgba(30,33,31,.28)",
+    "panel": "0 10px 24px -10px rgba(30,33,31,.25)",
+    "letter": "0 2px 6px rgba(30,33,31,.10)"
+  },
+  "motion": {
+    "easeOut": "cubic-bezier(.16,1,.3,1)",
+    "easeInOut": "cubic-bezier(.65,0,.35,1)",
+    "durMicro": 280,
+    "durReveal": 700,
+    "durScene": 1800,
+    "flapMs": 600,
+    "unfoldMs": 500,
+    "unfoldStaggerMs": 120,
+    "sealCrackMs": 120,
+    "floatPx": 6,
+    "floatMs": 6000,
+    "hopMs": 1500
+  },
+  "button": {
+    "primary": {
+      "bg": "transparent",
+      "fg": "#8E2A2A",
+      "radius": "0",
+      "padding": "14px 0",
+      "underline": "1px #8E2A2A",
+      "hover": "1px frame draws 400ms; arrow +6px; active = lac fill, milk label"
+    },
+    "secondary": {
+      "bg": "transparent",
+      "fg": "#0B3B32",
+      "radius": "0",
+      "padding": "14px 0",
+      "hover": "hand-drawn ink underline redraws"
+    },
+    "link": {
+      "fg": "#0B3B32",
+      "underline": "1px",
+      "hover": "hand-drawn ink underline 280ms"
+    }
+  },
+  "images": [
+    {
+      "file": "web/public/desigo/styles/envelope-reveal/hero.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "A closed cream kraft envelope with a lifted corner lying on a milk-white linen surface at lower right, soft morning window light, gentle shadows, lots of empty space at centre, soft morning window light, cream kraft envelope #E3D5B8 and archival paper #EDE4D0 on milk-white #F7F4EC linen, restrained lac-red #8E2A2A and gold #C8A96B accents, gentle paper texture, calm, stationery-grade, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, writing, postal stamps, postmarks, wax crest, flowers, ribbons",
+      "usedIn": "Hero desktop"
+    },
+    {
+      "file": "web/public/desigo/styles/envelope-reveal/hero-portrait.png",
+      "size": "1400×2400 (7:12)",
+      "transparent": false,
+      "prompt": "Portrait view of milk-white linen with a closed cream envelope at the bottom edge, corner lifted, soft morning light, empty upper two-thirds, soft morning window light, cream kraft envelope #E3D5B8 and archival paper #EDE4D0 on milk-white #F7F4EC linen, restrained lac-red #8E2A2A and gold #C8A96B accents, gentle paper texture, calm, stationery-grade, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, writing, stamps, postmarks",
+      "usedIn": "Hero mobile"
+    },
+    {
+      "file": "web/public/desigo/styles/envelope-reveal/lining-master-26.png",
+      "size": "2400×1600, seamless",
+      "transparent": false,
+      "prompt": "Envelope lining paper with a fine delicate leaf pattern in deep green #1F5C45 on dark green #0A2A20, seamless, soft morning window light, cream kraft envelope #E3D5B8 and archival paper #EDE4D0 on milk-white #F7F4EC linen, restrained lac-red #8E2A2A and gold #C8A96B accents, gentle paper texture, calm, stationery-grade, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, flowers, gold glitter",
+      "usedIn": "MASTER 26 envelope lining"
+    },
+    {
+      "file": "web/public/desigo/styles/envelope-reveal/lining-root-14.png",
+      "size": "2400×1600, seamless",
+      "transparent": false,
+      "prompt": "Plain envelope lining paper in crimson #B3202A with a very fine laid-paper texture, seamless, soft morning window light, cream kraft envelope #E3D5B8 and archival paper #EDE4D0 on milk-white #F7F4EC linen, restrained lac-red #8E2A2A and gold #C8A96B accents, gentle paper texture, calm, stationery-grade, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, pattern, glitter",
+      "usedIn": "ROOT 14 envelope lining"
+    },
+    {
+      "file": "web/public/desigo/styles/envelope-reveal/lining-base-3.png",
+      "size": "2400×1600, seamless",
+      "transparent": false,
+      "prompt": "Plain envelope lining paper in amber #E89A1C with a very fine laid-paper texture, seamless, soft morning window light, cream kraft envelope #E3D5B8 and archival paper #EDE4D0 on milk-white #F7F4EC linen, restrained lac-red #8E2A2A and gold #C8A96B accents, gentle paper texture, calm, stationery-grade, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, pattern, neon",
+      "usedIn": "BASE 3 envelope lining"
+    },
+    {
+      "file": "web/public/desigo/styles/envelope-reveal/lining-essential.png",
+      "size": "2400×1600, seamless",
+      "transparent": false,
+      "prompt": "Ivory #CDB89A envelope lining paper with a faint blind-embossed texture, no colour pattern, seamless, soft morning window light, cream kraft envelope #E3D5B8 and archival paper #EDE4D0 on milk-white #F7F4EC linen, restrained lac-red #8E2A2A and gold #C8A96B accents, gentle paper texture, calm, stationery-grade, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, pattern, print",
+      "usedIn": "ESSENTIAL envelope lining"
+    },
+    {
+      "file": "web/public/desigo/styles/envelope-reveal/folded-map.png",
+      "size": "3200×2000",
+      "transparent": false,
+      "prompt": "A blank folded paper map in four quadrants half-open on a milk-white surface, soft shadows on the folds, no lines or text, soft morning window light, cream kraft envelope #E3D5B8 and archival paper #EDE4D0 on milk-white #F7F4EC linen, restrained lac-red #8E2A2A and gold #C8A96B accents, gentle paper texture, calm, stationery-grade, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, roads, labels, compass, real map",
+      "usedIn": "Traceability (ch. 06), /trace"
+    },
+    {
+      "file": "web/public/desigo/styles/envelope-reveal/paper-letter.png",
+      "size": "2400×3200",
+      "transparent": false,
+      "prompt": "A blank sheet of cream handmade Indian paper #EDE4D0 with soft deckled edges and two gentle fold lines, top-down flat light, soft morning window light, cream kraft envelope #E3D5B8 and archival paper #EDE4D0 on milk-white #F7F4EC linen, restrained lac-red #8E2A2A and gold #C8A96B accents, gentle paper texture, calm, stationery-grade, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, writing, ruled lines, stains",
+      "usedIn": "LetterSheet texture"
+    },
+    {
+      "file": "web/public/desigo/styles/envelope-reveal/inland-letter.png",
+      "size": "3000×2000",
+      "transparent": false,
+      "prompt": "A pale blue #A9C3D6 folded aerogramme-style letter sheet, three panels partly unfolded, blank with faint ruled lines, top-down, soft light, soft morning window light, cream kraft envelope #E3D5B8 and archival paper #EDE4D0 on milk-white #F7F4EC linen, restrained lac-red #8E2A2A and gold #C8A96B accents, gentle paper texture, calm, stationery-grade, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, printing, India Post marks, stamps, logos",
+      "usedIn": "Chapter 02 inland letter"
+    },
+    {
+      "file": "web/public/desigo/styles/envelope-reveal/envelope-open.png",
+      "size": "2400×2000, transparent",
+      "transparent": true,
+      "prompt": "Front view of an open cream envelope with its triangular flap raised and an empty plain lining, soft light, transparent background, soft morning window light, cream kraft envelope #E3D5B8 and archival paper #EDE4D0 on milk-white #F7F4EC linen, restrained lac-red #8E2A2A and gold #C8A96B accents, gentle paper texture, calm, stationery-grade, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, writing, letters inside",
+      "usedIn": "Envelope component"
+    },
+    {
+      "file": "web/public/desigo/styles/envelope-reveal/gift-envelope-gold.png",
+      "size": "3200×2000",
+      "transparent": false,
+      "prompt": "A cream envelope with a warm gold foil-lined flap half-open, soft warm light, empty centre, soft morning window light, cream kraft envelope #E3D5B8 and archival paper #EDE4D0 on milk-white #F7F4EC linen, restrained lac-red #8E2A2A and gold #C8A96B accents, gentle paper texture, calm, stationery-grade, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, jar, glitter, ribbons, festive symbols",
+      "usedIn": "Ghee (ch. 12)"
+    }
+  ]
+}

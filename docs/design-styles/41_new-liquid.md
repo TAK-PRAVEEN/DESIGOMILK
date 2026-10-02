@@ -37,9 +37,10 @@ Reference points:
 | `--nl-meniscus` | `#E2D8C3` | The thin shadow line at a liquid edge |
 | `--nl-ground` | `#E9ECE8` | Cool page ground, so white milk reads against it |
 | `--nl-forest` | `#0B3B32` | Dark ground; milk on forest is the hero contrast |
-| `--nl-green` | `#1E7A68` | Links and focus |
+| `--nl-green` | `#1E7A68` | Links on milk surfaces and focus (4.4:1 on `--nl-ground`, so links on the ground use `--nl-forest`) |
 | `--nl-gold` | `#C8A96B` | Warm rim light on milk in the ghee and heritage chapters |
 | `--nl-ink` | `#171918` | Text |
+| `--nl-ink-muted` | `#5C5A52` | Muted text (5.8:1 on ground) |
 
 **Rule: the liquid is always milk-coloured.** Variant colours appear as the light, the ground and the reflection on the milk surface, never as the liquid itself.
 
@@ -149,7 +150,7 @@ Total ≈ 61 days.
 - Confirmation that DESIGO® is comfortable with "milk as interface" (some brands avoid splashes as wasteful). We propose: no puddles, no spills, only controlled pours and crowns.
 
 ### Images to generate (illustration/backdrop only; save under `web/public/desigo/styles/new-liquid/`)
-Append the house-style tail. No text, no logos, no bottles. Milk always pure creamy white.
+Append the house-style tail. No text, no logos, no bottles. Milk always creamy white.
 
 | # | File | Size | Prompt |
 |---|---|---|---|
@@ -184,3 +185,132 @@ Append the house-style tail. No text, no logos, no bottles. Milk always pure cre
 **Risks**: mess or waste associations, a slimy feel, mobile performance. Mitigation: a real pour shoot, heavy physics presets, device tiering, and the three-pour rule.
 
 **Best used for:** the sitewide interaction layer (cursor, buttons, transitions), Milk as Material (09), the final CTA (15) and the four-milk world transitions.
+
+---
+
+## 12. Build-ready spec sheet
+
+> Audit 2026-10-03: physics, palette and interaction language were complete. Missing: muted, pending and DEMO tokens, radius/shadow scale, component states, a portrait hero, a trace prompt, a texture and negatives. Added. Fixed: green `#1E7A68` links are only 4.4:1 on the cool ground `#E9ECE8`, so links on that ground are forest (green stays for links on milk and for the focus ring); "pure" removed from the image note in §9.
+
+### 12.1 Colour system
+| Role | Token | Hex | Use | Contrast note |
+|---|---|---|---|---|
+| Primary | --c-primary | `#0B3B32` | Forest: primary CTA, dark chapters (milk on forest) | 10.5:1 on bg; milk on forest is the hero contrast |
+| Primary ink | --c-on-primary | `#F7F4EC` | Milk on forest | 11.3:1 on primary |
+| Secondary | --c-secondary | `#1E7A68` | DESIGO green: links on milk, focus ring | 4.4:1 on bg below 4.5:1 on the cool ground, so green links appear only on milk surfaces (4.7:1); on the ground links are forest. Focus ring use is fine (≥ 3:1). |
+| Accent | --c-accent | `#C8A96B` | Gold rim light on milk in ghee and heritage chapters | 1.9:1 on bg; warm rim light on milk (ghee, heritage); decorative only |
+| Background | --c-bg | `#E9ECE8` | Cool page ground so white milk reads (`--nl-ground`) | — |
+| Surface | --c-surface | `#F7F4EC` | Milk: pool panels, inputs (`--nl-milk`) | text on surface 16.1:1 |
+| Text | --c-text | `#171918` | Ink (`--nl-ink`) | 14.8:1 on bg |
+| Muted text | --c-text-muted | `#5C5A52` | Captions and labels (new token `--nl-ink-muted`) | 5.8:1 on bg, 6.3:1 on surface |
+| Line | --c-line | `#E2D8C3` | Meniscus shadow line (`--nl-meniscus`), decorative | decorative (non-text) |
+| Success / Pending / Demo | --c-ok / --c-pending / --c-demo | `#1F5C45` / `#6B4C2A` / `#0B3B32` | Verified / pending dotted underline / forest DEMO label (always still, no liquid effects) | 6.6 / 6.5 / 10.5 :1 on `#E9ECE8` |
+
+Focus ring: `--c-focus` `#1E7A68` (4.4:1 on bg), 2 px solid, 3 px offset.
+
+Variant worlds in this style: MASTER 26 · ROOT 14 · BASE 3 · ESSENTIAL (base / deep / light hex for each).
+
+| Variant | Base | Deep | Light | Treatment in this style |
+|---|---|---|---|---|
+| MASTER 26 (V1+, green cap) | `#1F5C45` | `#0A2A20` | `#D9E8DF` | Ground `#0A2A20` → `#1F5C45`; green ambient + white key; canopy reflected in the milk; slowest ripples (3 s) |
+| ROOT 14 (V1, red cap) | `#B3202A` | `#4A0A0F` | `#F3D9D6` | Ground `#4A0A0F` → `#B3202A` at horizon; warm red rim on the milk edge; steady ripples |
+| BASE 3 (V2, amber cap) | `#E89A1C` | `#5A3304` | `#F8E4C2` | Ground `#5A3304` → `#E89A1C`; amber low sun, long highlight streak; gentle swell |
+| ESSENTIAL (V3, ivory cap) | `#CDB89A` | `#4D4130` | `#F4EDE2` | Ivory `#F4EDE2` ground; soft white light; almost-still surface |
+
+Dark-chapter inversion: forest chapters (end of 02, 06, 11, final CTA footer) use `#0B3B32` as ground with milk `#F7F4EC` text (11.3:1), muted `#B9C4BE`, links milk with underline, focus `#7FE0B8`; the milk stays white and becomes the hero contrast; the logo loop renders white. **The liquid is always milk-coloured** (gold only for ghee).
+
+### 12.2 Typography
+| Role | Font family | Source (npm @fontsource… / Google Fonts) | Weights / axes | Size (clamp) | Line-height | Tracking | Case |
+|---|---|---|---|---|---|---|---|
+| Display / hero | Fraunces | `@fontsource-variable/fraunces` (Google Fonts) | wght 300–500, opsz 144, SOFT 0 → 100 (animated) | clamp(3rem, 1.4rem + 7vw, 9rem) | 0.92 | −0.015em | UPPERCASE (hero), sentence elsewhere |
+| Headline H1–H2 | Fraunces | `@fontsource-variable/fraunces` (Google Fonts) | wght 400, opsz 72, SOFT 50 | H1 clamp(2.4rem, 1.5rem + 3.4vw, 5rem) · H2 clamp(1.75rem, 1.3rem + 1.6vw, 2.75rem) | 1.02 | −0.005em | Sentence |
+| Body | Inter Tight | `@fontsource-variable/inter-tight` (Google Fonts) | 400 / 500 | clamp(1rem, 0.96rem + 0.2vw, 1.0625rem) | 1.65 | 0 | Sentence |
+| Label / UI | Inter Tight | `@fontsource-variable/inter-tight` (Google Fonts) | 500 / 600 | 0.75rem | 1.4 | +0.16em | UPPERCASE |
+| Data / mono | JetBrains Mono | `@fontsource-variable/jetbrains-mono` (Google Fonts) | 400 | 0.8125rem | 1.5 | +0.02em | As data |
+| Devanagari (optional) | Noto Sans Devanagari | `@fontsource-variable/noto-sans-devanagari` (Google Fonts) | 400 / 500 | matches body | 1.7 | 0 | — |
+
+Licence: all fonts are SIL Open Font License 1.1 (OFL), self-hosted via Fontsource; subset Latin + Latin-ext (Devanagari subset only where used). Pairing rationale: Fraunces' SOFT axis lets letterforms visibly soften when liquid touches them; Inter Tight stays rigid so reading is never disturbed.
+
+### 12.3 Layout & surfaces
+- **Grid:** 12 columns (gutter 24 px, 16 px mobile), margins 6vw, max-width 1440 px; liquid is always anchored in a 'vessel' area (a section's bottom 40%, a button's bounding box, the cursor's 120 px radius) and never covers body text
+- **Spacing scale:** 4 px base: 4 · 8 · 12 · 16 · 24 · 32 · 48 · 64 · 96 · 128
+- **Radius scale:** sm 4 px (badges) · md 24 px (pool panels, inputs: soft liquid edge) · lg 999 px (drop cursor, droplets)
+- **Border style:** no hard borders on liquid; edges are a 2 px meniscus line `#E2D8C3` plus a 1 px `#FFFDF8` highlight on the inner top edge
+- **Shadow / elevation:** pool panels `0 1px 0 #FFFDF8 inset, 0 10px 30px -12px rgba(23,25,24,.18)`; the bottle has a softly distorted reflection below and a meniscus contact ring
+- **Texture / overlay:** SDF metaball shader milk (Lambert `#F7F4EC` → `#EFE6D2`, specular `#FFFDF8`, meniscus `#E2D8C3`), light from top-left everywhere; 2–4 px refraction on images only (never text); static images on low-power devices
+
+### 12.4 Components
+All interactive components share: focus ring `--c-focus` 2 px / 3 px offset · touch targets ≥ 44 px · disabled = 40% opacity, no motion, `aria-disabled` (unless stated) · hover effects only on `(hover:hover)` devices · motion from §12.6.
+
+- **Primary button** — Forest label (Inter Tight 600, 13 px, +0.16em, uppercase) on a 1 px liquid-thread underline with a droplet arrow head; 48 px tall, padding 14 px 0. **States:** default forest label + thread · hover the thread thickens 1 → 3 px and the cursor drop merges into the label's outline, which fills like a glass (320 ms) · focus-visible 2 px `#1E7A68` ring, 3 px offset · active fill completes: milk label on a forest fill · disabled 40% opacity, no hover motion, `aria-disabled="true"` · loading a droplet falls into the underline on a 1 s loop, `aria-busy`. **Motion:** spring stiffness 120 / damping 22 / mass 1.4. **A11y:** native `<a>`/`<button>`, hit area ≥ 44 px, label ≥ 4.5:1.
+- **Secondary button** — Ink label, 1 px thread underline, droplet arrow; 48 px tall. **States:** default ink label · hover thread thickens 1 → 2 px · focus-visible 2 px `#1E7A68` ring, 3 px offset · active label sinks 1 px · disabled 40% opacity, no hover motion, `aria-disabled="true"` · loading droplet loop. **Motion:** same spring. **A11y:** native `<a>`/`<button>`, hit area ≥ 44 px, label ≥ 4.5:1.
+- **Text / arrow link** — Forest link on the ground, green link on milk; 1 px underline. **States:** default underline · hover the underline 'wets' from the cursor side: fills forest on milk or milk on forest (300 ms) · focus-visible 2 px `#1E7A68` ring, 3 px offset · active fully filled · disabled 40% opacity, no hover motion, `aria-disabled="true"` · loading n/a (static element). **Motion:** 300 ms `--ease-out`. **A11y:** underline always present (never colour alone); arrow is `aria-hidden`.
+- **Icon button (incl. menu)** — 44 px hit area, rounded 1.75 px icon with droplet terminals; menu icon = two lines that merge into one droplet, then ×. **States:** default icon · hover the drop cursor merges into the icon outline · focus-visible 2 px `#1E7A68` ring, 3 px offset · active a small crown of 6 droplets (400 ms) · disabled 40% opacity, no hover motion, `aria-disabled="true"` · loading n/a (static element). **Motion:** path morph 300 ms (flubber). **A11y:** `aria-label` required; 44×44 px hit area; menu button carries `aria-expanded` + `aria-controls`; Esc closes the menu and returns focus.
+- **Navigation bar** (desktop + mobile menu) — 64 px bar, transparent on the ground then `#E9ECE8` at 92% + 8 px blur; links Inter Tight 500 13 px uppercase in forest; a 1 px meniscus line beneath ripples once when it crosses a light/dark chapter edge. Mobile: the menu fills the screen with milk from the bottom (700 ms meniscus fill) revealing Fraunces 2.25rem links. **States:** default forest links · hover underline wets · focus-visible 2 px `#1E7A68` ring, 3 px offset · active current page: 3 px milk thread beneath · disabled n/a · loading n/a. **Motion:** fill 700 ms, wave amplitude 12 px → 0. **A11y:** `<nav>` landmark after a skip link; logo is a link to `/` with `aria-label="DESIGO® home"`; the animated SVG is `aria-hidden`. **Logo:** The DESIGO® wordmark sits top-left (cap height 22 px desktop, 18 px mobile) and runs the brand's **black write / un-write loop** (charcoal `#171918` on light grounds, white `#FFFFFF` on dark grounds; the colour never changes during the loop). The loop pauses while the menu is open, when the tab is hidden, and under reduced motion (the full wordmark is shown static).
+- **Cursor** — 18 px milk drop with a faint meniscus edge and highlight, trailing two droplets that merge into it (metaball, 120 ms lag); over body text it becomes a thin caret-shaped drop; a click makes a 6-droplet crown (400 ms). **States:** default 18 px milk drop · hover drop stretches toward the link up to 1.4× along the axis · ROTATE drop flattens into a 64 px lens reading "drag · turn" · EXPLORE 48 px drop reading "explore"; images beneath refract 2 px · ENTER drop merges into the button outline, which fills (320 ms) · VIEW 40 px lens reading "view" · TRACE a milk bead reading "trace" that slides into the tube on click. **Touch fallback:** no custom cursor; a touch makes a single ripple; the bottle shows a "Drag to turn" hint; WebGL fluid off on mobile. **A11y:** decorative (`aria-hidden`, `pointer-events:none`); off for coarse pointers and reduced motion, where the system cursor returns; never the only cue.
+- **Card / panel / info block** — PoolPanel: milk `#F7F4EC`, radius 24 px, 2 px meniscus edge, 1 px top highlight, padding 32 px (24 px mobile). **States:** default still pool · hover surface ripples once (2 px) · focus-visible 2 px `#1E7A68` ring, 3 px offset · active returns · disabled 40% opacity, no hover motion, `aria-disabled="true"` · loading panel fills from the bottom (700 ms) as content arrives. **Motion:** spring presets. **A11y:** real heading inside; one primary action per card; text never sits on texture below 4.5:1.
+- **Badge / tag** — Rounded 4 px label, Inter Tight 600 11 px uppercase. **Pending verification**: earth-ink `#6B4C2A` + dotted underline on the claim. **DEMO · not live data**: forest fill with milk text; badges never ripple or drip (evidence stays still). **States:** default still label · hover none · focus-visible 2 px `#1E7A68` ring, 3 px offset · active n/a · disabled n/a · loading n/a (static element). **Motion:** fade 240 ms. **A11y:** status is real text ("Pending verification", "DEMO · not live data"); colour and shape are never the only signal.
+- **Input + form field (Trace-your-milk bottle ID)** — Milk pool field: 56 px, `#F7F4EC`, radius 24 px, meniscus edge; bottle ID in JetBrains Mono 18 px; label above; demo ID prefilled; error text earth-ink + icon. **States:** default still pool · hover edge ripples once · focus-visible 2 px `#1E7A68` ring, 3 px offset · active meniscus thickens to 3 px · disabled 40% opacity, no hover motion, `aria-disabled="true"` · loading a droplet travels down a vertical tube through each step; the result itself is still and crisp. **Motion:** droplet 1400 ms per step. **A11y:** visible `<label>`, hint and error linked with `aria-describedby`, error shown as text + icon, `autocomplete=off`, `spellcheck=false`.
+- **Divider / ornament** — MeniscusEdge: a live 2 px meniscus line between chapters that ripples once (amplitude 6 px, 900 ms) as you cross it. **States:** default still line · hover none · focus-visible 2 px `#1E7A68` ring, 3 px offset · active n/a · disabled n/a · loading n/a (static element). **Motion:** ripple 900 ms. **A11y:** `aria-hidden` (decorative) or `role=separator` between landmark sections.
+- **Section header** — Mono chapter number, Fraunces title revealed once per page by a milk fill rising inside the letters (SVG mask), SOFT 0 → 100 as it fills; one-line intro. **States:** default static · hover none · focus-visible 2 px `#1E7A68` ring, 3 px offset · active n/a · disabled n/a · loading n/a (static element). **Motion:** fill 700 ms. **A11y:** real `<h2>`; the chapter number is read as "Chapter 03"; decorative glyphs `aria-hidden`.
+- **Product info block** — PoolPanel at columns 9–12: V-code (mono), name in Fraunces H2, the `desigo.ts` line, price *pending* (hidden in production), size, descriptors *pending* with dotted underline. **States:** default still · hover descriptor shows its source note · focus-visible 2 px `#1E7A68` ring, 3 px offset · active n/a · disabled 40% opacity, no hover motion, `aria-disabled="true"` · loading pool fill. **Motion:** rows 60 ms stagger. **A11y:** facts in a `<dl>`; pending values carry visually-hidden "(pending verification)"; price hidden in production until approved.
+- **Bottle stage** — Bottle standing on a still milk surface (B1 plate or shader plane) with a softly distorted reflection and a meniscus contact ring; liquid is never animated inside the real glass. **States:** default idle float ±6 px over 6 s; the surface answers with a slow wide 2 px ripple at each low point · hover pointer tilt ±7°; a 1 px ripple under the pointer (desktop) · focus-visible 2 px `#1E7A68` ring, 3 px offset · active drag turns the viewer and a soft wave rolls away from the base in the drag direction · disabled n/a · loading still milk-surface image + `AssetSlot` pool. **Motion:** spring presets. **A11y:** Bottle360Viewer is `role=img` with an `aria-label`; ←/→ rotate 5°, Home resets; reduced motion stops idle float and auto-turn.
+- **Trace node / timeline step** — MilkTube: 6 px milk-filled tube on forest; nodes are 18 px milk pools along it; label Inter Tight 13 px + mono ID. **States:** default still pools · hover pool ripples · focus-visible 2 px `#1E7A68` ring, 3 px offset · active a bead of milk travels 1400 ms per hop and the node pool fills · disabled 40% opacity, no hover motion, `aria-disabled="true"` · loading tube fills progressively. **Motion:** hop 1400 ms. **A11y:** route is an ordered list `<ol>`; each node a `<button>` opening its panel; `aria-current="step"` on the active node.
+
+### 12.5 Iconography & illustration
+- **Icon style:** rounded 1.75 px line icons whose terminals are small round droplets; states morph by path interpolation
+- **Illustration technique:** shader milk (SDF metaballs) for UI; real high-speed pour photography or B1–B4 renders for chapters 09 and 15; crowns and ribbons only, never puddles
+- **Photo treatment:** clean neutral grade so milk stays white; refraction displacement only on images inside blobs (static on mobile); real farm photos meet a single meniscus section edge
+
+### 12.6 Motion tokens
+| Token | Value | Use |
+|---|---|---|
+| `--ease-out` | `cubic-bezier(.16,1,.3,1)` | non-liquid reveals |
+| `--ease-inout` | `cubic-bezier(.65,0,.35,1)` | scenes |
+| `--spring-milk` | stiffness 120, damping 22, mass 1.4 | all liquid motion (signature: heavy, no wobble past one cycle) |
+| `--dur-micro` | 320 ms | button fill, link wet |
+| `--dur-reveal` | 600 ms | reveals |
+| `--dur-scene` | 1200 ms | pour (500) + fill (700) |
+| `--ripple` | 6 px, 900 ms | meniscus edge crossing |
+| `--slosh` | 6° tilt, 900 ms | between variant worlds |
+| `--float` | ±6 px / 6000 ms | bottle idle |
+| `--hop` | 1400 ms | milk bead per node |
+| `--scrub` | 1 | scroll-linked surface rise |
+
+- **Signature transition:** the pour and the fill: a milk ribbon pours from top-right (500 ms), then fills the screen from the bottom with a meniscus wave (700 ms, 12 px → 0); at most three times on the home page (into 02, 08, 15)
+- **Scroll behaviour:** the hero surface rises slowly to swallow the hero; chapter 09 offers a stirrable WebGL milk field at quarter resolution, paused off-screen
+- **Reduced-motion fallback:** no physics, pours or fills; 300 ms cross-fades; static surfaces; static drop or the system cursor
+
+### 12.7 AI image generation prompts
+House rules: no text/letters/logos/watermarks in images; generated images are illustration, texture or backdrop only; never
+generate the bottle or ghee jar; zebu cows only, shown with respect; append the style's tail prompt to every prompt.
+
+**Tail prompt (append to every prompt below):** _fresh whole milk always creamy white, soft glossy highlights, thick slow controlled liquid, cool pale grey-green #E9ECE8 or deep forest #0B3B32 grounds, studio light from upper left, calm, premium, high-speed photography realism, no text, no watermark, no logo, no letters_
+
+**Base negative prompt (add to every row's negative):** _text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look_
+
+| # | File path (web/public/desigo/styles/<slug>/...) | Size / ratio | Transparent? | Prompt | Negative prompt | Used in |
+|---|---|---|---|---|---|---|
+| NL1 | `web/public/desigo/styles/new-liquid/hero-surface.png` | 3200×2000 (16:10) | No | Perfectly still surface of fresh whole milk seen at a low angle, creamy white with a soft glossy highlight, one slow wide ripple ring at the centre where an object would stand, cool pale grey-green background, empty centre | spills, splashes, drips, coloured milk, objects | Hero desktop |
+| NL2 | `web/public/desigo/styles/new-liquid/hero-surface-portrait.png` | 1400×2400 (7:12) | No | Still milk surface in portrait, low camera, the surface in the lower third with one wide ripple ring, cool pale grey-green background above, empty middle | spills, splashes, coloured milk | Hero mobile |
+| NL3 | `web/public/desigo/styles/new-liquid/surface-master-26.png` | 3200×2000 + 1400×2400 | No | Still white milk surface reflecting a deep green forest canopy #1F5C45 and #0A2A20 in soft distortion, white key light, empty centre | green milk, leaves floating | MASTER 26 world |
+| NL4 | `web/public/desigo/styles/new-liquid/surface-root-14.png` | 3200×2000 + 1400×2400 | No | Still white milk surface at dusk reflecting a crimson #B3202A horizon line, warm red rim light on the milk edge, empty centre | pink milk, red liquid, blood | ROOT 14 world |
+| NL5 | `web/public/desigo/styles/new-liquid/surface-base-3.png` | 3200×2000 + 1400×2400 | No | Still white milk surface reflecting a low amber #E89A1C sun as a soft wobbling ellipse, long golden highlight streak, empty centre | orange milk, flavoured milk | BASE 3 world |
+| NL6 | `web/public/desigo/styles/new-liquid/surface-essential.png` | 3200×2000 + 1400×2400 | No | Perfectly calm white milk surface in soft ivory #F4EDE2 light, no reflections, minimal, empty centre | ripples, objects | ESSENTIAL world |
+| NL7 | `web/public/desigo/styles/new-liquid/milk-tube-route.png` | 3600×2000, transparent | Yes (real alpha) | Top-down view of a thin smooth channel of white milk flowing through eight small round still milk pools arranged as a gentle route, crisp edges, soft highlights, isolated on transparent background | spills, splashes, labels, numbers | Traceability (ch. 06), Trace-your-milk |
+| NL8 | `web/public/desigo/styles/new-liquid/milk-macro.png` | 2048×2048, seamless | No | Seamless macro texture of a still milk surface with an extremely subtle creamy sheen, flat even light | bubbles, ripples, seams | Pool panel / input fill texture |
+| NL9 | `web/public/desigo/styles/new-liquid/meniscus-wave.png` | 3600×800, transparent | Yes (real alpha) | Side view of a gently waving milk surface edge, creamy white with a thin soft shadow line, isolated on transparent background | splash, droplets flying | Fill transition edge |
+| NL10 | `web/public/desigo/styles/new-liquid/droplet-crown.png` | 2000×2000, transparent | Yes (real alpha) | Small elegant milk crown splash with six round droplets, crisp, white, studio light, transparent background | puddle, mess, spray | Click crown, final CTA |
+| NL11 | `web/public/desigo/styles/new-liquid/ghee-pour.png` | 2400×3000, transparent | Yes (real alpha) | Slow thick golden ghee pouring from a small brass ladle in a smooth ribbon, warm light, isolated on transparent background | jar, drips on surfaces, oil splatter | Ghee (ch. 12) — the only non-white liquid |
+
+### 12.8 Prototype acceptance checklist
+- [ ] Tokens from `specs/41_new-liquid.json` applied; no off-palette colours
+- [ ] Fonts self-hosted; correct weights load
+- [ ] All 12.4 components built with all states
+- [ ] Hero + bottle-story + one product world + trace chapter built in this style (the comparison set)
+- [ ] Mobile 360 px pass; reduced-motion pass; contrast checked
+- [ ] Claims rules respected (pending underline, no blocked claims, DEMO labels)
+- [ ] Screenshots: desktop 1440×900 ×4 + mobile 390×844 ×2 saved to docs/media/styles/new-liquid/
+- [ ] Milk is milk-white in every world; gold liquid appears only in the ghee chapter
+- [ ] At most three pour/fill transitions on the home page; Quality and trace results are still
+- [ ] One WebGL context; device tiering turns all liquid into images on `deviceMemory ≤ 4`

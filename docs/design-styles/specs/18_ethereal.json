@@ -1,0 +1,227 @@
+{
+  "id": 18,
+  "slug": "ethereal",
+  "name": "Ethereal",
+  "priority": false,
+  "fit": 4,
+  "colors": {
+    "primary": "#0B3B32",
+    "onPrimary": "#F7F4EC",
+    "secondary": "#1E7A68",
+    "accent": "#E9D9B4",
+    "bg": "#F7F4EC",
+    "surface": "#EFE9DC",
+    "text": "#1E211F",
+    "textMuted": "#0F4A3F",
+    "line": "#C8A96B",
+    "ok": "#1E7A68",
+    "pending": "#8C6A43",
+    "demo": "#0B3B32"
+  },
+  "variants": {
+    "master-26": {
+      "base": "#1F5C45",
+      "deep": "#0A2A20",
+      "light": "#D9E8DF"
+    },
+    "root-14": {
+      "base": "#B3202A",
+      "deep": "#4A0A0F",
+      "light": "#F3D9D6"
+    },
+    "base-3": {
+      "base": "#E89A1C",
+      "deep": "#5A3304",
+      "light": "#F8E4C2"
+    },
+    "essential": {
+      "base": "#CDB89A",
+      "deep": "#4D4130",
+      "light": "#F4EDE2"
+    }
+  },
+  "fonts": {
+    "display": {
+      "family": "Cormorant Garamond",
+      "package": "@fontsource-variable/cormorant-garamond",
+      "weights": [
+        300
+      ]
+    },
+    "headline": {
+      "family": "Fraunces",
+      "package": "@fontsource-variable/fraunces",
+      "weights": [
+        250,
+        300
+      ]
+    },
+    "body": {
+      "family": "Manrope",
+      "package": "@fontsource-variable/manrope",
+      "weights": [
+        400,
+        500
+      ]
+    },
+    "label": {
+      "family": "Inter Tight",
+      "package": "@fontsource-variable/inter-tight",
+      "weights": [
+        500
+      ]
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "package": "@fontsource-variable/jetbrains-mono",
+      "weights": [
+        300
+      ]
+    },
+    "devanagari": {
+      "family": "Martel",
+      "package": "@fontsource/martel",
+      "weights": [
+        300,
+        400
+      ]
+    }
+  },
+  "type": {
+    "display": "clamp(3.5rem, 8vw, 8.5rem)",
+    "h1": "clamp(2.6rem, 5vw, 5rem)",
+    "h2": "clamp(1.8rem, 3vw, 3rem)",
+    "body": "clamp(1.0625rem, 1rem + 0.2vw, 1.125rem)",
+    "label": "0.72rem"
+  },
+  "radius": {
+    "sm": "2px",
+    "md": "2px",
+    "lg": "999px"
+  },
+  "shadow": {
+    "bottle": "contact ellipse 60% x 8% blur 18px rgba(30,33,31,.10) + alpha-edge rim light #FBF9F4",
+    "panel": "none (glow: radial-gradient behind, 0 0 80px rgba(233,217,180,.35))"
+  },
+  "motion": {
+    "easeOut": "cubic-bezier(.16,1,.3,1)",
+    "easeInOut": "cubic-bezier(.65,0,.35,1)",
+    "easeMilk": "cubic-bezier(.22,.9,.24,1)",
+    "durMicro": 240,
+    "durReveal": 1600,
+    "durScene": 900
+  },
+  "button": {
+    "primary": {
+      "bg": "transparent → #0B3B32 on active",
+      "fg": "#0B3B32",
+      "radius": "2px",
+      "padding": "14px 20px",
+      "hover": "hairline frame draws 600ms + inner glow, arrow +8px"
+    },
+    "secondary": {
+      "bg": "transparent",
+      "fg": "#1E211F",
+      "radius": "0",
+      "padding": "14px 0",
+      "hover": "glow underline 400ms"
+    },
+    "link": {
+      "bg": "transparent",
+      "fg": "#1E7A68",
+      "radius": "0",
+      "padding": "0",
+      "hover": "glow underline 400ms, arrow +6px"
+    }
+  },
+  "images": [
+    {
+      "file": "web/public/desigo/styles/ethereal/hero-landscape.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Soft drifting veils of pearl, sage and pale-gold light like an aurora over a dawn field in the Thar, faint khejri silhouettes in the far haze, glowing, empty centre, soft luminous dawn atmosphere, translucent veils of pearl light, very soft focus, warm milk white #F7F4EC and #FBF9F4 with blush #F3E6DE, sage #DCE7E0 and pale gold #E9D9B4 glows, Turrell-like breathable colour, calm and contemplative, large empty centre, no lens flare, no bokeh, no text, no watermark, no logo, no letters",
+      "negative": "sun rays clip-art, lens flare, religious light, angels, clouds shaped like objects, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Ch. 01 hero"
+    },
+    {
+      "file": "web/public/desigo/styles/ethereal/hero-portrait.png",
+      "size": "1400×2400 (7:12)",
+      "transparent": false,
+      "prompt": "Same dawn veils as a tall portrait with the faint horizon in the lowest fifth, empty glowing centre, soft luminous dawn atmosphere, translucent veils of pearl light, very soft focus, warm milk white #F7F4EC and #FBF9F4 with blush #F3E6DE, sage #DCE7E0 and pale gold #E9D9B4 glows, Turrell-like breathable colour, calm and contemplative, large empty centre, no lens flare, no bokeh, no text, no watermark, no logo, no letters",
+      "negative": "lens flare, rays, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Mobile hero"
+    },
+    {
+      "file": "web/public/desigo/styles/ethereal/worlds/master-26.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Sage mist #DCE7E0 in a forest at dawn with deep green #0A2A20 shadows softly at the edges, dappled canopy light, empty luminous clearing in the centre, soft luminous dawn atmosphere, translucent veils of pearl light, very soft focus, warm milk white #F7F4EC and #FBF9F4 with blush #F3E6DE, sage #DCE7E0 and pale gold #E9D9B4 glows, Turrell-like breathable colour, calm and contemplative, large empty centre, no lens flare, no bokeh, no text, no watermark, no logo, no letters",
+      "negative": "sharp leaves, named plants, lens flare, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Ch. 08 / /milk/master-26"
+    },
+    {
+      "file": "web/public/desigo/styles/ethereal/worlds/root-14.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Blush #F3D9D6 sunrise glow rising from a softly blurred red-earth horizon, warm floating dust motes, empty centre, soft luminous dawn atmosphere, translucent veils of pearl light, very soft focus, warm milk white #F7F4EC and #FBF9F4 with blush #F3E6DE, sage #DCE7E0 and pale gold #E9D9B4 glows, Turrell-like breathable colour, calm and contemplative, large empty centre, no lens flare, no bokeh, no text, no watermark, no logo, no letters",
+      "negative": "harsh sun disc, flare, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Ch. 08 / /milk/root-14"
+    },
+    {
+      "file": "web/public/desigo/styles/ethereal/worlds/base-3.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Golden-hour amber #F8E4C2 haze with long soft light shafts entering from the left over a blurred wheat field, gold motes, empty centre, soft luminous dawn atmosphere, translucent veils of pearl light, very soft focus, warm milk white #F7F4EC and #FBF9F4 with blush #F3E6DE, sage #DCE7E0 and pale gold #E9D9B4 glows, Turrell-like breathable colour, calm and contemplative, large empty centre, no lens flare, no bokeh, no text, no watermark, no logo, no letters",
+      "negative": "hard god rays, flare, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Ch. 08 / /milk/base-3"
+    },
+    {
+      "file": "web/public/desigo/styles/ethereal/worlds/essential.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Milk-on-milk glow with a single ivory #F4EDE2 halo of light in the centre, almost nothing else, airy, soft luminous dawn atmosphere, translucent veils of pearl light, very soft focus, warm milk white #F7F4EC and #FBF9F4 with blush #F3E6DE, sage #DCE7E0 and pale gold #E9D9B4 glows, Turrell-like breathable colour, calm and contemplative, large empty centre, no lens flare, no bokeh, no text, no watermark, no logo, no letters",
+      "negative": "objects, colour, texture, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Ch. 08 / /milk/essential"
+    },
+    {
+      "file": "web/public/desigo/styles/ethereal/journey/dawn-path.png",
+      "size": "4000×1600 (5:2)",
+      "transparent": false,
+      "prompt": "A soft path of light across a misty field at dawn, distant tiny zebu cows with humps grazing at left, the path dissolving into a pale village at right, very soft focus, soft luminous dawn atmosphere, translucent veils of pearl light, very soft focus, warm milk white #F7F4EC and #FBF9F4 with blush #F3E6DE, sage #DCE7E0 and pale gold #E9D9B4 glows, Turrell-like breathable colour, calm and contemplative, large empty centre, no lens flare, no bokeh, no text, no watermark, no logo, no letters",
+      "negative": "people's faces, vehicles, rays, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Ch. 03 cow → bottle backdrop"
+    },
+    {
+      "file": "web/public/desigo/styles/ethereal/trace/star-path.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Deep forest green #0B3B32 dusk sky with a gentle curved path of eight small soft glowing points of light, faint sage haze, soft luminous dawn atmosphere, translucent veils of pearl light, very soft focus, warm milk white #F7F4EC and #FBF9F4 with blush #F3E6DE, sage #DCE7E0 and pale gold #E9D9B4 glows, Turrell-like breathable colour, calm and contemplative, large empty centre, no lens flare, no bokeh, no text, no watermark, no logo, no letters",
+      "negative": "stars constellations shapes, sci-fi UI, lines with labels, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Ch. 06 traceability"
+    },
+    {
+      "file": "web/public/desigo/styles/ethereal/textures/mist-layer.png",
+      "size": "3000×1500 (2:1)",
+      "transparent": true,
+      "prompt": "A single large soft blurred band of warm milk-white mist, isolated on transparent background, very low opacity edges, soft luminous dawn atmosphere, translucent veils of pearl light, very soft focus, warm milk white #F7F4EC and #FBF9F4 with blush #F3E6DE, sage #DCE7E0 and pale gold #E9D9B4 glows, Turrell-like breathable colour, calm and contemplative, large empty centre, no lens flare, no bokeh, no text, no watermark, no logo, no letters",
+      "negative": "hard edges, shapes, clouds with faces, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "MistLayer (pre-blurred WebP)"
+    },
+    {
+      "file": "web/public/desigo/styles/ethereal/milk/backlit-ribbon.png",
+      "size": "3000×1500 (2:1)",
+      "transparent": true,
+      "prompt": "One long translucent ribbon of pouring milk curling like silk, backlit so its edges glow, isolated on transparent background, soft luminous dawn atmosphere, translucent veils of pearl light, very soft focus, warm milk white #F7F4EC and #FBF9F4 with blush #F3E6DE, sage #DCE7E0 and pale gold #E9D9B4 glows, Turrell-like breathable colour, calm and contemplative, large empty centre, no lens flare, no bokeh, no text, no watermark, no logo, no letters",
+      "negative": "splash crown, container, glass, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Ch. 09 milk as material"
+    },
+    {
+      "file": "web/public/desigo/styles/ethereal/ghee/warm-glow.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Warm honey-gold glow in a dim earthen interior, softly out-of-focus matka pots at the edges, empty luminous centre, soft luminous dawn atmosphere, translucent veils of pearl light, very soft focus, warm milk white #F7F4EC and #FBF9F4 with blush #F3E6DE, sage #DCE7E0 and pale gold #E9D9B4 glows, Turrell-like breathable colour, calm and contemplative, large empty centre, no lens flare, no bokeh, no text, no watermark, no logo, no letters",
+      "negative": "jar, bottle, flames, religious lamps, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Ch. 12 ghee backdrop"
+    }
+  ]
+}

@@ -1,0 +1,219 @@
+{
+  "id": 40,
+  "slug": "cutaway-world",
+  "name": "Cutaway World",
+  "priority": true,
+  "fit": 4,
+  "colors": {
+    "primary": "#1E7A68",
+    "onPrimary": "#F7F4EC",
+    "secondary": "#0B3B32",
+    "accent": "#CFE3E6",
+    "bg": "#F7F4EC",
+    "surface": "#EFE9DC",
+    "text": "#171918",
+    "textMuted": "#5C5A52",
+    "line": "rgba(11,59,50,.30)",
+    "ok": "#1F5C45",
+    "pending": "#6B4C2A",
+    "demo": "#0B3B32",
+    "focus": "#0B3B32"
+  },
+  "variants": {
+    "master-26": {
+      "base": "#1F5C45",
+      "deep": "#0A2A20",
+      "light": "#D9E8DF"
+    },
+    "root-14": {
+      "base": "#B3202A",
+      "deep": "#4A0A0F",
+      "light": "#F3D9D6"
+    },
+    "base-3": {
+      "base": "#E89A1C",
+      "deep": "#5A3304",
+      "light": "#F8E4C2"
+    },
+    "essential": {
+      "base": "#CDB89A",
+      "deep": "#4D4130",
+      "light": "#F4EDE2"
+    }
+  },
+  "fonts": {
+    "display": {
+      "family": "Fraunces",
+      "package": "@fontsource-variable/fraunces",
+      "weights": [
+        400
+      ],
+      "axes": {
+        "opsz": 96
+      }
+    },
+    "body": {
+      "family": "Inter Tight",
+      "package": "@fontsource-variable/inter-tight",
+      "weights": [
+        400,
+        500
+      ]
+    },
+    "label": {
+      "family": "IBM Plex Sans Condensed",
+      "package": "@fontsource/ibm-plex-sans-condensed",
+      "weights": [
+        500,
+        600
+      ]
+    },
+    "mono": {
+      "family": "IBM Plex Mono",
+      "package": "@fontsource/ibm-plex-mono",
+      "weights": [
+        400,
+        500
+      ]
+    },
+    "devanagari": {
+      "family": "Noto Sans Devanagari",
+      "package": "@fontsource-variable/noto-sans-devanagari",
+      "weights": [
+        400,
+        500
+      ]
+    }
+  },
+  "type": {
+    "display": "clamp(2.75rem, 1.4rem + 5.5vw, 7rem)",
+    "h1": "clamp(2.25rem, 1.5rem + 3vw, 4.5rem)",
+    "h2": "clamp(1.6rem, 1.2rem + 1.6vw, 2.5rem)",
+    "body": "1rem",
+    "label": "0.8125rem"
+  },
+  "radius": {
+    "sm": "0px",
+    "md": "4px",
+    "lg": "999px"
+  },
+  "shadow": {
+    "bottle": "0 34px 34px -22px rgba(23,25,24,.30), 0 2px 6px rgba(23,25,24,.15)",
+    "panel": "0 12px 32px rgba(11,59,50,.18)"
+  },
+  "motion": {
+    "easeOut": "cubic-bezier(.16,1,.3,1)",
+    "easeInOut": "cubic-bezier(.65,0,.35,1)",
+    "easeSignature": "cubic-bezier(.22,.9,.24,1)",
+    "durMicro": 240,
+    "durReveal": 500,
+    "durScene": 900,
+    "settleMs": 600,
+    "hopMs": 1500,
+    "zoomScale": 2.4
+  },
+  "button": {
+    "primary": {
+      "bg": "transparent",
+      "fg": "#1E7A68",
+      "radius": "0",
+      "padding": "14px 0",
+      "underline": "1px #1E7A68",
+      "hover": "1px ticked frame draws 400ms; arrow +6px"
+    },
+    "secondary": {
+      "bg": "transparent",
+      "fg": "#0B3B32",
+      "radius": "0",
+      "padding": "14px 0",
+      "hover": "hairline traces with end tick"
+    },
+    "link": {
+      "fg": "#0B3B32",
+      "underline": "1px",
+      "hover": "leader-line underline with 6px end tick"
+    }
+  },
+  "images": [
+    {
+      "file": "web/public/desigo/styles/cutaway-world/hero-island.png",
+      "size": "3000×2400, transparent",
+      "transparent": true,
+      "prompt": "Isometric floating island diorama cut in cross-section, showing a small Rajasthani farm with Indian zebu cows (hump, dewlap) and a khejri tree, a small steel milk chiller room, a clean small dairy plant and a simple home, soil strata visible in the cut underside with hatch lines, transparent background, precise isometric cutaway illustration, true 30-degree isometric projection, one light from top-left, two tones per material and pale hatched section faces, muted palette of milk white #F7F4EC, section cream #EFE9DC, earth #8C6A43, leaf green #4F8A6E and forest line work #0B3B32, calm editorial vector, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, perspective, game UI, candy colours, screens, sensors, bottle",
+      "usedIn": "Hero desktop"
+    },
+    {
+      "file": "web/public/desigo/styles/cutaway-world/hero-island-portrait.png",
+      "size": "1400×2400, transparent",
+      "transparent": true,
+      "prompt": "Tall isometric island stacked vertically: farm on top, chiller and plant in the middle, a home at the bottom, cut section showing soil strata, transparent background, precise isometric cutaway illustration, true 30-degree isometric projection, one light from top-left, two tones per material and pale hatched section faces, muted palette of milk white #F7F4EC, section cream #EFE9DC, earth #8C6A43, leaf green #4F8A6E and forest line work #0B3B32, calm editorial vector, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, perspective, game UI, screens, bottle",
+      "usedIn": "Hero mobile"
+    },
+    {
+      "file": "web/public/desigo/styles/cutaway-world/slice-master-26.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "Isometric cross-section slice of a grazing landscape with a tree canopy and visible roots and soil, deep bottle greens #1F5C45 and #0A2A20, a small feed store room, empty space at right, precise isometric cutaway illustration, true 30-degree isometric projection, one light from top-left, two tones per material and pale hatched section faces, muted palette of milk white #F7F4EC, section cream #EFE9DC, earth #8C6A43, leaf green #4F8A6E and forest line work #0B3B32, calm editorial vector, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, labels, numbers, herbs counted, game style",
+      "usedIn": "MASTER 26 world"
+    },
+    {
+      "file": "web/public/desigo/styles/cutaway-world/slice-root-14.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "Isometric cross-section slice of red earth strata in crimson #B3202A to oxblood #4A0A0F under open grazing land, empty space at right, precise isometric cutaway illustration, true 30-degree isometric projection, one light from top-left, two tones per material and pale hatched section faces, muted palette of milk white #F7F4EC, section cream #EFE9DC, earth #8C6A43, leaf green #4F8A6E and forest line work #0B3B32, calm editorial vector, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, lava, game style",
+      "usedIn": "ROOT 14 world"
+    },
+    {
+      "file": "web/public/desigo/styles/cutaway-world/slice-base-3.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "Isometric cross-section slice of a golden wheat field with a low sun, amber #E89A1C and brown #5A3304, empty space at right, precise isometric cutaway illustration, true 30-degree isometric projection, one light from top-left, two tones per material and pale hatched section faces, muted palette of milk white #F7F4EC, section cream #EFE9DC, earth #8C6A43, leaf green #4F8A6E and forest line work #0B3B32, calm editorial vector, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, neon, game style",
+      "usedIn": "BASE 3 world"
+    },
+    {
+      "file": "web/public/desigo/styles/cutaway-world/slice-essential.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "Minimal isometric cross-section slice with one shed, one field and one path in ivory #F4EDE2 and taupe #4D4130, very few objects, empty space at right, precise isometric cutaway illustration, true 30-degree isometric projection, one light from top-left, two tones per material and pale hatched section faces, muted palette of milk white #F7F4EC, section cream #EFE9DC, earth #8C6A43, leaf green #4F8A6E and forest line work #0B3B32, calm editorial vector, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, clutter, people",
+      "usedIn": "ESSENTIAL world"
+    },
+    {
+      "file": "web/public/desigo/styles/cutaway-world/strip-concept.png",
+      "size": "6000×1600",
+      "transparent": false,
+      "prompt": "Long horizontal isometric cutaway showing a continuous milk journey from farm to collection point to chiller to transport van to dairy plant to bottling room to a home doorstep, a thin white line running through all rooms, small faceless respectful figures in caps and gloves inside the plant, precise isometric cutaway illustration, true 30-degree isometric projection, one light from top-left, two tones per material and pale hatched section faces, muted palette of milk white #F7F4EC, section cream #EFE9DC, earth #8C6A43, leaf green #4F8A6E and forest line work #0B3B32, calm editorial vector, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, screens, control panels, sensors, network diagrams, bottle labels, Holstein",
+      "usedIn": "Cow → bottle (ch. 03) concept for the illustrator"
+    },
+    {
+      "file": "web/public/desigo/styles/cutaway-world/night-diorama.png",
+      "size": "6000×1600",
+      "transparent": false,
+      "prompt": "The same long isometric cutaway at night in deep forest green #0B3B32, cold rooms softly tinted pale ice blue #CFE3E6, a glowing milk-white line connecting eight rooms, calm and precise, precise isometric cutaway illustration, true 30-degree isometric projection, one light from top-left, two tones per material and pale hatched section faces, muted palette of milk white #F7F4EC, section cream #EFE9DC, earth #8C6A43, leaf green #4F8A6E and forest line work #0B3B32, calm editorial vector, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, neon, screens, data dashboards",
+      "usedIn": "Traceability (ch. 06), /trace"
+    },
+    {
+      "file": "web/public/desigo/styles/cutaway-world/section-hatch.png",
+      "size": "1024×1024, seamless",
+      "transparent": false,
+      "prompt": "Seamless pattern of fine 45-degree technical hatch lines in pale sand #D9CFBA on cream #EFE9DC, evenly spaced, flat, precise isometric cutaway illustration, true 30-degree isometric projection, one light from top-left, two tones per material and pale hatched section faces, muted palette of milk white #F7F4EC, section cream #EFE9DC, earth #8C6A43, leaf green #4F8A6E and forest line work #0B3B32, calm editorial vector, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, moiré, noise, shading",
+      "usedIn": "Section faces texture"
+    },
+    {
+      "file": "web/public/desigo/styles/cutaway-world/heritage-home.png",
+      "size": "3200×2000",
+      "transparent": false,
+      "prompt": "Isometric cutaway of a traditional Rajasthani village home with a courtyard, an earthen matka and a wooden bilona churn, sepia line drawing with light wash, respectful, precise isometric cutaway illustration, true 30-degree isometric projection, one light from top-left, two tones per material and pale hatched section faces, muted palette of milk white #F7F4EC, section cream #EFE9DC, earth #8C6A43, leaf green #4F8A6E and forest line work #0B3B32, calm editorial vector, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, people's faces, deities, shrines",
+      "usedIn": "Heritage (ch. 10)"
+    }
+  ]
+}

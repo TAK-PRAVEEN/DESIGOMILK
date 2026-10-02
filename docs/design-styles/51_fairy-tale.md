@@ -203,7 +203,7 @@ split layers); an approved story script (English and Hindi); farm photographs; 3
 "artist at work" video.
 
 **Images to generate:** storyboard placeholders only, never published; plus two textures that may ship.
-Save in `web/public/desigo/styles/fairytale/_storyboard/` (not deployed) and `.../textures/`.
+Save in `web/public/desigo/styles/fairy-tale/_storyboard/` (not deployed) and `.../textures/`. Full spec in section 12.7.
 | # | File | Size | Prompt |
 |---|---|---|---|
 | FT1 | `_storyboard/episode-01-dawn.png` | 3200×1200 | Storyboard sketch for an illustrated folk tale: dawn at a small Rajasthani farm, Indian zebu cows with humps grazing calmly under a khejri tree, a herder standing nearby, flat colour, bold outlines, side view, no perspective, respectful, placeholder quality, no deities, no text, no watermark, no logo, no letters |
@@ -232,3 +232,127 @@ living tradition; long lead time; cows drawn inaccurately.
 5. Narration uses only verified public lines: no health claims, no "best", no unverified numbers inside the tale.
 6. Prices, codes and pending values live outside the paintings.
 7. The artists approve how their tradition is described, and the "About the paintings" page exists before launch.
+
+---
+
+## 12. Build-ready spec sheet
+
+> Audit 2026-10-03: respect protocol, pigment palette and type present; missing colour roles/states, body + mono faces, radius/shadow, component states, motion tokens, negatives, and hero-portrait, variant-panel and second-texture-set prompts. Added all (Inter Tight body, JetBrains Mono IDs); all generated images stay storyboard-only except two textures; folder aligned to `styles/fairy-tale/`. Fonts OFL; no claim violations.
+
+### 12.1 Colour system
+| Role | Token | Hex | Use | Contrast note |
+|---|---|---|---|---|
+| Primary | `--c-primary` | `#2F4F7F` | Jodhpur indigo: primary CTA, night episodes in UI, active nav | 7.5:1 on bg |
+| Primary ink | `--c-on-primary` | `#F7F4EC` | milk label on indigo | 7.5:1 on primary |
+| Secondary | `--c-secondary` | `#E2B13C` | Phad yellow: highlight fills, sun, selected episode marker (ink text on it 8.2:1) | 1.8:1 on bg |
+| Accent | `--c-accent` | `#1E7A68` | links and focus ring (UI only, never inside the painting) | 4.7:1 on bg |
+| Background | `--c-bg` | `#F7F4EC` | milk 'gallery wall' around the art |  |
+| Surface | `--c-surface` | `#EFE3C8` | painted-cloth ground for narration bands and panels | text on surface 12.8:1 |
+| Text | `--c-text` | `#1E211F` | body, narration | 14.8:1 on bg |
+| Muted text | `--c-text-muted` | `#5D5042` | credits, captions | 7.1:1 on bg |
+| Line | `--c-line` | `#C8A96B` | gold hairline frame round every artwork; `rgba(30,33,31,.14)` UI dividers | decorative only |
+| Success / Pending / Demo | `--c-ok` / `--c-pending` / `--c-demo` | `#1E7A68` / `#7A5B37` / `#171918` | verified milestone tick · pending text + dotted underline (outside paintings only) · lamp-black DEMO badge, milk label | ok 4.7:1 · pending 5.7:1 · demo 16.1:1 on bg; state is never colour-only (text + dotted underline / badge label) |
+| Style extra | `--phad-orange` | `#D9782D` | turbans, accents inside art tokens | |
+| Style extra | `--phad-red` | `#B3202A` | = ROOT 14 base; borders, earth | |
+| Style extra | `--phad-green` | `#1F5C45` | = MASTER 26 base; trees, grazing land | |
+| Style extra | `--lamp-black` | `#171918` | outlines (= charcoal) | |
+| Style extra | `--pichwai-night` | `#0B3B32` | dark grounds for night episodes (= forest) | |
+| Style extra | `--lotus` | `#D98C8C` | lotus, dawn sky (decorative only) | |
+| Style extra | `--gold` | `#C8A96B` | gold-leaf details, rules, ghee | |
+| Style extra | `--lamp` | `rgba(232,154,28,.18)` | 220 px lamp glow, `soft-light` | |
+
+Variant worlds in this style: MASTER 26 · ROOT 14 · BASE 3 · ESSENTIAL (base / deep / light hex for each).
+
+| Variant | Code | Base | Deep | Light | How the world uses them |
+|---|---|---|---|---|---|
+| MASTER 26 | V1+ | `#1F5C45` | `#0A2A20` | `#D9E8DF` | commissioned grove panel: base = trees and grazing land, deep = night shadows, light = info ground; never a counted set of herbs |
+| ROOT 14 | V1 | `#B3202A` | `#4A0A0F` | `#F3D9D6` | red-earth stepwell panel: base red + ochre, deep for outlines of strata, light ground for the facts sheet |
+| BASE 3 | V2 | `#E89A1C` | `#5A3304` | `#F8E4C2` | golden-field evening panel: base amber field, deep for the plain sun-disc ring (no sun-deity face), light ground |
+| ESSENTIAL | V3 | `#CDB89A` | `#4D4130` | `#F4EDE2` | quiet courtyard panel on mostly bare cloth: base sand, deep outlines, light ground |
+
+**Dark-chapter inversion:** night episodes and dark chapters (06, 11, 13) use `--c-bg` → `#0B3B32` (pichwai night), text → `#F7F4EC`, muted → `#D8CDB6`, line stays gold, primary → `#E2B13C` fill with ink label, accent → `#7FE0B8`; the painted art keeps its own pigments; the logo turns white and is never painted into the tale.
+
+### 12.2 Typography
+| Role | Font family | Source (npm @fontsource… / Google Fonts) | Weights / axes | Size (clamp) | Line-height | Tracking | Case |
+|---|---|---|---|---|---|---|---|
+| Display / hero | Rozha One (episode titles, Latin + Devanagari) | `@fontsource/rozha-one` | 400 | clamp(2.4rem, 6vw, 6rem) | 1.0 | 0 | Title Case |
+| Headline H1–H2 | Fraunces (storyteller voice) | `@fontsource-variable/fraunces` | 400 · opsz 72 · SOFT 100 · WONK 1 | narration clamp(1.5rem, 2.6vw, 2.4rem) · H2 clamp(1.4rem, 2.2vw, 2rem) | 1.3 | −0.01em | sentence |
+| Body | Inter Tight | `@fontsource-variable/inter-tight` | 400 / 500 | 1.0625rem, measure 52ch | 1.7 | 0 | sentence |
+| Label / UI | Inter Tight | `@fontsource-variable/inter-tight` | 500 | .72rem (credits, labels) | 1.3 | +0.18em | UPPERCASE |
+| Data / mono | JetBrains Mono | `@fontsource-variable/jetbrains-mono` | 400 · `tnum` | .85rem; 1.75rem trace input | 1.3 | 0 | as data |
+| Devanagari (optional) | Tiro Devanagari Hindi (narration) · Rozha One (titles) | `@fontsource/tiro-devanagari-hindi` | 400 / 400 italic | narration +6% | 1.5 | 0 | — |
+
+Licence: Rozha One, Fraunces, Inter Tight, JetBrains Mono and Tiro Devanagari Hindi are SIL OFL 1.1 via @fontsource. Pairing: Rozha One gives a printed-poster title in both scripts, Fraunces SOFT/WONK is the narrator, Inter Tight keeps UI and credits modern beside the paintings.
+
+### 12.3 Layout & surfaces
+- **Grid:** gallery mode: 12 columns, 5vw milk margins, 24 px gutters, max 1440 px, art framed with a gold hairline and credit beneath; scroll mode (ch. 03, /story): a horizontal cloth 7 episodes long, narration fixed in the bottom third, painted band border top and bottom
+- **Spacing scale:** 4 px base: 4 · 8 · 12 · 16 · 24 · 32 · 48 · 64 · 96 · 128; artwork margin ≥ 48 px of milk on every side
+- **Radius scale:** sm 0 · md 0 · lg 0 (frames are square like museum mounts); pill only for the cursor
+- **Border style:** 1 px `#C8A96B` hairline round artworks with 12 px milk mat; painted band borders (lotus/leaf motif from the commission) frame the 360 viewer and /reserve form
+- **Shadow / elevation:** artworks flat (no drop shadow); roller shadow 24 px gradient at the scroll's right edge; bottle: contact ellipse 8 px blur at 30% + ambient 60 px at 8%
+- **Texture / overlay:** high-resolution scans of the painted cloth only (no artificial grain); lamp glow `soft-light` 220 px under the cursor
+
+### 12.4 Components
+For each: anatomy, sizes, states (default · hover · focus-visible · active · disabled · loading), motion, a11y.
+
+- **Primary button**: underlined label + travelling arrow on an indigo `#2F4F7F` plate, Inter Tight 500 caps milk, 52 px high (44 px sm), padding 0 28 px, radius 0. Hover: 1 px gold frame draws itself (600 ms), arrow +6 px, magnetic ≤ 6 px · focus-visible: 2 px accent ring offset 3 px · active: plate `#253F66` · disabled: 40% · loading: a small lamp flame dot breathes beside the label (1.2 s). A11y: real `<button>`/`<a>` semantics, 44 px minimum target, visible focus independent of colour.
+- **Secondary button**: text label + arrow with a hand-drawn gold underline (SVG stroke traced from the artists' border line, with permission); no plate. Hover: underline draws in (400 ms) · focus-visible: accent ring · active: underline 2 px · disabled: muted · loading: underline redraws in a loop.
+- **Text / arrow link**: accent-green text, hand-drawn gold underline that draws in over 400 ms on hover, arrow +6 px · focus-visible: accent ring · active: ink · disabled: muted, no underline · loading: n/a.
+- **Icon button** (incl. menu): 40 px square (44 px hit), 24 px painted motif icon (lotus, lamp, bottle) drawn by or approved by the artists, or a 1.5 px line icon for UI (menu, close, audio). Hover: gold hairline circle · focus-visible: accent ring · active: 0.94 scale · disabled: 30% · loading: lamp flicker-free breathing. `aria-label` required; audio button labels 'Play narration'.
+- **Navigation bar** (desktop + mobile menu) + how the DESIGO® black write/un-write logo loop sits in it: 72 px milk bar, modern; the DESIGO® wordmark is the black write/un-write infinite loop (charcoal `#171918` on light grounds, white `#FFFFFF`/milk on dark; it never changes colour, never takes a variant hue and is never re-drawn in the style); never painted into the tale. Six links in Inter Tight caps + RESERVE indigo primary. A small 'Story' link to /story. Mobile: 56 px bar, menu = full-screen milk sheet with Fraunces links and one painted border band at the top; Esc closes.
+- **Cursor** (states: default · hover · ROTATE · EXPLORE · ENTER · VIEW · TRACE); touch fallback: default: 10 px gold dot · hover: 40 px gold-hairline ring · ROTATE: ring with `DRAG` on the bordered 360 viewer · EXPLORE: the 220 px lamp glow with a flame dot over paintings (warms only; art is readable without it) · ENTER: ring with `UNROLL` at the start of the scroll / /story · VIEW: ring with `VIEW` on gallery frames (opens full-size with credit) · TRACE: ring with a tiny painted-lamp mark on painted-road stations. Disabled: 30% ring. Touch: no cursor; a fixed lamp glows on the episode in view.
+- **Card / panel / info block**: `GalleryFrame`: artwork + 12 px milk mat + gold hairline + credit line beneath (`Painted by [artist], [place], in the Phad tradition`, required prop). Text panels: cloth `#EFE3C8` fill, radius 0, padding 32 px. Hover (if linked): mat widens 4 px · focus-visible: accent ring · loading: low-res scan blur-up (LQIP).
+- **Badge / tag** (incl. "pending verification" and "DEMO · not live data"): Inter Tight 500 .66rem caps. Pending verification: cloth fill, `--c-pending` text + dotted underline `PENDING APPROVAL` (always outside the painting); DEMO · not live data: lamp-black fill, milk `DEMO · NOT LIVE DATA`, always visible on the trace demo; `ILLUSTRATION` tag on every painted journey episode; artist-credit tag is mandatory.
+- **Input + form field** (Trace-your-milk bottle ID): modern on charcoal: JetBrains Mono 1.75rem, 64 px high, milk 1 px frame, label above, prefilled `DSG-BTL-000001-3 (sample format)`. Default · hover: frame gold · focus-visible: 2 px accent ring · active: caret · disabled: 40% · loading: lamp dot walks along the frame (1.2 s) · result: the matching painted episodes appear as a mini scroll with plain-text lines (`aria-live=polite`) · error: pending-earth text.
+- **Divider / ornament**: a strip of the commissioned painted border band (lotus or leaf), 24–40 px high, credited; or a 1 px gold hairline. Never generated motifs.
+- **Section header** (chapter number + title pattern): episode number in Rozha One numerals (`०३ / 03` bilingual) + Inter Tight caps label + title in Rozha One; narration line in Fraunces beneath, fading up by phrase.
+- **Product info block** (variant name, code, price-pending, size, descriptors): outside the painting, on milk: code line in mono, name in Rozha One, Fraunces line; code `DESIGO® V1+` / `V1` / `V2` / `V3`; price from `desigo.ts` rendered as pending (e.g. ₹94 with dotted underline + tooltip "pending approval · pack size not stated"); size "1 L glass · 900 g" pending; descriptors list with pending items dotted-underlined; `RESERVE ———→`. Prices, codes and pending values never sit inside a painting.
+- **Bottle stage** (how Bottle / Bottle360Viewer is framed: plinth, glow, shadow, background): the real render on milk inside a painted border band (commissioned), never placed inside a painted scene; contact shadow on milk. Float ±8 px / 6 s, tilt ±8°. A painted bottle (by the artists) cross-fades into the real render at chapter edges. Before 360 frames: ±25° turn with sheen; after: Bottle360Viewer inside the border, counter `036 / 072` in Inter Tight.
+- **Trace node / timeline step**: a painted road with eight small painted stations (commissioned); each station is a 44 px button hotspot with a gold ring. Default: ring · hover: lamp glow warms the station · focus-visible: accent ring · active: plain-text panel opens on cloth · disabled/not reached: 50% · loading: ring breathes. "Illustrative journey — not live data" visible on the panel and the map.
+
+### 12.5 Iconography & illustration
+Icons: small motifs from the commissioned paintings (lotus, lamp, bottle) at 24 px, drawn by the artists or traced with approval; UI glyphs (menu, close, audio, arrows) as 1.5 px line icons. Illustration: only commissioned, credited Phad/Pichwai-grammar paintings are published, digitised at 600 dpi and split into layers with consent; no deities, no sacred narratives. Photo treatment: real farm photography where the tale hands over to reality (ch. 04), warm grade, framed on milk like the paintings.
+
+### 12.6 Motion tokens
+| Token | Value | Use |
+|---|---|---|
+| `--ease-out` | `cubic-bezier(.16,1,.3,1)` | episode layers settle (8–16 px parallax) |
+| `--ease-inout` | `cubic-bezier(.65,0,.35,1)` | gallery cross-fades |
+| `--dur-micro` | `240ms` | ring, arrow travel |
+| `--dur-reveal` | `600ms` | narration phrase fade (120 ms stagger) |
+| `--dur-scene` | `1200ms` | episode settle |
+| `--draw` | `400ms` | hand-drawn gold underline |
+| `--unroll` | `scrub: 1` | horizontal cloth translates with scroll |
+
+Signature: the unrolling scroll with a roller shadow and the lamp-light cursor. No page curl, no letter-by-letter text, no animated faces. Reduced motion: the scroll becomes a vertical gallery, no parallax, lamp off (art fully lit), narration static; full narrative available as text.
+
+### 12.7 AI image generation prompts
+House rules: no text/letters/logos/watermarks in images; generated images are illustration, texture or backdrop only; never
+generate the bottle or ghee jar; zebu cows only, shown with respect; append the style's tail prompt to every prompt.
+
+**Tail prompt (append to every prompt below):** *storyboard placeholder in a flat folk storybook grammar, flat colour, bold dark outlines, side view, no perspective, natural pigment palette of cloth cream #EFE3C8, yellow #E2B13C, red #B3202A, green #1F5C45 and indigo #2F4F7F, respectful, secular, no deities, no text, no watermark, no logo, no letters*
+
+| # | File path (web/public/desigo/styles/fairy-tale/...) | Size / ratio | Transparent? | Prompt | Negative prompt | Used in |
+|---|---|---|---|---|---|---|
+| FT-H1 | `web/public/desigo/styles/fairy-tale/_storyboard/hero-vignette.png` | 3200×2000 (16:10) | no | Storyboard sketch of an Indian zebu cow with hump and dewlap resting calmly under a khejri tree on a small Rajasthani farm at dawn, wide empty sky | base negatives + deities, temple, halo, sacred symbols, named artist style, cow with human expression | Ch. 01 hero vignette (storyboard only; replaced by commission) |
+| FT-H2 | `web/public/desigo/styles/fairy-tale/_storyboard/hero-vignette-portrait.png` | 1400×2400 (7:12) | no | Vertical storyboard sketch of a zebu cow under a khejri tree with a small herder figure in profile, dawn sky above, calm | base negatives + deities, temple, halo, named artist style | Ch. 01 mobile (storyboard only) |
+| FT-V1 | `web/public/desigo/styles/fairy-tale/_storyboard/world-master-grove.png` | 3200×2000 + 1400×2400 portrait | no | Storyboard sketch of a deep green #1F5C45 grove with a lotus pond and birds, zebu cows grazing at the edge, no counted herbs | base negatives + deities, Krishna, temple, numbered plants | MASTER 26 panel brief |
+| FT-V2 | `web/public/desigo/styles/fairy-tale/_storyboard/world-root-stepwell.png` | 3200×2000 + 1400×2400 portrait | no | Storyboard sketch of red earth #B3202A and ochre land with a stepwell and grazing land under a pale sky | base negatives + deities, shrine, people bathing | ROOT 14 panel brief |
+| FT-V3 | `web/public/desigo/styles/fairy-tale/_storyboard/world-base-field.png` | 3200×2000 + 1400×2400 portrait | no | Storyboard sketch of a golden amber #E89A1C field at evening under a large plain sun disc, a few zebu cows walking home | base negatives + sun face, sun deity, rays with faces | BASE 3 panel brief |
+| FT-V4 | `web/public/desigo/styles/fairy-tale/_storyboard/world-essential-courtyard.png` | 3200×2000 + 1400×2400 portrait | no | Storyboard sketch of a quiet courtyard with one tree painted on mostly bare cream cloth, sand #CDB89A walls, very little detail | base negatives + shrine, idols, crowds | ESSENTIAL panel brief |
+| FT-J1 | `web/public/desigo/styles/fairy-tale/_storyboard/episode-01-dawn.png` | 3200×1200 (8:3) | no | Storyboard sketch for an illustrated folk tale: dawn at a small Rajasthani farm, Indian zebu cows with humps grazing calmly under a khejri tree, a herder standing nearby | base negatives + deities, temple, named artist style | Ch. 03 scroll episode 1 (storyboard) |
+| FT-J2 | `web/public/desigo/styles/fairy-tale/_storyboard/episode-07-doorstep.png` | 3200×1200 (8:3) | no | Storyboard sketch: early morning in a blue-painted old town lane, a delivery person placing a milk bottle at a doorstep, calm | base negatives + detailed bottle label, brand marks, deities | Ch. 03 episode 7 / ch. 15 (storyboard) |
+| FT-J3 | `web/public/desigo/styles/fairy-tale/_storyboard/milk-river.png` | 3200×1200 (8:3) | no | Storyboard sketch of a stylised river of milk drawn with repeated wave patterns in cream and indigo, flat, decorative | base negatives + deities, sacred river iconography | Ch. 09 `MilkRiver` brief |
+| FT-T1 | `web/public/desigo/styles/fairy-tale/textures/cotton-cloth.png` | 2400×2400, seamless | no | Seamless texture of hand-woven cotton cloth primed for painting, warm cream #EFE3C8, visible weave, flat even scan lighting | base negatives + painted figures, stains, folds | Narration bands, panels (may ship) |
+| FT-T2 | `web/public/desigo/styles/fairy-tale/textures/pigment-wash.png` | 2400×2400, seamless | no | Seamless subtle natural-pigment wash on cotton, faint ochre and cream variation, flat scan, no shapes | base negatives + figures, motifs, stains | Ground behind text panels (may ship) |
+
+Base negatives (apply to every prompt): *text, letters, numbers, logo, watermark, signature, label, product bottle, glass bottle, jar, packaging, Holstein or Jersey cattle, cartoon mascot, deity or religious icon, distorted anatomy, oversaturated, HDR, low resolution*. Files under `_storyboard/` are never deployed and are replaced by the commissioned, credited paintings before publication; only the two `textures/` files may ship. Prompts never name living artists or the words Phad/Pichwai.
+
+### 12.8 Prototype acceptance checklist
+- [ ] Tokens from `specs/51_fairy-tale.json` applied; no off-palette colours
+- [ ] Fonts self-hosted; correct weights load
+- [ ] All 12.4 components built with all states
+- [ ] Hero + bottle-story + one product world + trace chapter built in this style (the comparison set)
+- [ ] Mobile 360 px pass; reduced-motion pass; contrast checked
+- [ ] Claims rules respected (pending underline, no blocked claims, DEMO labels)
+- [ ] Screenshots: desktop 1440×900 ×4 + mobile 390×844 ×2 saved to docs/media/styles/fairy-tale/

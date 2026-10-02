@@ -1,0 +1,227 @@
+{
+  "id": 17,
+  "slug": "y2k",
+  "name": "Y2K Aesthetic",
+  "priority": false,
+  "fit": 2,
+  "colors": {
+    "primary": "#1E7A68",
+    "onPrimary": "#F7F4EC",
+    "secondary": "#0B3B32",
+    "accent": "#B9C2C4",
+    "bg": "#F7F4EC",
+    "surface": "#E6EEF0",
+    "text": "#0B3B32",
+    "textMuted": "#4E585A",
+    "line": "#B9C2C4",
+    "ok": "#1F5C45",
+    "pending": "#E89A1C",
+    "demo": "#B3202A"
+  },
+  "variants": {
+    "master-26": {
+      "base": "#1F5C45",
+      "deep": "#0A2A20",
+      "light": "#D9E8DF"
+    },
+    "root-14": {
+      "base": "#B3202A",
+      "deep": "#4A0A0F",
+      "light": "#F3D9D6"
+    },
+    "base-3": {
+      "base": "#E89A1C",
+      "deep": "#5A3304",
+      "light": "#F8E4C2"
+    },
+    "essential": {
+      "base": "#CDB89A",
+      "deep": "#4D4130",
+      "light": "#F4EDE2"
+    }
+  },
+  "fonts": {
+    "display": {
+      "family": "Unbounded",
+      "package": "@fontsource-variable/unbounded",
+      "weights": [
+        300,
+        800
+      ]
+    },
+    "headline": {
+      "family": "Unbounded",
+      "package": "@fontsource-variable/unbounded",
+      "weights": [
+        500,
+        600
+      ]
+    },
+    "body": {
+      "family": "Inter Tight",
+      "package": "@fontsource-variable/inter-tight",
+      "weights": [
+        400,
+        500
+      ]
+    },
+    "label": {
+      "family": "Syne",
+      "package": "@fontsource-variable/syne",
+      "weights": [
+        700
+      ]
+    },
+    "mono": {
+      "family": "Space Mono",
+      "package": "@fontsource/space-mono",
+      "weights": [
+        400,
+        700
+      ]
+    },
+    "devanagari": {
+      "family": "Baloo 2",
+      "package": "@fontsource-variable/baloo-2",
+      "weights": [
+        500,
+        700
+      ]
+    },
+    "brand": {
+      "family": "Fraunces",
+      "package": "@fontsource-variable/fraunces",
+      "weights": [
+        300
+      ]
+    }
+  },
+  "type": {
+    "display": "clamp(3.5rem, 9vw, 9rem)",
+    "h1": "clamp(2.4rem, 5vw, 4.5rem)",
+    "h2": "clamp(1.6rem, 3vw, 2.6rem)",
+    "body": "clamp(1rem, 0.95rem + 0.2vw, 1.0625rem)",
+    "label": "0.75rem"
+  },
+  "radius": {
+    "sm": "12px",
+    "md": "24px",
+    "lg": "999px"
+  },
+  "shadow": {
+    "bottle": "contact ellipse 60% x 8% blur 16px rgba(11,59,50,.25) + 0 30px 60px -30px rgba(11,59,50,.2)",
+    "panel": "0 20px 40px -20px rgba(11,59,50,.25)"
+  },
+  "motion": {
+    "easeOut": "cubic-bezier(.16,1,.3,1)",
+    "easeInOut": "cubic-bezier(.65,0,.35,1)",
+    "durMicro": 240,
+    "durReveal": 600,
+    "durScene": 700
+  },
+  "button": {
+    "primary": {
+      "bg": "#1E7A68 + top highlight band",
+      "fg": "#F7F4EC",
+      "radius": "999px",
+      "padding": "16px 28px",
+      "hover": "highlight brighter, translateY(-2px), glow 0 8px 24px -8px rgba(30,122,104,.4)"
+    },
+    "secondary": {
+      "bg": "#E6EEF0 frosted",
+      "fg": "#0B3B32",
+      "radius": "999px",
+      "padding": "16px 28px",
+      "hover": "iridescent rim 240ms"
+    },
+    "link": {
+      "bg": "transparent",
+      "fg": "#1E7A68",
+      "radius": "0",
+      "padding": "0",
+      "hover": "chrome highlight slide 600ms, arrow +6px"
+    }
+  },
+  "images": [
+    {
+      "file": "web/public/desigo/styles/y2k/hero-landscape.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Soft studio scene of four floating translucent gel blobs in forest green, ruby, amber and pearl drifting at the edges of a frosted milk-white space, gentle reflections, the centre left completely empty, translucent candy-gel plastic and satin liquid chrome in the spirit of 1999–2003 product design, soft studio light, iridescence built only from pale mint #D9E8DF, blush #F3D9D6, pale amber #F8E4C2 and ivory #F4EDE2 on warm milk white #F7F4EC, clean and premium, no neon pink, no cyan, no rainbow, no text, no watermark, no logo, no letters",
+      "negative": "lens flares, glitter, neon, sci-fi city, plastic toys, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Campaign hero /glass-is-back"
+    },
+    {
+      "file": "web/public/desigo/styles/y2k/hero-portrait.png",
+      "size": "1400×2400 (7:12)",
+      "transparent": false,
+      "prompt": "Same gel-blob studio scene as a tall portrait with two blobs top-left and bottom-right, large empty centre, translucent candy-gel plastic and satin liquid chrome in the spirit of 1999–2003 product design, soft studio light, iridescence built only from pale mint #D9E8DF, blush #F3D9D6, pale amber #F8E4C2 and ivory #F4EDE2 on warm milk white #F7F4EC, clean and premium, no neon pink, no cyan, no rainbow, no text, no watermark, no logo, no letters",
+      "negative": "lens flares, glitter, neon, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Mobile hero"
+    },
+    {
+      "file": "web/public/desigo/styles/y2k/worlds/master-26.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Deep forest-green translucent gel blobs #1F5C45 and #0A2A20 over frosted glass, soft caustics, empty centre, translucent candy-gel plastic and satin liquid chrome in the spirit of 1999–2003 product design, soft studio light, iridescence built only from pale mint #D9E8DF, blush #F3D9D6, pale amber #F8E4C2 and ivory #F4EDE2 on warm milk white #F7F4EC, clean and premium, no neon pink, no cyan, no rainbow, no text, no watermark, no logo, no letters",
+      "negative": "neon, glitter, leaves, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Flavour world MASTER 26"
+    },
+    {
+      "file": "web/public/desigo/styles/y2k/worlds/root-14.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Ruby translucent gel blobs #B3202A and #4A0A0F over frosted glass with blush highlights #F3D9D6, empty centre, translucent candy-gel plastic and satin liquid chrome in the spirit of 1999–2003 product design, soft studio light, iridescence built only from pale mint #D9E8DF, blush #F3D9D6, pale amber #F8E4C2 and ivory #F4EDE2 on warm milk white #F7F4EC, clean and premium, no neon pink, no cyan, no rainbow, no text, no watermark, no logo, no letters",
+      "negative": "neon pink, glitter, liquid that looks like soda, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Flavour world ROOT 14"
+    },
+    {
+      "file": "web/public/desigo/styles/y2k/worlds/base-3.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Amber translucent gel blobs #E89A1C over frosted glass with one very soft warm sunburst glow at upper left, empty centre, translucent candy-gel plastic and satin liquid chrome in the spirit of 1999–2003 product design, soft studio light, iridescence built only from pale mint #D9E8DF, blush #F3D9D6, pale amber #F8E4C2 and ivory #F4EDE2 on warm milk white #F7F4EC, clean and premium, no neon pink, no cyan, no rainbow, no text, no watermark, no logo, no letters",
+      "negative": "multiple lens flares, glitter, orange soda, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Flavour world BASE 3"
+    },
+    {
+      "file": "web/public/desigo/styles/y2k/worlds/essential.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Pearlescent ivory satin surface #F4EDE2 with one small pale blob and a soft satin sheen, almost empty, calm, translucent candy-gel plastic and satin liquid chrome in the spirit of 1999–2003 product design, soft studio light, iridescence built only from pale mint #D9E8DF, blush #F3D9D6, pale amber #F8E4C2 and ivory #F4EDE2 on warm milk white #F7F4EC, clean and premium, no neon pink, no cyan, no rainbow, no text, no watermark, no logo, no letters",
+      "negative": "mirror chrome, glitter, colour, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Flavour world ESSENTIAL"
+    },
+    {
+      "file": "web/public/desigo/styles/y2k/journey/chrome-tube.png",
+      "size": "4000×1200 (10:3)",
+      "transparent": true,
+      "prompt": "A satin chrome tube curving left to right through seven small empty translucent frosted pods, soft studio reflections, isolated on transparent background, translucent candy-gel plastic and satin liquid chrome in the spirit of 1999–2003 product design, soft studio light, iridescence built only from pale mint #D9E8DF, blush #F3D9D6, pale amber #F8E4C2 and ivory #F4EDE2 on warm milk white #F7F4EC, clean and premium, no neon pink, no cyan, no rainbow, no text, no watermark, no logo, no letters",
+      "negative": "liquid colours, neon, objects inside pods, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Journey track and return-loop explainer"
+    },
+    {
+      "file": "web/public/desigo/styles/y2k/campaign/return-loop.png",
+      "size": "2400×2400 (1:1)",
+      "transparent": true,
+      "prompt": "Seven translucent gel blobs in the four variant colours arranged in a smooth closed circular loop with soft motion blur along the path, isolated on transparent background, translucent candy-gel plastic and satin liquid chrome in the spirit of 1999–2003 product design, soft studio light, iridescence built only from pale mint #D9E8DF, blush #F3D9D6, pale amber #F8E4C2 and ivory #F4EDE2 on warm milk white #F7F4EC, clean and premium, no neon pink, no cyan, no rainbow, no text, no watermark, no logo, no letters",
+      "negative": "arrows, recycling symbol, neon, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "/glass-is-back return-loop section"
+    },
+    {
+      "file": "web/public/desigo/styles/y2k/textures/iridescent-foil.png",
+      "size": "2048×2048 seamless",
+      "transparent": false,
+      "prompt": "Seamless tileable soft iridescent foil texture blending pale mint, blush, pale amber and ivory, very subtle crinkle, flat light, translucent candy-gel plastic and satin liquid chrome in the spirit of 1999–2003 product design, soft studio light, iridescence built only from pale mint #D9E8DF, blush #F3D9D6, pale amber #F8E4C2 and ivory #F4EDE2 on warm milk white #F7F4EC, clean and premium, no neon pink, no cyan, no rainbow, no text, no watermark, no logo, no letters",
+      "negative": "rainbow, holographic glitter, neon, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "IridescentField backgrounds, chip rims"
+    },
+    {
+      "file": "web/public/desigo/styles/y2k/textures/frost-panel.png",
+      "size": "2048×2048 seamless",
+      "transparent": false,
+      "prompt": "Seamless tileable frosted acrylic texture in cool milk #E6EEF0 with fine diffusion grain, flat light, translucent candy-gel plastic and satin liquid chrome in the spirit of 1999–2003 product design, soft studio light, iridescence built only from pale mint #D9E8DF, blush #F3D9D6, pale amber #F8E4C2 and ivory #F4EDE2 on warm milk white #F7F4EC, clean and premium, no neon pink, no cyan, no rainbow, no text, no watermark, no logo, no letters",
+      "negative": "scratches, fingerprints, text, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Low-end fallback for frosted pods"
+    }
+  ]
+}

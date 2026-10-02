@@ -1,0 +1,229 @@
+{
+  "id": 54,
+  "slug": "scientism",
+  "name": "Scientism",
+  "priority": true,
+  "fit": 4,
+  "colors": {
+    "primary": "#0B3B32",
+    "onPrimary": "#F7F4EC",
+    "secondary": "#5A4630",
+    "accent": "#1E7A68",
+    "bg": "#F7F4EC",
+    "surface": "#EFE9DC",
+    "text": "#1E211F",
+    "textMuted": "#5E625C",
+    "line": "rgba(11,59,50,.16)",
+    "ok": "#1E7A68",
+    "pending": "#7A5B37",
+    "demo": "#0B3B32"
+  },
+  "colorsExtra": {
+    "graph-minor": "rgba(11,59,50,.08)",
+    "graph-major": "rgba(11,59,50,.16)",
+    "gold": "#C8A96B",
+    "specimen-dots": "#1F5C45 · #B3202A · #E89A1C · #CDB89A"
+  },
+  "variants": {
+    "master-26": {
+      "base": "#1F5C45",
+      "deep": "#0A2A20",
+      "light": "#D9E8DF"
+    },
+    "root-14": {
+      "base": "#B3202A",
+      "deep": "#4A0A0F",
+      "light": "#F3D9D6"
+    },
+    "base-3": {
+      "base": "#E89A1C",
+      "deep": "#5A3304",
+      "light": "#F8E4C2"
+    },
+    "essential": {
+      "base": "#CDB89A",
+      "deep": "#4D4130",
+      "light": "#F4EDE2"
+    }
+  },
+  "fonts": {
+    "display": {
+      "family": "Fraunces",
+      "package": "@fontsource-variable/fraunces",
+      "weights": [
+        300,
+        400
+      ]
+    },
+    "body": {
+      "family": "IBM Plex Sans",
+      "package": "@fontsource-variable/ibm-plex-sans",
+      "weights": [
+        400,
+        500
+      ]
+    },
+    "label": {
+      "family": "IBM Plex Sans Condensed",
+      "package": "@fontsource/ibm-plex-sans-condensed",
+      "weights": [
+        500
+      ]
+    },
+    "mono": {
+      "family": "IBM Plex Mono",
+      "package": "@fontsource/ibm-plex-mono",
+      "weights": [
+        400
+      ]
+    },
+    "caption": {
+      "family": "IBM Plex Serif",
+      "package": "@fontsource/ibm-plex-serif",
+      "weights": [
+        "400 italic"
+      ]
+    },
+    "devanagari": {
+      "family": "IBM Plex Sans Devanagari",
+      "package": "@fontsource/ibm-plex-sans-devanagari",
+      "weights": [
+        400,
+        500
+      ]
+    }
+  },
+  "type": {
+    "display": "clamp(3rem, 7vw, 7.5rem)",
+    "h1": "clamp(2.2rem, 4vw, 4rem)",
+    "h2": "clamp(1.5rem, 2.4vw, 2.2rem)",
+    "body": "1rem/1.6",
+    "caption": "14px/1.45 italic",
+    "label": "11px/+0.12em uppercase",
+    "data": "13px tnum"
+  },
+  "radius": {
+    "sm": "0",
+    "md": "0",
+    "lg": "0"
+  },
+  "shadow": {
+    "bottle": "specimen contact ellipse 6px blur 20%",
+    "panel": "none"
+  },
+  "motion": {
+    "easeOut": "cubic-bezier(.16,1,.3,1)",
+    "easeInOut": "cubic-bezier(.65,0,.35,1)",
+    "easePlot": "linear",
+    "plotPxPerSec": 600,
+    "durMicro": 240,
+    "durReveal": 500,
+    "durScene": 600,
+    "durStamp": 0
+  },
+  "button": {
+    "primary": {
+      "bg": "#0B3B32",
+      "fg": "#F7F4EC",
+      "radius": "0",
+      "padding": "0 24px (48px high)",
+      "hover": "1px frame draws 600ms, arrow +6px"
+    },
+    "secondary": {
+      "bg": "transparent",
+      "fg": "#1E211F",
+      "border": "1px #1E211F",
+      "radius": "0",
+      "padding": "0 24px",
+      "hover": "fill #EFE9DC"
+    },
+    "link": {
+      "fg": "#1E7A68",
+      "underline": "1px + superscript ref",
+      "hover": "cross-highlight referenced figure"
+    }
+  },
+  "images": [
+    {
+      "id": "SC-H1",
+      "file": "web/public/desigo/styles/scientism/hero-plate.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Empty museum specimen plate on warm cream paper #EFE9DC with faint pencil construction lines and a thin gold #C8A96B rule border, flat scan lighting, generous empty center, warm natural light, restrained premium palette of milk white #F7F4EC, deep forest green #0B3B32, earth brown #8C6A43 and warm gold #C8A96B, subtle film grain, editorial, calm, high-end, no text, no watermark, no logo, no letters, scientific plate style, precise, calm",
+      "negative": "text, letters, numbers, logo, watermark, signature, label, product bottle, glass bottle, jar, packaging, Holstein or Jersey cattle, cartoon mascot, deity or religious icon, distorted anatomy, oversaturated, HDR, low resolution, numbers, scale values, molecules, charts, apparatus",
+      "usedIn": "Ch. 01 hero plate ground"
+    },
+    {
+      "id": "SC-H2",
+      "file": "web/public/desigo/styles/scientism/hero-plate-portrait.png",
+      "size": "1400×2400 (7:12)",
+      "transparent": false,
+      "prompt": "Vertical empty specimen plate on warm cream paper with faint pencil guide marks and a thin gold rule frame, flat scan lighting, empty center, warm natural light, restrained premium palette of milk white #F7F4EC, deep forest green #0B3B32, earth brown #8C6A43 and warm gold #C8A96B, subtle film grain, editorial, calm, high-end, no text, no watermark, no logo, no letters, scientific plate style, precise, calm",
+      "negative": "text, letters, numbers, logo, watermark, signature, label, product bottle, glass bottle, jar, packaging, Holstein or Jersey cattle, cartoon mascot, deity or religious icon, distorted anatomy, oversaturated, HDR, low resolution, numbers, scale values, molecules, charts",
+      "usedIn": "Ch. 01 hero (mobile)"
+    },
+    {
+      "id": "SC-V1",
+      "file": "web/public/desigo/styles/scientism/herbarium-sheet-empty.png",
+      "size": "2000×2800 + 1400×2400 portrait",
+      "transparent": false,
+      "prompt": "Empty museum herbarium mounting sheet on warm cream paper with a few small strips of linen tape and faint pencil guide marks, no plants, flat scan lighting, warm natural light, restrained premium palette of milk white #F7F4EC, deep forest green #0B3B32, earth brown #8C6A43 and warm gold #C8A96B, subtle film grain, editorial, calm, high-end, no text, no watermark, no logo, no letters, scientific plate style, precise, calm",
+      "negative": "text, letters, numbers, logo, watermark, signature, label, product bottle, glass bottle, jar, packaging, Holstein or Jersey cattle, cartoon mascot, deity or religious icon, distorted anatomy, oversaturated, HDR, low resolution, plants, herbs, leaves, handwriting, labels",
+      "usedIn": "MASTER 26 plate 08.1"
+    },
+    {
+      "id": "SC-V2",
+      "file": "web/public/desigo/styles/scientism/soil-profile.png",
+      "size": "1600×2400 (2:3)",
+      "transparent": true,
+      "prompt": "Scientific illustration of a soil profile cross-section with layered red-earth strata from #B3202A to #4A0A0F and fine roots, watercolour and ink, textbook plate style, transparent background, warm natural light, restrained premium palette of milk white #F7F4EC, deep forest green #0B3B32, earth brown #8C6A43 and warm gold #C8A96B, subtle film grain, editorial, calm, high-end, no text, no watermark, no logo, no letters, scientific plate style, precise, calm",
+      "negative": "text, letters, numbers, logo, watermark, signature, label, product bottle, glass bottle, jar, packaging, Holstein or Jersey cattle, cartoon mascot, deity or religious icon, distorted anatomy, oversaturated, HDR, low resolution, labels, depth numbers, arrows, minerals named",
+      "usedIn": "ROOT 14 plate 08.2 (captioned illustrative)"
+    },
+    {
+      "id": "SC-V3",
+      "file": "web/public/desigo/styles/scientism/sun-path.png",
+      "size": "3200×2000 + 1400×2400 portrait",
+      "transparent": false,
+      "prompt": "Minimal scientific diagram of a sun path arc over a flat horizon in thin amber #E89A1C lines on cream paper, a few faint construction lines, warm natural light, restrained premium palette of milk white #F7F4EC, deep forest green #0B3B32, earth brown #8C6A43 and warm gold #C8A96B, subtle film grain, editorial, calm, high-end, no text, no watermark, no logo, no letters, scientific plate style, precise, calm",
+      "negative": "text, letters, numbers, logo, watermark, signature, label, product bottle, glass bottle, jar, packaging, Holstein or Jersey cattle, cartoon mascot, deity or religious icon, distorted anatomy, oversaturated, HDR, low resolution, labels, degree numbers, compass letters",
+      "usedIn": "BASE 3 plate 08.3"
+    },
+    {
+      "id": "SC-V4",
+      "file": "web/public/desigo/styles/scientism/plate-empty-ivory.png",
+      "size": "3200×2000 + 1400×2400 portrait",
+      "transparent": false,
+      "prompt": "Almost blank ivory #F4EDE2 museum plate with one faint pencil frame line and a tiny corner mount, flat scan light, utterly quiet, warm natural light, restrained premium palette of milk white #F7F4EC, deep forest green #0B3B32, earth brown #8C6A43 and warm gold #C8A96B, subtle film grain, editorial, calm, high-end, no text, no watermark, no logo, no letters, scientific plate style, precise, calm",
+      "negative": "text, letters, numbers, logo, watermark, signature, label, product bottle, glass bottle, jar, packaging, Holstein or Jersey cattle, cartoon mascot, deity or religious icon, distorted anatomy, oversaturated, HDR, low resolution, labels, numbers, objects",
+      "usedIn": "ESSENTIAL plate 08.4"
+    },
+    {
+      "id": "SC-J1",
+      "file": "web/public/desigo/styles/scientism/survey-contour-paper.png",
+      "size": "3600×2000 (9:5)",
+      "transparent": false,
+      "prompt": "Pale cream survey paper with very faint hand-drawn contour lines in forest green at 10%, no place features, no labels, flat scan, warm natural light, restrained premium palette of milk white #F7F4EC, deep forest green #0B3B32, earth brown #8C6A43 and warm gold #C8A96B, subtle film grain, editorial, calm, high-end, no text, no watermark, no logo, no letters, scientific plate style, precise, calm",
+      "negative": "text, letters, numbers, logo, watermark, signature, label, product bottle, glass bottle, jar, packaging, Holstein or Jersey cattle, cartoon mascot, deity or religious icon, distorted anatomy, oversaturated, HDR, low resolution, map labels, roads, place names, numbers, compass",
+      "usedIn": "Ch. 06 schematic ground (illustrative), /trace"
+    },
+    {
+      "id": "SC-T1",
+      "file": "web/public/desigo/styles/scientism/lab-paper.png",
+      "size": "2400×2400, seamless",
+      "transparent": false,
+      "prompt": "Seamless texture of slightly aged laboratory notebook paper, warm cream, faint fibres, flat light, no lines, warm natural light, restrained premium palette of milk white #F7F4EC, deep forest green #0B3B32, earth brown #8C6A43 and warm gold #C8A96B, subtle film grain, editorial, calm, high-end, no text, no watermark, no logo, no letters, scientific plate style, precise, calm",
+      "negative": "text, letters, numbers, logo, watermark, signature, label, product bottle, glass bottle, jar, packaging, Holstein or Jersey cattle, cartoon mascot, deity or religious icon, distorted anatomy, oversaturated, HDR, low resolution, ruled lines, handwriting, stains",
+      "usedIn": "Plate grain (1%)"
+    },
+    {
+      "id": "SC-R1",
+      "file": "web/public/desigo/styles/scientism/_reference/glassware-line-set.png",
+      "size": "2400×1600 (3:2)",
+      "transparent": true,
+      "prompt": "Set of simple scientific glassware line drawings: beaker, test tube in a rack, conical flask, single-weight ink line, textbook diagram style, evenly spaced, transparent background, warm natural light, restrained premium palette of milk white #F7F4EC, deep forest green #0B3B32, earth brown #8C6A43 and warm gold #C8A96B, subtle film grain, editorial, calm, high-end, no text, no watermark, no logo, no letters, scientific plate style, precise, calm",
+      "negative": "text, letters, numbers, logo, watermark, signature, label, product bottle, glass bottle, jar, packaging, Holstein or Jersey cattle, cartoon mascot, deity or religious icon, distorted anatomy, oversaturated, HDR, low resolution, liquids with labels, measurement marks, branded lab equipment",
+      "usedIn": "Reference for the in-house SVG icon set only — not published"
+    }
+  ]
+}

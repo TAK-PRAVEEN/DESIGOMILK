@@ -1,0 +1,261 @@
+{
+  "id": 12,
+  "slug": "bento-grid",
+  "name": "Bento Grid",
+  "priority": false,
+  "fit": 4,
+  "colors": {
+    "primary": "#1E7A68",
+    "onPrimary": "#F7F4EC",
+    "secondary": "#0B3B32",
+    "accent": "#7FE0B8",
+    "bg": "#F7F4EC",
+    "surface": "#EFE9DC",
+    "text": "#1E211F",
+    "textMuted": "#55595A",
+    "line": "rgba(30,33,31,0.10)",
+    "ok": "#1F5C45",
+    "pending": "#7A5A12",
+    "demo": "#171918"
+  },
+  "variants": {
+    "master-26": {
+      "base": "#1F5C45",
+      "deep": "#0A2A20",
+      "light": "#D9E8DF"
+    },
+    "root-14": {
+      "base": "#B3202A",
+      "deep": "#4A0A0F",
+      "light": "#F3D9D6"
+    },
+    "base-3": {
+      "base": "#E89A1C",
+      "deep": "#5A3304",
+      "light": "#F8E4C2"
+    },
+    "essential": {
+      "base": "#CDB89A",
+      "deep": "#4D4130",
+      "light": "#F4EDE2"
+    }
+  },
+  "fonts": {
+    "display": {
+      "family": "Inter Tight",
+      "package": "@fontsource-variable/inter-tight",
+      "weights": [
+        600
+      ]
+    },
+    "body": {
+      "family": "Inter Tight",
+      "package": "@fontsource-variable/inter-tight",
+      "weights": [
+        400
+      ]
+    },
+    "label": {
+      "family": "Inter Tight",
+      "package": "@fontsource-variable/inter-tight",
+      "weights": [
+        600
+      ]
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "package": "@fontsource-variable/jetbrains-mono",
+      "weights": [
+        400,
+        500
+      ]
+    },
+    "devanagari": {
+      "family": "Noto Sans Devanagari",
+      "package": "@fontsource-variable/noto-sans-devanagari",
+      "weights": [
+        400,
+        600
+      ]
+    },
+    "accent": {
+      "family": "Fraunces",
+      "package": "@fontsource-variable/fraunces",
+      "weights": [
+        300
+      ],
+      "style": "italic"
+    }
+  },
+  "type": {
+    "display": "clamp(5rem, 12vw, 14rem)",
+    "h1": "clamp(3rem, 7vw, 7rem)",
+    "h2": "clamp(2rem, 3.6vw, 3.5rem)",
+    "body": "clamp(0.9375rem, 0.9rem + 0.15vw, 1.0625rem)",
+    "label": "0.6875rem",
+    "tileTitle": "clamp(1.5rem, 2.4vw, 2.5rem)"
+  },
+  "radius": {
+    "sm": "12px",
+    "md": "20px",
+    "lg": "28px"
+  },
+  "shadow": {
+    "bottle": "design-system contact ellipse on the tile floor (cut-out bleeds 8-12% above the tile)",
+    "panel": "none; expanded tile 0 30px 80px rgba(30,33,31,.18)"
+  },
+  "motion": {
+    "easeOut": "cubic-bezier(.16,1,.3,1)",
+    "easeInOut": "cubic-bezier(.65,0,.35,1)",
+    "durMicro": 240,
+    "durReveal": 600,
+    "durScene": 700
+  },
+  "button": {
+    "primary": {
+      "bg": "#1E7A68",
+      "fg": "#F7F4EC",
+      "radius": "12px",
+      "padding": "0 24px; height 48px",
+      "hover": "bg #0F4A3F, arrow +6px"
+    },
+    "secondary": {
+      "bg": "#EFE9DC",
+      "fg": "#1E211F",
+      "border": "1px rgba(30,33,31,.16)",
+      "radius": "12px",
+      "padding": "0 24px; height 48px",
+      "hover": "fill darkens 4%"
+    },
+    "link": {
+      "fg": "#1E211F",
+      "underline": "1px",
+      "hover": "underline #1E7A68, arrow +8px"
+    }
+  },
+  "images": [
+    {
+      "file": "web/public/desigo/styles/bento-grid/hero-tile.png",
+      "size": "2400×1600 (3:2, XL tile)",
+      "transparent": false,
+      "prompt": "Seamless milk-white studio sweep with a soft pool of morning light falling from the upper left onto the floor, empty centre, gentle gradient, Apple-keynote-grade abstract studio backdrop, soft seamless light, calm premium minimalism, milk white #F7F4EC, milk-2 #EFE9DC, forest #0B3B32, brand green #1E7A68 and signal mint #7FE0B8 accents, subtle grain, generous empty space, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, objects, props, shadows of objects",
+      "usedIn": "01b Why DESIGO® XL tile, 15 Final CTA"
+    },
+    {
+      "file": "web/public/desigo/styles/bento-grid/hero-tile-portrait.png",
+      "size": "1200×1800 (2:3, mobile XL)",
+      "transparent": false,
+      "prompt": "Vertical milk-white studio sweep with a soft pool of light on the floor at 65 percent height, empty centre, Apple-keynote-grade abstract studio backdrop, soft seamless light, calm premium minimalism, milk white #F7F4EC, milk-2 #EFE9DC, forest #0B3B32, brand green #1E7A68 and signal mint #7FE0B8 accents, subtle grain, generous empty space, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, objects",
+      "usedIn": "01b Why DESIGO® mobile"
+    },
+    {
+      "file": "web/public/desigo/styles/bento-grid/tiles/master-26.png",
+      "size": "2400×1600 + 1200×1800",
+      "transparent": false,
+      "prompt": "Seamless studio sweep in pale green #D9E8DF with soft top light and a faint deeper green #1F5C45 shadow gradient at the floor, empty, Apple-keynote-grade abstract studio backdrop, soft seamless light, calm premium minimalism, milk white #F7F4EC, milk-2 #EFE9DC, forest #0B3B32, brand green #1E7A68 and signal mint #7FE0B8 accents, subtle grain, generous empty space, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, leaves, objects",
+      "usedIn": "Four-milk bento, /milk"
+    },
+    {
+      "file": "web/public/desigo/styles/bento-grid/tiles/root-14.png",
+      "size": "2400×1600 + 1200×1800",
+      "transparent": false,
+      "prompt": "Seamless studio sweep in pale rose #F3D9D6 with soft top light and a faint red #B3202A shadow gradient at the floor, empty, Apple-keynote-grade abstract studio backdrop, soft seamless light, calm premium minimalism, milk white #F7F4EC, milk-2 #EFE9DC, forest #0B3B32, brand green #1E7A68 and signal mint #7FE0B8 accents, subtle grain, generous empty space, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, objects",
+      "usedIn": "Four-milk bento, /milk"
+    },
+    {
+      "file": "web/public/desigo/styles/bento-grid/tiles/base-3.png",
+      "size": "2400×1600 + 1200×1800",
+      "transparent": false,
+      "prompt": "Seamless studio sweep in pale amber #F8E4C2 with warm top light and a faint amber #E89A1C glow at the floor, empty, Apple-keynote-grade abstract studio backdrop, soft seamless light, calm premium minimalism, milk white #F7F4EC, milk-2 #EFE9DC, forest #0B3B32, brand green #1E7A68 and signal mint #7FE0B8 accents, subtle grain, generous empty space, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, objects, sun",
+      "usedIn": "Four-milk bento, /milk"
+    },
+    {
+      "file": "web/public/desigo/styles/bento-grid/tiles/essential.png",
+      "size": "2400×1600 + 1200×1800",
+      "transparent": false,
+      "prompt": "Seamless studio sweep in ivory #F4EDE2 with soft skylight and a faint beige #CDB89A shadow at the floor, empty, Apple-keynote-grade abstract studio backdrop, soft seamless light, calm premium minimalism, milk white #F7F4EC, milk-2 #EFE9DC, forest #0B3B32, brand green #1E7A68 and signal mint #7FE0B8 accents, subtle grain, generous empty space, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, objects",
+      "usedIn": "Four-milk bento, /milk"
+    },
+    {
+      "file": "web/public/desigo/styles/bento-grid/tiles/trace-path.png",
+      "size": "2400×1600",
+      "transparent": false,
+      "prompt": "Deep forest green #0B3B32 field with one thin luminous mint #7FE0B8 line winding from left to right through eight small soft points of light, very minimal, Apple-keynote-grade abstract studio backdrop, soft seamless light, calm premium minimalism, milk white #F7F4EC, milk-2 #EFE9DC, forest #0B3B32, brand green #1E7A68 and signal mint #7FE0B8 accents, subtle grain, generous empty space, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, map labels, roads, city",
+      "usedIn": "Why DESIGO® L tile, 06 summary, /trace"
+    },
+    {
+      "file": "web/public/desigo/styles/bento-grid/tiles/technology-grid.png",
+      "size": "2400×1600",
+      "transparent": false,
+      "prompt": "Dark forest #07211C tile background with a faint mint perspective grid receding to a horizon and soft depth haze, Apple-keynote-grade abstract studio backdrop, soft seamless light, calm premium minimalism, milk white #F7F4EC, milk-2 #EFE9DC, forest #0B3B32, brand green #1E7A68 and signal mint #7FE0B8 accents, subtle grain, generous empty space, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, neon pink, text",
+      "usedIn": "11 Technology seven-verb bento"
+    },
+    {
+      "file": "web/public/desigo/styles/bento-grid/tiles/ghee-light.png",
+      "size": "2400×1600",
+      "transparent": false,
+      "prompt": "Warm gold #E9DCC0 studio sweep with honey-coloured light and a soft glow at the floor, empty, Apple-keynote-grade abstract studio backdrop, soft seamless light, calm premium minimalism, milk white #F7F4EC, milk-2 #EFE9DC, forest #0B3B32, brand green #1E7A68 and signal mint #7FE0B8 accents, subtle grain, generous empty space, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, jars, objects",
+      "usedIn": "12 Ghee grade bento"
+    },
+    {
+      "file": "web/public/desigo/styles/bento-grid/textures/paper-tile.png",
+      "size": "2048×2048, seamless",
+      "transparent": false,
+      "prompt": "Seamless tileable fine archival paper texture in warm ivory #EDE4D0, very subtle fibres, flat lighting, Apple-keynote-grade abstract studio backdrop, soft seamless light, calm premium minimalism, milk white #F7F4EC, milk-2 #EFE9DC, forest #0B3B32, brand green #1E7A68 and signal mint #7FE0B8 accents, subtle grain, generous empty space, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, stains, folds",
+      "usedIn": "Heritage / paper tiles (1.5% grain)"
+    }
+  ],
+  "grid": {
+    "columns": {
+      "desktop": 12,
+      "tablet": 6,
+      "mobile": 2
+    },
+    "autoRows": {
+      "desktop": "120px",
+      "mobile": "160px"
+    },
+    "gap": {
+      "desktop": "16px",
+      "xl": "20px",
+      "mobile": "12px"
+    },
+    "tiles": {
+      "XL": "6x4",
+      "L": [
+        "6x3",
+        "4x4"
+      ],
+      "M": [
+        "4x2",
+        "3x3"
+      ],
+      "S": [
+        "3x2",
+        "2x2"
+      ]
+    }
+  },
+  "tileFills": {
+    "default": "#EFE9DC",
+    "paper": "#EDE4D0",
+    "forest": "#0B3B32",
+    "charcoal": "#171918",
+    "gold": "#E9DCC0"
+  },
+  "colorsDark": {
+    "text": "#F7F4EC",
+    "textMuted": "#B9C7C1",
+    "focus": "#7FE0B8"
+  }
+}

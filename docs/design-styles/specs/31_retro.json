@@ -1,0 +1,235 @@
+{
+  "id": 31,
+  "slug": "retro",
+  "name": "Retro",
+  "priority": false,
+  "fit": 3.5,
+  "colors": {
+    "primary": "#1E6B57",
+    "onPrimary": "#F3EAD3",
+    "secondary": "#0B3B32",
+    "accent": "#C2412D",
+    "bg": "#F3EAD3",
+    "surface": "#F7F4EC",
+    "text": "#2A221A",
+    "textMuted": "#5B4330",
+    "line": "rgba(91,67,48,.30)",
+    "ok": "#1E6B57",
+    "pending": "#D99A2B",
+    "demo": "#C2412D"
+  },
+  "variants": {
+    "master-26": {
+      "base": "#1F5C45",
+      "deep": "#0A2A20",
+      "light": "#D9E8DF",
+      "world": "seed-packet poster #1F5C45 + cream + gold"
+    },
+    "root-14": {
+      "base": "#B3202A",
+      "deep": "#4A0A0F",
+      "light": "#F3D9D6",
+      "world": "travel poster #C2412D + cream + #4A0A0F"
+    },
+    "base-3": {
+      "base": "#E89A1C",
+      "deep": "#5A3304",
+      "light": "#F8E4C2",
+      "world": "enamel sign #E89A1C/#D99A2B + forest"
+    },
+    "essential": {
+      "base": "#CDB89A",
+      "deep": "#4D4130",
+      "light": "#F4EDE2",
+      "world": "letterpress card #CDB89A/#4D4130 on cream"
+    }
+  },
+  "fonts": {
+    "display": {
+      "family": "Fraunces",
+      "package": "@fontsource-variable/fraunces",
+      "weights": [
+        700,
+        900
+      ]
+    },
+    "body": {
+      "family": "Inter Tight",
+      "package": "@fontsource-variable/inter-tight",
+      "weights": [
+        400,
+        500,
+        600,
+        700
+      ]
+    },
+    "label": {
+      "family": "Bricolage Grotesque",
+      "package": "@fontsource-variable/bricolage-grotesque",
+      "weights": [
+        700
+      ]
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "package": "@fontsource-variable/jetbrains-mono",
+      "weights": [
+        400,
+        500
+      ]
+    },
+    "devanagari": {
+      "family": "Rozha One",
+      "package": "@fontsource/rozha-one",
+      "weights": [
+        400
+      ]
+    }
+  },
+  "type": {
+    "display": "clamp(3.25rem, 2rem + 6vw, 8.5rem)",
+    "h1": "clamp(2.5rem, 1.6rem + 3.8vw, 4.75rem)",
+    "h2": "clamp(1.75rem, 1.3rem + 1.8vw, 2.75rem)",
+    "body": "clamp(1rem, .95rem + .25vw, 1.125rem)",
+    "label": "clamp(.75rem, .72rem + .15vw, .85rem)"
+  },
+  "radius": {
+    "sm": "2px",
+    "md": "6px",
+    "lg": "12px",
+    "pill": "999px"
+  },
+  "shadow": {
+    "bottle": "crisp low-sun shadow (20deg, 0.3 opacity) + contact ellipse rgba(42,34,26,.3) blur 14px",
+    "panel": "3px 3px 0 #0B3B32 (lifted plates only)"
+  },
+  "motion": {
+    "easeOut": "cubic-bezier(.25,.8,.25,1)",
+    "easeInOut": "cubic-bezier(.65,0,.35,1)",
+    "easeMilk": "cubic-bezier(.22,.9,.24,1)",
+    "durMicro": 240,
+    "durReveal": 700,
+    "durScene": 900,
+    "printPlate2": 180,
+    "stamp": 300,
+    "badgeTurn": 600
+  },
+  "button": {
+    "primary": {
+      "bg": "#1E6B57",
+      "fg": "#F3EAD3",
+      "border": "2px solid #0B3B32",
+      "radius": "6px",
+      "padding": "16px 26px",
+      "hover": "lift 2px + 3px 3px 0 #0B3B32, 240ms"
+    },
+    "secondary": {
+      "bg": "#F3EAD3",
+      "fg": "#0B3B32",
+      "border": "2px solid #0B3B32",
+      "radius": "6px",
+      "padding": "14px 24px",
+      "hover": "lift 2px"
+    },
+    "link": {
+      "fg": "#2A221A",
+      "underline": "1.5px #0B3B32 offset 3px",
+      "hover": "underline #1E6B57, arrow +4px"
+    }
+  },
+  "logo": {
+    "loop": "write/un-write infinite",
+    "onLight": "#171918",
+    "onDark": "#FFFFFF",
+    "colourChange": false,
+    "cycleMs": 4600,
+    "drawMs": "0-1200 (480 each, 95 stagger)",
+    "holdUntilMs": 3000,
+    "unwriteMs": "3000-4200 (reverse order)",
+    "colorLight": "#171918",
+    "colorDark": "#F7F4EC"
+  },
+  "tailPrompt": "retro-modern Indian dairy print aesthetic 1955–1980, mid-century two-colour gouache, cream paper #F3EAD3, enamel green #1E6B57, deep forest #0B3B32, tomato #C2412D, mustard #D99A2B, gold foil #C8A96B, warm morning light, subtle paper texture, no fake scratches, calm, premium, no text, no watermark, no logo, no letters",
+  "images": [
+    {
+      "file": "web/public/desigo/styles/retro/hero-landscape.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Mid-century two-colour gouache illustration of a quiet Indian home doorstep in early morning light, a clean stone step and a painted wooden door, long crisp low-sun shadows, cream and enamel-green tones, empty space on the step at the centre, retro-modern Indian dairy print aesthetic 1955–1980, mid-century two-colour gouache, cream paper #F3EAD3, enamel green #1E6B57, deep forest #0B3B32, tomato #C2412D, mustard #D99A2B, gold foil #C8A96B, warm morning light, subtle paper texture, no fake scratches, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, bottles, crates with bottles, people, signboards, sepia filter, scratches",
+      "usedIn": "Hero (ch. 01)"
+    },
+    {
+      "file": "web/public/desigo/styles/retro/hero-portrait.png",
+      "size": "1400×2400 (7:12)",
+      "transparent": false,
+      "prompt": "Tall mid-century gouache illustration of a doorstep and door in morning light, step centred and empty, cream and enamel green, retro-modern Indian dairy print aesthetic 1955–1980, mid-century two-colour gouache, cream paper #F3EAD3, enamel green #1E6B57, deep forest #0B3B32, tomato #C2412D, mustard #D99A2B, gold foil #C8A96B, warm morning light, subtle paper texture, no fake scratches, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, bottles, people, text",
+      "usedIn": "Hero mobile"
+    },
+    {
+      "file": "web/public/desigo/styles/retro/world-master-26.png",
+      "size": "3200×2000 + 1400×2400 crop",
+      "transparent": false,
+      "prompt": "Mid-century botanical seed-packet style poster illustration, a garland of Indian herb sprigs around an empty oval centre, flat gouache in bottle green #1F5C45, cream and gold, subtle print texture, retro-modern Indian dairy print aesthetic 1955–1980, mid-century two-colour gouache, cream paper #F3EAD3, enamel green #1E6B57, deep forest #0B3B32, tomato #C2412D, mustard #D99A2B, gold foil #C8A96B, warm morning light, subtle paper texture, no fake scratches, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, lettering, seed names, numbers, photos",
+      "usedIn": "Four milks ch. 08, /milk/master-26"
+    },
+    {
+      "file": "web/public/desigo/styles/retro/world-root-14.png",
+      "size": "3200×2000 + 1400×2400 crop",
+      "transparent": false,
+      "prompt": "1960s Indian railway-era travel poster illustration of red earth fields with grazing zebu cows and broad sun rays, flat gouache in tomato #C2412D, cream and oxblood #4A0A0F, empty space at the centre, retro-modern Indian dairy print aesthetic 1955–1980, mid-century two-colour gouache, cream paper #F3EAD3, enamel green #1E6B57, deep forest #0B3B32, tomato #C2412D, mustard #D99A2B, gold foil #C8A96B, warm morning light, subtle paper texture, no fake scratches, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, trains, lettering, Holstein cows, people",
+      "usedIn": "Four milks ch. 08, /milk/root-14"
+    },
+    {
+      "file": "web/public/desigo/styles/retro/world-base-3.png",
+      "size": "3200×2000 + 1400×2400 crop",
+      "transparent": false,
+      "prompt": "Mid-century kitchen enamel-sign style illustration of a simple kitchen shelf and window in golden morning light, flat two-colour print in amber #E89A1C, mustard #D99A2B and forest, empty shelf centre, retro-modern Indian dairy print aesthetic 1955–1980, mid-century two-colour gouache, cream paper #F3EAD3, enamel green #1E6B57, deep forest #0B3B32, tomato #C2412D, mustard #D99A2B, gold foil #C8A96B, warm morning light, subtle paper texture, no fake scratches, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, bottles, jars with labels, lettering",
+      "usedIn": "Four milks ch. 08, /milk/base-3"
+    },
+    {
+      "file": "web/public/desigo/styles/retro/world-essential.png",
+      "size": "3200×2000 + 1400×2400 crop",
+      "transparent": false,
+      "prompt": "Plain cream letterpress card with one thin taupe rule and a subtle deep impression texture, sand #CDB89A and taupe #4D4130 on cream, almost empty, retro-modern Indian dairy print aesthetic 1955–1980, mid-century two-colour gouache, cream paper #F3EAD3, enamel green #1E6B57, deep forest #0B3B32, tomato #C2412D, mustard #D99A2B, gold foil #C8A96B, warm morning light, subtle paper texture, no fake scratches, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, letters, numbers, ornaments",
+      "usedIn": "Four milks ch. 08, /milk/essential"
+    },
+    {
+      "file": "web/public/desigo/styles/retro/journey-route-poster.png",
+      "size": "3600×1200 (3:1)",
+      "transparent": false,
+      "prompt": "Mid-century illustrated route-map poster: a dotted route winding across a flat two-colour Rajasthan landscape through seven empty round frames, a small zebu cow, a farm hut, khejri trees and a dairy building along the way, retro-modern Indian dairy print aesthetic 1955–1980, mid-century two-colour gouache, cream paper #F3EAD3, enamel green #1E6B57, deep forest #0B3B32, tomato #C2412D, mustard #D99A2B, gold foil #C8A96B, warm morning light, subtle paper texture, no fake scratches, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, place names, numbers, bottles, people",
+      "usedIn": "Cow → bottle ch. 03, /trace"
+    },
+    {
+      "file": "web/public/desigo/styles/retro/heritage-milkman.png",
+      "size": "2400×2400",
+      "transparent": true,
+      "prompt": "Mid-century two-colour gouache illustration of an Indian milkman on a bicycle carrying steel milk cans on a quiet lane at dawn, respectful, flat shapes, enamel green and cream, isolated on transparent background, retro-modern Indian dairy print aesthetic 1955–1980, mid-century two-colour gouache, cream paper #F3EAD3, enamel green #1E6B57, deep forest #0B3B32, tomato #C2412D, mustard #D99A2B, gold foil #C8A96B, warm morning light, subtle paper texture, no fake scratches, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, bottles, caricature, text, brand marks",
+      "usedIn": "Heritage ch. 10"
+    },
+    {
+      "file": "web/public/desigo/styles/retro/texture-print-paper.png",
+      "size": "2048×2048, seamless",
+      "transparent": false,
+      "prompt": "Seamless tileable cream printed-paper texture #F3EAD3 with faint fibres and very light halftone speckle, flat even light, retro-modern Indian dairy print aesthetic 1955–1980, mid-century two-colour gouache, cream paper #F3EAD3, enamel green #1E6B57, deep forest #0B3B32, tomato #C2412D, mustard #D99A2B, gold foil #C8A96B, warm morning light, subtle paper texture, no fake scratches, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, stains, scratches, folds, text, vignette",
+      "usedIn": "Cream panels"
+    },
+    {
+      "file": "web/public/desigo/styles/retro/ghee-tin-label.png",
+      "size": "3200×2000",
+      "transparent": false,
+      "prompt": "Vintage Indian tin-label style ornamental panel with a folk border of leaves and dots in mustard, tomato and cream, an empty plain centre panel, flat print texture, retro-modern Indian dairy print aesthetic 1955–1980, mid-century two-colour gouache, cream paper #F3EAD3, enamel green #1E6B57, deep forest #0B3B32, tomato #C2412D, mustard #D99A2B, gold foil #C8A96B, warm morning light, subtle paper texture, no fake scratches, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, lettering, numbers, jars, brand names",
+      "usedIn": "Ghee ch. 12, /ghee"
+    }
+  ]
+}

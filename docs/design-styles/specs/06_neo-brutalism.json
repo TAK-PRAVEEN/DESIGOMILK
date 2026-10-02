@@ -1,0 +1,225 @@
+{
+  "id": 6,
+  "slug": "neo-brutalism",
+  "name": "Neo-Brutalism",
+  "priority": false,
+  "fit": 2,
+  "colors": {
+    "primary": "#1E7A68",
+    "onPrimary": "#F7F4EC",
+    "secondary": "#F2B233",
+    "accent": "#BFE6D6",
+    "bg": "#F7F4EC",
+    "surface": "#FBF8F1",
+    "text": "#171918",
+    "textMuted": "#4A4D4A",
+    "line": "#171918",
+    "ok": "#1F5C45",
+    "pending": "#5A3304",
+    "demo": "#C7302B"
+  },
+  "variants": {
+    "master-26": {
+      "base": "#1F5C45",
+      "deep": "#0A2A20",
+      "light": "#BFE6D6"
+    },
+    "root-14": {
+      "base": "#C7302B",
+      "deep": "#4A0A0F",
+      "light": "#F3D9D6"
+    },
+    "base-3": {
+      "base": "#F2B233",
+      "deep": "#5A3304",
+      "light": "#F8E4C2"
+    },
+    "essential": {
+      "base": "#E9DCC6",
+      "deep": "#4D4130",
+      "light": "#F4EDE2"
+    }
+  },
+  "fonts": {
+    "display": {
+      "family": "Space Grotesk",
+      "package": "@fontsource-variable/space-grotesk",
+      "weights": [
+        600,
+        700
+      ]
+    },
+    "body": {
+      "family": "Inter Tight",
+      "package": "@fontsource-variable/inter-tight",
+      "weights": [
+        500
+      ]
+    },
+    "label": {
+      "family": "Space Mono",
+      "package": "@fontsource/space-mono",
+      "weights": [
+        700
+      ]
+    },
+    "mono": {
+      "family": "Space Mono",
+      "package": "@fontsource/space-mono",
+      "weights": [
+        400,
+        700
+      ]
+    },
+    "devanagari": {
+      "family": "Yatra One",
+      "package": "@fontsource/yatra-one",
+      "weights": [
+        400
+      ]
+    },
+    "poster": {
+      "family": "Archivo Black",
+      "package": "@fontsource/archivo-black",
+      "weights": [
+        400
+      ]
+    }
+  },
+  "type": {
+    "display": "clamp(3rem, 10vw, 10rem)",
+    "h1": "clamp(2.4rem, 5vw, 4.5rem)",
+    "h2": "clamp(1.6rem, 3vw, 2.5rem)",
+    "body": "clamp(1rem, 0.95rem + 0.2vw, 1.125rem)",
+    "label": "0.75rem"
+  },
+  "radius": {
+    "sm": "8px",
+    "md": "12px",
+    "lg": "20px"
+  },
+  "shadow": {
+    "bottle": "design-system contact ellipse (soft) — the product keeps real light; plinth gets 6px 6px 0 #171918",
+    "panel": "6px 6px 0 #171918 (mobile 4px 4px 0); hover 8px 8px 0; active 0 0 0"
+  },
+  "motion": {
+    "easeOut": "cubic-bezier(.2,.9,.3,1)",
+    "easeInOut": "cubic-bezier(.65,0,.35,1)",
+    "durMicro": 120,
+    "durReveal": 240,
+    "durScene": 400
+  },
+  "button": {
+    "primary": {
+      "bg": "#1E7A68",
+      "fg": "#F7F4EC",
+      "border": "3px #171918",
+      "radius": "12px",
+      "padding": "0 28px; height 52px",
+      "shadow": "6px 6px 0 #171918",
+      "hover": "translate(-2px,-2px), shadow 8px; active translate(6px,6px), shadow 0"
+    },
+    "secondary": {
+      "bg": "#F2B233",
+      "fg": "#171918",
+      "border": "3px #171918",
+      "radius": "12px",
+      "padding": "0 28px; height 52px",
+      "shadow": "6px 6px 0 #171918",
+      "hover": "as primary"
+    },
+    "link": {
+      "fg": "#171918",
+      "underline": "3px #1E7A68, offset 4px",
+      "hover": "mint highlight block behind text, arrow +6px"
+    }
+  },
+  "images": [
+    {
+      "file": "web/public/desigo/styles/neo-brutalism/hero.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Flat poster backdrop of a simple sunrise: outlined yellow sun with thick rays behind gentle outlined dunes, mint sky, a plain outlined plinth block empty in the centre, flat neo-brutalist poster illustration with thick 3 px ink outlines and hard offset shadows, inspired by Rajasthani truck art and hand-painted shop signs, palette milk #F7F4EC, ink #171918, green #1E7A68, mint #BFE6D6, yellow #F2B233, red #C7302B, ivory #E9DCC6, crisp, friendly, uncluttered, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, people, vehicles, clutter, gradients",
+      "usedIn": "01 Hero, /return"
+    },
+    {
+      "file": "web/public/desigo/styles/neo-brutalism/hero-portrait.png",
+      "size": "1400×2400 (7:12)",
+      "transparent": false,
+      "prompt": "Vertical flat poster: outlined sun and rays at the top, outlined dunes at the bottom, an empty outlined plinth block in the centre, flat neo-brutalist poster illustration with thick 3 px ink outlines and hard offset shadows, inspired by Rajasthani truck art and hand-painted shop signs, palette milk #F7F4EC, ink #171918, green #1E7A68, mint #BFE6D6, yellow #F2B233, red #C7302B, ivory #E9DCC6, crisp, friendly, uncluttered, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, people, clutter",
+      "usedIn": "01 Hero mobile"
+    },
+    {
+      "file": "web/public/desigo/styles/neo-brutalism/worlds/master-26.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "Flat deep green #1F5C45 poster block with a mint inner panel and a scatter of thick-outlined generic leaf stickers around the edges, empty centre, flat neo-brutalist poster illustration with thick 3 px ink outlines and hard offset shadows, inspired by Rajasthani truck art and hand-painted shop signs, palette milk #F7F4EC, ink #171918, green #1E7A68, mint #BFE6D6, yellow #F2B233, red #C7302B, ivory #E9DCC6, crisp, friendly, uncluttered, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, counted leaves in rows, faces",
+      "usedIn": "08 Four milks · /milk/master-26"
+    },
+    {
+      "file": "web/public/desigo/styles/neo-brutalism/worlds/root-14.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "Flat red #C7302B poster block with thick-outlined earth-clod and root stickers around the edges, empty centre, flat neo-brutalist poster illustration with thick 3 px ink outlines and hard offset shadows, inspired by Rajasthani truck art and hand-painted shop signs, palette milk #F7F4EC, ink #171918, green #1E7A68, mint #BFE6D6, yellow #F2B233, red #C7302B, ivory #E9DCC6, crisp, friendly, uncluttered, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, gore, faces",
+      "usedIn": "08 Four milks · /milk/root-14"
+    },
+    {
+      "file": "web/public/desigo/styles/neo-brutalism/worlds/base-3.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "Flat yellow #F2B233 poster block with a thick-outlined sun sticker and small wheat-ear stickers around the edges, empty centre, flat neo-brutalist poster illustration with thick 3 px ink outlines and hard offset shadows, inspired by Rajasthani truck art and hand-painted shop signs, palette milk #F7F4EC, ink #171918, green #1E7A68, mint #BFE6D6, yellow #F2B233, red #C7302B, ivory #E9DCC6, crisp, friendly, uncluttered, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, sun with face",
+      "usedIn": "08 Four milks · /milk/base-3"
+    },
+    {
+      "file": "web/public/desigo/styles/neo-brutalism/worlds/essential.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "Flat ivory #E9DCC6 poster block with two simple thick-outlined milk-drop stickers in the corners, very sparse, empty centre, flat neo-brutalist poster illustration with thick 3 px ink outlines and hard offset shadows, inspired by Rajasthani truck art and hand-painted shop signs, palette milk #F7F4EC, ink #171918, green #1E7A68, mint #BFE6D6, yellow #F2B233, red #C7302B, ivory #E9DCC6, crisp, friendly, uncluttered, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, clutter",
+      "usedIn": "08 Four milks · /milk/essential"
+    },
+    {
+      "file": "web/public/desigo/styles/neo-brutalism/journey/return-loop.png",
+      "size": "2400×2400",
+      "transparent": true,
+      "prompt": "Four flat thick-outlined illustrations arranged in a circle with thick arrows between them: an empty wooden crate on a doorstep at dawn, hands rinsing under a tap, a delivery bicycle with an empty carrier, a clean stainless washing rack, isolated on transparent background, flat neo-brutalist poster illustration with thick 3 px ink outlines and hard offset shadows, inspired by Rajasthani truck art and hand-painted shop signs, palette milk #F7F4EC, ink #171918, green #1E7A68, mint #BFE6D6, yellow #F2B233, red #C7302B, ivory #E9DCC6, crisp, friendly, uncluttered, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, bottles, glass, faces, text",
+      "usedIn": "/return 'The glass comes back'"
+    },
+    {
+      "file": "web/public/desigo/styles/neo-brutalism/trace/board.png",
+      "size": "3600×2000",
+      "transparent": false,
+      "prompt": "Flat deep forest green #0B3B32 board with a faint mint dot grid and eight empty thick-outlined milk-white circles connected by thick ink lines in a winding path, flat neo-brutalist poster illustration with thick 3 px ink outlines and hard offset shadows, inspired by Rajasthani truck art and hand-painted shop signs, palette milk #F7F4EC, ink #171918, green #1E7A68, mint #BFE6D6, yellow #F2B233, red #C7302B, ivory #E9DCC6, crisp, friendly, uncluttered, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, labels, icons inside circles",
+      "usedIn": "06 Traceability board"
+    },
+    {
+      "file": "web/public/desigo/styles/neo-brutalism/textures/dot-grid.png",
+      "size": "1024×1024, seamless",
+      "transparent": true,
+      "prompt": "Seamless tileable grid of tiny ink dots every 24 pixels at 10 percent opacity on transparent background, flat neo-brutalist poster illustration with thick 3 px ink outlines and hard offset shadows, inspired by Rajasthani truck art and hand-painted shop signs, palette milk #F7F4EC, ink #171918, green #1E7A68, mint #BFE6D6, yellow #F2B233, red #C7302B, ivory #E9DCC6, crisp, friendly, uncluttered, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, lines, noise",
+      "usedIn": "page ground overlay"
+    },
+    {
+      "file": "web/public/desigo/styles/neo-brutalism/textures/truck-art-border.png",
+      "size": "3000×240, horizontally tileable",
+      "transparent": true,
+      "prompt": "Horizontal truck-art inspired border band of thick-outlined flowers, leaves and small triangles in green, yellow, red and mint, isolated on transparent background, flat neo-brutalist poster illustration with thick 3 px ink outlines and hard offset shadows, inspired by Rajasthani truck art and hand-painted shop signs, palette milk #F7F4EC, ink #171918, green #1E7A68, mint #BFE6D6, yellow #F2B233, red #C7302B, ivory #E9DCC6, crisp, friendly, uncluttered, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, brand mark, milk bottle, glass bottle, ghee jar, product packaging, Holstein cow, Jersey cow, cartoon cow face, anthropomorphic animal, people's faces, religious idols, deity imagery, halo, glowing body, medical imagery, plastic sheen, oversaturated neon, lowres, blurry, jpeg artefacts, distorted anatomy, extra limbs, checkerboard background, eyes, faces, text, chains",
+      "usedIn": "Divider / ornament (once per page)"
+    }
+  ],
+  "colorsDark": {
+    "bg": "#0B3B32",
+    "text": "#F7F4EC",
+    "buttonPrimaryBg": "#BFE6D6",
+    "buttonPrimaryFg": "#171918"
+  }
+}

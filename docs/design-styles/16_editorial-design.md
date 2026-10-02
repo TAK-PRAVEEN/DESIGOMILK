@@ -131,7 +131,7 @@ status.
 | 12 | Ghee | A recipe-card-style spread (without recipes or health claims): bilona explained, the jar still-life and three grades. |
 | 13 | Trace your milk | An interactive "boxout": enter the demo Bottle ID and the result prints as a captioned timeline. DEMO is shown as a kicker on every line. |
 | 14 | Story | A chronology spread with verified milestones, using sources and footnote markers where helpful (for example "Incorporated 1 March 2019, ROC Jaipur"). |
-| 15 | Final CTA | Back cover: "Know where your milk comes from.", the bottle, two CTAs and a colophon (contact and supporters marked pending). |
+| 15 | Final CTA | Back cover: "Know where your milk comes from.", the bottle, two CTAs and a colophon (contact only; no supporters listed until written evidence is on file, KB Q34). |
 
 **Inner pages:** /milk is a "four covers" index · /milk/[variant] is the cover, feature, Look spread with the 360
 viewer, and specifications boxout · /ghee is the feature plus specifications · /origin is the long-form feature with
@@ -197,10 +197,130 @@ editorial voice drifting into claims.
 **Premium guardrails**
 1. Every feature opens with an image or a statement, never with a paragraph.
 2. Hard text budget: ≤ 220 words per spread on the home page, with depth on inner pages.
-3. Documentary, real photography only, credited. No stock, no AI imagery, no lifestyle props (no croissants, no
+3. Documentary, real photography only, credited. No stock and no AI imagery presented as photography (generated plates in 12.7 are limited to paper stock, textures and clearly illustrated backdrops), no lifestyle props (no croissants, no
    generic farmhouse décor).
 4. Captions carry status: pending claims are labelled in the caption, the way a newspaper would attribute.
 5. No superlatives and no health language. Editorial voice reports and never sells.
 6. Consistent spread system: at most 5 spread types and no one-off layouts.
 7. Typographic craft is non-negotiable: real quotes, no widows, hanging punctuation in pull quotes.
 8. Product moments use the Luxury Typography scenes so commerce never looks like a blog.
+
+## 12. Build-ready spec sheet
+
+> Audit 2026-10-03: Section 12 was missing. Added it from the Paper & Ink palette with Newsreader body, all 14 components, motion tokens and 10 image prompts limited to paper, texture and clearly illustrated plates. Guardrail 3 ("no AI imagery") clarified so it no longer conflicts with 12.7. Fonts already OFL. Body: supporters no longer listed as pending on /about (blocked claim, KB Q34).
+
+### 12.1 Colour system
+| Role | Token | Hex | Use | Contrast note |
+|---|---|---|---|---|
+| Primary | --c-primary | `#0B3B32` | forest: section openers, primary button, folios on dark spreads | 11.3:1 vs bg. AAA for text. |
+| Primary ink | --c-on-primary | `#F7F4EC` | newsprint text on forest | 11.3:1 on primary. |
+| Secondary | --c-secondary | `#1E7A68` | DESIGO green: links, kicker labels, reading-progress rule | 4.7:1 vs bg. Passes AA for link text. |
+| Accent | --c-accent | `#C8A96B` | gold: rules, drop cap on dark, focus halo | 2.0:1 vs bg. Never text on light; drop caps in gold only on forest (5.5:1 there). |
+| Background | --c-bg | `#F7F4EC` | newsprint page (brand milk) |  |
+| Surface | --c-surface | `#EDE4D0` | stock: archival / heritage spreads; boxouts use stock-deep `#E2D6BC` |  |
+| Text | --c-text | `#1E211F` | ink: headlines and body | 14.8:1 on bg · 12.9:1 on surface (≥ 7:1 met) |
+| Muted text | --c-text-muted | `#55584F` | ink-soft: captions, credits, decks on light | 6.6:1 on bg · 5.7:1 on surface (≥ 4.5:1 met) |
+| Line | --c-line | `#CFC5AF` | column rules, hairlines | decorative only; never the sole carrier of meaning |
+| Success / Pending / Demo | --c-ok / --c-pending / --c-demo | `#1E7A68` / `#8C6A43` / `#B3202A` | green = verified caption line; earth dotted underline = pending (attributed in caption); red kicker = DEMO | Red DEMO kicker 6.0:1 on newsprint; earth is underline-only (4.5:1 borderline, never body text). |
+
+**Variant worlds in this style** (base / deep / light are the brand variant tokens; the right-hand column is how this style stages them):
+
+| Variant | Base | Deep | Light | World in this style |
+|---|---|---|---|---|
+| MASTER 26 (V1+, green cap) | `#1F5C45` | `#0A2A20` | `#D9E8DF` | green-stock cover (`#D9E8DF` page, `#0A2A20` ink): "The fullest expression of the source."; MasterHerb™ feature with herbs pending in a boxout |
+| ROOT 14 (V1, red cap) | `#B3202A` | `#4A0A0F` | `#F3D9D6` | blush stock with oxblood ink: "Rooted in free grazing." photo essay |
+| BASE 3 (V2, amber cap) | `#E89A1C` | `#5A3304` | `#F8E4C2` | pale-amber stock with umber ink: "The everyday foundation." morning-delivery feature |
+| ESSENTIAL (V3, ivory cap) | `#CDB89A` | `#4D4130` | `#F4EDE2` | ivory stock with warm-brown ink: "Simple, balanced, honest." one-bottle still-life spread |
+
+**Dark-chapter inversion:** Forest spreads (ch. 06 infographic, ch. 11 science section): bg → `#0B3B32`, surface → `#0F4A3F`, text → `#F7F4EC`, muted → `#C9D3CD`, line → `rgba(247,244,236,.18)`, accent gold `#C8A96B` for drop caps and rules, links → `#7FE0B8`; primary button inverts to milk fill with forest label.
+
+### 12.2 Typography
+| Role | Font family | Source (npm @fontsource… / Google Fonts) | Weights / axes | Size (clamp) | Line-height | Tracking | Case |
+|---|---|---|---|---|---|---|---|
+| Display / hero | Fraunces (variable) | `@fontsource-variable/fraunces` (Google Fonts: Fraunces) | opsz 144, wght 400, italic for decks | clamp(4rem, 10vw, 10rem) (cover masthead lines) | 0.92 | -0.03em | Sentence |
+| Headline H1–H2 | Fraunces (variable) | `@fontsource-variable/fraunces` (Google Fonts: Fraunces) | opsz 72–144, wght 400–500, italic | H1 clamp(2.6rem, 5vw, 5rem) · H2 clamp(1.8rem, 3vw, 3rem) | 1.04 / 1.12 | -0.02em | Sentence |
+| Body | Newsreader (variable) | `@fontsource-variable/newsreader` (Google Fonts: Newsreader) | opsz 6–72 auto, wght 400–500, italic | clamp(1.125rem, 1rem + 0.35vw, 1.1875rem) (18–19 px) | 1.63 (31 px) | 0 | Sentence; `onum` in text, `lnum` in tables |
+| Label / UI | Inter Tight (variable) | `@fontsource-variable/inter-tight` (Google Fonts: Inter Tight) | wght 400–500 | kicker 0.75rem / caption 0.8125rem | 1.2 / 1.46 (13/19) | +0.16em kickers · 0 captions | UPPER kickers, sentence captions |
+| Data / mono | JetBrains Mono (variable) | `@fontsource-variable/jetbrains-mono` (Google Fonts: JetBrains Mono) | wght 400 | 0.8125rem | 1.4 | 0 | IDs as issued; tabular figures |
+| Devanagari (optional) | Noto Serif Devanagari (variable) | `@fontsource-variable/noto-serif-devanagari` (Google Fonts: Noto Serif Devanagari) | wght 400–500, wdth 100 | pull quotes clamp(1.6rem, 3vw, 2.4rem) | 1.45 | 0 | n/a |
+
+Licence: Fraunces, Newsreader (Production Type), Inter Tight, JetBrains Mono and Noto Serif Devanagari are SIL OFL 1.1. Source Serif 4 (OFL) is the approved fallback text face.
+Pairing: Fraunces headlines + Newsreader text give a magazine's display/text contrast; Inter Tight does the newspaper's small-type jobs (kickers, captions, credits).
+
+### 12.3 Layout & surfaces
+- **Grid:** 12 columns, 24 px gutter, 5vw margins, max-width 1440 px. Feature grid: text cols 4–9 (≈ 62ch), marginalia 10–12, pull quotes break out to 2–11. Spread types: Opener · Read · Look · Data · Close (max 5).
+- **Spacing:** 4-px base, brand scale 4 · 8 · 12 · 16 · 24 · 32 · 48 · 64 · 96 · 128; spread padding 128 px desktop / 64 px mobile; mobile line length 34–40ch.
+- **Radius:** 0 everywhere (sm 0 · md 0 · lg 0); pills only for the cursor.
+- **Border:** 1 px column rules `#CFC5AF`; boxouts have a 1 px ink top rule + 4 px stock-deep fill band.
+- **Shadow / elevation:** None; hierarchy by stock colour and rules. Bottle: contact shadow + soft ambient shadow on covers.
+- **Texture / overlay:** Paper grain 2%; deckle-edge vignette via CSS mask on archival spreads only.
+
+### 12.4 Components
+All interactive components: `focus-visible` = 2 px forest `#0B3B32` outline, offset 3 px, plus a 2 px gold underline on text links; disabled = 40% opacity, `cursor: not-allowed`, `aria-disabled`; loading = label kept, `aria-busy="true"`.
+- **Primary button**: Brand underlined label + arrow, Inter Tight 500 caps +0.16em, forest; a 1 px forest frame draws itself on hover (600 ms), arrow travels 8 px, magnetic offset ≤ 6 px. Active: frame fills forest, label newsprint. Disabled: ink-soft label, no frame. Loading: arrow becomes a 1 px rule that sweeps (900 ms loop). 48 px min height.
+- **Secondary button**: Same label, no frame; 1 px ink underline. Hover: underline thickens 1 → 2 px (240 ms) and the arrow travels. Active: green. Disabled / loading as primary.
+- **Text / arrow link**: Newsreader in-text links in green with 1 px underline, offset 3 px; hover 2 px (240 ms). Standalone "Continue reading →" in Inter Tight caps with travelling arrow. Disabled: ink-soft.
+- **Icon button** (incl. menu): 44×44 px, 20 px 1.25 px-stroke icon (menu, share, close); menu icon = two rules that cross into ×. Hover: icon ink → green. Active: 0.96 scale. Always `aria-label`.
+- **Navigation bar** (desktop + mobile menu) + how the DESIGO® black write/un-write logo loop sits in it: A newspaper running head: 64 px newsprint bar, 1 px rule beneath, folio + running head centred ("DESIGO® · ORIGIN · 04") in Inter Tight caps, links right; a 1 px green reading-progress rule along the bottom on features. Mobile: full-screen "contents page" menu with Fraunces 36 px chapter titles and decks. Logo: the DESIGO® wordmark (approved vector, never redrawn or recoloured) sits at the left of the bar, 112 px wide desktop / 92 px mobile, running the black write / un-write infinite loop of `DesigoLogo` (strokes draw 0–1.2 s, hold to 3.0 s, un-draw 3.0–4.2 s, pause to 4.6 s). Single colour: charcoal `#171918` on light chapters, milk-white `#F7F4EC` on dark chapters; the colour switches with the chapter theme and never animates. No ring, glow, hover trigger or style effect is applied to it. Reduced motion: static, fully written wordmark.
+- **Cursor** (states: default · hover · ROTATE · EXPLORE · ENTER · VIEW · TRACE); touch fallback: default = native arrow (custom cursor off over long-form text) · hover = 24 px ink ring · ROTATE = ring with "DRAG" · EXPLORE = ring with "READ" · ENTER = ring with → · VIEW = ring with "VIEW" over images · TRACE = ring with a small forest dot. Labels Inter Tight 9 px caps. Touch: native; captions always visible (no hover-only content).
+- **Card / panel / info block**: Boxout: stock-deep `#E2D6BC` fill, 1 px ink top rule, kicker + Fraunces H3 + Newsreader 16/26, 24 px padding. Variants: Specifications / Data / How it works. Clickable "cover" cards: image 4:5, hover lifts the caption 4 px (240 ms).
+- **Badge / tag** (incl. "pending verification" and "DEMO · not live data"): Inter Tight 11 px caps kicker-style tag with a 1 px rule above. Pending verification: claim text gets an earth `#8C6A43` 1 px dotted underline and the caption carries "pending verification" like a newspaper attribution. DEMO: red `#B3202A` kicker "DEMO · NOT LIVE DATA" at the top of every demo boxout. Static.
+- **Input + form field** (Trace-your-milk bottle ID): Inside a boxout: label "Bottle ID" (Inter Tight caps), 56 px field, newsprint fill, 1 px ink bottom border only, JetBrains Mono 18 px, placeholder `DSG-BTL-000001-3 (sample format)`. Focus: border 2 px forest + ring token. Error: red text line below. Loading: "Checking the record…" caption with rule sweep.
+- **Divider / ornament**: Thick-thin column rule, and the section-end mark: the DESIGO® wave-"E" at 12 px in ink (vector from the wordmark set, not redrawn) closing each feature.
+- **Section header** (chapter number + title pattern): Folio-style: chapter number in Inter Tight caps "04 — ORIGIN" kicker, Fraunces H1 title, italic Newsreader deck below, 1 px rule; opener pins image 60vh while title scrolls over.
+- **Product info block** (variant name, code, price-pending, size, descriptors): "Specifications" boxout: Fraunces variant name, code in mono, size and price in Newsreader with earth dotted pending underline and caption "price pending confirmation", descriptors as a two-column definition list each with its status line.
+- **Bottle stage** (how Bottle / Bottle360Viewer is framed: plinth, glow, shadow, background): Magazine cover: the render overlaps the masthead the way a cover star overlaps the title; contact shadow on newsprint or variant stock, no glow. Float ±10 px / 6 s, tilt ±8°; before 360 frames ±25° + sheen; with frames a "Look" spread hosts Bottle360Viewer with caption "Drag to turn." (credit line only when a real shoot exists).
+- **Trace node / timeline step**: Numbered annotation on a hairline chain (forest spread): mono step number, Inter Tight title, Newsreader 16 px body from `traceNodes[]`, sidebar "How a hand-off is recorded". Active step: number in gold, rule thickens. Label "Illustrative journey — not live data".
+
+### 12.5 Iconography & illustration
+- **Icons:** Minimal: 20 px, 1.25 px stroke, square caps, used only for UI (menu, close, share, play). Kickers replace icons in content.
+- **Illustration:** Hairline infographics (1 px) and engraved-style plates for heritage; generated plates are clearly illustrations, never pseudo-photos.
+- **Photo treatment:** Documentary, natural light, credited ("Photograph: DESIGO®, Jodhpur"); crops 4:5, 3:2, 16:9 full-bleed; reveal by top-down clip wipe with 1.06 → 1 scale; no filters.
+
+### 12.6 Motion tokens
+| Token | Value | Use |
+|---|---|---|
+| `--ease-out` | `cubic-bezier(.16,1,.3,1)` | text rise 12 px, image wipe |
+| `--ease-inout` | `cubic-bezier(.65,0,.35,1)` | page turn (slide up 24 px + fade) |
+| `--dur-micro` | `240ms` | underline thickness, caption lift |
+| `--dur-reveal` | `600ms` | text reveals, page transition |
+| `--dur-scene` | `1200ms` | image clip-path reveal |
+| `--pin-opener` | `60vh` | Snow-Fall opener pin length |
+| `--float` | `translateY ±10px / 6000ms` | bottle float |
+
+- **Signature:** opener image pinned while the title scrolls over it; contents-page bottle pin in ch. 02.
+- **Scroll:** captions fade in at 50% visibility; 1 px reading-progress rule.
+- **Reduced motion:** no pinning, images visible immediately, progress rule static, logo static.
+
+### 12.7 AI image generation prompts
+House rules: no text/letters/logos/watermarks in images; generated images are illustration, texture or backdrop only; never generate the bottle or ghee jar; zebu cows only, shown with respect; append the style's tail prompt to every prompt.
+
+**Tail prompt (append to every prompt below):** *editorial magazine plate in matte gouache and fine ink line, Marg-magazine art-plate quality, clearly an illustration and not a photograph, muted warm palette of milk white #F7F4EC, paper #EDE4D0, deep forest green #0B3B32, earth brown #8C6A43 and warm gold #C8A96B, generous negative space for type, subtle paper grain, calm, no text, no watermark, no logo, no letters*
+
+**Base negative prompt (append to every negative below):** *text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces*
+
+| # | File path (web/public/desigo/styles/editorial-design/...) | Size / ratio | Transparent? | Prompt | Negative prompt | Used in |
+|---|---|---|---|---|---|---|
+| 1 | `cover-landscape.png` | 3200×2000 (16:10) | no | Gouache illustration of the Thar desert edge near Jodhpur at first light, low khejri trees and soft dunes in the lower third, a large calm empty sky in the upper two thirds for the masthead and the product | photorealism, people, buildings with signs, vivid saturation (+ base negative) | Ch. 01 cover backdrop |
+| 2 | `cover-portrait.png` | 1400×2400 (7:12) | no | Same gouache Thar dawn plate as a tall magazine-cover portrait, horizon in the lowest quarter, empty upper area | photorealism, people (+ base negative) | Mobile cover |
+| 3 | `covers/master-26.png` | 2400×3000 (4:5) | no | Gouache cover plate of a deep forest canopy seen from below, layered greens #0A2A20 and #1F5C45 on pale green stock #D9E8DF, dappled light, empty centre | named herbs, photorealism (+ base negative) | Ch. 08 cover, /milk/master-26 opener |
+| 4 | `covers/root-14.png` | 2400×3000 (4:5) | no | Gouache cover plate of red-earth grazing land with layered sandstone strata, oxblood #4A0A0F and crimson #B3202A on blush stock #F3D9D6, empty centre | photorealism, people (+ base negative) | Ch. 08 cover, /milk/root-14 opener |
+| 5 | `covers/base-3.png` | 2400×3000 (4:5) | no | Gouache cover plate of a quiet village lane at early morning, long shadows, umber #5A3304 and amber #E89A1C on pale amber stock #F8E4C2, empty doorstep centre | photorealism, people's faces, vehicles (+ base negative) | Ch. 08 cover, /milk/base-3 opener |
+| 6 | `covers/essential.png` | 2400×3000 (4:5) | no | Minimal gouache still-life plate: a single pale sandstone block on ivory stock #F4EDE2 with a soft shadow, almost nothing else | objects on the stone, photorealism (+ base negative) | Ch. 08 cover, /milk/essential opener |
+| 7 | `infographic/journey-chain.png` | 3600×1200 (3:1) | yes | Hairline editorial infographic illustration of seven small vignettes in a row linked by one thin line: zebu cow grazing, farm shed with khejri tree, steel milk can, round test card with sixteen dots, stainless chiller, small dairy plant, doorstep at dawn, ink on transparent background | numbers, captions, arrows with text, colour fills (+ base negative) | Ch. 03 / ch. 06 infographic spread |
+| 8 | `textures/newsprint.png` | 2400×2400 seamless | no | Seamless tileable uncoated newsprint paper in milk white #F7F4EC, extremely fine fibres, flat scan lighting | printed text, folds, stains (+ base negative) | Global paper grain (2%) |
+| 9 | `textures/archival-stock.png` | 2400×2400 seamless | no | Seamless tileable warm archival cotton stock #EDE4D0 with soft deckle irregularity, no foxing, flat light | stains, tears, text (+ base negative) | Heritage ch. 10, /about chronology |
+| 10 | `heritage/cow-plate.png` | 1600×2000 (4:5) | yes | Fine ink line plate of a Gir zebu cow, domed forehead, long curled ears, curved horns, calm three-quarter view facing left, on transparent background | cartoon, adornment, religious marks, photorealism (+ base negative) | Ch. 10 heritage plate |
+
+Editorial photography (farms, people, cows, testing, delivery) must be real and credited; these generated plates only cover paper, covers-as-illustration and infographic art.
+
+### 12.8 Prototype acceptance checklist
+- [ ] Tokens from `specs/16_editorial-design.json` applied; no off-palette colours
+- [ ] Fonts self-hosted; correct weights load
+- [ ] All 12.4 components built with all states
+- [ ] Hero + bottle-story + one product world + trace chapter built in this style (the comparison set)
+- [ ] Mobile 360 px pass; reduced-motion pass; contrast checked
+- [ ] Claims rules respected (pending underline, no blocked claims, DEMO labels)
+- [ ] Screenshots: desktop 1440×900 ×4 + mobile 390×844 ×2 saved to docs/media/styles/editorial-design/
+- [ ] Every photograph has a caption + credit; every pending claim is attributed in its caption
+- [ ] ≤ 220 words per home-page spread; no widows (`text-wrap: pretty`)

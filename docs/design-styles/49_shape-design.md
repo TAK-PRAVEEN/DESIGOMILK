@@ -193,7 +193,7 @@ images) · `ShapeMorph` (path interpolation, scroll-scrubbed) · `CapIndex` (fou
 **Real, from DESIGO®:** wordmark vector (the shapes must agree with it); 360 frames; 6–10 farm photographs composed
 with room for arch and circle crops (shoot with masks in mind: subject centred, generous headroom); breed portraits.
 
-**Images to generate** (flat plates and textures only; `web/public/desigo/styles/shape/`; use the house-style tail
+**Images to generate** (flat plates and textures only; `web/public/desigo/styles/shape-design/`; full spec in section 12.7; use the house-style tail
 but replace "subtle film grain, editorial" with "flat colour, no gradients"):
 | # | File | Size | Prompt |
 |---|---|---|---|
@@ -228,3 +228,121 @@ cartoons; cap colours overused until the brand looks like a toy.
 6. Every composition is cropped by the frame on at least one side.
 7. Motion is limited to slide, quarter-turn and morph. Nothing bounces or pops.
 8. Shapes never stand in for numbers or claims: a 16-dot ring is a test card illustration, not a result.
+
+---
+
+## 12. Build-ready spec sheet
+
+> Audit 2026-10-03: strong shape vocabulary, palette and motion; missing colour roles (surface/muted/ok/pending/demo), Devanagari face, radius/shadow tokens, component states, motion tokens, negative prompts and hero-portrait, ESSENTIAL-world and journey prompts. Added all (Noto Sans Devanagari, as Outfit has no Devanagari); sandstone flagged as fill-only (2.0:1 on milk); image folder aligned to `styles/shape-design/`. Fonts OFL; no claim violations.
+
+### 12.1 Colour system
+| Role | Token | Hex | Use | Contrast note |
+|---|---|---|---|---|
+| Primary | `--c-primary` | `#0B3B32` | forest block: primary CTA block, deep chapter blocks | 11.3:1 on bg |
+| Primary ink | `--c-on-primary` | `#F7F4EC` | label on forest block | 11.3:1 on primary |
+| Secondary | `--c-secondary` | `#D9A47A` | Jodhpur sandstone: arches, blocks, info-panel block (fill only; ink text on it 7.4:1) | 2.0:1 on bg |
+| Accent | `--c-accent` | `#1E7A68` | DESIGO® circle, links, focus ring, progress bar | 4.7:1 on bg |
+| Background | `--c-bg` | `#F7F4EC` | milk ground, ≥ 40% of every composition |  |
+| Surface | `--c-surface` | `#EFE9DC` | flat raised plane (inputs, facts table rows) | text on surface 14.6:1 |
+| Text | `--c-text` | `#171918` | charcoal type on light | 16.1:1 on bg |
+| Muted text | `--c-text-muted` | `#5C574C` | captions, labels | 6.5:1 on bg |
+| Line | `--c-line` | `rgba(23,25,24,.14)` | ground lines, table rules; 4 px bars are `--c-accent` | decorative only |
+| Success / Pending / Demo | `--c-ok` / `--c-pending` / `--c-demo` | `#1E7A68` / `#7A5B37` / `#171918` | verified tick in a circle · pending value text + dotted underline · DEMO circle badge fill, milk label | ok 4.7:1 · pending 5.7:1 · demo 16.1:1 on bg; state is never colour-only (text + dotted underline / badge label) |
+| Style extra | `--earth` | `#8C6A43` | 8% offset shadow block (1 module, no blur), 12% flat bottle ellipse | |
+| Style extra | `--gold` | `#C8A96B` | sun disc on heritage, ghee | |
+| Style extra | `--indigo` | `#3E5C8A` | blue-city cube, once per page at most | |
+
+Variant worlds in this style: MASTER 26 · ROOT 14 · BASE 3 · ESSENTIAL (base / deep / light hex for each).
+
+| Variant | Code | Base | Deep | Light | How the world uses them |
+|---|---|---|---|---|---|
+| MASTER 26 | V1+ | `#1F5C45` | `#0A2A20` | `#D9E8DF` | stacked circles in base / deep / light (canopy) on deep forest; numeral "26" in light inside the largest circle; milk text |
+| ROOT 14 | V1 | `#B3202A` | `#4A0A0F` | `#F3D9D6` | stepped blocks in base and deep (stepwell + strata) on light `#F3D9D6`; "14" across two blocks; charcoal text on light |
+| BASE 3 | V2 | `#E89A1C` | `#5A3304` | `#F8E4C2` | huge base-amber sun disc half-set behind a deep-brown horizon block on milk; "3" in deep inside the disc; charcoal text |
+| ESSENTIAL | V3 | `#CDB89A` | `#4D4130` | `#F4EDE2` | one ivory arch (base `#CDB89A`) on milk/light; "E" in deep `#4D4130` in the arch head; charcoal text |
+
+**Dark-chapter inversion:** dark chapters (06, 11, 13, footer) use `--c-bg` → `#0B3B32` (or `#171918` for 11/13), `--c-text` → `#F7F4EC`, `--c-text-muted` → `#C9C3B5`, `--c-line` → `rgba(247,244,236,.18)`, primary block → milk fill with forest label, accent → `#7FE0B8` on charcoal; shapes keep their flat colours; logo turns white and never sits inside a shape.
+
+### 12.2 Typography
+| Role | Font family | Source (npm @fontsource… / Google Fonts) | Weights / axes | Size (clamp) | Line-height | Tracking | Case |
+|---|---|---|---|---|---|---|---|
+| Display / hero | Outfit | `@fontsource-variable/outfit` | 600–700 | clamp(3.5rem, 10vw, 11rem); numerals in circles clamp(4rem, 14vw, 14rem) | 0.9 | −0.03em | UPPERCASE hero, sentence elsewhere |
+| Headline H1–H2 | Outfit 600 · Fraunces 300 italic for one editorial sentence per scene | `@fontsource-variable/outfit` · `@fontsource-variable/fraunces` | Outfit 600 · Fraunces 300i opsz 72 | H1 clamp(2.4rem, 5vw, 5rem) · H2 clamp(1.6rem, 2.8vw, 2.8rem) | 1.0 | −0.02em | sentence |
+| Body | Inter Tight | `@fontsource-variable/inter-tight` | 400 / 500 | 1rem, measure 58ch | 1.6 | 0 | sentence |
+| Label / UI | Inter Tight | `@fontsource-variable/inter-tight` | 600 | .72rem | 1.2 | +0.16em | UPPERCASE |
+| Data / mono | JetBrains Mono | `@fontsource-variable/jetbrains-mono` | 400 · `tnum` | .8rem; 1.75rem trace input | 1.3 | 0 | as data |
+| Devanagari (optional) | Noto Sans Devanagari | `@fontsource-variable/noto-sans-devanagari` | 500–600 | display +6% | 1.2 | 0 | — |
+
+Licence: Outfit, Fraunces, Inter Tight, JetBrains Mono and Noto Sans Devanagari are all SIL OFL 1.1 via @fontsource. Pairing: Outfit's circle-based skeleton matches the monoline wordmark and the five primitives; Fraunces italic keeps one human sentence per scene.
+
+### 12.3 Layout & surfaces
+- **Grid:** 12 columns (5vw margins, 24 px gutters, max 1440 px) overlaid with a shape module of 8vw desktop / 25vw mobile; shapes snap to the module, text to the columns; every composition is cropped by the viewport on ≥ 1 side
+- **Spacing scale:** 4 px base for UI (4 · 8 · 12 · 16 · 24 · 32 · 48 · 64 · 96 · 128); composition spacing in modules (½ · 1 · 2 · 3)
+- **Radius scale:** sm 0 (buttons, panels) · md 50% (circles) · lg arch `999px 999px 0 0` (semicircular head, width:height 1:1.5); pill only for the circle badge
+- **Border style:** none on shapes (flat fills); UI frames 2 px solid where needed; 4 px accent bar for trace links/progress
+- **Shadow / elevation:** no blur anywhere: one 8% `--earth` offset block (1 module) per composition; bottle sits on a flat `--earth` ellipse at 12% instead of a blurred contact shadow
+- **Texture / overlay:** 2% paper grain on sandstone blocks only; everything else flat; no gradients, no glows
+
+### 12.4 Components
+For each: anatomy, sizes, states (default · hover · focus-visible · active · disabled · loading), motion, a11y.
+
+- **Primary button**: label on a forest block that slides in from the left; Inter Tight 600 caps milk + arrow as a small 8 px circle. 52 px high (44 px sm), padding 0 28 px, radius 0. Default: block present · hover: a second sandstone block slides in under the label from the left (240 ms), circle-arrow travels 6 px, magnetic ≤ 6 px · focus-visible: 2 px accent ring offset 3 px · active: block shifts 2 px down-right onto its earth offset · disabled: block at 30%, label muted · loading: circle-arrow rotates as a half-disc quarter-turn loop (1200 ms). A11y: real `<button>`/`<a>` semantics, 44 px minimum target, visible focus independent of colour.
+- **Secondary button**: label + circle-arrow with a 2 px charcoal underline, no block; hover: block slides in at 12% forest behind the label (240 ms) · focus-visible: accent ring · active: underline 4 px · disabled: muted · loading: underline fills left → right repeatedly (1200 ms).
+- **Text / arrow link**: Inter Tight 500 with a half-disc 'underline' that grows under the text on hover (240 ms) and a 6 px circle arrow travel · focus-visible: accent ring · active: half-disc fills · disabled: muted, no shape · loading: n/a.
+- **Icon button** (incl. menu): 44 px circle, 2 px stroke icon built from primitives (menu = two bars; close = two bars crossed at 90°). Hover: circle fills sandstone · focus-visible: accent ring · active: quarter-turn 90° (240 ms) · disabled: 30% · loading: half-disc rotates. `aria-label` required.
+- **Navigation bar** (desktop + mobile menu) + how the DESIGO® black write/un-write logo loop sits in it: 72 px bar on milk or forest only, never over a shape; the DESIGO® wordmark is the black write/un-write infinite loop (charcoal `#171918` on light grounds, white `#FFFFFF`/milk on dark; it never changes colour, never takes a variant hue and is never re-drawn in the style). Six links in Inter Tight 600 caps; RESERVE as the primary block button. Active link marked by a 6 px accent circle below. Mobile: 56 px bar; the menu is a full-screen milk sheet where links stack as large Outfit lines each with its primitive (arch, circle, block…) as a 24 px marker; Esc closes, focus returns.
+- **Cursor** (states: default · hover · ROTATE · EXPLORE · ENTER · VIEW · TRACE); touch fallback: default: 12 px solid charcoal circle · hover: 44 px ring that turns into a half-disc under the link · ROTATE: 72 px circle split into two half-discs that rotate with drag, `DRAG` · EXPLORE: 64 px arch outline `EXPLORE` over shape compositions and the orbit · ENTER: block outline `ENTER` on /milk arches and inner-page links · VIEW: 64 px arch outline `VIEW` on photographs · TRACE: ring with a 4 px bar tail `TRACE` on trace nodes. Disabled: 30% circle. Touch: none; tap targets ≥ 44 px.
+- **Card / panel / info block**: a flat block (sandstone or milk-2), radius 0, padding 1 module × ½ module (32 px min), no shadow except the optional earth offset block. Hover (if linked): offset block slides from 0 to 1 module (240 ms) · focus-visible: accent ring · loading: an empty arch outline (EmptyArchSlot) naming the missing asset.
+- **Badge / tag** (incl. "pending verification" and "DEMO · not live data"): circle or block tags, Inter Tight 600 .66rem caps. Pending verification: milk block with `--c-pending` text and dotted underline `PENDING APPROVAL`; DEMO · not live data: 64 px charcoal circle with milk `DEMO` and a block label `NOT LIVE DATA`, always visible on demo content; ILLUSTRATIVE tag on the trace map.
+- **Input + form field** (Trace-your-milk bottle ID): trace input in a long block: JetBrains Mono 1.75rem, 64 px high, milk-2 fill, 2 px charcoal bottom bar, label above; demo `DSG-BTL-000001-3 (sample format)` prefilled. Default · hover: bar thickens to 4 px · focus-visible: 2 px accent ring + accent bar · active: caret · disabled: 30% · loading: result shapes stack into a bottle silhouette line by line (`aria-live=polite`) · error: pending-earth text + circle icon.
+- **Divider / ornament**: a 4 px bar in accent (journey/trace) or a ground line (1 px `--c-line`) with a half-disc set on it; never triangles, squiggles or confetti.
+- **Section header** (chapter number + title pattern): chapter number set inside a 64 px circle (Outfit 600) + label caps + title in Outfit 600; the composition's primitive enters from the frame edge (900 ms).
+- **Product info block** (variant name, code, price-pending, size, descriptors): sandstone block (ink text 7.4:1): code line in mono, name in Outfit 600 48 px, Fraunces italic editorial line; code `DESIGO® V1+` / `V1` / `V2` / `V3`; price from `desigo.ts` rendered as pending (e.g. ₹94 with dotted underline + tooltip "pending approval · pack size not stated"); size "1 L glass · 900 g" pending; descriptors list with pending items dotted-underlined; descriptors with 6 px circle bullets; `RESERVE ———→` block button.
+- **Bottle stage** (how Bottle / Bottle360Viewer is framed: plinth, glow, shadow, background): the real render stands inside an arch, a large circle (sun or cap colour) behind it, a block plinth under it, flat `--earth` ellipse at 12% beneath; the photographic glass against flat geometry is the premium moment. Float ±8 px / 6 s, tilt ±8°, circle parallax 0.5× opposite. Before 360 frames: ±25° turn with sheen, circle rotates once per 60 s; after: drag, 72-tick ring around the circle with the current frame as a solid dot, counter `036 / 072` mono.
+- **Trace node / timeline step**: each node is its primitive (FARM arch, COLLECTION circle, BATCH block, CHILLER block, BARREL circle-in-block, PLANT block stack, BOTTLE silhouette, YOU circle) linked by a 4 px bar that fills with scroll. Default: outline 2 px milk on forest · hover: fills sandstone · focus-visible: accent ring · active: fills accent, panel opens (block) · disabled/not reached: 30% · loading: bar fill pulses. Label "Illustrative journey — not live data" always visible; nodes are buttons.
+
+### 12.5 Iconography & illustration
+Icons: built from the five primitives (circle + block = chiller; arch + circle = farm), 2 px stroke or solid, square ends, 24 px grid. Illustration: flat-shape plates only (SH series), no gradients; animals and people never built from shapes. Photo treatment: real photography masked by shapes (farm photos in arches, breed portraits whole-animal in circles, delivery in blocks), warm grade, subject centred with headroom for the crop.
+
+### 12.6 Motion tokens
+| Token | Value | Use |
+|---|---|---|
+| `--ease-out` | `cubic-bezier(.16,1,.3,1)` | shape enter (slide from frame edge, one axis) |
+| `--ease-inout` | `cubic-bezier(.65,0,.35,1)` | quarter-turns, chapter block wipe |
+| `--ease-milk` | `cubic-bezier(.22,.9,.24,1)` | mask reveal 0.6 → 1.0 |
+| `--dur-micro` | `240ms` | hover blocks, circle-arrow |
+| `--dur-reveal` | `900ms` | shape enter |
+| `--dur-scene` | `1200ms` | morph circle ↔ arch ↔ bottle, 90°/180° rotation |
+| `--dur-wipe` | `700ms` | full-screen block transition in next chapter's colour |
+| `--stagger` | `120ms` | between shapes; max 5 animated shapes per viewport |
+
+Signature: the chapter 03 morph (hill → arch → circle → 16-dot circle → block → block stack → bottle silhouette) scroll-scrubbed with `scrub: 1`, using pre-computed equal-point paths. No scaling from zero, no bounce, no pop. Reduced motion: static compositions, morph shown as a static strip, block wipes become cross-fades (200 ms).
+
+### 12.7 AI image generation prompts
+House rules: no text/letters/logos/watermarks in images; generated images are illustration, texture or backdrop only; never
+generate the bottle or ghee jar; zebu cows only, shown with respect; append the style's tail prompt to every prompt.
+
+**Tail prompt (append to every prompt below):** *warm natural light, restrained premium palette of milk white #F7F4EC, deep forest green #0B3B32, earth brown #8C6A43 and warm gold #C8A96B, flat colour, no gradients, calm, high-end, no text, no watermark, no logo, no letters*
+
+| # | File path (web/public/desigo/styles/shape-design/...) | Size / ratio | Transparent? | Prompt | Negative prompt | Used in |
+|---|---|---|---|---|---|---|
+| SH-H1 | `web/public/desigo/styles/shape-design/jodhpur-arches.png` | 3200×2000 (16:10) | no | Flat geometric composition inspired by Jodhpur fort architecture: three tall semicircular arches and a sun disc, sandstone #D9A47A, earth #8C6A43 and milk white #F7F4EC, no people, empty central arch | base negatives + gradients, 3D shading, triangles, confetti, Memphis squiggles | Ch. 01 hero background, posters |
+| SH-H2 | `web/public/desigo/styles/shape-design/jodhpur-arch-portrait.png` | 1400×2400 (7:12) | no | Flat geometric vertical poster: one tall sandstone #D9A47A semicircular arch with a large green #1E7A68 circle behind its head and a block plinth below, milk white #F7F4EC ground, empty arch interior | base negatives + gradients, 3D shading, triangles, confetti | Ch. 01 hero (mobile) |
+| SH-V1 | `web/public/desigo/styles/shape-design/canopy-circles.png` | 3200×2000 + 1400×2400 portrait | no | Flat composition of overlapping circles in three greens #1F5C45, #0A2A20 and #D9E8DF suggesting a tree canopy, large empty clearing at center | base negatives + leaf detail, gradients, outlines | MASTER 26 world |
+| SH-V2 | `web/public/desigo/styles/shape-design/stepwell-blocks.png` | 3200×2000 + 1400×2400 portrait | no | Flat geometric abstraction of a Rajasthani stepwell seen frontally, stacked rectangular steps in deep red #B3202A and oxblood #4A0A0F on blush #F3D9D6, strict symmetry, no texture | base negatives + perspective depth, water, people, gradients | ROOT 14 world |
+| SH-V3 | `web/public/desigo/styles/shape-design/sun-horizon-amber.png` | 3200×2000 + 1400×2400 portrait | no | Minimal flat poster of a huge amber #E89A1C sun disc half set behind a single straight horizon block in deep brown #5A3304, milk-white sky | base negatives + sun face, rays, gradients, clouds | BASE 3 world |
+| SH-V4 | `web/public/desigo/styles/shape-design/ivory-arch.png` | 3200×2000 + 1400×2400 portrait | no | Single flat ivory #F4EDE2 semicircular arch with a sand #CDB89A edge block on a milk-white ground, vast empty space, utterly calm | base negatives + ornament, gradients, second arch, people | ESSENTIAL world |
+| SH-J1 | `web/public/desigo/styles/shape-design/journey-primitives.png` | 3600×1600 (9:4) | yes (real alpha) | Flat row of geometric primitives on transparent background: a half-disc hill, a sandstone arch, a circle, a ring of sixteen small dots, a block and a stack of three blocks, evenly spaced on one ground line, earth, sandstone and forest colours | base negatives + bottle shapes, arrows, gradients, people, animals | Ch. 03 journey poster / social; ch. 06 static fallback |
+| SH-T1 | `web/public/desigo/styles/shape-design/sandstone-grain.png` | 2048×2048, seamless | no | Seamless fine sandstone grain texture in warm #D9A47A, very subtle, flat lighting | base negatives + cracks, carvings, strong shadows | Sandstone blocks (2% overlay) |
+| SH-T2 | `web/public/desigo/styles/shape-design/paper-grain-milk.png` | 2048×2048, seamless | no | Seamless very fine uncoated poster paper grain in milk white #F7F4EC, flat even light, almost invisible fibres | base negatives + folds, stains, foxing | Poster exports, print |
+
+Base negatives (apply to every prompt): *text, letters, numbers, logo, watermark, signature, label, product bottle, glass bottle, jar, packaging, Holstein or Jersey cattle, cartoon mascot, deity or religious icon, distorted anatomy, oversaturated, HDR, low resolution*. UI shapes are drawn in code (SVG/`clip-path`); these plates are for posters, social and hero backgrounds. The bottle silhouette is traced from the real render, never generated.
+
+### 12.8 Prototype acceptance checklist
+- [ ] Tokens from `specs/49_shape-design.json` applied; no off-palette colours
+- [ ] Fonts self-hosted; correct weights load
+- [ ] All 12.4 components built with all states
+- [ ] Hero + bottle-story + one product world + trace chapter built in this style (the comparison set)
+- [ ] Mobile 360 px pass; reduced-motion pass; contrast checked
+- [ ] Claims rules respected (pending underline, no blocked claims, DEMO labels)
+- [ ] Screenshots: desktop 1440×900 ×4 + mobile 390×844 ×2 saved to docs/media/styles/shape-design/

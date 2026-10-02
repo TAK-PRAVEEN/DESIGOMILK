@@ -1,0 +1,232 @@
+{
+  "id": 50,
+  "slug": "2000-web",
+  "name": "2000 Web",
+  "priority": true,
+  "fit": 1.5,
+  "colors": {
+    "primary": "#0B3B32",
+    "onPrimary": "#FBF9F3",
+    "secondary": "#E4DFD3",
+    "accent": "#1E7A68",
+    "bg": "#F7F4EC",
+    "surface": "#E4DFD3",
+    "text": "#1E211F",
+    "textMuted": "#5C574C",
+    "line": "#7A7466",
+    "ok": "#1E7A68",
+    "pending": "#7A5B37",
+    "demo": "#B3202A"
+  },
+  "colorsExtra": {
+    "bevel-light": "#FBF9F3",
+    "bevel-dark": "#7A7466",
+    "bevel-darker": "#3A3833",
+    "titlebar": "linear-gradient(90deg, #0B3B32, #1E7A68 55%, #3FA488)",
+    "link-visited": "#7A5B37",
+    "hilite": "#F8E4C2",
+    "counter-bg / --counter-led": "#171918 / #E89A1C",
+    "new": "#B3202A",
+    "gold": "#C8A96B"
+  },
+  "variants": {
+    "master-26": {
+      "base": "#1F5C45",
+      "deep": "#0A2A20",
+      "light": "#D9E8DF"
+    },
+    "root-14": {
+      "base": "#B3202A",
+      "deep": "#4A0A0F",
+      "light": "#F3D9D6"
+    },
+    "base-3": {
+      "base": "#E89A1C",
+      "deep": "#5A3304",
+      "light": "#F8E4C2"
+    },
+    "essential": {
+      "base": "#CDB89A",
+      "deep": "#4D4130",
+      "light": "#F4EDE2"
+    }
+  },
+  "fonts": {
+    "display": {
+      "family": "Gelasio",
+      "package": "@fontsource-variable/gelasio",
+      "weights": [
+        600,
+        700
+      ]
+    },
+    "body": {
+      "family": "Noto Sans",
+      "package": "@fontsource-variable/noto-sans",
+      "weights": [
+        400,
+        700
+      ]
+    },
+    "label": {
+      "family": "Noto Sans",
+      "package": "@fontsource-variable/noto-sans",
+      "weights": [
+        700
+      ]
+    },
+    "mono": {
+      "family": "Cousine",
+      "package": "@fontsource/cousine",
+      "weights": [
+        400,
+        700
+      ]
+    },
+    "counter": {
+      "family": "VT323",
+      "package": "@fontsource/vt323",
+      "weights": [
+        400
+      ]
+    },
+    "devanagari": {
+      "family": "Noto Sans Devanagari",
+      "package": "@fontsource-variable/noto-sans-devanagari",
+      "weights": [
+        400,
+        700
+      ]
+    }
+  },
+  "type": {
+    "display": "clamp(1.75rem, 4vw, 2.5rem)",
+    "h1": "1.75rem",
+    "h2": "1.25rem",
+    "body": "15px/1.5 (min)",
+    "label": "13px bold"
+  },
+  "radius": {
+    "sm": "0",
+    "md": "0",
+    "lg": "0"
+  },
+  "shadow": {
+    "bottle": "wet-floor reflection: flipped render 18% → 0 over 40% height",
+    "panel": "bevel 2px #FBF9F3 / #7A7466 + 1px #3A3833 outer"
+  },
+  "motion": {
+    "easeOut": "steps(12)",
+    "easeInOut": "linear",
+    "durMicro": 0,
+    "durReveal": 600,
+    "durScene": 120,
+    "gifFps": 12,
+    "marqueePxPerSec": 40
+  },
+  "button": {
+    "primary": {
+      "bg": "#0B3B32",
+      "fg": "#FBF9F3",
+      "radius": "0",
+      "padding": "0 16px (32px visual, 44px hit)",
+      "hover": "face #0F4A3F; active: bevel inverts, label +1px"
+    },
+    "secondary": {
+      "bg": "#E4DFD3",
+      "fg": "#1E211F",
+      "radius": "0",
+      "padding": "0 16px",
+      "hover": "face #EAE6DC; active: bevel inverts"
+    },
+    "link": {
+      "fg": "#1E7A68",
+      "visited": "#7A5B37",
+      "underline": "1px",
+      "hover": "earth text on #F8E4C2 highlight"
+    }
+  },
+  "images": [
+    {
+      "id": "W-H1",
+      "file": "web/public/desigo/styles/2000-web/hero-banner-sky.png",
+      "size": "1560×600 (2× of 780 px table)",
+      "transparent": false,
+      "prompt": "Early-2000s homepage header background of a soft cream and pale-gold morning sky with gentle clouds, slightly low-resolution JPEG charm, calm, empty center, early-2000s web graphic, crisp pixels, limited palette of milk white #F7F4EC, forest green #0B3B32, amber #E89A1C and warm grey #E4DFD3, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, numbers, logo, watermark, signature, label, product bottle, glass bottle, jar, packaging, Holstein or Jersey cattle, cartoon mascot, deity or religious icon, distorted anatomy, oversaturated, HDR, low resolution, blue sky gradient wallpaper, lens flare, WordArt, people",
+      "usedIn": "Ch. 01 Welcome page header"
+    },
+    {
+      "id": "W-H2",
+      "file": "web/public/desigo/styles/2000-web/hero-banner-sky-portrait.png",
+      "size": "780×1400 (mobile 2×)",
+      "transparent": false,
+      "prompt": "Vertical early-2000s web background of a soft cream and pale-gold morning sky with small clouds near the top, low-resolution charm, empty, early-2000s web graphic, crisp pixels, limited palette of milk white #F7F4EC, forest green #0B3B32, amber #E89A1C and warm grey #E4DFD3, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, numbers, logo, watermark, signature, label, product bottle, glass bottle, jar, packaging, Holstein or Jersey cattle, cartoon mascot, deity or religious icon, distorted anatomy, oversaturated, HDR, low resolution, blue sky gradient wallpaper, lens flare, people",
+      "usedIn": "Ch. 01 mobile"
+    },
+    {
+      "id": "W-V1",
+      "file": "web/public/desigo/styles/2000-web/tile-leaves.png",
+      "size": "256×256, seamless",
+      "transparent": false,
+      "prompt": "Tiny seamless tileable background pattern of small green #1F5C45 leaves on pale sage #D9E8DF, early-2000s web tiled background, early-2000s web graphic, crisp pixels, limited palette of milk white #F7F4EC, forest green #0B3B32, amber #E89A1C and warm grey #E4DFD3, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, numbers, logo, watermark, signature, label, product bottle, glass bottle, jar, packaging, Holstein or Jersey cattle, cartoon mascot, deity or religious icon, distorted anatomy, oversaturated, HDR, low resolution, gradients, large shapes",
+      "usedIn": "MASTER 26 skin background"
+    },
+    {
+      "id": "W-V2",
+      "file": "web/public/desigo/styles/2000-web/tile-red-earth.png",
+      "size": "256×256, seamless",
+      "transparent": false,
+      "prompt": "Tiny seamless tileable pattern of small red-earth #B3202A pebbles and dots on blush #F3D9D6, early-2000s web tiled background, early-2000s web graphic, crisp pixels, limited palette of milk white #F7F4EC, forest green #0B3B32, amber #E89A1C and warm grey #E4DFD3, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, numbers, logo, watermark, signature, label, product bottle, glass bottle, jar, packaging, Holstein or Jersey cattle, cartoon mascot, deity or religious icon, distorted anatomy, oversaturated, HDR, low resolution, gradients, blood, large shapes",
+      "usedIn": "ROOT 14 skin background"
+    },
+    {
+      "id": "W-V3",
+      "file": "web/public/desigo/styles/2000-web/sunset-thumb.png",
+      "size": "640×240",
+      "transparent": false,
+      "prompt": "Small early-2000s digital-camera-style photo look of a golden wheat field at sunset, slightly over-saturated amber #E89A1C, low resolution charm, no people, early-2000s web graphic, crisp pixels, limited palette of milk white #F7F4EC, forest green #0B3B32, amber #E89A1C and warm grey #E4DFD3, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, numbers, logo, watermark, signature, label, product bottle, glass bottle, jar, packaging, Holstein or Jersey cattle, cartoon mascot, deity or religious icon, distorted anatomy, oversaturated, HDR, low resolution, people, modern HDR, sharp detail",
+      "usedIn": "BASE 3 skin `sunset.jpg` banner"
+    },
+    {
+      "id": "W-V4",
+      "file": "web/public/desigo/styles/2000-web/tile-ivory-weave.png",
+      "size": "256×256, seamless",
+      "transparent": false,
+      "prompt": "Tiny seamless tileable pattern of an ivory #F4EDE2 linen weave with faint sand #CDB89A threads, early-2000s web tiled background, very quiet, early-2000s web graphic, crisp pixels, limited palette of milk white #F7F4EC, forest green #0B3B32, amber #E89A1C and warm grey #E4DFD3, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, numbers, logo, watermark, signature, label, product bottle, glass bottle, jar, packaging, Holstein or Jersey cattle, cartoon mascot, deity or religious icon, distorted anatomy, oversaturated, HDR, low resolution, gradients, large shapes",
+      "usedIn": "ESSENTIAL skin background"
+    },
+    {
+      "id": "W-J1",
+      "file": "web/public/desigo/styles/2000-web/pixel-farmland-map.png",
+      "size": "1560×900",
+      "transparent": false,
+      "prompt": "Pixel-art top-down illustrated landscape of desert-edge farmland with small fields, khejri trees and a dotted path, crisp pixels, no labels, clearly an illustration, early-2000s web graphic, crisp pixels, limited palette of milk white #F7F4EC, forest green #0B3B32, amber #E89A1C and warm grey #E4DFD3, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, numbers, logo, watermark, signature, label, product bottle, glass bottle, jar, packaging, Holstein or Jersey cattle, cartoon mascot, deity or religious icon, distorted anatomy, oversaturated, HDR, low resolution, real map, satellite imagery, road signs, place names",
+      "usedIn": "Ch. 06 'Track Your Bottle!' pixel map (marked illustrative)"
+    },
+    {
+      "id": "W-T1",
+      "file": "web/public/desigo/styles/2000-web/under-construction-tape.png",
+      "size": "1200×120, tileable horizontally",
+      "transparent": true,
+      "prompt": "Diagonal black and amber #E89A1C warning stripe tape, pixel style, tileable horizontally, early-2000s web graphic, crisp pixels, limited palette of milk white #F7F4EC, forest green #0B3B32, amber #E89A1C and warm grey #E4DFD3, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, numbers, logo, watermark, signature, label, product bottle, glass bottle, jar, packaging, Holstein or Jersey cattle, cartoon mascot, deity or religious icon, distorted anatomy, oversaturated, HDR, low resolution, words, construction worker figure",
+      "usedIn": "`UnderConstruction` asset slots, 360 pending"
+    },
+    {
+      "id": "W-I1",
+      "file": "web/public/desigo/styles/2000-web/pixel-icons-sheet.png",
+      "size": "1024×1024 (32 px grid)",
+      "transparent": true,
+      "prompt": "Sprite sheet of 32×32 pixel-art icons on a grid: steel milk can, folder, envelope, globe, house doorstep, Indian zebu cow head with hump and long ears in respectful side profile, limited palette of forest green, cream and gold, early-2000s web graphic, crisp pixels, limited palette of milk white #F7F4EC, forest green #0B3B32, amber #E89A1C and warm grey #E4DFD3, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, numbers, logo, watermark, signature, label, product bottle, glass bottle, jar, packaging, Holstein or Jersey cattle, cartoon mascot, deity or religious icon, distorted anatomy, oversaturated, HDR, low resolution, glass milk bottle, Windows icons, smiling cow, Holstein spots",
+      "usedIn": "Left nav bullets, How It Works table"
+    }
+  ]
+}

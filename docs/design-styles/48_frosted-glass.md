@@ -57,7 +57,7 @@ and forest, strong backgrounds behind it, and clear sharp text always sitting on
 | `--milk` | `#F7F4EC` | Sharp text on dark frost |
 | `--ink` | `#1E211F` | Sharp text on light frost |
 | `--forest` | `#0B3B32` | Deep world behind frost; footer |
-| `--green` | `#1E7A68` | Links, focus ring |
+| `--green` | `#1E7A68` | Links and focus ring on milk; on frost use `#18705F` (5.0:1, see 12.1) |
 | `--gold` | `#C8A96B` | One rim light per scene (a 1 px line on the bottle shoulder) |
 | `--earth` | `#8C6A43` | Heritage frost tint |
 
@@ -197,7 +197,7 @@ refog) · `Condensation` (seeded droplet sprites) · `SharpenHeadline` · `Etche
 condensation on the actual returnable bottle (it is honest, and it beats any generated droplet); farm photos for the
 unfrosted chapters.
 
-**Images to generate** (texture or backdrop only; `web/public/desigo/styles/frosted/`; append the house-style tail):
+**Images to generate** (texture or backdrop only; `web/public/desigo/styles/frosted-glass/`; full spec in section 12.7; append the house-style tail):
 | # | File | Size | Prompt |
 |---|---|---|---|
 | FG1 | `etched-glass.png` | 2400×2400, seamless | Seamless tileable texture of acid-etched frosted glass, very fine even satin grain, warm milk-white tint, backlit, flat, no objects, no text, no watermark, no logo, no letters |
@@ -231,3 +231,125 @@ overlap with glassmorphism producing a generic "glass UI" look.
 6. Never fog the DESIGO® wordmark or the bottle's label.
 7. Frost backgrounds need something behind them (colour world or photo). Frost on plain milk is not used.
 8. No implied temperatures. Frost is an image of cold, never a stated number.
+
+---
+
+## 12. Build-ready spec sheet
+
+> Audit 2026-10-03: palette, type and motion present; missing colour roles, ok/pending/demo tokens, Devanagari face, radius/shadow scale, component states, motion tokens, negative prompts and 3 required prompts (hero portrait, variant frost plates, trace pane). Added all; link green darkened to `#18705F` on frost (`#1E7A68` is 4.35:1 on `#E8ECE6`); image folder aligned to `styles/frosted-glass/`. Fonts already OFL; no claim violations.
+
+### 12.1 Colour system
+| Role | Token | Hex | Use | Contrast note |
+|---|---|---|---|---|
+| Primary | `--c-primary` | `#0B3B32` | forest: the deep world behind frost, primary CTA fill, footer | 10.4:1 on bg |
+| Primary ink | `--c-on-primary` | `#F7F4EC` | sharp milk label on forest | 11.3:1 on primary |
+| Secondary | `--c-secondary` | `#A9B8B1` | frost-shadow: etched lettering shade, droplet inner shadow (decorative, never body text) | 1.7:1 on bg |
+| Accent | `--c-accent` | `#18705F` | links and focus ring on frost (DESIGO green darkened for 4.5:1); `#1E7A68` on milk | 5.0:1 on bg |
+| Background | `--c-bg` | `#E8ECE6` | default warm frost field (milk cooled with 4% forest) |  |
+| Surface | `--c-surface` | `#F7F4EC` | 92% opaque front-plane panel where all body text sits | text on surface 14.8:1 |
+| Text | `--c-text` | `#1E211F` | sharp ink text on light frost | 13.6:1 on bg |
+| Muted text | `--c-text-muted` | `#4F5A54` | captions, labels on frost and panels | 6.0:1 on bg |
+| Line | `--c-line` | `rgba(255,255,255,.7)` | frost-edge highlight, wipe-stripe edge; `rgba(30,33,31,.14)` dividers on panels | decorative only |
+| Success / Pending / Demo | `--c-ok` / `--c-pending` / `--c-demo` | `#1E7A68` / `#7A5B37` / `#171918` | verified source tick (on milk panel) · pending value text + dotted underline · DEMO badge fill, sharp milk label 16:1 | ok 4.4:1 · pending 5.2:1 · demo 14.8:1 on bg; state is never colour-only (text + dotted underline / badge label) |
+| Style extra | `--frost-warm` | `#F1EEE4` | frost over warm chapters (milk + 2% earth) | |
+| Style extra | `--frost-edge` | `rgba(255,255,255,.7)` | droplet highlights | |
+| Style extra | `--gold` | `#C8A96B` | one 1 px rim light per scene on the bottle shoulder | |
+| Style extra | `--earth` | `#8C6A43` | heritage frost tint | |
+| Style extra | `--green` | `#1E7A68` | links on milk surfaces | |
+
+Variant worlds in this style: MASTER 26 · ROOT 14 · BASE 3 · ESSENTIAL (base / deep / light hex for each).
+
+| Variant | Code | Base | Deep | Light | How the world uses them |
+|---|---|---|---|---|---|
+| MASTER 26 | V1+ | `#1F5C45` | `#0A2A20` | `#D9E8DF` | world behind = deep; frost tint `rgba(31,92,69,.42)` (base); sharp text milk `#F7F4EC` (14.0:1 on deep); etched word "Canopy." |
+| ROOT 14 | V1 | `#B3202A` | `#4A0A0F` | `#F3D9D6` | world behind = deep; frost tint `rgba(179,32,42,.34)` frosted ruby; milk text; etched "Rooted." |
+| BASE 3 | V2 | `#E89A1C` | `#5A3304` | `#F8E4C2` | world behind = deep; frost tint `rgba(232,154,28,.36)` apothecary amber, strongest backlight; milk text; etched "Everyday." |
+| ESSENTIAL | V3 | `#CDB89A` | `#4D4130` | `#F4EDE2` | world behind = base `#CDB89A`; satin frost = light at 72%; ink text `#1E211F` (14.0:1 on light); etched "Essential." |
+
+**Dark-chapter inversion:** on dark frosted scenes (02 late, 06, 11, 13, variant worlds) `--c-bg` → frost over `#0B3B32`/`#171918` (effective `#2C4A43`), `--c-text` → `#F7F4EC`, `--c-text-muted` → `#C9D3CE`, `--c-surface` → `rgba(11,59,50,.92)`, `--c-accent` → `#7FE0B8`, `--c-line` stays frost-edge; primary button inverts to milk fill / forest label; logo turns white and stays sharp in front of the frost.
+
+### 12.2 Typography
+| Role | Font family | Source (npm @fontsource… / Google Fonts) | Weights / axes | Size (clamp) | Line-height | Tracking | Case |
+|---|---|---|---|---|---|---|---|
+| Display / hero | Fraunces | `@fontsource-variable/fraunces` | 300 · opsz 144 · SOFT 50 | clamp(3rem, 8vw, 9rem) | 0.95 | −0.035em | sentence; sharpens out of frost |
+| Headline H1–H2 | Fraunces (600 for the one etched word) | `@fontsource-variable/fraunces` | 300 / 600 · opsz 144 | H1 clamp(2.6rem, 5vw, 5rem) · H2 clamp(1.8rem, 3vw, 3rem) | 1.05 | −0.02em | sentence |
+| Body | Inter Tight | `@fontsource-variable/inter-tight` | 500 (heavier to hold over frost) | 1.0625rem, measure 54ch | 1.6 | 0 | sentence |
+| Label / UI | Inter Tight | `@fontsource-variable/inter-tight` | 600 | .72rem | 1.2 | +0.18em | UPPERCASE |
+| Data / mono | JetBrains Mono | `@fontsource-variable/jetbrains-mono` | 500 · `tnum` | .8rem; 1.75rem trace input | 1.3 | +0.02em | as data |
+| Devanagari (optional) | Tiro Devanagari Hindi | `@fontsource/tiro-devanagari-hindi` | 400 | display +6% | 1.25 | 0 | — |
+
+Licence: all SIL OFL 1.1 via @fontsource, self-hosted (Tiro Devanagari Hindi added; the body named no Hindi face). Pairing: soft-axis Fraunces reads as warm glass, a slightly heavier Inter Tight holds up on frosted grounds.
+
+### 12.3 Layout & surfaces
+- **Grid:** 12 columns, 5vw margins, 24 px gutters, max 1440 px; three depth planes: world (z 10), frost (z 15, full-bleed), front (z 20: bottle, text, panels)
+- **Spacing scale:** 4 px base: 4 · 8 · 12 · 16 · 24 · 32 · 48 · 64 · 96 · 128; section padding 24vh / 16vh
+- **Radius scale:** sm 2 px (inputs, badges) · md 0 (scenes, buttons) · lg 20 px (only the borrowed glass info panel from doc 10)
+- **Border style:** no edges on scenes; panels have a 1 px inset highlight `rgba(255,255,255,.7)` top edge; inputs a 1 px `rgba(30,33,31,.24)` frame
+- **Shadow / elevation:** flat UI; bottle: contact shadow `0 30px 50px -20px rgba(11,59,50,.30)` + 8 px ellipse at 30%, one gold 1 px rim light on the shoulder; panel: `inset 0 1px 0 rgba(255,255,255,.7)` only
+- **Texture / overlay:** FG1 etched texture at 40–70% + SVG `feTurbulence` micro-grain; frost blur 8 → 32 px scrubbed by chapter; ≤ 5 condensation droplets per viewport; pre-blurred AVIF on low-power devices
+
+### 12.4 Components
+For each: anatomy, sizes, states (default · hover · focus-visible · active · disabled · loading), motion, a11y.
+
+- **Primary button**: sharp label + travelling arrow on a forest `#0B3B32` plate (radius 0), 52 px high (44 px sm), padding 0 28 px, Inter Tight 600 caps milk. Default: solid, sits on the front plane · hover: 1 px frost-edge frame draws clockwise (600 ms), a 64 px clear 'wipe' highlight sweeps once across, arrow +6 px, magnetic ≤ 6 px · focus-visible: 2 px `--c-accent` ring offset 3 px · active: plate darkens to `#07211C`, 0.98 scale (120 ms) · disabled: 40% opacity, no wipe · loading: a slow fog sweep across the label (1.2 s loop), `aria-busy`. A11y: real `<button>`/`<a>` semantics, 44 px minimum target, visible focus independent of colour.
+- **Secondary button**: underline button: ink label + arrow, 1 px underline etched in `--secondary` that turns ink on hover (240 ms), no plate; 44 px hit area. Focus-visible: accent ring · active: underline 2 px · disabled: muted 40% · loading: underline fogs in and out (900 ms).
+- **Text / arrow link**: Inter Tight 500 accent-colour text with etched underline drawing left → right (240 ms in `--secondary`, then ink) and `———→` arrow travelling 6 px · focus-visible: accent ring · active: underline 2 px · disabled: muted, no underline · loading: n/a.
+- **Icon button** (incl. menu): 40 px square (44 px hit), 1.25 px ink or milk line icon, transparent; menu = two lines. Hover: 40 px clear lens appears behind the icon · focus-visible: accent ring · active: lens shrinks 0.92 · disabled: 30% · loading: lens fogs/clears 900 ms. `aria-label` required.
+- **Navigation bar** (desktop + mobile menu) + how the DESIGO® black write/un-write logo loop sits in it: 72 px bar on the front plane over a 92% frost strip (`backdrop-filter: blur(16px)` only on capable devices, else solid `#F1EEE4`); the DESIGO® wordmark is the black write/un-write infinite loop (charcoal `#171918` on light grounds, white `#FFFFFF`/milk on dark; it never changes colour, never takes a variant hue and is never re-drawn in the style); it stays sharp in front of the frost, never blurred, etched or fogged. Six links + RESERVE primary. Hides on scroll down. Mobile: 56 px bar, menu opens a full-screen frosted forest sheet with large Fraunces links that sharpen in (80 ms stagger); focus trapped, Esc closes.
+- **Cursor** (states: default · hover · ROTATE · EXPLORE · ENTER · VIEW · TRACE); touch fallback: default: 10 px milk dot with a soft frost halo · hover: 40 px frosted lens that clears the text under it · ROTATE: 72 px clear lens with `DRAG` on the 360 viewer · EXPLORE: 64 px soft square `WIPE` over the one wipe zone per page · ENTER: lens with `ENTER` over chapter/inner-page links · VIEW: lens with `VIEW` over images behind frost · TRACE: lens with a droplet ring and `TRACE` over trace nodes. Disabled: 30% halo. Touch: no cursor; wipes become one autoplayed pass with a Replay button.
+- **Card / panel / info block**: front-plane panel `rgba(247,244,236,.92)` (dark: `rgba(11,59,50,.92)`), radius 0 (20 px only for the product info panel), padding 32 px / 20 px mobile, inset top highlight. Text always sharp and ≥ 4.5:1 (body ≥ 7:1). Hover (if linked): panel lifts 4 px, frost behind clears slightly · focus-visible: accent ring · loading: skeleton lines fog in.
+- **Badge / tag** (incl. "pending verification" and "DEMO · not live data"): 20 px high, radius 2 px, Inter Tight 600 .66rem caps. Pending verification: transparent with `--c-pending` text and dotted underline `PENDING APPROVAL`; DEMO · not live data: charcoal `#171918` fill, milk label `DEMO · NOT LIVE DATA`, always sharp and visible on demo content; never frosted.
+- **Input + form field** (Trace-your-milk bottle ID): trace bottle-ID field as a 'clear wiped' strip in the frosted pane: JetBrains Mono 500 at 1.75rem, 64 px high, radius 2 px, 1 px frame, label above, prefilled `DSG-BTL-000001-3 (sample format)`. Default: clear strip with frost around · hover: strip widens its clear zone 8 px · focus-visible: 2 px accent ring + frame ink · active: caret · disabled: frosted over, 40% · loading: frost slowly re-covers then clears line by line as results arrive (`aria-live=polite`) · error: pending-earth text "No record for this ID".
+- **Divider / ornament**: a 1 px frost-edge highlight line over a 1 px `rgba(30,33,31,.10)` shadow line (an etched groove); on heritage, a 0.5 px gold rule.
+- **Section header** (chapter number + title pattern): mono chapter number `06` + Inter Tight caps label `TRACEABILITY` on the front plane, title in Fraunces 300 that sharpens from blur 10 px (900 ms); one etched word per scene in Fraunces 600 `--secondary` with 1 px inner highlight.
+- **Product info block** (variant name, code, price-pending, size, descriptors): borrowed glassmorphism panel (doc 10), radius 20 px, 92% milk, sharp text: code line in mono, name in Fraunces 48 px, editorial line; code `DESIGO® V1+` / `V1` / `V2` / `V3`; price from `desigo.ts` rendered as pending (e.g. ₹94 with dotted underline + tooltip "pending approval · pack size not stated"); size "1 L glass · 900 g" pending; descriptors list with pending items dotted-underlined; `RESERVE ———→`. Mobile: opaque bottom sheet.
+- **Bottle stage** (how Bottle / Bottle360Viewer is framed: plinth, glow, shadow, background): the one sharp object in a frosted world: bottle on the front plane, frost behind, world (C1–C4 / colour) behind that; contact shadow + gold shoulder rim light; condensation layer on the render at 12% (masked, composited, never generated). Float ±8 px / 6 s, tilt ±8°, rim light slides with tilt. Before 360 frames: ±25° skew turn with sheen; after: drag-to-rotate with an optional 20% frost overlay in front on /milk/[variant] cleared by the lens; counter `036 / 072` mono.
+- **Trace node / timeline step**: node = a clear 'wiped' 20 px circle in the frosted forest pane with a 1 px milk ring; CHILLER node carries condensation. Default: clear circle · hover: circle widens to 28 px · focus-visible: accent ring (`#7FE0B8` on dark) · active: panel opens on the front plane, path segment sharpens · disabled/not reached: frosted over 50% · loading: frost pulse 1.6 s. Label `ILLUSTRATIVE JOURNEY — NOT LIVE DATA` always sharp. Nodes are buttons; Esc closes panel.
+
+### 12.5 Iconography & illustration
+Icons: 1.25 px line icons, round caps, 24 px grid, ink or milk, never frosted or blurred. Illustration: E1–E7 line drawings stay on paper chapters (no frost) except the CHILL station, which frosts over with one droplet. Photo treatment: real farm photography is shown unfrosted and sharp (frost belongs to the cold chain, not the field); variant worlds C1–C4 sit behind frost and are revealed by one wipe per page; warm frost only, never icy blue or pure white.
+
+### 12.6 Motion tokens
+| Token | Value | Use |
+|---|---|---|
+| `--ease-out` | `cubic-bezier(.16,1,.3,1)` | sharpen headline, panel reveals |
+| `--ease-inout` | `cubic-bezier(.65,0,.35,1)` | frost in, fog/clear transitions |
+| `--ease-milk` | `cubic-bezier(.22,.9,.24,1)` | droplet slide, bottle travel |
+| `--dur-micro` | `240ms` | etched underline, arrow, lens |
+| `--dur-reveal` | `900ms` | sharpen (blur 10 px → 0, 80 ms line stagger) |
+| `--dur-scene` | `1200ms` | frost in (opacity 0 → 1, world blur 0 → 28 px) |
+| `--dur-fog` | `600ms + 600ms` | scene fogs, next clears |
+| `--refog` | `4000ms` | wiped stripe refogs |
+| `--blur-range` | `8px → 32px` | frost density scrubbed ch. 02 → 06, back to 8 px in Heritage |
+
+Signature: wipe-to-reveal (64 px stripe, once per page) and headlines sharpening out of frost. Scroll: Lenis + ScrollTrigger `scrub: 1`. Droplets: 3–5 per scene, slide 40–120 px over 6–10 s, never stream or splash. Reduced motion: static frost at a fixed blur, no droplets, no wipes, headlines appear sharp; wiped content also exists as text. `backdrop-filter` on at most one plane per viewport.
+
+### 12.7 AI image generation prompts
+House rules: no text/letters/logos/watermarks in images; generated images are illustration, texture or backdrop only; never
+generate the bottle or ghee jar; zebu cows only, shown with respect; append the style's tail prompt to every prompt.
+
+**Tail prompt (append to every prompt below):** *acid-etched frosted glass mood, diffuse shadowless light, warm frost tones of milk white #F7F4EC and frost #E8ECE6 with deep forest green #0B3B32 and a touch of warm gold #C8A96B, never icy blue, calm, premium, no text, no watermark, no logo, no letters*
+
+| # | File path (web/public/desigo/styles/frosted-glass/...) | Size / ratio | Transparent? | Prompt | Negative prompt | Used in |
+|---|---|---|---|---|---|---|
+| FG-H1 | `web/public/desigo/styles/frosted-glass/frosted-pane-backlit.png` | 3200×2000 (16:10) | no | Large frosted glass pane softly backlit by warm morning light, blurred indistinct shapes of green leaves behind it, calm, minimal, empty center | base negatives + icy blue tint, bathroom tiles, spa stones, water streams, hands | Ch. 01 hero frost field (desktop) |
+| FG-H2 | `web/public/desigo/styles/frosted-glass/frosted-pane-backlit-portrait.png` | 1400×2400 (7:12) | no | Vertical frosted glass pane softly backlit by warm dawn light, a faint wiped vertical sliver showing pale gold desert dawn behind, minimal, empty center | base negatives + icy blue tint, bathroom tiles, spa stones, hands | Ch. 01 hero (mobile) |
+| FG-V1 | `web/public/desigo/styles/frosted-glass/frost-canopy.png` | 3200×2000 + 1400×2400 portrait | no | Deep forest canopy seen through thick frosted bottle-green glass, soft pools of green light #1F5C45 on dark #0A2A20, no sharp leaves, empty center | base negatives + sharp foliage, people, icy blue | MASTER 26 frosted world (pre-blurred fallback) |
+| FG-V2 | `web/public/desigo/styles/frosted-glass/frost-ruby.png` | 3200×2000 + 1400×2400 portrait | no | Layered red earth strata seen through frosted ruby glass, warm horizontal bands of crimson #B3202A and oxblood #4A0A0F light, soft, empty center | base negatives + blood, fire, sharp rocks | ROOT 14 frosted world |
+| FG-V3 | `web/public/desigo/styles/frosted-glass/frost-amber.png` | 3200×2000 + 1400×2400 portrait | no | Abstract warm amber light #E89A1C seen through thick frosted glass on deep brown #5A3304, a large soft round glow behind center, apothecary-glass mood, no objects | base negatives + sharp sun disc, lens flare, people | BASE 3 frosted world |
+| FG-V4 | `web/public/desigo/styles/frosted-glass/frost-ivory.png` | 3200×2000 + 1400×2400 portrait | no | Minimal ivory gallery room seen through satin frosted glass, warm ivory #F4EDE2 and sand #CDB89A, one soft cool shadow, almost white, empty center | base negatives + furniture in focus, artworks, people | ESSENTIAL frosted world |
+| FG-J1 | `web/public/desigo/styles/frosted-glass/frosted-trace-pane.png` | 3600×2000 (16:9) | no | Large fogged glass pane in front of a deep forest-green #0B3B32 darkness, very faint soft mint light lines suggesting a path behind the glass, a few small condensation beads, calm, empty | base negatives + map labels, UI, numbers, neon | Ch. 06 traceability frosted pane, /trace |
+| FG-T1 | `web/public/desigo/styles/frosted-glass/etched-glass.png` | 2400×2400, seamless | no | Seamless tileable texture of acid-etched frosted glass, very fine even satin grain, warm milk-white tint, backlit, flat, no objects | base negatives + streaks, scratches, fingerprints, blue tint | Sitewide frost layer (FG1) |
+| FG-T2 | `web/public/desigo/styles/frosted-glass/condensation-atlas.png` | 2048×2048 (1:1) | yes (real alpha) | Forty separate water condensation droplets of varied sizes on transparent background, macro, crisp highlights, evenly spaced grid for a sprite sheet, no glass texture | base negatives + running streams, splashes, background glass | `Condensation` sprites, bottle droplet layer (FG3) |
+| FG-T3 | `web/public/desigo/styles/frosted-glass/fog-wipe-macro.png` | 3200×2000 (16:10) | no | Macro of a fogged cold glass surface with a single soft wiped stripe across it showing warm golden light behind, minimal, no hands, no objects | base negatives + hands, fingers, writing in fog, icy blue | Ch. 15 final CTA, wipe demo (FG4) |
+
+Base negatives (apply to every prompt): *text, letters, numbers, logo, watermark, signature, label, product bottle, glass bottle, jar, packaging, Holstein or Jersey cattle, cartoon mascot, deity or religious icon, distorted anatomy, oversaturated, HDR, low resolution*. Do not generate the bottle with condensation; droplets are composited onto the real render in code. A real macro photo of condensation on the returnable bottle beats any generated droplet.
+
+### 12.8 Prototype acceptance checklist
+- [ ] Tokens from `specs/48_frosted-glass.json` applied; no off-palette colours
+- [ ] Fonts self-hosted; correct weights load
+- [ ] All 12.4 components built with all states
+- [ ] Hero + bottle-story + one product world + trace chapter built in this style (the comparison set)
+- [ ] Mobile 360 px pass; reduced-motion pass; contrast checked
+- [ ] Claims rules respected (pending underline, no blocked claims, DEMO labels)
+- [ ] Screenshots: desktop 1440×900 ×4 + mobile 390×844 ×2 saved to docs/media/styles/frosted-glass/

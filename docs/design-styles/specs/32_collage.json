@@ -1,0 +1,247 @@
+{
+  "id": 32,
+  "slug": "collage",
+  "name": "Collage",
+  "priority": false,
+  "fit": 3,
+  "colors": {
+    "primary": "#0B3B32",
+    "onPrimary": "#F7F4EC",
+    "secondary": "#1E7A68",
+    "accent": "#2E4A7D",
+    "bg": "#F7F4EC",
+    "surface": "#EDE4D0",
+    "text": "#1E211F",
+    "textMuted": "#5B5C58",
+    "line": "rgba(30,33,31,.14)",
+    "ok": "#1E7A68",
+    "pending": "#C8A96B",
+    "demo": "#0B3B32"
+  },
+  "variants": {
+    "master-26": {
+      "base": "#1F5C45",
+      "deep": "#0A2A20",
+      "light": "#D9E8DF",
+      "world": "paper #D9E8DF, hill #1F5C45, densest board"
+    },
+    "root-14": {
+      "base": "#B3202A",
+      "deep": "#4A0A0F",
+      "light": "#F3D9D6",
+      "world": "ground #F3D9D6, earth #B3202A, horizontal"
+    },
+    "base-3": {
+      "base": "#E89A1C",
+      "deep": "#5A3304",
+      "light": "#F8E4C2",
+      "world": "ground #F8E4C2, sun #E89A1C, simple"
+    },
+    "essential": {
+      "base": "#CDB89A",
+      "deep": "#4D4130",
+      "light": "#F4EDE2",
+      "world": "ground #F4EDE2, one piece"
+    }
+  },
+  "fonts": {
+    "display": {
+      "family": "Fraunces",
+      "package": "@fontsource-variable/fraunces",
+      "weights": [
+        500,
+        600
+      ]
+    },
+    "body": {
+      "family": "Inter Tight",
+      "package": "@fontsource-variable/inter-tight",
+      "weights": [
+        400,
+        500,
+        600,
+        700
+      ]
+    },
+    "label": {
+      "family": "Inter Tight",
+      "package": "@fontsource-variable/inter-tight",
+      "weights": [
+        600
+      ]
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "package": "@fontsource-variable/jetbrains-mono",
+      "weights": [
+        400,
+        500
+      ]
+    },
+    "devanagari": {
+      "family": "Noto Serif Devanagari",
+      "package": "@fontsource-variable/noto-serif-devanagari",
+      "weights": [
+        400,
+        600
+      ]
+    }
+  },
+  "type": {
+    "display": "clamp(3rem, 1.9rem + 5.5vw, 7.5rem)",
+    "h1": "clamp(2.4rem, 1.6rem + 3.6vw, 4.5rem)",
+    "h2": "clamp(1.7rem, 1.3rem + 1.8vw, 2.75rem)",
+    "body": "clamp(1rem, .95rem + .25vw, 1.125rem)",
+    "label": ".75rem"
+  },
+  "radius": {
+    "sm": "0",
+    "md": "2px",
+    "lg": "0",
+    "pill": "999px"
+  },
+  "shadow": {
+    "bottle": "real contact shadow rgba(23,25,24,.3) blur 18px, bottle 12px above board",
+    "panel": "0 6px 14px rgba(23,25,24,.14)",
+    "lifted": "0 10px 22px rgba(23,25,24,.18)"
+  },
+  "motion": {
+    "easeOut": "cubic-bezier(.16,1,.3,1)",
+    "easeInOut": "cubic-bezier(.65,0,.35,1)",
+    "easeMilk": "cubic-bezier(.22,.9,.24,1)",
+    "durMicro": 240,
+    "durReveal": 650,
+    "durScene": 1000,
+    "assembleStagger": 90,
+    "depthMax": 14,
+    "paperSlide": 1000,
+    "lift": 300
+  },
+  "button": {
+    "primary": {
+      "bg": "#0B3B32",
+      "fg": "#F7F4EC",
+      "radius": "0",
+      "rotate": "-0.8deg",
+      "padding": "15px 24px",
+      "shadow": "0 6px 14px rgba(23,25,24,.14)",
+      "hover": "lift 3px, shadow grows, arrow +6px"
+    },
+    "secondary": {
+      "bg": "#F7F4EC",
+      "fg": "#0B3B32",
+      "radius": "0",
+      "rotate": "0.6deg",
+      "padding": "14px 22px",
+      "hover": "lift 3px"
+    },
+    "link": {
+      "fg": "#1E211F",
+      "underline": "1.5px #1E7A68",
+      "hover": "cut-strip underline 240ms"
+    }
+  },
+  "logo": {
+    "loop": "write/un-write infinite",
+    "onLight": "#171918",
+    "onDark": "#FFFFFF",
+    "colourChange": false,
+    "cycleMs": 4600,
+    "drawMs": "0-1200 (480 each, 95 stagger)",
+    "holdUntilMs": 3000,
+    "unwriteMs": "3000-4200 (reverse order)",
+    "colorLight": "#171918",
+    "colorDark": "#F7F4EC"
+  },
+  "tailPrompt": "Matisse-like flat cut-paper collage, milk white #F7F4EC ground, handmade paper #EDE4D0, kraft #C9A77C, deep forest #0B3B32, green #1E7A68, earth #8C6A43, gold #C8A96B, indigo #2E4A7D accents, clean scissor edges, soft paper shadows, generous empty space, calm, premium, no text, no watermark, no logo, no letters",
+  "images": [
+    {
+      "file": "web/public/desigo/styles/collage/hero-landscape.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Flat Matisse-style cut-paper composition on milk-white paper: a large gold sun disc, a green hill strip like the Thar edge, a single cut leaf and a small indigo cut shape, arranged sparsely around a large empty centre, soft paper shadows, Matisse-like flat cut-paper collage, milk white #F7F4EC ground, handmade paper #EDE4D0, kraft #C9A77C, deep forest #0B3B32, green #1E7A68, earth #8C6A43, gold #C8A96B, indigo #2E4A7D accents, clean scissor edges, soft paper shadows, generous empty space, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, photographs, tape, staples, stickers, torn magazine text, clutter",
+      "usedIn": "Hero board (ch. 01) backdrop"
+    },
+    {
+      "file": "web/public/desigo/styles/collage/hero-portrait.png",
+      "size": "1400×2400 (4:5 board inside 7:12)",
+      "transparent": false,
+      "prompt": "Tall cut-paper composition on milk paper: gold sun disc at the top, a green hill strip at the bottom, one leaf, empty centre, Matisse-like flat cut-paper collage, milk white #F7F4EC ground, handmade paper #EDE4D0, kraft #C9A77C, deep forest #0B3B32, green #1E7A68, earth #8C6A43, gold #C8A96B, indigo #2E4A7D accents, clean scissor edges, soft paper shadows, generous empty space, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, photographs, tape, clutter",
+      "usedIn": "Hero mobile"
+    },
+    {
+      "file": "web/public/desigo/styles/collage/world-master-26.png",
+      "size": "3200×2000 + 1400×2400 crop",
+      "transparent": false,
+      "prompt": "Lush layered cut-paper leaves in bottle green and pale green on #D9E8DF paper, a cut-paper hill in #1F5C45 and a small gold sun, leaves framing a clear empty centre, soft paper shadows, Matisse-like flat cut-paper collage, milk white #F7F4EC ground, handmade paper #EDE4D0, kraft #C9A77C, deep forest #0B3B32, green #1E7A68, earth #8C6A43, gold #C8A96B, indigo #2E4A7D accents, clean scissor edges, soft paper shadows, generous empty space, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, photos, labels, counted rows, tape",
+      "usedIn": "Four milks ch. 08, /milk/master-26"
+    },
+    {
+      "file": "web/public/desigo/styles/collage/world-root-14.png",
+      "size": "3200×2000 + 1400×2400 crop",
+      "transparent": false,
+      "prompt": "Horizontal cut-paper strata in crimson #B3202A and pale rose #F3D9D6 with one torn-edge earth band and fine cut root lines, calm, empty centre, Matisse-like flat cut-paper collage, milk white #F7F4EC ground, handmade paper #EDE4D0, kraft #C9A77C, deep forest #0B3B32, green #1E7A68, earth #8C6A43, gold #C8A96B, indigo #2E4A7D accents, clean scissor edges, soft paper shadows, generous empty space, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, photos, blood-red splashes, tape",
+      "usedIn": "Four milks ch. 08, /milk/root-14"
+    },
+    {
+      "file": "web/public/desigo/styles/collage/world-base-3.png",
+      "size": "3200×2000 + 1400×2400 crop",
+      "transparent": false,
+      "prompt": "A large amber #E89A1C cut-paper sun disc low on pale wheat #F8E4C2 paper with three simple cut leaves, warm, empty centre, Matisse-like flat cut-paper collage, milk white #F7F4EC ground, handmade paper #EDE4D0, kraft #C9A77C, deep forest #0B3B32, green #1E7A68, earth #8C6A43, gold #C8A96B, indigo #2E4A7D accents, clean scissor edges, soft paper shadows, generous empty space, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, photos, tape, clutter",
+      "usedIn": "Four milks ch. 08, /milk/base-3"
+    },
+    {
+      "file": "web/public/desigo/styles/collage/world-essential.png",
+      "size": "3200×2000 + 1400×2400 crop",
+      "transparent": false,
+      "prompt": "A single cut-paper leaf resting on ivory #F4EDE2 handmade paper, soft shadow, almost entirely empty, Matisse-like flat cut-paper collage, milk white #F7F4EC ground, handmade paper #EDE4D0, kraft #C9A77C, deep forest #0B3B32, green #1E7A68, earth #8C6A43, gold #C8A96B, indigo #2E4A7D accents, clean scissor edges, soft paper shadows, generous empty space, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, multiple objects, text, tape",
+      "usedIn": "Four milks ch. 08, /milk/essential"
+    },
+    {
+      "file": "web/public/desigo/styles/collage/journey-board.png",
+      "size": "3600×1200 (3:1)",
+      "transparent": false,
+      "prompt": "Long horizontal cut-paper board: a continuous milk-white cut-paper ribbon winding across kraft and green paper fields, with seven empty circular paper placeholders evenly spaced along it, Matisse-like flat cut-paper collage, milk white #F7F4EC ground, handmade paper #EDE4D0, kraft #C9A77C, deep forest #0B3B32, green #1E7A68, earth #8C6A43, gold #C8A96B, indigo #2E4A7D accents, clean scissor edges, soft paper shadows, generous empty space, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, photos, cows, bottles, labels, tape",
+      "usedIn": "Cow → bottle ch. 03 (board ground; real cut photos are placed in code)"
+    },
+    {
+      "file": "web/public/desigo/styles/collage/trace-paper-nodes.png",
+      "size": "3000×2000",
+      "transparent": true,
+      "prompt": "Flat cut-paper circles as nodes joined by a crisp cut-paper path, converging from scattered points into one hub, milk and green paper, isolated on transparent background, Matisse-like flat cut-paper collage, milk white #F7F4EC ground, handmade paper #EDE4D0, kraft #C9A77C, deep forest #0B3B32, green #1E7A68, earth #8C6A43, gold #C8A96B, indigo #2E4A7D accents, clean scissor edges, soft paper shadows, generous empty space, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, labels, map borders, tape",
+      "usedIn": "Traceability ch. 06 (collage-off map)"
+    },
+    {
+      "file": "web/public/desigo/styles/collage/texture-sanganer-paper.png",
+      "size": "2400×2400, seamless",
+      "transparent": false,
+      "prompt": "Seamless tileable texture of Sanganer handmade paper with visible pressed fibres and soft deckled irregularity, warm cream, flat scan lighting, Matisse-like flat cut-paper collage, milk white #F7F4EC ground, handmade paper #EDE4D0, kraft #C9A77C, deep forest #0B3B32, green #1E7A68, earth #8C6A43, gold #C8A96B, indigo #2E4A7D accents, clean scissor edges, soft paper shadows, generous empty space, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, stains, text, folds, vignette",
+      "usedIn": "Paper grounds"
+    },
+    {
+      "file": "web/public/desigo/styles/collage/texture-kraft.png",
+      "size": "2048×2048, seamless",
+      "transparent": false,
+      "prompt": "Seamless tileable kraft paper texture #C9A77C, fine fibres, flat even light, Matisse-like flat cut-paper collage, milk white #F7F4EC ground, handmade paper #EDE4D0, kraft #C9A77C, deep forest #0B3B32, green #1E7A68, earth #8C6A43, gold #C8A96B, indigo #2E4A7D accents, clean scissor edges, soft paper shadows, generous empty space, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, print, stains, creases",
+      "usedIn": "Kraft pieces, tickets"
+    },
+    {
+      "file": "web/public/desigo/styles/collage/ghee-cutpaper.png",
+      "size": "3200×2000",
+      "transparent": false,
+      "prompt": "Warm ghee-gold cut-paper shapes on cream paper: a low sun, rounded drops and a narrow folk-border strip of cut triangles and dots, empty centre, Matisse-like flat cut-paper collage, milk white #F7F4EC ground, handmade paper #EDE4D0, kraft #C9A77C, deep forest #0B3B32, green #1E7A68, earth #8C6A43, gold #C8A96B, indigo #2E4A7D accents, clean scissor edges, soft paper shadows, generous empty space, calm, premium, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, jars, photos, text, tape",
+      "usedIn": "Ghee ch. 12, /ghee"
+    }
+  ]
+}

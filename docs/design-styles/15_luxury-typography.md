@@ -140,7 +140,8 @@ a "pending approval" tooltip) / descriptors as a tracked list / `RESERVE ——�
 /milk/[variant] is the full variant scene, then the Bottle360Viewer centred on milk white with a frame counter, a
 descriptor list and a facts table with dotted-underline pending values · /ghee is a Bilona typographic page ·
 /origin is a breed index and a photography essay · /trace is the hairline path plus the demo · /technology has the
-seven verbs as seven 100vh typographic slides · /about is the year-led timeline and supporters (pending) ·
+seven verbs as seven 100vh typographic slides · /about is the year-led timeline of verified milestones (supporters are omitted
+until written evidence exists; they are blocked in `desigo.ts`) ·
 /reserve is a minimal form with a large Bodoni variant selector.
 
 ## 7. Component variants
@@ -208,3 +209,121 @@ scrub) · `TrackedLabel` · `HairlineRule` (gold/hair) · `PendingValue` (dotted
 7. Pending values always look pending. Luxury must not disguise unverified numbers.
 8. One accent colour per scene.
 9. Real photos are used sparingly and must be of hero quality. Rather an elegant AssetSlot than a weak photo.
+
+---
+
+## 12. Build-ready spec sheet
+
+> Audit 2026-10-03: type system and variant scenes complete; missing colour roles (secondary/accent/surface/muted/ok/pending/demo), radius/shadow tokens, component states, motion-token table and all AI image prompts (had none). Added all (10 prompts with negatives). Fixed: /about "supporters (pending)" → omitted until evidence exists (blocked in `desigo.ts`). Bodoni Moda, Fraunces, Inter Tight all OFL.
+
+### 12.1 Colour system
+| Role | Token | Hex | Use | Contrast note |
+|---|---|---|---|---|
+| Primary | `--c-primary` | `#171918` | charcoal: display type on light, framed CTA, DEMO frame | 16.1:1 on bg |
+| Primary ink | `--c-on-primary` | `#F7F4EC` | milk on charcoal / on dark scenes | 16.1:1 on primary |
+| Secondary | `--c-secondary` | `#0B3B32` | forest: dark canvas, footer, traceability chapter | 11.3:1 on bg |
+| Accent | `--c-accent` | `#1E7A68` | links, focus ring | 4.7:1 on bg |
+| Background | `--c-bg` | `#F7F4EC` | milk canvas, never `#FFFFFF` |  |
+| Surface | `--c-surface` | `#EFE9DC` | section banding, facts table rows | text on surface 13.4:1 |
+| Text | `--c-text` | `#1E211F` | body (AAA) | 14.8:1 on bg |
+| Muted text | `--c-text-muted` | `#5E625C` | tracked labels, captions | 5.7:1 on bg |
+| Line | `--c-line` | `rgba(23,25,24,.14)` | 1 px rules, dividers | decorative only |
+| Success / Pending / Demo | `--c-ok` / `--c-pending` / `--c-demo` | `#1E7A68` / `#7A5B37` / `#171918` | verified tick · dotted underline + "pending approval" tooltip · DEMO in tracked caps with a 1 px frame | ok 4.7:1 · pending 5.7:1 · demo 16.1:1 on bg; state is never colour-only (text + dotted underline / badge label) |
+| Style extra | `--gold` | `#C8A96B` | 0.5 px hairline rules only; never text below 24 px | |
+| Style extra | `--signal` | `#7FE0B8` | trace pulse dot at 60% on forest only | |
+
+Variant worlds in this style: MASTER 26 · ROOT 14 · BASE 3 · ESSENTIAL (base / deep / light hex for each).
+
+| Variant | Code | Base | Deep | Light | How the world uses them |
+|---|---|---|---|---|---|
+| MASTER 26 | V1+ | `#1F5C45` | `#0A2A20` | `#D9E8DF` | scene bg = deep `#0A2A20`; Bodoni "26" in light at 92%; text milk `#F7F4EC`; bottle overlaps the "6" |
+| ROOT 14 | V1 | `#B3202A` | `#4A0A0F` | `#F3D9D6` | bg = deep `#4A0A0F`; "14" in light (blush); milk text |
+| BASE 3 | V2 | `#E89A1C` | `#5A3304` | `#F8E4C2` | bg = light `#F8E4C2`; a single enormous "3" in deep umber; ink text |
+| ESSENTIAL | V3 | `#CDB89A` | `#4D4130` | `#F4EDE2` | bg = light `#F4EDE2`; italic Bodoni "E" with swash in deep `#4D4130`; ink text |
+
+**Dark-chapter inversion:** dark scenes (MASTER 26, ROOT 14, ch. 06 forest, ch. 11 and 13 charcoal, footer): text → `#F7F4EC`, muted → `#C9C4BA`, line → `rgba(247,244,236,.18)`, primary frame/label → milk, accent → `#7FE0B8`, pending → `#C8A96B` (≥ 24 px or with dotted underline + text); gold hairlines unchanged; logo turns white. Every scene keeps ≥ 7:1 body contrast.
+
+### 12.2 Typography
+| Role | Font family | Source (npm @fontsource… / Google Fonts) | Weights / axes | Size (clamp) | Line-height | Tracking | Case |
+|---|---|---|---|---|---|---|---|
+| Display / hero | Bodoni Moda (numerals + the four product names) · Fraunces 300 for the hero sentence | `@fontsource-variable/bodoni-moda` · `@fontsource-variable/fraunces` | Bodoni 400–900 · opsz 96 (use only ≥ 48 px) · Fraunces 300 opsz 144 SOFT 30 | numerals clamp(12rem, 38vw, 34rem) · names clamp(3rem, 8vw, 9rem) · hero clamp(9rem, 14vw, 17rem) | 0.78 numerals · 0.95 names | −0.04em numerals · −0.02em names | names in caps with nbsp ("MASTER 26") |
+| Headline H1–H2 | Fraunces (speaks; italic sentences) | `@fontsource-variable/fraunces` | 300 → 400 · SOFT 30 → 60 (scrubbed breath) · italic | sentence clamp(1.8rem, 3.4vw, 3.6rem) · H2 clamp(1.5rem, 2.4vw, 2.4rem) | 1.15 | −0.015em | sentence |
+| Body | Inter Tight | `@fontsource-variable/inter-tight` | 400 | 1rem, measure 52ch | 1.65 | 0 | sentence |
+| Label / UI | Inter Tight | `@fontsource-variable/inter-tight` | 500 (200 for the Technology statement caps) | .72rem (11–12 px) | 1.2 | +0.22em (+0.3em statement) | UPPERCASE |
+| Data / mono | JetBrains Mono | `@fontsource-variable/jetbrains-mono` | 400 · `tnum` | 12 px codes; 32 px trace input | 1.3 | +0.02em | as data ("DESIGO® V1+") |
+| Devanagari (optional) | Tiro Devanagari Hindi | `@fontsource/tiro-devanagari-hindi` | 400 / italic | +6% | 1.3 | 0 | — |
+
+Licence: Bodoni Moda, Fraunces, Inter Tight, JetBrains Mono and Tiro Devanagari Hindi are SIL OFL 1.1 via @fontsource; Bodoni subset preloaded for digits + E only (~18 KB), total ≤ 160 KB. Pairing: Bodoni names things, Fraunces speaks; max two typefaces per viewport plus mono. `font-feature-settings: "lnum","kern","liga"`; ® superscript at 0.42em.
+
+### 12.3 Layout & surfaces
+- **Grid:** 24 columns on desktop (fine asymmetric control), 5vw margins, 16 px gutters, max 1600 px; information in columns 17–23; numerals bleed off the left edge (`margin-left: -0.06em`); 12 columns tablet, 4 mobile
+- **Spacing scale:** 4 px base with a 64 px display baseline and 8 px text baseline: 4 · 8 · 16 · 24 · 32 · 64 · 128 · 192
+- **Radius scale:** sm 0 · md 0 · lg 999 px (cursor only); luxury is square and clean
+- **Border style:** 0.5 px gold hairlines or 1 px `--c-line` rules; 1 px charcoal CTA frame
+- **Shadow / elevation:** UI flat; bottle contact shadow = blurred ellipse at 18% charcoal; depth comes from the type → bottle → shadow layering
+- **Texture / overlay:** 2% grain on milk only; no other texture
+
+### 12.4 Components
+For each: anatomy, sizes, states (default · hover · focus-visible · active · disabled · loading), motion, a11y.
+
+- **Primary button**: `FrameButton`: Inter Tight 500 caps .72rem +0.22em label + `———→` inside a 1 px charcoal frame, 52 px high, padding 0 32 px, radius 0. Hover: frame draws clockwise (600 ms), underline grows 0 → 100% (240 ms), arrow +6 px, magnetic ≤ 6 px · focus-visible: 2 px accent ring offset 3 px · active: fills charcoal, milk label · disabled: 40%, frame dotted · loading: arrow line extends/retracts (1200 ms). A11y: real `<button>`/`<a>` semantics, 44 px minimum target, visible focus independent of colour.
+- **Secondary button**: `LinkArrow` without frame: tracked caps + underline + arrow. Hover: underline grows, arrow +6 px · focus-visible: accent ring · active: accent colour · disabled: muted · loading: underline sweep.
+- **Text / arrow link**: Inter Tight 400 or Fraunces italic in running text, 1 px underline; hover: underline 0 → 100% (240 ms), arrow (Inter Tight →) +6 px · focus-visible: accent ring · active: accent · disabled: muted · loading: n/a.
+- **Icon button** (incl. menu): 40 px (44 hit), typographic glyphs preferred (→, ×, ≡ set in Inter Tight); hover: 40 px ring · focus-visible: accent ring · active: 0.96 · disabled: 30% · loading: ring draws. `aria-label` required.
+- **Navigation bar** (desktop + mobile menu) + how the DESIGO® black write/un-write logo loop sits in it: 72 px bar, transparent, AA contrast on every scene colour: the DESIGO® wordmark is the black write/un-write infinite loop (charcoal `#171918` on light grounds, white `#FFFFFF`/milk on dark; it never changes colour, never takes a variant hue and is never re-drawn in the style). Six links in tracked caps, RESERVE as `FrameButton`; hides on scroll down. Mobile: 56 px; menu opens a full-screen sheet listing the four milks as Bodoni names (≥ 48 px) and the pages in Fraunces; Esc closes, focus returns.
+- **Cursor** (states: default · hover · ROTATE · EXPLORE · ENTER · VIEW · TRACE); touch fallback: `TypeCursor`: default 6 px charcoal dot · hover: 40 px ring, `mix-blend-mode: difference` · ROTATE: ring with `DRAG` in 9 px tracked caps · EXPLORE: ring `EXPLORE` on the breed type index and journey word track · ENTER: ring `ENTER` on the /milk numeral row (shared-element transition) · VIEW: ring `VIEW` on photographs · TRACE: ring `TRACE` on hairline nodes. Disabled: 30% ring; text: native caret. Touch: none.
+- **Card / panel / info block**: no cards; information sits in columns 17–23 as tracked labels + Fraunces lines separated by hairlines; side panel for trace nodes in Fraunces on `--c-surface`, padding 40 px. Focus-visible: accent ring · loading: elegant captioned AssetSlot frame.
+- **Badge / tag** (incl. "pending verification" and "DEMO · not live data"): text only. Pending verification: `PendingValue` with 1 px dotted underline in `--c-pending` + tooltip "pending approval"; DEMO · not live data: tracked caps `DEMO · NOT LIVE DATA` with 1 px charcoal frame (milk on dark), always visible on demo content.
+- **Input + form field** (Trace-your-milk bottle ID): centred JetBrains Mono 32 px input on charcoal, 1 px milk bottom rule, 72 px high, tracked label above, prefilled `DSG-BTL-000001-3 (sample format)`. Default · hover: rule 2 px · focus-visible: 2 px `#7FE0B8` ring · active: caret · disabled: 40% · loading: rule draws · results revealed line by line (`aria-live=polite`) · error: "No record for this ID". /reserve: Bodoni variant selector (names ≥ 48 px) + 48 px inputs.
+- **Divider / ornament**: `HairlineRule`: 0.5 px gold or 1 px hair; no other ornament.
+- **Section header** (chapter number + title pattern): tracked label `08 — THE FOUR MILKS` + a masked Fraunces headline (line rise 1200 ms, 80 ms stagger); numerals parallax 0.85× against the bottle.
+- **Product info block** (variant name, code, price-pending, size, descriptors): columns 17–23: `DESIGO® V1+` (mono) / name in Bodoni 48 px / Fraunces italic line / code `DESIGO® V1+` / `V1` / `V2` / `V3`; price from `desigo.ts` rendered as pending (e.g. ₹94 with dotted underline + tooltip "pending approval · pack size not stated"); size "1 L glass · 900 g" pending; descriptors list with pending items dotted-underlined / descriptors as a tracked list / `RESERVE ———→`.
+- **Bottle stage** (how Bottle / Bottle360Viewer is framed: plinth, glow, shadow, background): the bottle stands in front of its numeral, overlapping about 20% of the numeral's width; contact ellipse at 18% charcoal. Float ±10 px / 6 s, tilt ±8°, sheen follows the cursor. Before 360 frames: ±25° turn with sheen sweep; after: scroll drives the frame index, and on /milk/[variant] the Bottle360Viewer adds drag, inertia and a JetBrains Mono counter `036 / 072`.
+- **Trace node / timeline step**: node names in tracked caps on a hairline path (forest canvas), soft pulse dot `--signal` at 60%. Default: 6 px milk dot · hover: 40 px ring · focus-visible: accent ring · active: Fraunces side panel opens · disabled: 30% · loading: pulse. "Illustrative journey — not live data" in tracked caps. Story timeline: years in Bodoni 8rem, verified milestones only.
+
+### 12.5 Iconography & illustration
+Icons: practically none; arrows are typographic (→ in Inter Tight); hairline rules (0.5 px gold or 1 px hair) separate content. Illustration: one cow line drawing at small scale as a colophon in Heritage. Photo treatment: the bottle render, and later full-bleed hero-quality real photos at most once per chapter with a slow 1.04 → 1.0 scale; warm milk grade.
+
+### 12.6 Motion tokens
+| Token | Value | Use |
+|---|---|---|
+| `--ease-out` | `cubic-bezier(.16,1,.3,1)` | masked line reveals, numeral settle |
+| `--ease-inout` | `cubic-bezier(.65,0,.35,1)` | cross-fade through milk |
+| `--dur-micro` | `240ms` | underline grow, arrow |
+| `--dur-reveal` | `1200ms` | headline mask (translateY 100% → 0), 80 ms line stagger |
+| `--dur-numeral` | `1600ms` | numeral scale 1.08 → 1.0 + opacity |
+| `--dur-scene` | `600ms` | cross-fade through milk; numeral shared-element handoff |
+| `--axis-breath` | `wght 300→400 · SOFT 30→60` | Fraunces variable breathing, scroll-scrubbed |
+| `--parallax` | `0.85×` | numerals against the bottle at 1× |
+
+One typographic event per viewport; never per-letter for long text. Reduced motion: no masks, no variable-axis scrub, instant layout; numerals static.
+
+### 12.7 AI image generation prompts
+House rules: no text/letters/logos/watermarks in images; generated images are illustration, texture or backdrop only; never
+generate the bottle or ghee jar; zebu cows only, shown with respect; append the style's tail prompt to every prompt.
+
+**Tail prompt (append to every prompt below):** *warm natural light, restrained premium palette of milk white #F7F4EC, deep forest green #0B3B32, earth brown #8C6A43 and warm gold #C8A96B, subtle film grain, editorial, calm, high-end, no text, no watermark, no logo, no letters, luxurious restraint, vast negative space*
+
+| # | File path (web/public/desigo/styles/luxury-typography/...) | Size / ratio | Transparent? | Prompt | Negative prompt | Used in |
+|---|---|---|---|---|---|---|
+| LT-H1 | `web/public/desigo/styles/luxury-typography/hero-paper-light.png` | 3200×2000 (16:10) | no | Warm milk-white #F7F4EC fine cotton paper surface with a soft diagonal band of window light falling across it, extremely subtle, vast empty space | base negatives + window frame, objects, shadows of plants | Ch. 01 hero optional ground |
+| LT-H2 | `web/public/desigo/styles/luxury-typography/hero-paper-light-portrait.png` | 1400×2400 (7:12) | no | Vertical warm milk-white cotton paper surface with a soft diagonal band of morning light near the top, extremely subtle, empty | base negatives + window frame, objects | Ch. 01 hero (mobile) |
+| LT-V1 | `web/public/desigo/styles/luxury-typography/scene-forest-velvet.png` | 3200×2000 + 1400×2400 portrait | no | Deep forest green #0A2A20 matte velvet-like backdrop with a very soft pool of light at center, no folds, seamless studio ground | base negatives + fabric folds, sparkles, objects | MASTER 26 scene ground (optional, under flat colour) |
+| LT-V2 | `web/public/desigo/styles/luxury-typography/scene-oxblood-lacquer.png` | 3200×2000 + 1400×2400 portrait | no | Deep oxblood #4A0A0F matte lacquer backdrop with a faint warm sheen toward the center, seamless, empty | base negatives + reflections of objects, gloss highlights, objects | ROOT 14 scene ground |
+| LT-V3 | `web/public/desigo/styles/luxury-typography/scene-amber-paper.png` | 3200×2000 + 1400×2400 portrait | no | Pale amber #F8E4C2 heavyweight paper backdrop with a soft golden light from upper left, seamless, empty | base negatives + sun disc, objects, texture patterns | BASE 3 scene ground |
+| LT-V4 | `web/public/desigo/styles/luxury-typography/scene-ivory-paper.png` | 3200×2000 + 1400×2400 portrait | no | Warm ivory #F4EDE2 cotton paper backdrop, perfectly even soft light, seamless, empty | base negatives + objects, vignetting | ESSENTIAL scene ground |
+| LT-J1 | `web/public/desigo/styles/luxury-typography/colophon-cow.png` | 1600×1200 (4:3) | yes (real alpha) | Small elegant engraved-line colophon of a resting Indian zebu cow in profile, hump and dewlap visible, fine sepia-brown #5A4630 line on transparent background, centred, refined | base negatives + ornate frame, text banner, shading blobs, cartoon | Ch. 10 Heritage colophon, /about |
+| LT-J2 | `web/public/desigo/styles/luxury-typography/thar-dawn-band.png` | 3600×1200 (3:1) | no | Ultra-wide calm band of the Thar desert edge at dawn, low khejri silhouettes far away, muted gold and sage, mostly sky | base negatives + people, buildings, dramatic clouds | Ch. 04 placeholder band until real photography (labelled illustration) |
+| LT-T1 | `web/public/desigo/styles/luxury-typography/grain-overlay.png` | 1024×1024, seamless | no | Seamless monochrome photographic film grain on mid-grey, fine, even | base negatives + scratches, dust, colour noise | 2% grain on milk |
+| LT-T2 | `web/public/desigo/styles/luxury-typography/paper-archival.png` | 2400×2400, seamless | no | Seamless tileable texture of aged cotton rag paper, warm ivory #EDE4D0, very subtle fibres, flat even lighting | base negatives + foxing spots, folds, stains | Ch. 10 Heritage paper |
+
+Base negatives (apply to every prompt): *text, letters, numbers, logo, watermark, signature, label, product bottle, glass bottle, jar, packaging, Holstein or Jersey cattle, cartoon mascot, deity or religious icon, distorted anatomy, oversaturated, HDR, low resolution*. Type carries this style: generated images are optional grounds only; an elegant AssetSlot is preferred to a weak photo.
+
+### 12.8 Prototype acceptance checklist
+- [ ] Tokens from `specs/15_luxury-typography.json` applied; no off-palette colours
+- [ ] Fonts self-hosted; correct weights load
+- [ ] All 12.4 components built with all states
+- [ ] Hero + bottle-story + one product world + trace chapter built in this style (the comparison set)
+- [ ] Mobile 360 px pass; reduced-motion pass; contrast checked
+- [ ] Claims rules respected (pending underline, no blocked claims, DEMO labels)
+- [ ] Screenshots: desktop 1440×900 ×4 + mobile 390×844 ×2 saved to docs/media/styles/luxury-typography/

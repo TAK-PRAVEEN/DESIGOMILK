@@ -16,7 +16,7 @@ Reference points:
 
 ## 2. Fit for DESIGO® — score 4 / 5
 
-**Why it fits.** DESIGO® has a lot to **explain**: a seven-step journey, a node-based trace system, a 16-point screen, four variants with different feeds, breed rotation, returnable glass. Vector art explains complex systems cleanly, animates smoothly with scroll (SVG / Lottie / Rive), is light for Indian mobile networks, and stays consistent across web, packaging, social and the RTCOM apps. It is also an honest choice while real photography is pending: illustration is clearly illustration, never a fake photo.
+**Why it fits.** DESIGO® has a lot to **explain**: a seven-step journey, a node-based trace system, a 16-point screen, four variants with different feeds, breed rotation, returnable glass. Vector art explains complex systems cleanly, animates smoothly with scroll (SVG / Lottie / Rive), is light for Indian mobile networks, and stays consistent across web, packaging, social and DESIGO®'s farm, plant and delivery apps. It is also an honest choice while real photography is pending: illustration is clearly illustration, never a fake photo.
 
 **Where it fights.** Vector art can look generic ("tech startup flat illustration") and loses the warmth, soil and reality that a provenance brand needs. Flat cows can feel childish. It cannot replace real farm photography as *proof*.
 
@@ -168,3 +168,131 @@ Total ≈ 71 days (illustration-heavy).
 **Risks**: generic startup look, losing warmth, overpromising process detail. Mitigation: breed accuracy, editorial serif, photography pairing, pending labels on unconfirmed steps.
 
 **Best used for:** the explanation layer (journey, trace map, quality test, technology pipeline and the sitewide icon system), paired with real photography.
+
+---
+
+---
+
+## 12. Build-ready spec sheet
+
+> Audit 2026-10-03: Excellent vector grammar; missing were colour roles (muted text, states), font packages and sizes, component states, motion token table, image prompts and acceptance list. All added. Fonts already OFL (Fraunces, Inter Tight, Manrope). Body fix: replaced an internal system name with the public wording "farm, plant and delivery apps".
+
+### 12.1 Colour system
+| Role | Token | Hex | Use | Contrast note |
+|---|---|---|---|---|
+| Primary | --c-primary | `#1E7A68` | primary illustration fill, CTAs, active states | 4.7:1 vs bg (text-safe) |
+| Primary ink | --c-on-primary | `#F7F4EC` | label on green | 4.7:1 on primary |
+| Secondary | --c-secondary | `#0B3B32` | line colour, dark fills, focus ring (11.6:1) | 11.3:1 vs bg (body-safe) |
+| Accent | --c-accent | `#C8A96B` | sun, ghee, highlights in illustrations | decorative only (2.1:1), never text; focus ring uses --c-secondary |
+| Background | --c-bg | `#F7F4EC` | milk ground | 16.1:1 with text |
+| Surface | --c-surface | `#EFE9DC` | light shape fills, diagram panels | text on surface 14.6:1 |
+| Text | --c-text | `#171918` | body text (charcoal) | 16.1:1 vs bg (body-safe) |
+| Muted text | --c-text-muted | `#3F645B` | captions, illustration labels (forest at 78%) | 6.0:1 vs bg (text-safe) |
+| Line | --c-line | `rgba(11,59,50,.18)` | hairlines, diagram guides | decorative; strokes at 100% forest are 11.6:1 |
+| Success / Pending / Demo | --c-ok / --c-pending / --c-demo | `#1E7A68` / `#C8A96B` / `#0B3B32` | ok = green filled node; pending = 1px dotted gold underline + "PENDING" tag; dashed outline on unconfirmed diagram steps; DEMO = forest tag on every animated demo step | DEMO tag milk on forest = 11.6:1; pending diagram steps are dashed forest outlines (11.6:1) |
+
+Variant worlds in this style: MASTER 26 · ROOT 14 · BASE 3 · ESSENTIAL (base / deep / light hex for each).
+
+| Variant | Base | Deep | Light | World in this style |
+|---|---|---|---|---|
+| MASTER 26 (V1+, green cap) | `#1F5C45` | `#0A2A20` | `#D9E8DF` | layered forest hills, 26 small leaf shapes (*pending*) in a ring orbiting 40 s/rev: `#0A2A20`, `#1F5C45`, `#D9E8DF`, gold sun |
+| ROOT 14 (V1, red cap) | `#B3202A` | `#4A0A0F` | `#F3D9D6` | red earth strata with root lines drawing downward, grazing cow: `#4A0A0F`, `#B3202A`, `#F3D9D6` |
+| BASE 3 (V2, amber cap) | `#E89A1C` | `#5A3304` | `#F8E4C2` | low large sun over a flat horizon, three leaves (*pending*): `#5A3304`, `#E89A1C`, `#F8E4C2` |
+| ESSENTIAL (V3, ivory cap) | `#CDB89A` | `#4D4130` | `#F4EDE2` | a single horizon line and one circle: `#4D4130`, `#CDB89A`, `#F4EDE2` |
+
+Dark-chapter inversion: Technology (ch. 11) and /technology use tech mode: `--c-bg` → `#171918`, `--c-surface` → `#0B3B32`, `--c-text` → `#F7F4EC`, `--c-primary` → `#7FE0B8` (signal data lines), line → `rgba(127,224,184,.24)`, muted → `#9FD3C2`, logo → white.
+
+Additional style tokens (kept from §3): `--va-mint` `#9FD3C2`, `--va-earth` `#8C6A43`, `--va-sand` `#D9C3A0`, `--va-signal` `#7FE0B8` (dark only). Rule: ≤ 5 fills + 1 line colour per illustration; gradients only two-stop within one hue (e.g. `#1E7A68 → #1F5C45`).
+
+### 12.2 Typography
+| Role | Font family | Source (npm @fontsource… / Google Fonts) | Weights / axes | Size (clamp) | Line-height | Tracking | Case |
+|---|---|---|---|---|---|---|---|
+| Display / hero | Fraunces (alt. Manrope 700 for a technical feel) | `@fontsource-variable/fraunces` (alt. `@fontsource-variable/manrope`) | wght 500, opsz 144 | `clamp(3.25rem, 2rem + 6vw, 8rem)` | 1.0 | −0.02em | Sentence |
+| Headline H1–H2 | Fraunces | `@fontsource-variable/fraunces` | 500 | H1 `clamp(2.6rem, 1.6rem + 4vw, 5rem)` · H2 `clamp(1.8rem, 1.3rem + 2vw, 3rem)` | 1.05 · 1.15 | −0.01em | Sentence |
+| Body | Inter Tight | `@fontsource-variable/inter-tight` | 400 / 500 | `clamp(1rem, .95rem + .25vw, 1.125rem)` | 1.6 | 0 | Sentence |
+| Label / UI | Inter Tight (illustration labels in forest) | `@fontsource-variable/inter-tight` | 600 | `clamp(.6875rem, .66rem + .12vw, .75rem)` (11–12 px) | 1.2 | +0.16em | Upper |
+| Data / mono | JetBrains Mono | `@fontsource-variable/jetbrains-mono` | 400 / 500, tabular | `.875rem` | 1.4 | +0.02em | Upper |
+| Devanagari (optional) | Noto Sans Devanagari | `@fontsource-variable/noto-sans-devanagari` | 400 / 600 | matches body | 1.65 | 0 | — |
+
+Licence: all fonts must be open-licence (OFL/Apache). Fraunces, Inter Tight, Manrope, JetBrains Mono, Noto Sans Devanagari: OFL 1.1, no replacement needed. Pairing: a warm editorial serif against precise geometric drawings keeps the system from feeling like a startup kit.
+
+### 12.3 Layout & surfaces
+- Grid: 12 columns, 24 px gutters, 5vw margins, max-width 1440 px; illustrations span 6–8 columns.
+- Diagrams use fixed viewBoxes: 1600×900 desktop, a separately drawn 900×1600 for mobile (never scaled).
+- Construction: every illustration on a 4 px grid inside a 24-unit module; stroke 1.5 px (2 px for hero art > 800 px; 1.75 px on mobile), round caps/joins.
+- Spacing (4 px base): 4 · 8 · 12 · 16 · 24 · 32 · 48 · 64 · 96 · 128.
+- Radius: `sm 2px` (small shapes, inputs) · `md 8px` (large shapes, panels) · `lg 8px`; pill only for cursor and milk drops.
+- Border: 1.5 px forest lines; UI hairlines `rgba(11,59,50,.18)`.
+- Shadow: flat offset darker fill down-right (no blur) inside illustrations; the photographic bottle keeps a vector contact shadow (ellipse with two-stop radial).
+- Texture: none; Rajasthani jali / step-well geometry as background structure at ≤ 6% opacity.
+
+### 12.4 Components
+For each: anatomy, sizes, states (default · hover · focus-visible · active · disabled · loading), motion, a11y.
+- **Primary button**: underlined label + travelling arrow inside a 1.5 px green frame (master system), 48 px, padding 14 px 22 px, radius 2 px, Inter Tight 600 upper. States: default · hover frame draws itself (400 ms), arrow travels 6 px, magnetic ≤ 6 px · focus-visible 2 px `#0B3B32` ring offset 3 px · active fill `#1E7A68` with milk label · disabled 40% · loading arrow morphs into a 3-dot vector loader. 44 px target.
+- **Secondary button**: label + arrow with 1.5 px forest underline; hover underline draws left → right 240 ms; focus forest ring; active label green; disabled 40%; loading underline sweeps.
+- **Text / arrow link**: Inter Tight with 1 px green underline; arrow `→` travels 4 px; focus forest ring.
+- **Icon button (incl. menu)**: 44 px target, 24 px icon from the 60+ set (1.5 px stroke, round caps). Hover icon fills from outline (240 ms) · focus ring · active filled green · disabled 40%. Menu = two lines → X (240 ms). `aria-label`, `aria-expanded`.
+- **Navigation bar (desktop + mobile menu) + DESIGO® logo loop**: milk bar 72 px (56 px mobile), hairline beneath, logo left, links Inter Tight label style, RESERVE primary. Mobile: menu sheet on `#EFE9DC` with each link paired with its 24 px vector icon, links 28 px Fraunces, focus trapped, Esc closes. Logo loop: DESIGO® wordmark (vector SVG, never redrawn) runs the house black write / un-write loop: D · waves · S · I · G · O draw on (0–1.2 s, 480 ms each, 95 ms stagger) → hold to 3.0 s → un-write in reverse 3.0–4.2 s → rest to 4.6 s → repeat, infinite. Charcoal `#171918` on light grounds, white `#FFFFFF` on dark grounds, swapped by section theme only; never a colour change inside the loop. Reduced motion: static full wordmark. `aria-label="DESIGO® home"`; the animation is `aria-hidden`.
+- **Cursor (default · hover · ROTATE · EXPLORE · ENTER · VIEW · TRACE; touch fallback)**: default 12 px forest ring · hover ring fills 15% · over diagram nodes it snaps (magnetic ≤ 6 px) and shows the node label (TRACE) · ROTATE `DRAG` over the bottle · EXPLORE `EXPLORE` ring 48 px over scenes · ENTER `ENTER →` over landscape tiles · VIEW over photo insets · none over decorative illustration. Touch / coarse pointer: custom cursor not rendered; native behaviour, and the ROTATE / EXPLORE hint appears once as a static chip beside the bottle and fades after the first drag.
+- **Card / panel / info block**: card-free layout by default: diagram panels on `#EFE9DC`, radius 8 px, padding 24 px, no border; interactive tiles get a 1.5 px forest outline on hover and focus ring.
+- **Badge / tag (incl. "pending verification" and "DEMO · not live data")**: Inter Tight 600 11 px upper, 24 px, radius 2 px. Pending verification: dotted gold underline + "PENDING" tag; unconfirmed diagram steps drawn dashed. DEMO · not live data: forest tag on every demo timeline step and on the Rive map.
+- **Input + form field (Trace-your-milk bottle ID)**: 56 px, 1.5 px forest border, radius 2 px, mono 16 px, placeholder `DSG-BTL-000001-3 (sample format)`, leading QR icon. States: hover border green · focus-visible forest ring 2 px · error `#B3202A` + message · disabled 40% · loading vector loader. Visible `<label>`; DEMO tag beside.
+- **Divider / ornament**: 1.5 px forest line with a small geometric node (4 px circle) at each end; heritage uses a step-well geometry strip at 6%.
+- **Section header (chapter number + title pattern)**: mono chapter number + 48 px icon that draws itself + Fraunces title + one lead line.
+- **Product info block (variant name, code, price-pending, size, descriptors)**: V-CODE (mono), name (Fraunces 500), size `1 L glass · 900 g` and price from `desigo.ts` with dotted pending underline, descriptors with vector bullet icons each pending-marked, feed diagram (herb counts *pending*), CTA `Trace this bottle →`.
+- **Bottle stage (Bottle / Bottle360Viewer framing)**: photographic bottle in a vector world: geometric hill, gold sun disc, stylised grass at its base; vector contact shadow. Tilt ±8°. Bottle360Viewer framed by a thin vector turntable ring with 72 ticks that highlight the current frame.
+- **Trace node / timeline step**: Rive node: idle (outline) · hover (fill 30%) · focus-visible (forest ring) · active (filled green + side panel) · pending (dashed). Timeline step = vector icon + mono time (DEMO) on a 1.5 px path; shape morphs connect steps. Steps also present as an HTML list.
+
+### 12.5 Iconography & illustration
+- Icon set (60+), 24 px grid, 1.5 px stroke, round caps and joins, 2 px corner radius: seven verbs, 16 quality parameters (abstract, never implying a health effect), breeds, delivery, glass return, QR, temperature, pin, herb.
+- Illustration: the DESIGO® vector grammar (≤ 5 fills + 1 line colour, flat light from upper left, offset fills for shadow); breed-accurate cows checked against client photos; no Corporate Memphis people, no clip-art cows.
+- Photography: paired with vector for proof (Origin, Breeds, bottle); shown as round insets inside vector scenes. Illustrations explain, photographs prove.
+
+### 12.6 Motion tokens
+| Token | Value | Use |
+|---|---|---|
+| `--ease-out` | `cubic-bezier(.16,1,.3,1)` | reveals, UI entrances |
+| `--ease-inout` | `cubic-bezier(.65,0,.35,1)` | scene / chapter transitions |
+| `--ease-milk` | `cubic-bezier(.22,.9,.24,1)` | bottle travel, float settle |
+| `--dur-micro / reveal / scene` | 240 / 800 / 1200 ms | hover · draw-on · morph |
+| `--va-draw` | 800 ms ease-out; fill +200 ms | line draw-on then fill |
+| `--va-morph` | 1200 ms ease-inout, `scrub: 1` | milk drop → can → barrel → bottle morphs |
+| `--va-idle` | ≤ 6 s loops (tail flick, sun 2 px) | idle loops, paused off-screen |
+| `--va-orbit` | 40 s per revolution | MASTER 26 leaf ring |
+| `--va-wipe` | 1000 ms | shape-wipe section change |
+
+- Engine: SVG + GSAP ScrollTrigger for scrubbed diagrams; Rive for interactive pieces (trace map node states, cow idle), Lottie fallback.
+- No bouncy character animation; idle loops pause off-screen.
+- Reduced motion (`prefers-reduced-motion: reduce`): all scroll-scrubbed motion off, content becomes a normal readable page, logo shows static, 360 auto-rotation stops, transitions become ≤ 200 ms opacity fades. Here also: final diagram states shown, morphs become static step sequences.
+
+### 12.7 AI image generation prompts
+House rules: no text/letters/logos/watermarks in images; generated images are illustration, texture or backdrop only; never
+generate the bottle or ghee jar; zebu cows only, shown with respect; append the style's tail prompt to every prompt.
+
+Style tail prompt (append to every prompt below): *precise flat geometric vector illustration, limited palette of milk white #F7F4EC, deep forest #0B3B32, green #1E7A68, mint #9FD3C2, earth #8C6A43, sand #D9C3A0 and gold #C8A96B, 1.5 px consistent strokes, flat light from upper left, two-stop gradients only, editorial and calm, premium, no text, no watermark, no logo, no letters*
+
+Base negative prompt (prefix to every negative below): *text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated*
+
+| # | File path (web/public/desigo/styles/<slug>/...) | Size / ratio | Transparent? | Prompt | Negative prompt | Used in |
+|---|---|---|---|---|---|---|
+| 1 | `web/public/desigo/styles/vector-art/hero-landscape.png` | 3200×2000 (16:10) | no | Quiet flat vector horizon: a single Thar dune line, a gold sun disc, milk-white sky, subtle two-stop gradients, geometric construction, large empty centre (concept; production art redrawn as SVG) | 3D render, gradients mesh, people, clip art, isometric clutter | Hero (ch. 01) |
+| 2 | `web/public/desigo/styles/vector-art/hero-portrait.png` | 1400×2400 (7:12) | no | Tall flat vector composition: gold sun disc high, dune line low, milk-white sky, empty centre | 3D, people, clip art | Hero mobile |
+| 3 | `web/public/desigo/styles/vector-art/world-master-26.png` | 3200×2000 + 1400×2400 crop | no | Flat geometric vector landscape of layered forest hills in #0A2A20 and #1F5C45 under a pale #D9E8DF sky, a ring of small leaf shapes around an empty centre and a small gold sun | counted labels, 3D, gradients mesh, people | Four milks ch. 08, /milk/master-26 |
+| 4 | `web/public/desigo/styles/vector-art/world-root-14.png` | 3200×2000 + 1400×2400 crop | no | Flat vector red earth strata in horizontal bands #4A0A0F, #B3202A and #F3D9D6 with thin root lines descending, a small geometric zebu cow silhouette with hump grazing at one side, empty centre | cartoon face, Holstein, 3D, text | Four milks ch. 08, /milk/root-14 |
+| 5 | `web/public/desigo/styles/vector-art/world-base-3.png` | 3200×2000 + 1400×2400 crop | no | Flat vector scene: a large low amber #E89A1C sun disc over a flat #5A3304 horizon, pale #F8E4C2 sky, three simple leaf shapes, empty centre | 3D, lens flare, text | Four milks ch. 08, /milk/base-3 |
+| 6 | `web/public/desigo/styles/vector-art/world-essential.png` | 3200×2000 + 1400×2400 crop | no | Minimal flat vector composition: one horizon line in #4D4130 and one circle in #CDB89A on a #F4EDE2 ground, minimum geometry | extra shapes, texture, text | Four milks ch. 08, /milk/essential |
+| 7 | `web/public/desigo/styles/vector-art/journey-vector-scene.png` | 3600×1200 (3:1) | yes (real alpha) | One continuous flat vector scene in a row: a breed-accurate zebu cow with hump and dewlap, a farm shed with a khejri tree, a steel milk can, a paper test card with sixteen cells, a milk chiller, a small dairy plant, a delivery bicycle with an empty crate, joined by a single milk-white path, isolated on transparent background | bottles, jars, Corporate Memphis people, cartoon faces, labels | Cow → bottle ch. 03 (concept for MorphSequence) |
+| 8 | `web/public/desigo/styles/vector-art/technology-iso-pipeline.png` | 3200×2000 | no | Isometric flat vector pipeline of seven abstract modules on a charcoal #171918 ground connected by thin mint #7FE0B8 lines, precise, minimal | labels, screens with text, robots, neon purple | Technology ch. 11, /technology |
+| 9 | `web/public/desigo/styles/vector-art/texture-jali.png` | 2048×2048, seamless | yes (real alpha) | Seamless tileable Rajasthani jali lattice geometry, thin forest-green lines on transparent background, very regular, low visual weight | ornament clutter, text, shading | Background structure at ≤ 6% |
+| 10 | `web/public/desigo/styles/vector-art/heritage-stepwell.png` | 3200×2000 | no | Flat geometric vector illustration of a Rajasthani step-well seen front-on, stepped triangles and landings in earth and gold, a simple bilona churn silhouette at the base, calm | people, text, 3D | Heritage ch. 10 |
+
+### 12.8 Prototype acceptance checklist
+- [ ] Tokens from `specs/33_vector-art.json` applied; no off-palette colours
+- [ ] Fonts self-hosted; correct weights load
+- [ ] All 12.4 components built with all states
+- [ ] Hero + bottle-story + one product world + trace chapter built in this style (the comparison set)
+- [ ] Mobile 360 px pass; reduced-motion pass; contrast checked
+- [ ] Claims rules respected (pending underline, no blocked claims, DEMO labels)
+- [ ] Screenshots: desktop 1440×900 ×4 + mobile 390×844 ×2 saved to docs/media/styles/vector-art/
+- [ ] Every diagram has `<title>`/`<desc>` and an HTML list equivalent
+- [ ] Each breed drawing checked against client photographs; ≤ 5 fills per illustration

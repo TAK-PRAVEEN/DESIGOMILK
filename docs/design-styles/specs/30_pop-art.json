@@ -1,0 +1,267 @@
+{
+  "id": 30,
+  "slug": "pop-art",
+  "name": "Pop Art",
+  "priority": false,
+  "fit": 2,
+  "colors": {
+    "primary": "#171918",
+    "onPrimary": "#F7F4EC",
+    "secondary": "#0B3B32",
+    "accent": "#B3202A",
+    "bg": "#F7F4EC",
+    "surface": "#FFFFFF",
+    "text": "#171918",
+    "textMuted": "#4D4130",
+    "line": "#171918",
+    "ok": "#1F5C45",
+    "pending": "#E89A1C",
+    "demo": "#171918"
+  },
+  "variants": {
+    "master-26": {
+      "base": "#1F5C45",
+      "deep": "#0A2A20",
+      "light": "#D9E8DF",
+      "world": "field #1F5C45, dots #7FE0B8 6px, numeral 26"
+    },
+    "root-14": {
+      "base": "#B3202A",
+      "deep": "#4A0A0F",
+      "light": "#F3D9D6",
+      "world": "field #B3202A, dots #F3D9D6 6px, numeral 14"
+    },
+    "base-3": {
+      "base": "#E89A1C",
+      "deep": "#5A3304",
+      "light": "#F8E4C2",
+      "world": "field #E89A1C, dots #5A3304 5px, numeral 3"
+    },
+    "essential": {
+      "base": "#CDB89A",
+      "deep": "#4D4130",
+      "light": "#F4EDE2",
+      "world": "field #CDB89A, dots #F4EDE2 4px, numeral E"
+    }
+  },
+  "fonts": {
+    "display": {
+      "family": "Anton",
+      "package": "@fontsource/anton",
+      "weights": [
+        400
+      ]
+    },
+    "numerals": {
+      "family": "Archivo Black",
+      "package": "@fontsource/archivo-black",
+      "weights": [
+        400
+      ]
+    },
+    "body": {
+      "family": "Inter Tight",
+      "package": "@fontsource-variable/inter-tight",
+      "weights": [
+        400,
+        500,
+        600,
+        700
+      ]
+    },
+    "label": {
+      "family": "Inter Tight",
+      "package": "@fontsource-variable/inter-tight",
+      "weights": [
+        700
+      ]
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "package": "@fontsource-variable/jetbrains-mono",
+      "weights": [
+        400,
+        500
+      ]
+    },
+    "editorial": {
+      "family": "Fraunces",
+      "package": "@fontsource-variable/fraunces",
+      "weights": [
+        400
+      ]
+    },
+    "devanagari": {
+      "family": "Noto Sans Devanagari",
+      "package": "@fontsource-variable/noto-sans-devanagari",
+      "weights": [
+        400,
+        500,
+        600
+      ]
+    }
+  },
+  "type": {
+    "display": "clamp(3.5rem, 2rem + 7vw, 9.5rem)",
+    "h1": "clamp(2.6rem, 1.6rem + 4vw, 5.5rem)",
+    "h2": "clamp(1.6rem, 1.2rem + 1.8vw, 2.6rem)",
+    "body": "clamp(1rem, .95rem + .25vw, 1.125rem)",
+    "label": ".8rem",
+    "numeral": "clamp(6rem, 4rem + 10vw, 16rem)"
+  },
+  "radius": {
+    "sm": "0",
+    "md": "4px",
+    "lg": "0",
+    "pill": "999px"
+  },
+  "shadow": {
+    "bottle": "flat ink ellipse #171918 (no blur) under the bottle",
+    "panel": "6px 6px 0 #171918"
+  },
+  "motion": {
+    "easeOut": "cubic-bezier(.2,.8,.2,1)",
+    "easeInOut": "cubic-bezier(.65,0,.35,1)",
+    "easeMilk": "cubic-bezier(.22,.9,.24,1)",
+    "durMicro": 200,
+    "durReveal": 400,
+    "durScene": 1000,
+    "printDots": 200,
+    "repeatStagger": 150,
+    "bottleDrop": 500,
+    "wipe": 500
+  },
+  "button": {
+    "primary": {
+      "bg": "#171918",
+      "fg": "#F7F4EC",
+      "border": "3px solid #171918",
+      "radius": "0",
+      "padding": "16px 26px",
+      "hover": "press: offset shadow 3px to 0, 200ms"
+    },
+    "secondary": {
+      "bg": "#FFFFFF",
+      "fg": "#171918",
+      "border": "3px solid #171918",
+      "radius": "0",
+      "padding": "14px 24px",
+      "shadow": "6px 6px 0 #171918",
+      "hover": "shadow 6px to 3px"
+    },
+    "link": {
+      "fg": "#171918",
+      "underline": "3px #171918",
+      "hover": "6px underline in variant colour"
+    }
+  },
+  "logo": {
+    "loop": "write/un-write infinite",
+    "onLight": "#171918",
+    "onDark": "#FFFFFF",
+    "colourChange": false,
+    "cycleMs": 4600,
+    "drawMs": "0-1200 (480 each, 95 stagger)",
+    "holdUntilMs": 3000,
+    "unwriteMs": "3000-4200 (reverse order)",
+    "colorLight": "#171918",
+    "colorDark": "#F7F4EC"
+  },
+  "tailPrompt": "flat silkscreen pop-art print, cap-colour palette only: bottle green #1F5C45, crimson #B3202A, amber #E89A1C, sand #CDB89A, milk white #F7F4EC, ink #171918, Ben-Day halftone dots, slight print misregistration, gallery-clean, premium, no primary yellow, no cyan, no pink, no text, no watermark, no logo, no letters",
+  "images": [
+    {
+      "file": "web/public/desigo/styles/pop-art/hero-landscape.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Four equal flat silkscreen colour fields in a 2×2 grid separated by thin black gutters, bottle green, crimson, amber and sand, each with fine Ben-Day halftone dots in its light tone at 45 degrees, slight misregistration, paper grain, each field empty at its centre (reference/social only; production dots stay SVG), flat silkscreen pop-art print, cap-colour palette only: bottle green #1F5C45, crimson #B3202A, amber #E89A1C, sand #CDB89A, milk white #F7F4EC, ink #171918, Ben-Day halftone dots, slight print misregistration, gallery-clean, premium, no primary yellow, no cyan, no pink, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, comic characters, speech text, onomatopoeia, bottles, faces",
+      "usedIn": "Hero 4-up (ch. 01), OG image"
+    },
+    {
+      "file": "web/public/desigo/styles/pop-art/hero-portrait.png",
+      "size": "1400×2400 (7:12)",
+      "transparent": false,
+      "prompt": "Tall 2×2 silkscreen grid of bottle green, crimson, amber and sand fields with Ben-Day dots and thin black gutters, centres empty, flat silkscreen pop-art print, cap-colour palette only: bottle green #1F5C45, crimson #B3202A, amber #E89A1C, sand #CDB89A, milk white #F7F4EC, ink #171918, Ben-Day halftone dots, slight print misregistration, gallery-clean, premium, no primary yellow, no cyan, no pink, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, comic characters, text, bottles",
+      "usedIn": "Hero mobile, story format"
+    },
+    {
+      "file": "web/public/desigo/styles/pop-art/world-master-26.png",
+      "size": "3200×2000 + 1400×2400 crop",
+      "transparent": false,
+      "prompt": "Flat silkscreen colour field in bottle green #1F5C45 with mint #7FE0B8 Ben-Day dots 6 mm at 45 degrees, a slight 3 px misregistered offset of a darker green plate, paper grain, empty centre, flat silkscreen pop-art print, cap-colour palette only: bottle green #1F5C45, crimson #B3202A, amber #E89A1C, sand #CDB89A, milk white #F7F4EC, ink #171918, Ben-Day halftone dots, slight print misregistration, gallery-clean, premium, no primary yellow, no cyan, no pink, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, objects, leaves, text, gradients",
+      "usedIn": "Four milks ch. 08, /milk/master-26"
+    },
+    {
+      "file": "web/public/desigo/styles/pop-art/world-root-14.png",
+      "size": "3200×2000 + 1400×2400 crop",
+      "transparent": false,
+      "prompt": "Flat silkscreen colour field in crimson #B3202A with pale rose #F3D9D6 Ben-Day dots at 45 degrees, slight misregistration, paper grain, empty centre, flat silkscreen pop-art print, cap-colour palette only: bottle green #1F5C45, crimson #B3202A, amber #E89A1C, sand #CDB89A, milk white #F7F4EC, ink #171918, Ben-Day halftone dots, slight print misregistration, gallery-clean, premium, no primary yellow, no cyan, no pink, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, objects, text, gradients, pink neon",
+      "usedIn": "Four milks ch. 08, /milk/root-14"
+    },
+    {
+      "file": "web/public/desigo/styles/pop-art/world-base-3.png",
+      "size": "3200×2000 + 1400×2400 crop",
+      "transparent": false,
+      "prompt": "Flat silkscreen colour field in amber #E89A1C with deep brown #5A3304 Ben-Day dots at 45 degrees, slight misregistration, paper grain, empty centre, flat silkscreen pop-art print, cap-colour palette only: bottle green #1F5C45, crimson #B3202A, amber #E89A1C, sand #CDB89A, milk white #F7F4EC, ink #171918, Ben-Day halftone dots, slight print misregistration, gallery-clean, premium, no primary yellow, no cyan, no pink, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, objects, text, primary yellow, gradients",
+      "usedIn": "Four milks ch. 08, /milk/base-3"
+    },
+    {
+      "file": "web/public/desigo/styles/pop-art/world-essential.png",
+      "size": "3200×2000 + 1400×2400 crop",
+      "transparent": false,
+      "prompt": "Flat silkscreen colour field in sand #CDB89A with ivory #F4EDE2 small Ben-Day dots at 45 degrees, very slight misregistration, paper grain, empty centre, flat silkscreen pop-art print, cap-colour palette only: bottle green #1F5C45, crimson #B3202A, amber #E89A1C, sand #CDB89A, milk white #F7F4EC, ink #171918, Ben-Day halftone dots, slight print misregistration, gallery-clean, premium, no primary yellow, no cyan, no pink, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, objects, text, gradients",
+      "usedIn": "Four milks ch. 08, /milk/essential"
+    },
+    {
+      "file": "web/public/desigo/styles/pop-art/journey-strip.png",
+      "size": "3600×1200 (3:1)",
+      "transparent": false,
+      "prompt": "Seven square panels in a row with thick black outlines, flat screen-printed illustrations in the cap colours: a zebu cow with hump grazing (respectful, realistic proportions), a small farm shed with a khejri tree, a steel milk can, a round test card with sixteen dots, a steel milk chiller, a small clean dairy building, a delivery bicycle with an empty crate, flat silkscreen pop-art print, cap-colour palette only: bottle green #1F5C45, crimson #B3202A, amber #E89A1C, sand #CDB89A, milk white #F7F4EC, ink #171918, Ben-Day halftone dots, slight print misregistration, gallery-clean, premium, no primary yellow, no cyan, no pink, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, speech bubbles, captions, cartoon faces, Holstein cow, bottles",
+      "usedIn": "Cow → bottle ch. 03 (ComicStrip) prototype"
+    },
+    {
+      "file": "web/public/desigo/styles/pop-art/trace-ink-map.png",
+      "size": "3000×2000",
+      "transparent": true,
+      "prompt": "Flat ink map diagram: bold black-outlined circles as nodes joined by a thick path banded in bottle green, crimson, amber and sand, converging on one hub, isolated on transparent background, flat silkscreen pop-art print, cap-colour palette only: bottle green #1F5C45, crimson #B3202A, amber #E89A1C, sand #CDB89A, milk white #F7F4EC, ink #171918, Ben-Day halftone dots, slight print misregistration, gallery-clean, premium, no primary yellow, no cyan, no pink, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, labels, roads, country borders, arrows with text",
+      "usedIn": "Traceability ch. 06"
+    },
+    {
+      "file": "web/public/desigo/styles/pop-art/texture-newsprint.png",
+      "size": "2048×2048, seamless",
+      "transparent": false,
+      "prompt": "Seamless tileable warm milk-white newsprint paper texture with very faint halftone speckle and fibres, flat even light, flat silkscreen pop-art print, cap-colour palette only: bottle green #1F5C45, crimson #B3202A, amber #E89A1C, sand #CDB89A, milk white #F7F4EC, ink #171918, Ben-Day halftone dots, slight print misregistration, gallery-clean, premium, no primary yellow, no cyan, no pink, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, printed text, stains, folds, vignette",
+      "usedIn": "Paper ground"
+    },
+    {
+      "file": "web/public/desigo/styles/pop-art/heritage-matchbox.png",
+      "size": "2000×2400 (5:6)",
+      "transparent": false,
+      "prompt": "Indian matchbox-label style illustration of a zebu cow standing in a field under a rayed sun, flat four-colour print in bottle green, amber, crimson and cream, ornamental leaf border with no lettering, respectful (placeholder for the commissioned illustrator), flat silkscreen pop-art print, cap-colour palette only: bottle green #1F5C45, crimson #B3202A, amber #E89A1C, sand #CDB89A, milk white #F7F4EC, ink #171918, Ben-Day halftone dots, slight print misregistration, gallery-clean, premium, no primary yellow, no cyan, no pink, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, text, brand names, numbers, cartoon cow, religious figures",
+      "usedIn": "Heritage ch. 10 (placeholder)"
+    },
+    {
+      "file": "web/public/desigo/styles/pop-art/milk-posterised.png",
+      "size": "2400×2400",
+      "transparent": true,
+      "prompt": "Milk crown splash rendered as flat posterised screen-print shapes in four tones of white and cream with thin ink edges, isolated on transparent background, flat silkscreen pop-art print, cap-colour palette only: bottle green #1F5C45, crimson #B3202A, amber #E89A1C, sand #CDB89A, milk white #F7F4EC, ink #171918, Ben-Day halftone dots, slight print misregistration, gallery-clean, premium, no primary yellow, no cyan, no pink, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated, photoreal, glass, bottle, text",
+      "usedIn": "Milk as material ch. 09"
+    }
+  ],
+  "halftone": {
+    "master-26": "#7FE0B8",
+    "root-14": "#F3D9D6",
+    "base-3": "#5A3304",
+    "essential": "#F4EDE2"
+  }
+}

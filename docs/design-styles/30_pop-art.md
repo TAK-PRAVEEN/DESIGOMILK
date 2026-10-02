@@ -166,3 +166,127 @@ Total ≈ 56 days whole site; /milk + Chapter 08 + social kit only ≈ 18 days.
 **Risks**: a cheap or kids' brand impression, irony undermining trust. Mitigation: line-up-only scope, gallery restraint, cap-colour palette.
 
 **Best used for:** the /milk four-variant line-up (a Warhol-style 2×2 of the four cap colours), plus launch posters and social.
+
+---
+
+## 12. Build-ready spec sheet
+
+> Audit 2026-10-03: Cap-colour palette and guardrails were good; missing were colour roles (surface, muted text, states), font packages and sizes, component states, motion token table, image prompts and acceptance list. All added. Fonts already OFL (Anton, Archivo Black, Fraunces, Inter Tight); no claim violations found.
+
+### 12.1 Colour system
+| Role | Token | Hex | Use | Contrast note |
+|---|---|---|---|---|
+| Primary | --c-primary | `#171918` | ink: 3 px outlines, primary CTA plate, numerals | 16.1:1 vs bg (body-safe) |
+| Primary ink | --c-on-primary | `#F7F4EC` | label on ink plates | 16.1:1 on primary |
+| Secondary | --c-secondary | `#0B3B32` | brand anchor: secondary CTA, footer | 11.3:1 vs bg (body-safe) |
+| Accent | --c-accent | `#B3202A` | focus ring, active marker, ROOT red highlight | 6.1:1 vs bg (text-safe) |
+| Background | --c-bg | `#F7F4EC` | paper ground | 16.1:1 with text |
+| Surface | --c-surface | `#FFFFFF` | white info cards and caption boxes inside 3 px ink outlines | text on surface 17.7:1 |
+| Text | --c-text | `#171918` | body text (only on milk or white, never on dotted fields) | 16.1:1 vs bg (body-safe) |
+| Muted text | --c-text-muted | `#4D4130` | captions, small print (ESSENTIAL deep) | 9.0:1 vs bg (body-safe) |
+| Line | --c-line | `#171918` | 3 px ink outlines (2 px mobile), 3 px gutters | 17.6:1, structural |
+| Success / Pending / Demo | --c-ok / --c-pending / --c-demo | `#1F5C45` / `#E89A1C` / `#171918` | ok = green filled check in a circle; pending = 2 px dotted amber underline + PENDING caption tag (also inside speech bubbles); DEMO = ink caption box with milk "DEMO · not live data" on every demo panel | DEMO box milk on ink = 17.6:1; amber underline is a marker only, claim text stays ink |
+
+Variant worlds in this style: MASTER 26 · ROOT 14 · BASE 3 · ESSENTIAL (base / deep / light hex for each).
+
+| Variant | Base | Deep | Light | World in this style |
+|---|---|---|---|---|
+| MASTER 26 (V1+, green cap) | `#1F5C45` | `#0A2A20` | `#D9E8DF` | field `#1F5C45`, dots `#7FE0B8` 6 px, numeral "26" in milk Archivo Black, bubble "Twenty-six herbs." (*pending*) |
+| ROOT 14 (V1, red cap) | `#B3202A` | `#4A0A0F` | `#F3D9D6` | field `#B3202A`, dots `#F3D9D6` 6 px, "14", bubble "Fourteen herbs, rooted in free grazing." (*pending*) |
+| BASE 3 (V2, amber cap) | `#E89A1C` | `#5A3304` | `#F8E4C2` | field `#E89A1C`, dots `#5A3304` 5 px, "3", bubble "The everyday foundation." |
+| ESSENTIAL (V3, ivory cap) | `#CDB89A` | `#4D4130` | `#F4EDE2` | field `#CDB89A`, dots `#F4EDE2` 4 px, "E", bubble "Simple, balanced, honest." |
+
+Dark-chapter inversion: Milk-as-material (ch. 09), footer and the final CTA fade to forest: `--c-bg` → `#0B3B32`, `--c-text` → `#F7F4EC`, outlines → `#F7F4EC`, `--c-primary` → `#F7F4EC` plate with ink label, logo → white. Quality, Origin and Trace run "pop off" on plain milk.
+
+Additional style tokens (kept from §3): Halftone dot tokens `--pop-master-dot` `#7FE0B8`, `--pop-root-dot` `#F3D9D6`, `--pop-base-dot` `#5A3304`, `--pop-ess-dot` `#F4EDE2`; ghee cells `#C8A96B` / `#E8C77A` / `#8C6A43`. No primary yellow, cyan or hot pink.
+
+### 12.2 Typography
+| Role | Font family | Source (npm @fontsource… / Google Fonts) | Weights / axes | Size (clamp) | Line-height | Tracking | Case |
+|---|---|---|---|---|---|---|---|
+| Display / hero | Anton | `@fontsource/anton` | 400 (single weight) | `clamp(3.5rem, 2rem + 7vw, 9.5rem)` | 0.9 | 0 | Upper, 1–4 words |
+| Headline H1–H2 | Anton (H1) · numerals Archivo Black · Fraunces Italic (sincere line) | `@fontsource/anton` · `@fontsource/archivo-black` · `@fontsource-variable/fraunces` | 400 · 400 · italic 400 | H1 `clamp(2.6rem, 1.6rem + 4vw, 5.5rem)` · H2 `clamp(1.6rem, 1.2rem + 1.8vw, 2.6rem)` · numerals `clamp(6rem, 4rem + 10vw, 16rem)` | 0.95 · 1.15 | 0 · 0 | Upper · sentence |
+| Body | Inter Tight | `@fontsource-variable/inter-tight` | 400 / 500 | `clamp(1rem, .95rem + .25vw, 1.125rem)` | 1.55 | 0 | Sentence |
+| Label / UI | Inter Tight | `@fontsource-variable/inter-tight` | 700 (bubbles, captions) | `.8rem` | 1.2 | +0.08em | Upper |
+| Data / mono | JetBrains Mono | `@fontsource-variable/jetbrains-mono` | 500 | `.875rem` | 1.4 | +0.02em | Upper |
+| Devanagari (optional) | Noto Sans Devanagari | `@fontsource-variable/noto-sans-devanagari` | 600 / 800 | matches H2 / body | 1.4 | 0 | — |
+
+Licence: all fonts must be open-licence (OFL/Apache). Anton, Archivo Black, Fraunces, Inter Tight, JetBrains Mono, Noto Sans Devanagari: OFL 1.1, no replacement needed (Bangers and Comic-Sans-likes stay banned). Pairing: condensed Anton shouts like a silkscreen poster, Fraunces italic adds one sincere line so irony never wins.
+
+### 12.3 Layout & surfaces
+- Product grid: strict 2×2 / 4×1 repeat, equal cells, 3 px ink gutters; on mobile the 2×2 fits 100svh at 360 px.
+- Elsewhere: 12 columns, comic-panel framing, 3 px outlines with 12 px gaps, gallery margins (≥ 8vw desktop), max-width 1360 px.
+- Spacing (4 px base): 4 · 8 · 12 · 16 · 24 · 32 · 48 · 64 · 96 · 128.
+- Radius: `sm 0` · `md 4px` (icons, bubbles) · `lg 0` (panels are square); pill only for cursor and dot badges.
+- Border: 3 px `#171918` (2 px mobile).
+- Shadow: flat offset only `6px 6px 0 #171918` on raised cards; bottle gets a solid flat ink ellipse (Lichtenstein shadow), no blur.
+- Texture: SVG `<pattern>` Ben-Day dots (4–8 px, 45°) in fields and shadows only, never on glass, milk, faces or animals; 3 px silkscreen misregistration of the field behind the bottle.
+
+### 12.4 Components
+For each: anatomy, sizes, states (default · hover · focus-visible · active · disabled · loading), motion, a11y.
+- **Primary button**: ink plate: `#171918` fill, milk Inter Tight 700 upper label + arrow, 3 px ink border, 52 px, padding 16 px 26 px, radius 0. States: default · hover halftone press: plate shifts 3 px with offset shadow `3px 3px 0` collapsing to 0 (200 ms) · focus-visible 3 px `#B3202A` ring offset 3 px · active pressed flat · disabled 35% + diagonal hatch · loading three ink dots printing in sequence. 44 px target.
+- **Secondary button**: white plate with 3 px ink border and ink label + arrow, `6px 6px 0` offset shadow; hover shadow 6 → 3 px; focus red ring; active 0 px; disabled 35%; loading dots.
+- **Text / arrow link**: Inter Tight with 3 px ink underline; hover underline thickens to 6 px in the active variant colour; focus red ring; arrow travels 4 px.
+- **Icon button (incl. menu)**: 48 px coloured circle (variant colour) with 2.5 px ink outline and filled ink glyph, 4 px glyph corners. Menu = stacked bars → X. Hover dots grow 4 → 7 px · focus red ring · active pressed · disabled 35%. `aria-label`, `aria-expanded`.
+- **Navigation bar (desktop + mobile menu) + DESIGO® logo loop**: milk bar 72 px (56 px mobile) with a 3 px ink bottom border, logo left, links Inter Tight 700 upper, RESERVE as ink plate. Mobile: menu opens a full-screen 2×2 of the four cap colours, each cell a link (text labels, not colour alone), focus trapped, Esc closes. Logo loop: DESIGO® wordmark (vector SVG, never redrawn) runs the house black write / un-write loop: D · waves · S · I · G · O draw on (0–1.2 s, 480 ms each, 95 ms stagger) → hold to 3.0 s → un-write in reverse 3.0–4.2 s → rest to 4.6 s → repeat, infinite. Charcoal `#171918` on light grounds, white `#FFFFFF` on dark grounds, swapped by section theme only; never a colour change inside the loop. Reduced motion: static full wordmark. `aria-label="DESIGO® home"`; the animation is `aria-hidden`.
+- **Cursor (default · hover · ROTATE · EXPLORE · ENTER · VIEW · TRACE; touch fallback)**: default 16 px solid ink dot · hover link: dot becomes a 3 px underline cap · over a variant cell: dot takes the cell dot colour, scales 2×, numeral inside · ROTATE `DRAG` over the bottle · EXPLORE `LOOK` dot 44 px over panels · ENTER `ENTER →` over variant cells · VIEW over framed photos · TRACE ink crosshair over map nodes. Touch / coarse pointer: custom cursor not rendered; native behaviour, and the ROTATE / EXPLORE hint appears once as a static chip beside the bottle and fades after the first drag.
+- **Card / panel / info block**: InkPanel: white surface, 3 px ink outline, square, padding 24 px; caption box (ink-outlined white strip) top-left. Hover (interactive): `6px 6px 0` shadow appears; focus red ring.
+- **Badge / tag (incl. "pending verification" and "DEMO · not live data")**: caption-box badge: Inter Tight 700 11 px upper, 26 px tall, 2 px ink border. Pending verification: dotted amber underline + `PENDING` caption tag, also inside bubbles. DEMO · not live data: ink box, milk text, stamped on every demo panel.
+- **Input + form field (Trace-your-milk bottle ID)**: bold frame input: 56 px, 3 px ink border, white field, mono 16 px, placeholder `DSG-BTL-000001-3 (sample format)`. States: hover offset shadow 3 px · focus-visible red ring 3 px · error `#B3202A` caption box below · disabled 35% hatch · loading dots. Visible `<label>`; DEMO box beside.
+- **Divider / ornament**: 3 px ink rule with a row of four 12 px dots in the cap colours at centre.
+- **Section header (chapter number + title pattern)**: large Archivo Black chapter number (`08`) in an outlined circle + Anton title + one Fraunces italic sincere line.
+- **Product info block (variant name, code, price-pending, size, descriptors)**: white card under the cell, 3 px outline: V-CODE mono, name Anton, numeral echo, size `1 L glass · 900 g` and price from `desigo.ts` with dotted pending underline, descriptors pending-marked, CTA ink plate `Trace this bottle →`.
+- **Bottle stage (Bottle / Bottle360Viewer framing)**: bottle (real photograph, never posterised on product pages) centred in its colour cell, standing on a flat ink ellipse shadow; no float, tilt ±6°. Bottle360Viewer sits in an ink-outlined frame on flat colour; dots pause during drag to avoid moiré.
+- **Trace node / timeline step**: node = 20 px ink-outlined circle filled with a cap colour; path = 4 px cap-colour line with ink edges; step = comic panel with caption box. States idle · hover dots grow · focus red ring · active panel opens · pending white node with dashed outline.
+
+### 12.5 Iconography & illustration
+- Icons: bold filled glyphs with 2.5 px ink outline, 4 px corners, on 48 px coloured circles; 24 px base grid.
+- Illustration: flat four-tone posterised shapes (milk splash), commissioned Indian matchbox-label heritage panel; never comic onomatopoeia.
+- Photography: real, inside thick ink-outlined frames; no halftone over people or animals; posterised 4-tone bottle allowed only on social/campaign assets.
+
+### 12.6 Motion tokens
+| Token | Value | Use |
+|---|---|---|
+| `--ease-out` | `cubic-bezier(.2,.8,.2,1)` | snappy reveals (no overshoot) |
+| `--ease-inout` | `cubic-bezier(.65,0,.35,1)` | panel wipes |
+| `--ease-milk` | `cubic-bezier(.22,.9,.24,1)` | bottle drop-in |
+| `--dur-micro / reveal / scene` | 200 / 400 / 1000 ms | press · print-in · scene |
+| `--pop-print` | field 0 ms → dots +200 ms | two-pass print-in |
+| `--pop-repeat` | 150 ms stagger, bottle drop 500 ms (24 px) | silkscreen cell fill on /milk |
+| `--pop-wipe` | 500 ms, outline first | comic panel wipe |
+
+- Snappy but never bouncy; the master no-overshoot rule holds.
+- Signature: the four cells fill one after another like a silkscreen pass, then the four bottles drop in.
+- Reduced motion (`prefers-reduced-motion: reduce`): all scroll-scrubbed motion off, content becomes a normal readable page, logo shows static, 360 auto-rotation stops, transitions become ≤ 200 ms opacity fades. Here also: cells appear printed, no press, no wipe.
+
+### 12.7 AI image generation prompts
+House rules: no text/letters/logos/watermarks in images; generated images are illustration, texture or backdrop only; never
+generate the bottle or ghee jar; zebu cows only, shown with respect; append the style's tail prompt to every prompt.
+
+Style tail prompt (append to every prompt below): *flat silkscreen pop-art print, cap-colour palette only: bottle green #1F5C45, crimson #B3202A, amber #E89A1C, sand #CDB89A, milk white #F7F4EC, ink #171918, Ben-Day halftone dots, slight print misregistration, gallery-clean, premium, no primary yellow, no cyan, no pink, no text, no watermark, no logo, no letters*
+
+Base negative prompt (prefix to every negative below): *text, letters, words, numbers, logo, watermark, signature, label, packaging, milk bottle, glass bottle, jar, Holstein, Jersey, black-and-white dairy cow, cartoon mascot, people's faces, blurry, low resolution, oversaturated*
+
+| # | File path (web/public/desigo/styles/<slug>/...) | Size / ratio | Transparent? | Prompt | Negative prompt | Used in |
+|---|---|---|---|---|---|---|
+| 1 | `web/public/desigo/styles/pop-art/hero-landscape.png` | 3200×2000 (16:10) | no | Four equal flat silkscreen colour fields in a 2×2 grid separated by thin black gutters, bottle green, crimson, amber and sand, each with fine Ben-Day halftone dots in its light tone at 45 degrees, slight misregistration, paper grain, each field empty at its centre (reference/social only; production dots stay SVG) | comic characters, speech text, onomatopoeia, bottles, faces | Hero 4-up (ch. 01), OG image |
+| 2 | `web/public/desigo/styles/pop-art/hero-portrait.png` | 1400×2400 (7:12) | no | Tall 2×2 silkscreen grid of bottle green, crimson, amber and sand fields with Ben-Day dots and thin black gutters, centres empty | comic characters, text, bottles | Hero mobile, story format |
+| 3 | `web/public/desigo/styles/pop-art/world-master-26.png` | 3200×2000 + 1400×2400 crop | no | Flat silkscreen colour field in bottle green #1F5C45 with mint #7FE0B8 Ben-Day dots 6 mm at 45 degrees, a slight 3 px misregistered offset of a darker green plate, paper grain, empty centre | objects, leaves, text, gradients | Four milks ch. 08, /milk/master-26 |
+| 4 | `web/public/desigo/styles/pop-art/world-root-14.png` | 3200×2000 + 1400×2400 crop | no | Flat silkscreen colour field in crimson #B3202A with pale rose #F3D9D6 Ben-Day dots at 45 degrees, slight misregistration, paper grain, empty centre | objects, text, gradients, pink neon | Four milks ch. 08, /milk/root-14 |
+| 5 | `web/public/desigo/styles/pop-art/world-base-3.png` | 3200×2000 + 1400×2400 crop | no | Flat silkscreen colour field in amber #E89A1C with deep brown #5A3304 Ben-Day dots at 45 degrees, slight misregistration, paper grain, empty centre | objects, text, primary yellow, gradients | Four milks ch. 08, /milk/base-3 |
+| 6 | `web/public/desigo/styles/pop-art/world-essential.png` | 3200×2000 + 1400×2400 crop | no | Flat silkscreen colour field in sand #CDB89A with ivory #F4EDE2 small Ben-Day dots at 45 degrees, very slight misregistration, paper grain, empty centre | objects, text, gradients | Four milks ch. 08, /milk/essential |
+| 7 | `web/public/desigo/styles/pop-art/journey-strip.png` | 3600×1200 (3:1) | no | Seven square panels in a row with thick black outlines, flat screen-printed illustrations in the cap colours: a zebu cow with hump grazing (respectful, realistic proportions), a small farm shed with a khejri tree, a steel milk can, a round test card with sixteen dots, a steel milk chiller, a small clean dairy building, a delivery bicycle with an empty crate | speech bubbles, captions, cartoon faces, Holstein cow, bottles | Cow → bottle ch. 03 (ComicStrip) prototype |
+| 8 | `web/public/desigo/styles/pop-art/trace-ink-map.png` | 3000×2000 | yes (real alpha) | Flat ink map diagram: bold black-outlined circles as nodes joined by a thick path banded in bottle green, crimson, amber and sand, converging on one hub, isolated on transparent background | labels, roads, country borders, arrows with text | Traceability ch. 06 |
+| 9 | `web/public/desigo/styles/pop-art/texture-newsprint.png` | 2048×2048, seamless | no | Seamless tileable warm milk-white newsprint paper texture with very faint halftone speckle and fibres, flat even light | printed text, stains, folds, vignette | Paper ground |
+| 10 | `web/public/desigo/styles/pop-art/heritage-matchbox.png` | 2000×2400 (5:6) | no | Indian matchbox-label style illustration of a zebu cow standing in a field under a rayed sun, flat four-colour print in bottle green, amber, crimson and cream, ornamental leaf border with no lettering, respectful (placeholder for the commissioned illustrator) | text, brand names, numbers, cartoon cow, religious figures | Heritage ch. 10 (placeholder) |
+| 11 | `web/public/desigo/styles/pop-art/milk-posterised.png` | 2400×2400 | yes (real alpha) | Milk crown splash rendered as flat posterised screen-print shapes in four tones of white and cream with thin ink edges, isolated on transparent background | photoreal, glass, bottle, text | Milk as material ch. 09 |
+
+### 12.8 Prototype acceptance checklist
+- [ ] Tokens from `specs/30_pop-art.json` applied; no off-palette colours
+- [ ] Fonts self-hosted; correct weights load
+- [ ] All 12.4 components built with all states
+- [ ] Hero + bottle-story + one product world + trace chapter built in this style (the comparison set)
+- [ ] Mobile 360 px pass; reduced-motion pass; contrast checked
+- [ ] Claims rules respected (pending underline, no blocked claims, DEMO labels)
+- [ ] Screenshots: desktop 1440×900 ×4 + mobile 390×844 ×2 saved to docs/media/styles/pop-art/
+- [ ] Halftone never on glass, milk, faces or animals; bottle photographic on product pages
+- [ ] Each variant cell carries text name + numeral (not colour alone)

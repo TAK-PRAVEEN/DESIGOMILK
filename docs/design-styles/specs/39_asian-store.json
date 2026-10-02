@@ -1,0 +1,237 @@
+{
+  "id": 39,
+  "slug": "asian-store",
+  "name": "Asian Store → Indian Kirana & Dairy Shop",
+  "priority": true,
+  "fit": 3,
+  "colors": {
+    "primary": "#0B3B32",
+    "onPrimary": "#F3E7C9",
+    "secondary": "#1E7A68",
+    "accent": "#9E2B25",
+    "bg": "#F7F4EC",
+    "surface": "#E9DCC0",
+    "text": "#171918",
+    "textMuted": "#5C5A52",
+    "line": "#C9B48C",
+    "ok": "#1F5C45",
+    "pending": "#2C3E73",
+    "demo": "#9E2B25",
+    "focus": "#1E7A68"
+  },
+  "variants": {
+    "master-26": {
+      "base": "#1F5C45",
+      "deep": "#0A2A20",
+      "light": "#D9E8DF"
+    },
+    "root-14": {
+      "base": "#B3202A",
+      "deep": "#4A0A0F",
+      "light": "#F3D9D6"
+    },
+    "base-3": {
+      "base": "#E89A1C",
+      "deep": "#5A3304",
+      "light": "#F8E4C2"
+    },
+    "essential": {
+      "base": "#CDB89A",
+      "deep": "#4D4130",
+      "light": "#F4EDE2"
+    }
+  },
+  "fonts": {
+    "display": {
+      "family": "Yatra One",
+      "package": "@fontsource/yatra-one",
+      "weights": [
+        400
+      ]
+    },
+    "headline": {
+      "family": "Alfa Slab One",
+      "package": "@fontsource/alfa-slab-one",
+      "weights": [
+        400
+      ]
+    },
+    "body": {
+      "family": "Inter Tight",
+      "package": "@fontsource-variable/inter-tight",
+      "weights": [
+        400,
+        500
+      ]
+    },
+    "label": {
+      "family": "Anek Latin",
+      "package": "@fontsource-variable/anek-latin",
+      "weights": [
+        600,
+        700
+      ]
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "package": "@fontsource-variable/jetbrains-mono",
+      "weights": [
+        400
+      ]
+    },
+    "bill": {
+      "family": "Courier Prime",
+      "package": "@fontsource/courier-prime",
+      "weights": [
+        400,
+        700
+      ]
+    },
+    "devanagari": {
+      "family": "Anek Devanagari",
+      "package": "@fontsource-variable/anek-devanagari",
+      "weights": [
+        500,
+        600,
+        700
+      ]
+    },
+    "handTag": {
+      "family": "Kalam",
+      "package": "@fontsource/kalam",
+      "weights": [
+        400
+      ]
+    }
+  },
+  "type": {
+    "display": "clamp(2.75rem, 1.4rem + 5.6vw, 7rem)",
+    "h1": "clamp(2.2rem, 1.4rem + 3vw, 4.25rem)",
+    "h2": "clamp(1.6rem, 1.2rem + 1.6vw, 2.5rem)",
+    "body": "1rem",
+    "label": "0.8125rem"
+  },
+  "radius": {
+    "sm": "2px",
+    "md": "6px",
+    "lg": "999px"
+  },
+  "shadow": {
+    "bottle": "0 22px 18px -14px rgba(23,25,24,.30), 0 2px 4px rgba(23,25,24,.18)",
+    "panel": "0 4px 8px rgba(23,25,24,.15)"
+  },
+  "motion": {
+    "easeOut": "cubic-bezier(.16,1,.3,1)",
+    "easeInOut": "cubic-bezier(.65,0,.35,1)",
+    "durMicro": 180,
+    "durReveal": 450,
+    "durScene": 900,
+    "stampMs": 160,
+    "swingMs": 700,
+    "hopMs": 1500
+  },
+  "button": {
+    "primary": {
+      "bg": "#0B3B32",
+      "fg": "#F3E7C9",
+      "radius": "6px",
+      "padding": "14px 20px",
+      "border": "1px #C8A96B pin-stripe inset 3px",
+      "hover": "arrow +6px; pin-stripe full gold"
+    },
+    "secondary": {
+      "bg": "#E9DCC0",
+      "fg": "#171918",
+      "radius": "2px",
+      "padding": "14px 20px",
+      "hover": "tag swings 2deg"
+    },
+    "link": {
+      "fg": "#0B3B32",
+      "underline": "1px",
+      "hover": "2px underline #1E7A68 or variant cap colour"
+    }
+  },
+  "images": [
+    {
+      "file": "web/public/desigo/styles/asian-store/hero.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Clean minimalist Indian dairy shop interior at early morning, a single empty brushed stainless-steel shelf at centre, milk-white wall, a blank deep forest-green painted signboard with a thin gold border at the top, soft window light, no products, clean premium Indian dairy shop aesthetic, spotless brushed stainless steel, milk-white walls #F7F4EC, deep forest-green #0B3B32 painted enamel with thin gold #C8A96B pin-stripes, soft early-morning window light, ordered and calm, editorial, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, brand packaging, signage lettering, clutter, grime, rust",
+      "usedIn": "Hero desktop"
+    },
+    {
+      "file": "web/public/desigo/styles/asian-store/hero-portrait.png",
+      "size": "1400×2400 (7:12)",
+      "transparent": false,
+      "prompt": "Vertical view of the same clean dairy-shop wall: blank forest-green signboard at the top, one empty steel shelf in the lower middle, milk-white wall, soft morning light, clean premium Indian dairy shop aesthetic, spotless brushed stainless steel, milk-white walls #F7F4EC, deep forest-green #0B3B32 painted enamel with thin gold #C8A96B pin-stripes, soft early-morning window light, ordered and calm, editorial, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, products, lettering, clutter",
+      "usedIn": "Hero mobile"
+    },
+    {
+      "file": "web/public/desigo/styles/asian-store/shelf-master-26.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "Empty brushed-steel shelf with a deep green #1F5C45 edge strip under a blank forest-green enamel board with gold pin-stripe, milk-white wall, empty centre, clean premium Indian dairy shop aesthetic, spotless brushed stainless steel, milk-white walls #F7F4EC, deep forest-green #0B3B32 painted enamel with thin gold #C8A96B pin-stripes, soft early-morning window light, ordered and calm, editorial, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, products, herbs, lettering",
+      "usedIn": "MASTER 26 world"
+    },
+    {
+      "file": "web/public/desigo/styles/asian-store/shelf-root-14.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "Empty steel shelf with a crimson #B3202A edge strip under a blank cream enamel board with a thin red border, milk-white wall, empty centre, clean premium Indian dairy shop aesthetic, spotless brushed stainless steel, milk-white walls #F7F4EC, deep forest-green #0B3B32 painted enamel with thin gold #C8A96B pin-stripes, soft early-morning window light, ordered and calm, editorial, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, products, lettering, rust",
+      "usedIn": "ROOT 14 world"
+    },
+    {
+      "file": "web/public/desigo/styles/asian-store/shelf-base-3.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "Empty steel shelf with an amber #E89A1C edge strip under a blank amber enamel board with a dark brown #5A3304 border, warm morning light, empty centre, clean premium Indian dairy shop aesthetic, spotless brushed stainless steel, milk-white walls #F7F4EC, deep forest-green #0B3B32 painted enamel with thin gold #C8A96B pin-stripes, soft early-morning window light, ordered and calm, editorial, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, products, lettering, neon",
+      "usedIn": "BASE 3 world"
+    },
+    {
+      "file": "web/public/desigo/styles/asian-store/shelf-essential.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "Empty steel shelf with a pale ivory #CDB89A edge strip under a plain milk-white blank board, very minimal, empty centre, clean premium Indian dairy shop aesthetic, spotless brushed stainless steel, milk-white walls #F7F4EC, deep forest-green #0B3B32 painted enamel with thin gold #C8A96B pin-stripes, soft early-morning window light, ordered and calm, editorial, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, products, decoration",
+      "usedIn": "ESSENTIAL world"
+    },
+    {
+      "file": "web/public/desigo/styles/asian-store/route-board.png",
+      "size": "3600×2000",
+      "transparent": false,
+      "prompt": "Hand-painted enamel signboard showing a simple neighbourhood route map as a flat painted line with eight round blank cream stops, forest-green ground, gold pin-stripe border, sign-painter style, clean premium Indian dairy shop aesthetic, spotless brushed stainless steel, milk-white walls #F7F4EC, deep forest-green #0B3B32 painted enamel with thin gold #C8A96B pin-stripes, soft early-morning window light, ordered and calm, editorial, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, street names, numbers, letters, real city map",
+      "usedIn": "Traceability (ch. 06), /trace"
+    },
+    {
+      "file": "web/public/desigo/styles/asian-store/shutter.png",
+      "size": "2400×2400, seamless vertically",
+      "transparent": false,
+      "prompt": "Ribbed rolling metal shop shutter, painted milk white, flat front light, seamless vertical repeat, clean premium Indian dairy shop aesthetic, spotless brushed stainless steel, milk-white walls #F7F4EC, deep forest-green #0B3B32 painted enamel with thin gold #C8A96B pin-stripes, soft early-morning window light, ordered and calm, editorial, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, graffiti, rust, dents, padlock",
+      "usedIn": "Shutter transition texture"
+    },
+    {
+      "file": "web/public/desigo/styles/asian-store/price-tag.png",
+      "size": "800×1000, transparent",
+      "transparent": true,
+      "prompt": "Blank brown cardboard price tag with a punched hole and cotton string, slightly worn edges, top-down, transparent background, no writing, clean premium Indian dairy shop aesthetic, spotless brushed stainless steel, milk-white walls #F7F4EC, deep forest-green #0B3B32 painted enamel with thin gold #C8A96B pin-stripes, soft early-morning window light, ordered and calm, editorial, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, writing, price numbers",
+      "usedIn": "PriceTag component"
+    },
+    {
+      "file": "web/public/desigo/styles/asian-store/khata-ledger.png",
+      "size": "3000×2000",
+      "transparent": false,
+      "prompt": "Open blank Indian account ledger book with red ruled lines and cloth binding, top-down on a teak wood counter, no writing, clean premium Indian dairy shop aesthetic, spotless brushed stainless steel, milk-white walls #F7F4EC, deep forest-green #0B3B32 painted enamel with thin gold #C8A96B pin-stripes, soft early-morning window light, ordered and calm, editorial, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, handwriting, numbers",
+      "usedIn": "Bottle → story khata (ch. 02)"
+    }
+  ]
+}

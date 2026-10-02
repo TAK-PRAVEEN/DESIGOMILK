@@ -1,0 +1,231 @@
+{
+  "id": 55,
+  "slug": "kawaii",
+  "name": "Kawaii (/kids explainer)",
+  "priority": true,
+  "fit": 1.5,
+  "colors": {
+    "primary": "#CDEBDD",
+    "onPrimary": "#0B3B32",
+    "secondary": "#D6E4F0",
+    "accent": "#1E7A68",
+    "bg": "#F7F4EC",
+    "surface": "#F4EDE2",
+    "text": "#1E211F",
+    "textMuted": "#5E5450",
+    "line": "#3A2F2A",
+    "ok": "#1E7A68",
+    "pending": "#7A5B37",
+    "demo": "#0B3B32"
+  },
+  "colorsExtra": {
+    "sage": "#D9E8DF",
+    "blush": "#F3D9D6",
+    "butter": "#F8E4C2",
+    "ivory": "#F4EDE2",
+    "forest": "#0B3B32",
+    "cheek": "#F2A7A0",
+    "caps": "#1F5C45 · #B3202A · #E89A1C · #CDB89A"
+  },
+  "variants": {
+    "master-26": {
+      "base": "#1F5C45",
+      "deep": "#0A2A20",
+      "light": "#D9E8DF"
+    },
+    "root-14": {
+      "base": "#B3202A",
+      "deep": "#4A0A0F",
+      "light": "#F3D9D6"
+    },
+    "base-3": {
+      "base": "#E89A1C",
+      "deep": "#5A3304",
+      "light": "#F8E4C2"
+    },
+    "essential": {
+      "base": "#CDB89A",
+      "deep": "#4D4130",
+      "light": "#F4EDE2"
+    }
+  },
+  "fonts": {
+    "display": {
+      "family": "Baloo 2",
+      "package": "@fontsource-variable/baloo-2",
+      "weights": [
+        600,
+        700,
+        800
+      ]
+    },
+    "body": {
+      "family": "Nunito",
+      "package": "@fontsource-variable/nunito",
+      "weights": [
+        500,
+        700
+      ]
+    },
+    "label": {
+      "family": "Nunito",
+      "package": "@fontsource-variable/nunito",
+      "weights": [
+        700
+      ]
+    },
+    "mono": {
+      "family": "",
+      "package": "",
+      "weights": [],
+      "note": "not used on /kids"
+    },
+    "grownups": {
+      "family": "Inter Tight",
+      "package": "@fontsource-variable/inter-tight",
+      "weights": [
+        400
+      ]
+    },
+    "devanagari": {
+      "family": "Baloo 2",
+      "package": "@fontsource-variable/baloo-2",
+      "weights": [
+        500,
+        600,
+        700
+      ]
+    }
+  },
+  "type": {
+    "display": "clamp(2.4rem, 7vw, 4.5rem)",
+    "h1": "clamp(2rem, 5vw, 3.25rem)",
+    "h2": "clamp(1.5rem, 3.5vw, 2.25rem)",
+    "body": "1.125rem/1.6 (18px min)",
+    "label": "1rem bold",
+    "grownups": "15px/1.55"
+  },
+  "radius": {
+    "sm": "12px",
+    "md": "28px",
+    "lg": "999px"
+  },
+  "shadow": {
+    "bottle": "ellipse 8px blur 35% + 0 60px 60px -30px rgba(23,25,24,.08) (main-site standard)",
+    "panel": "0 4px 0 rgba(58,47,42,.25) (buttons); cards flat"
+  },
+  "motion": {
+    "easeOut": "cubic-bezier(.16,1,.3,1)",
+    "easeInOut": "cubic-bezier(.65,0,.35,1)",
+    "easePop": "cubic-bezier(.34,1.3,.64,1)",
+    "durMicro": 120,
+    "durReveal": 500,
+    "durScene": 700
+  },
+  "button": {
+    "primary": {
+      "bg": "#CDEBDD",
+      "fg": "#0B3B32",
+      "border": "2.5px #3A2F2A",
+      "radius": "999px",
+      "padding": "0 28px (56px high)",
+      "hover": "mint halo; press moves down 2px, shadow 0 4px 0 → 0 2px 0"
+    },
+    "secondary": {
+      "bg": "#D6E4F0",
+      "fg": "#0B3B32",
+      "border": "2.5px #3A2F2A",
+      "radius": "999px",
+      "padding": "0 28px",
+      "hover": "halo; press down 2px"
+    },
+    "link": {
+      "fg": "#1E7A68",
+      "underline": "2px",
+      "hover": "underline thickens + mint highlight"
+    }
+  },
+  "images": [
+    {
+      "id": "K-H1",
+      "file": "web/public/desigo/styles/kawaii/morning-sky.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Gentle children's book morning sky in milk white and pale butter with a few soft round clouds and a faint sage horizon, simple shapes, empty center, soft pastel palette of milk white, sage, blush, butter and ivory, warm brown soft outline, gentle, calm, children's picture-book illustration, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, numbers, logo, watermark, signature, label, product bottle, glass bottle, jar, packaging, Holstein or Jersey cattle, cartoon mascot, deity or religious icon, distorted anatomy, oversaturated, HDR, low resolution, characters, faces on clouds, rainbows, glitter",
+      "usedIn": "/kids opening spread backdrop"
+    },
+    {
+      "id": "K-H2",
+      "file": "web/public/desigo/styles/kawaii/morning-sky-portrait.png",
+      "size": "1400×2400 (7:12)",
+      "transparent": false,
+      "prompt": "Vertical gentle children's book morning sky with soft round clouds and a low sage hill at the bottom, pastel, empty center, soft pastel palette of milk white, sage, blush, butter and ivory, warm brown soft outline, gentle, calm, children's picture-book illustration, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, numbers, logo, watermark, signature, label, product bottle, glass bottle, jar, packaging, Holstein or Jersey cattle, cartoon mascot, deity or religious icon, distorted anatomy, oversaturated, HDR, low resolution, characters, faces on clouds, rainbows",
+      "usedIn": "/kids opening spread (mobile/tablet portrait)"
+    },
+    {
+      "id": "K-V1",
+      "file": "web/public/desigo/styles/kawaii/meadow-sage.png",
+      "size": "3200×2000 + 1400×2400 portrait",
+      "transparent": false,
+      "prompt": "Cute soft pastel children's book landscape of a sage-green meadow with round trees under a pale sky, simple shapes, empty center, no characters, soft pastel palette of milk white, sage, blush, butter and ivory, warm brown soft outline, gentle, calm, children's picture-book illustration, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, numbers, logo, watermark, signature, label, product bottle, glass bottle, jar, packaging, Holstein or Jersey cattle, cartoon mascot, deity or religious icon, distorted anatomy, oversaturated, HDR, low resolution, characters, animals with faces, numbers",
+      "usedIn": "MASTER 26 hat world"
+    },
+    {
+      "id": "K-V2",
+      "file": "web/public/desigo/styles/kawaii/hills-blush.png",
+      "size": "3200×2000 + 1400×2400 portrait",
+      "transparent": false,
+      "prompt": "Soft pastel blush-pink rounded hills with simple drawn roots visible under the ground, children's picture-book style, empty center, no characters, soft pastel palette of milk white, sage, blush, butter and ivory, warm brown soft outline, gentle, calm, children's picture-book illustration, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, numbers, logo, watermark, signature, label, product bottle, glass bottle, jar, packaging, Holstein or Jersey cattle, cartoon mascot, deity or religious icon, distorted anatomy, oversaturated, HDR, low resolution, characters, worms with faces",
+      "usedIn": "ROOT 14 hat world"
+    },
+    {
+      "id": "K-V3",
+      "file": "web/public/desigo/styles/kawaii/sun-butter.png",
+      "size": "3200×2000 + 1400×2400 portrait",
+      "transparent": false,
+      "prompt": "Gentle children's book scene of a big butter-yellow sun over soft rounded fields, pastel, empty center, no characters, soft pastel palette of milk white, sage, blush, butter and ivory, warm brown soft outline, gentle, calm, children's picture-book illustration, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, numbers, logo, watermark, signature, label, product bottle, glass bottle, jar, packaging, Holstein or Jersey cattle, cartoon mascot, deity or religious icon, distorted anatomy, oversaturated, HDR, low resolution, sun with a face, characters",
+      "usedIn": "BASE 3 hat world"
+    },
+    {
+      "id": "K-V4",
+      "file": "web/public/desigo/styles/kawaii/cloud-room-ivory.png",
+      "size": "3200×2000 + 1400×2400 portrait",
+      "transparent": false,
+      "prompt": "Soft ivory children's book room made of rounded clouds, a pale floor line, gentle light, very simple, empty center, no characters, soft pastel palette of milk white, sage, blush, butter and ivory, warm brown soft outline, gentle, calm, children's picture-book illustration, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, numbers, logo, watermark, signature, label, product bottle, glass bottle, jar, packaging, Holstein or Jersey cattle, cartoon mascot, deity or religious icon, distorted anatomy, oversaturated, HDR, low resolution, furniture, toys with faces, characters",
+      "usedIn": "ESSENTIAL hat world"
+    },
+    {
+      "id": "K-J1",
+      "file": "web/public/desigo/styles/kawaii/blue-lanes.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Soft pastel children's illustration of a quiet lane of small blue-painted houses at early morning, rounded shapes, calm, doorsteps visible, no people, soft pastel palette of milk white, sage, blush, butter and ivory, warm brown soft outline, gentle, calm, children's picture-book illustration, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, numbers, logo, watermark, signature, label, product bottle, glass bottle, jar, packaging, Holstein or Jersey cattle, cartoon mascot, deity or religious icon, distorted anatomy, oversaturated, HDR, low resolution, people, bottles, vehicles with faces",
+      "usedIn": "Board-path end square 'home', bottle-return spread"
+    },
+    {
+      "id": "K-J2",
+      "file": "web/public/desigo/styles/kawaii/gentle-zebu.png",
+      "size": "2000×2000 (1:1)",
+      "transparent": true,
+      "prompt": "Gentle children's book illustration of an Indian zebu cow with hump, dewlap and long ears, natural proportions, calm, grazing, soft rounded line, pastel cream coat, respectful, not cartoonish, transparent background, soft pastel palette of milk white, sage, blush, butter and ivory, warm brown soft outline, gentle, calm, children's picture-book illustration, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, numbers, logo, watermark, signature, label, product bottle, glass bottle, jar, packaging, Holstein or Jersey cattle, cartoon mascot, deity or religious icon, distorted anatomy, oversaturated, HDR, low resolution, chibi proportions, blush cheeks, human expression, speaking, clothes, big eyes, Holstein spots",
+      "usedIn": "Spread 1 Cow, breeds spread (redrawn by the illustrator to the character sheet)"
+    },
+    {
+      "id": "K-T1",
+      "file": "web/public/desigo/styles/kawaii/pastel-paper.png",
+      "size": "2048×2048, seamless",
+      "transparent": false,
+      "prompt": "Seamless very soft pastel picture-book paper texture in milk white with faint warm fibres, flat light, soft pastel palette of milk white, sage, blush, butter and ivory, warm brown soft outline, gentle, calm, children's picture-book illustration, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, numbers, logo, watermark, signature, label, product bottle, glass bottle, jar, packaging, Holstein or Jersey cattle, cartoon mascot, deity or religious icon, distorted anatomy, oversaturated, HDR, low resolution, stains, folds, patterns",
+      "usedIn": "Scene backgrounds (never behind text)"
+    }
+  ]
+}

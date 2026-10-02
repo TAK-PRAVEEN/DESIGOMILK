@@ -41,7 +41,8 @@ Reference points:
 | `--cc-earth` | `#8C6A43` | Ground layer, rules |
 | `--cc-green` | `#1E7A68` | Links, active states |
 | `--cc-forest` | `#0B3B32` | Night layer, nav, footer |
-| `--cc-ink` | `#171918` | Body text (charcoal, ≥ 12:1 on milk) |
+| `--cc-ink` | `#171918` | Body text (charcoal, 16.1:1 on milk) |
+| `--cc-ink-muted` | `#5C5A52` | Muted text: captions, labels (6.3:1 on milk) |
 | `--cc-shadow` | `rgba(23,25,24,.12)` | Inter-layer shadow |
 
 Inter-layer shadow token: `0 6px 14px rgba(23,25,24,.10), 0 1px 0 rgba(23,25,24,.06)`. Every cut layer gets the same shadow; depth is shown by scale and parallax, not by heavier shadows.
@@ -194,3 +195,130 @@ Append the house-style tail from `05_IMAGE_GENERATION_PROMPTS.md` to each prompt
 **Risks**: a childish or dreamy read, a white-on-white bottle, and over-layering on mobile. Mitigation: a strict shape set, the gold rim and cloud-cast shadow, cloud-free evidence chapters and a three-plane mobile stack.
 
 **Best used for:** atmospheric transitions (chapters 02, 08 partings, 09, 15), the ESSENTIAL world, and hero openings on inner pages, used as a layer over a Minimalism or Editorial base.
+
+---
+
+## 12. Build-ready spec sheet
+
+> Audit 2026-10-03: palette, type, grid and motion were complete. Missing: muted-text, pending and DEMO tokens, focus colour, radius scale, component states, a portrait hero, a journey prompt and negative prompts. All added; gold `#C8A96B` confirmed decorative only (2.1:1 on milk), focus uses green. No claim or licence problems found (Fraunces, Inter Tight, JetBrains Mono are OFL).
+
+### 12.1 Colour system
+| Role | Token | Hex | Use | Contrast note |
+|---|---|---|---|---|
+| Primary | --c-primary | `#0B3B32` | Forest: primary CTA label, nav, night layer, footer | 11.3:1 on bg; forest night layer, nav and primary CTA |
+| Primary ink | --c-on-primary | `#F7F4EC` | Milk on forest panels and the footer | 11.3:1 on primary |
+| Secondary | --c-secondary | `#1E7A68` | DESIGO green: inline links, active states, focus ring | 4.7:1 on bg |
+| Accent | --c-accent | `#C8A96B` | Gold paper-edge highlight, bottle shoulder rim, sun disc | 2.0:1 on bg; decorative only: paper-edge highlight, bottle rim light, sun disc; never text or focus |
+| Background | --c-bg | `#F7F4EC` | Milk sky (`--cc-milk`) | — |
+| Surface | --c-surface | `#FBF9F4` | Nearest cloud paper (`--cc-cloud-1`): cards, tags, info panel | text on surface 16.8:1 |
+| Text | --c-text | `#171918` | Charcoal ink (`--cc-ink`) | 16.1:1 on bg |
+| Muted text | --c-text-muted | `#5C5A52` | Captions and labels (new token `--cc-ink-muted`) | 6.3:1 on bg, 6.6:1 on surface |
+| Line | --c-line | `rgba(23,25,24,.12)` | Hairlines and the inter-layer shadow colour (`--cc-shadow`) | decorative (non-text) |
+| Success / Pending / Demo | --c-ok / --c-pending / --c-demo | `#1F5C45` / `#6B4C2A` / `#171918` | Verified tick / pending dotted underline / ink-on-gold-edged paper DEMO tag | 7.1 / 7.1 / 16.1 :1 on `#F7F4EC` |
+
+Focus ring: `--c-focus` `#1E7A68` (4.7:1 on bg), 2 px solid, 3 px offset.
+
+Variant worlds in this style: MASTER 26 · ROOT 14 · BASE 3 · ESSENTIAL (base / deep / light hex for each).
+
+| Variant | Base | Deep | Light | Treatment in this style |
+|---|---|---|---|---|
+| MASTER 26 (V1+, green cap) | `#1F5C45` | `#0A2A20` | `#D9E8DF` | Sky `#D9E8DF` → `#1F5C45`, clouds `#E9F1EC`, cut forest canopy, gold pollen dots |
+| ROOT 14 (V1, red cap) | `#B3202A` | `#4A0A0F` | `#F3D9D6` | Sky `#F3D9D6` → `#B3202A` at the horizon, clouds `#F7E9E5`, cliff strata `#B3202A` / `#7E1A20` / `#4A0A0F` |
+| BASE 3 (V2, amber cap) | `#E89A1C` | `#5A3304` | `#F8E4C2` | Sky `#F8E4C2` → `#E89A1C`, clouds `#FBF0DD`, wheat strips `#E89A1C` / `#B8741A` / `#5A3304`, paper sun disc |
+| ESSENTIAL (V3, ivory cap) | `#CDB89A` | `#4D4130` | `#F4EDE2` | Pure `#F4EDE2` sky, four ivory clouds, sandstone plinth layer `#CDB89A`; the purest expression |
+
+Dark-chapter inversion: Traceability, Technology and Trace-your-milk run on forest `#0B3B32` (Trace-your-milk on charcoal `#171918`); clouds become `#0F4A3F` paper or hairline outlines; text `#F7F4EC` (11.3:1), muted `#B9C4BE`, line `rgba(247,244,236,.16)`, focus `#7FE0B8`; the gold rim stays; the logo loop renders white.
+
+### 12.2 Typography
+| Role | Font family | Source (npm @fontsource… / Google Fonts) | Weights / axes | Size (clamp) | Line-height | Tracking | Case |
+|---|---|---|---|---|---|---|---|
+| Display / hero | Fraunces | `@fontsource-variable/fraunces` (Google Fonts) | wght 360, opsz 144, SOFT 100, WONK 0 | clamp(3.25rem, 1.5rem + 7vw, 9rem) | 0.92 | −0.01em | UPPERCASE (hero), sentence elsewhere |
+| Headline H1–H2 | Fraunces | `@fontsource-variable/fraunces` (Google Fonts) | wght 400, opsz 72, SOFT 100 | H1 clamp(2.5rem, 1.6rem + 3.2vw, 5rem) · H2 clamp(1.8rem, 1.3rem + 1.8vw, 3rem) | 1.02 | −0.005em | Sentence |
+| Body | Inter Tight | `@fontsource-variable/inter-tight` (Google Fonts) | 400 / 500 | clamp(1rem, 0.96rem + 0.2vw, 1.0625rem) | 1.65 | 0 | Sentence |
+| Label / UI | Inter Tight | `@fontsource-variable/inter-tight` (Google Fonts) | 500 / 600 | 0.75rem | 1.4 | +0.16em | UPPERCASE |
+| Data / mono | JetBrains Mono | `@fontsource-variable/jetbrains-mono` (Google Fonts) | 400 | 0.8125rem | 1.5 | +0.02em | As data (evidence chapters only) |
+| Devanagari (optional) | Noto Sans Devanagari | `@fontsource-variable/noto-sans-devanagari` (Google Fonts) | 400 / 500 | matches body | 1.7 | 0 | — |
+
+Licence: all fonts are SIL Open Font License 1.1 (OFL), self-hosted via Fontsource; subset Latin + Latin-ext (Devanagari subset only where used). Pairing rationale: soft-axis Fraunces rhymes with rounded cloud edges while Inter Tight keeps UI crisp; mono appears only where evidence is shown.
+
+### 12.3 Layout & surfaces
+- **Grid:** 12 columns, gutter 24 px (16 px mobile), margins 6vw, max-width 1440 px; plus a six-plane depth stack z0 sky (0×) · z1 far clouds (0.15×) · z2 mid (0.35×) · z3 text + bottle (1×) · z4 near (1.25×) · z5 mist (1.6×, desktop only); mobile keeps z1, z3, z4
+- **Spacing scale:** 4 px base: 4 · 8 · 12 · 16 · 24 · 32 · 48 · 64 · 96 · 128; chapters are 100–120vh tall with partings between
+- **Radius scale:** sm 4 px (inputs) · md 16 px (paper cards, soft cut corners) · lg 999 px (paper discs, tags' holes, cursor)
+- **Border style:** no visible borders on paper: edges are a 1 px lighter top edge `#FFFFFF` at 60% + the layer shadow; form fields 1 px ink at 20%
+- **Shadow / elevation:** one token for every cut layer: `0 6px 14px rgba(23,25,24,.10), 0 1px 0 rgba(23,25,24,.06)`; depth is shown by scale and parallax, never heavier shadows. Bottle: cloud-cast ellipse `rgba(23,25,24,.14)` 40 px blur
+- **Texture / overlay:** 2% paper-fibre tile (512 px WebP, multiply) inside cloud shapes only; text-safe zones checked per breakpoint so text never sits on a cloud edge
+
+### 12.4 Components
+All interactive components share: focus ring `--c-focus` 2 px / 3 px offset · touch targets ≥ 44 px · disabled = 40% opacity, no motion, `aria-disabled` (unless stated) · hover effects only on `(hover:hover)` devices · motion from §12.6.
+
+- **Primary button** — Forest label (Inter Tight 600, 13 px, +0.16em, uppercase) with an underline and a travelling arrow seated on a 28 px milk paper disc with the layer shadow; 48 px tall, padding 14 px 0. **States:** default forest label, underline, arrow disc · hover a 1 px frame draws itself around the label (400 ms) and the disc slides 6 px right; magnetic offset ≤ 6 px · focus-visible 2 px `#1E7A68` ring, 3 px offset · active the disc presses flat (shadow collapses to `0 2px 4px`) · disabled 40% opacity, no hover motion, `aria-disabled="true"` · loading the disc's edge becomes a slowly turning scalloped ring, `aria-busy`. **Motion:** 240 ms `--ease-out`. **A11y:** native `<a>`/`<button>`, hit area ≥ 44 px, label ≥ 4.5:1.
+- **Secondary button** — Ink label, same type, scalloped cloud-edge underline, no disc; 48 px tall. **States:** default ink label + straight hairline · hover the hairline redraws as a scallop (300 ms), arrow +6 px · focus-visible 2 px `#1E7A68` ring, 3 px offset · active label sinks 1 px · disabled 40% opacity, no hover motion, `aria-disabled="true"` · loading scallop underline pulses opacity .4 ↔ 1. **Motion:** 300 ms `--ease-out`. **A11y:** native `<a>`/`<button>`, hit area ≥ 44 px, label ≥ 4.5:1.
+- **Text / arrow link** — Inline link in green `#1E7A68` with a 1 px underline; arrow links end in →. **States:** default green + hairline · hover cloud-edge scallop underline draws in 300 ms · focus-visible 2 px `#1E7A68` ring, 3 px offset · active colour deepens to forest · disabled 40% opacity, no hover motion, `aria-disabled="true"` · loading n/a (static element). **Motion:** 300 ms. **A11y:** underline always present (never colour alone); arrow is `aria-hidden`.
+- **Icon button (incl. menu)** — 44 px milk paper disc with the layer shadow and a 1.5 px line icon; menu icon = three stratus strokes of unequal length that collapse into ×. **States:** default paper disc · hover disc rises 2 px · focus-visible 2 px `#1E7A68` ring, 3 px offset · active disc presses flat · disabled 40% opacity, no hover motion, `aria-disabled="true"` · loading n/a (static element). **Motion:** icon morph 300 ms. **A11y:** `aria-label` required; 44×44 px hit area; menu button carries `aria-expanded` + `aria-controls`; Esc closes the menu and returns focus.
+- **Navigation bar** (desktop + mobile menu) — 72 px bar on plane z3: transparent over the sky, then a `#FBF9F4` paper strip with the layer shadow after 80 px of scroll; links Inter Tight 500 13 px uppercase in forest; RESERVE as a compact primary button. Mobile: the menu icon opens a full-screen sky where two cloud banks part (600 ms) to reveal links in Fraunces 2.25rem. **States:** default forest links · hover scallop underline · focus-visible 2 px `#1E7A68` ring, 3 px offset · active current page marked by a 6 px paper disc beneath · disabled n/a · loading n/a. **Motion:** bar fades in 240 ms; mobile parting 600 ms `--ease-inout`. **A11y:** `<nav>` landmark after a skip link; logo is a link to `/` with `aria-label="DESIGO® home"`; the animated SVG is `aria-hidden`. **Logo:** The DESIGO® wordmark sits top-left (cap height 22 px desktop, 18 px mobile) and runs the brand's **black write / un-write loop** (charcoal `#171918` on light grounds, white `#FFFFFF` on dark grounds; the colour never changes during the loop). The loop pauses while the menu is open, when the tab is hidden, and under reduced motion (the full wordmark is shown static).
+- **Cursor** — 20 px milk paper disc with the layer shadow and a 1 px ink ring at 20%; labels Inter Tight 500 11 px. **States:** default 20 px paper disc · hover grows to 44 px and its edge morphs into a scallop (240 ms) · ROTATE disc reads "drag · turn" over the bottle · EXPLORE 56 px scalloped disc reading "explore"; the nearest cloud layer is pushed 4 px away (600 ms) · ENTER 32 px disc with an arrow → · VIEW 48 px disc reading "view" · TRACE 16 px disc with a forest centre dot reading "trace" on the route. **Touch fallback:** no custom cursor or repulsion; partings and the bottle turn respond to swipe; a one-time "Drag to turn" hint under the bottle. **A11y:** decorative (`aria-hidden`, `pointer-events:none`); off for coarse pointers and reduced motion, where the system cursor returns; never the only cue.
+- **Card / panel / info block** — Paper card `#FBF9F4`, radius 16 px, the layer shadow, padding 32 px (24 px mobile), 1 px lighter top edge; sits on plane z3. **States:** default paper on sky · hover lifts 4 px (shadow unchanged: depth by translate) · focus-visible 2 px `#1E7A68` ring, 3 px offset · active returns · disabled 40% opacity, no hover motion, `aria-disabled="true"` · loading skeleton bars `#F1ECE0`, no shimmer. **Motion:** slides in from the right 700 ms. **A11y:** real heading inside; one primary action per card; text never sits on texture below 4.5:1.
+- **Badge / tag** — Paper tag, 24 px tall, punched hole and 1 px string line, Inter Tight 600 11 px uppercase. **Pending verification**: earth-ink `#6B4C2A` label + dotted underline on the claim. **DEMO · not live data**: ink on a gold-edged paper tag, shown large on the trace chapters. **States:** default tag on its string · hover none · focus-visible 2 px `#1E7A68` ring, 3 px offset · active n/a · disabled n/a · loading n/a (static element). **Motion:** tag swings in 4° and settles (600 ms, no overshoot). **A11y:** status is real text ("Pending verification", "DEMO · not live data"); colour and shape are never the only signal.
+- **Input + form field (Trace-your-milk bottle ID)** — Paper field 56 px, `#FBF9F4`, radius 12 px, 1 px ink border at 20%; bottle ID in JetBrains Mono 18 px; label above, hint below; demo ID prefilled; error text in earth-ink with an icon. **States:** default paper field · hover border to 40% · focus-visible 2 px `#1E7A68` ring, 3 px offset · active 2 px green border while typing · disabled 40% opacity, no hover motion, `aria-disabled="true"` · loading a small cloud puff pulses beside the submit arrow; result reveals as a vertical paper strip. **Motion:** result strip unrolls 700 ms. **A11y:** visible `<label>`, hint and error linked with `aria-describedby`, error shown as text + icon, `autocomplete=off`, `spellcheck=false`.
+- **Divider / ornament** — the low mist-strip master cloud (24 px tall) in `#E6DFCF`, or a 1 px hairline on evidence chapters; one per screen. **States:** default static · hover none · focus-visible 2 px `#1E7A68` ring, 3 px offset · active n/a · disabled n/a · loading n/a (static element). **Motion:** drifts 2–6 px on a 60 s loop. **A11y:** `aria-hidden` (decorative) or `role=separator` between landmark sections.
+- **Section header** — Mono 12 px chapter number in forest ("02 —"), Fraunces title with the near cloud overlapping its foot by 8%, one-line intro in Inter Tight. **States:** default static · hover none · focus-visible 2 px `#1E7A68` ring, 3 px offset · active n/a · disabled n/a · loading n/a (static element). **Motion:** title rises 24 px in 700 ms; the near cloud rises over it at 1.25×. **A11y:** real `<h2>`; the chapter number is read as "Chapter 03"; decorative glyphs `aria-hidden`.
+- **Product info block** — Paper card sliding in from the right at columns 9–12: V-code (mono), name (Fraunces H2), the `desigo.ts` line with the herb count *pending*, price with a pending tag (hidden in production), size, descriptors with dotted underlines, "Trace this bottle →". **States:** default static facts · hover a descriptor reveals its source note · focus-visible 2 px `#1E7A68` ring, 3 px offset · active n/a · disabled 40% opacity, no hover motion, `aria-disabled="true"` · loading skeleton bars. **Motion:** rows rise 12 px, 60 ms stagger. **A11y:** facts in a `<dl>`; pending values carry visually-hidden "(pending verification)"; price hidden in production until approved.
+- **Bottle stage** — Bottle in the gap between planes z2 and z4 at 52% height; clouds pass behind it and in front of its base; cloud-cast contact ellipse moves with the float; 1 px gold rim on the shoulder keeps white glass off white cloud. **States:** default idle float ±8 px over 6 s · hover pointer tilt ±6° · focus-visible 2 px `#1E7A68` ring, 3 px offset · active drag turns the 360 viewer with inertia (decay 0.92/frame); clouds drift 2 px opposite · disabled n/a · loading static render + paper-card `AssetSlot` naming the missing frames. **Motion:** `--ease-inout` float. **A11y:** Bottle360Viewer is `role=img` with an `aria-label`; ←/→ rotate 5°, Home resets; reduced motion stops idle float and auto-turn.
+- **Trace node / timeline step** — 16 px round paper node with the layer shadow on a white paper-strip route over the forest night ground; label Inter Tight 13 px + mono ID. **States:** default paper node · hover node lifts 3 px · focus-visible 2 px `#1E7A68` ring, 3 px offset · active a paper-disc pulse travels 1400 ms per hop; the node gains a gold edge and opens its panel · disabled 40% opacity, no hover motion, `aria-disabled="true"` · loading nodes drop in with 80 ms stagger. **Motion:** hop 1400 ms `--ease-inout`. **A11y:** route is an ordered list `<ol>`; each node a `<button>` opening its panel; `aria-current="step"` on the active node.
+
+### 12.5 Iconography & illustration
+- **Icon style:** single-weight 1.5 px line icons, rounded caps, ink `#171918`, 24 px grid; each sits on a 32 px paper disc with the layer shadow
+- **Illustration technique:** six master cloud silhouettes as inline SVG `<symbol>`s (cumulus bank, long stratus, small puff, crown, mist strip, round droplet cloud), recoloured and mirrored, never redrawn; cut-paper vector Thar ground; optional real cut-paper set by a paper artist scanned at 600 dpi
+- **Photo treatment:** real photographs only as clean rectangular prints slid between planes z2 and z4, natural grade, never masked into cloud shapes
+
+### 12.6 Motion tokens
+| Token | Value | Use |
+|---|---|---|
+| `--ease-out` | `cubic-bezier(.16,1,.3,1)` | reveals, UI |
+| `--ease-inout` | `cubic-bezier(.65,0,.35,1)` | partings, bottle float |
+| `--dur-micro` | 240 ms | hover, cursor morph |
+| `--dur-reveal` | 700 ms | text and card reveals |
+| `--dur-scene` | 1100 ms | the parting |
+| `--drift` | 40–90 s linear loops, 2–6 px | idle cloud drift |
+| `--parallax` | 0 / 0.15 / 0.35 / 1 / 1.25 / 1.6 | planes z0–z5 |
+| `--float` | ±8 px / 6000 ms | bottle idle |
+| `--hop` | 1400 ms | trace pulse per node |
+| `--scrub` | 1 | scroll-linked planes |
+
+- **Signature transition:** the parting: near cloud banks slide −60vw / +60vw over 1100 ms while the mid layer lifts 12vh, revealing the next world; reversed on scroll-up
+- **Scroll behaviour:** plane parallax by factor; in pinned chapters the near layer z4 rises over the text at the end and becomes the wipe
+- **Reduced-motion fallback:** static planes, partings become 300 ms cross-fades, drift and pointer repulsion off
+
+### 12.7 AI image generation prompts
+House rules: no text/letters/logos/watermarks in images; generated images are illustration, texture or backdrop only; never
+generate the bottle or ghee jar; zebu cows only, shown with respect; append the style's tail prompt to every prompt.
+
+**Tail prompt (append to every prompt below):** _matte cut-paper diorama, crisp hand-cut edges, soft even shadows between layers, milk-white paper palette #F7F4EC, #F1ECE0 and #E6DFCF with warm gold #C8A96B edge light, gentle paper fibre, shallow depth of field, calm, premium, no text, no watermark, no logo, no letters_
+
+**Base negative prompt (add to every row's negative):** _text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look_
+
+| # | File path (web/public/desigo/styles/<slug>/...) | Size / ratio | Transparent? | Prompt | Negative prompt | Used in |
+|---|---|---|---|---|---|---|
+| CC1 | `web/public/desigo/styles/cloud-cut/hero.png` | 3200×2000 (16:10) | No | Layered cut-paper sky diorama, five stacked planes of matte milk-white paper clouds with crisp hand-cut edges and soft shadows between layers, faint peach dawn band #EBD8C2 behind, large empty gap at the centre | faces on clouds, rainbows, birds, sun characters, blue sky | Hero desktop |
+| CC2 | `web/public/desigo/styles/cloud-cut/hero-portrait.png` | 1400×2400 (7:12) | No | Vertical cut-paper sky diorama, cloud planes stacked top and bottom with a tall empty gap in the middle third, faint dawn band, crisp paper edges | faces on clouds, rainbows, birds, blue sky | Hero mobile |
+| CC3 | `web/public/desigo/styles/cloud-cut/sky-master-26.png` | 3200×2000 + 1400×2400 | No | Cut-paper forest canopy layers in deep bottle green #1F5C45 and #0A2A20 under pale green paper clouds #E9F1EC, tiny gold pollen dots, empty centre | cartoon trees, bright lime green | MASTER 26 world |
+| CC4 | `web/public/desigo/styles/cloud-cut/sky-root-14.png` | 3200×2000 + 1400×2400 | No | Stepped cut-paper red-earth cliff strata in crimson #B3202A, #7E1A20 and oxblood #4A0A0F under warm white paper clouds at dusk, empty centre | lava, fire, blood red, cartoon | ROOT 14 world |
+| CC5 | `web/public/desigo/styles/cloud-cut/sky-base-3.png` | 3200×2000 + 1400×2400 | No | Cut-paper wheat-field strips in amber #E89A1C, #B8741A and brown #5A3304, a large flat paper sun disc low behind the centre, cream paper clouds, empty centre | sun face, neon orange | BASE 3 world |
+| CC6 | `web/public/desigo/styles/cloud-cut/sky-essential.png` | 3200×2000 + 1400×2400 | No | Only ivory paper clouds in four close tones of #F4EDE2 and a pale sandstone paper plinth #CDB89A at the centre, minimal, gallery calm | colour accents, objects | ESSENTIAL world |
+| CC7 | `web/public/desigo/styles/cloud-cut/journey-stations.png` | 6000×1600, transparent | Yes (real alpha) | Long horizontal strip of seven small layered cut-paper vignettes in milk white, sand and earth #8C6A43: an Indian zebu cow grazing (hump and dewlap visible), a small farm shed with a khejri tree, a steel milk can, a round paper test card with sixteen dots, a steel chiller, a small clean dairy plant, a doorstep with a cloth bag, joined by a thin white paper ribbon, isolated on transparent background | Holstein, cartoon cow, bottle, people | Cow → bottle (ch. 03) |
+| CC8 | `web/public/desigo/styles/cloud-cut/clouds-set.png` | 4000×2000, transparent | Yes (real alpha) | Six separate cut-paper cloud shapes laid out flat with space between them (cumulus bank, long stratus, small puff, crown, low mist strip, round droplet cloud), matte white handmade paper, crisp edges, soft contact shadows, transparent background | faces, outlines, blue | Master cloud set (trace to SVG) |
+| CC9 | `web/public/desigo/styles/cloud-cut/thar-ground.png` | 3600×1200, transparent | Yes (real alpha) | Cut-paper layers of low Thar desert dunes and two khejri tree silhouettes, three tones of sand and earth #8C6A43, crisp edges, soft shadow between layers, transparent background | camels, people, cacti | Origin (ch. 04), /origin |
+| CC10 | `web/public/desigo/styles/cloud-cut/paper-fibre.png` | 1024×1024, seamless | No | Seamless macro texture of white handmade cotton paper fibre, flat light, very subtle | seams, vignette, folds | Cloud fill texture (2% multiply) |
+
+### 12.8 Prototype acceptance checklist
+- [ ] Tokens from `specs/37_cloud-cut.json` applied; no off-palette colours
+- [ ] Fonts self-hosted; correct weights load
+- [ ] All 12.4 components built with all states
+- [ ] Hero + bottle-story + one product world + trace chapter built in this style (the comparison set)
+- [ ] Mobile 360 px pass; reduced-motion pass; contrast checked
+- [ ] Claims rules respected (pending underline, no blocked claims, DEMO labels)
+- [ ] Screenshots: desktop 1440×900 ×4 + mobile 390×844 ×2 saved to docs/media/styles/cloud-cut/
+- [ ] Only the six master cloud silhouettes are used; SVG cloud set ≤ 60 KB
+- [ ] Evidence chapters (Trace, Quality, Technology, Trace-your-milk) are cloud-free or hairline-only
+- [ ] Gold rim keeps the bottle legible on white at every breakpoint

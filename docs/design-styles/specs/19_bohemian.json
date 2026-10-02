@@ -1,0 +1,233 @@
+{
+  "id": 19,
+  "slug": "bohemian",
+  "name": "Bohemian (Marwari craft)",
+  "priority": false,
+  "fit": 3,
+  "colors": {
+    "primary": "#24365A",
+    "onPrimary": "#F4EEE2",
+    "secondary": "#9E2F24",
+    "accent": "#D9A23A",
+    "bg": "#F4EEE2",
+    "surface": "#F7F4EC",
+    "text": "#1E211F",
+    "textMuted": "#6E5440",
+    "line": "#8C6A43",
+    "ok": "#4F6B3A",
+    "pending": "#D9A23A",
+    "demo": "#9E2F24"
+  },
+  "variants": {
+    "master-26": {
+      "base": "#1F5C45",
+      "deep": "#0A2A20",
+      "light": "#D9E8DF"
+    },
+    "root-14": {
+      "base": "#B3202A",
+      "deep": "#4A0A0F",
+      "light": "#F3D9D6"
+    },
+    "base-3": {
+      "base": "#E89A1C",
+      "deep": "#5A3304",
+      "light": "#F8E4C2"
+    },
+    "essential": {
+      "base": "#CDB89A",
+      "deep": "#4D4130",
+      "light": "#F4EDE2"
+    }
+  },
+  "fonts": {
+    "display": {
+      "family": "Fraunces",
+      "package": "@fontsource-variable/fraunces",
+      "weights": [
+        400
+      ]
+    },
+    "headline": {
+      "family": "Fraunces",
+      "package": "@fontsource-variable/fraunces",
+      "weights": [
+        400,
+        500
+      ]
+    },
+    "body": {
+      "family": "Karma",
+      "package": "@fontsource/karma",
+      "weights": [
+        400,
+        500
+      ]
+    },
+    "label": {
+      "family": "Inter Tight",
+      "package": "@fontsource-variable/inter-tight",
+      "weights": [
+        600
+      ]
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "package": "@fontsource-variable/jetbrains-mono",
+      "weights": [
+        400
+      ]
+    },
+    "devanagari": {
+      "family": "Karma",
+      "package": "@fontsource/karma",
+      "weights": [
+        400,
+        600
+      ]
+    },
+    "accentdisplay": {
+      "family": "Yeseva One",
+      "package": "@fontsource/yeseva-one",
+      "weights": [
+        400
+      ]
+    }
+  },
+  "type": {
+    "display": "clamp(3.5rem, 8vw, 8rem)",
+    "h1": "clamp(2.6rem, 5vw, 5rem)",
+    "h2": "clamp(1.8rem, 3vw, 3rem)",
+    "body": "clamp(1.0625rem, 1rem + 0.2vw, 1.125rem)",
+    "label": "0.72rem"
+  },
+  "radius": {
+    "sm": "0",
+    "md": "2px",
+    "lg": "999px"
+  },
+  "shadow": {
+    "bottle": "contact ellipse 60% x 8% blur 16px rgba(110,84,64,.14) + 0 26px 50px -30px rgba(110,84,64,.18)",
+    "panel": "none"
+  },
+  "motion": {
+    "easeOut": "cubic-bezier(.16,1,.3,1)",
+    "easeInOut": "cubic-bezier(.65,0,.35,1)",
+    "durMicro": 240,
+    "durReveal": 800,
+    "durScene": 600
+  },
+  "button": {
+    "primary": {
+      "bg": "#24365A",
+      "fg": "#F4EEE2",
+      "radius": "2px",
+      "padding": "14px 24px",
+      "hover": "block frame stamps scale 1.02→1 240ms, arrow +8px"
+    },
+    "secondary": {
+      "bg": "transparent",
+      "fg": "#24365A",
+      "radius": "0",
+      "padding": "14px 0",
+      "hover": "dashed stitch underline becomes solid 240ms"
+    },
+    "link": {
+      "bg": "transparent",
+      "fg": "#24365A",
+      "radius": "0",
+      "padding": "0",
+      "hover": "stitch underline solid, arrow +6px"
+    }
+  },
+  "images": [
+    {
+      "file": "web/public/desigo/styles/bohemian/hero-landscape.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Sunlit plain unbleached cotton cloth filling the frame, a narrow hand block-printed border band only along the top edge, soft fold shadows, the whole centre plain and empty, Rajasthani hand block-printed and handloom cotton craft, natural-dye palette of indigo #24365A, madder #9E2F24, haldi #D9A23A, dabu clay #6E5440 and neem #4F6B3A on unbleached cotton #F4EEE2, slight hand-printed misregistration, warm natural daylight, calm modern restraint, no text, no watermark, no logo, no letters",
+      "negative": "mandala, dreamcatcher, macramé, pampas grass, busy pattern in centre, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Ch. 01 hero"
+    },
+    {
+      "file": "web/public/desigo/styles/bohemian/hero-portrait.png",
+      "size": "1400×2400 (7:12)",
+      "transparent": false,
+      "prompt": "Same plain unbleached cotton as a tall portrait, thin block-print band at the top and bottom edges only, plain centre, Rajasthani hand block-printed and handloom cotton craft, natural-dye palette of indigo #24365A, madder #9E2F24, haldi #D9A23A, dabu clay #6E5440 and neem #4F6B3A on unbleached cotton #F4EEE2, slight hand-printed misregistration, warm natural daylight, calm modern restraint, no text, no watermark, no logo, no letters",
+      "negative": "mandala, pattern in centre, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Mobile hero"
+    },
+    {
+      "file": "web/public/desigo/styles/bohemian/worlds/master-26.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Unbleached cotton field framed by a neem-green and indigo hand block-printed border of pressed generic leaf forms, plain empty centre, Rajasthani hand block-printed and handloom cotton craft, natural-dye palette of indigo #24365A, madder #9E2F24, haldi #D9A23A, dabu clay #6E5440 and neem #4F6B3A on unbleached cotton #F4EEE2, slight hand-printed misregistration, warm natural daylight, calm modern restraint, no text, no watermark, no logo, no letters",
+      "negative": "named herbs, flowers, mandala, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Ch. 08 / /milk/master-26"
+    },
+    {
+      "file": "web/public/desigo/styles/bohemian/worlds/root-14.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Earth-clay cotton ground framed by a madder-red Dabu mud-resist border with a simple roots motif, plain empty centre, Rajasthani hand block-printed and handloom cotton craft, natural-dye palette of indigo #24365A, madder #9E2F24, haldi #D9A23A, dabu clay #6E5440 and neem #4F6B3A on unbleached cotton #F4EEE2, slight hand-printed misregistration, warm natural daylight, calm modern restraint, no text, no watermark, no logo, no letters",
+      "negative": "mandala, religious motifs, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Ch. 08 / /milk/root-14"
+    },
+    {
+      "file": "web/public/desigo/styles/bohemian/worlds/base-3.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Sunlit cotton field with one diagonal haldi-yellow leheriya wave band across the lower third, plain empty centre, Rajasthani hand block-printed and handloom cotton craft, natural-dye palette of indigo #24365A, madder #9E2F24, haldi #D9A23A, dabu clay #6E5440 and neem #4F6B3A on unbleached cotton #F4EEE2, slight hand-printed misregistration, warm natural daylight, calm modern restraint, no text, no watermark, no logo, no letters",
+      "negative": "tie-dye rainbow, mandala, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Ch. 08 / /milk/base-3"
+    },
+    {
+      "file": "web/public/desigo/styles/bohemian/worlds/essential.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Plain unbleached cotton with a single fine indigo running-stitch line forming a rectangular frame, nothing else, Rajasthani hand block-printed and handloom cotton craft, natural-dye palette of indigo #24365A, madder #9E2F24, haldi #D9A23A, dabu clay #6E5440 and neem #4F6B3A on unbleached cotton #F4EEE2, slight hand-printed misregistration, warm natural daylight, calm modern restraint, no text, no watermark, no logo, no letters",
+      "negative": "pattern, embroidery flowers, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Ch. 08 / /milk/essential"
+    },
+    {
+      "file": "web/public/desigo/styles/bohemian/journey/textile-scroll.png",
+      "size": "4800×1400 (24:7)",
+      "transparent": false,
+      "prompt": "A long hand block-printed cotton scroll divided into seven panels, each with a simple folk block motif: a zebu cow with hump, a thatched farm shed with khejri tree, a milk can, a round dotted test card, a chiller tank, a small plant building, a doorstep, joined by a running-stitch line, Rajasthani hand block-printed and handloom cotton craft, natural-dye palette of indigo #24365A, madder #9E2F24, haldi #D9A23A, dabu clay #6E5440 and neem #4F6B3A on unbleached cotton #F4EEE2, slight hand-printed misregistration, warm natural daylight, calm modern restraint, no text, no watermark, no logo, no letters",
+      "negative": "deities, Krishna, religious scenes, people's faces, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Ch. 03 journey scroll"
+    },
+    {
+      "file": "web/public/desigo/styles/bohemian/textures/handloom-cotton.png",
+      "size": "2048×2048 seamless",
+      "transparent": false,
+      "prompt": "Seamless tileable handloom woven cotton texture in unbleached cream #F4EEE2, visible irregular weave, flat even light, Rajasthani hand block-printed and handloom cotton craft, natural-dye palette of indigo #24365A, madder #9E2F24, haldi #D9A23A, dabu clay #6E5440 and neem #4F6B3A on unbleached cotton #F4EEE2, slight hand-printed misregistration, warm natural daylight, calm modern restraint, no text, no watermark, no logo, no letters",
+      "negative": "pattern, stains, folds, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "HandloomTexture (512 px tile, 4% multiply)"
+    },
+    {
+      "file": "web/public/desigo/styles/bohemian/textures/leheriya-band.png",
+      "size": "3000×240 tileable horizontally",
+      "transparent": true,
+      "prompt": "Seamless horizontal leheriya tie-dye diagonal wave band in indigo, haldi and madder with soft dye-bleed edges, on transparent background, Rajasthani hand block-printed and handloom cotton craft, natural-dye palette of indigo #24365A, madder #9E2F24, haldi #D9A23A, dabu clay #6E5440 and neem #4F6B3A on unbleached cotton #F4EEE2, slight hand-printed misregistration, warm natural daylight, calm modern restraint, no text, no watermark, no logo, no letters",
+      "negative": "rainbow, neon, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "LeheriyaDivider"
+    },
+    {
+      "file": "web/public/desigo/styles/bohemian/textures/bandhani-dots.png",
+      "size": "1024×1024 seamless",
+      "transparent": true,
+      "prompt": "Seamless bandhani tie-dye dot pattern of tiny white resist dots in small square clusters on indigo, flat textile scan, transparent background around the dots, Rajasthani hand block-printed and handloom cotton craft, natural-dye palette of indigo #24365A, madder #9E2F24, haldi #D9A23A, dabu clay #6E5440 and neem #4F6B3A on unbleached cotton #F4EEE2, slight hand-printed misregistration, warm natural daylight, calm modern restraint, no text, no watermark, no logo, no letters",
+      "negative": "mandala, flowers, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Cursor ring source, small fills"
+    },
+    {
+      "file": "web/public/desigo/styles/bohemian/ghee/courtyard.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Sunlit Rajasthani courtyard corner with block-printed cotton textiles, brass vessels and earthen pots softly out of focus at the edges, warm and layered, empty plain centre, Rajasthani hand block-printed and handloom cotton craft, natural-dye palette of indigo #24365A, madder #9E2F24, haldi #D9A23A, dabu clay #6E5440 and neem #4F6B3A on unbleached cotton #F4EEE2, slight hand-printed misregistration, warm natural daylight, calm modern restraint, no text, no watermark, no logo, no letters",
+      "negative": "jar, bottle, deities, lamps, marigold garlands on idols, text, letters, words, numbers, logo, watermark, signature, label, signage, brand name, milk bottle, glass bottle, ghee jar, packaging, Holstein cow, Jersey cow, black-and-white spotted cow, cartoon cow face, cow wearing clothes, anthropomorphic animal, religious iconography, deity, people's faces",
+      "usedIn": "Ch. 12 ghee, /ghee gifting"
+    }
+  ]
+}

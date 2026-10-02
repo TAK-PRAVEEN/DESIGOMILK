@@ -1,0 +1,238 @@
+{
+  "id": 41,
+  "slug": "new-liquid",
+  "name": "New Liquid",
+  "priority": true,
+  "fit": 4,
+  "colors": {
+    "primary": "#0B3B32",
+    "onPrimary": "#F7F4EC",
+    "secondary": "#1E7A68",
+    "accent": "#C8A96B",
+    "bg": "#E9ECE8",
+    "surface": "#F7F4EC",
+    "text": "#171918",
+    "textMuted": "#5C5A52",
+    "line": "#E2D8C3",
+    "ok": "#1F5C45",
+    "pending": "#6B4C2A",
+    "demo": "#0B3B32",
+    "focus": "#1E7A68"
+  },
+  "variants": {
+    "master-26": {
+      "base": "#1F5C45",
+      "deep": "#0A2A20",
+      "light": "#D9E8DF"
+    },
+    "root-14": {
+      "base": "#B3202A",
+      "deep": "#4A0A0F",
+      "light": "#F3D9D6"
+    },
+    "base-3": {
+      "base": "#E89A1C",
+      "deep": "#5A3304",
+      "light": "#F8E4C2"
+    },
+    "essential": {
+      "base": "#CDB89A",
+      "deep": "#4D4130",
+      "light": "#F4EDE2"
+    }
+  },
+  "fonts": {
+    "display": {
+      "family": "Fraunces",
+      "package": "@fontsource-variable/fraunces",
+      "weights": [
+        300,
+        400,
+        500
+      ],
+      "axes": {
+        "opsz": 144,
+        "SOFT": [
+          0,
+          100
+        ]
+      }
+    },
+    "body": {
+      "family": "Inter Tight",
+      "package": "@fontsource-variable/inter-tight",
+      "weights": [
+        400,
+        500
+      ]
+    },
+    "label": {
+      "family": "Inter Tight",
+      "package": "@fontsource-variable/inter-tight",
+      "weights": [
+        500,
+        600
+      ]
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "package": "@fontsource-variable/jetbrains-mono",
+      "weights": [
+        400
+      ]
+    },
+    "devanagari": {
+      "family": "Noto Sans Devanagari",
+      "package": "@fontsource-variable/noto-sans-devanagari",
+      "weights": [
+        400,
+        500
+      ]
+    }
+  },
+  "type": {
+    "display": "clamp(3rem, 1.4rem + 7vw, 9rem)",
+    "h1": "clamp(2.4rem, 1.5rem + 3.4vw, 5rem)",
+    "h2": "clamp(1.75rem, 1.3rem + 1.6vw, 2.75rem)",
+    "body": "clamp(1rem, 0.96rem + 0.2vw, 1.0625rem)",
+    "label": "0.75rem"
+  },
+  "radius": {
+    "sm": "4px",
+    "md": "24px",
+    "lg": "999px"
+  },
+  "shadow": {
+    "bottle": "0 30px 30px -22px rgba(23,25,24,.22) + mirrored reflection at 18% with 4px blur",
+    "panel": "inset 0 1px 0 #FFFDF8, 0 10px 30px -12px rgba(23,25,24,.18)"
+  },
+  "motion": {
+    "easeOut": "cubic-bezier(.16,1,.3,1)",
+    "easeInOut": "cubic-bezier(.65,0,.35,1)",
+    "spring": {
+      "stiffness": 120,
+      "damping": 22,
+      "mass": 1.4
+    },
+    "durMicro": 320,
+    "durReveal": 600,
+    "durScene": 1200,
+    "pourMs": 500,
+    "fillMs": 700,
+    "floatPx": 6,
+    "floatMs": 6000,
+    "hopMs": 1400
+  },
+  "button": {
+    "primary": {
+      "bg": "transparent",
+      "fg": "#0B3B32",
+      "radius": "0",
+      "padding": "14px 0",
+      "underline": "1px liquid thread → 3px on hover",
+      "hover": "outline fills like a glass 320ms; active = forest fill, milk label"
+    },
+    "secondary": {
+      "bg": "transparent",
+      "fg": "#171918",
+      "radius": "0",
+      "padding": "14px 0",
+      "hover": "thread 1px → 2px"
+    },
+    "link": {
+      "fg": "#0B3B32 on ground / #1E7A68 on milk",
+      "underline": "1px",
+      "hover": "underline wets from cursor side 300ms"
+    }
+  },
+  "images": [
+    {
+      "file": "web/public/desigo/styles/new-liquid/hero-surface.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Perfectly still surface of fresh whole milk seen at a low angle, creamy white with a soft glossy highlight, one slow wide ripple ring at the centre where an object would stand, cool pale grey-green background, empty centre, fresh whole milk always creamy white, soft glossy highlights, thick slow controlled liquid, cool pale grey-green #E9ECE8 or deep forest #0B3B32 grounds, studio light from upper left, calm, premium, high-speed photography realism, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, spills, splashes, drips, coloured milk, objects",
+      "usedIn": "Hero desktop"
+    },
+    {
+      "file": "web/public/desigo/styles/new-liquid/hero-surface-portrait.png",
+      "size": "1400×2400 (7:12)",
+      "transparent": false,
+      "prompt": "Still milk surface in portrait, low camera, the surface in the lower third with one wide ripple ring, cool pale grey-green background above, empty middle, fresh whole milk always creamy white, soft glossy highlights, thick slow controlled liquid, cool pale grey-green #E9ECE8 or deep forest #0B3B32 grounds, studio light from upper left, calm, premium, high-speed photography realism, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, spills, splashes, coloured milk",
+      "usedIn": "Hero mobile"
+    },
+    {
+      "file": "web/public/desigo/styles/new-liquid/surface-master-26.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "Still white milk surface reflecting a deep green forest canopy #1F5C45 and #0A2A20 in soft distortion, white key light, empty centre, fresh whole milk always creamy white, soft glossy highlights, thick slow controlled liquid, cool pale grey-green #E9ECE8 or deep forest #0B3B32 grounds, studio light from upper left, calm, premium, high-speed photography realism, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, green milk, leaves floating",
+      "usedIn": "MASTER 26 world"
+    },
+    {
+      "file": "web/public/desigo/styles/new-liquid/surface-root-14.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "Still white milk surface at dusk reflecting a crimson #B3202A horizon line, warm red rim light on the milk edge, empty centre, fresh whole milk always creamy white, soft glossy highlights, thick slow controlled liquid, cool pale grey-green #E9ECE8 or deep forest #0B3B32 grounds, studio light from upper left, calm, premium, high-speed photography realism, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, pink milk, red liquid, blood",
+      "usedIn": "ROOT 14 world"
+    },
+    {
+      "file": "web/public/desigo/styles/new-liquid/surface-base-3.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "Still white milk surface reflecting a low amber #E89A1C sun as a soft wobbling ellipse, long golden highlight streak, empty centre, fresh whole milk always creamy white, soft glossy highlights, thick slow controlled liquid, cool pale grey-green #E9ECE8 or deep forest #0B3B32 grounds, studio light from upper left, calm, premium, high-speed photography realism, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, orange milk, flavoured milk",
+      "usedIn": "BASE 3 world"
+    },
+    {
+      "file": "web/public/desigo/styles/new-liquid/surface-essential.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "Perfectly calm white milk surface in soft ivory #F4EDE2 light, no reflections, minimal, empty centre, fresh whole milk always creamy white, soft glossy highlights, thick slow controlled liquid, cool pale grey-green #E9ECE8 or deep forest #0B3B32 grounds, studio light from upper left, calm, premium, high-speed photography realism, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, ripples, objects",
+      "usedIn": "ESSENTIAL world"
+    },
+    {
+      "file": "web/public/desigo/styles/new-liquid/milk-tube-route.png",
+      "size": "3600×2000, transparent",
+      "transparent": true,
+      "prompt": "Top-down view of a thin smooth channel of white milk flowing through eight small round still milk pools arranged as a gentle route, crisp edges, soft highlights, isolated on transparent background, fresh whole milk always creamy white, soft glossy highlights, thick slow controlled liquid, cool pale grey-green #E9ECE8 or deep forest #0B3B32 grounds, studio light from upper left, calm, premium, high-speed photography realism, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, spills, splashes, labels, numbers",
+      "usedIn": "Traceability (ch. 06), Trace-your-milk"
+    },
+    {
+      "file": "web/public/desigo/styles/new-liquid/milk-macro.png",
+      "size": "2048×2048, seamless",
+      "transparent": false,
+      "prompt": "Seamless macro texture of a still milk surface with an extremely subtle creamy sheen, flat even light, fresh whole milk always creamy white, soft glossy highlights, thick slow controlled liquid, cool pale grey-green #E9ECE8 or deep forest #0B3B32 grounds, studio light from upper left, calm, premium, high-speed photography realism, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, bubbles, ripples, seams",
+      "usedIn": "Pool panel / input fill texture"
+    },
+    {
+      "file": "web/public/desigo/styles/new-liquid/meniscus-wave.png",
+      "size": "3600×800, transparent",
+      "transparent": true,
+      "prompt": "Side view of a gently waving milk surface edge, creamy white with a thin soft shadow line, isolated on transparent background, fresh whole milk always creamy white, soft glossy highlights, thick slow controlled liquid, cool pale grey-green #E9ECE8 or deep forest #0B3B32 grounds, studio light from upper left, calm, premium, high-speed photography realism, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, splash, droplets flying",
+      "usedIn": "Fill transition edge"
+    },
+    {
+      "file": "web/public/desigo/styles/new-liquid/droplet-crown.png",
+      "size": "2000×2000, transparent",
+      "transparent": true,
+      "prompt": "Small elegant milk crown splash with six round droplets, crisp, white, studio light, transparent background, fresh whole milk always creamy white, soft glossy highlights, thick slow controlled liquid, cool pale grey-green #E9ECE8 or deep forest #0B3B32 grounds, studio light from upper left, calm, premium, high-speed photography realism, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, puddle, mess, spray",
+      "usedIn": "Click crown, final CTA"
+    },
+    {
+      "file": "web/public/desigo/styles/new-liquid/ghee-pour.png",
+      "size": "2400×3000, transparent",
+      "transparent": true,
+      "prompt": "Slow thick golden ghee pouring from a small brass ladle in a smooth ribbon, warm light, isolated on transparent background, fresh whole milk always creamy white, soft glossy highlights, thick slow controlled liquid, cool pale grey-green #E9ECE8 or deep forest #0B3B32 grounds, studio light from upper left, calm, premium, high-speed photography realism, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, jar, drips on surfaces, oil splatter",
+      "usedIn": "Ghee (ch. 12) — the only non-white liquid"
+    }
+  ]
+}

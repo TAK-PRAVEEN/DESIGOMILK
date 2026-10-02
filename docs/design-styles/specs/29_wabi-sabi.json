@@ -1,0 +1,222 @@
+{
+  "id": 29,
+  "slug": "wabi-sabi",
+  "name": "Wabi-Sabi",
+  "priority": true,
+  "fit": 4.5,
+  "colors": {
+    "primary": "#9E2B25",
+    "onPrimary": "#F2EFE7",
+    "secondary": "#0B3B32",
+    "accent": "#6E3A24",
+    "bg": "#D8D4CB",
+    "surface": "#E6E2D9",
+    "text": "#2A2723",
+    "textMuted": "#5E5950",
+    "line": "rgba(42,39,35,.18)",
+    "ok": "#1F5C45",
+    "pending": "#6B4C2A",
+    "demo": "#9E2B25",
+    "focus": "#0B3B32"
+  },
+  "variants": {
+    "master-26": {
+      "base": "#1F5C45",
+      "deep": "#0A2A20",
+      "light": "#C9CEC6"
+    },
+    "root-14": {
+      "base": "#8E2A2A",
+      "deep": "#4A0A0F",
+      "light": "#E7CFC8"
+    },
+    "base-3": {
+      "base": "#B8741A",
+      "deep": "#7A4A12",
+      "light": "#E8DCC5"
+    },
+    "essential": {
+      "base": "#CDB89A",
+      "deep": "#4D4130",
+      "light": "#F2EFE7"
+    }
+  },
+  "fonts": {
+    "display": {
+      "family": "Cormorant Garamond",
+      "package": "@fontsource/cormorant-garamond",
+      "weights": [
+        500,
+        600
+      ],
+      "styles": [
+        "normal",
+        "italic"
+      ]
+    },
+    "body": {
+      "family": "Inter Tight",
+      "package": "@fontsource-variable/inter-tight",
+      "weights": [
+        400,
+        500
+      ]
+    },
+    "label": {
+      "family": "Inter Tight",
+      "package": "@fontsource-variable/inter-tight",
+      "weights": [
+        500,
+        600
+      ]
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "package": "@fontsource-variable/jetbrains-mono",
+      "weights": [
+        400
+      ]
+    },
+    "devanagari": {
+      "family": "Tiro Devanagari Hindi",
+      "package": "@fontsource/tiro-devanagari-hindi",
+      "weights": [
+        400
+      ],
+      "fallback": "@fontsource-variable/noto-serif-devanagari"
+    }
+  },
+  "type": {
+    "display": "clamp(3rem, 1.6rem + 6vw, 7.5rem)",
+    "h1": "clamp(2.4rem, 1.6rem + 3vw, 4.5rem)",
+    "h2": "clamp(1.75rem, 1.3rem + 1.6vw, 2.75rem)",
+    "body": "clamp(1rem, 0.96rem + 0.2vw, 1.0625rem)",
+    "label": "0.75rem",
+    "glyph": "clamp(12rem, 50vw, 60vw)"
+  },
+  "radius": {
+    "sm": "2px",
+    "md": "4px",
+    "lg": "999px"
+  },
+  "shadow": {
+    "bottle": "0 30px 40px -22px rgba(42,39,35,.38), 18px 22px 30px -18px rgba(42,39,35,.22)",
+    "panel": "0 1px 0 rgba(255,255,255,.5) inset, 0 0 0 1px rgba(42,39,35,.10)"
+  },
+  "motion": {
+    "easeOut": "cubic-bezier(.16,1,.3,1)",
+    "easeInOut": "cubic-bezier(.65,0,.35,1)",
+    "easeSignature": "cubic-bezier(.22,.9,.24,1)",
+    "durMicro": 240,
+    "durReveal": 1000,
+    "durScene": 1400,
+    "floatPx": 4,
+    "floatMs": 8000,
+    "hopMs": 1800
+  },
+  "button": {
+    "primary": {
+      "bg": "transparent",
+      "fg": "#9E2B25",
+      "radius": "0",
+      "padding": "14px 0",
+      "underline": "2px brush SVG #9E2B25",
+      "hover": "underline re-brushes 350ms; arrow +8px"
+    },
+    "secondary": {
+      "bg": "transparent",
+      "fg": "#2A2723",
+      "radius": "0",
+      "padding": "14px 0",
+      "underline": "1px #2A2723",
+      "hover": "hairline becomes brush stroke; arrow +6px"
+    },
+    "link": {
+      "fg": "#0B3B32",
+      "underline": "1px, offset .2em",
+      "hover": "single brush-stroke underline, colour #9E2B25 on active"
+    }
+  },
+  "images": [
+    {
+      "file": "web/public/desigo/styles/wabi-sabi/hero.png",
+      "size": "3200×2000 (16:10)",
+      "transparent": false,
+      "prompt": "Sheet of grey handmade Sanganer cotton paper filling the frame, visible soft fibres, a faint diagonal fold, soft north side light falling from the left, one long soft shadow at the lower right, very large empty area at centre and left for a bottle and live type, soft north window light, muted clay-and-lime palette of grey paper #D8D4CB, lime white #F2EFE7, terracotta #A8603F and ink #2A2723, gentle handmade-paper grain, quiet wabi-sabi restraint, vast negative space, editorial, calm, high-end, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, kanji, Japanese motifs, enso, pottery, vessels, objects, calligraphy",
+      "usedIn": "Hero (ch. 01) desktop"
+    },
+    {
+      "file": "web/public/desigo/styles/wabi-sabi/hero-portrait.png",
+      "size": "1400×2400 (7:12)",
+      "transparent": false,
+      "prompt": "Same grey handmade paper composition in portrait, light from upper left, fibres visible, soft shadow pooling at the bottom edge, empty upper two-thirds, soft north window light, muted clay-and-lime palette of grey paper #D8D4CB, lime white #F2EFE7, terracotta #A8603F and ink #2A2723, gentle handmade-paper grain, quiet wabi-sabi restraint, vast negative space, editorial, calm, high-end, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, kanji, Japanese motifs, pottery, vessels, objects",
+      "usedIn": "Hero mobile"
+    },
+    {
+      "file": "web/public/desigo/styles/wabi-sabi/world-master-26.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "Moss-grey handmade paper #C9CEC6 with a folded deep-green #1F5C45 khadi cloth lying along the right edge, soft natural folds, quiet light, empty centre, soft north window light, muted clay-and-lime palette of grey paper #D8D4CB, lime white #F2EFE7, terracotta #A8603F and ink #2A2723, gentle handmade-paper grain, quiet wabi-sabi restraint, vast negative space, editorial, calm, high-end, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, herbs, bowls, pottery, bright green, objects at centre",
+      "usedIn": "MASTER 26 world (ch. 08, /milk/master-26)"
+    },
+    {
+      "file": "web/public/desigo/styles/wabi-sabi/world-root-14.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "Red-earth lime wash #E7CFC8 on a rough plaster wall, faint trowel marks, a soft muted-red #8E2A2A shadow band low on the right, empty centre, soft north window light, muted clay-and-lime palette of grey paper #D8D4CB, lime white #F2EFE7, terracotta #A8603F and ink #2A2723, gentle handmade-paper grain, quiet wabi-sabi restraint, vast negative space, editorial, calm, high-end, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, pottery, cracks on centre, saturated red, blood-like stains",
+      "usedIn": "ROOT 14 world"
+    },
+    {
+      "file": "web/public/desigo/styles/wabi-sabi/world-base-3.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "Warm sand-coloured handmade paper #E8DCC5 with a soft amber #B8741A light patch at the right as from a low sun, gentle fibre texture, empty centre, soft north window light, muted clay-and-lime palette of grey paper #D8D4CB, lime white #F2EFE7, terracotta #A8603F and ink #2A2723, gentle handmade-paper grain, quiet wabi-sabi restraint, vast negative space, editorial, calm, high-end, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, orange cast, wheat, pottery, objects",
+      "usedIn": "BASE 3 world"
+    },
+    {
+      "file": "web/public/desigo/styles/wabi-sabi/world-essential.png",
+      "size": "3200×2000 + 1400×2400",
+      "transparent": false,
+      "prompt": "Lime-plaster white #F2EFE7 wall meeting a pale floor, a single flat grey river stone plinth at centre-bottom, soft skylight, nothing else, soft north window light, muted clay-and-lime palette of grey paper #D8D4CB, lime white #F2EFE7, terracotta #A8603F and ink #2A2723, gentle handmade-paper grain, quiet wabi-sabi restraint, vast negative space, editorial, calm, high-end, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, objects, decorations, colour",
+      "usedIn": "ESSENTIAL world; bottle stage plinth"
+    },
+    {
+      "file": "web/public/desigo/styles/wabi-sabi/trace-brush-route.png",
+      "size": "4000×1600, transparent",
+      "transparent": true,
+      "prompt": "One continuous hand-brushed ink line in warm black #2A2723 meandering left to right with eight small round ink seal impressions along it, line thickening and thinning naturally, isolated on transparent background, soft north window light, muted clay-and-lime palette of grey paper #D8D4CB, lime white #F2EFE7, terracotta #A8603F and ink #2A2723, gentle handmade-paper grain, quiet wabi-sabi restraint, vast negative space, editorial, calm, high-end, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, map labels, numbers, arrows, colour fills",
+      "usedIn": "Traceability (ch. 06), /trace, Trace-your-milk result"
+    },
+    {
+      "file": "web/public/desigo/styles/wabi-sabi/journey-ink-cow.png",
+      "size": "1600×1600, transparent",
+      "transparent": true,
+      "prompt": "Single loose brush-ink drawing of an Indian zebu cow grazing, visible hump, dewlap and long ears, calm and respectful, few confident strokes, warm black ink, isolated on transparent background, soft north window light, muted clay-and-lime palette of grey paper #D8D4CB, lime white #F2EFE7, terracotta #A8603F and ink #2A2723, gentle handmade-paper grain, quiet wabi-sabi restraint, vast negative space, editorial, calm, high-end, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, Holstein, spots, cartoon eyes, smiling, mascot",
+      "usedIn": "Journey station 1 (ch. 03); breed intro"
+    },
+    {
+      "file": "web/public/desigo/styles/wabi-sabi/paper-grain.png",
+      "size": "1024×1024, seamless",
+      "transparent": false,
+      "prompt": "Seamless tileable macro scan of grey handmade cotton rag paper, soft fibres, even flat lighting, no shadows, no folds, soft north window light, muted clay-and-lime palette of grey paper #D8D4CB, lime white #F2EFE7, terracotta #A8603F and ink #2A2723, gentle handmade-paper grain, quiet wabi-sabi restraint, vast negative space, editorial, calm, high-end, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, seams, vignette, stains",
+      "usedIn": "Page texture sitewide (3% multiply)"
+    },
+    {
+      "file": "web/public/desigo/styles/wabi-sabi/deckle-card.png",
+      "size": "1600×1200, transparent",
+      "transparent": true,
+      "prompt": "A single rectangular card of light grey handmade paper #E6E2D9 with soft torn deckle edges on all sides, flat top-down, isolated on transparent background, soft north window light, muted clay-and-lime palette of grey paper #D8D4CB, lime white #F2EFE7, terracotta #A8603F and ink #2A2723, gentle handmade-paper grain, quiet wabi-sabi restraint, vast negative space, editorial, calm, high-end, no text, no watermark, no logo, no letters",
+      "negative": "text, letters, words, numbers, typography, logo, watermark, signature, label, packaging, milk bottle, glass bottle, ghee jar, Holstein cow, Jersey cow, cartoon mascot, comic pose, religious symbols, deity, faces in close-up, dirt, stains, clutter, oversaturated, plastic CGI look, writing, folds, shadow box",
+      "usedIn": "Card / AssetSlot paper card"
+    }
+  ]
+}

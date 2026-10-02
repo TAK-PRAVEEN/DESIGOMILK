@@ -9,6 +9,14 @@ Collage art = Collage). Result: **36 styles**.
 Each style document is a complete plan to build the **whole DESIGO® website** in that style:
 same information architecture, same verified content, same Bottle360Viewer, different visual and interaction language.
 
+## Build-ready status (audit 2026-10-03)
+All 55 documents end with **section 12 "Build-ready spec sheet"**: colour system (primary / secondary / accent / bg / surface /
+text / muted / line / states + variant worlds), typography (fonts + @fontsource packages + sizes), layout, all components with
+states (buttons, links, nav + logo loop, cursor, cards, badges, inputs, product block, bottle stage, trace nodes), icons,
+motion tokens, 9–12 AI image prompts with negative prompts, and an acceptance checklist.
+Machine-readable tokens are in `specs/NN_<slug>.json`. Rules that apply to every style are in **[00_SHARED_RULES.md](00_SHARED_RULES.md)**, and they win on conflict.
+Template: [_SPEC_TEMPLATE.md](_SPEC_TEMPLATE.md).
+
 ## How every style document is structured
 1. Style essence: what the style is, its origin, and three reference points
 2. Why it fits DESIGO® (or where it fights the brand) plus a fit score from 1 to 5
